@@ -1,37 +1,25 @@
-    <div class="m-4">
-      <div id="accordion" style="width: 250px;">
-    <ul>
-        <li>
-            <div>LIBRS Specifications</div>
-            <ul>
-                <li><a href="?11">Lorem ipsum</a></li>
-                <li><a href="?12">Dolor sit</a></li>
-                <li>
-                    <div>Commodo Rhoncus</div>
+<div class="m-4">
+    <div id="accordion">
+        <ul>
+            <li>
+                <div>LIBRS Specifications</div>
                     <ul>
-                        <li><a href="?131">Consectetur</a></li>
-                        <li><a href="demo.html">Current</a></li>
+                        {% for amenu in _data/specnavigation.yaml %}
+                        {{ amenu.title }}
+                            <!-- {% for bmenu in amenu.bmenu%}
+                	            {% if forloop.first %}<ul>{% endif %}
+    	                        <li>{{ bmenu.title }}</li>
+                                {% for cmenu in bmenu.cmenu %}
+                                    {% if forloop.first %}<ul>{% endif %}
+                                    <li>{{ cmenu.title }}</li>
+		  	                        {% if forloop.last %}</ul>{% endif %}
+		                        {% endfor %}
+                                {% if forloop.last %}</ul>
+                                {% endif %}
+                            {% endfor %} -->
+                        {% endfor %}
                     </ul>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <div>Quis Porttitor</div>
-            <ul>
-                <li><a href="?21">Finibus Bonorum</a></li>
-                <li><a href="?22">Sed ut</a></li>
-                <li><a href="?23">Neque porro</a></li>
-            </ul>
-        </li>
-        <li>
-            <div>Odio Ac</div>
-            <ul>
-                <li><a href="?31">Minima veniam</a></li>
-                <li><a href="?32">Voluptate velit</a></li>
-            </ul>
-        </li>
-        <li>
-            <a href="?4">Sapien quam</a>
-        </li>
-    </ul>
+            </li>
+        </ul>
+    </div>
 </div>

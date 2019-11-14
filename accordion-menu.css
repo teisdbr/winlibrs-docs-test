@@ -2,8 +2,8 @@
 
 #accordion {
     visibility:hidden;
-    box-shadow:0 0 12px rgba(0,0,0,0.3);
-    display: inline-flex
+    box-shadow:0 0 12px rgba(0,0,0,0.3);   
+    height: 100%;
 }
 
 /* root UL */
@@ -71,16 +71,17 @@
     text-decoration:none;
     display:block;
     line-height:1;
-    transition:all 0.3s;
 }
+
 #accordion a:hover {
     background-color:#eee;
 }
+
 #accordion a.active {
     background-color:#333;
     color:white;
+    width: 250px;
 }
-
 
 /* carets */
 #accordion .caret {
