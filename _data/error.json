@@ -103,16 +103,18 @@
     },
     "10074": {
         "err_no": 10074,
-        "err_message": "PROPERTY RECORD(SEGMENT 30 & 31) MUST EXIST WITH THIS OFFENSE"
+        "err_message": "PROPERTY RECORD(SEGMENT 30 & 31) MUST EXIST WITH THIS OFFENSE",
+        "desc30": "Property Segments (30 and 31) must exist when an Incident Report (Action Type = 'I') is submitted with an Offense Segment (20) whose LRS is a 'Crime Against Property'.  Kidnaping (100), Gambling (39A thru 39D), or Drug/Narcotic (35A thru 35B) Offenses also have this same Property Segment requirement."
     },
     "10075": {
         "err_no": 10075,
         "err_message": "MISSING A MANDATORY RECORD SEGMENT FOR A COMPLETE INCIDENT",
-        "desc10":"When an Action Type of Incident Report (\"I\") is submitted, the following segments MUST be included: 10 - Administrative Segment, 20 - Offense Segment, 40 - Offender Segment, 41 - Offender Using Segment/Gaming Motivation, 50 - Victim Segment"
+        "desc10":"When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included: 10 - Administrative Segment, 20 - Offense Segment, 40 - Offender Segment, 41 - Offender Using Segment/Gaming Motivation, 50 - Victim Segment"
     },
     "10076": {
         "err_no": 10076,
-        "err_message": "PROPERTY RECORD(SEGMT 30 & 31) CANNOT EXIT WITH OFFENSES SUBMITTED"
+        "err_message": "PROPERTY RECORD(SEGMT 30 & 31) CANNOT EXIT WITH OFFENSES SUBMITTED",
+        "desc30": "Only offenses that are 'Crimes Against Property', Kidnaping (100), Gambling (39A thru 39D), or Drug/Narcotic (35A thru 35B) can be submitted with Property Segments."
     },
     "10077": {
         "err_no": 10077,
@@ -244,7 +246,8 @@
     },
     "11060": {
         "err_no": 11060,
-        "err_message": "INCIDENT NOT ON FILE"
+        "err_message": "INCIDENT NOT ON FILE",
+        "desc11": "Administrative Segment (10 and 11) submitted with an Action Type of 'M' (MODIFY) must already be on file with ORI Number (Data Element No. 1) and Incident Number (Data Element No. 2)."
     },
     "11061": {
         "err_no": 11061,
@@ -276,7 +279,8 @@
     },
     "11069": {
         "err_no": 11069,
-        "err_message": "TIME WINDOW SEGMENT BEING MODIFIED MUST HAVE LOUISIANA REVISED STATUTE NUMBER"
+        "err_message": "TIME WINDOW SEGMENT BEING MODIFIED MUST HAVE LOUISIANA REVISED STATUTE NUMBER",
+        "desc11": "Segment 11 does not have an LRS Number associated with it."
     },
     "11070": {
         "err_no": 11070,
@@ -464,7 +468,8 @@
     },
     "13043": {
         "err_no": 13043,
-        "err_message": "WARNING - '280' OFFENSE HAS 'RECOVERED' VEHICLE BUT '240' DOESN'T SHOW 'STOLEN'"
+        "err_message": "WARNING - '280' OFFENSE HAS 'RECOVERED' VEHICLE BUT '240' DOESN'T SHOW 'STOLEN'",
+        "desc31": "When the same property is Stolen (Type of Property Loss = ‘7’) and Recovered (Type of Property Loss = ‘5’) within the same incident, then the two Property Description Segments (31) that are submitted must use the same property sequence number (P1)."
     },
     "13051": {
         "err_no": 13051,
@@ -536,7 +541,8 @@
     },
     "13071": {
         "err_no": 13071,
-        "err_message": "GAMBLING, KIDNAPPING, AND CRIMES AGAINST PROPERTY ARE THE ONLY VALID OFFENS"
+        "err_message": "GAMBLING, KIDNAPPING, AND CRIMES AGAINST PROPERTY ARE THE ONLY VALID OFFENSE",
+        "desc32": "A Time-Window submission (Action Type of 'W') or Modify submission (Action Type = 'M') was submitted for 'Recovered Property' on a Property Modification Segment (32). <br> When submitted, all LRS codes must be Crimes Against Property, Kidnaping (100), or Gambling (39A thru 39D).  In this instance offense codes other than those mentioned were submitted."
     },
     "13072": {
         "err_no": 13072,
@@ -552,7 +558,7 @@
     },
     "13077": {
         "err_no": 13077,
-        "err_message": "PROPERTY SEGMENT A - O - F ADDED ON[MMDDYYYY] RECOVERY DATE = [MMDDYYYY]"
+        "err_message": "PROPERTY SEGMENT A - O - F ADDED ON [MMDDYYYY] RECOVERY DATE = [MMDDYYYY]"
     },
     "13078": {
         "err_no": 13078,
@@ -1172,7 +1178,8 @@
     },
     "22075": {
         "err_no": 22075,
-        "err_message": "MUST SUBMIT AN OFFENSE SEGMENT(SEGMENT 20) FOR EACH VICTIM"
+        "err_message": "MUST SUBMIT AN OFFENSE SEGMENT(SEGMENT 20) FOR EACH VICTIM",
+        "desc20": "Each victim must be tied to an offense."
     },
     "22080": {
         "err_no": 22080,
@@ -1748,7 +1755,8 @@
     },
     "90018": {
         "err_no": 90018,
-        "err_message": "PROPERTY MUST HAVE A VALID RELATIONSHIP TO AT LEAST ONE OFFENSE"
+        "err_message": "PROPERTY MUST HAVE A VALID RELATIONSHIP TO AT LEAST ONE OFFENSE",
+        "desc31": "All properties submitted within an incident MUST be related to at least one Offense."
     },
     "90019": {
         "err_no": 90019,
@@ -1768,7 +1776,8 @@
     },
     "90023": {
         "err_no": 90023,
-        "err_message": "DUPLICATE - A PRIOR PROPERTY OFFENSE SEGMENT ALREADY EXISTS WITH THE SAME SEQUENCE NUMBERS"
+        "err_message": "DUPLICATE - A PRIOR PROPERTY OFFENSE SEGMENT ALREADY EXISTS WITH THE SAME SEQUENCE NUMBERS",
+        "desc33": "Each Property/Offense segment submitted MUST have UNIQUE COMBINATIONS of Property Sequence Number References (P1R) to Offense Sequence Number References (L6R). <br>  Offenses are allowed to be related to many properties and properties are allowed to be related to many offenses. <br> However, Property/Offense segments CANNOT be submitted relating a single Property to a Single Offense multiple times, that is NO duplicate combinations of Sequence Numbers."
     },
     "90024": {
         "err_no": 90024,
@@ -1777,6 +1786,11 @@
     "90025": {
         "err_no": 90025,
         "err_message": "OFFENSE SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED OFFENSES ' SEQUENCE NUMBERS"
+    },
+    "90026":{
+        "err_no": 90026,
+        "err_message": "CRIME AGAINST PROPERTY REQUIRES A RELATIONSHIP TO PROPERTY. SEGMENTS 31 AND 33 MAY EITHER OR BOTH BE MISSING",
+        "desc20": "If an offense is a Crime Against Property based on the Crime Against category for the Louisiana Revised Statute (LRS, or LRS-NIBRS combination) submitted, then the offense must have a proper relationship to at least one property.  This relationship is defined by submitting both Segments 31 and 33 where the data element pairs (L6, L6R) and (P1, P1R) match exactly with an Offense segment."
     },
     "90027": {
         "err_no": 90027,
