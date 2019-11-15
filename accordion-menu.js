@@ -1,7 +1,7 @@
 var amenuOptions = {
     menuId: "accordion",
     linkIdToMenuHtml: null,
-    expand: "all", //"single", "full,180px", "multiple", "all" or "alltop"
+    expand: "alltop", //"single", "full,180px", "multiple", "all" or "alltop"
     speed: 200, //in ms
     license: "2a8e9"
 };
