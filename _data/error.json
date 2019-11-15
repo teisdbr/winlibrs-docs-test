@@ -109,7 +109,7 @@
     "10075": {
         "err_no": 10075,
         "err_message": "MISSING A MANDATORY RECORD SEGMENT FOR A COMPLETE INCIDENT",
-        "desc10":"When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included: 10 - Administrative Segment, 20 - Offense Segment, 40 - Offender Segment, 41 - Offender Using Segment/Gaming Motivation, 50 - Victim Segment"
+        "desc10":"When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included:<br> 10 - Administrative Segment, 20 - Offense Segment, 40 - Offender Segment, 41 - Offender Using Segment/Gaming Motivation, and 50 - Victim Segment"
     },
     "10076": {
         "err_no": 10076,
@@ -160,7 +160,8 @@
     },
     "10092": {
         "err_no": 10092,
-        "err_message": "ZERO - REPORTING INCIDENT NUMBER MUST BE ALL ZEROES"
+        "err_message": "ZERO - REPORTING INCIDENT NUMBER MUST BE ALL ZEROES",
+        "desc01": "A Segment 01 was submitted, but the Incident Number (Data Element 2) entered into positions 3-14 was not all zeroes."
     },
     "10093": {
         "err_no": 10093,
@@ -958,7 +959,7 @@
     },
     "16056": {
         "err_no": 16056,
-        "err_message": "THIS ARRESTEE EXCEEDED THE NUMBER OF OFFENDERS(nn) ON THE INCIDENT"
+        "err_message": "THIS ARRESTEE EXCEEDED THE NUMBER OF OFFENDERS (nn) ON THE INCIDENT"
     },
     "16057": {
         "err_no": 16057,
@@ -966,15 +967,18 @@
     },
     "16058": {
         "err_no": 16058,
-        "err_message": "MUST BE BLANK WHEN ACTION TYPE IS NOT 'W'(WINDOW)"
+        "err_message": "MUST BE BLANK WHEN ACTION TYPE IS NOT 'W' (WINDOW)",
+        "desc60": "Clearance Indicator (DE C6) must be Blank (G) when Action Type is not 'W' (Time-Window)."
     },
     "16059": {
         "err_no": 16059,
-        "err_message": "AN OFFENSE MUST EXIST WHEN ACTION TYPE = 'W'(WINDOW)"
+        "err_message": "AN OFFENSE MUST EXIST WHEN ACTION TYPE = 'W'(WINDOW)",
+        "desc63": "LRS (6) MUST exist when Action Type is 'W' (Time-Window)."
     },
     "16060": {
         "err_no": 16060,
-        "err_message": "INCIDENT REPORT NOT ON FILE"
+        "err_message": "INCIDENT REPORT NOT ON FILE",
+        "desc62": "The Incident Number associated with the current submission was not found in LIBRS database. <br>The Arrestee Segment submitted with an Action Type of 'A' (Add an Arrest) was rejected because the incident is not on the LIBRS database."
     },
     "16061": {
         "err_no": 16061,
@@ -1042,15 +1046,18 @@
     },
     "19901": {
         "err_no": 19901,
-        "err_message": "LAST LINE OR SEGEMENT NOT 99 SEGMENT TYPE"
+        "err_message": "LAST LINE OR SEGEMENT NOT 99 SEGMENT TYPE",
+        "desc99": "Last line in data submission NOT Segment Type 99 (Submission Trailer)."
     },
     "19902": {
         "err_no": 19902,
-        "err_message": "NUMBER OF SEGMEMTS FIELD IN 99 SEGMENT IS NOT A VALID NUMERIC FIELD"
+        "err_message": "NUMBER OF SEGMEMTS FIELD IN 99 SEGMENT IS NOT A VALID NUMERIC FIELD",
+        "desc99": "Number of Segments Transferred field (Data Element C7) in Submission Trailer is NOT a valid numeric field."
     },
     "19903": {
         "err_no": 19903,
-        "err_message": "NUMBER OF SEGMENTS ON SUBMISSION TRAILER DOES NOT MATCH RECORD COUNT"
+        "err_message": "NUMBER OF SEGMENTS ON SUBMISSION TRAILER DOES NOT MATCH RECORD COUNT",
+        "desc99": "Number of Segments Transferred (Data Element C7) in Submission Trailer Segment does not match Record Count for data submission."
     },
     "20000": {
         "err_no": 20000,
@@ -1183,11 +1190,13 @@
     },
     "22080": {
         "err_no": 22080,
-        "err_message": "SEGMENT 51 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'"
+        "err_message": "SEGMENT 51 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'",
+        "desc51": "Segment 51 must be present if Victim Type is 'I' (Individual) or 'L' (Law Enforcement Officer) and if offense is applicable."
     },
     "22081": {
         "err_no": 22081,
-        "err_message": "SEGMENT 52 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'"
+        "err_message": "SEGMENT 52 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'",
+        "desc52": "Segment 52 must be present if Victim Type is 'I' (Individual) or 'L' (Law Enforcement Officer) and if offense is applicable."
     },
     "22085": {
         "err_no": 22085,
@@ -1709,21 +1718,22 @@
     },
     "90008": {
         "err_no": 90008,
-        "err_message": "FOR STATUTORY RAPE OFFENSES WHERE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM, THE ASSOCIATED OFFENSE IS REQUIRED TO BE REPORTED AS MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE(14: 80.1)."
+        "err_message": "FOR STATUTORY RAPE OFFENSES WHERE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM, THE ASSOCIATED OFFENSE IS REQUIRED TO BE REPORTED AS MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE (14:80.1).",
+        "desc40": "A Statutory Rape (NIBRS Code 36B) MUST be classified as a MISDEMEANOR (LRS 14:80.1 Misdemeanor Carnal Knowledge of a Juvenile) if the Offender is at least two (2), but less than four (4) years older than the Victim."
     },
     "90009": {
         "err_no": 90009,
-        "err_message": "FOR FIRST DEGREE RAPE OFFENSES, AGE OF VICTIM CANNOT BE '13', '14', '15', OR '16'.CONSIDER REPORTING THE ASSOCIATED OFFENSE AS A STATUTORY RAPE(36 B)"
+        "err_message": "FOR FIRST DEGREE RAPE OFFENSES, AGE OF VICTIM CANNOT BE '13', '14', '15', OR '16'. CONSIDER REPORTING THE ASSOCIATED OFFENSE AS A STATUTORY RAPE (36B)"
     },
     "90010": {
         "err_no": 90010,
-        "err_message": "FOR RAPE OFFENSES(11 A OR 36 B),
-        AGE OF OFFENDER MUST BE '17'
-        OR GREATER "
+        "err_message": "FOR RAPE OFFENSES (11 A OR 36 B), AGE OF OFFENDER MUST BE '17' OR GREATER",
+        "desc40": "For First Degree (NIBRS Code 11A) and Statutory Rape (NIBRS Code 36B), the Age of Offender (DE 37) MUST be at least seventeen (17) years of age or older."
     },
     "90011": {
         "err_no": 90011,
-        "err_message": "MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE(14: 80.1) OFFENSES ARE APPLICABLE ONLY WHEN THE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM"
+        "err_message": "MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE (14:80.1) OFFENSES ARE APPLICABLE ONLY WHEN THE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM",
+        "desc40": "A Statutory Rape (NIBRS Code 36B) MUST be classified as a FELONY (LRS 14:80 Carnal Knowledge of a Juvenile) if the Offender is four (4) or more years older than the Victim"
     },
     "90012": {
         "err_no": 90012,
@@ -1731,15 +1741,12 @@
     },
     "90013": {
         "err_no": 90013,
-        "err_message": "STATUTORY RAPE OFFENSES REQUIRE OFFENDERS TO BE AT LEAST TWO YEARS OLDER THAN THEIR VICTIMS"
+        "err_message": "STATUTORY RAPE OFFENSES REQUIRE OFFENDERS TO BE AT LEAST TWO YEARS OLDER THAN THEIR VICTIMS",
+        "desc40": "The Offender must be two years older than the Victim in order for the offense to qualify as Statutory Rape."
     },
     "90014": {
         "err_no": 90014,
-        "err_message": "WARNING: FOR DE 31, AT MOST TWO ASSAULT CIRCUMSTANCE ARE ALLOWED.THE 3 RD ASSAULT CIRCUMSTANCE WILL BE IGNORED."
-    },
-    "90015": {
-        "err_no": 90015,
-        "err_message": "LIBRS SPEC INDICATOR IS NOT VALID.SUBMISSION WILL BE PROCESSED ACCORDING TO THE LIBRS 2.2 SPEC."
+        "err_message": "WARNING: FOR DE 31, AT MOST TWO ASSAULT CIRCUMSTANCE ARE ALLOWED. THE 3RD ASSAULT CIRCUMSTANCE WILL BE IGNORED."
     },
     "90016": {
         "err_no": 90016,

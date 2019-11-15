@@ -25,7 +25,7 @@ ___
   [C12](#librs-spec-indicator-c12)|   LIBRS Spec Indicator **\*\*\*New\*\*\***|    52-54      |   3      |   A/N    
   \*\*                            |   Future Expansion Buffer                 |    55-56      |   2      |    A     
   [C8](#end-of-segment-marker-c8) |   End of Segment Marker                   |    57-58      |   2      |    A     
-  [C9](#padding-c9)               |   Padding                                 |    59-150     |   \*\*   |  **A/N** 
+  [C9](#padding-c9)               |   Padding                                 |    59-150     |   \*\*   |   A/N 
 
 <br>
 
@@ -33,7 +33,7 @@ ___
 
 <br>
 
-### Errors and Explanations
+### Segment 00 Errors and Explanations
 
 
 Error Number  | Error Message | Explaination of Error
@@ -62,18 +62,18 @@ ___
   |[C5](#action-type-c5)                           |Action Type                                     |    3      |  1   |  A      |
   |[1](#ori-number-1)                              |ORI Number                                      |   4-12    |  9   |  A      |
   |[2](#incident-number-2)                         |Incident Number                                 |  13-24    |  12  |  A      |
-  |[L53](#location-of-incident-l53)                |Location of Incident (Geographical Coordinates) |  25-36    |  12  |  **A/N**|
+  |[L53](#location-of-incident-l53)                |Location of Incident (Geographical Coordinates) |  25-36    |  12  |  A/N    |
   |[L54](#stationdivisionprecinct-identifier-l54)  |Station/Division/Precinct Identifier            |  37-42    |  6   |  A      |
   |[3](#incident-datehour-3)                       |Incident Date/Hour                              |  43-53    |  11  |  A      |
   |[4](#cleared-exceptionally-4)                   |Cleared Exceptionally                           |    54     |  1   |  A      |
   |[5](#exceptional-cleared-date-5)                |Exceptional Clearance Date                      |  55-62    |  8   |  D      |
   |\*\*                                            |Future Expansion Buffer                         |  63-82    |  20  |  A      |
   |[C8](#end-of-segment-marker-c8)                 |End of Segment Marker                           |  83-84    |  2   |  A      |
-  |[C9](#padding-c9)                               |Padding                                         |  85-150   | \*\* |  **A/N**|
+  |[C9](#padding-c9)                               |Padding                                         |  85-150   | \*\* |  A/N    |
 
 <br>
 
-### Errors and Explanations
+### Segment 10 Errors and Explanations
 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
@@ -101,12 +101,12 @@ ___
    [6](#louisiana-revised-statute-6)   |Louisiana Revised Statute Number  | 25-36         | 12       | A
    \*\*                                |Future Expansion Buffer           | 37-56         | 20       | A
    [C8](#end-of-segment-marker-c8)     |End of Segment Marker             | 57-58         | 2        | A
-   [C9](#padding-c9)                   |Padding                           | 59-150        | \*\*     | **A/N**
+   [C9](#padding-c9)                   |Padding                           | 59-150        | \*\*     | A/N
 
 
 <br>
 
-### Errors and Explanations
+### Segment 11 Errors and Explanations
 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
@@ -146,7 +146,7 @@ ___
    **70**                                                               | **Inchoate** **\*\*\*New\*\*\***                       | **64**        | **1**    | **A**
    \*\*                                                                 | Future Expansion Buffer                                | 65-80         | 16       | A
    [C8](#end-of-segment-marker-c8)                                      | End of Segment Marker                                  | 81-82         | 2        | A
-   [C9](#padding-c9)                                                    | Padding                                                | 83-150        | \*\*     | **A/N**
+   [C9](#padding-c9)                                                    | Padding                                                | 83-150        | \*\*     | A/N
 
 <br>
 
@@ -154,7 +154,7 @@ ___
 
 <br>
 
-### Errors and Explanations
+### Segment 20 Errors and Explanations
 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
@@ -186,7 +186,7 @@ ___
 
 <br>
 
-### Errors and Explanations
+### Segment 30 Errors and Explanations
 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
@@ -222,7 +222,7 @@ ___
 
 <br>
 
-### Errors and Explanations
+### Segment 31 Errors and Explanations
 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
@@ -253,7 +253,7 @@ ___
 
 <br>
 
-### Errors and Explanations
+### Segment 32 Errors and Explanations
 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
@@ -280,7 +280,7 @@ ___
    **[L6R](#offense-sequence-number-reference-l6r)**    | **Offense Sequence Number Reference \*\*\*Modified\*\*\***        | **28-30**         | **3**        | **A**
    \*\*                                                 | Future Expansion Buffer                                           | 31-50             | 20           | A
    [C8](#end-of-segment-marker-c8)                      | End of Segment Marker                                             | 51-52             | 2            | A
-   [C9](#padding-c9)                                    | Padding                                                           | 53-150            | \*\*         | **A/N**
+   [C9](#padding-c9)                                    | Padding                                                           | 53-150            | \*\*         | A/N
 
 <br>
 
@@ -300,7 +300,7 @@ An incident is submitted with a NIBRS 23H 'Crime Against Property' Offense, as w
 
 <br>
 
-### Errors and Explanations
+### Segment 33 Errors and Explanations
 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
@@ -333,5 +333,341 @@ There are a number of illogical combinations for various NIBRS Offense Codes (Da
    37                                  |                   | **X**     | **X**     | **X**     | **X**     | **X**     | **X**     | **X**     | **X**     | 
    39                                  |                   | **X**     | **X**     | **X**     |           |           |           |           |           | 
    78                                  |                   | **X**     | **X**     |           |           |           |           |           |           | 
-   
+
+___
+
+<br>
+
+## Offender (40)
+
+   Data Element Number                        | Description of Data Element              | Position(s)   | Length   | Format
+  :------------------------------------------:|------------------------------------------|:-------------:|:--------:|:---------:
+   [C1](#segment-descriptor-c1)               | Segment Descriptor - **40**              | 1-2           | 2        | N
+   [C5](#action-type-c5)                      | Action Type                              | 3             | 1        | A
+   [1](#ori-number-1)                         | ORI Number                               | 4-12          | 9        | A
+   [2](#incident-number-2)                    | Incident Number                          | 13-24         | 12       | A
+   [36](#offender-sequence-number-36)         | Offender Sequence Number                 | 25-27         | 3        | N
+   [37](#age-of-offender-37)                  | Age of Offender                          | 28-30         | 3        | A
+   [L37](#date-of-birth-of-offender-l37)      | Date of Birth of Offender (LIBRS Only)   | 31-38         | 8        | D
+   [38](#sex-of-offender-38)                  | Sex of Offender                          | 39            | 1        | A
+   [39](#race-of-offender-39)                 | Race of Offender                         | 40            | 1        | A
+   [8A](#bias-motivationbias-crime-type-8a)   | Bias Motivation / Bias Crime Type        | 41-42         | 2        | A
+   \*\*                                       | Future Expansion Buffer                  | 43-62         | 20       | A
+   [C8](#end-of-segment-marker-c8)            | End of Segment Marker                    | 63-64         | 2        | A
+   [C9](#padding-c9)                          | Padding                                  | 65-150        | \*\*     | A/N
+
+<br>
+
+### Segment 40 Errors and Explanations
+
+Error Number  | Error Message | Explaination of Error
+------------------|-------------------|--------------------------
+{% assign error = site.data.error["90008"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
+{% assign error = site.data.error["90009"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
+{% assign error = site.data.error["90010"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
+{% assign error = site.data.error["90011"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
+{% assign error = site.data.error["90013"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
+
+___
+
+<br>
+
+### Offender Using/Gaming Motivation (41)
+___
+
+   Data Element Number                                    | Description of Data Element                           | Position(s)   | Length   | Format
+  :------------------------------------------------------:|-------------------------------------------------------|:-------------:|:--------:|:---------:
+   [C1](#segment-descriptor-c1)                           | Segment Descriptor -- **41**                          | 1-2           | 2        | N
+   [C5](#action-type-c5)                                  | Action Type                                           | 3             | 1        | A
+   [1](#ori-number-1)                                     | ORI Number                                            | 4-12          | 9        | A
+   [2](#incident-number-2)                                | Incident Number                                       | 13-24         | 12       | A
+   [36](#offender-sequence-number-36)                     | Offender Sequence Number                              | 25-27         | 3        | N
+   [8](#offender-suspected-of-usinggaming-motivation-8)   | Offender Suspected of Using / Gaming Motivation       | 28            | 1        | A
+   \*\*                                                   | Future Expansion Buffer                               | 29-48         | 20       | A
+   [C8](#end-of-segment-marker-c8)                        | End of Segment Marker                                 | 49-50         | 2        | A
+   [C9](#padding-c9)                                      | Padding                                               | 51-150        | \*\*     | A/N
+
+<br>
+
+### Segment 41 Errors and Explanations
+None
+
+___
+
+<br>
+
+## Victim (50)
+___
+
+**\*\*\* Indicated Cells are either New or Modified Data Elements beginning with LIBRS Spec 2.5 \*\*\***
+
+   Data Element Number                                      | Description of Data Element                                                         | Position(s)     | Length      | Format
+  :--------------------------------------------------------:|-------------------------------------------------------------------------------------|:---------------:|:-----------:|:-----------:
+   [C1](#segment-descriptor-c1)                               | Segment Descriptor -- **50**                                                        | 1-2             | 2           | N
+   [C5](#action-type-c5)                                      | Action Type                                                                         | 3               | 1           | A
+   [1](#ori-number-1)                                         | ORI Number                                                                          | 4-12            | 9           | A
+   [2](#incident-number-2)                                    | Incident Number                                                                     | 13-24           | 12          | A
+   [23](#victim-sequence-number-23)                           | Victim Sequence Number                                                              | 25-27           | 3           | N
+   [25](#type-of-victim-25)                                   | Victim Type                                                                         | 28              | 1           | A
+   [26](#age-of-victim-26)                                    | Age (At Time of Incident)                                                           | 29-31           | 3           | A
+   [L26](#date-of-birth-of-victim-l26)                        | Date of Birth (LIBRS Only)                                                          | 32-39           | 8           | D
+   [27](#sex-of-victim-27)                                    | Sex                                                                                 | 40              | 1           | A
+   [28](#race-of-victim-28)                                   | Race                                                                                | 41              | 1           | A
+   [29](#ethnicity-of-victim-29)                              | Ethnicity                                                                           | 42              | 1           | A
+   [30](#resident-status-of-victim-30)                        | Resident Status                                                                     | 43              | 1           | A
+   **[31](#nos.-1-and-2-31)**                                 | **Aggravated Assault / Homicide Circumstance No. 1 \*\*\*Modified\*\*\***           | **44-45**       | **2**       | **N**
+   **[31](#nos.-1-and-2-31)**                                 | **Aggravated Assault / Homicide Circumstance No. 2 \*\*\*Modified\*\*\***           | **46-47**       | **2**       | **N**
+   ~~31~~                                                     | ~~Aggravated Assault / Homicide Circumstance No. 3**~~ \*No Longer In Use\*   | ~~48-49~~   | ~~2~~   | ~~N~~
+   **[32](#additional-justifiable-homicide-circumstance-32)** | **Additional Justifiable Homicide Circumstance \*\*\*Modified\*\*\***               | **50**          | **1**       | **A**
+   **[25A](#type-of-officer-activitycircumstance-25a)**       | **Type of Officer Activity/Circumstance \*\*\*New\*\*\***                           | **51-52**       | **2**       | **N**
+   **[25B](#officer-assignment-type-25b)**                    | **Officer Assignment Type \*\*\*New\*\*\***                                         | **53**          | **1**       | **A**
+   **[25C](#officer-ori-other-jurisdiction-25c)**             | **Officer ORI, Other Jurisdiction \*\*\*New\*\*\***                                 | **54-62**       | **9**       | **A**
+   \*\*                                                       | Future Expansion Buffer                                                             | 63-68           | 6           | A
+   [C8](#end-of-segment-marker-c8)                            | End of Segment Marker                                                               | 69-70           | 2           | A
+   [C9](#padding-c9)                                          | Padding                                                                             | 71-150          | \*\*        | A/N
+
+<br>
+
+### Segment 50 Errors and Explanations
+None
+
+___
+
+<br>
+
+## Victim Injury (51)
+___
+
+   Data Element Number                | Description of Data Element   | Position(s)   | Length   | Format
+  :----------------------------------:|-------------------------------|:-------------:|:--------:|:---------:
+   [C1](#segment-descriptor-c1)       | Segment Descriptor - **51**   | 1-2           | 2        | N
+   [C5](#action-type-c5)              | Action Type                   | 3             | 1        | A
+   [1](#ori-number-1)                 | ORI Number                    | 4-12          | 9        | A
+   [2](#incident-number-2)            | Incident Number               | 13-24         | 12       | A
+   [23](#victim-sequence-number-23)   | Victim Sequence Number        | 25-27         | 3        | N
+   [33](#type-of-injury-33)           | Injury Type                   | 28            | 1        | A
+   \*\*                               | Future Expansion Buffer       | 29-48         | 20       | A
+   [C8](#end-of-segment-marker-c8)    | End of Segment Marker         | 49-50         | 2        | A
+   [C9](#padding-c9)                  | Padding                       | 51-150        | \*\*     | A/N
+
+<br>
+
+### Segment 51 Errors and Explanations
+
+Error Number  | Error Message | Explaination of Error
+------------------|-------------------|--------------------------
+{% assign error = site.data.error["22080"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc51}}
+
+___
+
+<br>
+
+## Victim/Offender Relation (52)
+___
+
+   Data Element Number                            | Description of Data Element          | Position(s)   | Length   | Format
+  :----------------------------------------------:|--------------------------------------|:-------------:|:--------:|:---------:
+   [C1](#segment-descriptor-c1)                   | Segment Descriptor - **52**          | 1-2           | 2        | N
+   [C5](#action-type-c5)                          | Action Type                          | 3             | 1        | A
+   [1](#ori-number-1)                             | ORI Number                           | 4-12          | 9        | A
+   [2](#incident-number-2)                        | Incident Number                      | 13-24         | 12       | A
+   [23](#victim-sequence-number-23)               | Victim Sequence Number               | 25-27         | 3        | N
+   [34](#offender-number-to-be-related-34)        | Offender Number to be Related        | 28-30         | 3        | N
+   [35](#relationship-of-victim-to-offender-35)   | Relationship of Victim to Offender   | 31-32         | 2        | A
+   \*\*                                           | Future Expansion Buffer              | 33-52         | 20       | A
+   [C8](#end-of-segment-marker-c8)                | End of Segment Marker                | 53-54         | 2        | A
+   [C9](#padding-c9)                              | Padding                              | 55-150        | \*\*     | A/N
+
+<br>
+
+### Segment 52 Errors and Explanations
+
+Error Number  | Error Message | Explaination of Error
+------------------|-------------------|--------------------------
+{% assign error = site.data.error["22081"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc52}}
+
+___
+
+<br>
+
+## Arrestee (60)
+___
+
+   Data Element Number                             | Description of Data Element                                        | Position(s)   | Length   | Format
+  :-----------------------------------------------:|--------------------------------------------------------------------|:-------------:|:--------:|:---------:
+   [C1](#segment-descriptor-c1)                    | Segment Descriptor - **60**                                        | 1-2           | 2        | N
+   [C5](#action-type-c5)                           | Action Type                                                        | 3             | 1        | A
+   [1](#ori-number-1)                              | ORI Number                                                         | 4-12          | 9        | A
+   [2](#incident-number-2)                         | Incident Number                                                    | 13-24         | 12       | A
+   [40](#arrestee-sequence-number-40)              | Arrest Sequence Number                                             | 25-27         | 3        | N
+   [41](#local-booking-number-for-arrest-41)       | Arrest Number/Local Booking Number for Arrest*                     | 28-39         | 12       | A
+   [L55](#arrest-transaction-number-l55)           | Arrest Transaction Number                                          | 40-54         | 15       | A/N
+   [L40](#arrestee-name-l40)                       | Arrestee Name                                                      | 55-74         | 20       | A
+   [42](#arrest-date-42)                           | Arrest Date                                                        | 75-82         | 8        | D
+   [43](#type-of-arrest-43)                        | Arrest Type                                                        | 83            | 1        | A
+   [44](#multiple-arrestee-segment-indicator-44)   | Multiple Arrestee Segment Indicator                                | 84            | 1        | A
+   [47](#at-time-of-arrest-47)                     | Age (At Time of Arrest)                                            | 85-87         | 3        | A
+   [L47](#date-of-birth-of-arrestee-l47)           | Date of Birth                                                      | 88-95         | 8        | D
+   [48](#sex-of-arrestee-48)                       | Sex                                                                | 96            | 1        | A
+   [49](#race-of-arrestee-49)                      | Race                                                               | 97            | 1        | A
+   [50](#ethnicity-of-arrestee-50)                 | Ethnicity                                                          | 98            | 1        | A
+   [51](#resident-status-of-arrestee-51)           | Resident Status                                                    | 99            | 1        | A
+   [52](#disposition-of-arrestee-under-17-52)      | Disposition of Arrestee Under 17                                   | 100           | 1        | A
+   [C6](#clearance-indicator-c6)                   | Clearance Indicator (to be used for Time Window Submission only)   | 101           | 1        | A
+   \*\*                                            | Future Expansion Buffer                                            | 102-118       | 17       | A
+   [C8](#end-of-segment-marker-c8)                 | End of Segment Marker                                              | 119-120       | 2        | A
+   [C9](#padding-c9)                               | Padding                                                            | 121-150       | \*\*     | A/N
+
+<br>
+
+### Segment 60 Errors and Explanations
+
+Error Number  | Error Message | Explaination of Error
+------------------|-------------------|--------------------------
+{% assign error = site.data.error["16058"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc60}}
+
+<br>
+
+___
+
+## Arrestee Armed (61)
+___
+
+   Data Element Number                  | Description of Data Element             | Position(s)   | Length   | Format
+  :------------------------------------:|-----------------------------------------|:-------------:|:--------:|:--------:
+   [C1](#segment-descriptor-c1)         | Segment Descriptor - **61**             | 1-2           | 2        | N
+   [C5](#action-type-c5)                | Action Type                             | 3             | 1        | A
+   [1](#ori-number-1)                   | ORI Number                              | 4-12          | 9        | A
+   [2](#incident-number-2)              | Incident Number                         | 13-24         | 12       | A
+   [40](#arrestee-sequence-number-40)   | Arrestee Sequence Number                | 25-27         | 3        | N
+   [46](#at-time-of-arrest-46)          | Arrestee Armed With at Time of Arrest   | 28-30         | 3        | A
+   \*\*                                 | Future Expansion Buffer                 | 31-50         | 20       | A
+   [C8](#end-of-segment-marker-c8)      | End of Segment Marker                   | 51-52         | 2        | A
+   [C9](#padding-c9)                    | Padding                                 | 53-150        | \*\*     | A/N
+
+<br>
+
+### Segment 61 Errors and Explanations
+None
+
+___
+
+<br>
+
+
+## Arrestee Statute (62)
+___
+
+**\*\*\* Indicated Cells are either New or Modified Data Elements beginning with LIBRS Spec 2.5 \*\*\***
+
+   Data Element Number                        | Description of Data Element                      | Position(s)   | Length   | Format
+  :------------------------------------------:|--------------------------------------------------|:-------------:|:--------:|:---------:
+   [C1](#segment-descriptor-c1)               | Segment Descriptor - **62**                      | 1-2           | 2        | N
+   [C5](#action-type-c5)                      | Action Type                                      | 3             | 1        | A
+   [1](#ori-number-1)                         | ORI Number                                       | 4-12          | 9        | A
+   [2](#incident-number-2)                    | Incident Number                                  | 13-24         | 12       | A
+   [40](#arrestee-sequence-number-40)         | Arrestee Sequence Number                         | 25-27         | 3        | N
+   [45](#of-arrest-45)                        | Louisiana Revised Statute Number of Arrest       | 28-39         | 12       | A
+   [L45](#arrest-connection-to-offense-l45)   | Arrest Connection to Offense                     | 40-54         | 15       | A
+   [N45](#for-arrest-n45)                     | Agency Supplied NIBRS Code **\*\*\*New\*\*\***   | 55-57         | 3        | A
+   \*\*                                       | Future Expansion Buffer                          | 58-74         | 17       | A
+   [C8](#end-of-segment-marker-c8)            | End of Segment Marker                            | 75-76         | 2        | A
+   [C9](#padding-c9)                          | Padding                                          | 77-150        | \*\*     | A/N
+
+<br>
+
+### Segment 62 Errors and Explanations
+
+Error Number  | Error Message | Explaination of Error
+------------------|-------------------|--------------------------
+{% assign error = site.data.error["16060"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc62}}
+
+___
+
+<br>
+
+### Arrestee Modification (63)
+___
+
+*For Time Window Submissions, ONLY*
+
+   Data Element Number                 | Description of Data Element                    | Position(s)   | Length   | Format
+  :-----------------------------------:|------------------------------------------------|:-------------:|:--------:|:---------:
+   [C1](#segment-descriptor-c1)        | Segment Descriptor - **63**                    | 1-2           | 2        | N
+   [C5](#action-type-c5)               | Action Type                                    | 3             | 1        | A
+   [1](#ori-number-1)                  | ORI Number                                     | 4-12          | 9        | A
+   [2](#incident-number-2)             | Incident Number                                | 13-24         | 12       | A
+   [6](#louisiana-revised-statute-6)   | Louisiana Revised Statute Number of Incident   | 25-36         | 12       | A
+   \*\*                                | Future Expansion Buffer                        | 37-56         | 20       | A
+   [C8](#end-of-segment-marker-c8)     | End of Segment Marker                          | 57-58         | 2        | A
+   [C9](#padding-c9)                   | Padding                                        | 59-150        | \*\*     | A/N
+
+<br>
+
+### Segment 63 Errors and Explanations
+
+Error Number  | Error Message | Explaination of Error
+------------------|-------------------|--------------------------
+{% assign error = site.data.error["16059"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc63}}
+
+___
+
+<br>
+
+## Submission Trailer (99)
+___
+
+   Data Element Number                        | Description of Data Element      | Position(s)   | Length   | Format
+  :------------------------------------------:|----------------------------------|:-------------:|:--------:|:---------:
+   [C1](#segment-descriptor-c1)               | Segment Descriptor - **99**      | 1-2           | 2        | N
+   [C7](#number-of-segments-transferred-c7)   | Number of Segments Transferred   | 3-8           | 6        | N
+   [C8](#end-of-segment-marker-c8)            | End of Segment Marker            | 9-10          | 2        | A
+   [C9](#padding-c9)                          | Padding                          | 11-150        | \*\*     | A/N
+
+<br>
+
+### Segment 99 Errors and Explanations
+
+Error Number  | Error Message | Explaination of Error
+------------------|-------------------|--------------------------
+{% assign error = site.data.error["19901"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc99}}
+{% assign error = site.data.error["19902"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc99}}
+{% assign error = site.data.error["19903"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc99}}
+
+___
+
+<br>
+
+### Zero Record (01)
+___
+
+   Data Element Number               | Description of Data Element                     | Position(s)   | Length   | Format
+  :---------------------------------:|-------------------------------------------------|:-------------:|:--------:|:---------:
+   [C1](#segment-descriptor-c1)      | Segment Descriptor -- **01**                    | 1-2           | 2        | N
+   [2](#incident-number-2)           | Incident Number - All Zeroes \"000000000000\"   | 3-14          | 12       | N
+   [C8](#end-of-segment-marker-c8)   | End of Segment Marker                           | 15-16         | 2        | A
+   [C9](#padding-c9)                 | Padding                                         | 17-150        | \*\*     | A/N
+
+<br>
+
+### Segment 01 Errors and Explanations
+
+Error Number  | Error Message | Explaination of Error
+------------------|-------------------|--------------------------
+{% assign error = site.data.error["10092"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.desc01}}
+
 ___
