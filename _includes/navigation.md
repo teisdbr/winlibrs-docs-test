@@ -1,25 +1,22 @@
-<div class="m-4">
-    <div id="accordion">
-        <ul>
-            <li>
-                <div>LIBRS Specifications</div>
-                    <ul>
-                        {% for amenu in _data/specnavigation.yaml %}
-                        {{ amenu.title }}
-                            <!-- {% for bmenu in amenu.bmenu%}
-                	            {% if forloop.first %}<ul>{% endif %}
-    	                        <li>{{ bmenu.title }}</li>
-                                {% for cmenu in bmenu.cmenu %}
-                                    {% if forloop.first %}<ul>{% endif %}
-                                    <li>{{ cmenu.title }}</li>
-		  	                        {% if forloop.last %}</ul>{% endif %}
-		                        {% endfor %}
-                                {% if forloop.last %}</ul>
-                                {% endif %}
-                            {% endfor %} -->
+<div id="accordion" style="min-width:300px">
+    <ul>
+        <li>
+            <div>LIBRS Specifications</div>
+                {% for item in site.data.specnavigation %}
+                    {% if forloop.first %}<ul>{% endif %}
+                    <li>
+                        <div>{{ item.title }}</div>
+                        {% for subitem in item.submenu %}
+                            {% if forloop.first %}<ul style="padding-left:30px;">{% endif %}
+                                <li>
+                                {{ subitem.subtitle }}
+                                </li>
+                                {% if forloop.last %}</ul>{% endif %}
                         {% endfor %}
-                    </ul>
-            </li>
-        </ul>
-    </div>
+                    {% if forloop.last %}</ul>{% endif %}
+                {% endfor %}
+                </li>
+            </ul>
+        </li>
+    </ul>
 </div>

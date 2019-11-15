@@ -1,0 +1,1822 @@
+{
+    "1": {
+        "err_no": 1,
+        "err_message": "FIRST SEGMENT NOT 00 SEGMENT DESCRIPTOR"
+    },
+    "2": {
+        "err_no": 2,
+        "err_message": "END OF SEGMENT 'ZZ' MISSING OR MISPLACED"
+    },
+    "5": {
+        "err_no": 5,
+        "err_message": "MISSING ZERO RECORDS SEGMENT"
+    },
+    "7": {
+        "err_no": 7,
+        "err_message": "INVALID ZERO RECORDS SEGMENT"
+    },
+    "8": {
+        "err_no": 8,
+        "err_message": "FUTURE EXPANSION BUFFER MUST BE BLANK"
+    },
+    "10001": {
+        "err_no": 10001,
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+    },
+    "10003": {
+        "err_no": 10003,
+        "err_message": "MULTIPLE 00 SEGMENTS ENCOUNTERED.ONLY ONE PER SUBMISSION ALLOWED.DATA CANNOT BE PROCESSED FURTHER."
+
+    },
+    "10015": {
+        "err_no": 10015,
+        "err_message": "CANNOT HAVE EMBEDDED BLANKS BETWEEN FIRST AND LAST NON - BLANK CHARACTERS"
+    },
+    "10016": {
+        "err_no": 10016,
+        "err_message": "MUST BE LEFT - JUSTIFIED--BLANK DETECTED IN FIRST POSITION"
+    },
+    "10017": {
+        "err_no": 10017,
+        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN, AND / OR BLANKS"
+    },
+    "10050": {
+        "err_no": 10050,
+        "err_message": "SEGMENTS ARE OUT OF NUMERIC ORDER FOR THIS INCIDENT"
+    },
+    "10051": {
+        "err_no": 10051,
+        "err_message": "INVALID RECORD SEGMENT ON TAPE"
+    },
+    "10052": {
+        "err_no": 10052,
+        "err_message": "NOT A VALID ORI--NOT ON LIBRS ORI FILE"
+    },
+    "10053": {
+        "err_no": 10053,
+        "err_message": "RECORD NOT ON FILE"
+    },
+    "10055": {
+        "err_no": 10055,
+        "err_message": "CANNOT HAVE AN INITIAL INCIDENT RECORD WITHOUT STARTING WITH RECORD SEGMENT 10",
+        "desc10": "First segment, after the Submission Header, in a data submission MUST be an Administrative Segment (10)."
+    },
+    "10056": {
+        "err_no": 10056,
+        "err_message": "INCIDENT ALREADY ON FILE--PREVIOUSLY ADDED TO FILE ON[mm / dd / yyyy]"
+    },
+    "10057": {
+        "err_no": 10057,
+        "err_message": "ACTION TYPE IS NOT VALID FOR THIS RECORD SEGMENT"
+    },
+    "10059": {
+        "err_no": 10059,
+        "err_message": "ALL SEGMENTS ON MAGNETIC MEDIA MUST BE FROM SAME STATE - STATE = [state]"
+    },
+    "10060": {
+        "err_no": 10060,
+        "err_message": "SUBMISSION DATE(C3)[MMDDYYYY] PRECEDES REPORTING PERIOD(C4) IN POSITIONS 31 - 36 CONTAINING[MMYYYY]"
+    },
+    "10064": {
+        "err_no": 10064,
+        "err_message": "ARRESTEE ALREADY ON FILE"
+    },
+    "10065": {
+        "err_no": 10065,
+        "err_message": "EACH SEGMENT 20 MUST HAVE A CORRESPONDING VICTIM SEGMENT"
+    },
+    "10070": {
+        "err_no": 10070,
+        "err_message": "THE CORRESPONDING OFFENDER RECORD MUST BE PRESENT"
+    },
+    "10071": {
+        "err_no": 10071,
+        "err_message": "CANNOT HAVE ARRESTS IF CLEARED EXCEPTIONALLY"
+    },
+    "10072": {
+        "err_no": 10072,
+        "err_message": "RECOVERED PROPERTY MUST ALSO BE SUBMITTED AS STOLEN"
+    },
+    "10073": {
+        "err_no": 10073,
+        "err_message": "NUMBER OF RECOVERED VEHICLES CANNOT BE GREATER THAN THE NUMBER STOLEN"
+    },
+    "10074": {
+        "err_no": 10074,
+        "err_message": "PROPERTY RECORD(SEGMENT 30 & 31) MUST EXIST WITH THIS OFFENSE"
+    },
+    "10075": {
+        "err_no": 10075,
+        "err_message": "MISSING A MANDATORY RECORD SEGMENT FOR A COMPLETE INCIDENT",
+        "desc10":"When an Action Type of Incident Report (\"I\") is submitted, the following segments MUST be included: 10 - Administrative Segment, 20 - Offense Segment, 40 - Offender Segment, 41 - Offender Using Segment/Gaming Motivation, 50 - Victim Segment"
+    },
+    "10076": {
+        "err_no": 10076,
+        "err_message": "PROPERTY RECORD(SEGMT 30 & 31) CANNOT EXIT WITH OFFENSES SUBMITTED"
+    },
+    "10077": {
+        "err_no": 10077,
+        "err_message": "NEED A PROPERTY LOSS CODE OF '1' OR '8' WHEN THIS OFFENSE IS ATTEMPTED"
+    },
+    "10078": {
+        "err_no": 10078,
+        "err_message": "A VALID PROPERTY LOSS CODE DOES NOT EXIST FOR THIS COMPLETED OFFENSE"
+    },
+    "10080": {
+        "err_no": 10080,
+        "err_message": "CRIMES AGAINST SOCIETY CAN ONLY HAVE ONE VICTIM"
+    },
+    "10081": {
+        "err_no": 10081,
+        "err_message": "THIS PROPERTY LOSS CODE CANNOT EXIST WITH THE OFFENSES SUBMITTED"
+    },
+    "10084": {
+        "err_no": 10084,
+        "err_message": "RECOVERED PROPERTY VALUE CANNOT BE GREATER THAN THE VALUE WHEN STOLEN"
+    },
+    "10085": {
+        "err_no": 10085,
+        "err_message": "WHEN CONNECTED, EACH VICTIM MUST BE CONNECTED TO ALL OFFENDERS"
+    },
+    "10086": {
+        "err_no": 10086,
+        "err_message": "THE LAST 2 POSITIONS OF THE PARTICIPANT 'S ORI ARE INVALID"
+    },
+    "10087": {
+        "err_no": 10087,
+        "err_message": "WINDOW SEGMENTS ALREADY ON FILE WITH THIS INCIDENT NUMBER"
+    },
+    "10090": {
+        "err_no": 10090,
+        "err_message": "ZERO - REPORTING MONTH IS NOT 01 - 12",
+        "desc00": "Invalid reporting month in positions 31-32. The data entered must be a valid month of 01 through 12."
+    },
+    "10091": {
+        "err_no": 10091,
+        "err_message": "ZERO - REPORTING YEAR IS INVALID",
+        "desc00": "Segment 00 did not have four numeric digits in positions 33-36."
+    },
+    "10092": {
+        "err_no": 10092,
+        "err_message": "ZERO - REPORTING INCIDENT NUMBER MUST BE ALL ZEROES"
+    },
+    "10093": {
+        "err_no": 10093,
+        "err_message": "ZERO - REPORTING MONTH / YEAR WAS PRIOR TO THE 'BASE DATE'",
+        "desc00": "The month and year entered into positions 31-36 was later than the “Month of Submission” and “Year of Submission” entered into positions 23-30."
+    },
+    "10094": {
+        "err_no": 10094,
+        "err_message": "ZERO - REPORTING MONTH / YEAR EXCEEDED MONTH / YEAR OF TAPE",
+        "desc00": "The month and year entered into positions 31-36 was later than the “Month of Submission” and “Year of Submission” entered into positions 23-30."
+    },
+    "10100": {
+        "err_no": 10100,
+        "err_message": "!!!!WARNING!!!!INVALID DATA VALUE--ORDINANCE NOT CURRENTLY CLASSIFIED BY LIBRS."
+    },
+    "11001": {
+        "err_no": 11001,
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+    },
+    "11004": {
+        "err_no": 11004,
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+    },
+    "11005": {
+        "err_no": 11005,
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+    },
+    "11015": {
+        "err_no": 11015,
+        "err_message": "CANNOT HAVE EMBEDDED 'BLANKS' BETWEEN FIRST AND LAST NON - BLANK CHARACTERS"
+    },
+    "11016": {
+        "err_no": 11016,
+        "err_message": "MUST BE LEFT - JUSTIFIED--BLANK DETECTED IN FIRST POSITION"
+    },
+    "11017": {
+        "err_no": 11017,
+        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN, AND / OR BLANKS"
+    },
+    "11018": {
+        "err_no": 11018,
+        "err_message": "DATE CANNOT BE ON OR AFTER THE INACTIVE DATE[MMDDYYYY] OF THE ORI"
+    },
+    "11020": {
+        "err_no": 11020,
+        "err_message": "EXCEPTIONAL CLEARANCE DATE CANNOT PREDATE BASE DATE"
+    },
+    "11021": {
+        "err_no": 11021,
+        "err_message": "JUSTIFIABLE HOMICIDE(09 C) IS NOT A VALID WINDOW OFFENSE CODE"
+    },
+    "11051": {
+        "err_no": 11051,
+        "err_message": "REPORT INDICATOR MUST BE BLANK OR 'R'"
+    },
+    "11052": {
+        "err_no": 11052,
+        "err_message": "INVALID HOUR ENTRY"
+    },
+    "11053": {
+        "err_no": 11053,
+        "err_message": "VALUE ENTERED CONFLICTS WITH PRESENCE OF AN ENTRY IN EXCEPTIONAL CLEARANCE DATE"
+    },
+    "11054": {
+        "err_no": 11054,
+        "err_message": "CLEARED EXCEPTIONALLY CANNOT CONTAIN 'N' WITH SEGMENT ACTION TYPE 'W'"
+    },
+    "11055": {
+        "err_no": 11055,
+        "err_message": "CLEARANCE DATE[MMDDYYYY] PREDATES INCIDENT DATE[MMDDYYYY]"
+    },
+    "11056": {
+        "err_no": 11056,
+        "err_message": "AN ENTRY MUST BE MADE WHEN CLEARED EXCEPTIONALLY HAS ENTRIES OF A - E"
+    },
+    "11057": {
+        "err_no": 11057,
+        "err_message": "MUST BE PRESENT FOR TIME WINDOW SEGMENT"
+    },
+    "11058": {
+        "err_no": 11058,
+        "err_message": "OFFENSE CODE FIELD MUST HAVE ENTRY WITH SEGMENT ACTION TYPE 'W'"
+    },
+    "11060": {
+        "err_no": 11060,
+        "err_message": "INCIDENT NOT ON FILE"
+    },
+    "11061": {
+        "err_no": 11061,
+        "err_message": "CANNOT MODIFY AN INCIDENT DATE THIS WAY--ON FILE IS[MMDDYYYYRHH]"
+    },
+    "11062": {
+        "err_no": 11062,
+        "err_message": "CANNOT MODIFY A REPORT FLAG THIS WAY--ON FILE IS[MMDDYYYYRHH]"
+    },
+    "11063": {
+        "err_no": 11063,
+        "err_message": "CANNOT MODIFY AN INCIDENT HOUR THIS WAY--ON FILE IS[MMDDYYYYRHH]"
+    },
+    "11064": {
+        "err_no": 11064,
+        "err_message": "CLEARED EXCEPTIONALLY FIELD MUST CONTAIN 'N' WHEN ARRESTEES WERE REPORTED"
+    },
+    "11065": {
+        "err_no": 11065,
+        "err_message": "CANNOT BE BLANK OR EQUAL 'N'"
+    },
+    "11066": {
+        "err_no": 11066,
+        "err_message": "CANNOT HAVE ENTRY IN EXCEPTIONAL CLEARANCE DATE IF CLEARED EXCEPTIONALLY IS 'N'"
+    },
+    "11067": {
+        "err_no": 11067,
+        "err_message": "DATE CANNOT BE BLANK FOR SEGMENT"
+    },
+    "11069": {
+        "err_no": 11069,
+        "err_message": "TIME WINDOW SEGMENT BEING MODIFIED MUST HAVE LOUISIANA REVISED STATUTE NUMBER"
+    },
+    "11070": {
+        "err_no": 11070,
+        "err_message": "INCIDENT DATE CANNOT BE AFTER YEAR[yyyy] AND MONTH[mm] OF TAPE"
+    },
+    "11071": {
+        "err_no": 11071,
+        "err_message": "INCIDENT DATE IS OUTSIDE THE BASE DATE CALCULATION"
+    },
+    "11072": {
+        "err_no": 11072,
+        "err_message": "INCIDENT DATE / HOUR FOR 'I' RECORDS CANNOT PREDATE 01 / 01 / 1991"
+    },
+    "11073": {
+        "err_no": 11073,
+        "err_message": "INCIDENT DATE CANNOT BE BEFORE DATE ORI WENT IBR"
+    },
+    "11074": {
+        "err_no": 11074,
+        "err_message": "EXCEPTIONAL CLEARANCE DATE PREDATES DATE ORI WENT IBR"
+    },
+    "11075": {
+        "err_no": 11075,
+        "err_message": "CANNOT CALCULATE BASE DATE FROM INCIDENT DATE[MMDDYYYY]"
+    },
+    "11076": {
+        "err_no": 11076,
+        "err_message": "INCIDENT DATE FOR WINDOW RECORDS CANNOT BE WITHIN BOUNDARIES OF INCIDENT"
+    },
+    "11097": {
+        "err_no": 11097,
+        "err_message": "SEGMENT 11 MISSING(LIBRS ONLY)"
+    },
+    "12001": {
+        "err_no": 12001,
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+    },
+    "12002": {
+        "err_no": 12002,
+        "err_message": "CONTAINS NON NUMERIC ENTRY"
+    },
+    "12004": {
+        "err_no": 12004,
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+    },
+    "12005": {
+        "err_no": 12005,
+        "err_message": "INVALID LRS--NOT IN LIBRS REVISED STATUTES TABLE"
+    },
+    "12006": {
+        "err_no": 12006,
+        "err_message": "ERROR - DUPLICATE VALUE = (VALUE)"
+    },
+    "12007": {
+        "err_no": 12007,
+        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]"
+    },
+    "12015": {
+        "err_no": 12015,
+        "err_message": "CANNOT HAVE EMBEDDED 'BLANKS' BETWEEN FIRST AND LAST NON - BLANK CHARACTERS"
+    },
+    "12016": {
+        "err_no": 12016,
+        "err_message": "MUST BE LEFT - JUSTIFIED--BLANK DETECTED IN FIRST POSITION"
+    },
+    "12017": {
+        "err_no": 12017,
+        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN, AND / OR BLANKS"
+    },
+    "12019": {
+        "err_no": 12019,
+        "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES"
+    },
+    "12051": {
+        "err_no": 12051,
+        "err_message": "INVALID CODE"
+    },
+    "12052": {
+        "err_no": 12052,
+        "err_message": "OFFENSE CODE MUST BE BURGLARY WITH LOCATION TYPE OF 14, 19 FOR DATA TO BE ENTERED"
+    },
+    "12053": {
+        "err_no": 12053,
+        "err_message": "MUST BE PRESENT WHEN OFFENSE CODE IS 220(BURGLARY)"
+    },
+    "12054": {
+        "err_no": 12054,
+        "err_message": "MUST BE BLANK WHEN OFFENSE IS OTHER THAN(BURGLARY)"
+    },
+    "12055": {
+        "err_no": 12055,
+        "err_message": "AUTOMATIC INDICATOR MUST BE BLANK OR 'A'"
+    },
+    "12056": {
+        "err_no": 12056,
+        "err_message": "OFFENSE CODES OF MURDER(09 A, 09 B, 09 C) AND ASSAULT(13 A, 13 B, 13 C) MUST HAVE ENTRY OF 'C'"
+    },
+    "12057": {
+        "err_no": 12057,
+        "err_message": "MUST BE PRESENT WITH AN OFFENSE CODE OF 220 AND A LOCATION TYPE OF 14 OR 19"
+    },
+    "12058": {
+        "err_no": 12058,
+        "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR"
+    },
+    "12065": {
+        "err_no": 12065,
+        "err_message": "INVALID WEAPON WITH AN OFFENSE OF SIMPLE ASSAULT(13 B);ACCEPTED WEAPON CODES ARE 40, 90, 95."
+    },
+    "12066": {
+        "err_no": 12066,
+        "err_message": "NO OTHER OFFENSE CAN BE SUBMITTED WITH AN 09 C(JUSTIFIABLE HOMICIDE) OFFENSE"
+    },
+    "12067": {
+        "err_no": 12067,
+        "err_message": "INVALID WEAPON[weapon - code] WITH AN OFFENSE OF[offense]"
+    },
+    "12069": {
+        "err_no": 12069,
+        "err_message": "POSSIBLE CLASSIFICATION ERROR OF AGGRAVATED ASSAULT '13A' CODED AS SIMPLE '13B'"
+    },
+    "12090": {
+        "err_no": 12090,
+        "err_message": "OFFENSE CONNECTED TO A NON - EXISTENT VICTIM"
+    },
+    "13001": {
+        "err_no": 13001,
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+    },
+    "13002": {
+        "err_no": 13002,
+        "err_message": "CONTAINS NON NUMERIC ENTRY"
+    },
+    "13004": {
+        "err_no": 13004,
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+    },
+    "13005": {
+        "err_no": 13005,
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+    },
+    "13006": {
+        "err_no": 13006,
+        "err_message": "ERROR - DUPLICATE VALUE = [value]"
+    },
+    "13007": {
+        "err_no": 13007,
+        "err_message": "CANNOT BE EARLIER THAN INCIDENT DATE / HOUR."
+    },
+    "13008": {
+        "err_no": 13008,
+        "err_message": "DATE RECOVERED CANNOT BE AFTER SUBMISSION DATE."
+    },
+    "13015": {
+        "err_no": 13015,
+        "err_message": "CANNOT HAVE EMBEDDED 'BLANKS' BETWEEN FIRST AND LAST NON - BLANK CHARACTERS"
+    },
+    "13016": {
+        "err_no": 13016,
+        "err_message": "MUST BE LEFT - JUSTIFIED--BLANK DETECTED IN FIRST POSITION"
+    },
+    "13017": {
+        "err_no": 13017,
+        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN, AND / OR BLANKS"
+    },
+    "13019": {
+        "err_no": 13019,
+        "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES"
+    },
+    "13020": {
+        "err_no": 13020,
+        "err_message": "RECOVERED DATE CANNOT PREDATE BASE DATE"
+    },
+    "13021": {
+        "err_no": 13021,
+        "err_message": "JUSTIFIABLE HOMICIDE IS NOT A VALID WINDOW OFFENSE CODE"
+    },
+    "13040": {
+        "err_no": 13040,
+        "err_message": "Invalid Value of Property"
+    },
+    "13042": {
+        "err_no": 13042,
+        "err_message": "WARNING - PROPERTY DESCRIPTION(DATA ELEMENT 15) HAD A VALUE(DATA ELEMENT 16) THAT EXCEEDED THRESHOLD OF[$ VALUE]"
+    },
+    "13043": {
+        "err_no": 13043,
+        "err_message": "WARNING - '280' OFFENSE HAS 'RECOVERED' VEHICLE BUT '240' DOESN'T SHOW 'STOLEN'"
+    },
+    "13051": {
+        "err_no": 13051,
+        "err_message": "PROPERTY VALUE OF ZERO IS NOT ALLOWED"
+    },
+    "13052": {
+        "err_no": 13052,
+        "err_message": "DATA ELEMENTS 15 - 22 MUST BE BLANK WHEN PROPERTY LOSS CODE = 1 OR 8"
+    },
+    "13053": {
+        "err_no": 13053,
+        "err_message": "PENDING INVENTORY MUST HAVE PROPERTY VALUE OF '1'"
+    },
+    "13054": {
+        "err_no": 13054,
+        "err_message": "DATA ELEMENT 15 WAS NOT ENTERED, BUT VALUE($) WAS"
+    },
+    "13055": {
+        "err_no": 13055,
+        "err_message": "PROPERTY LOSS CODE(14) MUST = 5(RECOVERED) FOR DATA TO BE ENTERED"
+    },
+    "13056": {
+        "err_no": 13056,
+        "err_message": "PROPERTY DESCRIPTION(15) AND VALUE(16) MUST BOTH EXIST IF DATA IS PRESENT"
+    },
+    "13057": {
+        "err_no": 13057,
+        "err_message": "PROPERTY LOSS(14) MUST BE 7 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24,28, OR  37 ' FOR DATA TO BE ENTERED"
+    },
+    "13058": {
+        "err_no": 13058,
+        "err_message": "DATA MUST EXIST WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28', OR '37' AND A PROPERTY LOSS OF 7"
+    },
+    "13059": {
+        "err_no": 13059,
+        "err_message": "ALL NON VEHICULAR PROPERTY DESCRIPTIONS WERE ENTERED"
+    },
+    "13060": {
+        "err_no": 13060,
+        "err_message": "PROPERTY LOSS(14) MUST BE 5 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24, 28, O R ' 37 ' FOR DATA TO BE ENTERED"
+    },
+    "13061": {
+        "err_no": 13061,
+        "err_message": "DATA MUST EXIST WITH A MOTOR VECHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28' OR '37' AND A PROPERTY LOSS OF 5"
+    },
+    "13064": {
+        "err_no": 13064,
+        "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE(20), QUANTITY(21) AND MEASUREMENT(22) MUST BE PRESENT"
+    },
+    "13065": {
+        "err_no": 13065,
+        "err_message": "OFFENSE = DRUG OFFENSE & PROP LOSS = 6 AND DESCRIPTION = 10 MUST EXIST"
+    },
+    "13066": {
+        "err_no": 13066,
+        "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE(20) AND MEASUREMENT(22) MUST BE PRESENT"
+    },
+    "13067": {
+        "err_no": 13067,
+        "err_message": "DRUG TYPE MUST BE 'E', 'G', OR 'K' FOR A VALUE OF 'NP'"
+    },
+    "13068": {
+        "err_no": 13068,
+        "err_message": "WITH DATA ENTERED DRUG TYPE(DATA ELEMENT 20), QUANTITY(DATA ELEMENT 21), AND VALUE(DATA ELEMENT 16) MUST BE PRESENT"
+    },
+    "13070": {
+        "err_no": 13070,
+        "err_message": "MUST HAVE AN ENTRY WITH AN ACTION TYPE OF 'W'(WINDOW)"
+    },
+    "13071": {
+        "err_no": 13071,
+        "err_message": "GAMBLING, KIDNAPPING, AND CRIMES AGAINST PROPERTY ARE THE ONLY VALID OFFENS"
+    },
+    "13072": {
+        "err_no": 13072,
+        "err_message": "DATA ELEMENTS 15 - 22 WERE ALL BLANK WITH THIS PROPERTY LOSS CODE"
+    },
+    "13075": {
+        "err_no": 13075,
+        "err_message": "MANDATORY FIELD WITH THE PROPERTY LOSS CODE ENTERED"
+    },
+    "13076": {
+        "err_no": 13076,
+        "err_message": "DUPLICATE PROPERTY SEGMENT ON MAGNETIC MEDIA(TYPE LOSS = [loss - code])"
+    },
+    "13077": {
+        "err_no": 13077,
+        "err_message": "PROPERTY SEGMENT A - O - F ADDED ON[MMDDYYYY] RECOVERY DATE = [MMDDYYYY]"
+    },
+    "13078": {
+        "err_no": 13078,
+        "err_message": "ATTEMPT TO ADD OTHER THAN 'RECOVERED' PROPERTY IS NOT ALLOWED"
+    },
+    "13079": {
+        "err_no": 13079,
+        "err_message": "ATTEMPT TO MODIFY OTHER THAN 'RECOVERED' PROPERTY IS NOT ALLOWED"
+    },
+    "13080": {
+        "err_no": 13080,
+        "err_message": "CANNOT MODIFY PROPERTY--ADDED[MMDDYYYY] DATA ELEMENT 3 = [MMDDYYYY]"
+    },
+    "13081": {
+        "err_no": 13081,
+        "err_message": "CANNOT DELETE PROPERTY - ADDED[MMDDYYYY] DATA ELEMENT 3 = [MMDDYYYY]"
+    },
+    "13084": {
+        "err_no": 13084,
+        "err_message": "WITH A MEASUREMENT OF 'XX'(NOT REPORTED) DRUG QTY MUST = 00000001.000"
+    },
+    "13087": {
+        "err_no": 13087,
+        "err_message": "WITH PROPERTY LOSS = 6 & ONLY DRUG OFFENSE, CANNOT HAVE A DESCRIPTION 11;OR PROPERTY LOSS = 6 & ONLY DRUG EQUIP OFNSE CANNOT HAVE DESCRIPTION 10"
+    },
+    "13088": {
+        "err_no": 13088,
+        "err_message": "NUMBER STOLEN IS LESS THAN NUMBER OF VEHICLE CODES"
+    },
+    "13089": {
+        "err_no": 13089,
+        "err_message": "NUMBER RECOVERED IS LESS THAN NUMBER OF VEHICLE CODES"
+    },
+    "13090": {
+        "err_no": 13090,
+        "err_message": "ILLOGICAL PROPERTY DESCRIPTION FOR THE OFFENSE(S) SUBMITTED"
+    },
+    "13091": {
+        "err_no": 13091,
+        "err_message": "PROPERTY VALUE MUST BE ZERO FOR DESCRIPTION[PROP DESCRIPTION CODE]"
+    },
+    "13092": {
+        "err_no": 13092,
+        "err_message": "35 A OFFENSE ENTERED AND '1=NONE' ENTERED;MISSING SUSPECTED DRUG TYPE(20)"
+    },
+    "13100": {
+        "err_no": 13100,
+        "err_message": "MANDATORY DATA ELEMENT REQUIREMENT NOT MET"
+    },
+    "14001": {
+        "err_no": 14001,
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+    },
+    "14002": {
+        "err_no": 14002,
+        "err_message": "CONTAINS NON NUMERIC ENTRY"
+    },
+    "14004": {
+        "err_no": 14004,
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+    },
+    "14008": {
+        "err_no": 14008,
+        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS"
+    },
+    "14009": {
+        "err_no": 14009,
+        "err_message": "ESTIMATED AGE MUST BE 2 NUMERIC DIGITS, AND HAVE A TRAILING 'E'"
+    },
+    "14015": {
+        "err_no": 14015,
+        "err_message": "CANNOT HAVE EMBEDDED 'BLANKS' BETWEEN FIRST AND LAST NON - BLANK CHARACTERS"
+    },
+    "14016": {
+        "err_no": 14016,
+        "err_message": "MUST BE LEFT - JUSTIFIED--BLANK DETECTED IN FIRST POSITION"
+    },
+    "14017": {
+        "err_no": 14017,
+        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN, AND / OR BLANKS"
+    },
+    "14022": {
+        "err_no": 14022,
+        "err_message": "ESTIMATED AGE CANNOT BE '00' UNKNOWN AND HAVE A TRAILING 'E'"
+    },
+    "14050": {
+        "err_no": 14050,
+        "err_message": "OFFENDER IS SPOUSE, BUT AGE IS LESS THAN 10"
+    },
+    "14051": {
+        "err_no": 14051,
+        "err_message": "DUPLICATE OFFENDER SEGMENT ON TAPE"
+    },
+    "14052": {
+        "err_no": 14052,
+        "err_message": "CANNOT BE PRESENT WHEN OFFENDER NUMBER IS '000' UNKNOWN"
+    },
+    "14053": {
+        "err_no": 14053,
+        "err_message": "SEX OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP"
+    },
+    "14054": {
+        "err_no": 14054,
+        "err_message": "AGE OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP"
+    },
+    "14055": {
+        "err_no": 14055,
+        "err_message": "OFFENDER '000' EXISTS--CANNOT SUBMIT MORE OFFENDERS"
+    },
+    "14056": {
+        "err_no": 14056,
+        "err_message": "OFFENDER EXACT AGE MUST BE 2 NUMERIC DIGITS"
+    },
+    "14057": {
+        "err_no": 14057,
+        "err_message": "OFFENDER SEQUENCE NUMBER CANNOT BE UNKNOWN IF INCIDENT CLEARED EXCEPTIONALL"
+    },
+    "14058": {
+        "err_no": 14058,
+        "err_message": "AT LEAST ONE OFFENDER MUST HAVE KNOWN VALUES"
+    },
+    "14059": {
+        "err_no": 14059,
+        "err_message": "OFFENDER DATA MUST BE PRESENT IF OFFENSE CODE IS JUSTIFIABLE HOMICIDE / 09 C"
+    },
+    "14060": {
+        "err_no": 14060,
+        "err_message": "VICTIM 'S SEX CANNOT BE SAME AS ALL OFFENDERS FOR OFFENSES OF ' 11 A ' AND ' 36 B '"
+    },
+    "14061": {
+        "err_no": 14061,
+        "err_message": "SEGMENT 41(OFFENDER USING) SEGMENT MISSING;OR, NO SEGMENT 41 TO MATCH EXISTING SEGMENT 40"
+    },
+    "14070": {
+        "err_no": 14070,
+        "err_message": "BIAS MOTIVATION = 99 REQUIRES THAT AN OFFENDER AGE BE ENTERED.AT LEAST ONE OFFENDER MUST BE COMPLETELY KNOWN."
+    },
+    "15001": {
+        "err_no": 15001,
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+    },
+    "15002": {
+        "err_no": 15002,
+        "err_message": "CONTAINS NON NUMERIC ENTRY"
+    },
+    "15003": {
+        "err_no": 15003,
+        "err_message": "MISSING VICTIM INJURY SEGMENT(SEGMENT 51)"
+    },
+    "15004": {
+        "err_no": 15004,
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+    },
+    "15005": {
+        "err_no": 15005,
+        "err_message": "MISSING VICTIM / OFFENDER SEGMENT(SEGMENT 52)"
+    },
+    "15006": {
+        "err_no": 15006,
+        "err_message": "ERROR - DUPLICATE VALUE = [value]"
+    },
+    "15007": {
+        "err_no": 15007,
+        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]"
+    },
+    "15008": {
+        "err_no": 15008,
+        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS"
+    },
+    "15009": {
+        "err_no": 15009,
+        "err_message": "ESTIMATED AGE MUST HAVE 'E' IN LAST POSITION"
+    },
+    "15015": {
+        "err_no": 15015,
+        "err_message": "CANNOT HAVE EMBEDDED 'BLANKS' BETWEEN FIRST AND LAST NON - BLANK CHARACTERS"
+    },
+    "15016": {
+        "err_no": 15016,
+        "err_message": "MUST BE LEFT - JUSTIFIED--BLANK DETECTED IN FIRST POSITION"
+    },
+    "15017": {
+        "err_no": 15017,
+        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN, AND / OR BLANKS"
+    },
+    "15019": {
+        "err_no": 15019,
+        "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES"
+    },
+    "15020": {
+        "err_no": 15020,
+        "err_message": "DATA MUST BE ENTERED FOR SPECIFIC OFFENSES"
+    },
+    "15022": {
+        "err_no": 15022,
+        "err_message": "ESTIMATED AGE CANNOT BE '00' = UNKNOWN"
+    },
+    "15050": {
+        "err_no": 15050,
+        "err_message": "VICTIM IS SPOUSE, BUT AGE IS LESS THAN 10"
+    },
+    "15051": {
+        "err_no": 15051,
+        "err_message": "VICTIM NUMBER ALREADY EXISTS"
+    },
+    "15053": {
+        "err_no": 15053,
+        "err_message": "MUST BE PRESENT WHEN VICTIM TYPE(25) = 'I' OR 'L'"
+    },
+    "15055": {
+        "err_no": 15055,
+        "err_message": "ADDITIONAL JUSTIFIABLE HOMICIDE IS MANDATORY WITH A '20' OR '21' ENTERED"
+    },
+    "15056": {
+        "err_no": 15056,
+        "err_message": "ONLY ONE VALUE GREATER OR EQUAL TO '10' CAN BE ENTERED"
+    },
+    "15057": {
+        "err_no": 15057,
+        "err_message": "WHEN DATA ELEMENT 32 IS ENTERED, DATA ELEMENT 31 MUST EQUAL '20' OR '21' UN LESS TYPE OF VICTIM IS EQUAL TO 'L' = LAW ENFORCEMENT OFFICER"
+    },
+    "15058": {
+        "err_no": 15058,
+        "err_message": "VICTIM TYPE(25) MUST BE 'I' OR 'L' FOR DATA TO BE ENTERED"
+    },
+    "15059": {
+        "err_no": 15059,
+        "err_message": "NEED A CRIME AGAINST PERSON OR ROBBERY FOR DATA TO BE ENTERED"
+    },
+    "15060": {
+        "err_no": 15060,
+        "err_message": "RELATIONSHIP MUST BE ENTERED WHEN AN OFFENDER NUMBER(34) EXISTS"
+    },
+    "15061": {
+        "err_no": 15061,
+        "err_message": "VICTIM TYPE CANNOT EQUAL 'S' WITH AN OFFENSE BURGLARY(220)"
+    },
+    "15062": {
+        "err_no": 15062,
+        "err_message": "INVALID AGGRAVATED ASSAULT / HOMICIDE FOR AGGRAVATED ASSAULT OFFENSE(13 A)"
+    },
+    "15063": {
+        "err_no": 15063,
+        "err_message": "INVALID AGGRAVATED ASSAULT / HOMICIDE FOR JUSTIFIABLE HOMICIDE OFFENSE(09 C)"
+    },
+    "15064": {
+        "err_no": 15064,
+        "err_message": "ENTRY FOR TYPE OF VICTIM MUST BE 'I' OR 'L' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM"
+    },
+    "15065": {
+        "err_no": 15065,
+        "err_message": "ENTRY FOR TYPE OF VICTIM MUST BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM"
+    },
+    "15066": {
+        "err_no": 15066,
+        "err_message": "OFFENSE MUST BE SUBMITTED AS SEGMENT 20 RECORD IF VICTIM IS CONNECTED"
+    },
+    "15067": {
+        "err_no": 15067,
+        "err_message": "ENTRY FOR TYPE OF VICTIM CANNOT BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM"
+    },
+    "15068": {
+        "err_no": 15068,
+        "err_message": "RELATIONSHIP CANNOT BE ENTERED WHEN RELATED TO OFFENDER NUMBER '000'"
+    },
+    "15069": {
+        "err_no": 15069,
+        "err_message": "VICTIM SEX MUST BE 'M' OR 'F' FOR AN 11 A OR 36 B OFFENSE"
+    },
+    "15070": {
+        "err_no": 15070,
+        "err_message": "WHEN 'VO' RELATIONSHIP IS PRESENT, MUST HAVE TWO OR MORE VICTIMS AND OFFEND"
+    },
+    "15071": {
+        "err_no": 15071,
+        "err_message": "ONLY ONE 'VO' RELATIONSHIP PER VICTIM"
+    },
+    "15072": {
+        "err_no": 15072,
+        "err_message": "WHEN OFFENDER AGE / SEX / RACE ARE UNKNOWN, RELATIONSHIP MUST BE 'RU' = UNKNOWN"
+    },
+    "15074": {
+        "err_no": 15074,
+        "err_message": "ONLY ONE 'VO' RELATIONSHIP CAN BE ASSIGNED TO A SPECIFIC OFFENDER"
+    },
+    "15075": {
+        "err_no": 15075,
+        "err_message": "ONLY ONE 'SE' RELATIONSHP PER VICTIM"
+    },
+    "15076": {
+        "err_no": 15076,
+        "err_message": "ONLY ONE 'SE' RELATIONSHIP CAN BE ASSIGNED TO A SPECIFIC OFFENDER"
+    },
+    "15077": {
+        "err_no": 15077,
+        "err_message": "INVALID AGGRAVATED ASSAULT / HOMICIDE CIRCUMSTANCES AND LAW ENFORCEMENT OFFICERS KILLED / ASSAULTED(IN THE LINE OF DUTY) TYPE OF ASSIGNMENT FOR THIS LRS CODE"
+    },
+    "15078": {
+        "err_no": 15078,
+        "err_message": "VICTIM CONNECTED TO AN INVALID COMBINATION OF OFFENSES"
+    },
+    "15079": {
+        "err_no": 15079,
+        "err_message": "SIMPLE ASSAULT(13 B) CANNOT HAVE 'MAJOR INJURIES'"
+    },
+    "15080": {
+        "err_no": 15080,
+        "err_message": "WHEN HOMICIDE / ASSAULT(DATA ELEMENT 31) IS '08,' INCIDENT MUST HAVE 2 OR MORE OFFENSES"
+    },
+    "15081": {
+        "err_no": 15081,
+        "err_message": "STATUTORY RAPE OFFENSES REQUIRE A VICTIM WHO IS AT LEAST 13 YEARS OF AGE BUT NO OLDER THAN 16 YEARS OLD"
+    },
+    "15096": {
+        "err_no": 15096,
+        "err_message": "EACH VICTIM SEQUENCE NUMBER ENTERED MUST HAVE A CORRESPONDING VICTIM SEGMENT"
+    },
+    "16001": {
+        "err_no": 16001,
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+    },
+    "16002": {
+        "err_no": 16002,
+        "err_message": "CONTAINS NON NUMERIC ENTRY"
+    },
+    "16004": {
+        "err_no": 16004,
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+    },
+    "16005": {
+        "err_no": 16005,
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+    },
+    "16006": {
+        "err_no": 16006,
+        "err_message": "ERROR - DUPLICATE VALUE ="
+    },
+    "16007": {
+        "err_no": 16007,
+        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]"
+    },
+    "16008": {
+        "err_no": 16008,
+        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS"
+    },
+    "16009": {
+        "err_no": 16009,
+        "err_message": "ESTIMATED AGE MUST HAVE 'E' IN LAST POSITION"
+    },
+    "16015": {
+        "err_no": 16015,
+        "err_message": "CANNOT HAVE EMBEDDED 'BLANKS' BETWEEN FIRST AND LAST NON - BLANK CHARACTERS"
+    },
+    "16016": {
+        "err_no": 16016,
+        "err_message": "MUST BE LEFT JUSTIFIED--BLANK DETECTED IN FIRST POSITION"
+    },
+    "16017": {
+        "err_no": 16017,
+        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN AND / OR BLANKS"
+    },
+    "16020": {
+        "err_no": 16020,
+        "err_message": "ARREST DATE CANNOT PREDATE BASE DATE"
+    },
+    "16021": {
+        "err_no": 16021,
+        "err_message": "JUSTIFIABLE HOMICIDE IS NOT A VALID WINDOW OFFENSE CODE"
+    },
+    "16022": {
+        "err_no": 16022,
+        "err_message": "ESTIMATED AGE CANNOT HAVE 'OO' = UNKNOWN"
+    },
+    "16040": {
+        "err_no": 16040,
+        "err_message": "WARNING - NO DISPOSITION FOR POSSIBLE JUVENILE ARRESTEE"
+    },
+    "16041": {
+        "err_no": 16041,
+        "err_message": "WARNING - ARRESTEE HAD AN AGE OF 99 OR OLDER"
+    },
+    "16052": {
+        "err_no": 16052,
+        "err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS LESS THAN 17"
+    },
+    "16053": {
+        "err_no": 16053,
+        "err_message": "FOR AGE GREATER THAN 16 DISPOSITION SHOULD NOT BE ENTERED"
+    },
+    "16054": {
+        "err_no": 16054,
+        "err_message": "AUTOMATIC INDICATOR MUST BE BLANK OR 'A'"
+    },
+    "16055": {
+        "err_no": 16055,
+        "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR"
+    },
+    "16056": {
+        "err_no": 16056,
+        "err_message": "THIS ARRESTEE EXCEEDED THE NUMBER OF OFFENDERS(nn) ON THE INCIDENT"
+    },
+    "16057": {
+        "err_no": 16057,
+        "err_message": "VALID VALUES FOR WINDOW CLEARANCE INDICATOR ARE 'Y' OR 'N'"
+    },
+    "16058": {
+        "err_no": 16058,
+        "err_message": "MUST BE BLANK WHEN ACTION TYPE IS NOT 'W'(WINDOW)"
+    },
+    "16059": {
+        "err_no": 16059,
+        "err_message": "AN OFFENSE MUST EXIST WHEN ACTION TYPE = 'W'(WINDOW)"
+    },
+    "16060": {
+        "err_no": 16060,
+        "err_message": "INCIDENT REPORT NOT ON FILE"
+    },
+    "16061": {
+        "err_no": 16061,
+        "err_message": "DUPLICATE ARRESTEE SEGMENT ON FILE--ADDED ON[MMDDYYYY]"
+    },
+    "16062": {
+        "err_no": 16062,
+        "err_message": "CANNOT DELETE AN ARREST WHEN INCIDENT REPORT ON FILE"
+    },
+    "16063": {
+        "err_no": 16063,
+        "err_message": "CANNOT MODIFY AN ARREST WHEN INCIDENT REPORT ON FILE"
+    },
+    "16064": {
+        "err_no": 16064,
+        "err_message": "ARRESTEE AGE MUST BE NUMERIC DIGITS"
+    },
+    "16065": {
+        "err_no": 16065,
+        "err_message": "ARREST DATE CANNOT BE BEFORE THE INCIDENT START DATE"
+    },
+    "16066": {
+        "err_no": 16066,
+        "err_message": "ARREST DATE CANNOT BE AFTER TAPE SUBMIT DATE MONTH AND YEAR"
+    },
+    "16067": {
+        "err_no": 16067,
+        "err_message": "INVALID ARRESTEE SEX VALUE"
+    },
+    "16068": {
+        "err_no": 16068,
+        "err_message": "ARRESTEE RECORD PREVIOUSLY SUBMITTED WITH A 'Y' IN THE CLEARANCE BYTE"
+    },
+    "16069": {
+        "err_no": 16069,
+        "err_message": "NO ARRESTEE RECORDS ALLOWED FOR A JUSTIFIABLE HOMICIDE"
+    },
+    "16070": {
+        "err_no": 16070,
+        "err_message": "JUSTIFIABLE HOMICIDE CANNOT BE AN ARREST OFFENSE CODE"
+    },
+    "16080": {
+        "err_no": 16080,
+        "err_message": "SEGMENT 61 MISSING--MUST HAVE ONE PER ARRESTEE SEGMENT"
+    },
+    "16081": {
+        "err_no": 16081,
+        "err_message": "SEGMENT 62 MISSING--MUST HAVE AT LEAST ONE PER ARRESTEE SEGMENT"
+    },
+    "16099": {
+        "err_no": 16099,
+        "err_message": "SEGMENT 61 IS A REQUIRED SEGMENT WHEN SEGMENT 60 EXISTS"
+    },
+    "16161": {
+        "err_no": 16161,
+        "err_message": "CANNOT HAVE CLEARANCE INDICATOR = 'Y' FOR MORE THAN ONE ARRESTEE.SUBSEQUENT ARRESTEES CANNOT HAVE CLEARANCE INDICATOR = 'Y'."
+    },
+    "17001": {
+        "err_no": 17001,
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+    },
+    "17004": {
+        "err_no": 17004,
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+    },
+    "19901": {
+        "err_no": 19901,
+        "err_message": "LAST LINE OR SEGEMENT NOT 99 SEGMENT TYPE"
+    },
+    "19902": {
+        "err_no": 19902,
+        "err_message": "NUMBER OF SEGMEMTS FIELD IN 99 SEGMENT IS NOT A VALID NUMERIC FIELD"
+    },
+    "19903": {
+        "err_no": 19903,
+        "err_message": "NUMBER OF SEGMENTS ON SUBMISSION TRAILER DOES NOT MATCH RECORD COUNT"
+    },
+    "20000": {
+        "err_no": 20000,
+        "err_message": "MISSING SEGMENT 20(OFFENSE)"
+    },
+    "20001": {
+        "err_no": 20001,
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+    },
+    "20002": {
+        "err_no": 20002,
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+    },
+    "20003": {
+        "err_no": 20003,
+        "err_message": "WARNING - INVALID TYPE DRUG MEASUREMENT(DE 22) FOR THE GIVEN SUSPECTED DRUG TYPE(DE 20)"
+    },
+    "20004": {
+        "err_no": 20004,
+        "err_message": "SUBMISSION DATE MUST BE LATER THAN REPORTING PERIOD"
+    },
+    "20010": {
+        "err_no": 20010,
+        "err_message": "MUST BE A VALID AGENCY"
+    },
+    "20015": {
+        "err_no": 20015,
+        "err_message": "END OF SEGMENT MARKER EXPECTED--END OF SEGMENT MARKER NOT FOUND"
+    },
+    "20025": {
+        "err_no": 20025,
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+    },
+    "20026": {
+        "err_no": 20026,
+        "err_message": "REPORTING PERIOD CANNOT EXCEED THE DATE OF SUBMISSION"
+    },
+    "20027": {
+        "err_no": 20027,
+        "err_message": "DATE OUT OF RANGE"
+    },
+    "20029": {
+        "err_no": 20029,
+        "err_message": "END OF SEGMENT MARKER, MUST BE EQUAL TO 'ZZ'"
+    },
+    "20030": {
+        "err_no": 20030,
+        "err_message": "MUST BE 3 OR GREATER"
+    },
+    "20031": {
+        "err_no": 20031,
+        "err_message": "MUST BE EQUAL TO THE TOTAL NUMBER OF SEGMENTS WRITTEN TO THE TAPE."
+    },
+    "20060": {
+        "err_no": 20060,
+        "err_message": "REPORTING PERIOD DATE CANNOT PRECEDE INCIDENT DATE"
+    },
+    "20200": {
+        "err_no": 20200,
+        "err_message": "MUST CONTAIN 12 NUMERIC PLACES"
+    },
+    "22005": {
+        "err_no": 22005,
+        "err_message": "THIS LRS CODE MUST BE SUBMITTED WITH A SUBPART"
+    },
+    "22010": {
+        "err_no": 22010,
+        "err_message": "THIS LRS CODE MUST BE SUBMITTED WITH A SUBPART OR A SUBPART WITH A QUALIFIER"
+    },
+    "22015": {
+        "err_no": 22015,
+        "err_message": "WARNING - LRS SUBMITTED WITH A SUBPART AND NO QUALIFIER"
+    },
+    "22020": {
+        "err_no": 22020,
+        "err_message": "THIS LRS CODE MUST BE SUBMITTED WITH A QUALIFIER"
+    },
+    "22025": {
+        "err_no": 22025,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS DRIVING UNDER THE INFLUENCE(90 D)"
+    },
+    "22030": {
+        "err_no": 22030,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS KIDNAPPING(100)"
+    },
+    "22035": {
+        "err_no": 22035,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS PURSE - SNATCHING(23 B)"
+    },
+    "22040": {
+        "err_no": 22040,
+        "err_message": "WARNING THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS A FAMILY OFFENSE NONVIOLENT(90 F)"
+    },
+    "22045": {
+        "err_no": 22045,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS ALL OTHER OFFENSE(90 Z)"
+    },
+    "22050": {
+        "err_no": 22050,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS SIMPLE ASSAULT(13 B)"
+    },
+    "22055": {
+        "err_no": 22055,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER WILL BE REPORTED AS ALL OT HER LARCENY - THEFT OFFENSE(23 H).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE."
+    },
+    "22060": {
+        "err_no": 22060,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER AND DE #15 = '38' WILL BE REPORTED AS THEFT OF MOTO VEHICLE PARTS(23 G).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE"
+    },
+    "22065": {
+        "err_no": 22065,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER AND DE #15 = '03', '05', '24', '28', OR '37' WILL BE REPORTED AS MOTOR VEHICLE THEFT(240).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE"
+    },
+    "22070": {
+        "err_no": 22070,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER AND DE #15 = '04' WILL BE REPORTED AS THEFT OF A BICYCLE.IF THIS IS NOT THE CORRRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE."
+    },
+    "22071": {
+        "err_no": 22071,
+        "err_message": "WARNING - THIS LRS SUBMITTED WILL BE REPORTED AS ALL OTHER LARCENY - THEFT OFFENSE(23 H).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE."
+    },
+    "22072": {
+        "err_no": 22072,
+        "err_message": "WARNING - THIS LRS SUBMITTED AND DE #15 = '03', '05', '24', '28', OR '37' WI LL BE REPORTED AS MOTOR VEHICLE THEFT(240).IF THIS IS NOT THE CORRECT PRO PERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE."
+    },
+    "22075": {
+        "err_no": 22075,
+        "err_message": "MUST SUBMIT AN OFFENSE SEGMENT(SEGMENT 20) FOR EACH VICTIM"
+    },
+    "22080": {
+        "err_no": 22080,
+        "err_message": "SEGMENT 51 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'"
+    },
+    "22081": {
+        "err_no": 22081,
+        "err_message": "SEGMENT 52 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'"
+    },
+    "22085": {
+        "err_no": 22085,
+        "err_message": "IF LRS CODE APPENDED WITH - A, -C, -I, -S, OR - H, DE7 MUST BE 'C' COMPLETED"
+    },
+    "22086": {
+        "err_no": 22086,
+        "err_message": "ONLY ONE DASH '-' ALLOWED PER LRS OFFENSE"
+    },
+    "22100": {
+        "err_no": 22100,
+        "err_message": "AGE MUST BE '01' - '16' FOR JUVENILE OFFENSES"
+    },
+    "22105": {
+        "err_no": 22105,
+        "err_message": "AGE CANNOT BE UNKNOWN IF DATE OF BIRTH IS KNOWN"
+    },
+    "22110": {
+        "err_no": 22110,
+        "err_message": "VICTIM TYPE CANNOT BE 'L' = LAW ENFORCEMENT OFFICER WHEN USING THIS LRS CODE"
+    },
+    "22115": {
+        "err_no": 22115,
+        "err_message": "MUST BE PRESENT IF LRS CHARGE OF ARREST IS A FELONY"
+    },
+    "22120": {
+        "err_no": 22120,
+        "err_message": "AGE DOES NOT INDICATE CHILD IS THE VICTIM CONNECTED TO THIS OFFENSE"
+    },
+    "22125": {
+        "err_no": 22125,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER WILL BE REPORTED AS MURDER AND NONNEGLIGENT MANSLAUGHTER(09 A)"
+    },
+    "22130": {
+        "err_no": 22130,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS A ROBBERY(120)"
+    },
+    "22135": {
+        "err_no": 22135,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS CREDIT CARD / AUTOMATIC TELLER MACHINE FRAUD(26 B)"
+    },
+    "22140": {
+        "err_no": 22140,
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS BRIBERY(510)"
+    },
+    "23001": {
+        "err_no": 23001,
+        "err_message": "ONLY ONE SEGMENT 30 PER INCIDENT PER TAPE ALLOWED"
+    },
+    "23201": {
+        "err_no": 23201,
+        "err_message": "SECOND CHARACTER MUST BE 'X' OR BLANK"
+    },
+    "23210": {
+        "err_no": 23210,
+        "err_message": "DECIMAL POINT EXPECTED BUT NOT FOUND"
+    },
+    "23235": {
+        "err_no": 23235,
+        "err_message": "DATE RECOVERED CANNOT BE GREATER THAN REPORT MONTH AND YEAR"
+    },
+    "24001": {
+        "err_no": 24001,
+        "err_message": "MUST BE UNIQUE--CANNOT BE DUPLICATED"
+    },
+    "24010": {
+        "err_no": 24010,
+        "err_message": "AGE CANNOT BE ESTIMATE IF DATE OF BIRTH AND INCIDENT DATE IS KNOWN"
+    },
+    "24030": {
+        "err_no": 24030,
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+    },
+    "24031": {
+        "err_no": 24031,
+        "err_message": "MUST BE ON OR BEFORE INCIDENT DATE AND HOUR"
+    },
+    "25001": {
+        "err_no": 25001,
+        "err_message": "MUST BE UNIQUE--CANNOT BE DUPLICATED"
+    },
+    "25010": {
+        "err_no": 25010,
+        "err_message": "AGE CANNOT BE ESTIMATE IF DATE OF BIRTH AND INCIDENT DATE IS KNOWN"
+    },
+    "25020": {
+        "err_no": 25020,
+        "err_message": "CONFLICT EXISTS BETWEEN VICTIM DATE OF BIRTH AND VICTIM AGE"
+    },
+    "25030": {
+        "err_no": 25030,
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+    },
+    "25031": {
+        "err_no": 25031,
+        "err_message": "MUST BE ON OR BEFORE INCIDENT DATE AND HOUR"
+    },
+    "25202": {
+        "err_no": 25202,
+        "err_message": "DUPLICATE VICTIM SEQUENCE NUMBERS FOUND."
+    },
+    "26001": {
+        "err_no": 26001,
+        "err_message": "MUST BE UNIQUE--CANNOT BE DUPLICATED"
+    },
+    "26010": {
+        "err_no": 26010,
+        "err_message": "AGE CANNOT BE ESTIMATED IF DATE OF BIRTH IS KNOWN"
+    },
+    "26201": {
+        "err_no": 26201,
+        "err_message": "ARREST CONNECTION TO OFFENSE CANNOT BE FOUND"
+    },
+    "26202": {
+        "err_no": 26202,
+        "err_message": "ARREST CONNECTION TO OFFENSE FOUND DUPLICATE OFFENSE SEQUENCE NUMBERS FOR THIS OFFENSE."
+    },
+    "81100": {
+        "err_no": 81100,
+        "err_message": "EXCEPTIONAL CLEARANCE DATE IS REQUIRED IF THIS INCIDENT HAS ANY CODE EXCEP T 'N' IN DE 4 '"
+    },
+    "81200": {
+        "err_no": 81200,
+        "err_message": "WHEN TYPE OF VICTIM(DE 25) IS 'I' OR 'L' THE FOLLOWING DATA ELEMENT(S) MU ST HAVE A VALID CODE"
+    },
+    "81300": {
+        "err_no": 81300,
+        "err_message": "WHEN DE 36 IS NOT 000 ', THE FOLLOWING DATA ELEMENT(S) MUST HAVE A VALID CODE.'"
+    },
+    "81400": {
+        "err_no": 81400,
+        "err_message": "WHEN DE 36 = 000 ', THEN DE 8 MUST BE ' N ' AND DE 8A MUST BE ' 88 '.'"
+    },
+    "82000": {
+        "err_no": 82000,
+        "err_message": "ARREST SEGMENT IS MISSING A MANDATORY DATA ELEMENT."
+    },
+    "82100": {
+        "err_no": 82100,
+        "err_message": "WHEN DE 47 IS LESS THAN 17 ', MUST HAVE A VALID CODE IN DE 52.'"
+    },
+    "83000": {
+        "err_no": 83000,
+        "err_message": "THIS SEGMENT MUST HAVE A VALID CODE IN DE 1 AND DE 2."
+    },
+    "83100": {
+        "err_no": 83100,
+        "err_message": "WHEN SUBMITTING AN ARRESTEE SEGMENT A MANDATORY DATA ELEMENT IS MISSING."
+    },
+    "83200": {
+        "err_no": 83200,
+        "err_message": "WHEN DE 47 IS LESS THAN 17 ', MUST HAVE A VALID CODE IN DE 52.'"
+    },
+    "84001": {
+        "err_no": 84001,
+        "err_message": "WHEN LRS = 200 AND DE 7 = 'A', THEN DE 14 MUST BE A CODE OF '1' OR '8'"
+    },
+    "84002": {
+        "err_no": 84002,
+        "err_message": "WHEN LRS = 13 A, 13 B OR 13 C DE 7 MUST EQUAL 'C', AND DE 25 MUST BE A CODE OF 'I' OR 'L'"
+    },
+    "84003": {
+        "err_no": 84003,
+        "err_message": "WHEN LRS = 510 AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'."
+    },
+    "84004": {
+        "err_no": 84004,
+        "err_message": "WHEN LRS = 220 AND DE 9 = '14' OR '19', THEN DE 10 AND 11 MUST HAVE A VAL ID CODE."
+    },
+    "84005": {
+        "err_no": 84005,
+        "err_message": "WHEN LRS = 250, DE 12 MUST HAVE A VALID CODE."
+    },
+    "84006": {
+        "err_no": 84006,
+        "err_message": "WHEN LRS = 290 AND DE 7 = 'A', AND DE 14 MUST HAVE A CODE OF '1' OR '8'."
+    },
+    "84007": {
+        "err_no": 84007,
+        "err_message": "WHEN LRS = 35 A OR 35 B, DE 12 MUST HAVE A VALID CODE."
+    },
+    "84008": {
+        "err_no": 84008,
+        "err_message": "WHEN LRS = 210, DE 13 MUST HAVE A VALID CODE."
+    },
+    "84009": {
+        "err_no": 84009,
+        "err_message": "WHEN LRS = 26 A - E AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'."
+    },
+    "84010": {
+        "err_no": 84010,
+        "err_message": "WHEN LRS = 39 A - D AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'."
+    },
+    "84011": {
+        "err_no": 84011,
+        "err_message": "WHEN LRS = 09 A, 09 B OR 09 C, DE 7 MUST EQUAL 'C', DE 13 & 31 MUST HAVE A VALID CODE, AND DE 25 MUST EQUAL 'I' OR 'L'."
+    },
+    "84012": {
+        "err_no": 84012,
+        "err_message": "WHEN LRS = 100, DE 13 MUST HAVE A VALID CODE."
+    },
+    "84013": {
+        "err_no": 84013,
+        "err_message": "WHEN LRS = 23 A - H OR 270 AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'."
+    },
+    "84014": {
+        "err_no": 84014,
+        "err_message": "WHEN LRS = 240 AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'."
+    },
+    "84015": {
+        "err_no": 84015,
+        "err_message": "WHEN LRS = 370, DE 12 MUST HAVE A VALID CODE AND DE 25 MUST EQUAL 'S'."
+    },
+    "84016": {
+        "err_no": 84016,
+        "err_message": "WHEN LRS = 40 A OR 40 B,
+        DE 25 MUST EQUAL 'S'.
+        "
+    },
+    "84017": {
+        "err_no": 84017,
+        "err_message": "WHEN LRS = 120, DE 13 MUST HAVE A VALID CODE."
+    },
+    "84018": {
+        "err_no": 84018,
+        "err_message": "WHEN LRS = 11 A - 11 D OR 64 A OR 64 B, DE 13 MUST HAVE A VALID CODE, DE 25 MUST HAVE A 'I' OR 'L', AND DE 33 MUST HAVE A VALID CODE."
+    },
+    "84019": {
+        "err_no": 84019,
+        "err_message": "WHEN LRS = 36 A OR 36 B, DE 25 MUST HAVE A 'I' OR 'L'."
+    },
+    "84020": {
+        "err_no": 84020,
+        "err_message": "WHEN LRS = 280, DE 12 MUST HAVE A VALID CODE."
+    },
+    "84021": {
+        "err_no": 84021,
+        "err_message": "WHEN LRS = 520, DE 12 & DE 13 MUST HAVE A VALID CODE AND DE 25 MUST BE EQUAL TO 'S'."
+    },
+    "84101": {
+        "err_no": 84101,
+        "err_message": "WHEN LRS = 200 AND DE 7 = 'C', THEN DE 14 MUST BE A CODE OF '2' AND DE 15 AND 16 MUST HAVE A VALID CODE."
+    },
+    "84102": {
+        "err_no": 84102,
+        "err_message": "WHEN LRS = 13 A, 13 B OR 13 C DE 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MU ST HAVE A VALID CODE.'"
+    },
+    "84103": {
+        "err_no": 84103,
+        "err_message": "WHEN LRS = 510 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 1 ', ' 5 ', ' 7 ' OR ' 8 '.'"
+    },
+    "84104": {
+        "err_no": 84104,
+        "err_message": "WHEN LRS = 220 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+    },
+    "84105": {
+        "err_no": 84105,
+        "err_message": "WHEN LRS = 250 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+    },
+    "84106": {
+        "err_no": 84106,
+        "err_message": "WHEN LRS = 290 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 4 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'"
+    },
+    "84107": {
+        "err_no": 84107,
+        "err_message": "WHEN LRS = 35 A OR 35 B AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '.'"
+    },
+    "84108": {
+        "err_no": 84108,
+        "err_message": "WHEN LRS = 210 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+    },
+    "84109": {
+        "err_no": 84109,
+        "err_message": "WHEN LRS = 26 A - E AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 5 ' OR ' 7 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'"
+    },
+    "84110": {
+        "err_no": 84110,
+        "err_message": "WHEN LRS = 39 A - D AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 6 ', DE 15 & 16 MUST HAVE A VALID CODE, AND DE 25 MUST BE ' S '.'"
+    },
+    "84111": {
+        "err_no": 84111,
+        "err_message": "WHEN LRS = 09 A, 09 B OR 09 C, IF DE 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MUST HAVE A VALID CODE.'"
+    },
+    "84112": {
+        "err_no": 84112,
+        "err_message": "WHEN LRS = 100 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+    },
+    "84113": {
+        "err_no": 84113,
+        "err_message": "WHEN LRS = 23 A - H OR 270 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 5 ' OR ' 7 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'"
+    },
+    "84114": {
+        "err_no": 84114,
+        "err_message": "WHEN LRS = 240 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 5 ' OR ' 7 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'"
+    },
+    "84117": {
+        "err_no": 84117,
+        "err_message": "WHEN LRS = 120 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+    },
+    "84118": {
+        "err_no": 84118,
+        "err_message": "WHEN LRS = 11 A - 11 D OR 64 A OR 64 B AND 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MUST HA VE A VALID CODE.'"
+    },
+    "84119": {
+        "err_no": 84119,
+        "err_message": "WHEN LRS = 36 A OR 36 B AND DE 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MUS T HAVE A VALID CODE.'"
+    },
+    "84120": {
+        "err_no": 84120,
+        "err_message": "WHEN LRS = 280 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+    },
+    "84202": {
+        "err_no": 84202,
+        "err_message": "WHEN LRS = 13 A, DE 13, 31 & 33 MUST HAVE A VALID CODE."
+    },
+    "84203": {
+        "err_no": 84203,
+        "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROPER TY SEGMENT CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE IN CIDENT WILL REJECT IF AN AGENCY SENDS A '7'  AND ALSO AN '8' WITHIN THE SAM"
+    },
+    "84204": {
+        "err_no": 84204,
+        "err_message": "WHEN LRS = 220 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1', '5', '7' OR '8'."
+    },
+    "84205": {
+        "err_no": 84205,
+        "err_message": "WHEN LRS = 250 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '3', '5' OR '6' AND DE 15 & 16 MUST HAVE A VALID CODE."
+    },
+    "84207": {
+        "err_no": 84207,
+        "err_message": "WHEN LRS = 35 A OR 35 B AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1' OR '6'."
+    },
+    "84208": {
+        "err_no": 84208,
+        "err_message": "WHEN LRS = 210 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '5' OR '7' AND DE 15 & 16 MUST HAVE A VALID CODE."
+    },
+    "84209": {
+        "err_no": 84209,
+        "err_message": "WHEN LRS = 26 A - E AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+    },
+    "84210": {
+        "err_no": 84210,
+        "err_message": "WHEN LRS = 39 C, DE 12 MUST HAVE A VALID CODE."
+    },
+    "84211": {
+        "err_no": 84211,
+        "err_message": "WHEN LRS = 09 C, DE 31 MUST HAVE '20' OR '21' AND DE 32 MUST HAVE A VALID CODE OF 'A-G'."
+    },
+    "84212": {
+        "err_no": 84212,
+        "err_message": "WHEN LRS = 100 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1', '5', '7', OR '8'."
+    },
+    "84213": {
+        "err_no": 84213,
+        "err_message": "WHEN LRS = 23 A - H OR 270 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+    },
+    "84214": {
+        "err_no": 84214,
+        "err_message": "WHEN LRS = 240 AND DE 14 = '5', THEN DE 15 MUST HAVE A VALID CODE, AND DATA ELEMENT 17 MUST HAVE A VALID DATE."
+    },
+    "84217": {
+        "err_no": 84217,
+        "err_message": "WHEN LRS = 120 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '5' OR '7' AND DE 15 & 16 MUST HAVE A VALID CODE."
+    },
+    "84220": {
+        "err_no": 84220,
+        "err_message": "WHEN LRS = 280 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1' OR '5'."
+    },
+    "84302": {
+        "err_no": 84302,
+        "err_message": "WHEN LRS = 13 A AND DE 25 = 'L' MUST HAVE THREE VALID CODES, ONE OF '02' AND ANOTHER VALID CODE OF '01' OR '03-10' AND ONE CODE OF '12-18' IN DE 31 AND A CODE OF 'K-U' IN DE 32"
+    },
+    "84303": {
+        "err_no": 84303,
+        "err_message": "WHEN LRS = 510 AND DE 14 = '5' OR '7', THEN DE 15 AND 16 MUST HAVE A VALID CODE."
+    },
+    "84304": {
+        "err_no": 84304,
+        "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROPER TY SEGMENT CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE IN CIDENT WILL REJECT IF AN AGENCY SENDS A '7' AND ALSO AN '8' WITHIN THE SAM"
+    },
+    "84305": {
+        "err_no": 84305,
+        "err_message": "WHEN LRS = 250 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+    },
+    "84307": {
+        "err_no": 84307,
+        "err_message": "WHEN LRS = 35 A OR 35 B, DE 16 MUST HAVE A VALID CODE ** * (OR MUST BE BLANK IF DE 14 = '1 OR '8') AND DE 25 MUST BE 'S'."
+    },
+    "84308": {
+        "err_no": 84308,
+        "err_message": "WHEN LRS = 210 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+    },
+    "84311": {
+        "err_no": 84311,
+        "err_message": "WHEN LRS = 09 A AND DE 25 = 'L', MUST HAVE TWO VALID CODES;ONE CODE '01' OR '03-10' AND ONE CODE OF '12-18' IN DE 31 AND A VALID CODE OF 'K-U' IN DATA ELEMENT 32."
+    },
+    "84312": {
+        "err_no": 84312,
+        "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROP - ERTY SEG.CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE INCIDENT WILL REJECT IF AN AGENCY SENDS A '7' AND ALSO AN '8' WITHIN THE SA"
+    },
+    "84314": {
+        "err_no": 84314,
+        "err_message": "WHEN LRS = 240 AND DE 14 = '5', IF DE 15 HAS A CODE OF '03, ' 05 ', ' 24 ', ' 28 ', OR ' 37 ', THEN DATA ELEMENT 19 MUST HAVE A VALID CODE."
+    },
+    "84317": {
+        "err_no": 84317,
+        "err_message": "WHEN LRS = 120 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+    },
+    "84320": {
+        "err_no": 84320,
+        "err_message": "WHEN LRS = 280 AND DE 14 = '5', THEN DE 15, 16 & 17 MUST HAVE A VALID CODE."
+    },
+    "84402": {
+        "err_no": 84402,
+        "err_message": "WHEN LRS = 13 B, DE 13 MUST HAVE A VALID CODE AND DE 33 MUST HAVE A CODE OF 'M' OR 'N'."
+    },
+    "84403": {
+        "err_no": 84403,
+        "err_message": "WHEN LRS = 510 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+    },
+    "84404": {
+        "err_no": 84404,
+        "err_message": "WHEN LRS = 220 AND DE 14 = '5' OR '7', THEN DE 15 & 16 MUST HAVE A VALID CODE."
+    },
+    "84407": {
+        "err_no": 84407,
+        "err_message": "WHEN LRS = 35 A AND DE 14 = '6', THEN DE 15 CANNOT BE EQUAL TO '11'."
+    },
+    "84408": {
+        "err_no": 84408,
+        "err_message": "WHEN LRS = 210 AND DE 25 = 'I' OR 'L', THEN DE 33 MUST HAVE A VALID CODE."
+    },
+    "84411": {
+        "err_no": 84411,
+        "err_message": "WHEN LRS = 09 B AND DE 25 = 'L', MUST HAVE TWO VALID CODES;ONE CODE OF '30-34' AND ONE CODE OF '12-18' IN DE 31 AND A VALID CODE OF 'K-U' IN DATA ELEMENT 32"
+    },
+    "84412": {
+        "err_no": 84412,
+        "err_message": "WHEN LRS = 100 AND DE 14 EQUALS TO '5' OR '7', THEN DE 15 AND 16 MUST HAVE A VALID CODE."
+    },
+    "84414": {
+        "err_no": 84414,
+        "err_message": "WHEN LRS = 240 AND DE 14 = '7', THEN DE 15 MUST HAVE A CODE OF '03', '05', '24', '28', OR '37' AND DATA ELEMENT 18 MUST HAVE A VALID CODE."
+    },
+    "84417": {
+        "err_no": 84417,
+        "err_message": "WHEN LRS = 120 AND DE 25 = 'I' OR 'L', THEN DE 33 MUST HAVE A VALID CODE."
+    },
+    "84502": {
+        "err_no": 84502,
+        "err_message": "WHEN LRS = 13 B AND DE 25 = 'L' MUST HAVE THREE VALID CODES, ONE OF '02' AND ANOTHER VALID CODE OF '01' OR '03-10' AND ONE CODE OF '12-18' IN DE 31 AND A VALID CODE OF 'K-U' IN DE 32"
+    },
+    "84504": {
+        "err_no": 84504,
+        "err_message": "WHEN LRS = 220 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+    },
+    "84507": {
+        "err_no": 84507,
+        "err_message": "WHEN LRS = 35 A AND DE 14 = '1', THEN DE 20 MUST HAVE A VALID CODE."
+    },
+    "84512": {
+        "err_no": 84512,
+        "err_message": "WHEN LRS = 100 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+    },
+    "84517": {
+        "err_no": 84517,
+        "err_message": "WHEN LRS = 120 AND DE 25 = 'I' OR 'L' AND DE 36 NOT EQUAL TO '000', THEN DE 34 AND 35 MUST HAVE A VALID CODE."
+    },
+    "84607": {
+        "err_no": 84607,
+        "err_message": "WHEN LRS = 35 A, DE 14 = '6' AND DE 15 = '10', THEN DE 16, 20, 21 AND 22 MUST HAVE A VALID CODE."
+    },
+    "84612": {
+        "err_no": 84612,
+        "err_message": "WHEN LRS = 100 AND DE 25 EQUALS TO 'I' OR 'L', THEN DE 33 MUST HAVE A VALID CODE."
+    },
+    "84707": {
+        "err_no": 84707,
+        "err_message": "WHEN LRS = 35 B AND DE 14 = '6', THEN DE 15 CANNOT BE EQUAL TO '10'."
+    },
+    "84712": {
+        "err_no": 84712,
+        "err_message": "WHEN LRS = 100 AND DE 36 IS NOT EQUAL TO '000', DE 34 AND 35 MUST HAVE A VALID CODE."
+    },
+    "23220": {
+        "err_no": 23220,
+        "err_message": "UNDEFINED ERROR"
+    },
+    "90000": {
+        "err_no": 90000,
+        "err_message": "INVALID VICTIM OFFENDER RELATIONSHIP."
+    },
+    "90001": {
+        "err_no": 90001,
+        "err_message": "IF DE 31 IS ASSAULT ON LAW ENFORCEMENT OFFICER(02) THEN DE 25(VICTIM TYPE) MUST BE L FOR LAW ENFORCEMENT OFFICER."
+    },
+    "90002": {
+        "err_no": 90002,
+        "err_message": "LRS = 13 B IS APPLICABLE WHEN VICTIM TYPE IS 'L'."
+    },
+    "90003": {
+        "err_no": 90003,
+        "err_message": "ONLY TWO CODES ARE ALLOWED IN DE 31."
+    },
+    "90004": {
+        "err_no": 90004,
+        "err_message": "ONLY ONE CODE ARE ALLOWED IN DE 31."
+    },
+    "90005": {
+        "err_no": 90005,
+        "err_message": "INVALID DE 31 CODE FOR THIS OFFENSE."
+    },
+    "90006": {
+        "err_no": 90006,
+        "err_message": "INVALID COMBINATION OF CODES."
+    },
+    "90007": {
+        "err_no": 90007,
+        "err_message": "GROUP A ARREST MAY NOT BE SUBMITTED FOR AN INCIDENT CONTAINING ONLY A GROUP B OFFENSE."
+    },
+    "90008": {
+        "err_no": 90008,
+        "err_message": "FOR STATUTORY RAPE OFFENSES WHERE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM, THE ASSOCIATED OFFENSE IS REQUIRED TO BE REPORTED AS MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE(14: 80.1)."
+    },
+    "90009": {
+        "err_no": 90009,
+        "err_message": "FOR FIRST DEGREE RAPE OFFENSES, AGE OF VICTIM CANNOT BE '13', '14', '15', OR '16'.CONSIDER REPORTING THE ASSOCIATED OFFENSE AS A STATUTORY RAPE(36 B)"
+    },
+    "90010": {
+        "err_no": 90010,
+        "err_message": "FOR RAPE OFFENSES(11 A OR 36 B),
+        AGE OF OFFENDER MUST BE '17'
+        OR GREATER "
+    },
+    "90011": {
+        "err_no": 90011,
+        "err_message": "MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE(14: 80.1) OFFENSES ARE APPLICABLE ONLY WHEN THE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM"
+    },
+    "90012": {
+        "err_no": 90012,
+        "err_message": "OFFENSE LOCATION TYPE OF CYBERSPACE IS AVAILABLE ONLY FOR CERTAIN OFFENSES"
+    },
+    "90013": {
+        "err_no": 90013,
+        "err_message": "STATUTORY RAPE OFFENSES REQUIRE OFFENDERS TO BE AT LEAST TWO YEARS OLDER THAN THEIR VICTIMS"
+    },
+    "90014": {
+        "err_no": 90014,
+        "err_message": "WARNING: FOR DE 31, AT MOST TWO ASSAULT CIRCUMSTANCE ARE ALLOWED.THE 3 RD ASSAULT CIRCUMSTANCE WILL BE IGNORED."
+    },
+    "90015": {
+        "err_no": 90015,
+        "err_message": "LIBRS SPEC INDICATOR IS NOT VALID.SUBMISSION WILL BE PROCESSED ACCORDING TO THE LIBRS 2.2 SPEC."
+    },
+    "90016": {
+        "err_no": 90016,
+        "err_message": "YOU MUST SUBMIT A VALID NIBRS CODE FOR THIS OFFENSE."
+    },
+    "90017": {
+        "err_no": 90017,
+        "err_message": "WHEN OFFENSE NIBRS CODE IS SUBMITTED, THE LRS - TO - NIBRS PAIR SUBMITTED MUST HAVE A VALID MAPPING."
+    },
+    "84713": {
+        "err_no": 84713,
+        "err_message": "WRANING - YOU CANNOT SHOPLIFT AN INDIVIDUAL"
+    },
+    "90018": {
+        "err_no": 90018,
+        "err_message": "PROPERTY MUST HAVE A VALID RELATIONSHIP TO AT LEAST ONE OFFENSE"
+    },
+    "90019": {
+        "err_no": 90019,
+        "err_message": "PROPERTY SEQUENCE NUMBER MUST BE PRESENT--CANNOT BE BLANK"
+    },
+    "90020": {
+        "err_no": 90020,
+        "err_message": "PROPERTY SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL"
+    },
+    "90021": {
+        "err_no": 90021,
+        "err_message": "OFFENSE SEQUENCE NUMBER MUST BE PRESENT--CANNOT BE BLANK"
+    },
+    "90022": {
+        "err_no": 90022,
+        "err_message": "OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL"
+    },
+    "90023": {
+        "err_no": 90023,
+        "err_message": "DUPLICATE - A PRIOR PROPERTY OFFENSE SEGMENT ALREADY EXISTS WITH THE SAME SEQUENCE NUMBERS"
+    },
+    "90024": {
+        "err_no": 90024,
+        "err_message": "PROPERTY SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED PROPERTIES ' SEQUENCE NUMBERS"
+    },
+    "90025": {
+        "err_no": 90025,
+        "err_message": "OFFENSE SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED OFFENSES ' SEQUENCE NUMBERS"
+    },
+    "90027": {
+        "err_no": 90027,
+        "err_message": "ARRESTEES CANNOT BE SENT WITH AN UNKNOWN OFFENDER"
+    },
+    "90028": {
+        "err_no": 90028,
+        "err_message": "PROPERTY LOSS TYPE 6 - SEIZED IS ONLY ACCEPTABLE FOR OFFENSES WITH NIBRS CODES OF 250, 35 A, 35 B, OR 39 A - 39 D"
+    },
+    "90034": {
+        "err_no": 90034,
+        "err_message": "WARNING - PROVIDE VALID NIBRS CODE"
+    },
+    "90029": {
+        "err_no": 90029,
+        "err_message": "INVALID TYPE OF WEAPON / FORCE INVOLVED(DATA ELEMENT 13) OR INJURY TYPE(DATA ELEMENT 33) WITH AN OFFENSE OF NIBRS = 13 A;INJURY TYPE(DATA ELEMENT 33) CANNOT BE 'M' or 'N' WITH THE GIVEN TYPE OF WEAPON / FORCE = 'PERSONAL WEAPON'"
+    },
+    "90031": {
+        "err_no": 90031,
+        "err_message": "WHEN THE OFFENSE WITH NIBRS = 720;CRIMINAL ACTIVITY(DE 12) MUST BE A VALID CODE AND IT CANNOT BE NONE;VALID CODES FOR THE ENTRY AT CRIMINAL ACTIVITY(DE 12) = 'A' 'F' 'I' 'S'"
+    },
+    "90032": {
+        "err_no": 90032,
+        "err_message": "INVALID INCHOATE"
+    },
+    "90033": {
+        "err_no": 90033,
+        "err_message": "GROUP B OFFENSE CANNOT HAVE AN INCHOATE"
+    },
+    "90035": {
+        "err_no": 90035,
+        "err_message": "INVALID NIBRS CODE"
+    },
+    "90036": {
+        "err_no": 90036,
+        "err_message": "INVALID TYPE OF WEAPON / FORCE INVOLVED WITH AN OFFENSE OF NIBRS = 13 A;WEAPON / FORCE INVOLVED CANNOT BE NONE WITH THE INJURY TYPE OTHER THAN NONE"
+    },
+    "90038": {
+        "err_no": 90038,
+        "err_message": "INVALID LIBRS SPEC",
+        "desc00": "A Segment 00 with a Reporting Period year later than “2019” MUST have spec indicator “2.5” in the positions 52-54."
+    }
+}

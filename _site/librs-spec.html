@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- HEAD -->
+  <head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- Sidebar Plugin -->
+	<link href="accordion-menu.css" rel="stylesheet" type="text/css" />
+	<script src="accordion-menu.js" type="text/javascript"></script>
+	<!-- Standard Favicon -->
+	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+	<title>LIBRS Specifications</title>
+</head>
+  <body>
+    
+    
+    <!-- CONTENT -->
+    <div style="display: inline-flex;">
+      <div class="col-2" style="display: inline-flex; min-width: 325px;"> <div id="accordion" style="min-width:300px">
+    <ul>
+        <li>
+            <div>LIBRS Specifications</div>
+                
+                    <ul>
+                    <li>
+                        <div>Segment Layouts</div>
+                        
+                            <ul style="padding-left:30px;">
+                                <li>
+                                00 - Submission Header
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                10 - Administrative
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                11 - Administrative Modification
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                20 - Offense
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                30 - Property
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                31 - Property Description
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                32 - Property Modification
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                33 - Property/Offense
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                40 - Offender
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                41 - Offender Using/Gaming Motivation
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                50 - Victim
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                51 - Victim Injury
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                52 - Victim/Offender Relation
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                60 - Arrestee
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                61 - Arrestee Armed
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                62 - Arrestee Statute
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                63 - Arrestee Modification
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                99 - Submission Trailer
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                01 - Zero Record
+                                </li>
+                                </ul>
+                        
+                    
+                
+                    
+                    <li>
+                        <div>Control Data Element</div>
+                        
+                            <ul style="padding-left:30px;">
+                                <li>
+                                C1 - Segment Descriptor
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C2 - Submitting Agency
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C3 - Submission Date
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C4 - Reporting Period
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C5 - Action Type
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C6 - Clearance Indicator
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C7 - Number of Segments Transferred
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C8 - End of Segment Marker
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C9 - Padding
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                10 - Software ID
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                11 - Software Version
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                12 - LIBRS Spec Indicator
+                                </li>
+                                </ul>
+                        
+                    
+                
+                    
+                    <li>
+                        <div>Geographical Coordinates</div>
+                        
+                            <ul style="padding-left:30px;">
+                                <li>
+                                L54 - Station/Division/Precinct Identifier
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                L55 - Arrest Transaction Number
+                                </li>
+                                </ul>
+                        
+                    
+                
+                    
+                    <li>
+                        <div>Mandatories</div>
+                        
+                            <ul style="padding-left:30px;">
+                                <li>
+                                Error Messages
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                NIBRS Mandatories
+                                </li>
+                                </ul>
+                        
+                    </ul>
+                
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div></div>
+      <div class="col-9" style="padding-top: 20px;"><h1 id="librs-specifications-documentation">LIBRS Specifications Documentation</h1>
+<p>This document contains information about the Segments, Data Elements, Requirements, Errors, and Warnings that LIBRS uses in the validation of Incident Data.</p>
+
+<h2 id="submission-header-00">Submission Header (00)</h2>
+<hr />
+
+<p><strong>*** Indicated Cells are either New or Modified Data Elements beginning with LIBRS Spec 2.5 ***</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Data Element Number</th>
+      <th>Description of Data Element</th>
+      <th style="text-align: center">Position(s)</th>
+      <th style="text-align: center">Length</th>
+      <th style="text-align: center">Format</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="#segment-descriptor-c1">C1</a></td>
+      <td>Segment Descriptor - <strong>00</strong></td>
+      <td style="text-align: center">1-2</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">N</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#submission-date-c3">C3</a></td>
+      <td>Submission Date</td>
+      <td style="text-align: center">23-30</td>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">D</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#submitting-agency-c2">C2</a></td>
+      <td>Submitting Agency</td>
+      <td style="text-align: center">3-22</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#reporting-period-c4">C4</a></td>
+      <td>Reporting Period</td>
+      <td style="text-align: center">31-36</td>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">D</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#software-id-c10">C10</a></td>
+      <td>Software ID</td>
+      <td style="text-align: center">37-41</td>
+      <td style="text-align: center">5</td>
+      <td style="text-align: center">A/N</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#software-version-c11">C11</a></td>
+      <td>Software Version</td>
+      <td style="text-align: center">42-51</td>
+      <td style="text-align: center">10</td>
+      <td style="text-align: center">A/N</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#librs-spec-indicator-c12">C12</a></td>
+      <td>LIBRS Spec Indicator <strong>***New***</strong></td>
+      <td style="text-align: center">52-54</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">A/N</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">**</td>
+      <td>Future Expansion Buffer</td>
+      <td style="text-align: center">55-56</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#end-of-segment-marker-c8">C8</a></td>
+      <td>End of Segment Marker</td>
+      <td style="text-align: center">57-58</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#padding-c9">C9</a></td>
+      <td>Padding</td>
+      <td style="text-align: center">59-150</td>
+      <td style="text-align: center">**</td>
+      <td style="text-align: center"><strong>A/N</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+<p><code class="highlighter-rouge">IMPORTANT: The LIBRS Spec Indicator, C12, is new to LIBRS 2.5, and indicates which LIBRS Specification is to be used by WinLIBRS when validating a data submission. Only two values are accepted: “2.5” or “2.2” indicating the data being submitted conforms to LIBRS Spec 2.5 or 2.2.</code></p>
+
+<p><strong>Errors and Explanations</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Error Number</th>
+      <th>Error Message</th>
+      <th>Explaination of Error</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10090</td>
+      <td>ZERO - REPORTING MONTH IS NOT 01 - 12</td>
+      <td>Invalid reporting month in positions 31-32. The data entered must be a valid month of 01 through 12.</td>
+    </tr>
+    <tr>
+      <td>10091</td>
+      <td>ZERO - REPORTING YEAR IS INVALID</td>
+      <td>Segment 00 did not have four numeric digits in positions 33-36.</td>
+    </tr>
+    <tr>
+      <td>10093</td>
+      <td>ZERO - REPORTING MONTH / YEAR WAS PRIOR TO THE ‘BASE DATE’</td>
+      <td>The month and year entered into positions 31-36 was later than the “Month of Submission” and “Year of Submission” entered into positions 23-30.</td>
+    </tr>
+    <tr>
+      <td>10094</td>
+      <td>ZERO - REPORTING MONTH / YEAR EXCEEDED MONTH / YEAR OF TAPE</td>
+      <td>The month and year entered into positions 31-36 was later than the “Month of Submission” and “Year of Submission” entered into positions 23-30.</td>
+    </tr>
+    <tr>
+      <td>90038</td>
+      <td>INVALID LIBRS SPEC</td>
+      <td>A Segment 00 with a Reporting Period year later than “2019” MUST have spec indicator “2.5” in the positions 52-54.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="administrative-10">Administrative (10)</h2>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Data Element Number</th>
+      <th>Description of Data Element</th>
+      <th style="text-align: center">Position(s)</th>
+      <th style="text-align: center">Length</th>
+      <th style="text-align: center">Format</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><a href="#segment-descriptor-c1">C1</a></td>
+      <td>Segment Descriptor - <strong>10</strong></td>
+      <td style="text-align: center">1-2</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">N</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#action-type-c5">C5</a></td>
+      <td>Action Type</td>
+      <td style="text-align: center">3</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#ori-number-1">1</a></td>
+      <td>ORI Number</td>
+      <td style="text-align: center">4-12</td>
+      <td style="text-align: center">9</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#incident-number-2">2</a></td>
+      <td>Incident Number</td>
+      <td style="text-align: center">13-24</td>
+      <td style="text-align: center">12</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#location-of-incident-l53">L53</a></td>
+      <td>Location of Incident (Geographical Coordinates)</td>
+      <td style="text-align: center">25-36</td>
+      <td style="text-align: center">12</td>
+      <td style="text-align: center"><strong>A/N</strong></td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#stationdivisionprecinct-identifier-l54">L54</a></td>
+      <td>Station/Division/Precinct Identifier</td>
+      <td style="text-align: center">37-42</td>
+      <td style="text-align: center">6</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#incident-datehour-3">3</a></td>
+      <td>Incident Date/Hour</td>
+      <td style="text-align: center">43-53</td>
+      <td style="text-align: center">11</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#cleared-exceptionally-4">4</a></td>
+      <td>Cleared Exceptionally</td>
+      <td style="text-align: center">54</td>
+      <td style="text-align: center">1</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#exceptional-cleared-date-5">5</a></td>
+      <td>Exceptional Clearance Date</td>
+      <td style="text-align: center">55-62</td>
+      <td style="text-align: center">8</td>
+      <td style="text-align: center">D</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">**</td>
+      <td>Future Expansion Buffer</td>
+      <td style="text-align: center">63-82</td>
+      <td style="text-align: center">20</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#end-of-segment-marker-c8">C8</a></td>
+      <td>End of Segment Marker</td>
+      <td style="text-align: center">83-84</td>
+      <td style="text-align: center">2</td>
+      <td style="text-align: center">A</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><a href="#padding-c9">C9</a></td>
+      <td>Padding</td>
+      <td style="text-align: center">85-150</td>
+      <td style="text-align: center">**</td>
+      <td style="text-align: center"><strong>A/N</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Errors and Explanations</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Error Number</th>
+      <th>Error Message</th>
+      <th>Explaination of Error</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10055</td>
+      <td>CANNOT HAVE AN INITIAL INCIDENT RECORD WITHOUT STARTING WITH RECORD SEGMENT 10</td>
+      <td>First segment, after the Submission Header, in a data submission MUST be an Administrative Segment (10).</td>
+    </tr>
+    <tr>
+      <td>10075</td>
+      <td>MISSING A MANDATORY RECORD SEGMENT FOR A COMPLETE INCIDENT</td>
+      <td>When an Action Type of Incident Report (“I”) is submitted, the following segments MUST be included: 10 - Administrative Segment, 20 - Offense Segment, 40 - Offender Segment, 41 - Offender Using Segment/Gaming Motivation, 50 - Victim Segment</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="administrative-modification-11">Administrative Modification (11)</h2>
+
+<p><em>For Time-Window Submissions, ONLY.</em></p>
+
+<p>Data Element Number                 Description of Data Element        Position(s)   Length   Format
+  ———————————– ———————————- ————- ——– ———
+  <a href="#segment-descriptor-c1">C1</a>        Segment Descriptor – <strong>11</strong>       1-2           2        N
+  <a href="#action-type-c5">C5</a>               Action Type                        3             1        A
+  <a href="#ori-number-1">1</a>                  ORI Number                         4-12          9        A
+  <a href="#incident-number-2">2</a>             Incident Number                    13-24         12       A
+  <a href="#louisiana-revised-statute-6">6</a>   Louisiana Revised Statute Number   25-36         12       A
+  **                                Future Expansion Buffer            37-56         20       A
+  <a href="#end-of-segment-marker-c8">C8</a>     End of Segment Marker              57-58         2        A
+  <a href="#padding-c9">C9</a>                   Padding                            59-150        **     <strong>A/N</strong></p>
+
+<p>Error</p>
+
+<p><strong>[Number___]{.underline} [Error and
+Explanation_______________________________________]{.underline}</strong></p>
+
+<p><strong>11060 Incident not on File. Administrative Segment (10 and 11)
+submitted with an Action Type of "M" (MODIFY) must already be on file
+with <em>ORI Number</em> (Data Element No. 1) and Incident Number (Data Element
+No. 2.</strong></p>
+
+<p><strong>11069 Time-Window (Segment 11) being modified must have Louisiana
+Revised Statute Number (LRS No.).</strong></p>
+
+<p>**\
+**</p>
+</div>
+    </div>
+    <!-- FOOTER -->
+    <div class="footer">
+      
+    </div>
+    <!-- SCRIPTS -->
+    <!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>

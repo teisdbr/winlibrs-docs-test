@@ -19,19 +19,251 @@
     
     <!-- CONTENT -->
     <div style="display: inline-flex;">
-      <div class="col-2" style="display: inline-flex; min-width: 300px;"> <div class="m-4">
-    <div id="accordion">
-        <ul>
-            <li>
-                <div>LIBRS Specifications</div>
+      <div class="col-2" style="display: inline-flex; min-width: 325px;"> <div id="accordion" style="min-width:300px">
+    <ul>
+        <li>
+            <div>LIBRS Specifications</div>
+                
                     <ul>
+                    <li>
+                        <div>Segment Layouts</div>
+                        
+                            <ul style="padding-left:30px;">
+                                <li>
+                                00 - Submission Header
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                10 - Administrative
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                11 - Administrative Modification
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                20 - Offense
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                30 - Property
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                31 - Property Description
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                32 - Property Modification
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                33 - Property/Offense
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                40 - Offender
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                41 - Offender Using/Gaming Motivation
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                50 - Victim
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                51 - Victim Injury
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                52 - Victim/Offender Relation
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                60 - Arrestee
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                61 - Arrestee Armed
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                62 - Arrestee Statute
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                63 - Arrestee Modification
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                99 - Submission Trailer
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                01 - Zero Record
+                                </li>
+                                </ul>
+                        
+                    
+                
+                    
+                    <li>
+                        <div>Control Data Element</div>
+                        
+                            <ul style="padding-left:30px;">
+                                <li>
+                                C1 - Segment Descriptor
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C2 - Submitting Agency
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C3 - Submission Date
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C4 - Reporting Period
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C5 - Action Type
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C6 - Clearance Indicator
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C7 - Number of Segments Transferred
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C8 - End of Segment Marker
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                C9 - Padding
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                10 - Software ID
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                11 - Software Version
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                12 - LIBRS Spec Indicator
+                                </li>
+                                </ul>
+                        
+                    
+                
+                    
+                    <li>
+                        <div>Geographical Coordinates</div>
+                        
+                            <ul style="padding-left:30px;">
+                                <li>
+                                L54 - Station/Division/Precinct Identifier
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                L55 - Arrest Transaction Number
+                                </li>
+                                </ul>
+                        
+                    
+                
+                    
+                    <li>
+                        <div>Mandatories</div>
+                        
+                            <ul style="padding-left:30px;">
+                                <li>
+                                Error Messages
+                                </li>
+                                
+                        
+                            
+                                <li>
+                                NIBRS Mandatories
+                                </li>
+                                </ul>
                         
                     </ul>
-            </li>
-        </ul>
-    </div>
+                
+                </li>
+            </ul>
+        </li>
+    </ul>
 </div></div>
-      <div class="col-10" style="padding-top: 20px;"><h1 id="librs-specification-and-data-element-definition-documentation">LIBRS Specification and Data Element Definition Documentation</h1>
+      <div class="col-9" style="padding-top: 20px;"><h1 id="librs-specification-and-data-element-definition-documentation">LIBRS Specification and Data Element Definition Documentation</h1>
 <hr />
 
 <p>This page contains information on how LIBRS Flat Files should be processed and generated for use in submitting data to the State of Louisiana, and subsequently the FBI via NIBRS.</p>
@@ -41,7 +273,7 @@
   <li>LIBRS Specification Documentation</li>
   <li>LIBRS Data Element Definitions</li>
   <li>Master LIBRS LRS List</li>
-  <li>LRS to NIBRS Translations+</li>
+  <li>LRS to NIBRS Translations</li>
 </ul>
 </div>
     </div>

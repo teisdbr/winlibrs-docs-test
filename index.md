@@ -13,4 +13,4 @@ This site contains the following information:
 - LIBRS Specification Documentation
 - LIBRS Data Element Definitions
 - Master LIBRS LRS List
-- LRS to NIBRS Translations+
+- LRS to NIBRS Translations

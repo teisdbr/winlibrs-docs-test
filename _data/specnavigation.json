@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Segment Layouts",
+    "submenu": [
+      {"subtitle": "00 - Submission Header"},
+      {"subtitle": "10 - Administrative"},
+      {"subtitle": "11 - Administrative Modification"},
+      {"subtitle": "20 - Offense"},
+      {"subtitle": "30 - Property"},
+      {"subtitle": "31 - Property Description"},
+      {"subtitle": "32 - Property Modification"},
+      {"subtitle": "33 - Property/Offense"},
+      {"subtitle": "40 - Offender"},
+      {"subtitle": "41 - Offender Using/Gaming Motivation"},
+      {"subtitle": "50 - Victim"},
+      {"subtitle": "51 - Victim Injury"},
+      {"subtitle": "52 - Victim/Offender Relation"},
+      {"subtitle": "60 - Arrestee"},
+      {"subtitle": "61 - Arrestee Armed"},
+      {"subtitle": "62 - Arrestee Statute"},
+      {"subtitle": "63 - Arrestee Modification"},
+      {"subtitle": "99 - Submission Trailer"},
+      {"subtitle": "01 - Zero Record"}
+    ]
+  },
+  {
+    "title": "Control Data Element",
+    "submenu": [
+      {"subtitle": "C1 - Segment Descriptor"},
+      {"subtitle": "C2 - Submitting Agency"},
+      {"subtitle": "C3 - Submission Date"},
+      {"subtitle": "C4 - Reporting Period"},
+      {"subtitle": "C5 - Action Type"},
+      {"subtitle": "C6 - Clearance Indicator"},
+      {"subtitle": "C7 - Number of Segments Transferred"},
+      {"subtitle": "C8 - End of Segment Marker"},
+      {"subtitle": "C9 - Padding"},
+      {"subtitle": "10 - Software ID"},
+      {"subtitle": "11 - Software Version"},
+      {"subtitle": "12 - LIBRS Spec Indicator"}
+      ] 
+  },
+  {
+    "title": "Geographical Coordinates",
+    "submenu": [
+      {"subtitle": "L54 - Station/Division/Precinct Identifier"},
+      {"subtitle": "L55 - Arrest Transaction Number"}
+    ]
+  },
+  {
+    "title": "Mandatories",
+    "submenu": [
+      {
+        "subtitle": "Error Messages",
+        "sub_submenu": [
+          {"subtitle": "Initial Reports"},
+          {"subtitle": "Initial Reports with Arrestees"},
+          {"subtitle": "Updates to Submitted Incidents"},
+          {"subtitle": "Mandatory Edits"}
+        ]
+      },
+      {
+        "subtitle": "NIBRS Mandatories",
+        "sub_submenu": [
+          {"subtitle": "ARSON (200)"},
+          {"subtitle": "AGGRAVATED ASSAULT, SIMPLE ASSAULT or INTIMIDATION (13A, 13B and 13C) 178"},
+          {"subtitle": "BRIBERY (510) 179"},
+          {"subtitle": "BURGLARY/BREAKING AND ENTERING (220)"},
+          {"subtitle": "COUNTERFEITING/FORGERY (250)"},
+          {"subtitle": "DESTRUCTION/DAMAGE/VANDALISM (290)"},
+          {"subtitle": "DRUG/NARCOTIC VIOLATION (35A) or DRUG EQUIPMENT VIOLATION (35B)"},
+          {"subtitle": "EXTORTION/BLACKMAIL (210)"},
+          {"subtitle": "FRAUD OFFENSES (26A-E)"},
+          {"subtitle": "GAMBLING OFFENSES (39A-D)"},
+          {"subtitle": "HOMICIDE OFFENSES (09A, 09B or 09C)"},
+          {"subtitle": "KIDNAPPING/ABDUCTION (100)"},
+          {"subtitle": "LARCENY/THEFT OFFENSES (23A-H)"},
+          {"subtitle": "MOTOR VEHICLE THEFT (240)"},
+          {"subtitle": "PORNOGRAPHY/OBSCENE MATERIAL OFFENSES (370)"},
+          {"subtitle": "PROSTITUTION OFFENSES (40A, 40B)"},
+          {"subtitle": "ROBBERY OFFENSES (120)"},
+          {"subtitle": "SEX OFFENSES - FORCIBLE (11A-D)"},
+          {"subtitle": "SEX OFFENSES - NON-FORCIBLE (36A-36B)"},
+          {"subtitle": "STOLEN PROPERTY OFFENSES (280)"},
+          {"subtitle": "WEAPONS LAW VIOLATIONS (520)"}
+        ]
+      }
+    ]
+  }
+]
