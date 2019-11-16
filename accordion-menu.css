@@ -4,13 +4,14 @@ td {
     padding-right: 15px;
 }
 
-tbody tr:nth-child(even){
+tbody tr:nth-child(even) {
     background-color: #F5F5F5;
 }
 
-th{
+th {
     background-color: #E0E0E0;
 }
+
 #accordion {
     visibility:hidden;
     box-shadow:0 0 12px rgba(0,0,0,0.3);   
