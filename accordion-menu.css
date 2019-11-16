@@ -5,7 +5,7 @@ td {
 }
 
 tbody tr:nth-child(even){
-    background-color: #E0E0E0;
+    background-color: #F5F5F5;
 }
 
 th{
