@@ -109,7 +109,7 @@
     "10075": {
         "err_no": 10075,
         "err_message": "MISSING A MANDATORY RECORD SEGMENT FOR A COMPLETE INCIDENT",
-        "desc10":"When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included:<br> 10 - Administrative Segment, 20 - Offense Segment, 40 - Offender Segment, 41 - Offender Using Segment/Gaming Motivation, and 50 - Victim Segment"
+        "desc10":"When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included:<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 10 - Administrative Segment <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 20 - Offense Segment <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 40 - Offender Segment <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 41 - Offender Using Segment/Gaming Motivation <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 50 - Victim Segment"
     },
     "10076": {
         "err_no": 10076,
@@ -968,7 +968,8 @@
     "16058": {
         "err_no": 16058,
         "err_message": "MUST BE BLANK WHEN ACTION TYPE IS NOT 'W' (WINDOW)",
-        "desc60": "Clearance Indicator (DE C6) must be Blank (G) when Action Type is not 'W' (Time-Window)."
+        "desc60": "Clearance Indicator (DE C6) must be Blank (G) when Action Type is not 'W' (Time-Window).",
+        "descc6": "Clearance Indicator (DE C6) must be Blank (G) when Action Type is not 'W' (Time-Window)."
     },
     "16059": {
         "err_no": 16059,
@@ -1065,11 +1066,19 @@
     },
     "20001": {
         "err_no": 20001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
+        "descc1": "DE C1 must be present -- CANNOT be blank.",
+        "descc3": "DE C3 must be present -- CANNOT be blank.",
+        "descc4": "DE C4 must be present -- CANNOT be blank.",
+        "descc5": "DE C5 must be present -- CANNOT be blank.",
+        "descc6": "If Action Type (C5) is 'W' (Time-Window) DE C6 must be present -- CANNOT be blank.",
+        "descc7": "DE C7 must be present -- CANNOT be blank."
     },
     "20002": {
         "err_no": 20002,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
+        "descc1": "DE C1 must be a valid code.",
+        "descc6": "DE C6 must be a valid code."
     },
     "20003": {
         "err_no": 20003,
@@ -1081,19 +1090,25 @@
     },
     "20010": {
         "err_no": 20010,
-        "err_message": "MUST BE A VALID AGENCY"
+        "err_message": "MUST BE A VALID AGENCY",
+        "descc2": "Agencies submitting Incident Data must be in either 'Test', 'Production', or 'Certified' LIBRS Status."
     },
     "20015": {
         "err_no": 20015,
-        "err_message": "END OF SEGMENT MARKER EXPECTED--END OF SEGMENT MARKER NOT FOUND"
+        "err_message": "END OF SEGMENT MARKER EXPECTED--END OF SEGMENT MARKER NOT FOUND",
+        "descc1": "DE C1 must identify a segment of proper length."
     },
     "20025": {
         "err_no": 20025,
-        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
+        "descc3": "Each component of the date MUST be valid. <br>Months must be 01-12, days must be 01-31, and year must include the century (i.e., 19xx, 20xx). <br>In addition, days CANNOT exceed maximum for the month (EG: June CANNOT have 31 days).",
+        "descc4": "Each component of the date MUST be valid. <br>Months must be 01-12, days must be 01-31, and year must include the century (i.e., 19xx, 20xx). <br>In addition, days CANNOT exceed maximum for the month (EG: June CANNOT have 31 days)."
     },
     "20026": {
         "err_no": 20026,
-        "err_message": "REPORTING PERIOD CANNOT EXCEED THE DATE OF SUBMISSION"
+        "err_message": "REPORTING PERIOD CANNOT EXCEED THE DATE OF SUBMISSION",
+        "descc3": "The date must be greater than that entered within Reporting Period (C4)",
+        "descc4": "The date CANNOT be greater than that entered within Date of Submission (C3)"
     },
     "20027": {
         "err_no": 20027,
@@ -1105,15 +1120,18 @@
     },
     "20030": {
         "err_no": 20030,
-        "err_message": "MUST BE 3 OR GREATER"
+        "err_message": "MUST BE 3 OR GREATER",
+        "descc7": "DE C7 must have a value of 3 or more."
     },
     "20031": {
         "err_no": 20031,
-        "err_message": "MUST BE EQUAL TO THE TOTAL NUMBER OF SEGMENTS WRITTEN TO THE TAPE."
+        "err_message": "MUST BE EQUAL TO THE TOTAL NUMBER OF SEGMENTS WRITTEN TO THE TAPE.",
+        "descc7": "DE C7 must be equal to the total number of segments within the data submission file"
     },
     "20060": {
         "err_no": 20060,
-        "err_message": "REPORTING PERIOD DATE CANNOT PRECEDE INCIDENT DATE"
+        "err_message": "REPORTING PERIOD DATE CANNOT PRECEDE INCIDENT DATE",
+        "descc4": "Reporting Period date cannot be before the Incident Date."
     },
     "20200": {
         "err_no": 20200,

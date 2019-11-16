@@ -24,23 +24,6 @@
     ]
   },
   {
-    "title": "Control Data Element",
-    "submenu": [
-      {"subtitle": "C1 - Segment Descriptor"},
-      {"subtitle": "C2 - Submitting Agency"},
-      {"subtitle": "C3 - Submission Date"},
-      {"subtitle": "C4 - Reporting Period"},
-      {"subtitle": "C5 - Action Type"},
-      {"subtitle": "C6 - Clearance Indicator"},
-      {"subtitle": "C7 - Number of Segments Transferred"},
-      {"subtitle": "C8 - End of Segment Marker"},
-      {"subtitle": "C9 - Padding"},
-      {"subtitle": "10 - Software ID"},
-      {"subtitle": "11 - Software Version"},
-      {"subtitle": "12 - LIBRS Spec Indicator"}
-      ] 
-  },
-  {
     "title": "Geographical Coordinates",
     "submenu": [
       {"subtitle": "L54 - Station/Division/Precinct Identifier"},
