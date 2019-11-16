@@ -1,5 +1,16 @@
 ﻿/* Accordion Menu by www.menucool.com/vertical/accordion-menu*/
+td {
+    padding-left: 15px;
+    padding-right: 15px
+}
 
+tbody tr:nth-child(even){
+    background-color: #E0E0E0;
+}
+
+th{
+    background-color: #E0E0E0;
+}
 #accordion {
     visibility:hidden;
     box-shadow:0 0 12px rgba(0,0,0,0.3);   
