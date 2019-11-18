@@ -21,7 +21,8 @@
     },
     "10001": {
         "err_no": 10001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
+        "desc1": "Must be present -- CANNOT be Blank (G)."
     },
     "10003": {
         "err_no": 10003,
@@ -50,7 +51,8 @@
     },
     "10052": {
         "err_no": 10052,
-        "err_message": "NOT A VALID ORI--NOT ON LIBRS ORI FILE"
+        "err_message": "NOT A VALID ORI--NOT ON LIBRS ORI FILE",
+        "desc1":"MUST be a valid 9-character NCIC number, where the last 2 positions of the ORI must reflect '00' for all state and local agencies."
     },
     "10053": {
         "err_no": 10053,
@@ -71,7 +73,8 @@
     },
     "10059": {
         "err_no": 10059,
-        "err_message": "ALL SEGMENTS ON MAGNETIC MEDIA MUST BE FROM SAME STATE - STATE = [state]"
+        "err_message": "ALL SEGMENTS ON MAGNETIC MEDIA MUST BE FROM SAME STATE - STATE = [state]",
+        "desc1":"First two positions MUST be the code of the state 'LA' in which the incident occurred."
     },
     "10060": {
         "err_no": 10060,
@@ -1072,7 +1075,8 @@
         "descc4": "DE C4 must be present -- CANNOT be blank.",
         "descc5": "DE C5 must be present -- CANNOT be blank.",
         "descc6": "If Action Type (C5) is 'W' (Time-Window) DE C6 must be present -- CANNOT be blank.",
-        "descc7": "DE C7 must be present -- CANNOT be blank."
+        "descc7": "DE C7 must be present -- CANNOT be blank.",
+        "descc8": "DE C8 must be present -- CANNOT be blank."
     },
     "20002": {
         "err_no": 20002,
@@ -1116,7 +1120,8 @@
     },
     "20029": {
         "err_no": 20029,
-        "err_message": "END OF SEGMENT MARKER, MUST BE EQUAL TO 'ZZ'"
+        "err_message": "END OF SEGMENT MARKER, MUST BE EQUAL TO 'ZZ'",
+        "descc8": "Segment must be present and be 'ZZ'."
     },
     "20030": {
         "err_no": 20030,

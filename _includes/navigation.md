@@ -7,9 +7,9 @@
                     <li>
                         <div>{{ item.title }}</div>
                         {% for subitem in item.submenu %}
-                            {% if forloop.first %}<ul style="padding-left:30px;text-indent: 2em;">{% endif %}
+                            {% if forloop.first %}<ul style="padding-left: 5px;">{% endif %}
                                 <li>
-                                {{ subitem.subtitle }}
+                                <a href = "{{ subitem.url }}">{{ subitem.subtitle }}</a>
                                 </li>
                                 {% if forloop.last %}</ul>{% endif %}
                         {% endfor %}
@@ -23,9 +23,12 @@
                     <li>
                         <div>{{ item.title }}</div>
                         {% for subitem in item.submenu %}
-                            {% if forloop.first %}<ul style="padding-left:30px;text-indent: 2em;">{% endif %}
+                            {% if forloop.first %}<ul style="padding-right:10px;">{% endif %}
                                 <li>
-                                {{ subitem.subtitle }}
+                                <a href = "{{ subitem.url }}"><table><tr>
+                                <td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{ subitem.de_num }}</td><td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                                <td style="vertical-align: top; padding-left:0px;">{{subitem.subtitle}}</td>
+                                </tr></table></a>
                                 </li>
                                 {% if forloop.last %}</ul>{% endif %}
                         {% endfor %}
