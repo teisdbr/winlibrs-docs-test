@@ -2,16 +2,13 @@
 
 **Examples:**
 
-1 If a robbery occurred at 9:30 p.m. on July 2, 2014, the entry should be '07022014G21' (where 'G' is a blank).
-
-2 If a kidnaping started at 11:30 p.m. on November 1, 2014, and ended at 6:00 p.m., on November 16, 2014, the entry should be '11012014G23' (where 'G' is a blank).
-
-3 If the date and hour of the incident are unknown, but the date of the report was March 15, 2014, the entry should be '03152014RGG' (where 'G' is a blank).
-
-4 If a burglary occurred sometime between 11:15 A.M. on June 24, 2014, and 4:30 P.M. on June 26, 2014, the entry should be
-06242014**G**11 (where "**G**" is a blank).
-
-5 If a rape occurred on November 15, 2013, but was not reported until January 15, 2014, this incident would reject if your agency's "Base Date" is December 1, 2013. This incident would not have been reported on your Return A (or whatever other forms would be applicable) for the month of November or for the month of December of 2013.<br><br>If your agency submits this incident to LIBRS with an incident date of 11/15/2013, it would REJECT. It would reject because the Incident Date is prior to the date your agency's data is being kept by the LIBRS and NIBRS databases.<br><br>Since this incident CANNOT be accepted into LIBRS and has not been reported to UCR summary, an adjustment would have to be made on UCR Summary forms that apply.
+Example Number | Description
+:-------------:|:-----------
+1 | If a robbery occurred at 9:30 p.m. on July 2, 2014, the entry should be '07022014G21' (where 'G' is a blank).
+2 | If a kidnaping started at 11:30 p.m. on November 1, 2014, and ended at 6:00 p.m., on November 16, 2014, the entry should be '11012014G23' (where 'G' is a blank).
+3 | If the date and hour of the incident are unknown, but the date of the report was March 15, 2014, the entry should be '03152014RGG' (where 'G' is a blank).
+4 | If a burglary occurred sometime between 11:15 A.M. on June 24, 2014, and 4:30 P.M. on June 26, 2014, the entry should be 06242014G11 (where "G" is a blank).
+5 | If a rape occurred on November 15, 2013, but was not reported until January 15, 2014, this incident would reject if your agency's "Base Date" is December 1, 2013. This incident would not have been reported on your Return A (or whatever other forms would be applicable) for the month of November or for the month of December of 2013.<br><br>If your agency submits this incident to LIBRS with an incident date of 11/15/2013, it would REJECT. It would reject because the Incident Date is prior to the date your agency's data is being kept by the LIBRS and NIBRS databases.<br><br>Since this incident CANNOT be accepted into LIBRS and has not been reported to UCR summary, an adjustment would have to be made on UCR Summary forms that apply.
 
 Cleared Exceptionally (4)
 -------------------------
