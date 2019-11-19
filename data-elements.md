@@ -384,31 +384,24 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20015"] -%}
 3 | {{error.descc1}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: This two-digit identifier is used by LIBRS to determine the type of segment being processed.`
+
 <br>
 
 **Allowed Entries for Data Element C1:**
 
-  ||               Segment Descriptors           ||      
-  |:--------------------:|:-----------------------------|
-  |00                    | Submission Header            |
-  |01                    | Zero Records                 |
-  |10                    | Administration               |
-  |11                    | Administration Modification  |
-  |20                    | Offense                      |
-  |30                    | Property                     |
-  |31                    | Property Description         |
-  |32                    | Property Modification        |
-  |33                    | Property/Offense             |
-  |40                    | Offender                     |
-  |41                    | Offender Using               |
-  |50                    | Victim                       |
-  |51                    | Victim Injury                |
-  |52                    | Victim/Offender Relation     |
-  |60                    | Arrestee                     |
-  |61                    | Arrestee Armed               |
-  |62                    | Arrestee Statute             |
-  |63                    | Arrestee Modification        |
-  |99                    | Submission Trailer           |
+  | Value |     Segment Descriptors      |  Value   |  Segment Descriptors         |          
+  |:-----:|:-----------------------------|:--------:|:-----------------------------| 
+  |00     | Submission Header            | 41       | Offender Using               |
+  |01     | Zero Records                 | 50       | Victim                       |
+  |10     | Administration               | 51       | Victim Injury                |
+  |11     | Administration Modification  | 52       | Victim/Offender Relation     |
+  |20     | Offense                      | 60       | Arrestee                     |
+  |30     | Property                     | 61       | Arrestee Armed               |
+  |31     | Property Description         | 62       | Arrestee Statute             |
+  |32     | Property Modification        | 63       | Arrestee Modification        |
+  |33     | Property/Offense             | 99       | Submission Trailer           |
+  |40     | Offender                     |
 
 <br>
 
@@ -424,6 +417,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20010"] -%}
 1 | {{error.descc2}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: The name of the Submitting Agency is spelled out, and often abbreviated.  This data field is found in the Header Segment, which is the first segment in all data submission files.`
 ___
 
 <br>
@@ -445,6 +439,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.descc3}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20026"] -%}
 3 | {{error.descc3}} | {{error.err_no}} | {{ error.err_message }} 
+
+`Note: This data element provides LIBRS with the date that this data submission file was generated for submission.`
 
 ___
 
@@ -470,6 +466,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20060"] -%}
 4 | {{error.descc4}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: Reporting Period identifies the month and year that the Incident-Based data in a data submission file is being reported. All data in the data submission does not have to correspond to this date (i.e., Modifications and Time-Window Submissions will be from preceding months).`
+
 ____
 
 <br>
@@ -485,6 +483,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["20001"] -%}
 1 | {{error.descc5}} | {{error.err_no}} | {{ error.err_message }} 
+
+`Note: Action Type (C5) informs LIBRS of the type of action that LIBRS and NIBRS are required to take with incident data contained by the segment.`
 
 <br>
 
@@ -520,6 +520,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["16058"] -%}
 3 | {{error.descc6}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: Clearance Indicator (C6) is used in the Arrestee Segment (60) to indicate whether this arrest produced a clearance, or is an additional arrest on a previously cleared incident that is outside the agency's base date.`
+
 <br>
 
 **Allowed Entries for Data Element C6:**
@@ -549,6 +551,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20031"] -%}
 3 | {{error.descc7}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: This field provides LIBRS with a count of segments submitted by the agency within the data submission file, including the header and trailer segments.  This number is used as part of the data submission validation process.`
+
 <br>
 
 **Allowed Entries:** Any integer greater than or equal to 3.
@@ -571,6 +575,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20029"] -%}
 2 | {{error.descc8}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: This field is used to provide LIBRS with a way to determine where an end of record occurs. In the event of an error in record length this will allow the LIBRS system to find the start of the next record and possibly recover from the error. The "End of Segment" marker is the same for all segments, two capitol Z's.`
+
 <br>
 
 **Allowed Entries:** "ZZ" only.
@@ -592,6 +598,8 @@ Requirement  | Requirement Description |
 1 | Must be Blank (G) if fixed length records are submitted. MUST be one newline character (ASCII 13; CR, LF, or CRLF) if variable length records are submitted.
 2 | If Fixed-Length records are used, add padding from the End of Segment Marker (C8) to exactly column 150.
 3 | Segment 00 MUST have both Padding to column 150 and a new line charachter (ASCII 13; CR, LF, or CRLF)
+
+`Note: This field is used to pad unused fields for systems that are unable to write variable length records. This padding will lengthen all segments to 150 characters. Padding can be replaced with a newline character for those systems that can write variable length records. The newline character will mark the true End-of-Record. Variable length records are preferred by LIBRS because of the space savings they allow.`
 
 <br>
 
