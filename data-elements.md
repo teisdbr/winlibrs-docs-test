@@ -74,12 +74,75 @@ ___
 
 Acting in concert requires that the offenders actually commit or assist in the commission of the crime(s). The offenders must be aware of, and consent to, the commission of the crime(s); or, even if non-consenting, their actions assist in the commission of the offense(s). This is important because all of the offenders in an incident are considered to have committed all of the offenses in the incident. If one or more of the offenders did not act in concert, then there is more than one incident involved.
 
-**Same time and place means that the time interval between the offenses and the distance**
+**Same time and place means that the time interval between the offenses and the distancebetween the offenses and the distance between the locations where they occurred were insignificant.**
+
+Normally, the offenses must have occurred during an unbroken time duration and at the same or adjourning location(s). However, incidents can also be comprised of offenses which by their nature involve continuing criminal activity by the same offender(s) at different times and places, as long as the activity is deemed to constitute a single criminal transaction. Regarding these situations, the reporting agency will have to use its best judgment.
 
 ___
 
 <br>
 
+## Incident Date/Hour (3)
+___
+
+<br>
+
+**Description:** Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown. If an incident occurred before the agency’s “Base Date” but was NOT reported to LIBRS until after the “Base Date” has been implemented, THIS INCIDENT WILL BE REJECTED. These type of incidents (that is, NOT reported until after your Agency’s “Base Date” was implemented) may require your agency to submit an adjusted UCR Summary form to capture these offenses. 
+
+**Data Characteristics:** 11 Character Alpha
+
+**Format:** MMDDYYYYXHH
+
+**Requirements:**
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["11001"] -%}
+1 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11005"] -%}
+2 | {{error.desc_de3}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["11018"] -%}
+3 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11072"] -%}
+4 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11073"] -%}
+5 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11070"] -%}
+6 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11075"] -%}
+7 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["10018"] -%}
+8 | Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) CANNOT have a date in 'Incident Date/Hour' (DE 3) that would be a valid date for an Incident occurring since the agency's Base Date. This is also true for any Administrative Segments (10) subsequently submitted with. ||
+
+**Incident Date/Hour (3)**
+
+
+9\) Administrative Segments (10) submitted with an Action Type of \"M\"
+(Modify) CANNOT change the Incident Date/Hour (3) previously submitted
+in the original Incident Report (Action Type of \"I\"). **Error 11061\
+**
+
+10\) Administrative Segments (10) submitted with an Action Type of \"M\"
+(Modify) CANNOT change the Report Date Indicator (position 51 of the
+segment) of Segments which were previously submitted with an Action Type
+of \"I\" (Incident Report). **Error 11062**
+
+11\) Administrative Segments (Segment 10) submitted with an Action Type
+of \"M\" (Modify) CANNOT change the hour part of Incident Date/Hour (3)
+of incidents previously submitted with in the original Incident Report
+(Action Type of \"I"). **Error 11063**
+
+> 12\) If HOUR is entered it must be \"00\" through \"23.\" **Error
+> 11052**\
+> *Note: If the Incident Date occurred at exactly midnight, enter the
+> Incident Date as if the time was 1 minute past midnight. (Example: If
+> the incident occurred at exactly midnight on Thursday, enter Friday\'s
+> date) and 00 for the hour.*
+>
+> 13\) If the Incident Date is unknown, use the Report Date. Indicate a
+> Report Date with an \"R\" in the space before the hour. If this is the
+> Incident Date, then leave the \"Report\" indicator blank. **Error
+> 11051**
 
 
 

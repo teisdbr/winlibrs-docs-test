@@ -188,7 +188,8 @@
     },
     "11001": {
         "err_no": 11001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
+        "desc_de3": "Must be present -- CANNOT be Blank (G)."
     },
     "11004": {
         "err_no": 11004,
@@ -196,7 +197,8 @@
     },
     "11005": {
         "err_no": 11005,
-        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
+        "desc_de3":"Each component of the date must be valid; that is, months must be 01-12, days must be 01-31, and year must include the century (19xx, 20xx).<br>In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br>The Incident Date CANNOT exceed the current date. "
     },
     "11015": {
         "err_no": 11015,
@@ -213,7 +215,8 @@
     },
     "11018": {
         "err_no": 11018,
-        "err_message": "DATE CANNOT BE ON OR AFTER THE INACTIVE DATE [MMDDYYYY] OF THE ORI"
+        "err_message": "DATE CANNOT BE ON OR AFTER THE INACTIVE DATE [MMDDYYYY] OF THE ORI",
+        "desc_de3": "When an ORI becomes inactive, no incident data may be submitted to LIBRS with an incident date on or after that date.<br>However, adjustments to previously submitted data may be done."
     },
     "11020": {
         "err_no": 11020,
@@ -295,7 +298,8 @@
     },
     "11070": {
         "err_no": 11070,
-        "err_message": "INCIDENT DATE CANNOT BE AFTER YEAR[yyyy] AND MONTH[mm] OF TAPE"
+        "err_message": "INCIDENT DATE CANNOT BE AFTER YEAR [YYYY] AND MONTH [MM] OF TAPE",
+        "desc_de3": "Incident Date/Hour CANNOT be later than the year and month the data submission file represents. (EG A June 2019 data submission CANNOT contain incidents occurring after June)."
     },
     "11071": {
         "err_no": 11071,
@@ -303,11 +307,13 @@
     },
     "11072": {
         "err_no": 11072,
-        "err_message": "INCIDENT DATE / HOUR FOR 'I' RECORDS CANNOT PREDATE 01 / 01 / 1991"
+        "err_message": "INCIDENT DATE/HOUR FOR 'I' RECORDS CANNOT PREDATE 01/01/1991",
+        "desc_de3": "The Incident Date CANNOT be earlier than 01/01/1991 for Inciden Report ('I') submissions.<br>This edit will preclude dates that are obviously incorrect since the FBI began accepting data on this date."
     },
     "11073": {
         "err_no": 11073,
-        "err_message": "INCIDENT DATE CANNOT BE BEFORE DATE ORI WENT IBR"
+        "err_message": "INCIDENT DATE CANNOT BE BEFORE DATE ORI WENT IBR",
+        "desc_de3": "No data regarding an incident previously submitted under the Summary UCR reporting system can be submitted with an incident date later than the date the agency commenced reporting.<br>It will be regarded as a duplicate submission and be rejected since the Summary UCR system already contains the aggregate data for the months before LIBRS conversion.<br><br>In other words, if an agency sends Incident Based Reporting (IBR) data for the first time on 20 July 2019, all 'Incident Date/Hour' (DE 3) entries for incidents, recovered property, and arrests must be within July, 2019<br>The exception is when Exceptional Clearances occur for a pre-IBR incident<br>In this case, 'Incident Date/Hour' (DE 3) may be earlier than July, 2019, but Exceptional Clearance Date (5) must be within July, 2019<br>LIBRS maintains a table of start dates (Agency Base Dates) for every law enforcement agency in the state<br>Except for the above example, LIBRS will reject data submitted with an 'Incident Date/Hour' prior to the agency's Base Date (start date)."
     },
     "11074": {
         "err_no": 11074,
@@ -315,11 +321,13 @@
     },
     "11075": {
         "err_no": 11075,
-        "err_message": "CANNOT CALCULATE BASE DATE FROM INCIDENT DATE[MMDDYYYY]"
+        "err_message": "CANNOT CALCULATE BASE DATE FROM INCIDENT DATE[MMDDYYYY]",
+        "desc_de3": "The **Submission Date (C3), in positions 23-30,** and the Incident Date MUST be valid entries.<br>LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as 'Time Window' submissions."
     },
     "11076": {
         "err_no": 11076,
-        "err_message": "INCIDENT DATE FOR WINDOW RECORDS CANNOT BE WITHIN BOUNDARIES OF INCIDENT"
+        "err_message": "INCIDENT DATE FOR WINDOW RECORDS CANNOT BE WITHIN BOUNDARIES OF INCIDENT",
+        "desc_de3":"The **Submission Date (C3), in positions 23-30,** and the Incident Date MUST be valid entries.<br>LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as 'Time Window' submissions."
     },
     "11097": {
         "err_no": 11097,
