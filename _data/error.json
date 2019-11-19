@@ -22,7 +22,8 @@
     "10001": {
         "err_no": 10001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
-        "desc1": "Must be present -- CANNOT be Blank (G)."
+        "desc_de1": "Must be present -- CANNOT be Blank (G).",
+        "desc_de2": "Must be present -- CANNOT be Blank (G)."
     },
     "10003": {
         "err_no": 10003,
@@ -31,11 +32,13 @@
     },
     "10015": {
         "err_no": 10015,
-        "err_message": "CANNOT HAVE EMBEDDED BLANKS BETWEEN FIRST AND LAST NON - BLANK CHARACTERS"
+        "err_message": "CANNOT HAVE EMBEDDED BLANKS BETWEEN FIRST AND LAST NON - BLANK CHARACTERS",
+        "desc_de2": "MUST be Blank right-fill if under twelve characters in length. The field CANNOT have embedded Blanks (G) between the first and last characters entered."
     },
     "10016": {
         "err_no": 10016,
-        "err_message": "MUST BE LEFT - JUSTIFIED--BLANK DETECTED IN FIRST POSITION"
+        "err_message": "MUST BE LEFT - JUSTIFIED--BLANK DETECTED IN FIRST POSITION",
+        "desc_de2": "MUST be left justified with Blank right-fill if under 12 characters in length."
     },
     "10017": {
         "err_no": 10017,
@@ -52,7 +55,7 @@
     "10052": {
         "err_no": 10052,
         "err_message": "NOT A VALID ORI--NOT ON LIBRS ORI FILE",
-        "desc1":"MUST be a valid 9-character NCIC number, where the last 2 positions of the ORI must reflect '00' for all state and local agencies."
+        "desc_de1":"MUST be a valid 9-character NCIC number, where the last 2 positions of the ORI must reflect '00' for all state and local agencies."
     },
     "10053": {
         "err_no": 10053,
@@ -65,7 +68,8 @@
     },
     "10056": {
         "err_no": 10056,
-        "err_message": "INCIDENT ALREADY ON FILE--PREVIOUSLY ADDED TO FILE ON[mm / dd / yyyy]"
+        "err_message": "INCIDENT ALREADY ON FILE--PREVIOUSLY ADDED TO FILE ON [MM/DD/YYYY]",
+        "desc_de2": "This field MUST be unique for each incident reported by the agency. <br>This means that no two incidents can have the same Incident Number. <br>Some agencies ensure uniqueness by prefixing every incident number with a two-digit year followed by a number starting with 1, while others simply increment the Incident Number by one for each new incident."
     },
     "10057": {
         "err_no": 10057,
@@ -74,7 +78,7 @@
     "10059": {
         "err_no": 10059,
         "err_message": "ALL SEGMENTS ON MAGNETIC MEDIA MUST BE FROM SAME STATE - STATE = [state]",
-        "desc1":"First two positions MUST be the code of the state 'LA' in which the incident occurred."
+        "desc_de1":"First two positions MUST be the code of the state 'LA' in which the incident occurred."
     },
     "10060": {
         "err_no": 10060,
@@ -149,7 +153,8 @@
     },
     "10087": {
         "err_no": 10087,
-        "err_message": "WINDOW SEGMENTS ALREADY ON FILE WITH THIS INCIDENT NUMBER"
+        "err_message": "WINDOW SEGMENTS ALREADY ON FILE WITH THIS INCIDENT NUMBER",
+        "desc_de2":"CANNOT have duplicate Incident Number for 'Time-Window' Segment."
     },
     "10090": {
         "err_no": 10090,
@@ -164,7 +169,8 @@
     "10092": {
         "err_no": 10092,
         "err_message": "ZERO - REPORTING INCIDENT NUMBER MUST BE ALL ZEROES",
-        "desc01": "A Segment 01 was submitted, but the Incident Number (Data Element 2) entered into positions 3-14 was not all zeroes."
+        "desc01": "A Segment 01 was submitted, but the Incident Number (Data Element 2) entered into positions 3-14 was not all zeroes.",
+        "desc_de2": "Zero Reporting Segments (Segment 01) must contain twelve zeroes, same as the Incident Number."
     },
     "10093": {
         "err_no": 10093,
@@ -202,11 +208,12 @@
     },
     "11017": {
         "err_no": 11017,
-        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN, AND / OR BLANKS"
+        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A-Z, 0-9, HYPHEN, AND/OR BLANKS",
+        "desc_de2":"Valid character combinations can include A-Z, 0-9, hyphens, and/or blanks."
     },
     "11018": {
         "err_no": 11018,
-        "err_message": "DATE CANNOT BE ON OR AFTER THE INACTIVE DATE[MMDDYYYY] OF THE ORI"
+        "err_message": "DATE CANNOT BE ON OR AFTER THE INACTIVE DATE [MMDDYYYY] OF THE ORI"
     },
     "11020": {
         "err_no": 11020,
@@ -214,7 +221,7 @@
     },
     "11021": {
         "err_no": 11021,
-        "err_message": "JUSTIFIABLE HOMICIDE(09 C) IS NOT A VALID WINDOW OFFENSE CODE"
+        "err_message": "JUSTIFIABLE HOMICIDE (09C) IS NOT A VALID WINDOW OFFENSE CODE"
     },
     "11051": {
         "err_no": 11051,

@@ -24,11 +24,11 @@ ____
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
-1 | {{error.desc1}} | {{error.err_no}}, 11001, 12001, 13001, 14001, 15001, 16001 | {{ error.err_message }} 
+1 | {{error.desc_de1}} | {{error.err_no}}, 11001, 12001, 13001, 14001, 15001, 16001 | {{ error.err_message }} 
 {% assign error = site.data.error["10052"] -%}
-2 | {{error.desc1}} | {{error.err_no}}, 10086, 11004, 12004, 13004, 14004, 15004, 16004 | {{ error.err_message }} 
+2 | {{error.desc_de1}} | {{error.err_no}}, 10086, 11004, 12004, 13004, 14004, 15004, 16004 | {{ error.err_message }} 
 {% assign error = site.data.error["10059"] -%}
-3 | {{error.desc1}} | {{error.err_no}} | {{ error.err_message }} 
+3 | {{error.desc_de1}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -41,62 +41,44 @@ ___
 
 **Description:** Agency unique, in-house assigned case number. The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years. 
 
-<br>
-
-*Data Characteristics:** 12 Character Alpha
+**Data Characteristics:** 12 Character Alpha
 
 **Requirements:**
 
-> 1\) MUST be present \-- CANNOT be blank. **Errors 10001, 11001, 12001,
-> 13001, 14001, 15001, 16001\
-> **
->
-> 2\) Zero Reporting Segments (Segment 01) must contain twelve zeroes, same
-> as the Incident Number. **Error 10092\
-> **
->
-> 3\) MUST be left justified with Blank right-fill if under 12 characters
-> in length. **Errors 10016, 11016, 12016, 13016, 14016, 15016, 16016**
->
-> 4\) Valid character combinations can include A-Z, 0-9, hyphens, and/or
-> blanks. **Errors 10017, 11017, 12017, 13017, 14017, 15017, 16017**
->
-> 5\) MUST be Blank right-fill if under twelve characters in length. The
-> field CANNOT have embedded Blanks (G) between the first and last
-> characters entered. **Error 10015, 11015, 12015, 13015, 14015, 15015,
-> 16015**
->
-> 6\) This field MUST be unique for each incident reported by the agency.
-> [This means that no two incidents can have the same Incident
-> Number.]{.underline} Some agencies ensure uniqueness by prefixing every
-> incident number with a two-digit year followed by a number starting with
-> 1, while others simply increment the Incident Number by one for each new
-> incident. **Error 10056\
-> **
->
-> **7) CANNOT have duplicate Incident Number for \"Time-Window\"
-> Segment. Error 10087**
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["10001"] -%}
+1 | {{error.desc_de2}} | {{error.err_no}}, 11001, 12001, 13001, 14001, 15001, 16001 | {{ error.err_message }} 
+{% assign error = site.data.error["10092"] -%}
+2 | {{error.desc_de2}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["10016"] -%}
+3 | {{error.desc_de2}} | {{error.err_no}}, 11016, 12016, 13016, 14016, 15016, 16016 | {{ error.err_message }} 
+{% assign error = site.data.error["11017"] -%}
+4 | {{error.desc_de2}} | {{error.err_no}}, 11017, 12017, 13017, 14017, 15017, 16017 | {{ error.err_message }} 
+{% assign error = site.data.error["10015"] -%}
+5 | {{error.desc_de2}} | {{error.err_no}}, 11015, 12015, 13015, 14015, 15015, 16015 | {{ error.err_message }} 
+{% assign error = site.data.error["10056"] -%}
+6 | {{error.desc_de2}} | {{error.err_no}}, 11015, 12015, 13015, 14015, 15015, 16015 | {{ error.err_message }} 
+{% assign error = site.data.error["10087"] -%}
+7 | {{error.desc_de2}} | {{error.err_no}}, 11015, 12015, 13015, 14015, 15015, 16015 | {{ error.err_message }} 
 
-**Definitions: Concept of time and place provides: If more than one
-crime was committed by the same person or group of persons and the time
-and space intervals separating them were insignificant, all of the
-crimes make up a single incident.**
+___
 
-> **An incident is considered as one or more offenses committed by the
-> same offender or group of offenders acting in concert at the same time
-> and place.**
->
-> Acting in concert requires that the offenders actually commit or
-> assist in the commission of the crime(s). The offenders must be aware
-> of, and consent to, the commission of the crime(s); or, even if
-> non-consenting, their actions assist in the commission of the
-> offense(s). This is important because all of the offenders in an
-> incident are considered to have committed all of the offenses in the
-> incident. If one or more of the offenders did not act in concert, then
-> there is more than one incident involved.
->
-> **Same time and place means that the time interval between the
-> offenses and the distance**
+<br>
+
+**Definitions:** 
+
+**Concept of time and place provides:** If more than one crime was committed by the same person or group of persons and the time and space intervals separating them were insignificant, all of the crimes make up a single incident.
+
+**An incident is considered as one or more offenses committed by the same offender or group of offenders acting in concert at the same time and place.**
+
+Acting in concert requires that the offenders actually commit or assist in the commission of the crime(s). The offenders must be aware of, and consent to, the commission of the crime(s); or, even if non-consenting, their actions assist in the commission of the offense(s). This is important because all of the offenders in an incident are considered to have committed all of the offenses in the incident. If one or more of the offenders did not act in concert, then there is more than one incident involved.
+
+**Same time and place means that the time interval between the offenses and the distance**
+
+___
+
+<br>
 
 
 
