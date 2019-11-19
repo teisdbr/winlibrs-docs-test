@@ -38,19 +38,20 @@ entered. **Error 11053**
 > \"W\" (Time Window Submission) CANNOT contain an \"N\" (Not
 > Applicable) in Cleared Exceptionally (4). Error 11054**
 
+
 **Cleared Exceptionally (4)**
 
-**Allowed Entries:** Enter [one]{.underline} code per incident.
+**Allowed Entries:** Enter one] code per incident.
 
-  Cleared Exceptionally Indicators   
-  ---------------------------------- -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  A                                  Death of Offender
-  B                                  Prosecution Declined (by the prosecutor other than lack of-probable cause)
-  C                                  Extradition Denied
-  D                                  Victim Refused to Cooperate (in the prosecution)
-  E                                  Juvenile/No Custody (the handling of a juvenile without taking him/her into custody, but rather by oral or written notice given to the parents or legal guardian in a case involving a minor offense)
-  O                                  Other (Administrative Closing of a case\--this does not clear the incident for LIBRS\--reported to NIBRS as a "N")
-  **N**                              **Not Applicable (Not Cleared Exceptionally)**
+|   | Cleared Exceptionally Indicators|   
+|:-:|:--------------------------------|
+  A | Death of Offender
+  B | Prosecution Declined (by the prosecutor other than lack of-probable cause)
+  C | Extradition Denied
+  D | Victim Refused to Cooperate (in the prosecution)
+  E | Juvenile/No Custody (the handling of a juvenile without taking him/her into custody, but rather by oral or written notice given to the parents or legal guardian in a case involving a minor offense)
+  O | Other (Administrative Closing of a case\--this does not clear the incident for LIBRS\--reported to NIBRS as a "N")
+  **N** | **Not Applicable (Not Cleared Exceptionally)**
 
 **Example:** A kidnapper holding a hostage killed himself when the
 building in which he barricaded himself was surrounded by police. The
