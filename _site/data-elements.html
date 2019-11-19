@@ -945,7 +945,8 @@
 
 <p><strong>Data Characteristics:</strong> 9 Character Numeric/Alpha</p>
 
-<p><strong>Requirements:</strong></p>
+<h3 id="requirements">Requirements:</h3>
+<hr />
 
 <table>
   <thead>
@@ -991,7 +992,8 @@
 
 <p><strong>Data Characteristics:</strong> 12 Character Alpha</p>
 
-<p><strong>Requirements:</strong></p>
+<h3 id="requirements-1">Requirements:</h3>
+<hr />
 
 <table>
   <thead>
@@ -1077,7 +1079,8 @@
 
 <p><strong>Format:</strong> MMDDYYYYXHH</p>
 
-<p><strong>Requirements:</strong></p>
+<h3 id="requirements-2">Requirements:</h3>
+<hr />
 
 <table>
   <thead>
@@ -1174,8 +1177,480 @@
 
 <p><br /></p>
 
+<h3 id="examples">Examples:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Example Number</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: left">If a robbery occurred at 9:30 p.m. on July 2, 2014, the entry should be ‘07022014G21’ (where ‘G’ is a blank).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: left">If a kidnaping started at 11:30 p.m. on November 1, 2014, and ended at 6:00 p.m., on November 16, 2014, the entry should be ‘11012014G23’ (where ‘G’ is a blank).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: left">If the date and hour of the incident are unknown, but the date of the report was March 15, 2014, the entry should be ‘03152014RGG’ (where ‘G’ is a blank).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td style="text-align: left">If a burglary occurred sometime between 11:15 A.M. on June 24, 2014, and 4:30 P.M. on June 26, 2014, the entry should be 06242014G11 (where “G” is a blank).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td style="text-align: left">If a rape occurred on November 15, 2013, but was not reported until January 15, 2014, this incident would reject if your agency’s “Base Date” is December 1, 2013. This incident would not have been reported on your Return A (or whatever other forms would be applicable) for the month of November or for the month of December of 2013.<br /><br />If your agency submits this incident to LIBRS with an incident date of 11/15/2013, it would REJECT. It would reject because the Incident Date is prior to the date your agency’s data is being kept by the LIBRS and NIBRS databases.<br /><br />Since this incident CANNOT be accepted into LIBRS and has not been reported to UCR summary, an adjustment would have to be made on UCR Summary forms that apply.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="cleared-exceptionally-4">Cleared Exceptionally (4)</h2>
+<hr />
+
+<p><strong>Description:</strong> Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident.</p>
+
+<p><strong>Data Characteristics:</strong> 1 Character Alpha</p>
+
+<h3 id="requirements-3">Requirements:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td>Must be present – CANNOT be Blank (G).</td>
+      <td style="text-align: center">11001</td>
+      <td>MUST BE PRESENT–MANDATORY FIELD</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td>MUST be a valid code.</td>
+      <td style="text-align: center">11004</td>
+      <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td>CANNOT be ‘N’ (Not Applicable) if Exceptional Clearance Date is entered.</td>
+      <td style="text-align: center">11053</td>
+      <td>VALUE ENTERED CONFLICTS WITH PRESENCE OF AN ENTRY IN EXCEPTIONAL CLEARANCE DATE</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td>When a value other than ‘N’ (Not Applicable) is entered, there can be NO Arrestee Segments associated with the Incident.</td>
+      <td style="text-align: center">11071</td>
+      <td>INCIDENT DATE IS OUTSIDE THE BASE DATE CALCULATION</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) must have an ‘N’ (Not Applicable) in Cleared Exceptionally (DE 4) indicator when Arrestees are included as part of the original Incident Report.</td>
+      <td style="text-align: center">11064</td>
+      <td>CLEARED EXCEPTIONALLY FIELD MUST CONTAIN ‘N’ WHEN ARRESTEES WERE REPORTED</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td>Administrative Segment (10) submitted with an Action Type of ‘W’ (Time Window Submission) CANNOT contain an ‘N’ (Not Applicable) in Cleared Exceptionally (DE 4).</td>
+      <td style="text-align: center">11054</td>
+      <td>CLEARED EXCEPTIONALLY CANNOT CONTAIN ‘N’ WITH SEGMENT ACTION TYPE ‘W’</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="allowed-entries">Allowed Entries</h3>
+<hr />
+
+<p>Enter one code per incident.</p>
+
+<table>
+<thead>
+	<tr>
+		<th colspan="2" style="align-text:center;">Cleared Exceptionall Indicators</th>
+	</tr>
+    </thead>
+    <tbody>
+
+    
+        
+        <tr>
+        <td>A</td>
+		    <td>Death of Offender</td>
+        </tr>
+        
+        <tr>
+        <td>B</td>
+		    <td>Prosecution Declined</td>
+        </tr>
+        
+        <tr>
+        <td>C</td>
+		    <td>Extradition Denied</td>
+        </tr>
+        
+        <tr>
+        <td>D</td>
+		    <td>Victim Refused to Cooperate</td>
+        </tr>
+        
+        <tr>
+        <td>E</td>
+		    <td>Juvenile / No Custody</td>
+        </tr>
+        
+        <tr>
+        <td>O</td>
+		    <td>Other (Administrative Closing)</td>
+        </tr>
+        
+        <tr>
+        <td>N</td>
+		    <td>Not Applicable</td>
+        </tr>
+        
+    
+
+    
+
+</tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="examples-1">Examples:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Example Number</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: left">A kidnapper holding a hostage killed himself when the building in which he barricaded himself was surrounded by police. The kidnaping is cleared exceptionally under, ‘Death of the Offender’.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="exceptional-cleared-date-5">Exceptional Cleared Date (5)</h2>
+
+<p><strong>Data Characteristics</strong>: 8 Character Date</p>
+
+<p><strong>Format:</strong> MMDDYYYY</p>
+
+<h3 id="requirements-4">Requirements:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td>The clearance date CANNOT be earlier than the incident date.</td>
+      <td style="text-align: center">11055</td>
+      <td>CLEARANCE DATE [MMDDYYYY] PREDATES INCIDENT DATE [MMDDYYYY]</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td>MUST be present if incident was cleared exceptionally with a data value of ‘A’, ‘B’, ‘C’, ‘D’, ‘E’, or ‘O’ in Cleared Exceptionally (DE 4).</td>
+      <td style="text-align: center">11056</td>
+      <td>AN ENTRY MUST BE MADE WHEN CLEARED EXCEPTIONALLY HAS ENTRIES OF A - E</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td>Each component of the date must be valid: Months must be 0-12, days must be 01-31, and year must include the century (19xx, 20xx). In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br /><br />The Exceptional Clearance Date CANNOT be greater than that entered within the Reporting Period (DE C4).<br /><br />For example, if the Reporting Period is 062019 (June 2019), then the Exceptional Clearance Date CANNOT contain any date 07/01/2019 or greater.</td>
+      <td style="text-align: center">11005</td>
+      <td>DATE ENTERED MUST BE A VALID CALENDAR DATE</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">4</td>
+      <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) must contain Cleared Exceptionally (DE 4) and Exceptional Clearance Date (DE 5).<br /><br />Both data elements must be present to be a valid submission.</td>
+      <td style="text-align: center">11057</td>
+      <td>MUST BE PRESENT FOR TIME WINDOW SEGMENT</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">5</td>
+      <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the ‘Time-Window’ Base Date<br /><br />This is also true for any ‘M’ (Modify) submissions subsequent to a previously submitted Time-Window Submission (Action Type of ‘W’).</td>
+      <td style="text-align: center">11020</td>
+      <td>EXCEPTIONAL CLEARANCE DATE CANNOT PREDATE BASE DATE</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">6</td>
+      <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) and an Exceptional Clearance (DE 4) indicator of ‘N’ (Not Applicable) CANNOT have an entry in Exceptional Clearance Date (DE 5).</td>
+      <td style="text-align: center">11066</td>
+      <td>CANNOT HAVE ENTRY IN EXCEPTIONAL CLEARANCE DATE IF CLEARED EXCEPTIONALLY IS ‘N’</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">7</td>
+      <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) for a previously submitted Time-Window Submission (Action Type of ‘W’) must have an Exceptional Clearance Date (DE 5).</td>
+      <td style="text-align: center">11067</td>
+      <td>DATE CANNOT BE BLANK FOR SEGMENT</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">8</td>
+      <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) or ‘M’ (Modify) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the date the ORI was certified for LIBRS submission.</td>
+      <td style="text-align: center">11074</td>
+      <td>EXCEPTIONAL CLEARANCE DATE PREDATES DATE ORI WENT IBR</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="examples-2">Examples:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Example Number</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: left">The incident was cleared on the books of the reporting agency on May 27. It was entered into the local computer on June 6, 2019, and was submitted to LIBRS sometime in July of 2019. The date ‘05272019’ should be entered into this data element.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="offense-sequence-number-l6">Offense Sequence Number (L6)</h2>
+<hr />
+
+<p><strong>Data Characteristics:</strong> 3 Character Numeric</p>
+
+<h3 id="requirements-5">Requirements:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td>Must be present – CANNOT be Blank (G).</td>
+      <td style="text-align: center">12001</td>
+      <td>MUST BE PRESENT–MANDATORY FIELD</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td>MUST be numeric entry (001 through 999) with zero left-fill. Offense Sequence Number (DE L6) distinguishes one offense from another.</td>
+      <td style="text-align: center">15002</td>
+      <td>CONTAINS NON NUMERIC ENTRY</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td>Must be unique – CANNOT be duplicated.</td>
+      <td style="text-align: center">25001</td>
+      <td>MUST BE UNIQUE–CANNOT BE DUPLICATED</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="offense-sequence-number-reference-l6r">Offense Sequence Number Reference (L6R)</h2>
+<hr />
+
+<p><strong>Data Characteristics:</strong> 3 Character Numeric</p>
+
+<h3 id="requirements-6">Requirements:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td>Must be present – CANNOT be Blank (G).</td>
+      <td style="text-align: center">90021</td>
+      <td>OFFENSE SEQUENCE NUMBER MUST BE PRESENT–CANNOT BE BLANK</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td>MUST be numeric entry (001 through 999) with zero left-fill.</td>
+      <td style="text-align: center">90022</td>
+      <td>OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td>MUST match the Offense Sequence Number (DE L6) of one of the Offense segments submitted in the corresponding incident.</td>
+      <td style="text-align: center">90024</td>
+      <td>PROPERTY SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED PROPERTIES’ SEQUENCE NUMBERS</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="louisiana-revised-statute-6">Louisiana Revised Statute (6)</h2>
+<hr />
+
+<p><strong>Data Characteristics</strong>: 12 Character Alpha</p>
+
+<p><strong>Format</strong>: TT:SSSS.S/P-I</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center"> </th>
+      <th>Louisiana Revised Statute Format</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">TT</td>
+      <td>Title</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">SSSS.S</td>
+      <td>Section</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>PPP/I</strong></td>
+      <td>Subpart, <strong>or</strong><br />Subpart with Qualifier, <strong>or</strong><br />Qualifier, <strong>or</strong><br />Juvenile Qualifier, <strong>and</strong> An Inchoate Modifier, if applicable, would be indicated<br />by a dash with a data value behind the LRS Code that defines the offense.**</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h3 id="requirements-7">Requirements:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td> </td>
+      <td style="text-align: center">12001</td>
+      <td>MUST BE PRESENT–MANDATORY FIELD</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td>MUST be numeric entry (001 through 999) with zero left-fill.</td>
+      <td style="text-align: center">90022</td>
+      <td>OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="examples-3">Examples:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Example Number</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: left">When 14:42 is submitted as a Louisiana Revised Statute LRS (6), LIBRS will need Qualifiers to determine if the offense should be classified as a forcible rape or as a forcible sodomy. If the offense is submitted as a <strong>14:42/V</strong>, this would translate to a forcible rape offense, whereas if this offense is submitted as a <strong>14:42/A</strong> this would translate to a forcible sodomy offense.<br /><br />Without any Qualifiers, LIBRS has no way to determine which offense this LRS should be reported as, and the entire incident would be rejected. The agency will receive the following error message: ‘This LRS Code must be submitted with a Qualifier to define offense applicable.’</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: left">If an incident involved a robbery (14:64) and a forcible rape (<strong>14:42.1/V</strong>), two LRS offenses should be submitted. The 14:64 does not require any Qualifier, but the 14:42.1 does require a Qualifier.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: left">If two females were raped in an incident, two LRS offenses should be submitted for rape: One LRS should be reported for each victim – in this case, both LRS codes should be submitted as 14:42.1/V for Victim 001 and <strong>14:42.1/V</strong> for Victim 002)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<p><strong>Refer to the Master LIBRS/LRS Code Table to determine:</strong></p>
+<ul>
+  <li>LRS Codes that are accepted</li>
+  <li>What offense the LRS code was assigned: NIBRS Code determines offense to be reported.</li>
+  <li>Index Class assigned to each LRS</li>
+  <li>IBR and NIBRS rankings.</li>
+</ul>
+
+<p><strong>To determine definitions of Qualifiers see the list at the end of this section.</strong></p>
+
+<hr />
+
+<p><br /></p>
+
 <h1 id="control-data-elements">Control Data Elements</h1>
 <hr />
+
+<p><br /></p>
 
 <h2 id="segment-descriptor-c1">Segment Descriptor (C1)</h2>
 <hr />

@@ -189,16 +189,19 @@
     "11001": {
         "err_no": 11001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
-        "desc_de3": "Must be present -- CANNOT be Blank (G)."
+        "desc_de3": "Must be present -- CANNOT be Blank (G).",
+        "desc_de4": "Must be present -- CANNOT be Blank (G)."
     },
     "11004": {
         "err_no": 11004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
+        "desc_de4": "MUST be a valid code."
     },
     "11005": {
         "err_no": 11005,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
-        "desc_de3":"Each component of the date must be valid; that is, months must be 01-12, days must be 01-31, and year must include the century (19xx, 20xx).<br>In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br>The Incident Date CANNOT exceed the current date. "
+        "desc_de3":"Each component of the date must be valid; that is, months must be 01-12, days must be 01-31, and year must include the century (19xx, 20xx).<br>In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br>The Incident Date CANNOT exceed the current date. ",
+        "desc_de5": "Each component of the date must be valid: Months must be 0-12, days must be 01-31, and year must include the century (19xx, 20xx). In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br><br>The Exceptional Clearance Date CANNOT be greater than that entered within the Reporting Period (DE C4).<br><br>For example, if the Reporting Period is 062019 (June 2019), then the Exceptional Clearance Date CANNOT contain any date 07/01/2019 or greater."
     },
     "11015": {
         "err_no": 11015,
@@ -220,7 +223,8 @@
     },
     "11020": {
         "err_no": 11020,
-        "err_message": "EXCEPTIONAL CLEARANCE DATE CANNOT PREDATE BASE DATE"
+        "err_message": "EXCEPTIONAL CLEARANCE DATE CANNOT PREDATE BASE DATE",
+        "desc_de5": "Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the 'Time-Window' Base Date<br><br>This is also true for any 'M' (Modify) submissions subsequent to a previously submitted Time-Window Submission (Action Type of 'W')."
     },
     "11021": {
         "err_no": 11021,
@@ -238,23 +242,28 @@
     },
     "11053": {
         "err_no": 11053,
-        "err_message": "VALUE ENTERED CONFLICTS WITH PRESENCE OF AN ENTRY IN EXCEPTIONAL CLEARANCE DATE"
+        "err_message": "VALUE ENTERED CONFLICTS WITH PRESENCE OF AN ENTRY IN EXCEPTIONAL CLEARANCE DATE",
+        "desc_de4": "CANNOT be 'N' (Not Applicable) if Exceptional Clearance Date is entered."
     },
     "11054": {
         "err_no": 11054,
-        "err_message": "CLEARED EXCEPTIONALLY CANNOT CONTAIN 'N' WITH SEGMENT ACTION TYPE 'W'"
+        "err_message": "CLEARED EXCEPTIONALLY CANNOT CONTAIN 'N' WITH SEGMENT ACTION TYPE 'W'",
+        "desc_de4": "Administrative Segment (10) submitted with an Action Type of 'W' (Time Window Submission) CANNOT contain an 'N' (Not Applicable) in Cleared Exceptionally (DE 4)."
     },
     "11055": {
         "err_no": 11055,
-        "err_message": "CLEARANCE DATE[MMDDYYYY] PREDATES INCIDENT DATE[MMDDYYYY]"
+        "err_message": "CLEARANCE DATE [MMDDYYYY] PREDATES INCIDENT DATE [MMDDYYYY]",
+        "desc_de5": "The clearance date CANNOT be earlier than the incident date."
     },
     "11056": {
         "err_no": 11056,
-        "err_message": "AN ENTRY MUST BE MADE WHEN CLEARED EXCEPTIONALLY HAS ENTRIES OF A - E"
+        "err_message": "AN ENTRY MUST BE MADE WHEN CLEARED EXCEPTIONALLY HAS ENTRIES OF A - E",
+        "desc_de5": "MUST be present if incident was cleared exceptionally with a data value of 'A', 'B', 'C', 'D', 'E', or 'O' in Cleared Exceptionally (DE 4)."
     },
     "11057": {
         "err_no": 11057,
-        "err_message": "MUST BE PRESENT FOR TIME WINDOW SEGMENT"
+        "err_message": "MUST BE PRESENT FOR TIME WINDOW SEGMENT",
+        "desc_de5": "Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) must contain Cleared Exceptionally (DE 4) and Exceptional Clearance Date (DE 5).<br><br>Both data elements must be present to be a valid submission."
     },
     "11058": {
         "err_no": 11058,
@@ -282,7 +291,8 @@
     },
     "11064": {
         "err_no": 11064,
-        "err_message": "CLEARED EXCEPTIONALLY FIELD MUST CONTAIN 'N' WHEN ARRESTEES WERE REPORTED"
+        "err_message": "CLEARED EXCEPTIONALLY FIELD MUST CONTAIN 'N' WHEN ARRESTEES WERE REPORTED",
+        "desc_de4": "Administrative Segments (10) submitted with an Action Type of 'M' (Modify) must have an 'N' (Not Applicable) in Cleared Exceptionally (DE 4) indicator when Arrestees are included as part of the original Incident Report."
     },
     "11065": {
         "err_no": 11065,
@@ -290,11 +300,13 @@
     },
     "11066": {
         "err_no": 11066,
-        "err_message": "CANNOT HAVE ENTRY IN EXCEPTIONAL CLEARANCE DATE IF CLEARED EXCEPTIONALLY IS 'N'"
+        "err_message": "CANNOT HAVE ENTRY IN EXCEPTIONAL CLEARANCE DATE IF CLEARED EXCEPTIONALLY IS 'N'",
+        "desc_de5": "Administrative Segments (10) submitted with an Action Type of 'M' (Modify) and an Exceptional Clearance (DE 4) indicator of 'N' (Not Applicable) CANNOT have an entry in Exceptional Clearance Date (DE 5)."
     },
     "11067": {
         "err_no": 11067,
-        "err_message": "DATE CANNOT BE BLANK FOR SEGMENT"
+        "err_message": "DATE CANNOT BE BLANK FOR SEGMENT",
+        "desc_de5": "Administrative Segments (10) submitted with an Action Type of 'M' (Modify) for a previously submitted Time-Window Submission (Action Type of 'W') must have an Exceptional Clearance Date (DE 5)."
     },
     "11069": {
         "err_no": 11069,
@@ -308,7 +320,8 @@
     },
     "11071": {
         "err_no": 11071,
-        "err_message": "INCIDENT DATE IS OUTSIDE THE BASE DATE CALCULATION"
+        "err_message": "INCIDENT DATE IS OUTSIDE THE BASE DATE CALCULATION",
+        "desc_de4" : "When a value other than 'N' (Not Applicable) is entered, there can be NO Arrestee Segments associated with the Incident."
     },
     "11072": {
         "err_no": 11072,
@@ -322,7 +335,8 @@
     },
     "11074": {
         "err_no": 11074,
-        "err_message": "EXCEPTIONAL CLEARANCE DATE PREDATES DATE ORI WENT IBR"
+        "err_message": "EXCEPTIONAL CLEARANCE DATE PREDATES DATE ORI WENT IBR",
+        "desc_de5": "Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) or 'M' (Modify) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the date the ORI was certified for LIBRS submission."
     },
     "11075": {
         "err_no": 11075,
@@ -340,7 +354,9 @@
     },
     "12001": {
         "err_no": 12001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
+        "desc_del6": "Must be present -- CANNOT be Blank (G).",
+        "desc_de6": "Must be present -- CANNOT be Blank (G)."
     },
     "12002": {
         "err_no": 12002,
@@ -348,7 +364,8 @@
     },
     "12004": {
         "err_no": 12004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
+        "desc_de6": "MUST be a valid code on Master LIBRS/LRS Code Table."
     },
     "12005": {
         "err_no": 12005,
@@ -726,7 +743,8 @@
     },
     "15002": {
         "err_no": 15002,
-        "err_message": "CONTAINS NON NUMERIC ENTRY"
+        "err_message": "CONTAINS NON NUMERIC ENTRY",
+        "desc_del6": "MUST be numeric entry (001 through 999) with zero left-fill. Offense Sequence Number (DE L6) distinguishes one offense from another."
     },
     "15003": {
         "err_no": 15003,
@@ -1319,7 +1337,8 @@
     },
     "25001": {
         "err_no": 25001,
-        "err_message": "MUST BE UNIQUE--CANNOT BE DUPLICATED"
+        "err_message": "MUST BE UNIQUE--CANNOT BE DUPLICATED",
+        "desc_del6": "Must be unique -- CANNOT be duplicated."
     },
     "25010": {
         "err_no": 25010,
@@ -1818,11 +1837,13 @@
     },
     "90021": {
         "err_no": 90021,
-        "err_message": "OFFENSE SEQUENCE NUMBER MUST BE PRESENT--CANNOT BE BLANK"
+        "err_message": "OFFENSE SEQUENCE NUMBER MUST BE PRESENT--CANNOT BE BLANK",
+        "desc_del6r": "Must be present -- CANNOT be Blank (G)."
     },
     "90022": {
         "err_no": 90022,
-        "err_message": "OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL"
+        "err_message": "OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL",
+        "desc_del6r": "MUST be numeric entry (001 through 999) with zero left-fill."
     },
     "90023": {
         "err_no": 90023,
@@ -1831,7 +1852,8 @@
     },
     "90024": {
         "err_no": 90024,
-        "err_message": "PROPERTY SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED PROPERTIES ' SEQUENCE NUMBERS"
+        "err_message": "PROPERTY SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED PROPERTIES' SEQUENCE NUMBERS",
+        "desc_del6r": "MUST match the Offense Sequence Number (DE L6) of one of the Offense segments submitted in the corresponding incident."
     },
     "90025": {
         "err_no": 90025,
