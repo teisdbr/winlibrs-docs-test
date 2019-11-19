@@ -1,0 +1,47 @@
+[
+    {
+    "de_num": "4",
+    "name": "Cleared Exceptionally",
+    "definition": "Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident.",
+    "length": "1",
+    "format": "A",
+    "values":[
+        {
+            "code":"A",
+            "desc": "Death of Offender"
+        },
+        {
+            "code":"B",
+            "desc": "Prosecution Declined"
+        },
+        {
+            "code":"C",
+            "desc": "Extradition Denied"
+        },
+        {
+            "code":"D",
+            "desc": "Victim Refused to Cooperate"
+        },
+        {
+            "code":"E",
+            "desc": "Juvenile / No Custody"
+        },
+        {
+            "code":"O",
+            "desc": "Other (Administrative Closing)"
+        },
+        {
+            "code":"N",
+            "desc": "Not Applicable"
+        }
+    ],
+    "comment": "For Code O (Other) - LIBRS Only, Does not clear NIBRS Incident"
+},
+{
+    "de_num": "5",
+    "name": "Exceptional Clearance Date",
+    "definition": "When the incident was cleared, if cleared by exceptional means.",
+    "length": "8",
+    "format": "MMDDYYYY"
+}
+]
