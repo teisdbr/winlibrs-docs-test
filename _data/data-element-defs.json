@@ -1,4 +1,28 @@
-[
+[{
+    "de_num": "1",
+    "name": "ORI Number",
+    "definition": "NCIC originating agency identifier number.",
+    "length": "9",
+    "format": "A/N"
+    
+},
+    {
+    "de_num": "2",
+    "name": "INCIDENT NUMBER",
+    "definition": "Agency unique, in-house assigned case number",
+    "length": "12",
+    "comment": "The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years."  
+    
+},
+    {
+    "de_num": "3",
+    "name": "Incident Date/Hour",
+    "definition": "Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown",
+    "length": "11",
+    "format": "MMDDYYYYXHH",
+    "comment": ""  
+    
+},
     {
     "de_num": "4",
     "name": "Cleared Exceptionally",
