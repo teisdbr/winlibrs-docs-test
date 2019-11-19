@@ -228,11 +228,13 @@
     },
     "11051": {
         "err_no": 11051,
-        "err_message": "REPORT INDICATOR MUST BE BLANK OR 'R'"
+        "err_message": "REPORT INDICATOR MUST BE BLANK OR 'R'",
+        "desc_de3": "If the Incident Date is unknown, use the Report Date. Indicate a Report Date with an 'R' in the space before the hour. If this is the Incident Date, then leave the 'Report' indicator blank."
     },
     "11052": {
         "err_no": 11052,
-        "err_message": "INVALID HOUR ENTRY"
+        "err_message": "INVALID HOUR ENTRY",
+        "desc_de3":"If HOUR is entered it must be 00 through 23.<br>Note: If the Incident Date occurred at exactly midnight, enter theIncident Date as if the time was 1 minute past midnight. <br><br>Example: If the incident occurred at exactly midnight on Thursday, enter Friday's date and 00 for the hour."
     },
     "11053": {
         "err_no": 11053,
@@ -265,15 +267,18 @@
     },
     "11061": {
         "err_no": 11061,
-        "err_message": "CANNOT MODIFY AN INCIDENT DATE THIS WAY--ON FILE IS[MMDDYYYYRHH]"
+        "err_message": "CANNOT MODIFY AN INCIDENT DATE THIS WAY--ON FILE IS [MMDDYYYYRHH]",
+        "desc_de3": "Administrative Segments (10) submitted with an Action Type of 'M' (Modify) CANNOT change the 'Incident Date/Hour' (DE 3) previously submitted in the original Incident Report (Action Type of 'I')."
     },
     "11062": {
         "err_no": 11062,
-        "err_message": "CANNOT MODIFY A REPORT FLAG THIS WAY--ON FILE IS[MMDDYYYYRHH]"
+        "err_message": "CANNOT MODIFY A REPORT FLAG THIS WAY--ON FILE IS [MMDDYYYYRHH]",
+        "desc_de3": "Administrative Segments (10) submitted with an Action Type of 'M' (Modify) CANNOT change the Report Date Indicator (position 51 of the segment) of Segments which were previously submitted with an Action Type of 'I' (Incident Report)."
     },
     "11063": {
         "err_no": 11063,
-        "err_message": "CANNOT MODIFY AN INCIDENT HOUR THIS WAY--ON FILE IS[MMDDYYYYRHH]"
+        "err_message": "CANNOT MDIFY AN INCIDENT HOUR THIS WAY--ON FILE IS [MMDDYYYYRHH]",
+        "desc_de3":"Administrative Segments (Segment 10) submitted with an Action Type of 'M' (Modify) CANNOT change the hour part of 'Incident Date/Hour' (DE 3) of incidents previously submitted with in the original Incident Report (Action Type of 'I')."
     },
     "11064": {
         "err_no": 11064,
@@ -313,7 +318,7 @@
     "11073": {
         "err_no": 11073,
         "err_message": "INCIDENT DATE CANNOT BE BEFORE DATE ORI WENT IBR",
-        "desc_de3": "No data regarding an incident previously submitted under the Summary UCR reporting system can be submitted with an incident date later than the date the agency commenced reporting.<br>It will be regarded as a duplicate submission and be rejected since the Summary UCR system already contains the aggregate data for the months before LIBRS conversion.<br><br>In other words, if an agency sends Incident Based Reporting (IBR) data for the first time on 20 July 2019, all 'Incident Date/Hour' (DE 3) entries for incidents, recovered property, and arrests must be within July, 2019<br>The exception is when Exceptional Clearances occur for a pre-IBR incident<br>In this case, 'Incident Date/Hour' (DE 3) may be earlier than July, 2019, but Exceptional Clearance Date (5) must be within July, 2019<br>LIBRS maintains a table of start dates (Agency Base Dates) for every law enforcement agency in the state<br>Except for the above example, LIBRS will reject data submitted with an 'Incident Date/Hour' prior to the agency's Base Date (start date)."
+        "desc_de3": "No data regarding an incident previously submitted under the Summary UCR reporting system can be submitted with an incident date later than the date the agency commenced reporting.<br>It will be regarded as a duplicate submission and be rejected since the Summary UCR system already contains the aggregate data for the months before LIBRS conversion.<br><br>In other words, if an agency sends Incident Based Reporting (IBR) data for the first time on 20 July 2019, all 'Incident Date/Hour' (DE 3) entries for incidents, recovered property, and arrests must be within July, 2019<br><br>The exception is when Exceptional Clearances occur for a pre-IBR incident<br>In this case, 'Incident Date/Hour' (DE 3) may be earlier than July, 2019, but Exceptional Clearance Date (5) must be within July, 2019<br>LIBRS maintains a table of start dates (Agency Base Dates) for every law enforcement agency in the state<br>Except for the above example, LIBRS will reject data submitted with an 'Incident Date/Hour' prior to the agency's Base Date (start date)."
     },
     "11074": {
         "err_no": 11074,

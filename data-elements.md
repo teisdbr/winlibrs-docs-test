@@ -85,8 +85,6 @@ ___
 ## Incident Date/Hour (3)
 ___
 
-<br>
-
 **Description:** Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown. If an incident occurred before the agency’s “Base Date” but was NOT reported to LIBRS until after the “Base Date” has been implemented, THIS INCIDENT WILL BE REJECTED. These type of incidents (that is, NOT reported until after your Agency’s “Base Date” was implemented) may require your agency to submit an adjusted UCR Summary form to capture these offenses. 
 
 **Data Characteristics:** 11 Character Alpha
@@ -112,37 +110,21 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["11075"] -%}
 7 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["10018"] -%}
-8 | Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) CANNOT have a date in 'Incident Date/Hour' (DE 3) that would be a valid date for an Incident occurring since the agency's Base Date. This is also true for any Administrative Segments (10) subsequently submitted with. ||
+8 | Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) CANNOT have a date in 'Incident Date/Hour' (DE 3) that would be a valid date for an Incident occurring since the agency's Base Date.<br>This is also true for any Administrative Segments (10) subsequently submitted with. ||
+{% assign error = site.data.error["11061"] -%}
+9 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11062"] -%}
+10 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11063"] -%}
+11 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11052"] -%}
+12 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11051"] -%}
+13 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
 
-**Incident Date/Hour (3)**
+___
 
-
-9\) Administrative Segments (10) submitted with an Action Type of \"M\"
-(Modify) CANNOT change the Incident Date/Hour (3) previously submitted
-in the original Incident Report (Action Type of \"I\"). **Error 11061\
-**
-
-10\) Administrative Segments (10) submitted with an Action Type of \"M\"
-(Modify) CANNOT change the Report Date Indicator (position 51 of the
-segment) of Segments which were previously submitted with an Action Type
-of \"I\" (Incident Report). **Error 11062**
-
-11\) Administrative Segments (Segment 10) submitted with an Action Type
-of \"M\" (Modify) CANNOT change the hour part of Incident Date/Hour (3)
-of incidents previously submitted with in the original Incident Report
-(Action Type of \"I"). **Error 11063**
-
-> 12\) If HOUR is entered it must be \"00\" through \"23.\" **Error
-> 11052**\
-> *Note: If the Incident Date occurred at exactly midnight, enter the
-> Incident Date as if the time was 1 minute past midnight. (Example: If
-> the incident occurred at exactly midnight on Thursday, enter Friday\'s
-> date) and 00 for the hour.*
->
-> 13\) If the Incident Date is unknown, use the Report Date. Indicate a
-> Report Date with an \"R\" in the space before the hour. If this is the
-> Incident Date, then leave the \"Report\" indicator blank. **Error
-> 11051**
+<br>
 
 
 
