@@ -1,4 +1,4 @@
-<div id="accordion" style="min-width:300px">
+<div id="accordion" style="min-width:300px; max-width:300px;height: 100%; position: fixed; overflow-x: hidden;">
     <ul>
         <li>
             <div>LIBRS Specifications</div>
