@@ -544,7 +544,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["20001"] -%}
+{% assign error = data.data.error["20001"] -%}
 1 | {{error.descc7}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20030"] -%}
 2 | {{error.descc7}} | {{error.err_no}} | {{ error.err_message }} 

@@ -1474,9 +1474,7 @@
     },
     "84016": {
         "err_no": 84016,
-        "err_message": "WHEN LRS = 40 A OR 40 B,
-        DE 25 MUST EQUAL 'S'.
-        "
+        "err_message": "WHEN LRS = 40 A OR 40 B, DE 25 MUST EQUAL 'S'."
     },
     "84017": {
         "err_no": 84017,
