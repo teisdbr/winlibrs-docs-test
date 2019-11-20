@@ -1789,7 +1789,7 @@
     },
     "90010": {
         "err_no": 90010,
-        "err_message": "FOR RAPE OFFENSES (11 A OR 36 B), AGE OF OFFENDER MUST BE '17' OR GREATER",
+        "err_message": "FOR RAPE OFFENSES (11 A OR 36 B), AGE OF OFFENDlATER",
         "desc40": "For First Degree (NIBRS Code 11A) and Statutory Rape (NIBRS Code 36B), the Age of Offender (DE 37) MUST be at least seventeen (17) years of age or older."
     },
     "90011": {
