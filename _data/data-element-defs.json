@@ -1,4 +1,4 @@
-[{
+ [{
     "de_num": "1",
     "name": "ORI Number",
     "definition": "NCIC originating agency identifier number.",
@@ -61,11 +61,18 @@
     ],
     "comment": "For Code O (Other) - LIBRS Only, Does not clear NIBRS Incident"
 },
-{
-    "de_num": "5",
-    "name": "Exceptional Clearance Date",
-    "definition": "When the incident was cleared, if cleared by exceptional means.",
-    "length": "8",
-    "format": "MMDDYYYY"
+    {
+        "de_num": "5",
+        "name": "Exceptional Clearance Date",
+        "definition": "When the incident was cleared, if cleared by exceptional means.",
+        "length": "8",
+        "format": "MMDDYYYY"
+},
+    {
+    "de_num": "L6",
+    "name": "Offense Sequence Number",
+    "definition": "Each Offense within the incident MUST be assigned a sequence number",
+    "length": "3",
+    "comment": "Each Offense within an incident MUST be assigned a UNIQUE Offense Sequence Number"
 }
 ]
