@@ -19,7 +19,7 @@
     
     <!-- CONTENT -->
     <div style="display: inline-flex;">
-      <div class="col-2" style="display: inline-flex; min-width: 325px;"> <div id="accordion" style="min-width:300px">
+      <div class="col-2" style="display: inline-flex; min-width: 325px; max-width: 325px;"> <div id="accordion" style="min-width:300px; max-width:300px;height: 100%; position: fixed; overflow-x: hidden;">
     <ul>
         <li>
             <div>LIBRS Specifications</div>
@@ -188,7 +188,7 @@
                     <li>
                         <div>Data Element Definitions</div>
                         
-                            <ul style="padding-right:10px;">
+                            <ul style="padding-right:5px;">
                                 <li>
                                 <a href = ""><table><tr>
                                 <td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">1</td><td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
@@ -815,7 +815,7 @@
                     <li>
                         <div>Control Data Elements</div>
                         
-                            <ul style="padding-right:10px;">
+                            <ul style="padding-right:5px;">
                                 <li>
                                 <a href = "./data-elements#segment-descriptor-c1"><table><tr>
                                 <td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">C1</td><td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
@@ -939,91 +939,249 @@
 <ul>
   <li><a href="./librs-spec">LIBRS Specification Documentation</a></li>
   <li><a href="./data-elements">LIBRS Data Element Definitions</a></li>
-  <li>Master LIBRS LRS List</li>
+  <li><a href="./lrs-master-list">Master LIBRS LRS List</a></li>
   <li>LRS to NIBRS Translations</li>
 </ul>
 
 <table>
-<thead>
+<thead style="font-size: 14px;">
 	<tr>
 		<th style="max-width:80px;text-align: center;">Element Number</th>
-		<th style="max-width:200px;">Element Name</th>
-		<th style="max-width:300px;">Definition</th>
+		<th>Element Name</th>
+		<th>Definition</th>
 		<th style="text-align: center;">Length</th>
 		<th style="text-align: center;">Format</th>
 		<th>Values</th>
-		<th style="max-width:300px;">Comments</th>
+		<th>Comments</th>
 	</tr>
     </thead>
-    <tbody>
+    <tbody style="font-size: 13px;">
 
 	<tr>
 		<td style="max-width:80px;text-align: center;">1</td>
-		<td style="max-width:200px;">ORI Number</td>
-		<td style="max-width:300px;">NCIC originating agency identifier number.</td>
+		<td>ORI Number</td>
+		<td>NCIC originating agency identifier number.</td>
 		<td style="text-align: center;">9</td>
 		<td style="text-align: center;">A/N</td>
-        <td>
-        </td>
-        <td style="max-width:300px;"></td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px"></td>
     </tr>
 
 	<tr>
 		<td style="max-width:80px;text-align: center;">2</td>
-		<td style="max-width:200px;">INCIDENT NUMBER</td>
-		<td style="max-width:300px;">Agency unique, in-house assigned case number</td>
+		<td>Incident Number</td>
+		<td>Agency unique, in-house assigned case number</td>
 		<td style="text-align: center;">12</td>
-		<td style="text-align: center;"></td>
-        <td>
-        </td>
-        <td style="max-width:300px;">The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years.</td>
+		<td style="text-align: center;">A/N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px">The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years.</td>
     </tr>
 
 	<tr>
 		<td style="max-width:80px;text-align: center;">3</td>
-		<td style="max-width:200px;">Incident Date/Hour</td>
-		<td style="max-width:300px;">Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown</td>
+		<td>Incident Date/Hour</td>
+		<td>Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown</td>
 		<td style="text-align: center;">11</td>
 		<td style="text-align: center;">MMDDYYYYXHH</td>
-        <td>
-        </td>
-        <td style="max-width:300px;"></td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px"></td>
     </tr>
 
 	<tr>
 		<td style="max-width:80px;text-align: center;">4</td>
-		<td style="max-width:200px;">Cleared Exceptionally</td>
-		<td style="max-width:300px;">Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident.</td>
+		<td>Cleared Exceptionally</td>
+		<td>Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident.</td>
 		<td style="text-align: center;">1</td>
 		<td style="text-align: center;">A</td>
-        <td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">A</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Death of Offender</td>
+            </tr>
         
-		    A...Death of Offender<br />
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">B</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Prosecution Declined</td>
+            </tr>
         
-		    B...Prosecution Declined<br />
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">C</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Extradition Denied</td>
+            </tr>
         
-		    C...Extradition Denied<br />
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">D</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Victim Refused to Cooperate</td>
+            </tr>
         
-		    D...Victim Refused to Cooperate<br />
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">E</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Juvenile / No Custody</td>
+            </tr>
         
-		    E...Juvenile / No Custody<br />
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">O</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Other (Administrative Closing)</td>
+            </tr>
         
-		    O...Other (Administrative Closing)<br />
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">N</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Not Applicable</td>
+            </tr>
         
-		    N...Not Applicable<br />
-        </td>
-        <td style="max-width:300px;">For Code O (Other) - LIBRS Only, Does not clear NIBRS Incident</td>
+		</table></td>
+        <td style="min-width: 300px">For Code O (Other) - LIBRS Only, Does not clear NIBRS Incident</td>
     </tr>
 
 	<tr>
 		<td style="max-width:80px;text-align: center;">5</td>
-		<td style="max-width:200px;">Exceptional Clearance Date</td>
-		<td style="max-width:300px;">When the incident was cleared, if cleared by exceptional means.</td>
+		<td>Exceptional Clearance Date</td>
+		<td>When the incident was cleared, if cleared by exceptional means.</td>
 		<td style="text-align: center;">8</td>
 		<td style="text-align: center;">MMDDYYYY</td>
-        <td>
-        </td>
-        <td style="max-width:300px;"></td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px"></td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">L6</td>
+		<td>Offense Sequence Number</td>
+		<td>Each Offense within the incident MUST be assigned a sequence number.</td>
+		<td style="text-align: center;">3</td>
+		<td style="text-align: center;">N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px">Each Offense within an incident MUST be assigned a UNIQUE Offense Sequence Number.</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">L6R</td>
+		<td>Offense Sequence Number Reference</td>
+		<td><b>**NEW**</b> UNIQUE constraint that allows an Offense to relate to many Properties.</td>
+		<td style="text-align: center;">3</td>
+		<td style="text-align: center;">N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px">Important: Internal system data element that allows for an Offense to relate to many properties where multiple Property/Offense segments are submitted within a single incident.</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">6</td>
+		<td>Louisiana Revised Statute Number (LRS Number)</td>
+		<td>Each Offense (LRS) that occurred as part of the incident.</td>
+		<td style="text-align: center;">12</td>
+		<td style="text-align: center;">A/N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px">MUST be in Master LIBRS/LRS Code Table to be accepted by LIBRS. Note: Contact LIBRS Program staff before adding new LRS codes to insure proper mappings.</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">N6</td>
+		<td>Agency Supplied NIBRS Code</td>
+		<td>NIBRS Code assigned to every Offense within an incident.</td>
+		<td style="text-align: center;">3</td>
+		<td style="text-align: center;">A/N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px">Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes. Please consult the LIBRS Master LRS Table to review these mappings and contact LIBRS Program Staff if you have questions. </td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">7</td>
+		<td>Offense Attempted/Completed</td>
+		<td>Indicates whether each Offense was completed or merely attempted.</td>
+		<td style="text-align: center;">1</td>
+		<td style="text-align: center;">A/N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">A</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Attempted</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">C</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Completed</td>
+            </tr>
+        
+		</table></td>
+        <td style="min-width: 300px">Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes. Please consult the LIBRS Master LRS Table to review these mappings and contact LIBRS Program Staff if you have questions. </td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">8</td>
+		<td>Offender Suspected of Using/Gaming Motivation</td>
+		<td>Indicates if the Offender was suspected of consuming alcohol or using drugs/narcotics during or shortly before the incident; or of using a computer to perpetrate the crime.<br /><br />Also identifies whether the Offender’s gaming activity was the motive for commission of the crime.</td>
+		<td style="text-align: center;">1</td>
+		<td style="text-align: center;">A</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">A</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Alcohol</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">C</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Computer Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">D</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Drugs/Narcotics</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">G</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Gaming Activity Motive for Crime</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">N</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Not Applicable (LIBRS Only)</td>
+            </tr>
+        
+		</table></td>
+        <td style="min-width: 300px">This Data Element is located within Offender Segment.<br /><br />Can enter up to four codes per Offender. </td>
     </tr>
 
 </tbody>

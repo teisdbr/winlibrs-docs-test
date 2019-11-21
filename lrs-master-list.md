@@ -16,7 +16,7 @@ ____
 ## Current and Active Master LRS Code List
 
 <table>
-<thead  style="font-size: 14px;">
+<thead style="font-size: 14px;">
 	<tr>
 		<th style="padding-left: 8px; padding-right:3px;">LRS #</th>
 		<th style="padding-left: 0px; padding-right:3px;">LRS Description</th>

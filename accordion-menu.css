@@ -10,6 +10,10 @@ tbody tr:nth-child(even){
     background-color: #E0E0E0;
 }
 
+.subtable tbody tr:nth-child(even) {
+    background-color: transparent;
+}
+
 th{
     background-color: #E0E0E0;
     padding-left: 15px;

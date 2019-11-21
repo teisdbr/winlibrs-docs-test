@@ -1,71 +1,180 @@
 [{
-    "de_num": "1",
-    "name": "ORI Number",
-    "definition": "NCIC originating agency identifier number.",
-    "length": "9",
-    "format": "A/N"
-    
-},
+        "de_num": "1",
+        "name": "ORI Number",
+        "definition": "NCIC originating agency identifier number.",
+        "length": "9",
+        "format": "A/N"
+
+    },
     {
-    "de_num": "2",
-    "name": "INCIDENT NUMBER",
-    "definition": "Agency unique, in-house assigned case number",
-    "length": "12",
-    "comment": "The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years."  
-    
-},
+        "de_num": "2",
+        "name": "Incident Number",
+        "definition": "Agency unique, in-house assigned case number",
+        "length": "12",
+        "format":"A/N",
+        "comment": "The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years."
+
+    },
     {
-    "de_num": "3",
-    "name": "Incident Date/Hour",
-    "definition": "Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown",
-    "length": "11",
-    "format": "MMDDYYYYXHH",
-    "comment": ""  
-    
-},
+        "de_num": "3",
+        "name": "Incident Date/Hour",
+        "definition": "Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown",
+        "length": "11",
+        "format": "MMDDYYYYXHH",
+        "comment": ""
+
+    },
     {
-    "de_num": "4",
-    "name": "Cleared Exceptionally",
-    "definition": "Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident.",
-    "length": "1",
-    "format": "A",
-    "values":[
-        {
-            "code":"A",
-            "desc": "Death of Offender"
+        "de_num": "4",
+        "name": "Cleared Exceptionally",
+        "definition": "Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident.",
+        "length": "1",
+        "format": "A",
+        "values": [{
+                "code": "A",
+                "desc": "Death of Offender"
+            },
+            {
+                "code": "B",
+                "desc": "Prosecution Declined"
+            },
+            {
+                "code": "C",
+                "desc": "Extradition Denied"
+            },
+            {
+                "code": "D",
+                "desc": "Victim Refused to Cooperate"
+            },
+            {
+                "code": "E",
+                "desc": "Juvenile / No Custody"
+            },
+            {
+                "code": "O",
+                "desc": "Other (Administrative Closing)"
+            },
+            {
+                "code": "N",
+                "desc": "Not Applicable"
+            }
+        ],
+        "comment": "For Code O (Other) - LIBRS Only, Does not clear NIBRS Incident"
+    },
+    {
+        "de_num": "5",
+        "name": "Exceptional Clearance Date",
+        "definition": "When the incident was cleared, if cleared by exceptional means.",
+        "length": "8",
+        "format": "MMDDYYYY"
+    },
+    {
+        "de_num": "L6",
+        "name": "Offense Sequence Number",
+        "definition": "Each Offense within the incident MUST be assigned a sequence number.",
+        "length": "3",
+        "format": "N",
+        "comment": "Each Offense within an incident MUST be assigned a UNIQUE Offense Sequence Number."
+    },
+    {
+        "de_num": "L6R",
+        "name": "Offense Sequence Number Reference",
+        "definition": "<b>**NEW**</b> UNIQUE constraint that allows an Offense to relate to many Properties.",
+        "length": "3",
+        "format": "N",
+        "comment": "Important: Internal system data element that allows for an Offense to relate to many properties where multiple Property/Offense segments are submitted within a single incident."
+    },
+    {
+        "de_num": "6",
+        "name": "Louisiana Revised Statute Number (LRS Number)",
+        "definition": "Each Offense (LRS) that occurred as part of the incident.",
+        "length": "12",
+        "format": "A/N",
+        "comment": "MUST be in Master LIBRS/LRS Code Table to be accepted by LIBRS. Note: Contact LIBRS Program staff before adding new LRS codes to insure proper mappings."
+    },
+    {
+        "de_num": "N6",
+        "name": "Agency Supplied NIBRS Code",
+        "definition": "NIBRS Code assigned to every Offense within an incident.",
+        "length": "3",
+        "format": "A/N",
+        "comment": "Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes. Please consult the LIBRS Master LRS Table to review these mappings and contact LIBRS Program Staff if you have questions. "
+    },
+    {
+        "de_num": "7",
+        "name": "Offense Attempted/Completed",
+        "definition": "Indicates whether each Offense was completed or merely attempted.",
+        "length": "1",
+        "format": "A/N",
+        "values": [{
+            "code": "A",
+            "desc": "Attempted"
         },
         {
-            "code":"B",
-            "desc": "Prosecution Declined"
-        },
-        {
-            "code":"C",
-            "desc": "Extradition Denied"
-        },
-        {
-            "code":"D",
-            "desc": "Victim Refused to Cooperate"
-        },
-        {
-            "code":"E",
-            "desc": "Juvenile / No Custody"
-        },
-        {
-            "code":"O",
-            "desc": "Other (Administrative Closing)"
-        },
-        {
-            "code":"N",
-            "desc": "Not Applicable"
+            "code": "C",
+            "desc": "Completed"
         }
     ],
-    "comment": "For Code O (Other) - LIBRS Only, Does not clear NIBRS Incident"
-},
-{
-    "de_num": "5",
-    "name": "Exceptional Clearance Date",
-    "definition": "When the incident was cleared, if cleared by exceptional means.",
-    "length": "8",
-    "format": "MMDDYYYY"
-}
+        "comment": "Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes. Please consult the LIBRS Master LRS Table to review these mappings and contact LIBRS Program Staff if you have questions. "
+    },
+    {
+        "de_num": "8",
+        "name": "Offender Suspected of Using/Gaming Motivation",
+        "definition": "Indicates if the Offender was suspected of consuming alcohol or using drugs/narcotics during or shortly before the incident; or of using a computer to perpetrate the crime.<br><br>Also identifies whether the Offender’s gaming activity was the motive for commission of the crime.",
+        "length": "1",
+        "format": "A",
+        "values": [{
+            "code": "A",
+            "desc": "Alcohol"
+        },
+        {
+            "code": "C",
+            "desc": "Computer Equipment"
+        },
+        {
+            "code": "D",
+            "desc": "Drugs/Narcotics"
+        },
+        {
+            "code": "G",
+            "desc": "Gaming Activity Motive for Crime"
+        },
+        {
+            "code": "N",
+            "desc": "Not Applicable (LIBRS Only)"
+        }
+    ],
+        "comment": "This Data Element is located within Offender Segment.<br><br>Can enter up to four codes per Offender. "
+    },
+    {
+        "de_num": "8A",
+        "name": "Bias Motivation/Bias Crime Type",
+        "definition": "Indicates whether the Offender was motivated to commit the Offense because of his/her bias against a racial, religious, ethnic/national origin, sexual, or disability group.",
+        "length": "1",
+        "format": "A",
+        "values": [
+            { 
+
+            "code": "A",
+            "desc": "Alcohol"
+        },
+        {
+            "code": "C",
+            "desc": "Computer Equipment"
+        },
+        {
+            "code": "D",
+            "desc": "Drugs/Narcotics"
+        },
+        {
+            "code": "G",
+            "desc": "Gaming Activity Motive for Crime"
+        },
+        {
+            "code": "N",
+            "desc": "Not Applicable (LIBRS Only)"
+        }
+    ],
+        "comment": "This Data Element is located within Offender Segment.<br><br>Can enter up to four codes per Offender. "
+    }
 ]
