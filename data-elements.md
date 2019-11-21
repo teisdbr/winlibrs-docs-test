@@ -350,9 +350,156 @@ ___
 
 <br>
 
+## Agency Supplied NIBRS Code (N6)
+
+___
+
+**Data Characteristics:** 3 Character AlphaNumeric
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["06001"] -%}
+1 | {{error.desc_den6}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["06002"] -%}
+2 | {{error.desc_den6}} | {{error.err_no}} | {{ error.err_message }} 
+
+___
+
+<br>
 
 
+## Offense Attempted/Completed (7)
 
+___
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["12001"] -%}
+1 | {{error.desc_de7}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["12051"] -%}
+2 | {{error.desc_de7}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["10077"] -%}
+3 | {{error.desc_de7}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["10078"] -%}
+4 | {{error.desc_de7}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["12056"] -%}
+5 | {{error.desc_de7}} | {{error.err_no}} | {{ error.err_message }} 
+
+___
+
+<br>
+
+### Allowed Entries
+___
+
+Enter one code per incident.
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Offense Attempted/Completed</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '7' %}
+        {% for values in de.values %}
+        <tr>
+        <td>{{values.code}}</td>
+		    <td>{{values.desc}}</td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+____
+
+<br>
+
+### Examples:
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | During the same incident, Victim Number One (001) was raped and the Offender attempted to rape Victim Number Two (002), but had to leave the scene before the act was consummated due to the arrival of the police.<br><br>Offense 001 should be entered as Aggravated Rape (LRS 14:42/V) and have Completed ('C') entered in Offense Attempted/Completed (DE 7). Offense 002 should also be entered as Aggravated Rape (LRS 14:42/V), but will have Attempted ('A') entered in Offense Attempted/Completed (DE 7).
+
+___
+
+<br>
+
+## Offender Suspected of Using/Gaming Motivation (8)
+
+___
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["14001"] -%}
+1 | {{error.desc_de8}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14004"] -%}
+2 | {{error.desc_de8}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["12006"] -%}
+3 | {{error.desc_de8}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["12007"] -%}
+4 | {{error.desc_de8}} | {{error.err_no}} | {{ error.err_message }} 
+
+___
+
+<br>
+
+### Allowed Entries
+___
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">123</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '8' %}
+        {% for values in de.values %}
+        <tr>
+        <td>{{values.code}}</td>
+		    <td>{{values.desc}}</td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+### Examples:
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | Witness to an assault reported that the Victim and Offender were in a bar drinking beer when an argument broke out and the Offender attacked the Victim with a knife. Alcohol ('A') should be entered in Offender Suspected of Using/Gaming Motivation (DE 8).
+2 | A computer 'hacker' used his personal computer and the Internet to gain access to a company's computer system and steal proprietary data. Computer Equipment ('C') should be entered in Offender Suspected of Using/Gaming Motivation (DE 8).
+3 | Offender robbed a bank and a police officer arrested him while trying to leave the bank. Under questioning, the Offender told the officer he needed money because he lost $10,000 that morning at the river boat casino. The officer also smelled alcohol on his breath. Both Alcohol ('A') and Gaming Activity Motive for Crime ('G') should be entered into Offender Suspected of Using/Gaming Motivation (DE 8).
+
+_____
+
+<br>
 
 
 

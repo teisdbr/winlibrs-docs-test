@@ -25,6 +25,16 @@
         "desc_de1": "Must be present -- CANNOT be Blank (G).",
         "desc_de2": "Must be present -- CANNOT be Blank (G)."
     },
+    "06001": {
+        "err_no": "06011",
+        "err_message": "WARNING - PROVIDE VALID NIBRS CODE",
+        "desc_den6": "If the value of LIBRS Spec Indicator (C12) is '2.5', then EVERY Offense Segment (20) in the data submission MUST have an Agency Supplied NIBRS Code (N6).<br><br>If Agency Supplied NIBRS Code (N6) is missing, WinLIBRS will insert the *default* NIBRS value based on the LRS for that particular offense. This may not be the intended NIBRS Code for the submitted offense."
+    },
+    "06002": {
+        "err_no": "06011",
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
+        "desc_den6": "MUST be a valid code."
+    },
     "10003": {
         "err_no": 10003,
         "err_message": "MULTIPLE 00 SEGMENTS ENCOUNTERED.ONLY ONE PER SUBMISSION ALLOWED.DATA CANNOT BE PROCESSED FURTHER."
@@ -125,11 +135,13 @@
     },
     "10077": {
         "err_no": 10077,
-        "err_message": "NEED A PROPERTY LOSS CODE OF '1' OR '8' WHEN THIS OFFENSE IS ATTEMPTED"
+        "err_message": "NEED A PROPERTY LOSS CODE OF '1' OR '8' WHEN THIS OFFENSE IS ATTEMPTED",
+        "desc_de7": "When Attempted ('A') is entered and Louisiana Revised Statute (DE 6) is either a Crime Against Property, or a Gambling (NIBRS 39A or NIBRS 39B), Kidnaping (NIBRS 100) or Drug/Narcotic offense (NIBRS 35A or 35B), then Type of Property Loss (14) must be None (1) or Unknown (8)."
     },
     "10078": {
         "err_no": 10078,
-        "err_message": "A VALID PROPERTY LOSS CODE DOES NOT EXIST FOR THIS COMPLETED OFFENSE"
+        "err_message": "A VALID PROPERTY LOSS CODE DOES NOT EXIST FOR THIS COMPLETED OFFENSE",
+        "desc_de7": "When Completed ('C') is entered and Louisiana Revised Statute (DE 6) is either a Crime Against Property, or a Gambling (NIBRS 39A or NIBRS 39B), Kidnaping (100), or Drug/Narcotic offense (NIBRS 35A or NIBRS 35B), then Property Segments 30 and 31 must be present with a valid code in Type of Property Loss (DE 14)."
     },
     "10080": {
         "err_no": 10080,
@@ -356,7 +368,8 @@
         "err_no": 12001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
         "desc_del6": "Must be present -- CANNOT be Blank (G).",
-        "desc_de6": "Must be present -- CANNOT be Blank (G)."
+        "desc_de6": "Must be present -- CANNOT be Blank (G).",
+        "desc_de7": "Must be present -- CANNOT be Blank (G)."
     },
     "12002": {
         "err_no": 12002,
@@ -373,11 +386,13 @@
     },
     "12006": {
         "err_no": 12006,
-        "err_message": "ERROR - DUPLICATE VALUE = (VALUE)"
+        "err_message": "ERROR - DUPLICATE VALUE = (VALUE)",
+        "desc_de8": "If more than one code entered, CANNOT be a duplicate."
     },
     "12007": {
         "err_no": 12007,
-        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]"
+        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]",
+        "desc_de8": "Value 'N' = Not Applicable is mutually exclusive of any other value entered, i.e., 'N' is to be entered only if no other code applies."
     },
     "12015": {
         "err_no": 12015,
@@ -397,7 +412,8 @@
     },
     "12051": {
         "err_no": 12051,
-        "err_message": "INVALID CODE"
+        "err_message": "INVALID CODE",
+        "desc_de7": "MUST be a valid code of 'A' (Attempted) or 'C' (Completed)."
     },
     "12052": {
         "err_no": 12052,
@@ -417,7 +433,8 @@
     },
     "12056": {
         "err_no": 12056,
-        "err_message": "OFFENSE CODES OF MURDER(09 A, 09 B, 09 C) AND ASSAULT(13 A, 13 B, 13 C) MUST HAVE ENTRY OF 'C'"
+        "err_message": "OFFENSE CODES OF MURDER(09 A, 09 B, 09 C) AND ASSAULT(13 A, 13 B, 13 C) MUST HAVE ENTRY OF 'C'",
+        "desc_de7": "Offense Attempted/Completed (DE 7) must be Completed ('C') when Louisiana Revised Statute (DE 6) is an 'Assault' or 'Homicide'."
     },
     "12057": {
         "err_no": 12057,
@@ -651,7 +668,8 @@
     },
     "14001": {
         "err_no": 14001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
+        "desc_de8": "Must be present -- CANNOT be Blank (G)."
     },
     "14002": {
         "err_no": 14002,
@@ -659,7 +677,8 @@
     },
     "14004": {
         "err_no": 14004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
+        "desc_de8": "MUST be a valid code on Master LIBRS/LRS Code Table."
     },
     "14008": {
         "err_no": 14008,
