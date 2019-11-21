@@ -19,7 +19,8 @@ ____
 
 **Data Characteristics:** 9 Character Numeric/Alpha
 
-**Requirements:**
+### Requirements:
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -43,7 +44,8 @@ ___
 
 **Data Characteristics:** 12 Character Alpha
 
-**Requirements:**
+### Requirements:
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -91,7 +93,8 @@ ___
 
 **Format:** MMDDYYYYXHH
 
-**Requirements:**
+### Requirements:
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -126,6 +129,227 @@ ___
 
 <br>
 
+### Examples:
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | If a robbery occurred at 9:30 p.m. on July 2, 2014, the entry should be '07022014G21' (where 'G' is a blank).
+2 | If a kidnaping started at 11:30 p.m. on November 1, 2014, and ended at 6:00 p.m., on November 16, 2014, the entry should be '11012014G23' (where 'G' is a blank).
+3 | If the date and hour of the incident are unknown, but the date of the report was March 15, 2014, the entry should be '03152014RGG' (where 'G' is a blank).
+4 | If a burglary occurred sometime between 11:15 A.M. on June 24, 2014, and 4:30 P.M. on June 26, 2014, the entry should be 06242014G11 (where "G" is a blank).
+5 | If a rape occurred on November 15, 2013, but was not reported until January 15, 2014, this incident would reject if your agency's "Base Date" is December 1, 2013. This incident would not have been reported on your Return A (or whatever other forms would be applicable) for the month of November or for the month of December of 2013.<br><br>If your agency submits this incident to LIBRS with an incident date of 11/15/2013, it would REJECT. It would reject because the Incident Date is prior to the date your agency's data is being kept by the LIBRS and NIBRS databases.<br><br>Since this incident CANNOT be accepted into LIBRS and has not been reported to UCR summary, an adjustment would have to be made on UCR Summary forms that apply.
+
+___
+
+<br>
+
+## Cleared Exceptionally (4)
+___
+
+**Description:** Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident. 
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["11001"] -%}
+1 | {{error.desc_de4}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11004"] -%}
+2 | {{error.desc_de4}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["11053"] -%}
+3 | {{error.desc_de4}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11071"] -%}
+4 | {{error.desc_de4}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11064"] -%}
+5 | {{error.desc_de4}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11054"] -%}
+6 | {{error.desc_de4}} | {{error.err_no}}| {{ error.err_message }} 
+
+___
+
+<br>
+
+### Allowed Entries
+___
+
+Enter one code per incident.
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Cleared Exceptionall Indicators</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '4' %}
+        {% for values in de.values %}
+        <tr>
+        <td>{{values.code}}</td>
+		    <td>{{values.desc}}</td>
+        </tr>
+        {% endfor %}
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+____
+
+<br>
+
+### Examples:
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | A kidnapper holding a hostage killed himself when the building in which he barricaded himself was surrounded by police. The kidnaping is cleared exceptionally under, 'Death of the Offender'.
+
+___
+
+<br>
+
+## Exceptional Cleared Date (5)
+
+**Data Characteristics**: 8 Character Date
+
+**Format:** MMDDYYYY
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["11055"] -%}
+1 | {{error.desc_de5}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11056"] -%}
+2 | {{error.desc_de5}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["11005"] -%}
+3 | {{error.desc_de5}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11057"] -%}
+4 | {{error.desc_de5}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11020"] -%}
+5 | {{error.desc_de5}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11066"] -%}
+6 | {{error.desc_de5}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11067"] -%}
+7 | {{error.desc_de5}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11074"] -%}
+8 | {{error.desc_de5}} | {{error.err_no}}| {{ error.err_message }} 
+
+___
+
+<br>
+
+### Examples:
+___
+
+
+Example Number | Description
+:-------------:|:-----------
+1 | The incident was cleared on the books of the reporting agency on May 27. It was entered into the local computer on June 6, 2019, and was submitted to LIBRS sometime in July of 2019. The date '05272019' should be entered into this data element.
+
+___
+
+<br>
+
+## Offense Sequence Number (L6)
+___
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["12001"] -%}
+1 | {{error.desc_del6}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15002"] -%}
+2 | {{error.desc_del6}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["25001"] -%}
+3 | {{error.desc_del6}} | {{error.err_no}}| {{ error.err_message }} 
+
+___
+
+<br>
+
+## Offense Sequence Number Reference (L6R)
+___
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["90021"] -%}
+1 | {{error.desc_del6r}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["90022"] -%}
+2 | {{error.desc_del6r}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["90024"] -%}
+3 | {{error.desc_del6r}} | {{error.err_no}}| {{ error.err_message }} 
+
+___
+
+<br>
+
+
+## Louisiana Revised Statute (6)
+___
+
+**Data Characteristics**: 12 Character Alpha
+
+**Format**: TT:SSSS.S/P-I
+
+||Louisiana Revised Statute Format
+:--------------------------------:|-----------------------------------
+TT                                | Title                             
+SSSS.S                            | Section                           
+**PPP/I**                         | Subpart, **or**<br>Subpart with Qualifier, **or**<br>Qualifier, **or**<br>Juvenile Qualifier, **and** An Inchoate Modifier, if applicable, would be indicated<br>by a dash with a data value behind the LRS Code that defines the offense.**                        |
+
+<br>
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["12001"] -%}
+1 | {{error.desc_del6r}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["90022"] -%}
+2 | {{error.desc_del6r}} | {{error.err_no}} | {{ error.err_message }} 
+
+___
+
+<br>
+
+### Examples:
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | When 14:42 is submitted as a Louisiana Revised Statute LRS (6), LIBRS will need Qualifiers to determine if the offense should be classified as a forcible rape or as a forcible sodomy. If the offense is submitted as a **14:42/V**, this would translate to a forcible rape offense, whereas if this offense is submitted as a **14:42/A** this would translate to a forcible sodomy offense.<br><br>Without any Qualifiers, LIBRS has no way to determine which offense this LRS should be reported as, and the entire incident would be rejected. The agency will receive the following error message: 'This LRS Code must be submitted with a Qualifier to define offense applicable.'
+2 | If an incident involved a robbery (14:64) and a forcible rape (**14:42.1/V**), two LRS offenses should be submitted. The 14:64 does not require any Qualifier, but the 14:42.1 does require a Qualifier.
+3 | If two females were raped in an incident, two LRS offenses should be submitted for rape: One LRS should be reported for each victim -- in this case, both LRS codes should be submitted as 14:42.1/V for Victim 001 and **14:42.1/V** for Victim 002)
+
+<br>
+
+**Refer to the Master LIBRS/LRS Code Table to determine:**
+- LRS Codes that are accepted
+- What offense the LRS code was assigned: NIBRS Code determines offense to be reported.
+- Index Class assigned to each LRS
+- IBR and NIBRS rankings.
+
+**To determine definitions of Qualifiers see the list at the end of this section.**
+
+___
+
+<br>
+
 
 
 
@@ -142,6 +366,7 @@ ___
 # Control Data Elements
 ___
 
+<br>
 
 ## Segment Descriptor (C1)
 ___
@@ -159,31 +384,24 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20015"] -%}
 3 | {{error.descc1}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: This two-digit identifier is used by LIBRS to determine the type of segment being processed.`
+
 <br>
 
 **Allowed Entries for Data Element C1:**
 
-  ||               Segment Descriptors           ||      
-  |:--------------------:|:-----------------------------|
-  |00                    | Submission Header            |
-  |01                    | Zero Records                 |
-  |10                    | Administration               |
-  |11                    | Administration Modification  |
-  |20                    | Offense                      |
-  |30                    | Property                     |
-  |31                    | Property Description         |
-  |32                    | Property Modification        |
-  |33                    | Property/Offense             |
-  |40                    | Offender                     |
-  |41                    | Offender Using               |
-  |50                    | Victim                       |
-  |51                    | Victim Injury                |
-  |52                    | Victim/Offender Relation     |
-  |60                    | Arrestee                     |
-  |61                    | Arrestee Armed               |
-  |62                    | Arrestee Statute             |
-  |63                    | Arrestee Modification        |
-  |99                    | Submission Trailer           |
+  | Value |     Segment Descriptors      |  Value   |  Segment Descriptors         |          
+  |:-----:|:-----------------------------|:--------:|:-----------------------------| 
+  |00     | Submission Header            | 41       | Offender Using               |
+  |01     | Zero Records                 | 50       | Victim                       |
+  |10     | Administration               | 51       | Victim Injury                |
+  |11     | Administration Modification  | 52       | Victim/Offender Relation     |
+  |20     | Offense                      | 60       | Arrestee                     |
+  |30     | Property                     | 61       | Arrestee Armed               |
+  |31     | Property Description         | 62       | Arrestee Statute             |
+  |32     | Property Modification        | 63       | Arrestee Modification        |
+  |33     | Property/Offense             | 99       | Submission Trailer           |
+  |40     | Offender                     |
 
 <br>
 
@@ -199,6 +417,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20010"] -%}
 1 | {{error.descc2}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: The name of the Submitting Agency is spelled out, and often abbreviated.  This data field is found in the Header Segment, which is the first segment in all data submission files.`
 ___
 
 <br>
@@ -220,6 +439,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.descc3}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20026"] -%}
 3 | {{error.descc3}} | {{error.err_no}} | {{ error.err_message }} 
+
+`Note: This data element provides LIBRS with the date that this data submission file was generated for submission.`
 
 ___
 
@@ -245,6 +466,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20060"] -%}
 4 | {{error.descc4}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: Reporting Period identifies the month and year that the Incident-Based data in a data submission file is being reported. All data in the data submission does not have to correspond to this date (i.e., Modifications and Time-Window Submissions will be from preceding months).`
+
 ____
 
 <br>
@@ -260,6 +483,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["20001"] -%}
 1 | {{error.descc5}} | {{error.err_no}} | {{ error.err_message }} 
+
+`Note: Action Type (C5) informs LIBRS of the type of action that LIBRS and NIBRS are required to take with incident data contained by the segment.`
 
 <br>
 
@@ -295,6 +520,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["16058"] -%}
 3 | {{error.descc6}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: Clearance Indicator (C6) is used in the Arrestee Segment (60) to indicate whether this arrest produced a clearance, or is an additional arrest on a previously cleared incident that is outside the agency's base date.`
+
 <br>
 
 **Allowed Entries for Data Element C6:**
@@ -317,12 +544,14 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["20001"] -%}
+{% assign error = data.data.error["20001"] -%}
 1 | {{error.descc7}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20030"] -%}
 2 | {{error.descc7}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20031"] -%}
 3 | {{error.descc7}} | {{error.err_no}} | {{ error.err_message }} 
+
+`Note: This field provides LIBRS with a count of segments submitted by the agency within the data submission file, including the header and trailer segments.  This number is used as part of the data submission validation process.`
 
 <br>
 
@@ -346,6 +575,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20029"] -%}
 2 | {{error.descc8}} | {{error.err_no}} | {{ error.err_message }} 
 
+`Note: This field is used to provide LIBRS with a way to determine where an end of record occurs. In the event of an error in record length this will allow the LIBRS system to find the start of the next record and possibly recover from the error. The "End of Segment" marker is the same for all segments, two capitol Z's.`
+
 <br>
 
 **Allowed Entries:** "ZZ" only.
@@ -367,6 +598,8 @@ Requirement  | Requirement Description |
 1 | Must be Blank (G) if fixed length records are submitted. MUST be one newline character (ASCII 13; CR, LF, or CRLF) if variable length records are submitted.
 2 | If Fixed-Length records are used, add padding from the End of Segment Marker (C8) to exactly column 150.
 3 | Segment 00 MUST have both Padding to column 150 and a new line charachter (ASCII 13; CR, LF, or CRLF)
+
+`Note: This field is used to pad unused fields for systems that are unable to write variable length records. This padding will lengthen all segments to 150 characters. Padding can be replaced with a newline character for those systems that can write variable length records. The newline character will mark the true End-of-Record. Variable length records are preferred by LIBRS because of the space savings they allow.`
 
 <br>
 
