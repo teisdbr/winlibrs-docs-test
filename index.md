@@ -48,7 +48,7 @@ This site contains the following information:
             		</tr>
 					{% endfor %}
 				</table>
-			<br>
+			{% if forloop.last == false %}<br>{% endif %}
         	{% endfor %}
 			
 		</td>
