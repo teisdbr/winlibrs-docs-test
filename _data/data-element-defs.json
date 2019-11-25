@@ -123,28 +123,30 @@
         "definition": "Indicates if the Offender was suspected of consuming alcohol or using drugs/narcotics during or shortly before the incident; or of using a computer to perpetrate the crime.<br><br>Also identifies whether the Offender’s gaming activity was the motive for commission of the crime.",
         "length": "1",
         "format": "A",
-        "values": [
-            {
-                "code": "A",
-                "desc": "Alcohol"
-            },
-            {
-                "code": "C",
-                "desc": "Computer Equipment"
-            },
-            {
-                "code": "D",
-                "desc": "Drugs/Narcotics"
-            },
-            {
-                "code": "G",
-                "desc": "Gaming Activity Motive for Crime"
-            },
-            {
-                "code": "N",
-                "desc": "Not Applicable (LIBRS Only)"
-            }
-        ],
+        "subsection":[{
+            "title": "",
+            "values": [
+                {
+                    "code": "A",
+                    "desc": "Alcohol"
+                },
+                {
+                    "code": "C",
+                    "desc": "Computer Equipment"
+                },
+                {
+                    "code": "D",
+                    "desc": "Drugs/Narcotics"
+                },
+                {
+                    "code": "G",
+                    "desc": "Gaming Activity Motive for Crime"
+                },
+                {
+                    "code": "N",
+                    "desc": "Not Applicable (LIBRS Only)"
+                }
+        ]}],
         "comment": "This Data Element is located within Offender Segment.<br><br>Can enter up to four codes per Offender. "
     },
     {

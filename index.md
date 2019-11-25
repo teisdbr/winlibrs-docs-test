@@ -37,15 +37,21 @@ This site contains the following information:
 		<td style="text-align: center;">{{de.length}}</td>
 		<td style="text-align: center;">{{de.format}}</td>
         <td style="min-width: 250px">
-		<table class="subtable">
-		{% for values in de.values %}
-			<tr>
-            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
-				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
-                <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
-            </tr>
-        {% endfor %}
-		</table></td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			<br>
+        	{% endfor %}
+			
+		</td>
         <td style="min-width: 300px">{{de.comment}}</td>
     </tr>
 {% endfor %}
