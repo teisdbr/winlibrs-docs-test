@@ -369,16 +369,19 @@
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
         "desc_del6": "Must be present -- CANNOT be Blank (G).",
         "desc_de6": "Must be present -- CANNOT be Blank (G).",
-        "desc_de7": "Must be present -- CANNOT be Blank (G)."
+        "desc_de7": "Must be present -- CANNOT be Blank (G).",
+        "desc_de9": "Must be present -- CANNOT be Blank (G)."
     },
     "12002": {
         "err_no": 12002,
-        "err_message": "CONTAINS NON NUMERIC ENTRY"
+        "err_message": "CONTAINS NON NUMERIC ENTRY",
+        "desc_de10": "MUST be numeric entry of 01-99 if entered."
     },
     "12004": {
         "err_no": 12004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
-        "desc_de6": "MUST be a valid code on Master LIBRS/LRS Code Table."
+        "desc_de6": "MUST be a valid code on Master LIBRS/LRS Code Table.",
+        "desc_de9": "MUST be a valid code on Master LIBRS/LRS Code Table."
     },
     "12005": {
         "err_no": 12005,
@@ -417,7 +420,8 @@
     },
     "12052": {
         "err_no": 12052,
-        "err_message": "OFFENSE CODE MUST BE BURGLARY WITH LOCATION TYPE OF 14, 19 FOR DATA TO BE ENTERED"
+        "err_message": "OFFENSE CODE MUST BE BURGLARY WITH LOCATION TYPE OF 14, 19 FOR DATA TO BE ENTERED",
+        "desc_de10":"When entered, Location Type 9 (9) must be Hotel/Motel/Etc. ('14') or Rental Storage Facility ('19'), and LRS (DE 6) has a related NIBRS offense code of <b>220</b> as defined on the Master LIBRS/LRS Code Table"
     },
     "12053": {
         "err_no": 12053,
@@ -438,7 +442,8 @@
     },
     "12057": {
         "err_no": 12057,
-        "err_message": "MUST BE PRESENT WITH AN OFFENSE CODE OF 220 AND A LOCATION TYPE OF 14 OR 19"
+        "err_message": "MUST BE PRESENT WITH AN OFFENSE CODE OF 220 AND A LOCATION TYPE OF 14 OR 19",
+        "desc_de10":"MUST be entered if Louisiana Revised Statute (DE 6) has a NIBRS Offense code as defined on the Master LIBRS/LRS Code Table of <b>220</b> and Location Type (DE 9) contains Hotels/Motels/Etc. ('14') or Rental Storage Facility ('19')."
     },
     "12058": {
         "err_no": 12058,
@@ -669,7 +674,8 @@
     "14001": {
         "err_no": 14001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
-        "desc_de8": "Must be present -- CANNOT be Blank (G)."
+        "desc_de8": "Must be present -- CANNOT be Blank (G).",
+        "desc_de8a": "Must be present -- CANNOT be Blank (G)."
     },
     "14002": {
         "err_no": 14002,
@@ -678,7 +684,8 @@
     "14004": {
         "err_no": 14004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
-        "desc_de8": "MUST be a valid code on Master LIBRS/LRS Code Table."
+        "desc_de8": "MUST be a valid code on Master LIBRS/LRS Code Table.",
+        "desc_de8a": "MUST be a valid code on Master LIBRS/LRS Code Table."
     },
     "14008": {
         "err_no": 14008,

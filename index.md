@@ -50,7 +50,6 @@ This site contains the following information:
 				</table>
 			{% if forloop.last == false %}<br>{% endif %}
         	{% endfor %}
-			
 		</td>
         <td style="min-width: 300px">{{de.comment}}</td>
     </tr>

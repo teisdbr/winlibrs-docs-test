@@ -13,8 +13,6 @@ ____
 ## ORI Number (1)
 ____
 
-<br>
-
 **Description:** NCIC originating agency identifier number.
 
 **Data Characteristics:** 9 Character Numeric/Alpha
@@ -33,12 +31,12 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+`Note: This is the 9-character NCIC Originating Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. For state or local agency submissions, the last two positions must be "00".`
+
 <br>
 
 ## Incident Number (2)
 ___
-
-<br>
 
 **Description:** Agency unique, in-house assigned case number. The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years. 
 
@@ -66,9 +64,11 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+`Note: Incident Number is the reporting agency's UNIQUE, in-house assigned case number. It is used to link subsequent update submissions to the original submission. This number will be encrypted prior to any dissemination of data to ensure that the recipient cannot identify the actual case. `
+
 <br>
 
-**Definitions:** 
+### Definitions:
 
 **Concept of time and place provides:** If more than one crime was committed by the same person or group of persons and the time and space intervals separating them were insignificant, all of the crimes make up a single incident.
 
@@ -127,6 +127,14 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+Notes
+`This data element is to be used to enter the month, day, year and hours when the incident occurred or started, or the beginning of the time period in which it occurred. "Military" twenty-four (24) hour time is to be used.`
+`If the incident occurred on or between midnight and 0059, enter "00" for the hour; if on or between 0100 and 0159, enter "01" for the hour if on or between 2300 and 2359, enter "23" for the hour, etc.`
+`If the incident occurred at exactly midnight, it is considered to have occurred at the beginning of the next day.  Therefore "00" should be entered for the hour, along with the next day's date.`
+`If the incident date is unknown, enter the date of the report with the indicator "R" = Report.  Otherwise leave the report column nine (9) blank.`
+`If the incident hour is unknown, leave the hour blank.`
+
+
 <br>
 
 ### Examples:
@@ -181,18 +189,27 @@ Enter one code per incident.
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Cleared Exceptionall Indicators</th>
+		<th colspan = "2" style="align-text:center;">Cleared Exceptionally Indicators</th>
 	</tr>
     </thead>
     <tbody>
 {% for de in site.data.data-element-defs %}
     {% if de.de_num == '4' %}
-        {% for values in de.values %}
-        <tr>
-        <td>{{values.code}}</td>
-		    <td>{{values.desc}}</td>
-        </tr>
-        {% endfor %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
     {% endif %}
 {% endfor %}
 </tbody>
@@ -411,12 +428,21 @@ Enter one code per incident.
     <tbody>
 {% for de in site.data.data-element-defs %}
     {% if de.de_num == '7' %}
-        {% for values in de.values %}
-        <tr>
-        <td>{{values.code}}</td>
-		    <td>{{values.desc}}</td>
-        </tr>
-        {% endfor %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
     {% endif %}
 {% endfor %}
 </tbody>
@@ -467,18 +493,27 @@ ___
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">123</th>
+		<th colspan = "2" style="align-text:center;">Offender Suspected of Using/Gaming Motivation</th>
 	</tr>
     </thead>
     <tbody>
 {% for de in site.data.data-element-defs %}
     {% if de.de_num == '8' %}
-        {% for values in de.values %}
-        <tr>
-        <td>{{values.code}}</td>
-		    <td>{{values.desc}}</td>
-        </tr>
-        {% endfor %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
     {% endif %}
 {% endfor %}
 </tbody>
@@ -498,6 +533,167 @@ Example Number | Description
 3 | Offender robbed a bank and a police officer arrested him while trying to leave the bank. Under questioning, the Offender told the officer he needed money because he lost $10,000 that morning at the river boat casino. The officer also smelled alcohol on his breath. Both Alcohol ('A') and Gaming Activity Motive for Crime ('G') should be entered into Offender Suspected of Using/Gaming Motivation (DE 8).
 
 _____
+
+<br>
+
+## Bias Motivation/Bias Crime Type (8A)
+
+
+**Data Characteristics:** 2 Character Alpha
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["14001"] -%}
+1 | {{error.desc_de8a}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14004"] -%}
+2 | {{error.desc_de8a}} | {{error.err_no}} | {{ error.err_message }} 
+
+<br>
+
+### Allowed Entries:
+___
+
+Enter only one code for each Offender Segment (40):
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Bias Motivation/Bias Crime Type</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '8A' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+<br>
+
+In LIBRS, incidents not having facts that indicate biased motivation on the part of the Offender are to be coded as None (88), while incidents involving ambiguous facts (that is, where some facts are present, but not conclusive) are to be coded Unknown (99).
+
+If any Bias Motivation/Bias Crime Type codes are used, other than None (88) or Unknown (99), then the incident will be considered a hate crime, and the Louisiana Revised Statute (DE 6) probably should be appended with the Hate Crime Penalty Enhancer (-H) to represent enhanced penalties related to hate crimes in LRS 14:107.2.
+
+___
+
+<br>
+
+## Location Type (9)
+
+**Data Characteristics:** 2 Character Alpha
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["12001"] -%}
+1 | {{error.desc_de9}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["12004"] -%}
+2 | {{error.desc_de9}} | {{error.err_no}} | {{ error.err_message }} 
+
+<br>
+
+### Allowed Entries:
+___
+
+Enter only one (1) code per Offense Segment:
+
+<br>
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Location Type</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '9' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+### Examples:
+
+Example Number | Description
+:-------------:|:-----------
+1 | An assault started in a bar ('03'), continued into an adjoining parking lot ('18'), and ended in the street ('13'). As the bar was the location where the offense was initiated and best describes the circumstances of the crime, Bar/Night Club ('03') should be entered.
+2 | Two Offenders robbed a bar. One of the Offenders raped a female customer in the bar while the other Offender stood at the door with a gun. In this case, there is one incident, with two offenses: robbery and forcible rape. The location of the robbery would be Bar/Night Club ('03'), and the location of the forcible rape would also be Bar/Night Club ('03').
+
+___
+
+<br>
+
+## Number of Premises Entered (10)
+___
+
+**Data Characteristics:** 2 Character **Alpha/Numeric**
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["12057"] -%}
+1 | {{error.desc_de10}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["12002"] -%}
+2 | {{error.desc_de10}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["12052"] -%}
+3 | {{error.desc_de10}} | {{error.err_no}} | {{ error.err_message }} 
+
+___
+
+<br>
+
+
+### Examples:
+
+Example Number | Description
+:-------------:|:-----------
+1 | A 'self-storage' building was burglarized and 11 rented storage compartments were forcibly entered. The number '11' (for eleven compartments) should be entered into Number of Premises Entered (DE 10).
+
+___
+
 
 <br>
 
