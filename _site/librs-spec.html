@@ -1032,35 +1032,51 @@
 
 <h3 id="segment-00-errors-and-explanations">Segment 00 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>10090</td>
       <td>ZERO - REPORTING MONTH IS NOT 01 - 12</td>
       <td>Invalid reporting month in positions 31-32. The data entered must be a valid month of 01 through 12.</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>10091</td>
       <td>ZERO - REPORTING YEAR IS INVALID</td>
       <td>Segment 00 did not have four numeric digits in positions 33-36.</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>10093</td>
       <td>ZERO - REPORTING MONTH / YEAR WAS PRIOR TO THE ‘BASE DATE’</td>
       <td>The month and year entered into positions 31-36 was later than the “Month of Submission” and “Year of Submission” entered into positions 23-30.</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>10094</td>
       <td>ZERO - REPORTING MONTH / YEAR EXCEEDED MONTH / YEAR OF TAPE</td>
       <td>The month and year entered into positions 31-36 was later than the “Month of Submission” and “Year of Submission” entered into positions 23-30.</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>90038</td>
       <td>INVALID LIBRS SPEC</td>
@@ -1178,20 +1194,21 @@
 
 <h3 id="segment-10-errors-and-explanations">Segment 10 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>10055</td>
       <td>CANNOT HAVE AN INITIAL INCIDENT RECORD WITHOUT STARTING WITH RECORD SEGMENT 10</td>
       <td>First segment, after the Submission Header, in a data submission MUST be an Administrative Segment (10).</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>10075</td>
       <td>MISSING A MANDATORY RECORD SEGMENT FOR A COMPLETE INCIDENT</td>
@@ -1283,20 +1300,21 @@
 
 <h3 id="segment-11-errors-and-explanations">Segment 11 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>11060</td>
       <td>INCIDENT NOT ON FILE</td>
       <td>Administrative Segment (10 and 11) submitted with an Action Type of ‘M’ (MODIFY) must already be on file with ORI Number (Data Element No. 1) and Incident Number (Data Element No. 2).</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>11069</td>
       <td>TIME WINDOW SEGMENT BEING MODIFIED MUST HAVE LOUISIANA REVISED STATUTE NUMBER</td>
@@ -1489,20 +1507,21 @@
 
 <h3 id="segment-20-errors-and-explanations">Segment 20 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>22075</td>
       <td>MUST SUBMIT AN OFFENSE SEGMENT(SEGMENT 20) FOR EACH VICTIM</td>
       <td>Each victim must be tied to an offense.</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>90026</td>
       <td>CRIME AGAINST PROPERTY REQUIRES A RELATIONSHIP TO PROPERTY. SEGMENTS 31 AND 33 MAY EITHER OR BOTH BE MISSING</td>
@@ -1600,20 +1619,21 @@
 
 <h3 id="segment-30-errors-and-explanations">Segment 30 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>10074</td>
       <td>PROPERTY RECORD(SEGMENT 30 &amp; 31) MUST EXIST WITH THIS OFFENSE</td>
       <td>Property Segments (30 and 31) must exist when an Incident Report (Action Type = ‘I’) is submitted with an Offense Segment (20) whose LRS is a ‘Crime Against Property’.  Kidnaping (100), Gambling (39A thru 39D), or Drug/Narcotic (35A thru 35B) Offenses also have this same Property Segment requirement.</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>10076</td>
       <td>PROPERTY RECORD(SEGMT 30 &amp; 31) CANNOT EXIT WITH OFFENSES SUBMITTED</td>
@@ -1752,20 +1772,21 @@
 
 <h3 id="segment-31-errors-and-explanations">Segment 31 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>13043</td>
       <td>WARNING - ‘280’ OFFENSE HAS ‘RECOVERED’ VEHICLE BUT ‘240’ DOESN’T SHOW ‘STOLEN’</td>
       <td>When the same property is Stolen (Type of Property Loss = ‘7’) and Recovered (Type of Property Loss = ‘5’) within the same incident, then the two Property Description Segments (31) that are submitted must use the same property sequence number (P1).</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>90018</td>
       <td>PROPERTY MUST HAVE A VALID RELATIONSHIP TO AT LEAST ONE OFFENSE</td>
@@ -1857,24 +1878,24 @@
 
 <h3 id="segment-32-errors-and-explanations">Segment 32 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>13071</td>
       <td>GAMBLING, KIDNAPPING, AND CRIMES AGAINST PROPERTY ARE THE ONLY VALID OFFENSE</td>
       <td>A Time-Window submission (Action Type of ‘W’) or Modify submission (Action Type = ‘M’) was submitted for ‘Recovered Property’ on a Property Modification Segment (32). <br /> When submitted, all LRS codes must be Crimes Against Property, Kidnaping (100), or Gambling (39A thru 39D).  In this instance offense codes other than those mentioned were submitted.</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>13077</td>
       <td>PROPERTY SEGMENT A - O - F ADDED ON [MMDDYYYY] RECOVERY DATE = [MMDDYYYY]</td>
-      <td> </td>
     </tr>
   </tbody>
 </table>
@@ -1984,14 +2005,10 @@
 
 <h3 id="segment-33-errors-and-explanations">Segment 33 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>90023</td>
@@ -2388,35 +2405,50 @@
 
 <h3 id="segment-40-errors-and-explanations">Segment 40 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>90008</td>
       <td>FOR STATUTORY RAPE OFFENSES WHERE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM, THE ASSOCIATED OFFENSE IS REQUIRED TO BE REPORTED AS MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE (14:80.1).</td>
       <td>A Statutory Rape (NIBRS Code 36B) MUST be classified as a MISDEMEANOR (LRS 14:80.1 Misdemeanor Carnal Knowledge of a Juvenile) if the Offender is at least two (2), but less than four (4) years older than the Victim.</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>90009</td>
       <td>FOR FIRST DEGREE RAPE OFFENSES, AGE OF VICTIM CANNOT BE ‘13’, ‘14’, ‘15’, OR ‘16’. CONSIDER REPORTING THE ASSOCIATED OFFENSE AS A STATUTORY RAPE (36B)</td>
-      <td> </td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>90010</td>
       <td>FOR RAPE OFFENSES (11 A OR 36 B), AGE OF OFFENDlATER</td>
       <td>For First Degree (NIBRS Code 11A) and Statutory Rape (NIBRS Code 36B), the Age of Offender (DE 37) MUST be at least seventeen (17) years of age or older.</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>90011</td>
       <td>MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE (14:80.1) OFFENSES ARE APPLICABLE ONLY WHEN THE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM</td>
       <td>A Statutory Rape (NIBRS Code 36B) MUST be classified as a FELONY (LRS 14:80 Carnal Knowledge of a Juvenile) if the Offender is four (4) or more years older than the Victim</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>90013</td>
       <td>STATUTORY RAPE OFFENSES REQUIRE OFFENDERS TO BE AT LEAST TWO YEARS OLDER THAN THEIR VICTIMS</td>
@@ -2633,9 +2665,9 @@
       <td style="text-align: center"><strong>N</strong></td>
     </tr>
     <tr>
-      <td style="text-align: center"><del>31</del></td>
-      <td><del>Aggravated Assault / Homicide Circumstance No. 3**</del> *No Longer In Use*</td>
-      <td style="text-align: center"><del>48-49</del></td>
+      <td style="text-align: center">~~31~~</td>
+      <td>~~Aggravated Assault / Homicide Circumstance No. 3**~~ *No Longer In Use*</td>
+      <td style="text-align: center">~~48-49~~</td>
       <td style="text-align: center">~~2~~</td>
       <td style="text-align: center">~~N~~</td>
     </tr>
@@ -2784,14 +2816,10 @@
 
 <h3 id="segment-51-errors-and-explanations">Segment 51 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>22080</td>
@@ -2896,14 +2924,10 @@
 
 <h3 id="segment-52-errors-and-explanations">Segment 52 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>22081</td>
@@ -3092,14 +3116,10 @@
 
 <h3 id="segment-60-errors-and-explanations">Segment 60 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>16058</td>
@@ -3302,14 +3322,10 @@
 
 <h3 id="segment-62-errors-and-explanations">Segment 62 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>16060</td>
@@ -3402,14 +3418,10 @@
 
 <h3 id="segment-63-errors-and-explanations">Segment 63 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>16059</td>
@@ -3472,25 +3484,31 @@
 
 <h3 id="segment-99-errors-and-explanations">Segment 99 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>19901</td>
       <td>LAST LINE OR SEGEMENT NOT 99 SEGMENT TYPE</td>
       <td>Last line in data submission NOT Segment Type 99 (Submission Trailer).</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>19902</td>
       <td>NUMBER OF SEGMEMTS FIELD IN 99 SEGMENT IS NOT A VALID NUMERIC FIELD</td>
       <td>Number of Segments Transferred field (Data Element C7) in Submission Trailer is NOT a valid numeric field.</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
       <td>19903</td>
       <td>NUMBER OF SEGMENTS ON SUBMISSION TRAILER DOES NOT MATCH RECORD COUNT</td>
@@ -3552,14 +3570,10 @@
 
 <h3 id="segment-01-errors-and-explanations">Segment 01 Errors and Explanations</h3>
 
+<p>Error Number  | Error Message | Explaination of Error
+——————|——————-|————————–</p>
+
 <table>
-  <thead>
-    <tr>
-      <th>Error Number</th>
-      <th>Error Message</th>
-      <th>Explaination of Error</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
       <td>10092</td>

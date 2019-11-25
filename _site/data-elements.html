@@ -948,32 +948,37 @@
 <h3 id="requirements">Requirements:</h3>
 <hr />
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td style="text-align: center">10001, 11001, 12001, 13001, 14001, 15001, 16001</td>
+      <td>10001, 11001, 12001, 13001, 14001, 15001, 16001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>MUST be a valid 9-character NCIC number, where the last 2 positions of the ORI must reflect ‘00’ for all state and local agencies.</td>
-      <td style="text-align: center">10052, 10086, 11004, 12004, 13004, 14004, 15004, 16004</td>
+      <td>10052, 10086, 11004, 12004, 13004, 14004, 15004, 16004</td>
       <td>NOT A VALID ORI–NOT ON LIBRS ORI FILE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>First two positions MUST be the code of the state ‘LA’ in which the incident occurred.</td>
-      <td style="text-align: center">10059</td>
+      <td>10059</td>
       <td>ALL SEGMENTS ON MAGNETIC MEDIA MUST BE FROM SAME STATE - STATE = [state]</td>
     </tr>
   </tbody>
@@ -995,56 +1000,81 @@
 <h3 id="requirements-1">Requirements:</h3>
 <hr />
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td style="text-align: center">10001, 11001, 12001, 13001, 14001, 15001, 16001</td>
+      <td>10001, 11001, 12001, 13001, 14001, 15001, 16001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>Zero Reporting Segments (Segment 01) must contain twelve zeroes, same as the Incident Number.</td>
-      <td style="text-align: center">10092</td>
+      <td>10092</td>
       <td>ZERO - REPORTING INCIDENT NUMBER MUST BE ALL ZEROES</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>MUST be left justified with Blank right-fill if under 12 characters in length.</td>
-      <td style="text-align: center">10016, 11016, 12016, 13016, 14016, 15016, 16016</td>
+      <td>10016, 11016, 12016, 13016, 14016, 15016, 16016</td>
       <td>MUST BE LEFT - JUSTIFIED–BLANK DETECTED IN FIRST POSITION</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">4</td>
+      <td>4</td>
       <td>Valid character combinations can include A-Z, 0-9, hyphens, and/or blanks.</td>
-      <td style="text-align: center">11017, 11017, 12017, 13017, 14017, 15017, 16017</td>
+      <td>11017, 11017, 12017, 13017, 14017, 15017, 16017</td>
       <td>CANNOT HAVE CHARACTERS OTHER THAN A-Z, 0-9, HYPHEN, AND/OR BLANKS</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">5</td>
+      <td>5</td>
       <td>MUST be Blank right-fill if under twelve characters in length. The field CANNOT have embedded Blanks (G) between the first and last characters entered.</td>
-      <td style="text-align: center">10015, 11015, 12015, 13015, 14015, 15015, 16015</td>
+      <td>10015, 11015, 12015, 13015, 14015, 15015, 16015</td>
       <td>CANNOT HAVE EMBEDDED BLANKS BETWEEN FIRST AND LAST NON - BLANK CHARACTERS</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">6</td>
+      <td>6</td>
       <td>This field MUST be unique for each incident reported by the agency. <br />This means that no two incidents can have the same Incident Number. <br />Some agencies ensure uniqueness by prefixing every incident number with a two-digit year followed by a number starting with 1, while others simply increment the Incident Number by one for each new incident.</td>
-      <td style="text-align: center">10056, 11015, 12015, 13015, 14015, 15015, 16015</td>
+      <td>10056, 11015, 12015, 13015, 14015, 15015, 16015</td>
       <td>INCIDENT ALREADY ON FILE–PREVIOUSLY ADDED TO FILE ON [MM/DD/YYYY]</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">7</td>
+      <td>7</td>
       <td>CANNOT have duplicate Incident Number for ‘Time-Window’ Segment.</td>
-      <td style="text-align: center">10087, 11015, 12015, 13015, 14015, 15015, 16015</td>
+      <td>10087, 11015, 12015, 13015, 14015, 15015, 16015</td>
       <td>WINDOW SEGMENTS ALREADY ON FILE WITH THIS INCIDENT NUMBER</td>
     </tr>
   </tbody>
@@ -1082,92 +1112,146 @@
 <h3 id="requirements-2">Requirements:</h3>
 <hr />
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td style="text-align: center">11001</td>
+      <td>11001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>Each component of the date must be valid; that is, months must be 01-12, days must be 01-31, and year must include the century (19xx, 20xx).<br />In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br />The Incident Date CANNOT exceed the current date.</td>
-      <td style="text-align: center">11005</td>
+      <td>11005</td>
       <td>DATE ENTERED MUST BE A VALID CALENDAR DATE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>When an ORI becomes inactive, no incident data may be submitted to LIBRS with an incident date on or after that date.<br />However, adjustments to previously submitted data may be done.</td>
-      <td style="text-align: center">11018</td>
+      <td>11018</td>
       <td>DATE CANNOT BE ON OR AFTER THE INACTIVE DATE [MMDDYYYY] OF THE ORI</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">4</td>
+      <td>4</td>
       <td>The Incident Date CANNOT be earlier than 01/01/1991 for Inciden Report (‘I’) submissions.<br />This edit will preclude dates that are obviously incorrect since the FBI began accepting data on this date.</td>
-      <td style="text-align: center">11072</td>
+      <td>11072</td>
       <td>INCIDENT DATE/HOUR FOR ‘I’ RECORDS CANNOT PREDATE 01/01/1991</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">5</td>
+      <td>5</td>
       <td>No data regarding an incident previously submitted under the Summary UCR reporting system can be submitted with an incident date later than the date the agency commenced reporting.<br />It will be regarded as a duplicate submission and be rejected since the Summary UCR system already contains the aggregate data for the months before LIBRS conversion.<br /><br />In other words, if an agency sends Incident Based Reporting (IBR) data for the first time on 20 July 2019, all ‘Incident Date/Hour’ (DE 3) entries for incidents, recovered property, and arrests must be within July, 2019<br /><br />The exception is when Exceptional Clearances occur for a pre-IBR incident<br />In this case, ‘Incident Date/Hour’ (DE 3) may be earlier than July, 2019, but Exceptional Clearance Date (5) must be within July, 2019<br />LIBRS maintains a table of start dates (Agency Base Dates) for every law enforcement agency in the state<br />Except for the above example, LIBRS will reject data submitted with an ‘Incident Date/Hour’ prior to the agency’s Base Date (start date).</td>
-      <td style="text-align: center">11073</td>
+      <td>11073</td>
       <td>INCIDENT DATE CANNOT BE BEFORE DATE ORI WENT IBR</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">6</td>
+      <td>6</td>
       <td>Incident Date/Hour CANNOT be later than the year and month the data submission file represents. (EG A June 2019 data submission CANNOT contain incidents occurring after June).</td>
-      <td style="text-align: center">11070</td>
+      <td>11070</td>
       <td>INCIDENT DATE CANNOT BE AFTER YEAR [YYYY] AND MONTH [MM] OF TAPE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">7</td>
+      <td>7</td>
       <td>The <strong>Submission Date (C3), in positions 23-30,</strong> and the Incident Date MUST be valid entries.<br />LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as ‘Time Window’ submissions.</td>
-      <td style="text-align: center">11075</td>
+      <td>11075</td>
       <td>CANNOT CALCULATE BASE DATE FROM INCIDENT DATE[MMDDYYYY]</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">8</td>
+      <td>8</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) CANNOT have a date in ‘Incident Date/Hour’ (DE 3) that would be a valid date for an Incident occurring since the agency’s Base Date.<br />This is also true for any Administrative Segments (10) subsequently submitted with.</td>
-      <td style="text-align: center"> </td>
       <td> </td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">9</td>
+      <td>9</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) CANNOT change the ‘Incident Date/Hour’ (DE 3) previously submitted in the original Incident Report (Action Type of ‘I’).</td>
-      <td style="text-align: center">11061</td>
+      <td>11061</td>
       <td>CANNOT MODIFY AN INCIDENT DATE THIS WAY–ON FILE IS [MMDDYYYYRHH]</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">10</td>
+      <td>10</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) CANNOT change the Report Date Indicator (position 51 of the segment) of Segments which were previously submitted with an Action Type of ‘I’ (Incident Report).</td>
-      <td style="text-align: center">11062</td>
+      <td>11062</td>
       <td>CANNOT MODIFY A REPORT FLAG THIS WAY–ON FILE IS [MMDDYYYYRHH]</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">11</td>
+      <td>11</td>
       <td>Administrative Segments (Segment 10) submitted with an Action Type of ‘M’ (Modify) CANNOT change the hour part of ‘Incident Date/Hour’ (DE 3) of incidents previously submitted with in the original Incident Report (Action Type of ‘I’).</td>
-      <td style="text-align: center">11063</td>
+      <td>11063</td>
       <td>CANNOT MDIFY AN INCIDENT HOUR THIS WAY–ON FILE IS [MMDDYYYYRHH]</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">12</td>
+      <td>12</td>
       <td>If HOUR is entered it must be 00 through 23.<br />Note: If the Incident Date occurred at exactly midnight, enter theIncident Date as if the time was 1 minute past midnight. <br /><br />Example: If the incident occurred at exactly midnight on Thursday, enter Friday’s date and 00 for the hour.</td>
-      <td style="text-align: center">11052</td>
+      <td>11052</td>
       <td>INVALID HOUR ENTRY</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">13</td>
+      <td>13</td>
       <td>If the Incident Date is unknown, use the Report Date. Indicate a Report Date with an ‘R’ in the space before the hour. If this is the Incident Date, then leave the ‘Report’ indicator blank.</td>
-      <td style="text-align: center">11051</td>
+      <td>11051</td>
       <td>REPORT INDICATOR MUST BE BLANK OR ‘R’</td>
     </tr>
   </tbody>
@@ -1225,50 +1309,70 @@
 <h3 id="requirements-3">Requirements:</h3>
 <hr />
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td style="text-align: center">11001</td>
+      <td>11001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>MUST be a valid code.</td>
-      <td style="text-align: center">11004</td>
+      <td>11004</td>
       <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>CANNOT be ‘N’ (Not Applicable) if Exceptional Clearance Date is entered.</td>
-      <td style="text-align: center">11053</td>
+      <td>11053</td>
       <td>VALUE ENTERED CONFLICTS WITH PRESENCE OF AN ENTRY IN EXCEPTIONAL CLEARANCE DATE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">4</td>
+      <td>4</td>
       <td>When a value other than ‘N’ (Not Applicable) is entered, there can be NO Arrestee Segments associated with the Incident.</td>
-      <td style="text-align: center">11071</td>
+      <td>11071</td>
       <td>INCIDENT DATE IS OUTSIDE THE BASE DATE CALCULATION</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">5</td>
+      <td>5</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) must have an ‘N’ (Not Applicable) in Cleared Exceptionally (DE 4) indicator when Arrestees are included as part of the original Incident Report.</td>
-      <td style="text-align: center">11064</td>
+      <td>11064</td>
       <td>CLEARED EXCEPTIONALLY FIELD MUST CONTAIN ‘N’ WHEN ARRESTEES WERE REPORTED</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">6</td>
+      <td>6</td>
       <td>Administrative Segment (10) submitted with an Action Type of ‘W’ (Time Window Submission) CANNOT contain an ‘N’ (Not Applicable) in Cleared Exceptionally (DE 4).</td>
-      <td style="text-align: center">11054</td>
+      <td>11054</td>
       <td>CLEARED EXCEPTIONALLY CANNOT CONTAIN ‘N’ WITH SEGMENT ACTION TYPE ‘W’</td>
     </tr>
   </tbody>
@@ -1350,6 +1454,24 @@
 
     
 
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
 </tbody>
 </table>
 
@@ -1388,62 +1510,92 @@
 <h3 id="requirements-4">Requirements:</h3>
 <hr />
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>The clearance date CANNOT be earlier than the incident date.</td>
-      <td style="text-align: center">11055</td>
+      <td>11055</td>
       <td>CLEARANCE DATE [MMDDYYYY] PREDATES INCIDENT DATE [MMDDYYYY]</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>MUST be present if incident was cleared exceptionally with a data value of ‘A’, ‘B’, ‘C’, ‘D’, ‘E’, or ‘O’ in Cleared Exceptionally (DE 4).</td>
-      <td style="text-align: center">11056</td>
+      <td>11056</td>
       <td>AN ENTRY MUST BE MADE WHEN CLEARED EXCEPTIONALLY HAS ENTRIES OF A - E</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>Each component of the date must be valid: Months must be 0-12, days must be 01-31, and year must include the century (19xx, 20xx). In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br /><br />The Exceptional Clearance Date CANNOT be greater than that entered within the Reporting Period (DE C4).<br /><br />For example, if the Reporting Period is 062019 (June 2019), then the Exceptional Clearance Date CANNOT contain any date 07/01/2019 or greater.</td>
-      <td style="text-align: center">11005</td>
+      <td>11005</td>
       <td>DATE ENTERED MUST BE A VALID CALENDAR DATE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">4</td>
+      <td>4</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) must contain Cleared Exceptionally (DE 4) and Exceptional Clearance Date (DE 5).<br /><br />Both data elements must be present to be a valid submission.</td>
-      <td style="text-align: center">11057</td>
+      <td>11057</td>
       <td>MUST BE PRESENT FOR TIME WINDOW SEGMENT</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">5</td>
+      <td>5</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the ‘Time-Window’ Base Date<br /><br />This is also true for any ‘M’ (Modify) submissions subsequent to a previously submitted Time-Window Submission (Action Type of ‘W’).</td>
-      <td style="text-align: center">11020</td>
+      <td>11020</td>
       <td>EXCEPTIONAL CLEARANCE DATE CANNOT PREDATE BASE DATE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">6</td>
+      <td>6</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) and an Exceptional Clearance (DE 4) indicator of ‘N’ (Not Applicable) CANNOT have an entry in Exceptional Clearance Date (DE 5).</td>
-      <td style="text-align: center">11066</td>
+      <td>11066</td>
       <td>CANNOT HAVE ENTRY IN EXCEPTIONAL CLEARANCE DATE IF CLEARED EXCEPTIONALLY IS ‘N’</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">7</td>
+      <td>7</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) for a previously submitted Time-Window Submission (Action Type of ‘W’) must have an Exceptional Clearance Date (DE 5).</td>
-      <td style="text-align: center">11067</td>
+      <td>11067</td>
       <td>DATE CANNOT BE BLANK FOR SEGMENT</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">8</td>
+      <td>8</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) or ‘M’ (Modify) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the date the ORI was certified for LIBRS submission.</td>
-      <td style="text-align: center">11074</td>
+      <td>11074</td>
       <td>EXCEPTIONAL CLEARANCE DATE PREDATES DATE ORI WENT IBR</td>
     </tr>
   </tbody>
@@ -1482,32 +1634,37 @@
 
 <h3 id="requirements-5">Requirements:</h3>
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td style="text-align: center">12001</td>
+      <td>12001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>MUST be numeric entry (001 through 999) with zero left-fill. Offense Sequence Number (DE L6) distinguishes one offense from another.</td>
-      <td style="text-align: center">15002</td>
+      <td>15002</td>
       <td>CONTAINS NON NUMERIC ENTRY</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>Must be unique – CANNOT be duplicated.</td>
-      <td style="text-align: center">25001</td>
+      <td>25001</td>
       <td>MUST BE UNIQUE–CANNOT BE DUPLICATED</td>
     </tr>
   </tbody>
@@ -1524,32 +1681,37 @@
 
 <h3 id="requirements-6">Requirements:</h3>
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td style="text-align: center">90021</td>
+      <td>90021</td>
       <td>OFFENSE SEQUENCE NUMBER MUST BE PRESENT–CANNOT BE BLANK</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>MUST be numeric entry (001 through 999) with zero left-fill.</td>
-      <td style="text-align: center">90022</td>
+      <td>90022</td>
       <td>OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>MUST match the Offense Sequence Number (DE L6) of one of the Offense segments submitted in the corresponding incident.</td>
-      <td style="text-align: center">90024</td>
+      <td>90024</td>
       <td>PROPERTY SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED PROPERTIES’ SEQUENCE NUMBERS</td>
     </tr>
   </tbody>
@@ -1594,26 +1756,26 @@
 <h3 id="requirements-7">Requirements:</h3>
 <hr />
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td> </td>
-      <td style="text-align: center">12001</td>
+      <td>12001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>MUST be numeric entry (001 through 999) with zero left-fill.</td>
-      <td style="text-align: center">90022</td>
+      <td>90022</td>
       <td>OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL</td>
     </tr>
   </tbody>
@@ -1651,15 +1813,391 @@
 
 <p><br /></p>
 
-<p><strong>Refer to the Master LIBRS/LRS Code Table to determine:</strong></p>
-<ul>
-  <li>LRS Codes that are accepted</li>
-  <li>What offense the LRS code was assigned: NIBRS Code determines offense to be reported.</li>
-  <li>Index Class assigned to each LRS</li>
-  <li>IBR and NIBRS rankings.</li>
-</ul>
+<p><strong>Refer to the Master LIBRS/LRS Code Table to determine:</strong>
+- LRS Codes that are accepted
+- What offense the LRS code was assigned: NIBRS Code determines offense to be reported.
+- Index Class assigned to each LRS
+- IBR and NIBRS rankings.</p>
 
 <p><strong>To determine definitions of Qualifiers see the list at the end of this section.</strong></p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="agency-supplied-nibrs-code-n6">Agency Supplied NIBRS Code (N6)</h2>
+
+<hr />
+
+<p><strong>Data Characteristics:</strong> 3 Character AlphaNumeric</p>
+
+<h3 id="requirements-8">Requirements:</h3>
+<hr />
+
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>If the value of LIBRS Spec Indicator (C12) is ‘2.5’, then EVERY Offense Segment (20) in the data submission MUST have an Agency Supplied NIBRS Code (N6).<br /><br />If Agency Supplied NIBRS Code (N6) is missing, WinLIBRS will insert the <em>default</em> NIBRS value based on the LRS for that particular offense. This may not be the intended NIBRS Code for the submitted offense.</td>
+      <td>06011</td>
+      <td>WARNING - PROVIDE VALID NIBRS CODE</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>MUST be a valid code.</td>
+      <td>06011</td>
+      <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="offense-attemptedcompleted-7">Offense Attempted/Completed (7)</h2>
+
+<hr />
+
+<p><strong>Data Characteristics:</strong> 1 Character Alpha</p>
+
+<h3 id="requirements-9">Requirements:</h3>
+<hr />
+
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Must be present – CANNOT be Blank (G).</td>
+      <td>12001</td>
+      <td>MUST BE PRESENT–MANDATORY FIELD</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>MUST be a valid code of ‘A’ (Attempted) or ‘C’ (Completed).</td>
+      <td>12051</td>
+      <td>INVALID CODE</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>When Attempted (‘A’) is entered and Louisiana Revised Statute (DE 6) is either a Crime Against Property, or a Gambling (NIBRS 39A or NIBRS 39B), Kidnaping (NIBRS 100) or Drug/Narcotic offense (NIBRS 35A or 35B), then Type of Property Loss (14) must be None (1) or Unknown (8).</td>
+      <td>10077</td>
+      <td>NEED A PROPERTY LOSS CODE OF ‘1’ OR ‘8’ WHEN THIS OFFENSE IS ATTEMPTED</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>4</td>
+      <td>When Completed (‘C’) is entered and Louisiana Revised Statute (DE 6) is either a Crime Against Property, or a Gambling (NIBRS 39A or NIBRS 39B), Kidnaping (100), or Drug/Narcotic offense (NIBRS 35A or NIBRS 35B), then Property Segments 30 and 31 must be present with a valid code in Type of Property Loss (DE 14).</td>
+      <td>10078</td>
+      <td>A VALID PROPERTY LOSS CODE DOES NOT EXIST FOR THIS COMPLETED OFFENSE</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>5</td>
+      <td>Offense Attempted/Completed (DE 7) must be Completed (‘C’) when Louisiana Revised Statute (DE 6) is an ‘Assault’ or ‘Homicide’.</td>
+      <td>12056</td>
+      <td>OFFENSE CODES OF MURDER(09 A, 09 B, 09 C) AND ASSAULT(13 A, 13 B, 13 C) MUST HAVE ENTRY OF ‘C’</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="allowed-entries-1">Allowed Entries</h3>
+<hr />
+
+<p>Enter one code per incident.</p>
+
+<table>
+<thead>
+	<tr>
+		<th colspan="2" style="align-text:center;">Offense Attempted/Completed</th>
+	</tr>
+    </thead>
+    <tbody>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+        <tr>
+        <td>A</td>
+		    <td>Attempted</td>
+        </tr>
+        
+        <tr>
+        <td>C</td>
+		    <td>Completed</td>
+        </tr>
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="examples-4">Examples:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Example Number</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: left">During the same incident, Victim Number One (001) was raped and the Offender attempted to rape Victim Number Two (002), but had to leave the scene before the act was consummated due to the arrival of the police.<br /><br />Offense 001 should be entered as Aggravated Rape (LRS 14:42/V) and have Completed (‘C’) entered in Offense Attempted/Completed (DE 7). Offense 002 should also be entered as Aggravated Rape (LRS 14:42/V), but will have Attempted (‘A’) entered in Offense Attempted/Completed (DE 7).</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="offender-suspected-of-usinggaming-motivation-8">Offender Suspected of Using/Gaming Motivation (8)</h2>
+
+<hr />
+
+<p><strong>Data Characteristics:</strong> 1 Character Alpha</p>
+
+<h3 id="requirements-10">Requirements:</h3>
+<hr />
+
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Must be present – CANNOT be Blank (G).</td>
+      <td>14001</td>
+      <td>MUST BE PRESENT–MANDATORY FIELD</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>2</td>
+      <td>MUST be a valid code on Master LIBRS/LRS Code Table.</td>
+      <td>14004</td>
+      <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>3</td>
+      <td>If more than one code entered, CANNOT be a duplicate.</td>
+      <td>12006</td>
+      <td>ERROR - DUPLICATE VALUE = (VALUE)</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td>4</td>
+      <td>Value ‘N’ = Not Applicable is mutually exclusive of any other value entered, i.e., ‘N’ is to be entered only if no other code applies.</td>
+      <td>12007</td>
+      <td>ERROR - MUTUALLY EXCLUSIVE VALUE = [value]</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="allowed-entries-2">Allowed Entries</h3>
+<hr />
+
+<table>
+<thead>
+	<tr>
+		<th colspan="2" style="align-text:center;">123</th>
+	</tr>
+    </thead>
+    <tbody>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        
+        <tr>
+        <td>A</td>
+		    <td>Alcohol</td>
+        </tr>
+        
+        <tr>
+        <td>C</td>
+		    <td>Computer Equipment</td>
+        </tr>
+        
+        <tr>
+        <td>D</td>
+		    <td>Drugs/Narcotics</td>
+        </tr>
+        
+        <tr>
+        <td>G</td>
+		    <td>Gaming Activity Motive for Crime</td>
+        </tr>
+        
+        <tr>
+        <td>N</td>
+		    <td>Not Applicable (LIBRS Only)</td>
+        </tr>
+        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="examples-5">Examples:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Example Number</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: left">Witness to an assault reported that the Victim and Offender were in a bar drinking beer when an argument broke out and the Offender attacked the Victim with a knife. Alcohol (‘A’) should be entered in Offender Suspected of Using/Gaming Motivation (DE 8).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: left">A computer ‘hacker’ used his personal computer and the Internet to gain access to a company’s computer system and steal proprietary data. Computer Equipment (‘C’) should be entered in Offender Suspected of Using/Gaming Motivation (DE 8).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td style="text-align: left">Offender robbed a bank and a police officer arrested him while trying to leave the bank. Under questioning, the Offender told the officer he needed money because he lost $10,000 that morning at the river boat casino. The officer also smelled alcohol on his breath. Both Alcohol (‘A’) and Gaming Activity Motive for Crime (‘G’) should be entered into Offender Suspected of Using/Gaming Motivation (DE 8).</td>
+    </tr>
+  </tbody>
+</table>
 
 <hr />
 
@@ -1677,32 +2215,37 @@
 
 <p><strong>Requirements:</strong></p>
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>DE C1 must be present – CANNOT be blank.</td>
-      <td style="text-align: center">20001</td>
+      <td>20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>DE C1 must be a valid code.</td>
-      <td style="text-align: center">20002</td>
+      <td>20002</td>
       <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>DE C1 must identify a segment of proper length.</td>
-      <td style="text-align: center">20015</td>
+      <td>20015</td>
       <td>END OF SEGMENT MARKER EXPECTED–END OF SEGMENT MARKER NOT FOUND</td>
     </tr>
   </tbody>
@@ -1796,20 +2339,15 @@
 
 <p><strong>Requirements:</strong></p>
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>Agencies submitting Incident Data must be in either ‘Test’, ‘Production’, or ‘Certified’ LIBRS Status.</td>
-      <td style="text-align: center">20010</td>
+      <td>20010</td>
       <td>MUST BE A VALID AGENCY</td>
     </tr>
   </tbody>
@@ -1829,32 +2367,37 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>DE C3 must be present – CANNOT be blank.</td>
-      <td style="text-align: center">20001</td>
+      <td>20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>Each component of the date MUST be valid. <br />Months must be 01-12, days must be 01-31, and year must include the century (i.e., 19xx, 20xx). <br />In addition, days CANNOT exceed maximum for the month (EG: June CANNOT have 31 days).</td>
-      <td style="text-align: center">20025</td>
+      <td>20025</td>
       <td>DATE ENTERED MUST BE A VALID CALENDAR DATE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>The date must be greater than that entered within Reporting Period (C4)</td>
-      <td style="text-align: center">20026</td>
+      <td>20026</td>
       <td>REPORTING PERIOD CANNOT EXCEED THE DATE OF SUBMISSION</td>
     </tr>
   </tbody>
@@ -1875,38 +2418,48 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>DE C4 must be present – CANNOT be blank.</td>
-      <td style="text-align: center">20001</td>
+      <td>20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>Each component of the date MUST be valid. <br />Months must be 01-12, days must be 01-31, and year must include the century (i.e., 19xx, 20xx). <br />In addition, days CANNOT exceed maximum for the month (EG: June CANNOT have 31 days).</td>
-      <td style="text-align: center">20025</td>
+      <td>20025</td>
       <td>DATE ENTERED MUST BE A VALID CALENDAR DATE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>The date CANNOT be greater than that entered within Date of Submission (C3)</td>
-      <td style="text-align: center">20026</td>
+      <td>20026</td>
       <td>REPORTING PERIOD CANNOT EXCEED THE DATE OF SUBMISSION</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">4</td>
+      <td>4</td>
       <td>Reporting Period date cannot be before the Incident Date.</td>
-      <td style="text-align: center">20060</td>
+      <td>20060</td>
       <td>REPORTING PERIOD DATE CANNOT PRECEDE INCIDENT DATE</td>
     </tr>
   </tbody>
@@ -1925,20 +2478,15 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>DE C5 must be present – CANNOT be blank.</td>
-      <td style="text-align: center">20001</td>
+      <td>20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
   </tbody>
@@ -1994,32 +2542,37 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>If Action Type (C5) is ‘W’ (Time-Window) DE C6 must be present – CANNOT be blank.</td>
-      <td style="text-align: center">20001</td>
+      <td>20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>DE C6 must be a valid code.</td>
-      <td style="text-align: center">20002</td>
+      <td>20002</td>
       <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>Clearance Indicator (DE C6) must be Blank (G) when Action Type is not ‘W’ (Time-Window).</td>
-      <td style="text-align: center">16058</td>
+      <td>16058</td>
       <td>MUST BE BLANK WHEN ACTION TYPE IS NOT ‘W’ (WINDOW)</td>
     </tr>
   </tbody>
@@ -2061,32 +2614,36 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td> </td>
-      <td style="text-align: center"> </td>
       <td> </td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>DE C7 must have a value of 3 or more.</td>
-      <td style="text-align: center">20030</td>
+      <td>20030</td>
       <td>MUST BE 3 OR GREATER</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">3</td>
+      <td>3</td>
       <td>DE C7 must be equal to the total number of segments within the data submission file</td>
-      <td style="text-align: center">20031</td>
+      <td>20031</td>
       <td>MUST BE EQUAL TO THE TOTAL NUMBER OF SEGMENTS WRITTEN TO THE TAPE.</td>
     </tr>
   </tbody>
@@ -2109,26 +2666,26 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
+<p>Requirement  | Requirement Description | Error Number | Error Message
+:———–:|————————-|:————:|———-</p>
+
 <table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Requirement</th>
-      <th>Requirement Description</th>
-      <th style="text-align: center">Error Number</th>
-      <th>Error Message</th>
-    </tr>
-  </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">1</td>
+      <td>1</td>
       <td>DE C8 must be present – CANNOT be blank.</td>
-      <td style="text-align: center">20001</td>
+      <td>20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
     <tr>
-      <td style="text-align: center">2</td>
+      <td>2</td>
       <td>Segment must be present and be ‘ZZ’.</td>
-      <td style="text-align: center">20029</td>
+      <td>20029</td>
       <td>END OF SEGMENT MARKER, MUST BE EQUAL TO ‘ZZ’</td>
     </tr>
   </tbody>

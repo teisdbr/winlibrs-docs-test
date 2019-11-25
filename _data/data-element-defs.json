@@ -1,20 +1,18 @@
-
-[{
+[
+    {
         "de_num": "1",
         "name": "ORI Number",
         "definition": "NCIC originating agency identifier number.",
         "length": "9",
         "format": "A/N"
-
     },
     {
         "de_num": "2",
         "name": "Incident Number",
         "definition": "Agency unique, in-house assigned case number",
         "length": "12",
-        "format":"A/N",
+        "format": "A/N",
         "comment": "The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years."
-
     },
     {
         "de_num": "3",
@@ -23,7 +21,6 @@
         "length": "11",
         "format": "MMDDYYYYXHH",
         "comment": ""
-
     },
     {
         "de_num": "4",
@@ -31,7 +28,8 @@
         "definition": "Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident.",
         "length": "1",
         "format": "A",
-        "values": [{
+        "values": [
+            {
                 "code": "A",
                 "desc": "Death of Offender"
             },
@@ -107,15 +105,16 @@
         "definition": "Indicates whether each Offense was completed or merely attempted.",
         "length": "1",
         "format": "A/N",
-        "values": [{
-            "code": "A",
-            "desc": "Attempted"
-        },
-        {
-            "code": "C",
-            "desc": "Completed"
-        }
-    ],
+        "values": [
+            {
+                "code": "A",
+                "desc": "Attempted"
+            },
+            {
+                "code": "C",
+                "desc": "Completed"
+            }
+        ],
         "comment": "Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes. Please consult the LIBRS Master LRS Table to review these mappings and contact LIBRS Program Staff if you have questions. "
     },
     {
@@ -124,27 +123,28 @@
         "definition": "Indicates if the Offender was suspected of consuming alcohol or using drugs/narcotics during or shortly before the incident; or of using a computer to perpetrate the crime.<br><br>Also identifies whether the Offender’s gaming activity was the motive for commission of the crime.",
         "length": "1",
         "format": "A",
-        "values": [{
-            "code": "A",
-            "desc": "Alcohol"
-        },
-        {
-            "code": "C",
-            "desc": "Computer Equipment"
-        },
-        {
-            "code": "D",
-            "desc": "Drugs/Narcotics"
-        },
-        {
-            "code": "G",
-            "desc": "Gaming Activity Motive for Crime"
-        },
-        {
-            "code": "N",
-            "desc": "Not Applicable (LIBRS Only)"
-        }
-    ],
+        "values": [
+            {
+                "code": "A",
+                "desc": "Alcohol"
+            },
+            {
+                "code": "C",
+                "desc": "Computer Equipment"
+            },
+            {
+                "code": "D",
+                "desc": "Drugs/Narcotics"
+            },
+            {
+                "code": "G",
+                "desc": "Gaming Activity Motive for Crime"
+            },
+            {
+                "code": "N",
+                "desc": "Not Applicable (LIBRS Only)"
+            }
+        ],
         "comment": "This Data Element is located within Offender Segment.<br><br>Can enter up to four codes per Offender. "
     },
     {
@@ -153,199 +153,433 @@
         "definition": "Indicates whether the Offender was motivated to commit the Offense because of his/her bias against a racial, religious, ethnic/national origin, sexual, or disability group.",
         "length": "2",
         "format": "N",
-        "values": [
-            { 
-
-            "code": "11",
-            "desc": "Anti-White"
-        },
-        {
-            "code": "12",
-            "desc": "Anti-Black or African American"
-        },
-        {
-            "code": "13",
-            "desc": "Anti-American Indian / Alaskan Native"
-        },
-        {
-            "code": "14",
-            "desc": "Anti-Asian"
-        },
-        {
-            "code": "15",
-            "desc": "Anti-Multiple Races, Group"
-        },
-        {
-            "code": "16",
-            "desc": "Anti-Native Hawaiian or Other Pacific Islander"
-        },
-        {
-            "code": "31",
-            "desc": "Anti-Arab"
-        },
-        {
-            "code": "32",
-            "desc": "Anti-Hispanic or Latino"
-        },
-        {
-            "code": "33",
-            "desc": "Anti-Other Race/Ethnicity/Ancestry"
-        },
-        {
-            "code": "21",
-            "desc": "Anti-Jewish"
-        },
-        {
-            "code": "22",
-            "desc": "Anti-Catholic"
-        },
-        {
-            "code": "23",
-            "desc": "Anti-Protestant"
-        },
-        {
-            "code": "24",
-            "desc": "Anti-Islamic (Muslim)"
-        },
-        {
-            "code": "25",
-            "desc": "Anti-Other Religion"
-        },
-        {
-            "code": "26",
-            "desc": "Anti-Multiple Religions, Group"
-        },
-        {
-            "code": "27",
-            "desc": "Anti-Atheism/Agnosticism"
-        },
-        {
-            "code": "28",
-            "desc": "Anti-Mormon"
-        },
-        {
-            "code": "29",
-            "desc": "Anti-Jehovah’s Witness"
-        },
-        {
-            "code": "81",
-            "desc": "Anti-Eastern Orthodox (Russian, Greek, Other)"
-        },
-        {
-            "code": "82",
-            "desc": "Anti-Other Christian"
-        },
-        {
-            "code": "83",
-            "desc": "Anti-Buddhist"
-        },
-        {
-            "code": "84",
-            "desc": "Anti-Hindu"
-        },
-        {
-            "code": "85",
-            "desc": "Anti-Sikh"
-        },
-        {
-            "code": "41",
-            "desc": "Anti-Gay (Male)"
-        },
-        {
-            "code": "42",
-            "desc": "Anti-Lesbian (Female)"
-        },
-        {
-            "code": "43",
-            "desc": "Anti-Lesbian, Gay, Bisexual or Transgender (Mixed Group)"
-        },
-        {
-            "code": "44",
-            "desc": "Anti-Heterosexual"
-        },
-        {
-            "code": "45",
-            "desc": "Anti-Bisexual"
-        },
-        {
-            "code": "51",
-            "desc": "Anti-Physical Disability"
-        },
-        {
-            "code": "52",
-            "desc": "Anti-Mental Disability"
-        },
-        {
-            "code": "61",
-            "desc": "Anti-Male"
-        },
-        {
-            "code": "62",
-            "desc": "Anti-Female"
-        },
-        {
-            "code": "71",
-            "desc": "Anti-Transgender"
-        },
-        {
-            "code": "72",
-            "desc": "Anti-Gender Non-Conforming"
-        },
-        {
-            "code": "88",
-            "desc": "None (No Bias)"
-        },
-        {
-            "code": "99",
-            "desc": "Unknown (Offender’s Motivation Not Known)"
-        },
-        {
-            "code": "70",
-            "desc": "Age (LIBRS Only). Sent to NIBRS as “99”"
-        },
-        {
-            "code": "71",
-            "desc": "Ancestry (LIBRS Only). Sent to NIBRS as “33”"
-        },
-        {
-            "code": "72",
-            "desc": "Creed (LIBRS Only). Sent to NIBRS as “25”"
-        },
-        {
-            "code": "73",
-            "desc": "Gender (LIBRS Only). Sent to NIBRS as “99”"
-        },
-        {
-            "code": "74",
-            "desc": "Organizational Affiliation (LIBRS Only). Sent to NIBRS as “99”"
-        }
-    ],
+        "subsection": [
+            {
+                "title": "Race/Ethnicity/Ancestry",
+                "values": [
+                    {
+                        "code": "11",
+                        "desc": "Anti-White"
+                    },
+                    {
+                        "code": "12",
+                        "desc": "Anti-Black or African American"
+                    },
+                    {
+                        "code": "13",
+                        "desc": "Anti-American Indian / Alaskan Native"
+                    },
+                    {
+                        "code": "14",
+                        "desc": "Anti-Asian"
+                    },
+                    {
+                        "code": "15",
+                        "desc": "Anti-Multiple Races, Group"
+                    },
+                    {
+                        "code": "16",
+                        "desc": "Anti-Native Hawaiian or Other Pacific Islander"
+                    },
+                    {
+                        "code": "31",
+                        "desc": "Anti-Arab"
+                    },
+                    {
+                        "code": "32",
+                        "desc": "Anti-Hispanic or Latino"
+                    },
+                    {
+                        "code": "33",
+                        "desc": "Anti-Other Race/Ethnicity/Ancestry"
+                    }
+                ]
+            },
+            {
+                "title": "Religion",
+                "values": [
+                    {
+                        "code": "21",
+                        "desc": "Anti-Jewish"
+                    },
+                    {
+                        "code": "22",
+                        "desc": "Anti-Catholic"
+                    },
+                    {
+                        "code": "23",
+                        "desc": "Anti-Protestant"
+                    },
+                    {
+                        "code": "24",
+                        "desc": "Anti-Islamic (Muslim)"
+                    },
+                    {
+                        "code": "25",
+                        "desc": "Anti-Other Religion"
+                    },
+                    {
+                        "code": "26",
+                        "desc": "Anti-Multiple Religions, Group"
+                    },
+                    {
+                        "code": "27",
+                        "desc": "Anti-Atheism/Agnosticism"
+                    },
+                    {
+                        "code": "28",
+                        "desc": "Anti-Mormon"
+                    },
+                    {
+                        "code": "29",
+                        "desc": "Anti-Jehovah’s Witness"
+                    },
+                    {
+                        "code": "81",
+                        "desc": "Anti-Eastern Orthodox (Russian, Greek, Other)"
+                    },
+                    {
+                        "code": "82",
+                        "desc": "Anti-Other Christian"
+                    },
+                    {
+                        "code": "83",
+                        "desc": "Anti-Buddhist"
+                    },
+                    {
+                        "code": "84",
+                        "desc": "Anti-Hindu"
+                    },
+                    {
+                        "code": "85",
+                        "desc": "Anti-Sikh"
+                    }
+                ]
+            },
+            {
+                "title": "Sexual Orientation",
+                "values": [
+                    {
+                        "code": "41",
+                        "desc": "Anti-Gay (Male)"
+                    },
+                    {
+                        "code": "42",
+                        "desc": "Anti-Lesbian (Female)"
+                    },
+                    {
+                        "code": "43",
+                        "desc": "Anti-Lesbian, Gay, Bisexual or Transgender (Mixed Group)"
+                    },
+                    {
+                        "code": "44",
+                        "desc": "Anti-Heterosexual"
+                    },
+                    {
+                        "code": "45",
+                        "desc": "Anti-Bisexual"
+                    }
+                ]
+            },
+            {
+                "title": "Disability",
+                "values": [
+                    {
+                        "code": "51",
+                        "desc": "Anti-Physical Disability"
+                    },
+                    {
+                        "code": "52",
+                        "desc": "Anti-Mental Disability"
+                    }
+                ]
+            },
+            {
+                "title": "Gender",
+                "values": [
+                    {
+                        "code": "61",
+                        "desc": "Anti-Male"
+                    },
+                    {
+                        "code": "62",
+                        "desc": "Anti-Female"
+                    }
+                ]
+            },
+            {
+                "title": "Gender Identity",
+                "values": [
+                    {
+                        "code": "71",
+                        "desc": "Anti-Transgender"
+                    },
+                    {
+                        "code": "72",
+                        "desc": "Anti-Gender Non-Conforming"
+                    }
+                ]
+            },
+            {
+                "title": "None/Unkown",
+                "values": [
+                    {
+                        "code": "88",
+                        "desc": "None (No Bias)"
+                    },
+                    {
+                        "code": "99",
+                        "desc": "Unknown (Offender’s Motivation Not Known)"
+                    }
+                ]
+            },
+            {
+                "title": "Other Bias (LIBRS Only)",
+                "values": [
+                    {
+                        "code": "70",
+                        "desc": "Age (LIBRS Only). Sent to NIBRS as “99”"
+                    },
+                    {
+                        "code": "71",
+                        "desc": "Ancestry (LIBRS Only). Sent to NIBRS as “33”"
+                    },
+                    {
+                        "code": "72",
+                        "desc": "Creed (LIBRS Only). Sent to NIBRS as “25”"
+                    },
+                    {
+                        "code": "73",
+                        "desc": "Gender (LIBRS Only). Sent to NIBRS as “99”"
+                    },
+                    {
+                        "code": "74",
+                        "desc": "Organizational Affiliation (LIBRS Only). Sent to NIBRS as “99”"
+                    }
+                ]
+            }
+        ],
         "comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offender Segment."
-   
-},
-{
-    "de_num": "9",
-    "name": "Location Type",
-    "definition": "Location where each Offense took place.",
-    "length": "2",
-    "format": "N",
-    "values": [
-        { 
-
-        "code": "01",
-        "desc": "Air, Bus, Train or Terminal"
     },
     {
-        "code": "02",
-        "desc": "Bank, Savings and Loan (incl. other Financial Institutions)"
+        "de_num": "9",
+        "name": "Location Type",
+        "definition": "Location where each Offense took place.",
+        "length": "2",
+        "format": "N",
+        "values": [
+            {
+                "code": "01",
+                "desc": "Air, Bus, Train or Terminal"
+            },
+            {
+                "code": "02",
+                "desc": "Bank, Savings and Loan (incl. other Financial Institutions)"
+            },
+            {
+                "code": "03",
+                "desc": "Bar or Night Club"
+            },
+            {
+                "code": "04",
+                "desc": "Church, Synagogue or Temple (includes other Religious Buildings..)"
+            },
+            {
+                "code": "05",
+                "desc": "Commercial or Office Building"
+            },
+            {
+                "code": "06",
+                "desc": "Construction Site"
+            },
+            {
+                "code": "07",
+                "desc": "Convenience Store"
+            },
+            {
+                "code": "08",
+                "desc": "Department or Discount Store"
+            },
+            {
+                "code": "09",
+                "desc": "Drug Store, Doctor's Office or Hospital (includes Medical Supply Building)"
+            },
+            {
+                "code": "10",
+                "desc": "Field or Woods"
+            },
+            {
+                "code": "11",
+                "desc": "Government or Public Building"
+            },
+            {
+                "code": "12",
+                "desc": "Grocery or Supermarket"
+            },
+            {
+                "code": "13",
+                "desc": "Highway, Road or Alley (includes Street)"
+            },
+            {
+                "code": "14",
+                "desc": "Hotel, Motel, Etc. (includes Temporary Lodgings)"
+            },
+            {
+                "code": "15",
+                "desc": "Jail or Prison"
+            },
+            {
+                "code": "16",
+                "desc": "Lake or Waterway"
+            },
+            {
+                "code": "17",
+                "desc": "Liquor Store"
+            },
+            {
+                "code": "18",
+                "desc": "Parking lot/Garage"
+            },
+            {
+                "code": "19",
+                "desc": "Rental storage Facility"
+            },
+            {
+                "code": "20",
+                "desc": "Residence/Home"
+            },
+            {
+                "code": "21",
+                "desc": "Restaurant"
+            },
+            {
+                "code": "22",
+                "desc": "School"
+            },
+            {
+                "code": "23",
+                "desc": "Service or Gas Station"
+            },
+            {
+                "code": "24",
+                "desc": "Specialty Store (incl. Fur Store, Jewelry Store, TV Store, Dress Shop, etc.)"
+            },
+            {
+                "code": "25",
+                "desc": "Other or Unknown (use only if no other code applies)"
+            },
+            {
+                "code": "37",
+                "desc": "Abandoned or Condemned Structure"
+            },
+            {
+                "code": "38",
+                "desc": "Amusement Park"
+            },
+            {
+                "code": "39",
+                "desc": "Arena, Stadium, Fairgrounds or Coliseum"
+            },
+            {
+                "code": "40",
+                "desc": "ATM Separate from Bank"
+            },
+            {
+                "code": "41",
+                "desc": "Auto Dealership (New or Used)"
+            },
+            {
+                "code": "42",
+                "desc": "Camp or Campground"
+            },
+            {
+                "code": "44",
+                "desc": "Daycare Facility"
+            },
+            {
+                "code": "45",
+                "desc": "Dock, Wharf, Freight or Modal Terminal"
+            },
+            {
+                "code": "46",
+                "desc": "Farm Facility"
+            },
+            {
+                "code": "47",
+                "desc": "Gambling Facility, Casino or Race Track"
+            },
+            {
+                "code": "48",
+                "desc": "Industrial Site"
+            },
+            {
+                "code": "49",
+                "desc": "Military Installation"
+            },
+            {
+                "code": "50",
+                "desc": "Park or Playground"
+            },
+            {
+                "code": "51",
+                "desc": "Rest Area"
+            },
+            {
+                "code": "52",
+                "desc": "School: College or University"
+            },
+            {
+                "code": "53",
+                "desc": "School: Elementary or Secondary"
+            },
+            {
+                "code": "54",
+                "desc": "Shelter: Mission or Homeless"
+            },
+            {
+                "code": "55",
+                "desc": "Shopping Mall"
+            },
+            {
+                "code": "56",
+                "desc": "Tribal Lands"
+            },
+            {
+                "code": "57",
+                "desc": " Community Center"
+            },
+            {
+                "code": "58",
+                "desc": "Cyberspace"
+            }
+        ],
+        "comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offender Segment."
     },
     {
-        "code": "03",
-        "desc": "Bar or Night Club"
+        "de_num": "10",
+        "name": "NUMBER OF PREMISES ENTERED",
+        "definition": "Number of structures entered.",
+        "length": "2",
+        "format": "N",
+        "comment": "Used only if crime is Burglary (220) AND if the Hotel Rule is applicable. Also, Location Type (Data Element No. 9) MUST be Hotel/Motel (14) or Jail/Prison (19)"
     },
     {
-        "code": "04",
-        "desc": "Church, Synagogue or Temple (includes other Religious Buildings..)"
+        "de_num": "11",
+        "name": "METHOD OF ENTRY",
+        "definition": "Indicates whether Force or No Force was used by the burglar in entering a structure",
+        "length": "1",
+        "format": "A",
+        "comment": "Used only if crime is Burglary (220).",
+        "values": [
+            {
+                "code": "A",
+                "desc": "Attempted"
+            },
+            {
+                "code": "C",
+                "desc": "Completed"
+            }
+        ]
     },
     {
         "code": "05",
@@ -701,348 +935,353 @@
         "de_num": "P1",
         "name": "PROPERTY SEQUENCE NUMBER",
         "definition": "Each Property in the Incident MUST be assigned a UNIQUE Sequence Number.",
-        "length":"3",
-        "format":"N",
-        "comment": "Important: Internal system data element that allows for a Property to relate to many Offenses where multiple Property/Offense segments are submitted within a single incident."   
-     },
-     {
+        "length": "3",
+        "format": "N",
+        "comment": "Important: Internal system data element that allows for a Property to relate to many Offenses where multiple Property/Offense segments are submitted within a single incident."
+    },
+    {
         "de_num": "P1R",
         "name": "PROPERTY SEQUENCE NUMBER REFERENCE",
         "definition": "UNIQUE constraint that allows a Property to relate to many Offenses.",
-        "length":"3",
-        "format":"N",
-        "comment": "Important: Internal system data element that allows for multiple Property/Offense segments to be submitted within a single Incident."   
-     }, 
-     {
+        "length": "3",
+        "format": "N",
+        "comment": "Important: Internal system data element that allows for multiple Property/Offense segments to be submitted within a single Incident."
+    },
+    {
         "de_num": "14",
         "name": "TYPE OF PROPERTY LOSS",
         "definition": "Describes the type of property loss, recovered, seized, etc., which occurred in an incident.",
-        "length":"1",
-        "format":"N",
-        "comment": "Property segments submitted only if crime is: (100) Kidnaping or Abduction, (120) Robbery, (200) Arson, (210) Extortion or Blackmail, (220) Burglary, (23A-23H) Theft Offenses, (240) Motor Vehicle Theft, (250) Counterfeiting/Forgery, (26A-26E) Fraud Offenses, (270) Embezzlement, (280) Stolen Property Offenses, (290) Destruction, Damage or Vandalism of Property, (35A/35B) Drug, Narcotic Offenses, (39A-39D) Gambling Offenses, (510) Bribery, (90A) Bad Checks and (90Z) Crime Against Property Offenses", 
-        "values": [{
-            "code": "1",
-            "desc": "None"
+        "length": "1",
+        "format": "N",
+        "comment": "Property segments submitted only if crime is:",
+        "values": [
+            {
+                "code": "1",
+                "desc": "None"
             },
             {
-            "code": "2",
-            "desc": "Burned"
+                "code": "2",
+                "desc": "Burned"
             },
             {
-            "code": "3",
-            "desc": "Counterfeited or Forged"
+                "code": "3",
+                "desc": "Counterfeited or Forged"
             },
             {
-            "code": "4",
-            "desc": "Destroyed, Damaged or Vandalized"
+                "code": "4",
+                "desc": "Destroyed, Damaged or Vandalized"
             },
             {
-            "code": "5",
-            "desc": "Recovered"
+                "code": "5",
+                "desc": "Recovered"
             },
             {
-            "code": "6",
-            "desc": "Seized"
+                "code": "6",
+                "desc": "Seized"
             },
             {
-            "code": "7",
-            "desc": "Stolen, Etc."
+                "code": "7",
+                "desc": "Stolen, Etc."
             },
             {
-            "code": "8",
-            "desc": "Unknown"
+                "code": "8",
+                "desc": "Unknown"
             }
-            ]     
-     },
-     {
+        ]
+    },
+    {
         "de_num": "15",
         "name": "PROPERTY DESCRIPTION",
         "definition": "Description of property that was burned, counterfeited, stolen, etc., during the incident.",
-        "length":"2",
-        "format":"N",
-        "comment": "‘99’ CANNOT be used unless state programs are directed to use it for trend crimes by the FBI and will be rejected if used normal submissions.", 
-        "values": [{
-            "code": "1",
-            "desc": "Aircraft"
+        "length": "2",
+        "format": "N",
+        "comment": "‘99’ CANNOT be used unless state programs are directed to use it for trend crimes by the FBI and will be rejected if used normal submissions.",
+        "values": [
+            {
+                "code": "1",
+                "desc": "Aircraft"
+            },
+            {
+                "code": "2",
+                "desc": "Alcohol"
+            },
+            {
+                "code": "3",
+                "desc": "Automobiles"
             },
             {
-            "code": "2",
-            "desc": "Alcohol"
+                "code": "4",
+                "desc": "Bicycles"
             },
             {
-            "code": "3",
-            "desc": "Automobiles"
+                "code": "5",
+                "desc": "Buses"
             },
             {
-            "code": "4",
-            "desc": "Bicycles"
+                "code": "6",
+                "desc": "Clothes or Furs"
             },
             {
-            "code": "5",
-            "desc": "Buses"
+                "code": "7",
+                "desc": "Computer Hardware or Software"
             },
             {
-            "code": "6",
-            "desc": "Clothes or Furs"
+                "code": "8",
+                "desc": "Consumable Goods"
             },
             {
-            "code": "7",
-            "desc": "Computer Hardware or Software"
+                "code": "9",
+                "desc": "Credit or Debit Cards"
             },
             {
-            "code": "8",
-            "desc": "Consumable Goods"
+                "code": "10",
+                "desc": "Drugs or Narcotics"
             },
             {
-            "code": "9",
-            "desc": "Credit or Debit Cards"
+                "code": "11",
+                "desc": "Drug Narcotic Equipment"
             },
             {
-            "code": "10",
-            "desc": "Drugs or Narcotics"
+                "code": "12",
+                "desc": "Farm Equipment"
             },
             {
-            "code": "11",
-            "desc": "Drug Narcotic Equipment"
+                "code": "13",
+                "desc": "Firearms"
             },
             {
-            "code": "12",
-            "desc": "Farm Equipment"
+                "code": "14",
+                "desc": "Gambling Equipment"
             },
             {
-            "code": "13",
-            "desc": "Firearms"
+                "code": "15",
+                "desc": "Heavy Construction or Industrial Equipment"
             },
             {
-            "code": "14",
-            "desc": "Gambling Equipment"
+                "code": "16",
+                "desc": "Household Goods"
             },
             {
-            "code": "15",
-            "desc": "Heavy Construction or Industrial Equipment"
+                "code": "17",
+                "desc": "Jewelry, Precious Metals"
             },
             {
-            "code": "16",
-            "desc": "Household Goods"
+                "code": "18",
+                "desc": "Livestock"
             },
             {
-            "code": "17",
-            "desc": "Jewelry, Precious Metals"
+                "code": "19",
+                "desc": "Merchandise"
             },
             {
-            "code": "18",
-            "desc": "Livestock"
+                "code": "20",
+                "desc": "Money"
             },
             {
-            "code": "19",
-            "desc": "Merchandise"
+                "code": "21",
+                "desc": "Negotiable Instruments"
             },
             {
-            "code": "20",
-            "desc": "Money"
+                "code": "22",
+                "desc": "Non-negotiable Instruments"
             },
             {
-            "code": "21",
-            "desc": "Negotiable Instruments"
+                "code": "23",
+                "desc": "Office-type Equipment"
             },
             {
-            "code": "22",
-            "desc": "Non-negotiable Instruments"
+                "code": "24",
+                "desc": "Other Motor Vehicles"
             },
             {
-            "code": "23",
-            "desc": "Office-type Equipment"
+                "code": "25",
+                "desc": "Purses, Handbags or Wallets"
             },
             {
-            "code": "24",
-            "desc": "Other Motor Vehicles"
+                "code": "26",
+                "desc": "Radios, TVs, VCRs or Cameras"
             },
             {
-            "code": "25",
-            "desc": "Purses, Handbags or Wallets"
+                "code": "27",
+                "desc": "Recordings: Audio or Visual"
             },
             {
-            "code": "26",
-            "desc": "Radios, TVs, VCRs or Cameras"
+                "code": "28",
+                "desc": "Recreational Vehicles"
             },
             {
-            "code": "27",
-            "desc": "Recordings: Audio or Visual"
+                "code": "29",
+                "desc": "Structures: Single Occupancy Dwellings"
             },
             {
-            "code": "28",
-            "desc": "Recreational Vehicles"
+                "code": "30",
+                "desc": "Structures: Other Dwellings"
             },
             {
-            "code": "29",
-            "desc": "Structures: Single Occupancy Dwellings"
+                "code": "31",
+                "desc": "Structures: Other Commercial/Business"
             },
             {
-            "code": "30",
-            "desc": "Structures: Other Dwellings"
-            },{
-            "code": "31",
-            "desc": "Structures: Other Commercial/Business"
+                "code": "32",
+                "desc": "Structures :Industrial/Manufacturing"
             },
             {
-            "code": "32",
-            "desc": "Structures :Industrial/Manufacturing"
+                "code": "33",
+                "desc": "Structures: Public/Community"
             },
             {
-            "code": "33",
-            "desc": "Structures: Public/Community"
+                "code": "34",
+                "desc": "Structures: Storage"
             },
             {
-            "code": "34",
-            "desc": "Structures: Storage"
+                "code": "35",
+                "desc": "Structures: Other"
             },
             {
-            "code": "35",
-            "desc": "Structures: Other"
+                "code": "36",
+                "desc": "Tools"
             },
             {
-            "code": "36",
-            "desc": "Tools"
+                "code": "37",
+                "desc": "Trucks"
             },
             {
-            "code": "37",
-            "desc": "Trucks"
+                "code": "38",
+                "desc": "Vehicle Parts or Accessories"
             },
             {
-            "code": "38",
-            "desc": "Vehicle Parts or Accessories"
+                "code": "39",
+                "desc": "Watercraft"
             },
             {
-            "code": "39",
-            "desc": "Watercraft"
+                "code": "41",
+                "desc": "Aircraft Parts/Accessories"
             },
             {
-            "code": "41",
-            "desc": "Aircraft Parts/Accessories"
+                "code": "42",
+                "desc": "Artistic Supplies/Accessories"
             },
             {
-            "code": "42",
-            "desc": "Artistic Supplies/Accessories"
+                "code": "43",
+                "desc": "Building Materials"
             },
             {
-            "code": "43",
-            "desc": "Building Materials"
+                "code": "44",
+                "desc": "Camping/Hunting/Fishing Equipment/Supplies"
             },
             {
-            "code": "44",
-            "desc": "Camping/Hunting/Fishing Equipment/Supplies"
+                "code": "45",
+                "desc": "Chemicals"
             },
             {
-            "code": "45",
-            "desc": "Chemicals"
+                "code": "46",
+                "desc": "Collections/Collectibles"
             },
             {
-            "code": "46",
-            "desc": "Collections/Collectibles"
+                "code": "47",
+                "desc": "Crops"
             },
             {
-            "code": "47",
-            "desc": "Crops"
+                "code": "48",
+                "desc": "Documents/Personal or Business"
             },
             {
-            "code": "48",
-            "desc": "Documents/Personal or Business"
+                "code": "49",
+                "desc": "Explosives"
             },
             {
-            "code": "49",
-            "desc": "Explosives"
+                "code": "59",
+                "desc": "Firearm Accessories"
             },
             {
-            "code": "59",
-            "desc": "Firearm Accessories"
+                "code": "64",
+                "desc": "Fuel"
             },
             {
-            "code": "64",
-            "desc": "Fuel"
+                "code": "65",
+                "desc": "Identity Documents"
             },
             {
-            "code": "65",
-            "desc": "Identity Documents"
+                "code": "66",
+                "desc": "Identity–Intangible"
             },
             {
-            "code": "66",
-            "desc": "Identity–Intangible"
+                "code": "67",
+                "desc": "Law Enforcement Equipment"
             },
             {
-            "code": "67",
-            "desc": "Law Enforcement Equipment"
+                "code": "68",
+                "desc": "Lawn/Yard/Garden Equipment"
             },
             {
-            "code": "68",
-            "desc": "Lawn/Yard/Garden Equipment"
+                "code": "69",
+                "desc": "Logging Equipment"
             },
             {
-            "code": "69",
-            "desc": "Logging Equipment"
+                "code": "70",
+                "desc": "Medical/Medical Lab Equipment"
             },
             {
-            "code": "70",
-            "desc": "Medical/Medical Lab Equipment"
+                "code": "71",
+                "desc": "Metals, Non-Precious"
             },
             {
-            "code": "71",
-            "desc": "Metals, Non-Precious"
+                "code": "72",
+                "desc": "Musical Instruments"
             },
             {
-            "code": "72",
-            "desc": "Musical Instruments"
+                "code": "73",
+                "desc": "Pets"
             },
             {
-            "code": "73",
-            "desc": "Pets"
-            },{
-            "code": "74",
-            "desc": "Photographic/Optical Equipment"
+                "code": "74",
+                "desc": "Photographic/Optical Equipment"
             },
             {
-            "code": "75",
-            "desc": "Portable Electronic Communications"
+                "code": "75",
+                "desc": "Portable Electronic Communications"
             },
             {
-            "code": "76",
-            "desc": "Recreational/Sports Equipment"
+                "code": "76",
+                "desc": "Recreational/Sports Equipment"
             },
             {
-            "code": "77",
-            "desc": "Other"
+                "code": "77",
+                "desc": "Other"
             },
             {
-            "code": "78",
-            "desc": "Trailers"
+                "code": "78",
+                "desc": "Trailers"
             },
             {
-            "code": "79",
-            "desc": "Watercraft Equipment/Parts/Accessories"
+                "code": "79",
+                "desc": "Watercraft Equipment/Parts/Accessories"
             },
             {
-            "code": "80",
-            "desc": "Weapons–Other"
+                "code": "80",
+                "desc": "Weapons–Other"
             },
             {
-            "code": "88",
-            "desc": "Pending Inventory"
+                "code": "88",
+                "desc": "Pending Inventory"
             },
             {
-            "code": "99",
-            "desc": "Special category used by the National UCR program to compile statistics."
-            }                       
-            ]     
-     },
-     {
+                "code": "99",
+                "desc": "Special category used by the National UCR program to compile statistics."
+            }
+        ]
+    },
+    {
         "de_num": "16",
         "name": "VALUE OF PROPERTY",
         "definition": "The total dollar value of the property burned, counterfeited, stolen, etc., during and incident",
-        "length":"9",
-        "format":"MMDDYYYY",
-        "comment": "Values are also entered for Seized Drugs and Narcotics. (LIBRS Only)", 
-        "values": [{
-            "code": "1",
-            "desc": "Unknown"
+        "length": "9",
+        "format": "MMDDYYYY",
+        "comment": "Values are also entered for Seized Drugs and Narcotics. (LIBRS Only)",
+        "values": [
+            {
+                "code": "1",
+                "desc": "Unknown"
             }
             
         ]

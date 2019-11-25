@@ -935,13 +935,11 @@
 
 <p>This page contains information on how LIBRS Flat Files should be processed and generated for use in submitting data to the State of Louisiana, and subsequently the FBI via NIBRS.</p>
 
-<p>This site contains the following information:</p>
-<ul>
-  <li><a href="./librs-spec">LIBRS Specification Documentation</a></li>
-  <li><a href="./data-elements">LIBRS Data Element Definitions</a></li>
-  <li><a href="./lrs-master-list">Master LIBRS LRS List</a></li>
-  <li>LRS to NIBRS Translations</li>
-</ul>
+<p>This site contains the following information:
+- <a href="./librs-spec">LIBRS Specification Documentation</a>
+- <a href="./data-elements">LIBRS Data Element Definitions</a>
+- <a href="./lrs-master-list">Master LIBRS LRS List</a>
+- LRS to NIBRS Translations</p>
 
 <table>
 <thead style="font-size: 14px;">
@@ -1182,6 +1180,879 @@
         
 		</table></td>
         <td style="min-width: 300px">This Data Element is located within Offender Segment.<br /><br />Can enter up to four codes per Offender. </td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">8A</td>
+		<td>Bias Motivation/Bias Crime Type</td>
+		<td>Indicates whether the Offender was motivated to commit the Offense because of his/her bias against a racial, religious, ethnic/national origin, sexual, or disability group.</td>
+		<td style="text-align: center;">2</td>
+		<td style="text-align: center;">N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px">These codes are presented for Legacy Reference for old data and should no longer be used. <br /><br /> The data element is located within Offender Segment.</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">9</td>
+		<td>Location Type</td>
+		<td>Location where each Offense took place.</td>
+		<td style="text-align: center;">2</td>
+		<td style="text-align: center;">N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">01</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Air, Bus, Train or Terminal</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">02</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Bank, Savings and Loan (incl. other Financial Institutions)</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">03</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Bar or Night Club</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">04</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Church, Synagogue or Temple (includes other Religious Buildings..)</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">05</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Commercial or Office Building</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">06</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Construction Site</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">07</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Convenience Store</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">08</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Department or Discount Store</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">09</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Drug Store, Doctor's Office or Hospital (includes Medical Supply Building)</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">10</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Field or Woods</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">11</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Government or Public Building</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">12</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Grocery or Supermarket</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">13</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Highway, Road or Alley (includes Street)</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">14</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Hotel, Motel, Etc. (includes Temporary Lodgings)</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">15</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Jail or Prison</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">16</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Lake or Waterway</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">17</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Liquor Store</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">18</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Parking lot/Garage</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">19</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Rental storage Facility</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">20</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Residence/Home</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">21</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Restaurant</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">22</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">School</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">23</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Service or Gas Station</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">24</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Specialty Store (incl. Fur Store, Jewelry Store, TV Store, Dress Shop, etc.)</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">25</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Other or Unknown (use only if no other code applies)</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">37</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Abandoned or Condemned Structure</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">38</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Amusement Park</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">39</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Arena, Stadium, Fairgrounds or Coliseum</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">40</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">ATM Separate from Bank</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">41</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Auto Dealership (New or Used)</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">42</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Camp or Campground</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">44</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Daycare Facility</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">45</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Dock, Wharf, Freight or Modal Terminal</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">46</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Farm Facility</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">47</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Gambling Facility, Casino or Race Track</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">48</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Industrial Site</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">49</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Military Installation</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">50</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Park or Playground</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">51</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Rest Area</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">52</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">School: College or University</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">53</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">School: Elementary or Secondary</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">54</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Shelter: Mission or Homeless</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">55</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Shopping Mall</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">56</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Tribal Lands</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">57</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;"> Community Center</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">58</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Cyberspace</td>
+            </tr>
+        
+		</table></td>
+        <td style="min-width: 300px">These codes are presented for Legacy Reference for old data and should no longer be used. <br /><br /> The data element is located within Offender Segment.</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">10</td>
+		<td>NUMBER OF PREMISES ENTERED</td>
+		<td>Number of structures entered.</td>
+		<td style="text-align: center;">2</td>
+		<td style="text-align: center;">N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px">Used only if crime is Burglary (220) AND if the Hotel Rule is applicable. Also, Location Type (Data Element No. 9) MUST be Hotel/Motel (14) or Jail/Prison (19)</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">11</td>
+		<td>METHOD OF ENTRY</td>
+		<td>Indicates whether Force or No Force was used by the burglar in entering a structure</td>
+		<td style="text-align: center;">1</td>
+		<td style="text-align: center;">A</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">A</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Attempted</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">C</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Completed</td>
+            </tr>
+        
+		</table></td>
+        <td style="min-width: 300px">Used only if crime is Burglary (220).</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">P1</td>
+		<td>PROPERTY SEQUENCE NUMBER</td>
+		<td>Each Property in the Incident MUST be assigned a UNIQUE Sequence Number.</td>
+		<td style="text-align: center;">3</td>
+		<td style="text-align: center;">N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px">Important: Internal system data element that allows for a Property to relate to many Offenses where multiple Property/Offense segments are submitted within a single incident.</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">P1R</td>
+		<td>PROPERTY SEQUENCE NUMBER REFERENCE</td>
+		<td>UNIQUE constraint that allows a Property to relate to many Offenses.</td>
+		<td style="text-align: center;">3</td>
+		<td style="text-align: center;">N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+		</table></td>
+        <td style="min-width: 300px">Important: Internal system data element that allows for multiple Property/Offense segments to be submitted within a single Incident.</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">14</td>
+		<td>TYPE OF PROPERTY LOSS</td>
+		<td>Describes the type of property loss, recovered, seized, etc., which occurred in an incident.</td>
+		<td style="text-align: center;">1</td>
+		<td style="text-align: center;">N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">1</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">None</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">2</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Burned</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">3</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Counterfeited or Forged</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">4</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Destroyed, Damaged or Vandalized</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">5</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Recovered</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">6</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Seized</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">7</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Stolen, Etc.</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">8</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Unknown</td>
+            </tr>
+        
+		</table></td>
+        <td style="min-width: 300px">Property segments submitted only if crime is:</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">15</td>
+		<td>PROPERTY DESCRIPTION</td>
+		<td>Description of property that was burned, counterfeited, stolen, etc., during the incident.</td>
+		<td style="text-align: center;">2</td>
+		<td style="text-align: center;">N</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">1</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Aircraft</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">2</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Alcohol</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">3</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Automobiles</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">4</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Bicycles</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">5</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Buses</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">6</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Clothes or Furs</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">7</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Computer Hardware or Software</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">8</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Consumable Goods</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">9</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Credit or Debit Cards</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">10</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Drugs or Narcotics</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">11</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Drug Narcotic Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">12</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Farm Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">13</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Firearms</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">14</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Gambling Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">15</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Heavy Construction or Industrial Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">16</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Household Goods</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">17</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Jewelry, Precious Metals</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">18</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Livestock</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">19</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Merchandise</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">20</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Money</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">21</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Negotiable Instruments</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">22</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Non-negotiable Instruments</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">23</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Office-type Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">24</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Other Motor Vehicles</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">25</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Purses, Handbags or Wallets</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">26</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Radios, TVs, VCRs or Cameras</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">27</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Recordings: Audio or Visual</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">28</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Recreational Vehicles</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">29</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Structures: Single Occupancy Dwellings</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">30</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Structures: Other Dwellings</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">31</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Structures: Other Commercial/Business</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">32</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Structures :Industrial/Manufacturing</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">33</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Structures: Public/Community</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">34</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Structures: Storage</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">35</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Structures: Other</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">36</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Tools</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">37</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Trucks</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">38</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Vehicle Parts or Accessories</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">39</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Watercraft</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">41</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Aircraft Parts/Accessories</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">42</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Artistic Supplies/Accessories</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">43</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Building Materials</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">44</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Camping/Hunting/Fishing Equipment/Supplies</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">45</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Chemicals</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">46</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Collections/Collectibles</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">47</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Crops</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">48</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Documents/Personal or Business</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">49</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Explosives</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">59</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Firearm Accessories</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">64</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Fuel</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">65</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Identity Documents</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">66</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Identity–Intangible</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">67</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Law Enforcement Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">68</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Lawn/Yard/Garden Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">69</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Logging Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">70</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Medical/Medical Lab Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">71</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Metals, Non-Precious</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">72</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Musical Instruments</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">73</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Pets</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">74</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Photographic/Optical Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">75</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Portable Electronic Communications</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">76</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Recreational/Sports Equipment</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">77</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Other</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">78</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Trailers</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">79</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Watercraft Equipment/Parts/Accessories</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">80</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Weapons–Other</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">88</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Pending Inventory</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">99</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Special category used by the National UCR program to compile statistics.</td>
+            </tr>
+        
+		</table></td>
+        <td style="min-width: 300px">‘99’ CANNOT be used unless state programs are directed to use it for trend crimes by the FBI and will be rejected if used normal submissions.</td>
+    </tr>
+
+	<tr>
+		<td style="max-width:80px;text-align: center;">16</td>
+		<td>VALUE OF PROPERTY</td>
+		<td>The total dollar value of the property burned, counterfeited, stolen, etc., during and incident</td>
+		<td style="text-align: center;">9</td>
+		<td style="text-align: center;">MMDDYYYY</td>
+        <td style="min-width: 250px">
+		<table class="subtable">
+		
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">1</td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;">Unknown</td>
+            </tr>
+        
+			<tr>
+            	<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px"></td>
+				<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+                <td style="vertical-align: top; padding-left:0px;"></td>
+            </tr>
+        
+		</table></td>
+        <td style="min-width: 300px">Values are also entered for Seized Drugs and Narcotics. (LIBRS Only)</td>
     </tr>
 
 </tbody>
