@@ -381,7 +381,9 @@
         "err_no": 12004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "desc_de6": "MUST be a valid code on Master LIBRS/LRS Code Table.",
-        "desc_de9": "MUST be a valid code on Master LIBRS/LRS Code Table."
+        "desc_de9": "MUST be a valid code on Master LIBRS/LRS Code Table.",
+        "desc_de12": "MUST be a valid code.",
+        "desc_de13": "MUST be a valid code."
     },
     "12005": {
         "err_no": 12005,
@@ -390,12 +392,15 @@
     "12006": {
         "err_no": 12006,
         "err_message": "ERROR - DUPLICATE VALUE = (VALUE)",
-        "desc_de8": "If more than one code entered, CANNOT be a duplicate."
+        "desc_de8": "If more than one code entered, CANNOT be a duplicate.",
+        "desc_de12": "If more than one code entered, CANNOT be a duplicate.",
+        "desc_de13": "If more than one code entered, CANNOT be a duplicate."
     },
     "12007": {
         "err_no": 12007,
         "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]",
-        "desc_de8": "Value 'N' = Not Applicable is mutually exclusive of any other value entered, i.e., 'N' is to be entered only if no other code applies."
+        "desc_de8": "Value 'N' = Not Applicable is mutually exclusive of any other value entered, i.e., 'N' is to be entered only if no other code applies.",
+        "desc_de13": "Value '99' (None) is mutually exclusive with any other value, i.e. '99' to be entered only if no other code applies."
     },
     "12015": {
         "err_no": 12015,
@@ -407,11 +412,15 @@
     },
     "12017": {
         "err_no": 12017,
-        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN, AND / OR BLANKS"
+        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN, AND / OR BLANKS",
+        "desc_de12": "A value of None/Unknown ('N') is mutually exclusive with any other Gang Information codes."
     },
     "12019": {
         "err_no": 12019,
-        "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES"
+        "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
+        "desc_de12": "MUST be entered if Louisiana Revised Statute (DE 6) has a NIBRS offense code of <b>250, 280, 35A, 35B, 370, 39C, 520, 90A, 90Z</b> and Louisiana Revised Statute (DE 6) is a 'Crime Against Property'.",
+        "desc_de12-2": "MUST be entered if Louisiana Revised Statute (DE 6): <br> - Is a NIBRS Offense codes <b>09A, 09B, 100, 11A, 11B, 11C, 11D, 13A, 13B and 13C</b> AND is an LRS of type 'Crime Against Person'. <br> - Is a NIBRS Offense code <b>120</b> AND is an LRS of type Crime Against Property'.",
+        "desc_de13": "MUST be entered if Louisiana Revised Statute (DE 6) has a NIBRS Offense code of <b>09A, 09B, 09C, 100, 11A, 11B, 11C, 11D, 120, 13A, 13B, 210, 520</b>."
     },
     "12051": {
         "err_no": 12051,
@@ -433,7 +442,8 @@
     },
     "12055": {
         "err_no": 12055,
-        "err_message": "AUTOMATIC INDICATOR MUST BE BLANK OR 'A'"
+        "err_message": "AUTOMATIC INDICATOR MUST BE BLANK OR 'A'",
+        "desc_de13": "The third character of Type of Weapon/Force Involved (DE 13) must be Automatic (A) or Blank (G)."
     },
     "12056": {
         "err_no": 12056,
@@ -447,11 +457,13 @@
     },
     "12058": {
         "err_no": 12058,
-        "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR"
+        "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR",
+        "desc_de13": "If the firearm is one of the following types of automatic weapons, add 'A' as the third character:<br>- 11 Firearm (Type not Stated)<br>- 12 Handgun<br>- 13 Rifle<br>- 14 Shotgun<br>- 15 Other Firearm."
     },
     "12065": {
         "err_no": 12065,
-        "err_message": "INVALID WEAPON WITH AN OFFENSE OF SIMPLE ASSAULT(13 B);ACCEPTED WEAPON CODES ARE 40, 90, 95."
+        "err_message": "INVALID WEAPON WITH AN OFFENSE OF SIMPLE ASSAULT(13 B);ACCEPTED WEAPON CODES ARE 40, 90, 95.",
+        "desc_de13": "When an Offense Segment (20) is submitted for one of the following Louisiana Revised Statutes (DE 6), the Offense will be reported to the FBI as a Simple Assault (13B) and must have Personal Weapons (40), Other (90), or Unknown (95) entered in Type of Weapon/Forced Involved."
     },
     "12066": {
         "err_no": 12066,
@@ -459,11 +471,13 @@
     },
     "12067": {
         "err_no": 12067,
-        "err_message": "INVALID WEAPON[weapon - code] WITH AN OFFENSE OF[offense]"
+        "err_message": "INVALID WEAPON WITH AN OFFENSE",
+        "desc_de13": "When a Homicide Offense (NIBRS 09A, 09B, or 09C) is submitted, Type of Weapon/Force Involved (DE 13) CANNOT have None (99) entered. Some Type of Weapon/Force Involved other than None (99) must be used in a Homicide Offense. "
     },
     "12069": {
         "err_no": 12069,
-        "err_message": "POSSIBLE CLASSIFICATION ERROR OF AGGRAVATED ASSAULT '13A' CODED AS SIMPLE '13B'"
+        "err_message": "POSSIBLE CLASSIFICATION ERROR OF AGGRAVATED ASSAULT '13A' CODED AS SIMPLE '13B'",
+        "desc_de13": "If the Louisiana Revised Statute (DE 6) is a simple assault (NIBRS 13B), but the weapon involved is:<br>- 11/11A Firearm or Automatic Firearm<br>- 12/12A Handgun or Automatic Handgun<br>- 13/13A Rifle or Automatic Rifle<br>- 14/14A Shotgun or Automatic Shotgun<br>- 15/15A Other Firearm or Other Automatic Firearm <br>This Offense should be reported as an Aggravated Assault (NIBRS 13A)."
     },
     "12090": {
         "err_no": 12090,
@@ -1456,7 +1470,8 @@
     },
     "84005": {
         "err_no": 84005,
-        "err_message": "WHEN LRS = 250, DE 12 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 250, DE 12 MUST HAVE A VALID CODE.",
+        "desc_de12": "When NIBRS Offense Code is <b>250</b>:<br> - Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code."
     },
     "84006": {
         "err_no": 84006,
@@ -1464,7 +1479,8 @@
     },
     "84007": {
         "err_no": 84007,
-        "err_message": "WHEN LRS = 35 A OR 35 B, DE 12 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 35 A OR 35 B, DE 12 MUST HAVE A VALID CODE.",
+        "desc_de12": "When NIBRS Offense Code is <b>35A or 35B</b>, then Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code."
     },
     "84008": {
         "err_no": 84008,
@@ -1496,7 +1512,8 @@
     },
     "84015": {
         "err_no": 84015,
-        "err_message": "WHEN LRS = 370, DE 12 MUST HAVE A VALID CODE AND DE 25 MUST EQUAL 'S'."
+        "err_message": "WHEN LRS = 370, DE 12 MUST HAVE A VALID CODE AND DE 25 MUST EQUAL 'S'.",
+        "desc_de12": "When NIBRS Offense Code is <b>370</b>:<br> - Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.<br> - Type of Victim (DE 25) MUST be Society ('S')."
     },
     "84016": {
         "err_no": 84016,
@@ -1516,11 +1533,13 @@
     },
     "84020": {
         "err_no": 84020,
-        "err_message": "WHEN LRS = 280, DE 12 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 280, DE 12 MUST HAVE A VALID CODE.",
+        "desc_de12": "When NIBRS Offense Code is <b>280</b>:<br> - Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code."
     },
     "84021": {
         "err_no": 84021,
-        "err_message": "WHEN LRS = 520, DE 12 & DE 13 MUST HAVE A VALID CODE AND DE 25 MUST BE EQUAL TO 'S'."
+        "err_message": "WHEN LRS = 520, DE 12 & DE 13 MUST HAVE A VALID CODE AND DE 25 MUST BE EQUAL TO 'S'.",
+        "desc_de12": "When NIBRS Offense Code is <b>520</b>:<br> - Type of Criminal Activity/Gang Information (DE 12)<br> - Type of Weapon/Force Involved (DE 13) MUST have a valid code<br> - Type of Victim (DE 25) MUST be Society ('S')."
     },
     "84101": {
         "err_no": 84101,
@@ -1624,7 +1643,8 @@
     },
     "84210": {
         "err_no": 84210,
-        "err_message": "WHEN LRS = 39 C, DE 12 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 39 C, DE 12 MUST HAVE A VALID CODE.",
+        "desc_de12": "When NIBRS Offense Code is <b>39C</b>:<br> - Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code."
     },
     "84211": {
         "err_no": 84211,
@@ -1906,7 +1926,8 @@
     },
     "90031": {
         "err_no": 90031,
-        "err_message": "WHEN THE OFFENSE WITH NIBRS = 720;CRIMINAL ACTIVITY(DE 12) MUST BE A VALID CODE AND IT CANNOT BE NONE;VALID CODES FOR THE ENTRY AT CRIMINAL ACTIVITY(DE 12) = 'A' 'F' 'I' 'S'"
+        "err_message": "WHEN THE OFFENSE WITH NIBRS = 720;CRIMINAL ACTIVITY(DE 12) MUST BE A VALID CODE AND IT CANNOT BE NONE;VALID CODES FOR THE ENTRY AT CRIMINAL ACTIVITY(DE 12) = 'A' 'F' 'I' 'S'",
+        "desc_de12": "When NIBRS Offense Code is <b>720</b><br> - Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code and cannot be None."
     },
     "90032": {
         "err_no": 90032,
@@ -1922,7 +1943,8 @@
     },
     "90036": {
         "err_no": 90036,
-        "err_message": "INVALID TYPE OF WEAPON / FORCE INVOLVED WITH AN OFFENSE OF NIBRS = 13 A;WEAPON / FORCE INVOLVED CANNOT BE NONE WITH THE INJURY TYPE OTHER THAN NONE"
+        "err_message": "INVALID TYPE OF WEAPON / FORCE INVOLVED WITH AN OFFENSE OF NIBRS = 13 A;WEAPON / FORCE INVOLVED CANNOT BE NONE WITH THE INJURY TYPE OTHER THAN NONE",
+        "desc_de13": "If the Louisiana Revised Statute (DE 6) is an Aggravated Assault (NIBRS 13A), Weapon/Force involved (DE 13) cannot be None (99) with the Type of Injury (DE 33) other than None (N)"
     },
     "90038": {
         "err_no": 90038,

@@ -1403,79 +1403,15 @@ Type of Weapon/Force Involved Nos. 1, 2 and 3 (13)
 
 **Requirements:**
 
-> 1\) MUST be a valid code. **Error 12004\
-> **
+> 1\) MUST be a valid code. **Error 12004
 >
-> 2\) If more than one code entered, CANNOT be a duplicate. **Error 12006\
-> **
+> 2\) If more than one code entered, CANNOT be a duplicate. **Error 12006
 >
-> 3\) Value \"99\" (None) is mutually exclusive with any other value, i.e.
-> \"99\" to be entered only if no other code applies. **Error 12007\
-> **
+> 3\) Value '99' (None) is mutually exclusive with any other value, i.e. '99' to be entered only if no other code applies. **Error 12007
 >
-> 4\) MUST be entered if Louisiana Revised Statute (6) **has a NIBRS
-> Offense code \[as defined on Master LIBRS/LRS Code Table\] of:**
->
-> **\
-> 09A 09B 09C\
-> 100\
-> 11A 11B 11C 11D\
-> 120\
-> 13A 13B\
-> 210\
-> 520\
-> \
-> \
-> **The following LRS codes are the Louisiana equivalent of the above
-> NIBRS Offense codes:
->
-> 14:20 14:30 14:30.1 14:31 14:32\
-> 14:32.1/AA 14:34 14:34.1 14:34.2 14:34.3\
-> 14:34.4 14:34.5 14:34.5.1 14:34.6 14:34.7
->
-> 14:35 14:35.1 14:35.2 14:35.3 14:35.3/M
->
-> 14:37 14:37.1 14:37.2 14:37.4 14:37.5
->
-> 14:38 14:38.1 14:38.2 14:38.3 14:39.1
->
-> 14:39.2 14:42/A 14:42/V 14:42.1/A 14:42.1/V
->
-> 14:43/A 14:43/V 14:43.1/P 14:43.1/N 14:43.2/P
->
-> 14:43.2/N 14:43.3 14:43.4 14:43.5 14:44
->
-> 14:44.1 14:44.1/V 14:44.1/A 14:44.1/O 14:44.1/P
->
-> 14:44.1/N 14:44.2 14:45 14:45.1 14:46
->
-> 14:46.1 14:46.30 14:54.2 14:54.3 14:59/A9
->
-> 14:60 14:62.8 14:64 14:64.1 14:64.2
->
-> 14:64.3 14:64.4 14:65 14:65.1/F 14:66
->
-> 14:81.2 14:87.1 14:87.2/F 14:87.2/L 14:87.5/F
->
-> 14:87.5/L 14:89.1 14:91 14:92.2.3 14:93/F
->
-> 14:93.2.3 14:93.5 14:94/E 14:94/F 14:95
->
-> 14:95.1 14:95.1.1 14:95.1.2 14:95.2 14:95.2.1
->
-> 14:95.2.2 14:95.5 14:95.6 14:95.7 14:95.8
->
-> 14:95.9 14:103/A1 14:107.1/F 14:108/B1B 14:108/B1BF
->
-> 14:108.2 14:122/F 14:129/A2F 14:129.1 14:129.1/F
->
-> 14:130.1/A 14:130.1/F 14:133.1/F 14:135 14:136 14:404/Q
->
-> 14:501 14:511 14:512 32:292 40:1783
->
-> 40:1784 40:1785 40:1787 40:1788 40:1789
->
-> 40:1792 **Error 12019**
+> 4\) MUST be entered if Louisiana Revised Statute (DE 6) has a NIBRS Offense code as defined on Master LIBRS/LRS Code Table of: <b>09A, 09B, 09C, 100, 11A, 11B, 11C, 11D, 120, 13A, 13B, 210, 520</b>
+
+> **Error 12019**
 
 5\) If the firearm is one of the following types of automatic weapons,
 add \"A\" as the third character:\
@@ -1497,11 +1433,6 @@ add \"A\" as the third character:\
 > as a Simple Assault (13B) and must have Personal Weapons (40), Other
 > (90), or Unknown (95) entered in Type of Weapon/Forced Involved:
 >
-> 14:34.2 14:34.3 14:34.4 14:34.5.1\* 14:35
->
-> 14:35.1 14:35.2 14:35.3\* 14:38 14:38.2
->
-> 14:38.3\* 14:103/A1 14:108/B1B 14:129.1 14:130.1/A
 >
 > **Error 12065**
 >
@@ -1510,10 +1441,7 @@ add \"A\" as the third character:\
 > Type of Weapon/Force Involved, other than None (99), must be used in a
 > Homicide Offense. Below are the Louisiana Revised Statutes (6) for
 > Homicide Offenses in Louisiana:
->
-> **14:20 14:30 14:30.1 14:31 14:32\
-> 14:32.1/AA 14:87.1 14:87.2/L 14:87.5/L 14:501**
->
+
 > **Error** **12067**
 
 **9) If the Louisiana Revised Statute (6) is a simple assault (NIBRS

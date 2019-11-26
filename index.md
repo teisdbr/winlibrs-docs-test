@@ -11,7 +11,7 @@ This page contains information on how LIBRS Flat Files should be processed and g
 
 This site contains the following information:
 - <a href="./librs-spec">LIBRS Specification Documentation</a>
-- <a href="./data-elements">LIBRS Data Element Definitions</a>
+- <a href="./data-elements2">LIBRS Data Element Definitions</a>
 - <a href="./lrs-master-list">Master LIBRS LRS List</a>
 - LRS to NIBRS Translations
   

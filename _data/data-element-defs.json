@@ -615,7 +615,7 @@
         "comment": "For Type of Criminal Activity, use ONLY if one of the following Offenses: (250) Counterfeiting/Forgery, (280) Stolen Property Offenses, (35A & 35B) Drug/Narcotic Offenses, (39C) Gambling Equip. Violations, (370) Pornography Materials, (520) Weapons Law Violations, (90A) Bad Checks, (90Z) 'Crime Against Property' Offenses and (720) Animal Cruelty.<br><br>Note: Can enter up to THREE codes of TYPE OF CRIMINAL ACTIVITY for each offense.<br><br><br><br>Note: Codes A, F, I and S may only be used for 720 Animal Cruelty Offenses.<br><br><br><br>For Gang Information, use only if the crime is one of the following offenses codes of “J”, ” G”, or ”N”: (09A) Murder and Nonnegligent Manslaughter, (09B) Negligent Homicide, (100) Kidnaping o r Abduction, (120) Robbery, (11A) Forcible Rape, (11B) Forcible Sodomy, (11C) Sexual Assault with An Object, (11D) Forcible Fondling, (13A) Aggravated Assault, (13B) Simple Assault and (13C) Intimidation<br><br><br><br>Note: Can enter up to TWO codes of GANG INFORMATION for each offense.<br><br>",
         "subsection": [
             {
-                "title": "TYPE OF CRIMINAL ACTIVITY for offenses of: 250, 35B, 520, 280, 39C, 90A, 35A, 370 and 90Z (Crime Against Property). Use ONLY the following codes:",
+                "title": "Criminal Activity",
                 "values": [
                     {
                         "code": "B",
@@ -676,7 +676,7 @@
                 ]
             },
             {
-                "title": "GANG INFORMATION For Offense of: 09A, 120, 11C, 13B, 09B, 11A, 11D, 13C, 100, 11B and 13A use ONLY the following codes:",
+                "title": "Gang Information",
                 "values": [
                     {
                         "code": "J",
@@ -688,7 +688,7 @@
                     },
                     {
                         "code": "N",
-                        "desc": "None or UnknowN"
+                        "desc": "None or Unknown"
                     }
                 ]
             }
@@ -701,7 +701,10 @@
         "length": "3",
         "format": "A/N",
         "comment": "Use this data element ONLY if crime is one of the following Offenses: (09A-09C) Homicide Offenses, (100) Kidnaping or Abduction, (11A-11D) Forcible Sex Offenses, (120) Robbery, (13A or 13B) Assault Offenses, (64A) Human Trafficking and Commercial Sex Acts, (64B) Human Trafficking and Involuntary Servitude, (210) Extortion/Blackmail, (520) Weapon Law Violations <br><br>If weapon is an Automatic Weapon (capable of continued fire if the trigger is held down), append an 'A' to the weapon code as a third character.<br><br>",
-        "values": [
+        "subsection": [
+            {
+                "title": "",
+                "values": [
             {
                 "code": "11",
                 "desc": "Firearm (type not stated)"
@@ -770,7 +773,7 @@
                 "code": "99",
                 "desc": "None (Mutually Exclusive to any other value)"
             }
-        ]
+        ]}]
     },
     {
         "de_num": "P1",
