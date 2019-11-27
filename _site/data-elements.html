@@ -939,8 +939,6 @@
 <h2 id="ori-number-1">ORI Number (1)</h2>
 <hr />
 
-<p><br /></p>
-
 <p><strong>Description:</strong> NCIC originating agency identifier number.</p>
 
 <p><strong>Data Characteristics:</strong> 9 Character Numeric/Alpha</p>
@@ -948,37 +946,32 @@
 <h3 id="requirements">Requirements:</h3>
 <hr />
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td>10001, 11001, 12001, 13001, 14001, 15001, 16001</td>
+      <td style="text-align: center">10001, 11001, 12001, 13001, 14001, 15001, 16001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>MUST be a valid 9-character NCIC number, where the last 2 positions of the ORI must reflect ‘00’ for all state and local agencies.</td>
-      <td>10052, 10086, 11004, 12004, 13004, 14004, 15004, 16004</td>
+      <td style="text-align: center">10052, 10086, 11004, 12004, 13004, 14004, 15004, 16004</td>
       <td>NOT A VALID ORI–NOT ON LIBRS ORI FILE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>First two positions MUST be the code of the state ‘LA’ in which the incident occurred.</td>
-      <td>10059</td>
+      <td style="text-align: center">10059</td>
       <td>ALL SEGMENTS ON MAGNETIC MEDIA MUST BE FROM SAME STATE - STATE = [state]</td>
     </tr>
   </tbody>
@@ -986,12 +979,12 @@
 
 <hr />
 
+<p><code class="highlighter-rouge">Note: This is the 9-character NCIC Originating Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. For state or local agency submissions, the last two positions must be "00".</code></p>
+
 <p><br /></p>
 
 <h2 id="incident-number-2">Incident Number (2)</h2>
 <hr />
-
-<p><br /></p>
 
 <p><strong>Description:</strong> Agency unique, in-house assigned case number. The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years.</p>
 
@@ -1000,81 +993,56 @@
 <h3 id="requirements-1">Requirements:</h3>
 <hr />
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td>10001, 11001, 12001, 13001, 14001, 15001, 16001</td>
+      <td style="text-align: center">10001, 11001, 12001, 13001, 14001, 15001, 16001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>Zero Reporting Segments (Segment 01) must contain twelve zeroes, same as the Incident Number.</td>
-      <td>10092</td>
+      <td style="text-align: center">10092</td>
       <td>ZERO - REPORTING INCIDENT NUMBER MUST BE ALL ZEROES</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>MUST be left justified with Blank right-fill if under 12 characters in length.</td>
-      <td>10016, 11016, 12016, 13016, 14016, 15016, 16016</td>
+      <td style="text-align: center">10016, 11016, 12016, 13016, 14016, 15016, 16016</td>
       <td>MUST BE LEFT - JUSTIFIED–BLANK DETECTED IN FIRST POSITION</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>4</td>
+      <td style="text-align: center">4</td>
       <td>Valid character combinations can include A-Z, 0-9, hyphens, and/or blanks.</td>
-      <td>11017, 11017, 12017, 13017, 14017, 15017, 16017</td>
+      <td style="text-align: center">11017, 11017, 12017, 13017, 14017, 15017, 16017</td>
       <td>CANNOT HAVE CHARACTERS OTHER THAN A-Z, 0-9, HYPHEN, AND/OR BLANKS</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>5</td>
+      <td style="text-align: center">5</td>
       <td>MUST be Blank right-fill if under twelve characters in length. The field CANNOT have embedded Blanks (G) between the first and last characters entered.</td>
-      <td>10015, 11015, 12015, 13015, 14015, 15015, 16015</td>
+      <td style="text-align: center">10015, 11015, 12015, 13015, 14015, 15015, 16015</td>
       <td>CANNOT HAVE EMBEDDED BLANKS BETWEEN FIRST AND LAST NON - BLANK CHARACTERS</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>6</td>
+      <td style="text-align: center">6</td>
       <td>This field MUST be unique for each incident reported by the agency. <br />This means that no two incidents can have the same Incident Number. <br />Some agencies ensure uniqueness by prefixing every incident number with a two-digit year followed by a number starting with 1, while others simply increment the Incident Number by one for each new incident.</td>
-      <td>10056, 11015, 12015, 13015, 14015, 15015, 16015</td>
+      <td style="text-align: center">10056, 11015, 12015, 13015, 14015, 15015, 16015</td>
       <td>INCIDENT ALREADY ON FILE–PREVIOUSLY ADDED TO FILE ON [MM/DD/YYYY]</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>7</td>
+      <td style="text-align: center">7</td>
       <td>CANNOT have duplicate Incident Number for ‘Time-Window’ Segment.</td>
-      <td>10087, 11015, 12015, 13015, 14015, 15015, 16015</td>
+      <td style="text-align: center">10087, 11015, 12015, 13015, 14015, 15015, 16015</td>
       <td>WINDOW SEGMENTS ALREADY ON FILE WITH THIS INCIDENT NUMBER</td>
     </tr>
   </tbody>
@@ -1082,9 +1050,11 @@
 
 <hr />
 
+<p><code class="highlighter-rouge">Note: Incident Number is the reporting agency's UNIQUE, in-house assigned case number. It is used to link subsequent update submissions to the original submission. This number will be encrypted prior to any dissemination of data to ensure that the recipient cannot identify the actual case. </code></p>
+
 <p><br /></p>
 
-<p><strong>Definitions:</strong></p>
+<h3 id="definitions">Definitions:</h3>
 
 <p><strong>Concept of time and place provides:</strong> If more than one crime was committed by the same person or group of persons and the time and space intervals separating them were insignificant, all of the crimes make up a single incident.</p>
 
@@ -1112,152 +1082,105 @@
 <h3 id="requirements-2">Requirements:</h3>
 <hr />
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td>11001</td>
+      <td style="text-align: center">11001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>Each component of the date must be valid; that is, months must be 01-12, days must be 01-31, and year must include the century (19xx, 20xx).<br />In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br />The Incident Date CANNOT exceed the current date.</td>
-      <td>11005</td>
+      <td style="text-align: center">11005</td>
       <td>DATE ENTERED MUST BE A VALID CALENDAR DATE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>When an ORI becomes inactive, no incident data may be submitted to LIBRS with an incident date on or after that date.<br />However, adjustments to previously submitted data may be done.</td>
-      <td>11018</td>
+      <td style="text-align: center">11018</td>
       <td>DATE CANNOT BE ON OR AFTER THE INACTIVE DATE [MMDDYYYY] OF THE ORI</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>4</td>
+      <td style="text-align: center">4</td>
       <td>The Incident Date CANNOT be earlier than 01/01/1991 for Inciden Report (‘I’) submissions.<br />This edit will preclude dates that are obviously incorrect since the FBI began accepting data on this date.</td>
-      <td>11072</td>
+      <td style="text-align: center">11072</td>
       <td>INCIDENT DATE/HOUR FOR ‘I’ RECORDS CANNOT PREDATE 01/01/1991</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>5</td>
+      <td style="text-align: center">5</td>
       <td>No data regarding an incident previously submitted under the Summary UCR reporting system can be submitted with an incident date later than the date the agency commenced reporting.<br />It will be regarded as a duplicate submission and be rejected since the Summary UCR system already contains the aggregate data for the months before LIBRS conversion.<br /><br />In other words, if an agency sends Incident Based Reporting (IBR) data for the first time on 20 July 2019, all ‘Incident Date/Hour’ (DE 3) entries for incidents, recovered property, and arrests must be within July, 2019<br /><br />The exception is when Exceptional Clearances occur for a pre-IBR incident<br />In this case, ‘Incident Date/Hour’ (DE 3) may be earlier than July, 2019, but Exceptional Clearance Date (5) must be within July, 2019<br />LIBRS maintains a table of start dates (Agency Base Dates) for every law enforcement agency in the state<br />Except for the above example, LIBRS will reject data submitted with an ‘Incident Date/Hour’ prior to the agency’s Base Date (start date).</td>
-      <td>11073</td>
+      <td style="text-align: center">11073</td>
       <td>INCIDENT DATE CANNOT BE BEFORE DATE ORI WENT IBR</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>6</td>
+      <td style="text-align: center">6</td>
       <td>Incident Date/Hour CANNOT be later than the year and month the data submission file represents. (EG A June 2019 data submission CANNOT contain incidents occurring after June).</td>
-      <td>11070</td>
+      <td style="text-align: center">11070</td>
       <td>INCIDENT DATE CANNOT BE AFTER YEAR [YYYY] AND MONTH [MM] OF TAPE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>7</td>
+      <td style="text-align: center">7</td>
       <td>The <strong>Submission Date (C3), in positions 23-30,</strong> and the Incident Date MUST be valid entries.<br />LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as ‘Time Window’ submissions.</td>
-      <td>11075</td>
+      <td style="text-align: center">11075</td>
       <td>CANNOT CALCULATE BASE DATE FROM INCIDENT DATE[MMDDYYYY]</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>8</td>
+      <td style="text-align: center">8</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) CANNOT have a date in ‘Incident Date/Hour’ (DE 3) that would be a valid date for an Incident occurring since the agency’s Base Date.<br />This is also true for any Administrative Segments (10) subsequently submitted with.</td>
+      <td style="text-align: center"> </td>
       <td> </td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>9</td>
+      <td style="text-align: center">9</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) CANNOT change the ‘Incident Date/Hour’ (DE 3) previously submitted in the original Incident Report (Action Type of ‘I’).</td>
-      <td>11061</td>
+      <td style="text-align: center">11061</td>
       <td>CANNOT MODIFY AN INCIDENT DATE THIS WAY–ON FILE IS [MMDDYYYYRHH]</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>10</td>
+      <td style="text-align: center">10</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) CANNOT change the Report Date Indicator (position 51 of the segment) of Segments which were previously submitted with an Action Type of ‘I’ (Incident Report).</td>
-      <td>11062</td>
+      <td style="text-align: center">11062</td>
       <td>CANNOT MODIFY A REPORT FLAG THIS WAY–ON FILE IS [MMDDYYYYRHH]</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>11</td>
+      <td style="text-align: center">11</td>
       <td>Administrative Segments (Segment 10) submitted with an Action Type of ‘M’ (Modify) CANNOT change the hour part of ‘Incident Date/Hour’ (DE 3) of incidents previously submitted with in the original Incident Report (Action Type of ‘I’).</td>
-      <td>11063</td>
+      <td style="text-align: center">11063</td>
       <td>CANNOT MDIFY AN INCIDENT HOUR THIS WAY–ON FILE IS [MMDDYYYYRHH]</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>12</td>
+      <td style="text-align: center">12</td>
       <td>If HOUR is entered it must be 00 through 23.<br />Note: If the Incident Date occurred at exactly midnight, enter theIncident Date as if the time was 1 minute past midnight. <br /><br />Example: If the incident occurred at exactly midnight on Thursday, enter Friday’s date and 00 for the hour.</td>
-      <td>11052</td>
+      <td style="text-align: center">11052</td>
       <td>INVALID HOUR ENTRY</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>13</td>
+      <td style="text-align: center">13</td>
       <td>If the Incident Date is unknown, use the Report Date. Indicate a Report Date with an ‘R’ in the space before the hour. If this is the Incident Date, then leave the ‘Report’ indicator blank.</td>
-      <td>11051</td>
+      <td style="text-align: center">11051</td>
       <td>REPORT INDICATOR MUST BE BLANK OR ‘R’</td>
     </tr>
   </tbody>
 </table>
 
 <hr />
+
+<p>Notes
+<code class="highlighter-rouge">This data element is to be used to enter the month, day, year and hours when the incident occurred or started, or the beginning of the time period in which it occurred. "Military" twenty-four (24) hour time is to be used.</code>
+<code class="highlighter-rouge">If the incident occurred on or between midnight and 0059, enter "00" for the hour; if on or between 0100 and 0159, enter "01" for the hour if on or between 2300 and 2359, enter "23" for the hour, etc.</code>
+<code class="highlighter-rouge">If the incident occurred at exactly midnight, it is considered to have occurred at the beginning of the next day.  Therefore "00" should be entered for the hour, along with the next day's date.</code>
+<code class="highlighter-rouge">If the incident date is unknown, enter the date of the report with the indicator "R" = Report.  Otherwise leave the report column nine (9) blank.</code>
+<code class="highlighter-rouge">If the incident hour is unknown, leave the hour blank.</code></p>
 
 <p><br /></p>
 
@@ -1309,70 +1232,50 @@
 <h3 id="requirements-3">Requirements:</h3>
 <hr />
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td>11001</td>
+      <td style="text-align: center">11001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>MUST be a valid code.</td>
-      <td>11004</td>
+      <td style="text-align: center">11004</td>
       <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>CANNOT be ‘N’ (Not Applicable) if Exceptional Clearance Date is entered.</td>
-      <td>11053</td>
+      <td style="text-align: center">11053</td>
       <td>VALUE ENTERED CONFLICTS WITH PRESENCE OF AN ENTRY IN EXCEPTIONAL CLEARANCE DATE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>4</td>
+      <td style="text-align: center">4</td>
       <td>When a value other than ‘N’ (Not Applicable) is entered, there can be NO Arrestee Segments associated with the Incident.</td>
-      <td>11071</td>
+      <td style="text-align: center">11071</td>
       <td>INCIDENT DATE IS OUTSIDE THE BASE DATE CALCULATION</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>5</td>
+      <td style="text-align: center">5</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) must have an ‘N’ (Not Applicable) in Cleared Exceptionally (DE 4) indicator when Arrestees are included as part of the original Incident Report.</td>
-      <td>11064</td>
+      <td style="text-align: center">11064</td>
       <td>CLEARED EXCEPTIONALLY FIELD MUST CONTAIN ‘N’ WHEN ARRESTEES WERE REPORTED</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>6</td>
+      <td style="text-align: center">6</td>
       <td>Administrative Segment (10) submitted with an Action Type of ‘W’ (Time Window Submission) CANNOT contain an ‘N’ (Not Applicable) in Cleared Exceptionally (DE 4).</td>
-      <td>11054</td>
+      <td style="text-align: center">11054</td>
       <td>CLEARED EXCEPTIONALLY CANNOT CONTAIN ‘N’ WITH SEGMENT ACTION TYPE ‘W’</td>
     </tr>
   </tbody>
@@ -1390,7 +1293,7 @@
 <table>
 <thead>
 	<tr>
-		<th colspan="2" style="align-text:center;">Cleared Exceptionall Indicators</th>
+		<th colspan="2" style="align-text:center;">Cleared Exceptionally Indicators</th>
 	</tr>
     </thead>
     <tbody>
@@ -1402,42 +1305,157 @@
     
 
     
-        
-        <tr>
-        <td>A</td>
-		    <td>Death of Offender</td>
-        </tr>
-        
-        <tr>
-        <td>B</td>
-		    <td>Prosecution Declined</td>
-        </tr>
-        
-        <tr>
-        <td>C</td>
-		    <td>Extradition Denied</td>
-        </tr>
-        
-        <tr>
-        <td>D</td>
-		    <td>Victim Refused to Cooperate</td>
-        </tr>
-        
-        <tr>
-        <td>E</td>
-		    <td>Juvenile / No Custody</td>
-        </tr>
-        
-        <tr>
-        <td>O</td>
-		    <td>Other (Administrative Closing)</td>
-        </tr>
-        
-        <tr>
-        <td>N</td>
-		    <td>Not Applicable</td>
-        </tr>
-        
+    <tr><td>
+			
+				<table class="subtable">
+				
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">A</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Death of Offender</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">B</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Prosecution Declined</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">C</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Extradition Denied</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">D</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Victim Refused to Cooperate</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">E</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Juvenile / No Custody</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">O</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Other (Administrative Closing)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">N</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Not Applicable</td>
+            		</tr>
+					
+				</table>
+			
+        	
+		</td></tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -1510,92 +1528,62 @@
 <h3 id="requirements-4">Requirements:</h3>
 <hr />
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>The clearance date CANNOT be earlier than the incident date.</td>
-      <td>11055</td>
+      <td style="text-align: center">11055</td>
       <td>CLEARANCE DATE [MMDDYYYY] PREDATES INCIDENT DATE [MMDDYYYY]</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>MUST be present if incident was cleared exceptionally with a data value of ‘A’, ‘B’, ‘C’, ‘D’, ‘E’, or ‘O’ in Cleared Exceptionally (DE 4).</td>
-      <td>11056</td>
+      <td style="text-align: center">11056</td>
       <td>AN ENTRY MUST BE MADE WHEN CLEARED EXCEPTIONALLY HAS ENTRIES OF A - E</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>Each component of the date must be valid: Months must be 0-12, days must be 01-31, and year must include the century (19xx, 20xx). In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br /><br />The Exceptional Clearance Date CANNOT be greater than that entered within the Reporting Period (DE C4).<br /><br />For example, if the Reporting Period is 062019 (June 2019), then the Exceptional Clearance Date CANNOT contain any date 07/01/2019 or greater.</td>
-      <td>11005</td>
+      <td style="text-align: center">11005</td>
       <td>DATE ENTERED MUST BE A VALID CALENDAR DATE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>4</td>
+      <td style="text-align: center">4</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) must contain Cleared Exceptionally (DE 4) and Exceptional Clearance Date (DE 5).<br /><br />Both data elements must be present to be a valid submission.</td>
-      <td>11057</td>
+      <td style="text-align: center">11057</td>
       <td>MUST BE PRESENT FOR TIME WINDOW SEGMENT</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>5</td>
+      <td style="text-align: center">5</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the ‘Time-Window’ Base Date<br /><br />This is also true for any ‘M’ (Modify) submissions subsequent to a previously submitted Time-Window Submission (Action Type of ‘W’).</td>
-      <td>11020</td>
+      <td style="text-align: center">11020</td>
       <td>EXCEPTIONAL CLEARANCE DATE CANNOT PREDATE BASE DATE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>6</td>
+      <td style="text-align: center">6</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) and an Exceptional Clearance (DE 4) indicator of ‘N’ (Not Applicable) CANNOT have an entry in Exceptional Clearance Date (DE 5).</td>
-      <td>11066</td>
+      <td style="text-align: center">11066</td>
       <td>CANNOT HAVE ENTRY IN EXCEPTIONAL CLEARANCE DATE IF CLEARED EXCEPTIONALLY IS ‘N’</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>7</td>
+      <td style="text-align: center">7</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘M’ (Modify) for a previously submitted Time-Window Submission (Action Type of ‘W’) must have an Exceptional Clearance Date (DE 5).</td>
-      <td>11067</td>
+      <td style="text-align: center">11067</td>
       <td>DATE CANNOT BE BLANK FOR SEGMENT</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>8</td>
+      <td style="text-align: center">8</td>
       <td>Administrative Segments (10) submitted with an Action Type of ‘W’ (Time-Window Submission) or ‘M’ (Modify) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the date the ORI was certified for LIBRS submission.</td>
-      <td>11074</td>
+      <td style="text-align: center">11074</td>
       <td>EXCEPTIONAL CLEARANCE DATE PREDATES DATE ORI WENT IBR</td>
     </tr>
   </tbody>
@@ -1634,37 +1622,32 @@
 
 <h3 id="requirements-5">Requirements:</h3>
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td>12001</td>
+      <td style="text-align: center">12001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>MUST be numeric entry (001 through 999) with zero left-fill. Offense Sequence Number (DE L6) distinguishes one offense from another.</td>
-      <td>15002</td>
+      <td style="text-align: center">15002</td>
       <td>CONTAINS NON NUMERIC ENTRY</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>Must be unique – CANNOT be duplicated.</td>
-      <td>25001</td>
+      <td style="text-align: center">25001</td>
       <td>MUST BE UNIQUE–CANNOT BE DUPLICATED</td>
     </tr>
   </tbody>
@@ -1681,37 +1664,32 @@
 
 <h3 id="requirements-6">Requirements:</h3>
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td>90021</td>
+      <td style="text-align: center">90021</td>
       <td>OFFENSE SEQUENCE NUMBER MUST BE PRESENT–CANNOT BE BLANK</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>MUST be numeric entry (001 through 999) with zero left-fill.</td>
-      <td>90022</td>
+      <td style="text-align: center">90022</td>
       <td>OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>MUST match the Offense Sequence Number (DE L6) of one of the Offense segments submitted in the corresponding incident.</td>
-      <td>90024</td>
+      <td style="text-align: center">90024</td>
       <td>PROPERTY SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED PROPERTIES’ SEQUENCE NUMBERS</td>
     </tr>
   </tbody>
@@ -1756,26 +1734,26 @@
 <h3 id="requirements-7">Requirements:</h3>
 <hr />
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td> </td>
-      <td>12001</td>
+      <td style="text-align: center">12001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>MUST be numeric entry (001 through 999) with zero left-fill.</td>
-      <td>90022</td>
+      <td style="text-align: center">90022</td>
       <td>OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL</td>
     </tr>
   </tbody>
@@ -1813,11 +1791,13 @@
 
 <p><br /></p>
 
-<p><strong>Refer to the Master LIBRS/LRS Code Table to determine:</strong>
-- LRS Codes that are accepted
-- What offense the LRS code was assigned: NIBRS Code determines offense to be reported.
-- Index Class assigned to each LRS
-- IBR and NIBRS rankings.</p>
+<p><strong>Refer to the Master LIBRS/LRS Code Table to determine:</strong></p>
+<ul>
+  <li>LRS Codes that are accepted</li>
+  <li>What offense the LRS code was assigned: NIBRS Code determines offense to be reported.</li>
+  <li>Index Class assigned to each LRS</li>
+  <li>IBR and NIBRS rankings.</li>
+</ul>
 
 <p><strong>To determine definitions of Qualifiers see the list at the end of this section.</strong></p>
 
@@ -1834,26 +1814,26 @@
 <h3 id="requirements-8">Requirements:</h3>
 <hr />
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>If the value of LIBRS Spec Indicator (C12) is ‘2.5’, then EVERY Offense Segment (20) in the data submission MUST have an Agency Supplied NIBRS Code (N6).<br /><br />If Agency Supplied NIBRS Code (N6) is missing, WinLIBRS will insert the <em>default</em> NIBRS value based on the LRS for that particular offense. This may not be the intended NIBRS Code for the submitted offense.</td>
-      <td>06011</td>
+      <td style="text-align: center">06011</td>
       <td>WARNING - PROVIDE VALID NIBRS CODE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>MUST be a valid code.</td>
-      <td>06011</td>
+      <td style="text-align: center">06011</td>
       <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
     </tr>
   </tbody>
@@ -1872,59 +1852,44 @@
 <h3 id="requirements-9">Requirements:</h3>
 <hr />
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td>12001</td>
+      <td style="text-align: center">12001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>MUST be a valid code of ‘A’ (Attempted) or ‘C’ (Completed).</td>
-      <td>12051</td>
+      <td style="text-align: center">12051</td>
       <td>INVALID CODE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>When Attempted (‘A’) is entered and Louisiana Revised Statute (DE 6) is either a Crime Against Property, or a Gambling (NIBRS 39A or NIBRS 39B), Kidnaping (NIBRS 100) or Drug/Narcotic offense (NIBRS 35A or 35B), then Type of Property Loss (14) must be None (1) or Unknown (8).</td>
-      <td>10077</td>
+      <td style="text-align: center">10077</td>
       <td>NEED A PROPERTY LOSS CODE OF ‘1’ OR ‘8’ WHEN THIS OFFENSE IS ATTEMPTED</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>4</td>
+      <td style="text-align: center">4</td>
       <td>When Completed (‘C’) is entered and Louisiana Revised Statute (DE 6) is either a Crime Against Property, or a Gambling (NIBRS 39A or NIBRS 39B), Kidnaping (100), or Drug/Narcotic offense (NIBRS 35A or NIBRS 35B), then Property Segments 30 and 31 must be present with a valid code in Type of Property Loss (DE 14).</td>
-      <td>10078</td>
+      <td style="text-align: center">10078</td>
       <td>A VALID PROPERTY LOSS CODE DOES NOT EXIST FOR THIS COMPLETED OFFENSE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>5</td>
+      <td style="text-align: center">5</td>
       <td>Offense Attempted/Completed (DE 7) must be Completed (‘C’) when Louisiana Revised Statute (DE 6) is an ‘Assault’ or ‘Homicide’.</td>
-      <td>12056</td>
+      <td style="text-align: center">12056</td>
       <td>OFFENSE CODES OF MURDER(09 A, 09 B, 09 C) AND ASSAULT(13 A, 13 B, 13 C) MUST HAVE ENTRY OF ‘C’</td>
     </tr>
   </tbody>
@@ -1966,17 +1931,127 @@
     
 
     
-        
-        <tr>
-        <td>A</td>
-		    <td>Attempted</td>
-        </tr>
-        
-        <tr>
-        <td>C</td>
-		    <td>Completed</td>
-        </tr>
-        
+    <tr><td>
+			
+				<table class="subtable">
+				
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">A</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Attempted</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">C</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Completed</td>
+            		</tr>
+					
+				</table>
+			
+        	
+		</td></tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2037,48 +2112,38 @@
 <h3 id="requirements-10">Requirements:</h3>
 <hr />
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>Must be present – CANNOT be Blank (G).</td>
-      <td>14001</td>
+      <td style="text-align: center">14001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>MUST be a valid code on Master LIBRS/LRS Code Table.</td>
-      <td>14004</td>
+      <td style="text-align: center">14004</td>
       <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>If more than one code entered, CANNOT be a duplicate.</td>
-      <td>12006</td>
+      <td style="text-align: center">12006</td>
       <td>ERROR - DUPLICATE VALUE = (VALUE)</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>4</td>
+      <td style="text-align: center">4</td>
       <td>Value ‘N’ = Not Applicable is mutually exclusive of any other value entered, i.e., ‘N’ is to be entered only if no other code applies.</td>
-      <td>12007</td>
+      <td style="text-align: center">12007</td>
       <td>ERROR - MUTUALLY EXCLUSIVE VALUE = [value]</td>
     </tr>
   </tbody>
@@ -2094,7 +2159,7 @@
 <table>
 <thead>
 	<tr>
-		<th colspan="2" style="align-text:center;">123</th>
+		<th colspan="2" style="align-text:center;">Offender Suspected of Using/Gaming Motivation</th>
 	</tr>
     </thead>
     <tbody>
@@ -2120,32 +2185,145 @@
     
 
     
-        
-        <tr>
-        <td>A</td>
-		    <td>Alcohol</td>
-        </tr>
-        
-        <tr>
-        <td>C</td>
-		    <td>Computer Equipment</td>
-        </tr>
-        
-        <tr>
-        <td>D</td>
-		    <td>Drugs/Narcotics</td>
-        </tr>
-        
-        <tr>
-        <td>G</td>
-		    <td>Gaming Activity Motive for Crime</td>
-        </tr>
-        
-        <tr>
-        <td>N</td>
-		    <td>Not Applicable (LIBRS Only)</td>
-        </tr>
-        
+    <tr><td>
+			
+				<table class="subtable">
+				
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">A</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Alcohol</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">C</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Computer Equipment</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">D</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Drugs/Narcotics</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">G</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Gaming Activity Motive for Crime</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">N</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Not Applicable (LIBRS Only)</td>
+            		</tr>
+					
+				</table>
+			
+        	
+		</td></tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     
@@ -2203,6 +2381,1075 @@
 
 <p><br /></p>
 
+<h2 id="bias-motivationbias-crime-type-8a">Bias Motivation/Bias Crime Type (8A)</h2>
+
+<p><strong>Data Characteristics:</strong> 2 Character Alpha</p>
+
+<h3 id="requirements-11">Requirements:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td>Must be present – CANNOT be Blank (G).</td>
+      <td style="text-align: center">14001</td>
+      <td>MUST BE PRESENT–MANDATORY FIELD</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td>MUST be a valid code on Master LIBRS/LRS Code Table.</td>
+      <td style="text-align: center">14004</td>
+      <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h3 id="allowed-entries-3">Allowed Entries:</h3>
+<hr />
+
+<p>Enter only one code for each Offender Segment (40):</p>
+
+<table>
+<thead>
+	<tr>
+		<th colspan="2" style="align-text:center;">Bias Motivation/Bias Crime Type</th>
+	</tr>
+    </thead>
+    <tbody>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <tr><td>
+			
+				<table class="subtable">
+				<th colspan="3">Race/Ethnicity/Ancestry</th> 
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">11</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-White</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">12</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Black or African American</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">13</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-American Indian / Alaskan Native</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">14</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Asian</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">15</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Multiple Races, Group</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">16</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Native Hawaiian or Other Pacific Islander</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">31</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Arab</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">32</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Hispanic or Latino</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">33</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Other Race/Ethnicity/Ancestry</td>
+            		</tr>
+					
+				</table>
+			<br />
+        	
+				<table class="subtable">
+				<th colspan="3">Religion</th> 
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">21</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Jewish</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">22</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Catholic</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">23</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Protestant</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">24</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Islamic (Muslim)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">25</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Other Religion</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">26</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Multiple Religions, Group</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">27</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Atheism/Agnosticism</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">28</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Mormon</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">29</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Jehovah’s Witness</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">81</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Eastern Orthodox (Russian, Greek, Other)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">82</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Other Christian</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">83</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Buddhist</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">84</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Hindu</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">85</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Sikh</td>
+            		</tr>
+					
+				</table>
+			<br />
+        	
+				<table class="subtable">
+				<th colspan="3">Sexual Orientation</th> 
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">41</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Gay (Male)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">42</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Lesbian (Female)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">43</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Lesbian, Gay, Bisexual or Transgender (Mixed Group)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">44</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Heterosexual</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">45</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Bisexual</td>
+            		</tr>
+					
+				</table>
+			<br />
+        	
+				<table class="subtable">
+				<th colspan="3">Disability</th> 
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">51</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Physical Disability</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">52</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Mental Disability</td>
+            		</tr>
+					
+				</table>
+			<br />
+        	
+				<table class="subtable">
+				<th colspan="3">Gender</th> 
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">61</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Male</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">62</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Female</td>
+            		</tr>
+					
+				</table>
+			<br />
+        	
+				<table class="subtable">
+				<th colspan="3">Gender Identity</th> 
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">71</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Transgender</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">72</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Anti-Gender Non-Conforming</td>
+            		</tr>
+					
+				</table>
+			<br />
+        	
+				<table class="subtable">
+				<th colspan="3">None/Unkown</th> 
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">88</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">None (No Bias)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">99</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Unknown (Offender’s Motivation Not Known)</td>
+            		</tr>
+					
+				</table>
+			<br />
+        	
+				<table class="subtable">
+				<th colspan="3">Other Bias (LIBRS Only)</th> 
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">70</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Age (LIBRS Only). Sent to NIBRS as “99”</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">71</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Ancestry (LIBRS Only). Sent to NIBRS as “33”</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">72</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Creed (LIBRS Only). Sent to NIBRS as “25”</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">73</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Gender (LIBRS Only). Sent to NIBRS as “99”</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">74</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Organizational Affiliation (LIBRS Only). Sent to NIBRS as “99”</td>
+            		</tr>
+					
+				</table>
+			
+        	
+		</td></tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</tbody>
+</table>
+
+<p><br /></p>
+
+<p>In LIBRS, incidents not having facts that indicate biased motivation on the part of the Offender are to be coded as None (88), while incidents involving ambiguous facts (that is, where some facts are present, but not conclusive) are to be coded Unknown (99).</p>
+
+<p>If any Bias Motivation/Bias Crime Type codes are used, other than None (88) or Unknown (99), then the incident will be considered a hate crime, and the Louisiana Revised Statute (DE 6) probably should be appended with the Hate Crime Penalty Enhancer (-H) to represent enhanced penalties related to hate crimes in LRS 14:107.2.</p>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="location-type-9">Location Type (9)</h2>
+
+<p><strong>Data Characteristics:</strong> 2 Character Alpha</p>
+
+<h3 id="requirements-12">Requirements:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td>Must be present – CANNOT be Blank (G).</td>
+      <td style="text-align: center">12001</td>
+      <td>MUST BE PRESENT–MANDATORY FIELD</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td>MUST be a valid code on Master LIBRS/LRS Code Table.</td>
+      <td style="text-align: center">12004</td>
+      <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+
+<h3 id="allowed-entries-4">Allowed Entries:</h3>
+<hr />
+
+<p>Enter only one (1) code per Offense Segment:</p>
+
+<p><br /></p>
+
+<table>
+<thead>
+	<tr>
+		<th colspan="2" style="align-text:center;">Location Type</th>
+	</tr>
+    </thead>
+    <tbody>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <tr><td>
+			
+				<table class="subtable">
+				
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">01</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Air, Bus, Train or Terminal</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">02</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Bank, Savings and Loan (incl. other Financial Institutions)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">03</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Bar or Night Club</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">04</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Church, Synagogue or Temple (includes other Religious Buildings..)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">05</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Commercial or Office Building</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">06</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Construction Site</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">07</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Convenience Store</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">08</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Department or Discount Store</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">09</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Drug Store, Doctor's Office or Hospital (includes Medical Supply Building)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">10</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Field or Woods</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">11</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Government or Public Building</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">12</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Grocery or Supermarket</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">13</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Highway, Road or Alley (includes Street)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">14</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Hotel, Motel, Etc. (includes Temporary Lodgings)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">15</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Jail or Prison</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">16</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Lake or Waterway</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">17</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Liquor Store</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">18</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Parking lot/Garage</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">19</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Rental storage Facility</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">20</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Residence/Home</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">21</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Restaurant</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">22</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">School</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">23</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Service or Gas Station</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">24</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Specialty Store (incl. Fur Store, Jewelry Store, TV Store, Dress Shop, etc.)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">25</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Other or Unknown (use only if no other code applies)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">37</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Abandoned or Condemned Structure</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">38</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Amusement Park</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">39</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Arena, Stadium, Fairgrounds or Coliseum</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">40</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">ATM Separate from Bank</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">41</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Auto Dealership (New or Used)</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">42</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Camp or Campground</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">44</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Daycare Facility</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">45</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Dock, Wharf, Freight or Modal Terminal</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">46</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Farm Facility</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">47</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Gambling Facility, Casino or Race Track</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">48</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Industrial Site</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">49</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Military Installation</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">50</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Park or Playground</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">51</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Rest Area</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">52</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">School: College or University</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">53</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">School: Elementary or Secondary</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">54</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Shelter: Mission or Homeless</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">55</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Shopping Mall</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">56</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Tribal Lands</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">57</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;"> Community Center</td>
+            		</tr>
+					
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">58</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">Cyberspace</td>
+            		</tr>
+					
+				</table>
+			
+        	
+		</td></tr>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+</tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="examples-6">Examples:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Example Number</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: left">An assault started in a bar (‘03’), continued into an adjoining parking lot (‘18’), and ended in the street (‘13’). As the bar was the location where the offense was initiated and best describes the circumstances of the crime, Bar/Night Club (‘03’) should be entered.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td style="text-align: left">Two Offenders robbed a bar. One of the Offenders raped a female customer in the bar while the other Offender stood at the door with a gun. In this case, there is one incident, with two offenses: robbery and forcible rape. The location of the robbery would be Bar/Night Club (‘03’), and the location of the forcible rape would also be Bar/Night Club (‘03’).</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h2 id="number-of-premises-entered-10">Number of Premises Entered (10)</h2>
+<hr />
+
+<p><strong>Data Characteristics:</strong> 2 Character <strong>Alpha/Numeric</strong></p>
+
+<h3 id="requirements-13">Requirements:</h3>
+<hr />
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td>MUST be entered if Louisiana Revised Statute (DE 6) has a NIBRS Offense code as defined on the Master LIBRS/LRS Code Table of <b>220</b> and Location Type (DE 9) contains Hotels/Motels/Etc. (‘14’) or Rental Storage Facility (‘19’).</td>
+      <td style="text-align: center">12057</td>
+      <td>MUST BE PRESENT WITH AN OFFENSE CODE OF 220 AND A LOCATION TYPE OF 14 OR 19</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">2</td>
+      <td>MUST be numeric entry of 01-99 if entered.</td>
+      <td style="text-align: center">12002</td>
+      <td>CONTAINS NON NUMERIC ENTRY</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">3</td>
+      <td>When entered, Location Type 9 (9) must be Hotel/Motel/Etc. (‘14’) or Rental Storage Facility (‘19’), and LRS (DE 6) has a related NIBRS offense code of <b>220</b> as defined on the Master LIBRS/LRS Code Table</td>
+      <td style="text-align: center">12052</td>
+      <td>OFFENSE CODE MUST BE BURGLARY WITH LOCATION TYPE OF 14, 19 FOR DATA TO BE ENTERED</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
+<h3 id="examples-7">Examples:</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Example Number</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">1</td>
+      <td style="text-align: left">A ‘self-storage’ building was burglarized and 11 rented storage compartments were forcibly entered. The number ‘11’ (for eleven compartments) should be entered into Number of Premises Entered (DE 10).</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<p><br /></p>
+
 <h1 id="control-data-elements">Control Data Elements</h1>
 <hr />
 
@@ -2215,37 +3462,32 @@
 
 <p><strong>Requirements:</strong></p>
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>DE C1 must be present – CANNOT be blank.</td>
-      <td>20001</td>
+      <td style="text-align: center">20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>DE C1 must be a valid code.</td>
-      <td>20002</td>
+      <td style="text-align: center">20002</td>
       <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>DE C1 must identify a segment of proper length.</td>
-      <td>20015</td>
+      <td style="text-align: center">20015</td>
       <td>END OF SEGMENT MARKER EXPECTED–END OF SEGMENT MARKER NOT FOUND</td>
     </tr>
   </tbody>
@@ -2339,15 +3581,20 @@
 
 <p><strong>Requirements:</strong></p>
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>Agencies submitting Incident Data must be in either ‘Test’, ‘Production’, or ‘Certified’ LIBRS Status.</td>
-      <td>20010</td>
+      <td style="text-align: center">20010</td>
       <td>MUST BE A VALID AGENCY</td>
     </tr>
   </tbody>
@@ -2367,37 +3614,32 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>DE C3 must be present – CANNOT be blank.</td>
-      <td>20001</td>
+      <td style="text-align: center">20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>Each component of the date MUST be valid. <br />Months must be 01-12, days must be 01-31, and year must include the century (i.e., 19xx, 20xx). <br />In addition, days CANNOT exceed maximum for the month (EG: June CANNOT have 31 days).</td>
-      <td>20025</td>
+      <td style="text-align: center">20025</td>
       <td>DATE ENTERED MUST BE A VALID CALENDAR DATE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>The date must be greater than that entered within Reporting Period (C4)</td>
-      <td>20026</td>
+      <td style="text-align: center">20026</td>
       <td>REPORTING PERIOD CANNOT EXCEED THE DATE OF SUBMISSION</td>
     </tr>
   </tbody>
@@ -2418,48 +3660,38 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>DE C4 must be present – CANNOT be blank.</td>
-      <td>20001</td>
+      <td style="text-align: center">20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>Each component of the date MUST be valid. <br />Months must be 01-12, days must be 01-31, and year must include the century (i.e., 19xx, 20xx). <br />In addition, days CANNOT exceed maximum for the month (EG: June CANNOT have 31 days).</td>
-      <td>20025</td>
+      <td style="text-align: center">20025</td>
       <td>DATE ENTERED MUST BE A VALID CALENDAR DATE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>The date CANNOT be greater than that entered within Date of Submission (C3)</td>
-      <td>20026</td>
+      <td style="text-align: center">20026</td>
       <td>REPORTING PERIOD CANNOT EXCEED THE DATE OF SUBMISSION</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>4</td>
+      <td style="text-align: center">4</td>
       <td>Reporting Period date cannot be before the Incident Date.</td>
-      <td>20060</td>
+      <td style="text-align: center">20060</td>
       <td>REPORTING PERIOD DATE CANNOT PRECEDE INCIDENT DATE</td>
     </tr>
   </tbody>
@@ -2478,15 +3710,20 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>DE C5 must be present – CANNOT be blank.</td>
-      <td>20001</td>
+      <td style="text-align: center">20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
   </tbody>
@@ -2542,37 +3779,32 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>If Action Type (C5) is ‘W’ (Time-Window) DE C6 must be present – CANNOT be blank.</td>
-      <td>20001</td>
+      <td style="text-align: center">20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>DE C6 must be a valid code.</td>
-      <td>20002</td>
+      <td style="text-align: center">20002</td>
       <td>INVALID DATA VALUE–NOT ON LIBRS VALIDATION TABLE</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>Clearance Indicator (DE C6) must be Blank (G) when Action Type is not ‘W’ (Time-Window).</td>
-      <td>16058</td>
+      <td style="text-align: center">16058</td>
       <td>MUST BE BLANK WHEN ACTION TYPE IS NOT ‘W’ (WINDOW)</td>
     </tr>
   </tbody>
@@ -2614,36 +3846,32 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td> </td>
+      <td style="text-align: center"> </td>
       <td> </td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>DE C7 must have a value of 3 or more.</td>
-      <td>20030</td>
+      <td style="text-align: center">20030</td>
       <td>MUST BE 3 OR GREATER</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>3</td>
+      <td style="text-align: center">3</td>
       <td>DE C7 must be equal to the total number of segments within the data submission file</td>
-      <td>20031</td>
+      <td style="text-align: center">20031</td>
       <td>MUST BE EQUAL TO THE TOTAL NUMBER OF SEGMENTS WRITTEN TO THE TAPE.</td>
     </tr>
   </tbody>
@@ -2666,26 +3894,26 @@ ___</p>
 
 <p><strong>Requirements:</strong></p>
 
-<p>Requirement  | Requirement Description | Error Number | Error Message
-:———–:|————————-|:————:|———-</p>
-
 <table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Requirement</th>
+      <th>Requirement Description</th>
+      <th style="text-align: center">Error Number</th>
+      <th>Error Message</th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td style="text-align: center">1</td>
       <td>DE C8 must be present – CANNOT be blank.</td>
-      <td>20001</td>
+      <td style="text-align: center">20001</td>
       <td>MUST BE PRESENT–MANDATORY FIELD</td>
     </tr>
-  </tbody>
-</table>
-
-<table>
-  <tbody>
     <tr>
-      <td>2</td>
+      <td style="text-align: center">2</td>
       <td>Segment must be present and be ‘ZZ’.</td>
-      <td>20029</td>
+      <td style="text-align: center">20029</td>
       <td>END OF SEGMENT MARKER, MUST BE EQUAL TO ‘ZZ’</td>
     </tr>
   </tbody>

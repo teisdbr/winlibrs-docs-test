@@ -112,7 +112,9 @@
     },
     "10072": {
         "err_no": 10072,
-        "err_message": "RECOVERED PROPERTY MUST ALSO BE SUBMITTED AS STOLEN"
+        "err_message": "RECOVERED PROPERTY MUST ALSO BE SUBMITTED AS STOLEN",
+        "desc_de14": "For every Property Description code (DE 15) entered into a Property Description Segment (31) having a Type of Property Loss (DE 14) of Recovered ('5'), there MUST also be a corresponding Property Description Segment (DE 31) with a matching Property Description (DE 15) code and a Type of Property Loss (DE 14) of Stolen/Etc. ('7').<br><br>This applies to both initial submissions and resubmissions for Incident Reports (Action Type of 'I'). This rule does not apply to:{::nomarkdown}<ul><li>NIBRS Offense codes of <b>280 and 250</b>.</li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, and individual parts within a vehicle were not reported as Stolen.</li></ul>{:/} ",
+        "desc_de15": "For every Property Description code (DE 15) entered into a Property Description Segment (31) having a Type of Property Loss (DE 14) of Recovered ('5'), there MUST also be a corresponding Property Description Segment (DE 31) with a matching Property Description (DE 15) code and a Type of Property Loss (DE 14) of Stolen/Etc. ('7').<br><br>This applies to both initial submissions and resubmissions for Incident Reports (Action Type of 'I'). This rule does not apply to:{::nomarkdown}<ul><li>NIBRS Offense codes of <b>280 and 250</b></li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, and individual parts within a vehicle were not reported as Stolen.</li></ul>{:/}"
     },
     "10073": {
         "err_no": 10073,
@@ -149,7 +151,8 @@
     },
     "10081": {
         "err_no": 10081,
-        "err_message": "THIS PROPERTY LOSS CODE CANNOT EXIST WITH THE OFFENSES SUBMITTED"
+        "err_message": "THIS PROPERTY LOSS CODE CANNOT EXIST WITH THE OFFENSES SUBMITTED",
+        "desc_de14": "The Type of Property Loss Code (DE 14) must be applicable to Offense(s) submitted in Louisiana Revised Statutes (DE 6). Refer to Mandatories for the correct values to use for each of the offenses. "
     },
     "10084": {
         "err_no": 10084,
@@ -418,9 +421,9 @@
     "12019": {
         "err_no": 12019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
-        "desc_de12": "MUST be entered if Louisiana Revised Statute (DE 6) has a NIBRS offense code of <b>250, 280, 35A, 35B, 370, 39C, 520, 90A, 90Z</b> and Louisiana Revised Statute (DE 6) is a 'Crime Against Property'.",
-        "desc_de12-2": "MUST be entered if Louisiana Revised Statute (DE 6): <br> - Is a NIBRS Offense codes <b>09A, 09B, 100, 11A, 11B, 11C, 11D, 13A, 13B and 13C</b> AND is an LRS of type 'Crime Against Person'. <br> - Is a NIBRS Offense code <b>120</b> AND is an LRS of type Crime Against Property'.",
-        "desc_de13": "MUST be entered if Louisiana Revised Statute (DE 6) has a NIBRS Offense code of <b>09A, 09B, 09C, 100, 11A, 11B, 11C, 11D, 120, 13A, 13B, 210, 520</b>."
+        "desc_de12": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Property': {::nomarkdown}<ul><li><b>250, 280</li><li>35A, 35B</li><li>370</li><li>39C</li><li>520</li><li>90A, 90Z</b></li></ul>{:/}",
+        "desc_de12-2": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Person': {::nomarkdown}<ul><li><b>09A, 09B</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</b></li></ul>{:/} OR Is one of the following NIBRS Offense code AND is an LRS of type 'Crime Against Property': {::nomarkdown}<ul><li><b>120</b></li></ul>{:/}",
+        "desc_de13": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes: {::nomarkdown}<ul><li><b>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 210</li><li>520</b></li></ul>{:/}"
     },
     "12051": {
         "err_no": 12051,
@@ -458,7 +461,7 @@
     "12058": {
         "err_no": 12058,
         "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR",
-        "desc_de13": "If the firearm is one of the following types of automatic weapons, add 'A' as the third character:<br>- 11 Firearm (Type not Stated)<br>- 12 Handgun<br>- 13 Rifle<br>- 14 Shotgun<br>- 15 Other Firearm."
+        "desc_de13": "If the firearm is one of the following types of automatic weapons, add 'A' as the third character:{::nomarkdown}<ul><li>11 Firearm (Type not Stated)</li><li>12 Handgun</li><li>13 Rifle</li><li>14 Shotgun</li><li>15 Other Firearm.</li></ul>{:/}"
     },
     "12065": {
         "err_no": 12065,
@@ -477,7 +480,7 @@
     "12069": {
         "err_no": 12069,
         "err_message": "POSSIBLE CLASSIFICATION ERROR OF AGGRAVATED ASSAULT '13A' CODED AS SIMPLE '13B'",
-        "desc_de13": "If the Louisiana Revised Statute (DE 6) is a simple assault (NIBRS 13B), but the weapon involved is:<br>- 11/11A Firearm or Automatic Firearm<br>- 12/12A Handgun or Automatic Handgun<br>- 13/13A Rifle or Automatic Rifle<br>- 14/14A Shotgun or Automatic Shotgun<br>- 15/15A Other Firearm or Other Automatic Firearm <br>This Offense should be reported as an Aggravated Assault (NIBRS 13A)."
+        "desc_de13": "If the Louisiana Revised Statute (DE 6) is a simple assault (NIBRS 13B), but the weapon involved is: {::nomarkdown}<ul><li>11/11A Firearm or Automatic Firearm</li><li>12/12A Handgun or Automatic Handgun</li><li>13/13A Rifle or Automatic Rifle</li><li>14/14A Shotgun or Automatic Shotgun</li><li>15/15A Other Firearm or Other Automatic Firearm</li></ul>{:/}This Offense should be reported as an Aggravated Assault (NIBRS 13A)."
     },
     "12090": {
         "err_no": 12090,
@@ -485,15 +488,19 @@
     },
     "13001": {
         "err_no": 13001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
+        "desc_de14":"MUST be present -- CANNOT be blank."
     },
     "13002": {
         "err_no": 13002,
-        "err_message": "CONTAINS NON NUMERIC ENTRY"
+        "err_message": "CONTAINS NON NUMERIC ENTRY",
+        "desc_de16": "MUST be numeric entry with zero or blank left-fill if entered."
     },
     "13004": {
         "err_no": 13004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
+        "desc_de14": "MUST be a valid code.",
+        "desc_de15": "MUST be a valid code."
     },
     "13005": {
         "err_no": 13005,
@@ -501,7 +508,8 @@
     },
     "13006": {
         "err_no": 13006,
-        "err_message": "ERROR - DUPLICATE VALUE = [value]"
+        "err_message": "ERROR - DUPLICATE VALUE = [value]",
+        "desc_de15": "If more than one code entered, CANNOT be duplicates."
     },
     "13007": {
         "err_no": 13007,
@@ -525,7 +533,8 @@
     },
     "13019": {
         "err_no": 13019,
-        "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES"
+        "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
+        "desc_de14": "Type of Property Loss (DE 14) MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes and is a 'Crime Against Property': {::nomarkdown}<b><ul><li>100, 120</li><li>200, 210, 220, 240, 250, 270, 280, 290</li><li>23A, 23B, 23C, 23D, 23E, 23F, 23G, 23H</li><li>26A, 26B, 26C, 26D, 26E</li><li>35A, 35B</li><li>39A, 39B, 39C, 39D</li><li>510</li><li>90A, 90Z</li></ul></b>{:/}"
     },
     "13020": {
         "err_no": 13020,
@@ -554,11 +563,13 @@
     },
     "13052": {
         "err_no": 13052,
-        "err_message": "DATA ELEMENTS 15 - 22 MUST BE BLANK WHEN PROPERTY LOSS CODE = 1 OR 8"
+        "err_message": "DATA ELEMENTS 15 - 22 MUST BE BLANK WHEN PROPERTY LOSS CODE = 1 OR 8",
+        "desc_de14": "When Type of Property Loss (DE 14) is None (1) or Unknown (8), then Data Elements 15 through 22 must be Blank () for all Offenses, except when the following Louisiana Revised Statute (DE 6) Drug Violation Offenses (NIBRS 35A) are reported. <br><br>If Type of Property Loss (14) has a value of None ('1') entered when one of the above LRS codes is present in the incident, then Suspected Drug Type (20) must have a valid entry."
     },
     "13053": {
         "err_no": 13053,
-        "err_message": "PENDING INVENTORY MUST HAVE PROPERTY VALUE OF '1'"
+        "err_message": "PENDING INVENTORY MUST HAVE PROPERTY VALUE OF '1'",
+        "desc_de15": " When Pending Inventory ('88') is entered, then Value of Property (16) must be Unknown ('1', representing $1.00). One dollar is used as a quality assurance edit check that instructs LIBRS to accept the Pending Inventory ('88') entry."
     },
     "13054": {
         "err_no": 13054,
@@ -623,11 +634,13 @@
     },
     "13072": {
         "err_no": 13072,
-        "err_message": "DATA ELEMENTS 15 - 22 WERE ALL BLANK WITH THIS PROPERTY LOSS CODE"
+        "err_message": "DATA ELEMENTS 15 - 22 WERE ALL BLANK WITH THIS PROPERTY LOSS CODE",
+        "desc_de14": "When the Type of Property Loss is...{::nomarkdown}<ul><li>2 Burned</li><li>3 Counterfeited/Forged</li><li>4 Destroyed /Damaged/Vandalized</li><li>5 Recovered</li><li>6 Seized</li><li>7 Stolen/Etc.</li></ul>{:/}Then the following data elements in the Property Description Segment (DE 31) must have applicable entries:{::nomarkdown}<ul><li>Property Description (15)</li><li>Value of Property (16)</li><li>Date Recovered (17)</li><li>Number of Stolen Motor Vehicles (18)</li><li>Number of Recovered Motor Vehicles (19)</li><li>Suspected Drug Type (20)</li><li>Estimated Drug Quantity (21)</li><li>Type of Drug Measurement (22)</li></ul>{:/}"
     },
     "13075": {
         "err_no": 13075,
-        "err_message": "MANDATORY FIELD WITH THE PROPERTY LOSS CODE ENTERED"
+        "err_message": "MANDATORY FIELD WITH THE PROPERTY LOSS CODE ENTERED",
+        "desc_de15": "A Property Description (DE 15) code must be entered when the value entered in Type of Property Loss/Etc. (DE 14) contains the following:{::nomarkdown}<ul><li>2 Burned</li><li>3 Counterfeited or Forged</li><li>4 Destroyed, Damaged or Vandalized</li><li>5 Recovered</li><li>6 Seized</li><li>7 Stolen/Etc.</li></ul>{:/}"
     },
     "13076": {
         "err_no": 13076,
@@ -639,7 +652,8 @@
     },
     "13078": {
         "err_no": 13078,
-        "err_message": "ATTEMPT TO ADD OTHER THAN 'RECOVERED' PROPERTY IS NOT ALLOWED"
+        "err_message": "ATTEMPT TO ADD OTHER THAN 'RECOVERED' PROPERTY IS NOT ALLOWED",
+        "desc_de14": "When making a Time-Window Submission (Action Type of 'W') or Modifying a previously submitted incident (Action Type of 'M'), then Type of Property Loss/Etc. (DE 14) must be Recovered ('5')."
     },
     "13079": {
         "err_no": 13079,
@@ -659,7 +673,8 @@
     },
     "13087": {
         "err_no": 13087,
-        "err_message": "WITH PROPERTY LOSS = 6 & ONLY DRUG OFFENSE, CANNOT HAVE A DESCRIPTION 11;OR PROPERTY LOSS = 6 & ONLY DRUG EQUIP OFNSE CANNOT HAVE DESCRIPTION 10"
+        "err_message": "WITH PROPERTY LOSS = 6 & ONLY DRUG OFFENSE, CANNOT HAVE A DESCRIPTION 11;OR PROPERTY LOSS = 6 & ONLY DRUG EQUIP OFNSE CANNOT HAVE DESCRIPTION 10",
+        "desc_de14":"To ensure that Drug/Narcotic Offenses (NIBRS 35A and 35B) are properly reported, Property Description (DE 15) CANNOT have a value of Drug/Narcotic Equipment ('11') for a Drug/Narcotic Violation of NIBRS 35A. Similarly, Drug/Narcotics ('10') CANNOT be entered for a Drug Equipment Violation of (35B). This is enforced by software when there is a single 'Crime Against Property' Offense.<br><br>However, when an incident contains multiple 'Crimes Against Property' Offenses, where, for example, one Offense is a Drug/Narcotic Violation (NIBRS 35A), and the other is a Robbery (NIBRS 120), that involves Drug/Narcotic Equipment ('11'), it can be entered. In this case, the above edit rule should be bypassed. Similarly, Drugs/Narcotics ('10') can be entered along with a Drug Equipment Violation (35B), as long as that property is involved in the Robbery (NIBRS 120)."
     },
     "13088": {
         "err_no": 13088,
@@ -1378,7 +1393,8 @@
     "25001": {
         "err_no": 25001,
         "err_message": "MUST BE UNIQUE--CANNOT BE DUPLICATED",
-        "desc_del6": "Must be unique -- CANNOT be duplicated."
+        "desc_del6": "Must be unique -- CANNOT be duplicated.",
+        "desc_dep1": "MUST be unique -- CANNOT be duplicated."
     },
     "25010": {
         "err_no": 25010,
@@ -1454,7 +1470,8 @@
     },
     "84001": {
         "err_no": 84001,
-        "err_message": "WHEN LRS = 200 AND DE 7 = 'A', THEN DE 14 MUST BE A CODE OF '1' OR '8'"
+        "err_message": "WHEN LRS = 200 AND DE 7 = 'A', THEN DE 14 MUST BE A CODE OF '1' OR '8'",
+        "desc_de14": "For NIBRS 35A Offenses, If Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST be None ('1') or Unknown ('8'). These are the only two data values accepted."
     },
     "84002": {
         "err_no": 84002,
@@ -1471,7 +1488,7 @@
     "84005": {
         "err_no": 84005,
         "err_message": "WHEN LRS = 250, DE 12 MUST HAVE A VALID CODE.",
-        "desc_de12": "When NIBRS Offense Code is <b>250</b>:<br> - Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code."
+        "desc_de12": "Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code when NIBRS Offense Code is <b>250</b>."
     },
     "84006": {
         "err_no": 84006,
@@ -1513,7 +1530,7 @@
     "84015": {
         "err_no": 84015,
         "err_message": "WHEN LRS = 370, DE 12 MUST HAVE A VALID CODE AND DE 25 MUST EQUAL 'S'.",
-        "desc_de12": "When NIBRS Offense Code is <b>370</b>:<br> - Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.<br> - Type of Victim (DE 25) MUST be Society ('S')."
+        "desc_de12": "When NIBRS Offense Code is <b>370</b> the following MUST be true::{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}"
     },
     "84016": {
         "err_no": 84016,
@@ -1534,12 +1551,12 @@
     "84020": {
         "err_no": 84020,
         "err_message": "WHEN LRS = 280, DE 12 MUST HAVE A VALID CODE.",
-        "desc_de12": "When NIBRS Offense Code is <b>280</b>:<br> - Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code."
+        "desc_de12": "When NIBRS Offense Code is <b>280</b> the following MUST be true::{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li></ul>{:/}"
     },
     "84021": {
         "err_no": 84021,
         "err_message": "WHEN LRS = 520, DE 12 & DE 13 MUST HAVE A VALID CODE AND DE 25 MUST BE EQUAL TO 'S'.",
-        "desc_de12": "When NIBRS Offense Code is <b>520</b>:<br> - Type of Criminal Activity/Gang Information (DE 12)<br> - Type of Weapon/Force Involved (DE 13) MUST have a valid code<br> - Type of Victim (DE 25) MUST be Society ('S')."
+        "desc_de12": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}"
     },
     "84101": {
         "err_no": 84101,
@@ -1619,7 +1636,8 @@
     },
     "84203": {
         "err_no": 84203,
-        "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROPER TY SEGMENT CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE IN CIDENT WILL REJECT IF AN AGENCY SENDS A '7'  AND ALSO AN '8' WITHIN THE SAM"
+        "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROPER TY SEGMENT CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE IN CIDENT WILL REJECT IF AN AGENCY SENDS A '7'  AND ALSO AN '8' WITHIN THE SAM",
+        "desc_de14":"When there is only one completed 'Crime Against Property' Offense in an incident, any Property Description Segments (31) reported with the incident can contain ONLY values of EITHER:{::nomarkdown}<ul><li>Stolen Property ('7')</li><li>Unknown ('8')</li></ul>{:/} The incident will be rejected if an agency sends both Stolen Property ('7') and Unknown ('8') for Type of Property Loss/Etc. within the same incident."
     },
     "84204": {
         "err_no": 84204,
@@ -1644,7 +1662,7 @@
     "84210": {
         "err_no": 84210,
         "err_message": "WHEN LRS = 39 C, DE 12 MUST HAVE A VALID CODE.",
-        "desc_de12": "When NIBRS Offense Code is <b>39C</b>:<br> - Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code."
+        "desc_de12": "Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code when NIBRS Offense Code is <b>39C</b>."
     },
     "84211": {
         "err_no": 84211,
@@ -1873,11 +1891,16 @@
     },
     "90019": {
         "err_no": 90019,
-        "err_message": "PROPERTY SEQUENCE NUMBER MUST BE PRESENT--CANNOT BE BLANK"
+        "err_message": "PROPERTY SEQUENCE NUMBER MUST BE PRESENT--CANNOT BE BLANK",
+        "desc_dep1": "MUST be present -- CANNOT be blank.",
+        "desc_dep1r": "MUST be present -- CANNOT be blank."
+        
     },
     "90020": {
         "err_no": 90020,
-        "err_message": "PROPERTY SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL"
+        "err_message": "PROPERTY SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL",
+        "desc_dep1": "MUST be numeric entry (001 through 999) with zero left-fill. Property Sequence Number (P1) distinguishes one property from another.",
+        "desc_dep1r": "MUST be numeric entry (001 through 999) with zero left-fill."
     },
     "90021": {
         "err_no": 90021,
@@ -1897,11 +1920,12 @@
     "90024": {
         "err_no": 90024,
         "err_message": "PROPERTY SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED PROPERTIES' SEQUENCE NUMBERS",
-        "desc_del6r": "MUST match the Offense Sequence Number (DE L6) of one of the Offense segments submitted in the corresponding incident."
+        "desc_del6r": "MUST match the Offense Sequence Number (DE L6) of one of the Offense segments submitted in the corresponding incident.",
+        "desc_dep1r": "MUST match the Property Sequence Number of one of the Property Description segments submitted in corresponding incident."
     },
     "90025": {
         "err_no": 90025,
-        "err_message": "OFFENSE SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED OFFENSES ' SEQUENCE NUMBERS"
+        "err_message": "OFFENSE SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED OFFENSES' SEQUENCE NUMBERS"
     },
     "90026":{
         "err_no": 90026,
@@ -1927,7 +1951,7 @@
     "90031": {
         "err_no": 90031,
         "err_message": "WHEN THE OFFENSE WITH NIBRS = 720;CRIMINAL ACTIVITY(DE 12) MUST BE A VALID CODE AND IT CANNOT BE NONE;VALID CODES FOR THE ENTRY AT CRIMINAL ACTIVITY(DE 12) = 'A' 'F' 'I' 'S'",
-        "desc_de12": "When NIBRS Offense Code is <b>720</b><br> - Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code and cannot be None."
+        "desc_de12": "Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code and cannot be None when NIBRS Offense Code is <b>720</b>."
     },
     "90032": {
         "err_no": 90032,

@@ -185,7 +185,7 @@ Can enter up to three (3) codes for each offense:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Cleared Exceptionally Indicators</th>
+		<th colspan = "2" style="align-text:center;">Types of Weapon/Force Involved</th>
 	</tr>
     </thead>
     <tbody>
@@ -221,3 +221,269 @@ ___
 Example Number | Description
 :-------------:|:-----------
 1 | Three robbers held up a bank. One was armed with a revolver, the second had a sawed-off shotgun, and the third had an automatic machine gun. The entries would be: Handgun ('12'), Shotgun ('14') and Other Automatic Firearm ('15A').
+
+<br>
+
+## Property Sequence Number (P1)
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["90019"] -%}
+1 | {{error.desc_dep1}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90020"] -%}
+2 | {{error.desc_dep1}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["25001"] -%}
+3 | {{error.desc_dep1}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+`Note: There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.`
+
+___
+
+<br>
+
+## Property Sequence Number Reference (P1R)
+
+**\*\*\* New Data Element in LIBRS 2.5 \*\*\***
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["90019"] -%}
+1 | {{error.desc_dep1r}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90020"] -%}
+2 | {{error.desc_dep1r}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90024"] -%}
+3 | {{error.desc_dep1r}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+`Note: There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.`
+
+<br>
+
+## Type of Property Loss (14)
+
+**Data Characteristics**: 1 Character Numeric
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13001"] -%}
+1 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13004"] -%}
+2 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13052"] -%}
+3 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["84001"] -%}
+3A | {{error.desc_de14}} | {{error.err_no}}, 84003, 84104, 84105, 84107, 84108, 84009, 84010, 84112, 84013, 84014, 84117, 84120 | {{ error.err_message }}
+{% assign error = site.data.error["13019"] -%}
+4 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10072"] -%}
+5 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13072"] -%}
+6 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13078"] -%}
+7 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["84203"] -%}
+8 | {{error.desc_de14}} | {{error.err_no}}, 84304, 84312 | {{ error.err_message }}
+{% assign error = site.data.error["13087"] -%}
+9 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10081"] -%}
+10 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+
+<br>
+
+### Allowed Entries:
+___
+
+Enter only one (1) code for each Property Description Segment. However, as many property segments as applicable can be submitted per incident:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Types of Weapon/Force Involved</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '14' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+
+## Property Description (15)
+___
+
+**Data Characteristics:** 2 Character **Alpha/**Numeric
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13004"] -%}
+1 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13006"] -%}
+2 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13053"] -%}
+3 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13075"] -%}
+4 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10072"] -%}
+5 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
+
+
+<br>
+
+
+### Allowed Entries: 
+___
+
+Enter one Property Description (DE 15) code per Property Description (31) Segment, but can enter multiple Property Description (31) Segments. Do NOT enter duplicate Property Description (DE 15) codes within an Incident, unless a different Type of Property Loss (DE 14) code is used. An exception would be if there is more than one Drug that was Seized in the Incident. However, rules found in the Mandatory Data Element Requirements must still be followed.
+
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Types of Weapon/Force Involved</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '15' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+<br>
+
+## Value of Property (16)
+
+**Data Characteristics:** 9 Character Numeric
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13002"] -%}
+1 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13051"] -%}
+2 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13091"] -%}
+3 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13054"] -%}
+4 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10084"] -%}
+5 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13042"] -%}
+6 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+
+
+>
+> 2\) If Value of Property (16) is unknown, must enter a value of Unknown
+> ("1", representing \$1.00). A value of zero ("0") is allowed only when
+> Property Description (15) codes are the following:
+>
+> ZERO ("0") value is ***required*** for the following:
+>
+> 09 Credit/Debit Cards
+>
+> 22 Nonnegotiable Instruments
+>
+> 48 Documents/Personal or Business
+>
+> 65 Identity Documents
+>
+> 66 Identity-Intangible
+>
+> **Error 13051**
+>
+> ZERO ("0") value is ***optional*** for the following:
+>
+> 77 Other
+>
+> 99 Special Category.
+>
+> **Error 13051\
+> **
+>
+> 3\) When Property Description (15) has Credit/Debit Cards (\"09\") or
+> Nonnegotiable Instruments (\"22\") entered, a ZERO ("0") value is
+> required for Value of Property (16). **Error**s **13091**
+>
+> 4\) If a Value of Property (16) has a code entered, then Property
+> Description (15) must be entered. **Error** **13054**
+>
+> 5\) For Property Description Segments (31) having Type of Property Loss
+> (14) entries for both Stolen/Etc. ("7") and Recovered (\"5\"), the
+> Recovered \"property\" CANNOT have Value of Property (16) value(s)
+> greater than corresponding Stolen "property" Value of Property (16)
+> value(s). **Error 10084**
+>
+> 6\) When Value of Property (16) contains a value that exceeds a LIBRS
+> assigned threshold amount, a \"Warning\" message is created. The agency
+> is asked to check if the value entered was a data entry error, or if it
+> was an intended entry.\
+> \
+> Also, a Warning message is always produced when the value is \$1,000,000
+> or greater. For example, if the value of a property was \$12,000.99 but
+> was inadvertently entered as \$1,200,099 in LIBRS submission file, a
+> \"Warning\" message will be generated. In this case, the cents were
+> entered as whole dollars. **Error 13042**
+
+**Example:** A man purchases a new power saw from the hardware store.
+Later that same day someone breaks into his truck and steals the saw.
+The saw was purchased for \$95.73. The value of the property would be
+rounded to the nearest whole dollar and reported as \"000000056\"-
+\$96.00.
