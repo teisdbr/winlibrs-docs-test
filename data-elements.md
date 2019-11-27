@@ -415,6 +415,7 @@ ___
 <br>
 
 ### Allowed Entries
+
 ___
 
 Enter one code per incident.
@@ -698,13 +699,1549 @@ ___
 <br>
 
 
+## Method of Entry (11)
+
+___
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+___
+
+Requirment   | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["12004"] -%}
+1 | {{error.desc_de11}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["12053"] -%}
+2 | {{error.desc_de11}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["12054"] -%}
+3 | {{error.desc_de11}} | {{error.err_no}}| {{ error.err_message }} 
+
+___
+
+<br>
 
 
 
+### Allowed Entries:
+___
+
+Enter only one (1) code per Offense Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Location Type</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '11' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+### Examples: 
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | Investigation of a burglary complaint disclosed that the Offender(s) entered the building through an unlocked street door, then forced a locked door to an office and stole a typewriter. Since one door was forced, the Method of Entry should be entered as Force ("F").
+
+___
+
+<br>
+
+## Relationship of Victim to Offender (35)
+
+**Data Characteristics:** 2 Character Alpha
+
+### Requirements:
+___
+
+Requirment   | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15060"] -%}
+1 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15004"] -%}
+2 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15050"] -%}
+3 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14050"] -%}
+4 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14053"] -%}
+5 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14054"] -%}
+6 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15068"] -%}
+7 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error[""] -%}
+8 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error[""] -%}
+9 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error[""] -%}
+10 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error[""] -%}
+11 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error[""] -%}
+12 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error[""] -%}
+13 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error[""] -%}
+14 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error[""] -%}
+15 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error[""] -%}
+16 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error[""] -%}
+17 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error[""] -%}
+18 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+
+___
+
+<br>
+
+"desc_de35": "
+
+ **Error 15060**
+ **Error** **15004**
+ **Error** **15050, 14050**
+  **Error** **14054**
+ **Error** **15068**
+>
+> 7\) When Victim was Offender [(]{.underline}\"VO\"[)]{.underline} is
+> entered, a minimum of [two]{.underline} Victims Segments (50) and
+> [two]{.underline} Offender Segments (40) MUST be submitted. \"VO\"
+> indicates situations such as brawls and domestic disputes **where all of
+> the participants in the incident were Victims and Offenders of the same
+> Offense (for example, assaults or double murders where two people kill
+> each other).** In most cases, each Victim is also the Offender;
+> therefore, every Victim Segment (50) will contain a \"VO\" code.\
+> \
+> However, there may be some situations where only one of the Victims is
+> also the Offender, but where the other Victim(s) are not also the
+> Offender(s) (for example, a Victim who is not an Offender could be an
+> innocent bystander in a barroom brawl, or a child who is victimized as a
+> result of the parents domestic dispute). **Error** **15070**
+>
+> 8\) When entered, Victim was Offender (\"VO\") can only be entered once
+> in a Victim Segment (50) and can refer to an Offender only once. Since
+> \"VO\" points to himself/herself, a Victim CANNOT at the same time be
+> two Offenders.
+>
+> **Error** **15071, 15074**
+>
+> 9\) When the related Offender has \"Unknown\" values entered for Age, Sex
+> and Race, the relationship must be Relationship Unknown (\"RU\"). This
+> edit ensures a logical relationship. For example, if Brother ("SB") was
+> entered fro Relationship of Victim to Offender (25), then Age, Sex and
+> Race would NOT be Unknown values.
+>
+> **Error** **15072**
+>
+> **10) In a multiple Offender incident, a Victim CANNOT have a
+> relationship of Spouse (\"SE\") to more than one Offender. Error
+> 15075**
+>
+> **11) In a multiple Victim incident, two or more Victims CANNOT have a
+> Victim relationship of Spouse (\"SE\") to the same Offender. Error
+> 15076**
+>
+> 12\) MUST be entered if Louisiana Revised Statute (6) is a *Crime Against
+> Person*, and has a **NIBRS Offense code \[as defined on Master LIBRS/LRS
+> Code Table\] of:\
+> \
+> 09A 09B 09C\
+> 100\
+> 11A 11B 11C 11D\
+> 120\
+> 13A 13B 13C\
+> 36A 36B\
+> 90Z\
+> \
+> *[and]{.underline}*** Louisiana Revised Statute (6) is one of the
+> following:
+>
+> 14:28.1 14:30 14:30.1 14:31\
+> 14:32 14:32.1/AA 14:32.12 14:34 14:34.1\
+> 14:34.2 14:34.3 14:34.4 14:34.5 14:34.5.1
+>
+> 14:34.6 14:34.7 14:35 14:35.1 14:35.2
+>
+> 14:35.3 14:35.3/M 14:37 14:37.1 14:37.2
+>
+> 14:37.3 14:37.4 14:37.5 14:38 14:38.1
+>
+> 14:38.2 14:38.3 14:39 14:39.1 14:39.2
+>
+> 14:40 14:40.1 14:40.2 14:40.3 14:40.4
+>
+> 14:40.5 14:40.6 14:40.60 14:42/A 14:42/V
+>
+> 14:42.1/A 14:42.1/V 14:43/A 14:43/V 14:43.1/N
+>
+> 14:43.1/P 14:43.2/N 14:43.2/P 14:43.3 14:43.4
+>
+> 14:43.5 14:43.6 14:44 14:44.1 14:44.1/A
+>
+> 14:44.1/N 14:44.1/O 14:44.1/P 14:44.1/V 14:44.2
+>
+> 14:45 14:45.1 14:46 14:46.1 14:46.30
+>
+> 14:47 14:50.1 14:50.2 14:54.1 14:54.6
+>
+> 14:78 14:78.1 14:79 14:80 14:80.1
+>
+> 14:81 14:81.2 14:81.3 14:81.4 14:87.1
+>
+> 14:87.2/F 14:87.2/L 14:87.5/F 14:87.5/L 14:89.1
+>
+> 14:92.1 14:92.3 14:93/F 14:93.2.3 14:93.3
+>
+> 14:93.5 14:94/E 14:102.21 14:103/A1 14:107.1/F
+>
+> 14:108/B1BF 14:108/B1B 14:108.2 14:122/F 14:122/T
+>
+> 14:122.1 14:122.2 14:129/A1 14:129/A2F 14:129/A2T
+>
+> 14:129.1 14:129.1/F 14:129.1/T 14:130.1/A 14:130.1/T
+>
+> 14:130.1/F 14:133.1/F 14:133.1/T 14:133.5 14:285
+>
+> 14:286 14:404/J 14:404/Q 14:501 32:668
+>
+> **Relationship of Victim to Offender (35) MUST be Blank (G) when
+> \"000\" is entered into Offender Number to be Related (34). Error**
+> **15059**
+>
+> **13) If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B
+> and 40C) are *known*, then data value for Relationship of Victim to
+> Offender (Data Element 34) MUST be supplied as well.**
+
+**Allowed Entries:** MUST enter [ONE]{.underline} code for each Victim
+Segment (50). MUST enter relationship of each Victim to each Offender
+when Offense is a *Crime Against Person* or a Robbery against a Victim:
+
+  Relationship of Victim to Offender    
+  ------------------------------------- ---------------------------------------------------------------------------------
+  Within Family                         
+  SE                                    Victim was Spouse
+  CS                                    Victim was Common-Law Spouse
+  PA                                    Victim was Parent
+  SB                                    Victim was Sibling (brother or sister)
+  CH                                    Victim was Child
+  GP                                    Victim was Grandparent
+  GC                                    Victim was Grandchild
+  IL                                    Victim was In-Law
+  SP                                    Victim was Stepparent
+  SC                                    Victim was Stepchild
+  SS                                    Victim was Step sibling (stepbrother or stepsister)
+  OF                                    Victim was Other Family Member (step-grandparents, ex-common law spouses. etc.)
+  NM                                    Victim was Non-Married Live-In (to NIBRS as CS)
+  Outside Family, But Known to Victim   
+  AQ                                    Victim was Acquaintance
+  FR                                    Victim was Friend
+  NE                                    Victim was Neighbor
+  BE                                    Victim was Babysittee (the baby)
+  BG                                    Victim was Boyfriend/Girlfriend
+  XB                                    **Victim was Ex-Boyfriend/Ex-Girlfriend** (to NIBRS as BG)
+  CF                                    Victim was Child of Boyfriend or Girlfriend
+  HR                                    Victim was in Homosexual Relationship
+  XS                                    Victim was Ex-Spouse
+  EE                                    Victim was Employee
+  ER                                    Victim was Employer
+  OK                                    Victim was Otherwise Known
+  ES                                    Victim was Estranged Spouse (to NIBRS as SE)
+  Not Know By Victim                    
+  RU                                    Relationship Unknown
+  ST                                    Victim was Stranger
+  Other                                 
+  VO                                    Victim was Offender
+
+**Examples**:
+
+\(1) An employee assaulted his employer (a person) with his fists. Victim
+was Employer (ER) should be entered.
+
+\(2) Two unknown subjects rob a male and a female couple. Victim was
+Stranger (\"ST\") should be entered to indicate the relationship of each
+Victim to each Offender.
+
+### 
+
+___
+
+<br>
+
+## Offender Sequence Number (36)
+
+___
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["14001"] -%}
+1 | {{error.desc_de36}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14002"] -%}
+2 | {{error.desc_de36}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14057"] -%}
+3 | {{error.desc_de36}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14059"] -%}
+4 | {{error.desc_de36}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14055"] -%}
+5 | {{error.desc_de36}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14051"] -%}
+6 | {{error.desc_de36}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["81400"] -%}
+7 | {{error.desc_de36}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+`Notes: Each Offender in an incident is assigned a UNIQUE Offender Sequence Number (36) from '001' to '999'. If nothing is known about the Offender(s), enter '000' into this data element and LEAVE DATA ELEMENTS 37 THROUGH 39 BLANK (G). Also, Offender Suspected of Using (8) MUST be Not Applicable ('N') and Bias Motivation/Bias Crime Type (8A) MUST be None ('88').`
+
+<br>
+
+
+### Examples: 
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | A corpse with five bullet holes in it was found in an abandoned warehouse. There were no witnesses to the crime, or suspects. A single Offender Segment (40) should be submitted with '000' entered into Offender Sequence Number (36) and with no entries in Data Elements 37 through 39. **Also, Offender Suspected of Using (8) must be Not Applicable ('N') and Bias Motivation/Bias Crime Type (8A) must be None '88'.**
+2 | Two Offenders were seen fleeing the scene of a burglary, but because they were wearing ski masks, their Age, Sex, and Race could not be determined. Two Offender Segments (40) should be submitted: the first with Offender Sequence Number \"001\" and the second with '002'. Applicable Unknown codes should be entered into Data Elements 37, 38 and 39. **Also, Offender Suspected of Using (8) MUST be Not Applicable ('N') and Bias Motivation/Bias Crime Type (8A) MUST be None ('88').**
+
+___
+
+<br>
+
+## Age of Offender [at Time of Incident] (37)
 
 
 
+### Requirements:
 
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["14001"] -%}
+1 | {{error.desc_de37}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14052"] -%}
+2 | {{error.desc_de37}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14058"] -%}
+3 | {{error.desc_de37}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14059"] -%}
+4 | {{error.desc_de37}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14050"] -%}
+5 | {{error.desc_de37}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14056"] -%}
+6a | {{error.desc_de37}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14008"] -%}
+6b | {{error.desc_de37}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14009"] -%}
+7a | {{error.desc_de37}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["24010"] -%}
+7b | {{error.desc_de37}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14022"] -%}
+7c | {{error.desc_de37}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+`Note: Age of the Offender (37) is entered either as an exact number of years, an estimated age or as unknown.`
+
+<br>
+
+### Allowed Entries
+
+___
+
+Enter only one code per Offender Segment(40):
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Age of Offender (at Time of Incident)</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '37' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+<br>
+
+ `If the Offender's Age is NOT KNOWN, estimate the Offender's Age and append an 'E' (Estimated). If a range is given for the Offender's Age, enter the median (average) age of the range (rounded down). If it is impossible to determine even an Estimated Age of the Offender, then enter Unknown ('00').`
+
+
+
+<br>
+
+### Examples: 
+
+
+Example Number | Description
+:-------------:|:-----------
+1 | If the Victim, or a witness, reported the Offender's Age as between 25 and 30 years old, enter '27E' (the average of 25 and 30 is 27.5, round down to get an estimated age of 27).
+
+___
+
+<br>
+
+
+## Date of Birth of Offender (L37)
+
+___
+
+**Data Characteristics:** 8 Character Date
+
+**Format:** MMDDYYYY
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["24030"] -%}
+1 | {{error.desc_del37}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["24031"] -%}
+2 | {{error.desc_del37}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["24010"] -%}
+3 | {{error.desc_del37}} | {{error.err_no}}| {{ error.err_message }} 
+
+___
+
+`Note: If the Date of Birth of the Offender is known, it is to be indicated in this data element.`
+
+___
+
+<br>
+
+## Sex of Offender (38)
+
+___
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["14001"] -%}
+1 | {{error.desc_de38}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14004"] -%}
+2 | {{error.desc_de38}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14052"] -%}
+3 | {{error.desc_de38}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14058"] -%}
+4 | {{error.desc_de38}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14059"] -%}
+5 | {{error.desc_de38}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14060"] -%}
+6 | {{error.desc_de38}} | {{error.err_no}}| {{ error.err_message }} 
+
+`Note: This Data Element (38) indicates Sex of the Offender.`
+
+___
+
+<br>
+
+
+
+### Allowed Entries:
+___
+
+Enter only (1) code per Offender Segment (40):
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Sex of Offender</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '38' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+### Examples: 
+
+___
+
+
+Example Number | Description
+:-------------:|:-----------
+1 | The witness caught only a fleeting glance of the Offender and, therefore, was unable to report the Offender's Sex. The entry should be Unknown ('U').
+
+___
+
+<br>
+
+
+
+## Race of Offender (39)
+
+___
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["14001"] -%}
+1 | {{error.desc_de39}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14004"] -%}
+2 | {{error.desc_de39}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14052"] -%}
+3 | {{error.desc_de39}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14058"] -%}
+4 | {{error.desc_de39}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14059"] -%}
+5 | {{error.desc_de39}} | {{error.err_no}}| {{ error.err_message }} 
+
+`Note: Race of an Offender is indicated in this Data Element (39).`
+
+___
+
+<br>
+
+
+
+### Allowed Entries:
+___
+
+Enter only (1) code per Offender Segment (40):
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Race of Offender</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '39' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+
+## Arrestee Sequence Number (40)
+
+___
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16001"] -%}
+1 | {{error.desc_de40}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16002"] -%}
+2 | {{error.desc_de40}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["26001"] -%}
+3 | {{error.desc_de40}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["16056"] -%}
+4 | {{error.desc_de40}} | {{error.err_no}} | {{ error.err_message }} 
+
+`Note: Each Arrestee reported is assigned a UNIQUE Sequence Number from '001' to '999'.`
+
+___
+
+<br>
+
+### Examples:
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | If two persons were arrested in connection with a previously submitted incident, **two** Arrestee Segments should be submitted: one with Arrestee Sequence Number '001' and the other with '002'.
+
+_____
+
+<br>
+
+
+
+## Arrestee Name (L40)
+
+___
+
+**Data Characteristics:** 20 Character Alpha
+
+**Format:** (Last Name)(Suffix,(First Name)(Middle Name)\Suffix includes standard suffixes used to distinguish between
+generations (for example, Sr, Jr, III, II). <span style="text-decoration: underline">Do not include titles</span> (for example, MD, M.E., Ph.D., Esq., etc.)
+
+**Requirements:** None
+
+___
+
+`**Note:** If Arrestee’s full name will not fit in the field, then enter as much as possible. DO NOT put periods behind suffix abbreviations or middle initial.`
+
+<br>
+
+## Arrest Number/Local Booking Number for Arrest (41)
+
+___
+
+**Data Characteristics:** 12 Character Alpha
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16001"] -%}
+1 | {{error.desc_de41}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16016"] -%}
+2 | {{error.desc_de41}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16017"] -%}
+3 | {{error.desc_de41}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16015"] -%}
+4 | {{error.desc_de41}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16006"] -%}
+5 | {{error.desc_de41}} | {{error.err_no}}| {{ error.err_message }} 
+
+___
+
+`**Note:** This Data Element (41) is a UNIQUE, IDENTIFYING number assigned by an agency to an Arrest Report. It may be the <span style="text-decoration: underline">Incident Number</span> of a reported incident relating to the Arrest, or it may be a separate Booking Number.`
+
+<br>
+
+## Arrest Date (42)
+
+___
+
+**Data Characteristics:** 8 Character Date
+
+**Format:** MMDDYYYY
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16001"] -%}
+1 | {{error.desc_de42}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16005"] -%}
+2 | {{error.desc_de42}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16065"] -%}
+3 | {{error.desc_de42}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16020"] -%}
+4 | {{error.desc_de42}} | {{error.err_no}}| {{ error.err_message }} 
+
+___
+
+`**Note:** Arrest Date (42) is used to enter the month, day and year when the actual arrest took place.`
+
+<br>
+
+## Type of Arrest (43)
+
+___
+
+**Data Characteristics**: 1 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16001"] -%}
+1 | {{error.desc_de43}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16004"] -%}
+2 | {{error.desc_de43}} | {{error.err_no}}| {{ error.err_message }} 
+
+<br>
+
+`**Notes:** Type of Arrest (43) indicates the type of apprehension.`
+
+___
+
+### Allowed Entries:
+
+___
+
+Enter only <span style="text-decoration: underline">one</span> code per Arrest Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Type of Arrest</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '43' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+<br>
+
+## Multiple Arrestee Segment Indicator (44)
+
+___
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16001"] -%}
+1 | {{error.desc_de44}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16004"] -%}
+2 | {{error.desc_de44}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+`Notes: Multiple Arrestee Segment Indicator (44) ensures that an Arrestee is counted (scored) only once when the Arrestee's apprehension causes the Arresting Agency to submit two or more Arrestee Segments (60) concerning separate Incident Reports. That is, the Arrestee was involved in more than one crime incident and his/her arrest data are duplicated in each Incident Report. In such a situation, Count Arrestee (“C”) is to be entered into one of the Arrestee Segments (60), and Multiple (M) is to be entered into all of the remaining Arrestee Segments (60). If the Arrestee's apprehension DOES NOT cause the Arresting Agency to submit multiple Arrestee Segments (60), enter Not Applicable (“N”).`
+
+<br>
+
+### Allowed Entries:
+___
+
+Enter only one (1) code per Arrestee Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Multiple Arrestee Segment Indicator</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '44' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+
+`Note: Count Arrestee (“C”) and Multiple ("M") codes are to be used in this Data Element (44) ONLYwhen the same agency submits two or more Arrestee Segments (for different incidents) relating to the same Arrestee.`
+
+___
+
+<br>
+
+### Examples: 
+
+___
+
+
+Example Number | Description
+:-------------:|:-----------
+1 | After a suspect's apprehension for robbery, it was learned that he was also responsible for five additional robberies within the jurisdiction. One Arrestee Segment (60) was keyed into the local computer, along with the Incident Numbers of the six incidents. The local computer then generated six Arrestee Segments (60) which were duplicates except for their Incident Numbers. Five of the Arrestee Segments (60) had Multiple ("M") and one had Count Arrestee ("C") entered into Multiple Arrestee Segment Indicator (44). Each of the six robberies is cleared.
+2 | If the suspect's arrest did not clear additional incidents, the entry should be Not Applicable ("N").
+
+<br>
+
+## Louisiana Revised Statute Number of Arrest (45)
+
+___
+
+**Data Characteristics:** 12 Character Alpha
+
+**Format**: TT:SSSS.S/P-I
+
+||Louisiana Revised Statute Format
+:--------------------------------:|-----------------------------------
+TT                                | Title                             
+SSSS.S                            | Section                           
+**PPP/I**                         | Subpart, **or**<br>Subpart with Qualifier, **or**<br>Qualifier, **or**<br>Juvenile Qualifier, **and** An Inchoate Modifier, if applicable, would be indicated<br>by a dash with a data value behind the LRS Code that defines the offense.**                        |
+
+<br>
+
+### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16001"] -%}
+1 | {{error.desc_de45}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16004"] -%}
+2 | {{error.desc_de45}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["16070"] -%}
+3 | {{error.desc_de45}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["16069"] -%}
+4 | {{error.desc_de45}} | {{error.err_no}} | {{ error.err_message }}
+
+___
+
+`Notes: This Data Element records the Louisiana Revised Statute that the Arrestee was charged with. The structure of a Louisiana Revised Statute (LRS) is: Title (TT), followed by a colon, then a Section Number (SSSS.S), followed by optional Subparts, Qualifiers and Modifiers. Section and Subpart/Subpart with Qualifier/Qualifier/Juvenile Qualifier/Inchoate Modifier, should NOT be preceded by spaces or zeroes. If there are no places after the decimal, then both the place after the decimal and the decimal point should be omitted. (For example, the LRS for Murder is 14:30 – two spaces for the Title (14), a colon, two spaces for the Section (30) before the decimal, [not four spaces14:GG30], and dropping the space after the decimal.) The field should be LEFT JUSTIFIED WITH NO INCLUDED SPACES. <span style="text-decoration: underline">Spaces are interpreted as the End-of-Data in this data element.</span>`
+
+`Subparts, Qualifiers, etc. are sometimes included for more specificity regarding those LRS codes requiring these identifiers. These parts of the field can be expanded or contracted as necessary to fill in the data.`
+
+`All local ordinances must be reported with the appropriate state statute as the base offense, with any Subparts, Qualifiers, etc. added when applicable. When a parish statute does not correspond to a state LRS, the parish statute must be reported with a "P:" for the title and the parish statute following the colon. If a city ordinance does not correspond to a state LRS, it must be reported by the police department with a "C:" substituted for the title portion of the data field, and the city ordinance following the colon. When it is a Sheriff's Office, or any other law enforcement agency who has jurisdiction in more than one city, reporting the city ordinance, it should be reported with a "C#:" substituted for the title portion of the data field, and the city ordinance following the colon, where the "#" is replaced with a unique number for each city as decided by the agency and agreed upon by the state.`
+
+___
+
+<br>
+
+## Agency Supplied NIBRS Code For Arrest (N45)
+
+**Data Characteristics:** 3 Character AlphaNumeric
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["45001"] -%}
+1 | {{error.desc_den45}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["45002"] -%}
+2 | {{error.desc_den45}} | {{error.err_no}} | {{ error.err_message }}
+
+___
+
+<br>
+
+## Arrest Connection to Offense (L45)
+
+**Data Characteristics:** 15 Character Alpha
+
+### Requirements:
+
+___
+
+MUST be a valid Offense Sequence Number (L6). The Offense Segment (20) referred to by this Data Element (L45) MUST exist.
+
+___
+
+`Notes: Arrest Connection to Offense (L45) is OPTIONAL at this time.` 
+
+`Arrest Connection to Offense (L45) relates an Arrest with the Offense giving rise to the Arrest. Indirectly, it also relates an Offender to his Victim. All Offenses should be included if a charge was added for the particular Offense, even those from different previous incidents. `
+
+`The first <span style="text-decoration: underline">three</span> characters are the Offense Sequence Number (L6) of the Offense (6). The next <span style="text-decoration: underline">twelve</span> characters are the Incident Number (2) of the Offense. If Multiple Arrestee Segment Indicator (44) is anything except Not Applicable ("N") then this field will be connecting an Arrest to Offenses in two or more separate incidents. The Incident Number (2) is appended to distinguish between Offense 001 in this incident and Offense 001 in a different incident. The combined Offense Sequence Number (L6) and the Incident Number (2) add together to give a unique identifier (15 characters) indicating which Offense gave rise to the Arrest. The Incident Number (2) can be omitted if Multiple Arrestee Segment Indicator (44) is Not Applicable ("N"), because all Offenses will be in the same incident. And therefore, the Incident Number (2) can be assumed to be that of the incident with which the Arrestee Segment (60) was submitted.`
+
+___
+
+<br>
+
+## Arrestee was Armed With [At Time of Arrest] (46)
+
+**Data Characteristics:** 3 Character Alpha
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16001"] -%}
+1 | {{error.desc_de46}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16004"] -%}
+2 | {{error.desc_de46}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["16006"] -%}
+3 | {{error.desc_de46}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16007"] -%}
+4 | {{error.desc_de46}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["16054"] -%}
+5 | {{error.desc_de46}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["16055"] -%}
+6 | {{error.desc_de46}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+<br>
+
+### Allowed Entries:
+
+___
+
+Enter as many codes as apply. However, DO NOT enter the same code more than once for the same Arrestee:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Arrestee was Armed with (at Time of Arrest)</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '46' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+`Note: If the Arrestee was in possession of a toy or play weapon this would be reported as being Unarmed ('01').`
+
+`Notes: Arrestee was Armed With (46) indicates if the Arrestee was armed with a commonly knownweapon at the time of his/her apprehension.`
+
+`If the weapon was an "automatic" firearm, an Automatic ("A") designation is added as a suffixcode, (for example, Rifle Automatic ("13A"). An "Automatic Firearm" is defined as any firearmthat shoots, or is designed to shoot, more than one shot at a time by a single pull of the trigger without manual reloading.`
+
+`Can enter as many codes as are applicable`
+
+___
+
+<br>
+
+### Examples: 
+
+___
+
+
+Example Number | Description
+:-------------:|:-----------
+1 | When a man was arrested, he had in his possession a .357-Magnum handgun and a penknife. The entry should be Handgun ('12'). Because a small pocket knife is not generally considered to be a 'weapon', it does not qualify for reporting to LIBRS.
+2 | A female resisted arrest using a liquor bottle and a chair as a weapon before being subdued. The entry for LIBRS should be Unarmed ('01'). Although the subject used items as weapons, they were not commonly known weapons.
+
+___
+
+<br>
+
+## Age of Arrestee [At Time of Arrest] (47)
+
+**Data Characteristics:** 3 Character Alpha
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16001"] -%}
+1 | {{error.desc_de47}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16052"] -%}
+2 | {{error.desc_de47}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["16064"] -%}
+3 | {{error.desc_de47}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16008"] -%}
+4 | {{error.desc_de47}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["16041"] -%}
+5 | {{error.desc_de47}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["16009"] -%}
+6 | {{error.desc_de47}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["26010"] -%}
+7 | {{error.desc_de47}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["16022"] -%}
+8 | {{error.desc_de47}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22100"] -%}
+9 | {{error.desc_de47}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+`Note: Age of the Arrestee (47) can be entered either as an exact number of years, an estimated age, or as unknown.`
+
+<br>
+
+### Allowed Entries
+
+___
+
+Enter only <span style="text-decoration: underline">one</span> code per Arrest Segment (60):
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Age of Arrestee</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '47' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+<br>
+
+ `Note: Age at time of Arrest.`
+
+ `Note: (00) Unknown CANNOT have 'E' with this data value`
+
+ `Note: When Arrestee's Age is not known, estimate the Arrestee's Age and append an 'E' (Estimated).`
+
+___
+
+<br>
+
+### Examples: 
+
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | An Arrestee refused to give his Date of Birth, but he appeared to be 35 to 40 years old. Possible entries would be Unknown ('00') or an estimated 37 years old ('37E'). Use the latter when possible.
+
+<br>
+
+## Date of Birth of Arrestee (L47)
+
+**Data Characteristics:** 8 Character Date
+
+**Format:** MMDDYYYY
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["26010"] -%}
+1 | {{error.desc_del47}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22105"] -%}
+2 | {{error.desc_del47}} | {{error.err_no}}| {{ error.err_message }}
+
+
+`Note: If Date of Birth of the Arrestee is Known, it should be entered into this Data Element.`
+
+<br>
+
+## Sex of Arrestee (48)
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16001"] -%}
+1 | {{error.desc_de48}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16067"] -%}
+2 | {{error.desc_de48}} | {{error.err_no}}| {{ error.err_message }}
+
+`Note: This Data Element (48) indicates the sex of the Arrestee.`
+
+___
+
+<br>
+
+### Allowed Entries
+
+___
+
+Enter only (1) code per Arrest Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Age of Arrestee</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '48' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+## Race of Arrestee (49)
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16001"] -%}
+1 | {{error.desc_de49}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["16004"] -%}
+2 | {{error.desc_de49}} | {{error.err_no}}| {{ error.err_message }}
+
+`Notes: Race of Arrestee (49) is indicated by this Data Element.`
+
+___
+
+<br>
+
+### Allowed Entries
+
+___
+
+Enter only (1) code per Arrest Segment (60):
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Race of Arrestee</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '49' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+## Ethnicity of Arrestee (50)
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16004"] -%}
+1 | {{error.desc_de50}} | {{error.err_no}}| {{ error.err_message }}
+
+`Note: This Data Element indicates the ethnic origin of the Arrestee.`
+
+___
+
+<br>
+
+### Allowed Entries
+
+___
+
+Enter only (1) code per Arrest Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Ethnicity of Arrestee</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '50' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+## Resident Status of Arrestee (51)
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16004"] -%}
+1 | {{error.desc_de51}} | {{error.err_no}}| {{ error.err_message }}
+
+`Notes: The Arrestee’s Residency Status, whether Resident ('R') or Nonresident ('N'), is entered into this Data Element.`
+
+`A 'Resident' is a person who maintains his/her permanent home for legal purposes in the locality (i.e., town, city, or community) where the crime took place.`
+
+___
+
+<br>
+
+### Allowed Entries
+
+___
+
+Enter only (1) code per Arrest Segment (60):
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Resident Status of Arrestee</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '51' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+## Disposition of Arrestee Under 17 (52)
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16004"] -%}
+1 | {{error.desc_de52}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["16052"] -%}
+2 | {{error.desc_de52}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["16053"] -%}
+3 | {{error.desc_de52}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["16040"] -%}
+4 | {{error.desc_de52}} | {{error.err_no}}| {{ error.err_message }}
+
+`Notes: Disposition of Arrestee Under 17 (52) is to be used ONLY if the Arrestee was 16 years of age or younger at the time of arrest.`
+
+`This will change to Arrestee under 18 on 01/01/2020`
+
+___
+
+<br>
+
+### Allowed Entries
+
+___
+
+Enter only (1) code per Arrest Segment (60) for Juveniles only:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Disposition of Arrestee Under 17</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '52' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+### Examples: 
+
+___
+
+
+Example Number | Description
+:-------------:|:-----------
+1 | The Arrestee, age 13, was apprehended for vandalizing a school, then released to his parents with a warning. The entry should be Handled Within the Department and Released ('D').
+2 | The Arrestee, age 16, was arrested for rape, and turned over to the Adult Court to be tried as an adult. The entry would be Referred to Criminal or Adult Court ('A').
+
+<br>
+
+## Location of Incident (Geographical Coordinates) (L53)
+
+**Data Characteristics:** 12 Character **Alpha/Numeric**
+
+**Format:** DDMMSSDDMMSS
+
+|First six characters are LONGITUDE in:
+:-------:|-----------------------------------
+DD       | Degrees   
+MM       | Minutes                             
+SS       | Seconds                           
+
+<br>
+
+|Second six characters are LATITUDE in:
+:-------:|-----------------------------------
+DD       | Degrees   
+MM       | Minutes                             
+SS       | Seconds                     
+
+<br>
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["20200"] -%}
+1 | {{error.desc_del53}} | {{error.err_no}}| {{ error.err_message }}
+
+`Note: Location of Incident (52) reports the geographical location of the incident. This field is not required and should be left blank if the agency does not track incidents with the use of geographical coordinates.`
+
+`Optional: This field is not validated nor submitted to the FBI.`
+
+___
+
+<br>
+
+### Allowed Entries
+
+___
+
+Not required for LIBRS Releases 1.0/1.1. or 2.0, unless agency uses geographical coordinates to track incidents. Entry should either be valid geographical coordinates, or Blank (G). If agencies submit zeroes, program will produce errors because zeroes are
+numeric.
+
+<br>
+
+## Station/Division/Precinct Identifier (L54)
+
+**Data Characteristics:** 6 Character Alpha
+
+### Requirements: 
+
+None
+
+___
+
+`This field is optional and is for the reporting agency's use in locating incidents.`
+
+<br>
+
+## Arrest Transaction Number (ATN) for Louisiana (L55)
+
+**Data Characteristics:** 15 Character Alpha/Numeric
+
+### Requirements: 
+
+MUST be present if fingerprints are submitted to the Bureau of Identification of the Louisiana State Police.
+
+___
+
+`Notes: Arrest Transaction Number (L55) is generated by the live scan when fingerprinting an Arrestee or is a pre-assigned number generated and assigned at the time of the fingerprinting. This ATN number is defined as:`
+
+`Characters 1-4 4th, 5th, 6th, and 7th characters of the ORI number of the agency that made the arrest, or where the live scan device is housed.`
+`Character 5 live scan device number assigned to the device being used to generate this Arrestee's fingerprints.`
+`Characters 6-7 indicates the year this Arrestee's fingerprints are being scanned into this device.`
+`Characters 8-12 Arrest Sequence Number for this arrest event. This is a number counter that sequentially assigns a number to each arrest event`
+`Characters 13-15 indicates the number of charges being assigned to this Arrestee at the time these fingerprints are being scanned. For instance, if an Arrestee is being charged with five counts of Aggravated Battery for this arrest, the numbers generated would be "001" through "005."`
+`The Arrest Transaction Number (L55) is used to facilitate crime analysis. Arrest Transaction Number (L55) is the number assigned when an Arrestee is fingerprinted on the Automatic Finger Print Information System (AFIS). This data element can be sent on every Arrestee, but is only mandated if the Louisiana Revised Statute is a felony arrest or charges required fingerprints.`
+
+ <br> 
 
 # Control Data Elements
 ___
@@ -998,3 +2535,4 @@ Requirement  | Requirement Description |
 1 | Indicates the LIBRS Spec is to be used by WinLIBRS when validating a data submission
 
 ___
+
