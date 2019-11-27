@@ -595,12 +595,12 @@
                 "title": "",
                 "values": [
                     {
-                        "code": "A",
-                        "desc": "Attempted"
+                        "code": "F",
+                        "desc": "Force"
                     },
                     {
-                        "code": "C",
-                        "desc": "Completed"
+                        "code": "N",
+                        "desc": "No Force"
                     }
                 ]
             }

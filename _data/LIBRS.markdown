@@ -5011,11 +5011,8 @@ Count Arrestee ("C") entered into Multiple Arrestee Segment Indicator
 **(2) If the suspect\'s arrest did not clear additional incidents, the
 entry should be Not Applicable ("N").**
 
-Louisiana Revised Statute 
+Louisiana Revised Statute Number of Arrest (45)
 --------------------------
-
-of Arrest (45)
---------------
 
 **Data Characteristics**: 12 Character Alpha
 
@@ -5067,10 +5064,7 @@ of Arrest (45)
 **\
 **
 
-Agency Supplied NIBRS Code
---------------------------
-
-For Arrest (N45)
+Agency Supplied NIBRS Code For Arrest (N45)
 ----------------
 
 **\*\*\* New Data Element \*\*\***
@@ -5106,10 +5100,7 @@ Offense Segment (20) referred to by this Data Element (L45) MUST exist.
 **\
 **
 
-Arrestee was Armed With
------------------------
-
-\[At Time of Arrest\] (46)
+Arrestee was Armed With (At Time of Arrest) (46)
 --------------------------
 
 **Data Characteristics:** 3 Character Alpha
@@ -5167,10 +5158,7 @@ weapon before being subdued. The entry for LIBRS should be Unarmed
 ("01\"). Although the subject used items as weapons, they were not
 commonly known weapons.
 
-Age of Arrestee
----------------
-
-\[At Time of Arrest\] (47)
+Age of Arrestee [At Time of Arrest] (47)
 --------------------------
 
 **Data Characteristics:** 3 Character Alpha
@@ -5311,8 +5299,7 @@ Segment (60):
 
 **Requirements:** If entered, MUST be a valid code. **Error**s **16004**
 
-**Allowed Entries:** Enter only [one]{.underline} code **per Arrest
-Segment:**
+**Allowed Entries:** Enter only [one]{.underline} code **per Arrest Segment:**
 
   Ethnicity of Arrestee   
   ----------------------- ----------------------------
@@ -5344,13 +5331,13 @@ Segment (60):
 
 > 1\) MUST be a valid code. **Error** **16004\
 > **
+>"desc_de52": "If entered, MUST be a valid code."
+> "desc_de52": "MUST be entered if Arrestee Age is Under 17." **Error** **16052**
 >
-> 2\) MUST be entered if Arrestee Age is Under 17. **Error** **16052**
->
-> 3\) CANNOT be entered if Arrestee Age is 17 or Over. **Error** **16053\
+> "desc_de52": "CANNOT be entered if Arrestee Age is 17 or Over." **Error** **16053\
 > **
 >
-> **4) Disposition of Arrestee Under 17 (52) MUST be entered, when Age
+> "desc_de52": "Disposition of Arrestee Under 17 (52) MUST be entered, when Age
 > of Arrestee (47) indicated an Age for a Juvenile. Note that when Age
 > is for a juvenile, the Disposition of Arrestee Under 17 (52) MUST be
 > entered. Error 16040**
@@ -5376,11 +5363,7 @@ Within the Department and Released (\"D\").
 Adult Court to be tried as an adult. The entry would be Referred to
 Criminal or Adult Court (\"A\").
 
-Location of Incident (L53)
---------------------------
-
-\[Geographical Coordinates\]
-----------------------------
+Location of Incident (Geographical Coordinates) (L53)
 
 **Data Characteristics:** 12 Character **Alpha/Numeric**
 
@@ -5419,7 +5402,7 @@ numeric.**
 **Notes:** This field is optional and is for the reporting agency\'s use
 in locating incidents.
 
-Arrest Transaction Number (L55)
+Arrest Transaction Number (ATN) for Louisiana (L55)
 -------------------------------
 
 **Data Characteristics: 15 Character Alpha/Numeric**

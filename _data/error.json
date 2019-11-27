@@ -381,7 +381,8 @@
         "err_no": 12004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "desc_de6": "MUST be a valid code on Master LIBRS/LRS Code Table.",
-        "desc_de9": "MUST be a valid code on Master LIBRS/LRS Code Table."
+        "desc_de9": "MUST be a valid code on Master LIBRS/LRS Code Table.",
+        "desc_de11": "MUST be a valid code."
     },
     "12005": {
         "err_no": 12005,
@@ -425,11 +426,13 @@
     },
     "12053": {
         "err_no": 12053,
-        "err_message": "MUST BE PRESENT WHEN OFFENSE CODE IS 220(BURGLARY)"
+        "err_message": "MUST BE PRESENT WHEN OFFENSE CODE IS 220(BURGLARY)",
+        "desc_de11": "MUST be entered if Louisiana Revised Statue (6) has a NIBRS offense code of 220 (Burglary) as defined on Master LIBRS/LRS Code Table."
     },
     "12054": {
         "err_no": 12054,
-        "err_message": "MUST BE BLANK WHEN OFFENSE IS OTHER THAN(BURGLARY)"
+        "err_message": "MUST BE BLANK WHEN OFFENSE IS OTHER THAN(BURGLARY)",
+        "desc_de11": "MUST be blank when offense code is not Burglary (NIBRS 220)."
     },
     "12055": {
         "err_no": 12055,
@@ -675,25 +678,34 @@
         "err_no": 14001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
         "desc_de8": "Must be present -- CANNOT be Blank (G).",
-        "desc_de8a": "Must be present -- CANNOT be Blank (G)."
+        "desc_de8a": "Must be present -- CANNOT be Blank (G).",
+        "desc_de39": "MUST be present when Offender Sequence Number (36) is other than Unknown ('000').",
+        "desc_de38": "MUST be present when Offender Sequence Number (36) is other than Unknown ('000').",
+        "desc_de37": "MUST be present when Offender Sequence Number (36) is other than Unknown ('000').",
+        "desc_de36": "MUST be present -- CANNOT be blank."
     },
     "14002": {
         "err_no": 14002,
-        "err_message": "CONTAINS NON NUMERIC ENTRY"
+        "err_message": "CONTAINS NON NUMERIC ENTRY",
+        "desc_de36": "MUST be numeric entry with zero left-fill. Offender Sequence Number (36) distinguishes one Offender from another and identifies a situation where nothing was known about the number of Offenders, or who they were. For example, a corpse was found in a ditch and there were no eyewitnesses or other information that could provide data about possible Offenders. In this case, Unknown ('000') would be entered. However, if five Offenders were seen running from the scene, then five Offender records would be submitted, each with a difference Offender Sequence Number (36)."
     },
     "14004": {
         "err_no": 14004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "desc_de8": "MUST be a valid code on Master LIBRS/LRS Code Table.",
-        "desc_de8a": "MUST be a valid code on Master LIBRS/LRS Code Table."
+        "desc_de8a": "MUST be a valid code on Master LIBRS/LRS Code Table.",
+        "desc_de39": "MUST be a valid code.",
+        "desc_de38": "MUST be a valid code."
     },
     "14008": {
         "err_no": 14008,
-        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS"
+        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS",
+        "desc_de37": "Exact Age: A single, two-character Age MUST be in first two positions of the field. The third position must be Blank (G)."
     },
     "14009": {
         "err_no": 14009,
-        "err_message": "ESTIMATED AGE MUST BE 2 NUMERIC DIGITS, AND HAVE A TRAILING 'E'"
+        "err_message": "ESTIMATED AGE MUST BE 2 NUMERIC DIGITS, AND HAVE A TRAILING 'E'",
+        "desc_de37": "Estimated Age: MUST be 2 numeric digits, and have a trailing 'E'."
     },
     "14015": {
         "err_no": 14015,
@@ -709,51 +721,71 @@
     },
     "14022": {
         "err_no": 14022,
-        "err_message": "ESTIMATED AGE CANNOT BE '00' UNKNOWN AND HAVE A TRAILING 'E'"
+        "err_message": "ESTIMATED AGE CANNOT BE '00' UNKNOWN AND HAVE A TRAILING 'E'",
+        "desc_de37": "Estimated Age: Estimated Age CANNOT be Unknown ('00') **and have a trailing 'E'**."
     },
     "14050": {
         "err_no": 14050,
-        "err_message": "OFFENDER IS SPOUSE, BUT AGE IS LESS THAN 10"
+        "err_message": "OFFENDER IS SPOUSE, BUT AGE IS LESS THAN 10",
+        "desc_de37": "If Relationship of Victim to Offender (35) contains a relationship of Spouse (**'SE'**), then the Offender CANNOT be less than 10 years old.",
+        "desc_de35": "Husbands and wives (that is, spouses) must be at least 10 years of age."
     },
     "14051": {
         "err_no": 14051,
-        "err_message": "DUPLICATE OFFENDER SEGMENT ON TAPE"
+        "err_message": "DUPLICATE OFFENDER SEGMENT ON TAPE",
+        "desc_de36": "MUST be UNIQUE - CANNOT be duplicated."
     },
     "14052": {
         "err_no": 14052,
-        "err_message": "CANNOT BE PRESENT WHEN OFFENDER NUMBER IS '000' UNKNOWN"
+        "err_message": "CANNOT BE PRESENT WHEN OFFENDER NUMBER IS '000' UNKNOWN",
+        "desc_de39": "CANNOT be entered when Offender Sequence Number (36) is Unknown ('000').",
+        "desc_de38": "CANNOT be entered when Offender Sequence Number (36) is Unknown ('000').",
+        "desc_de37": "CANNOT be entered when Offender Sequence Number (36) is Unknown ('000')."
     },
     "14053": {
         "err_no": 14053,
-        "err_message": "SEX OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP"
+        "err_message": "SEX OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP",
+        "desc_de35": "The Sex of Victim (DE 27) and Sex of Offender (DE 38) MUST reflect the implied relationship. The following relationships must reflect a specific sex for the Victim, Offender, or both depending on the relationship: <br><br>The following Victim/Offender Genders are implied to be DIFFERENT: {::nomarkdown}<ul><li>XS - Victim was Ex-Spouse</li><li>SE - Victim Was Spouse</li><li>CS - Victim was Common-Law Spouse</li><li>ES - Victim was Estranged Spouse</li><li>BG - Victim was Boyfriend/Girlfriend</li><li>XB - Victim was Ex-Boyfriend/Girlfriend</li><li>NM - Non-Married Live-In</li></ul>{:/}The following Victim/Offender Geners are implied to be SAME:{::nomarkdown}<ul><li>HR - Homosexual Relationship (No Longer Used)</li><li>VO - Victim was Offender</li></ul>{:/}"
     },
     "14054": {
         "err_no": 14054,
-        "err_message": "AGE OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP"
+        "err_message": "AGE OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP",
+        "desc_de35": "The Age of Victim and Age of Offender MUST reflect the implied relationship. <br><br>The following Implied Age Difference Between Victims and Offenders where victim Must be **Younger**: {::nomarkdown}<ul><li>CH - Victim was Child</li><li>GC - Victim was Grandchild</li><li>BE - Victim was Babysitee (the Baby)</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim Must be **Older**:{::nomarkdown}<ul><li>PA - Victim was Parent</li><li>GP - Victim was Grandparent</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim Must be **Same Age**:{::nomarkdown}<ul><li>VO - Victim was Offender</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim Must be **At Least 10 Yrs Old**:{::nomarkdown}<ul><li>SE - Victim was Spouse</li><li>ES - Victim was Estranged Spouse</li><li>CS - Victim was Common-Law Spouse</li><li>XS - Victim was Ex-Spouse</li><li>NM - Victim was Non-Married Live-In</li></ul>{:/}"
     },
     "14055": {
         "err_no": 14055,
-        "err_message": "OFFENDER '000' EXISTS--CANNOT SUBMIT MORE OFFENDERS"
+        "err_message": "OFFENDER '000' EXISTS--CANNOT SUBMIT MORE OFFENDERS",
+        "desc_de36": "If the number is Unknown ('000'), no other Offender Segments (40) can be submitted."
     },
     "14056": {
         "err_no": 14056,
-        "err_message": "OFFENDER EXACT AGE MUST BE 2 NUMERIC DIGITS"
+        "err_message": "OFFENDER EXACT AGE MUST BE 2 NUMERIC DIGITS",
+        "desc_de37": "Exact Age: MUST contain numeric entry of 00-99."
     },
     "14057": {
         "err_no": 14057,
-        "err_message": "OFFENDER SEQUENCE NUMBER CANNOT BE UNKNOWN IF INCIDENT CLEARED EXCEPTIONALL"
+        "err_message": "OFFENDER SEQUENCE NUMBER CANNOT BE UNKNOWN IF INCIDENT CLEARED EXCEPTIONALL",
+        "desc_de36": "If an incident is Exceptionally Cleared (4), then Unknown ('000') CANNOT be entered. Unknown ('000') indicates that nothing is known about the Offender(s) regarding number and any identifying information. One of the criteria for Exceptionally Clearing (4) an incident is that at least one of the Offenders be known."
     },
     "14058": {
         "err_no": 14058,
-        "err_message": "AT LEAST ONE OFFENDER MUST HAVE KNOWN VALUES"
+        "err_message": "AT LEAST ONE OFFENDER MUST HAVE KNOWN VALUES",
+        "desc_de39": "When an incident is Cleared Exceptionally (4), at least one of the Offenders MUST have *known* values in Age, Sex and Race.",
+        "desc_de38": "When an incident is Cleared Exceptionally (4), at least one of the Offenders MUST have *known* values in Age, Sex and Race.",
+        "desc_de37": "When an incident is Cleared Exceptionally (4), at least one of the Offenders MUST have *known* values in Age, Sex and Race."
     },
     "14059": {
         "err_no": 14059,
-        "err_message": "OFFENDER DATA MUST BE PRESENT IF OFFENSE CODE IS JUSTIFIABLE HOMICIDE / 09 C"
+        "err_message": "OFFENDER DATA MUST BE PRESENT IF OFFENSE CODE IS JUSTIFIABLE HOMICIDE/09C",
+        "desc_de39": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
+        "desc_de38": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
+        "desc_de37": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
+        "desc_de36": "For a Justifiable Homicide (NIBRS 09C), at least one of the Offenders must have 'known' information for Age, Sex, and Race. Consequently, Unknown ('000') is not valid as an Offender Sequence Number (36)."
     },
     "14060": {
         "err_no": 14060,
-        "err_message": "VICTIM 'S SEX CANNOT BE SAME AS ALL OFFENDERS FOR OFFENSES OF ' 11 A ' AND ' 36 B '"
+        "err_message": "VICTIM'S SEX CANNOT BE SAME AS ALL OFFENDERS FOR OFFENSES OF '11A' AND '36B'",
+        "desc_de38": "For Forcible Rape (NIBRS 11A) or Statutory Rape (NIBRS36B), one or more of the Offenders MUST have a different sex than the rape Victim."
     },
     "14061": {
         "err_no": 14061,
@@ -778,7 +810,8 @@
     },
     "15004": {
         "err_no": 15004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
+        "desc_de35": "MUST be a valid code."
     },
     "15005": {
         "err_no": 15005,
@@ -826,7 +859,8 @@
     },
     "15050": {
         "err_no": 15050,
-        "err_message": "VICTIM IS SPOUSE, BUT AGE IS LESS THAN 10"
+        "err_message": "VICTIM IS SPOUSE, BUT AGE IS LESS THAN 10",
+        "desc_de35": "Husbands and wives (that is, spouses) must be at least 10 years of age."
     },
     "15051": {
         "err_no": 15051,
@@ -858,7 +892,8 @@
     },
     "15060": {
         "err_no": 15060,
-        "err_message": "RELATIONSHIP MUST BE ENTERED WHEN AN OFFENDER NUMBER(34) EXISTS"
+        "err_message": "RELATIONSHIP MUST BE ENTERED WHEN AN OFFENDER NUMBER(34) EXISTS",
+        "desc_de35": "Every Offender indicated in Offender Number to be Related (34) requires an entry in Relationship of Victim to Offender (35), except when the Offender Sequence Number (36) is Unknown ('000'). This field MUST be Blank (G) in instances where '000' is entered."
     },
     "15061": {
         "err_no": 15061,
@@ -890,7 +925,8 @@
     },
     "15068": {
         "err_no": 15068,
-        "err_message": "RELATIONSHIP CANNOT BE ENTERED WHEN RELATED TO OFFENDER NUMBER '000'"
+        "err_message": "RELATIONSHIP CANNOT BE ENTERED WHEN RELATED TO OFFENDER NUMBER '000'",
+        "desc_de35": "Relationship CANNOT be entered when Offender Number to be Related (34) is Unknown ('000')."
     },
     "15069": {
         "err_no": 15069,
@@ -946,51 +982,80 @@
     },
     "16001": {
         "err_no": 16001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
+        "desc_de45": "Must be present -- CANNOT be Blank (G).",
+        "desc_de44": "Must be present -- CANNOT be Blank (G).",
+        "desc_de43": "Must be present -- CANNOT be Blank (G).",
+        "desc_de42": "Must be present -- CANNOT be Blank (G).",
+        "desc_de41": "Must be present -- CANNOT be Blank (G).",
+        "desc_de46": "Must be present -- CANNOT be Blank (G).",
+        "desc_de47": "Must be present -- CANNOT be Blank (G).",
+        "desc_de48": "Must be present -- CANNOT be Blank (G).",
+        "desc_de49": "Must be present -- CANNOT be Blank (G).",
+        "desc_de40": "Must be present -- CANNOT be Blank (G)."
     },
     "16002": {
         "err_no": 16002,
-        "err_message": "CONTAINS NON NUMERIC ENTRY"
+        "err_message": "CONTAINS NON NUMERIC ENTRY",
+        "desc_de40": "MUST be numeric entry of 001 to 999 with Zero left-fill."
     },
     "16004": {
         "err_no": 16004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
+        "desc_de45": "MUST be a valid code on Master LIBRS/LRS Code Table. This code does not have to match one of the code(s) entered for Louisiana Revised Statute (6) within Offense Segments (6) submitted in an Incident Report.",
+        "desc_de44": "MUST be a valid code.",
+        "desc_de43": "MUST be a valid code.",
+        "desc_de46": "MUST be a valid code.",
+        "desc_de49": "MUST be a valid code.",
+        "desc_de50": "If entered, MUST be a valid code.",
+        "desc_de51": "If entered, MUST be a valid code.",
+        "desc_de52": "MUST be a valid code."
     },
     "16005": {
         "err_no": 16005,
-        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
+        "desc_de42": "Each component of Arrest Date (42) MUST be valid; that is, months must be 01-12, days must be 01-31, and year must include the century (that is, 19xx, 20xx). In addition, days CANNOT exceed maximum for the month (for example, June CANNOT have 31 days). Arrest Date (42) CANNOT exceed the current date. Arrest Date CANNOT be greater than that entered with the \"Month of Data Submission\" and \"Year of Data Submission\" fields on the data record.<br>For example, if \"Month of Data Submission\" and \"Year of Data Submission\" are \"06/2014\", the Arrest Date (42) CANNOT contain any date 07/01/2014 or greater."
     },
     "16006": {
         "err_no": 16006,
-        "err_message": "ERROR - DUPLICATE VALUE ="
+        "err_message": "ERROR - DUPLICATE VALUE =",
+        "desc_de41": "If more than one code entered, CANNOT BE A DUPLICATE.",
+        "desc_de46": "If more than one code entered, CANNOT BE A DUPLICATE."
     },
     "16007": {
         "err_no": 16007,
-        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]"
+        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]",
+        "desc_de46": "Unarmed ('01') is mutually exclusive with any other value. That is, it is to be used ONLY when no other code applies."
     },
     "16008": {
         "err_no": 16008,
-        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS"
+        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS",
+        "desc_de47": "EXACT AGE: A single, two-character Age MUST be in first two positions of the field. The third position must be Blank (G)."
     },
     "16009": {
         "err_no": 16009,
-        "err_message": "ESTIMATED AGE MUST HAVE 'E' IN LAST POSITION"
+        "err_message": "ESTIMATED AGE MUST HAVE 'E' IN LAST POSITION",
+        "desc_de47": "ESTIMATED AGE: MUST be 2 numeric digits, and have a trailing 'E'."
     },
     "16015": {
         "err_no": 16015,
-        "err_message": "CANNOT HAVE EMBEDDED 'BLANKS' BETWEEN FIRST AND LAST NON - BLANK CHARACTERS"
+        "err_message": "CANNOT HAVE EMBEDDED 'BLANKS' BETWEEN FIRST AND LAST NON - BLANK CHARACTERS",
+        "desc_de41": "MUST be blank right-fill *if* under 12 characters in length. CANNOT have embedded Blanks (G) between the first and last character entered."
     },
     "16016": {
         "err_no": 16016,
-        "err_message": "MUST BE LEFT JUSTIFIED--BLANK DETECTED IN FIRST POSITION"
+        "err_message": "MUST BE LEFT JUSTIFIED--BLANK DETECTED IN FIRST POSITION",
+        "desc_de41": "MUST be left-justified with blank right-fill *if* under 12 characters in length."
     },
     "16017": {
         "err_no": 16017,
-        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN AND / OR BLANKS"
+        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A - Z, 0 - 9, HYPHEN AND / OR BLANKS",
+        "desc_de41": "Valid character combinations can include A-Z, 0-9, and hyphens. For example, 89-123-SC is valid, but 89+123*SC or '89-123 sc' is invalid."
     },
     "16020": {
         "err_no": 16020,
-        "err_message": "ARREST DATE CANNOT PREDATE BASE DATE"
+        "err_message": "ARREST DATE CANNOT PREDATE BASE DATE",
+        "desc_de42": "Arrestee Segments (60) submitted as Time-Window Submission (Action Type of Time Window ('W')) CANNOT have Arrest Date (42) [earlier]{.underline} than the Agency's Base Date.<br>This also applies to any subsequent Modify Submission ('M') of a previously submitted Time-Window Submission ('W')."
     },
     "16021": {
         "err_no": 16021,
@@ -998,35 +1063,44 @@
     },
     "16022": {
         "err_no": 16022,
-        "err_message": "ESTIMATED AGE CANNOT HAVE 'OO' = UNKNOWN"
+        "err_message": "ESTIMATED AGE CANNOT HAVE 'OO' = UNKNOWN",
+        "desc_de47": "ESTIMATED AGE: The estimated Age CANNOT be Unknown ('00') and have a trailing 'E'."
     },
     "16040": {
         "err_no": 16040,
-        "err_message": "WARNING - NO DISPOSITION FOR POSSIBLE JUVENILE ARRESTEE"
+        "err_message": "WARNING - NO DISPOSITION FOR POSSIBLE JUVENILE ARRESTEE",
+        "desc_de52": "Disposition of Arrestee Under 17 (52) MUST be entered, when Age of Arrestee (47) indicated an Age for a Juvenile. Note that when Age is for a juvenile, the Disposition of Arrestee Under 17 (52) MUST be entered."
     },
     "16041": {
         "err_no": 16041,
-        "err_message": "WARNING - ARRESTEE HAD AN AGE OF 99 OR OLDER"
+        "err_message": "WARNING - ARRESTEE HAD AN AGE OF 99 OR OLDER",
+        "desc_de47": "EXACT AGE: When Age is unknown, don't confuse Over 98 Years Old ('99') with Unknown ('00'). Whenever Over 98 Years Old ('99') is entered, a warning message is produced."
     },
     "16052": {
         "err_no": 16052,
-        "err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS LESS THAN 17"
+        "err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS LESS THAN 17",
+        "desc_de47": "If age is under 17, then Data Element # 52 (disposition of Arrestee Under 17) must be entered.",
+        "desc_de52": "MUST be entered if Arrestee Age is Under 17."
     },
     "16053": {
         "err_no": 16053,
-        "err_message": "FOR AGE GREATER THAN 16 DISPOSITION SHOULD NOT BE ENTERED"
+        "err_message": "FOR AGE GREATER THAN 16 DISPOSITION SHOULD NOT BE ENTERED",
+        "desc_de52": "CANNOT be entered if Arrestee Age is 17 or Over."
     },
     "16054": {
         "err_no": 16054,
-        "err_message": "AUTOMATIC INDICATOR MUST BE BLANK OR 'A'"
+        "err_message": "AUTOMATIC INDICATOR MUST BE BLANK OR 'A'",
+        "desc_de46": "The third character must be either Blank (G) or Automatic ('A')."
     },
     "16055": {
         "err_no": 16055,
-        "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR"
+        "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR",
+        "desc_de46": "If the firearm is Automatic, add Automatic ('A') as the third character of code; valid only with the following codes:{::nomarkdown}<ul><li>(11) Firearm</li><li>(12) Handgun</li><li>(13) Rifle</li><li>(14) Shotgun</li><li>(15) Other Firearm</li></ul>{:/}"
     },
     "16056": {
         "err_no": 16056,
-        "err_message": "THIS ARRESTEE EXCEEDED THE NUMBER OF OFFENDERS (nn) ON THE INCIDENT"
+        "err_message": "THIS ARRESTEE EXCEEDED THE NUMBER OF OFFENDERS (nn) ON THE INCIDENT",
+        "desc_de40": "Number of Arrestees (40) CANNOT be greater than number of Offenders."
     },
     "16057": {
         "err_no": 16057,
@@ -1062,11 +1136,13 @@
     },
     "16064": {
         "err_no": 16064,
-        "err_message": "ARRESTEE AGE MUST BE NUMERIC DIGITS"
+        "err_message": "ARRESTEE AGE MUST BE NUMERIC DIGITS",
+        "desc_de47": "EXACT AGE: Must contain numeric entry of 00-99."
     },
     "16065": {
         "err_no": 16065,
-        "err_message": "ARREST DATE CANNOT BE BEFORE THE INCIDENT START DATE"
+        "err_message": "ARREST DATE CANNOT BE BEFORE THE INCIDENT START DATE",
+        "desc_de42": "CANNOT be earlier than Incident Date/Hour (3)."
     },
     "16066": {
         "err_no": 16066,
@@ -1074,7 +1150,8 @@
     },
     "16067": {
         "err_no": 16067,
-        "err_message": "INVALID ARRESTEE SEX VALUE"
+        "err_message": "INVALID ARRESTEE SEX VALUE",
+        "desc_de48": "MUST be a valid code. Although Unknown ('U') is a valid code for Victim and Offender sex, it is NOT valid for Arrestees."
     },
     "16068": {
         "err_no": 16068,
@@ -1082,11 +1159,13 @@
     },
     "16069": {
         "err_no": 16069,
-        "err_message": "NO ARRESTEE RECORDS ALLOWED FOR A JUSTIFIABLE HOMICIDE"
+        "err_message": "NO ARRESTEE RECORDS ALLOWED FOR A JUSTIFIABLE HOMICIDE",
+        "desc_de45": "An incident CANNOT have arrests when Louisiana Revised Statute (6) is Justifiable Homicide (LRS 14:20, or NIBRS (09C). <br>A Justifiable Homicide never involves an arrest of the Offender (the person who committed the Justifiable Homicide)."
     },
     "16070": {
         "err_no": 16070,
-        "err_message": "JUSTIFIABLE HOMICIDE CANNOT BE AN ARREST OFFENSE CODE"
+        "err_message": "JUSTIFIABLE HOMICIDE CANNOT BE AN ARREST OFFENSE CODE",
+        "desc_de45": "The Louisiana Revised Statute (6) CANNOT be Justifiable Homicide (14:20), because this Offense does not result in a subsequent arrest of the Offender."
     },
     "16080": {
         "err_no": 16080,
@@ -1204,7 +1283,8 @@
     },
     "20200": {
         "err_no": 20200,
-        "err_message": "MUST CONTAIN 12 NUMERIC PLACES"
+        "err_message": "MUST CONTAIN 12 NUMERIC PLACES",
+        "desc_del53": "If entered, the field MUST contain 12 numeric places. NO spaces allowed."
     },
     "22005": {
         "err_no": 22005,
@@ -1295,11 +1375,13 @@
     },
     "22100": {
         "err_no": 22100,
-        "err_message": "AGE MUST BE '01' - '16' FOR JUVENILE OFFENSES"
+        "err_message": "AGE MUST BE '01' - '16' FOR JUVENILE OFFENSES",
+        "desc_de47": "When Juvenile Qualifiers are used, Age of Arrestee (47) must be '01' thru '16' for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}"
     },
     "22105": {
         "err_no": 22105,
-        "err_message": "AGE CANNOT BE UNKNOWN IF DATE OF BIRTH IS KNOWN"
+        "err_message": "AGE CANNOT BE UNKNOWN IF DATE OF BIRTH IS KNOWN",
+        "desc_del47": "AGE CANNOT BE UNKNOWN if Date of Birth (L47) is Known. If Age of an Arrestee (at Time of Arrest) is reported as Unknown ('00') and Date of Birth of Arrestee (L47) is also reported, this incident will be rejected. If Date of Birth is Known, Age CANNOT be unknown."
     },
     "22110": {
         "err_no": 22110,
@@ -1351,15 +1433,19 @@
     },
     "24010": {
         "err_no": 24010,
-        "err_message": "AGE CANNOT BE ESTIMATE IF DATE OF BIRTH AND INCIDENT DATE IS KNOWN"
+        "err_message": "AGE CANNOT BE ESTIMATE IF DATE OF BIRTH AND INCIDENT DATE IS KNOWN",
+        "desc_del37": "If entered, and Incident Date/Hour (3) contains the actual Incident Date, then Age of Offender (at Time of Incident) (37) must be an **exact age**.",
+        "desc_de37": "Estimated Age: Age CANNOT be an estimate if Date of Birth of Offender (L37) is entered, and Incident Date/Hour (3) is an actual Incident Date (that is, not a Report Date ('R'))."
     },
     "24030": {
         "err_no": 24030,
-        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
+        "desc_del37": "Each component of the date must be valid; that is, months must be 01-12, days must be 01-31, and year must include the century (i.e., 19xx, 20xx). In addition, days CANNOT exceed maximum for the month (for example, June CANNOT have 31 days). The data CANNOT be greater than that entered within the 'Month of Data Submission' and 'Year of Data Submission' fields on the data record. For example, if 'Month of Data Submission' and 'Year of Data Submission' are '06/2014', the Date of Birth CANNOT contain any date 07/01/2014 or greater."
     },
     "24031": {
         "err_no": 24031,
-        "err_message": "MUST BE ON OR BEFORE INCIDENT DATE AND HOUR"
+        "err_message": "MUST BE ON OR BEFORE INCIDENT DATE AND HOUR",
+        "desc_del37": "Date of Birth of Offender (L37) MUST be before Incident Date/Hour (3)."
     },
     "25001": {
         "err_no": 25001,
@@ -1388,11 +1474,14 @@
     },
     "26001": {
         "err_no": 26001,
-        "err_message": "MUST BE UNIQUE--CANNOT BE DUPLICATED"
+        "err_message": "MUST BE UNIQUE--CANNOT BE DUPLICATED",
+        "desc_de40": "MUST BE UNIQUE--CANNOT BE DUPLICATED"
     },
     "26010": {
         "err_no": 26010,
-        "err_message": "AGE CANNOT BE ESTIMATED IF DATE OF BIRTH IS KNOWN"
+        "err_message": "AGE CANNOT BE ESTIMATED IF DATE OF BIRTH IS KNOWN",
+        "desc_de47": "ESTIMATED AGE: Age CANNOT be an estimate if Date of Birth of Arrestee (47) is reported.",
+        "desc_del47": "Age CANNOT BE ESTIMATED when Date of Birth is Known. If the age is reported as Estimated (with trailing 'E') in Age of Arrestee at the Time of Arrest (47), and the agency also reports Date of Birth of Arrestee (L47) this incident will be rejected. When Date of Birth is known, Age CANNOT be estimated."
     },
     "26201": {
         "err_no": 26201,
@@ -1401,6 +1490,16 @@
     "26202": {
         "err_no": 26202,
         "err_message": "ARREST CONNECTION TO OFFENSE FOUND DUPLICATE OFFENSE SEQUENCE NUMBERS FOR THIS OFFENSE."
+    },
+    "45001": {
+        "err_no": 45001,
+        "err_message": "",
+        "desc_den45": "If the value of LIBRS Spec Indicator (C12) is '2.5', then EVERY Offense Segment (20) in the data submission MUST have an Agency Supplied NIBRS Code (N6)."
+    },
+    "45002": {
+        "err_no": 45002,
+        "err_message": "MUST be a valid code.",
+        "desc_den45": "MUST be a valid code."
     },
     "81100": {
         "err_no": 81100,
@@ -1416,7 +1515,8 @@
     },
     "81400": {
         "err_no": 81400,
-        "err_message": "WHEN DE 36 = 000 ', THEN DE 8 MUST BE ' N ' AND DE 8A MUST BE ' 88 '.'"
+        "err_message": "WHEN DE 36 = 000 ', THEN DE 8 MUST BE ' N ' AND DE 8A MUST BE ' 88 '.'",
+        "desc_de36": "When Offender Sequence Number (36) is Unknown ('000'), Offender Suspected of Using/Gaming Motivation (8) must be Not Applicable ('N') and Bias Motivation/Bias Crime Type (8A) must be None ('88')."
     },
     "82000": {
         "err_no": 82000,
