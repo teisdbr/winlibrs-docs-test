@@ -430,30 +430,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 6 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
 
 
->
-> 2\) If Value of Property (16) is unknown, must enter a value of Unknown
-> ("1", representing \$1.00). A value of zero ("0") is allowed only when
-> Property Description (15) codes are the following:
->
-> ZERO ("0") value is ***required*** for the following:
->
-> 09 Credit/Debit Cards
->
-> 22 Nonnegotiable Instruments
->
-> 48 Documents/Personal or Business
->
-> 65 Identity Documents
->
-> 66 Identity-Intangible
->
-> **Error 13051**
->
-> ZERO ("0") value is ***optional*** for the following:
->
-> 77 Other
->
-> 99 Special Category.
+If Value of Property (DE 16) is unknown, must enter a value of Unknown ('1', representing $1.00). A value of zero ('0') is allowed only when Property Description (DE 15) codes are the following:<br><br>ZERO ("0") value is required for the following:{::nomarkdown}<ul><li>09 Credit/Debit Cards</li><li>22 Nonnegotiable Instruments</li><li>48 Documents/Personal or Business</li><li>65 Identity Documents</li><li>66 Identity-Intangible</li></ul>{:/}<br><br> ZERO ("0") value is optional for the following:{::nomarkdown}<ul><li>77 Other</li><li>99 Special Category.</li></ul>{:/}
 >
 > **Error 13051\
 > **
