@@ -194,7 +194,7 @@ Can enter up to three (3) codes for each offense:
     <tr><td>
 			{% for subsection in de.subsection %}
 				<table class="subtable">
-				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th{% endif %}
 					{% for values in subsection.values %}
 					<tr>
             			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
@@ -323,7 +323,7 @@ Enter only one (1) code for each Property Description Segment. However, as many 
     <tr><td>
 			{% for subsection in de.subsection %}
 				<table class="subtable">
-				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th{% endif %}
 					{% for values in subsection.values %}
 					<tr>
             			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
@@ -388,7 +388,7 @@ Enter one Property Description (DE 15) code per Property Description (31) Segmen
     <tr><td>
 			{% for subsection in de.subsection %}
 				<table class="subtable">
-				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th{% endif %}
 					{% for values in subsection.values %}
 					<tr>
             			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
@@ -429,38 +429,67 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["13042"] -%}
 6 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
 
+<br>
 
-If Value of Property (DE 16) is unknown, must enter a value of Unknown ('1', representing $1.00). A value of zero ('0') is allowed only when Property Description (DE 15) codes are the following:<br><br>ZERO ("0") value is required for the following:{::nomarkdown}<ul><li>09 Credit/Debit Cards</li><li>22 Nonnegotiable Instruments</li><li>48 Documents/Personal or Business</li><li>65 Identity Documents</li><li>66 Identity-Intangible</li></ul>{:/}<br><br> ZERO ("0") value is optional for the following:{::nomarkdown}<ul><li>77 Other</li><li>99 Special Category.</li></ul>{:/}
->
-> **Error 13051\
-> **
->
-> 3\) When Property Description (15) has Credit/Debit Cards (\"09\") or
-> Nonnegotiable Instruments (\"22\") entered, a ZERO ("0") value is
-> required for Value of Property (16). **Error**s **13091**
->
-> 4\) If a Value of Property (16) has a code entered, then Property
-> Description (15) must be entered. **Error** **13054**
->
-> 5\) For Property Description Segments (31) having Type of Property Loss
-> (14) entries for both Stolen/Etc. ("7") and Recovered (\"5\"), the
-> Recovered \"property\" CANNOT have Value of Property (16) value(s)
-> greater than corresponding Stolen "property" Value of Property (16)
-> value(s). **Error 10084**
->
-> 6\) When Value of Property (16) contains a value that exceeds a LIBRS
-> assigned threshold amount, a \"Warning\" message is created. The agency
-> is asked to check if the value entered was a data entry error, or if it
-> was an intended entry.\
-> \
-> Also, a Warning message is always produced when the value is \$1,000,000
-> or greater. For example, if the value of a property was \$12,000.99 but
-> was inadvertently entered as \$1,200,099 in LIBRS submission file, a
-> \"Warning\" message will be generated. In this case, the cents were
-> entered as whole dollars. **Error 13042**
+### Examples:
+___
 
-**Example:** A man purchases a new power saw from the hardware store.
-Later that same day someone breaks into his truck and steals the saw.
-The saw was purchased for \$95.73. The value of the property would be
-rounded to the nearest whole dollar and reported as \"000000056\"-
-\$96.00.
+Example Number | Description
+:-------------:|:-----------
+1 | A man purchases a new power saw from the hardware store. Later that same day someone breaks into his truck and steals the saw. The saw was purchased for $95.73. The value of the property would be rounded to the nearest whole dollar and reported as '000000096'- $96.00.
+
+<br>
+
+
+## Date Recovered (17)
+___
+
+**Data Characteristics:** 8 Character Date
+
+**Format:** MMDDYYYY
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13007"] -%}
+1 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13005"] -%}
+2 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13056"] -%}
+3 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13055"] -%}
+4 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13020"] -%}
+5 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
+
+<br>
+
+## Number of Stolen Vehicles (18)
+___
+
+**Data Characteristics:** 2 Character **Alpha/Numeric**
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13002"] -%}
+1 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13057"] -%}
+2 | {{error.desc_de18}} | {{error.err_no}}, 13058| {{ error.err_message }}
+{% assign error = site.data.error["13059"] -%}
+3 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13088"] -%}
+4 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22065"] -%}
+5 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22071"] -%}
+6 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22072"] -%}
+7 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["23220"] -%}
+8 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+
+
+<br>

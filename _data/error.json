@@ -156,7 +156,8 @@
     },
     "10084": {
         "err_no": 10084,
-        "err_message": "RECOVERED PROPERTY VALUE CANNOT BE GREATER THAN THE VALUE WHEN STOLEN"
+        "err_message": "RECOVERED PROPERTY VALUE CANNOT BE GREATER THAN THE VALUE WHEN STOLEN",
+        "desc_de16": "For Property Description Segments (DE 31) having Type of Property Loss (DE 14) entries for both Stolen/Etc. ('7') and Recovered ('5'), the Recovered 'Property' CANNOT have Value of Property (DE 16) value(s) greater than corresponding Stolen 'Property' Value of Property (DE 16) value(s). "
     },
     "10085": {
         "err_no": 10085,
@@ -494,7 +495,8 @@
     "13002": {
         "err_no": 13002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
-        "desc_de16": "MUST be numeric entry with zero or blank left-fill if entered."
+        "desc_de16": "MUST be numeric entry with zero or blank left-fill if entered.",
+        "desc_de18": "MUST be numeric entry with zero left-fill, if entered."
     },
     "13004": {
         "err_no": 13004,
@@ -504,7 +506,8 @@
     },
     "13005": {
         "err_no": 13005,
-        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
+        "desc_de17": "CANNOT be earlier than Incident Date/Hour (DE 3)."
     },
     "13006": {
         "err_no": 13006,
@@ -513,7 +516,8 @@
     },
     "13007": {
         "err_no": 13007,
-        "err_message": "CANNOT BE EARLIER THAN INCIDENT DATE / HOUR."
+        "err_message": "CANNOT BE EARLIER THAN INCIDENT DATE / HOUR.",
+        "desc_de17": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must include the century (i.e., 19xx, 20xx)</li><li>Days cannot exceed maximum for the month (e.g., June CANNOT have 31 days)</li></ul>{:/}The date CANNOT be greater than that entered within the 'Month of Submission' and 'Year of Submission' fields on the data record. For example, if 'Month of Submission' and 'Year of Submission' are '06/1995,' the recovered date CANNOT contain any date 07/01/1995 or greater."
     },
     "13008": {
         "err_no": 13008,
@@ -538,7 +542,8 @@
     },
     "13020": {
         "err_no": 13020,
-        "err_message": "RECOVERED DATE CANNOT PREDATE BASE DATE"
+        "err_message": "RECOVERED DATE CANNOT PREDATE BASE DATE",
+        "desc_de17": "Property Description Segments (31) submitted with as part of a Time-Window (Action Type of 'W') CANNOT have a Date Recovered (DE 17) before:{::nomarkdown}<ul><li>January 1 of the year prior to the current year</li><li>The date the agency started submitting Incident-Based Reporting data</li></ul>{:/}For any subsequent Modify (Action Type of 'M') submission of a previously submitted Time-Window Submission (Action Type of 'W'), this edit also applies."
     },
     "13021": {
         "err_no": 13021,
@@ -550,7 +555,8 @@
     },
     "13042": {
         "err_no": 13042,
-        "err_message": "WARNING - PROPERTY DESCRIPTION(DATA ELEMENT 15) HAD A VALUE(DATA ELEMENT 16) THAT EXCEEDED THRESHOLD OF[$ VALUE]"
+        "err_message": "WARNING - PROPERTY DESCRIPTION (DATA ELEMENT 15) HAD A VALUE(DATA ELEMENT 16) THAT EXCEEDED THRESHOLD OF [$ VALUE]",
+        "desc_de16": "When Value of Property (DE 16) contains a value that exceeds a LIBRS assigned threshold amount, a 'Warning' message is created. The agency is asked to check if the value entered was a data entry error, or if it was an intended entry.<br><br>Also, a Warning message is always produced when the value is $1,000,000 or greater. For example, if the value of a property was $12,000.99 but was inadvertently entered as $1,200,099 in LIBRS submission file, a 'Warning' message will be generated. In this case, the cents were entered as whole dollars."
     },
     "13043": {
         "err_no": 13043,
@@ -574,19 +580,23 @@
     },
     "13054": {
         "err_no": 13054,
-        "err_message": "DATA ELEMENT 15 WAS NOT ENTERED, BUT VALUE($) WAS"
+        "err_message": "DATA ELEMENT 15 WAS NOT ENTERED, BUT VALUE ($) WAS",
+        "desc_de16": "If a Value of Property (DE 16) has a code entered, then Property Description (DE 15) must be entered."
     },
     "13055": {
         "err_no": 13055,
-        "err_message": "PROPERTY LOSS CODE(14) MUST = 5(RECOVERED) FOR DATA TO BE ENTERED"
+        "err_message": "PROPERTY LOSS CODE(14) MUST = 5(RECOVERED) FOR DATA TO BE ENTERED",
+        "desc_de17": "If entered, Type of Property Loss (DE 14) must be Recovered ('5')"
     },
     "13056": {
         "err_no": 13056,
-        "err_message": "PROPERTY DESCRIPTION(15) AND VALUE(16) MUST BOTH EXIST IF DATA IS PRESENT"
+        "err_message": "PROPERTY DESCRIPTION(15) AND VALUE(16) MUST BOTH EXIST IF DATA IS PRESENT",
+        "desc_de17": "If entered, then both Property Description (DE 15) and Value of Property (DE 16) must be entered."
     },
     "13057": {
         "err_no": 13057,
-        "err_message": "PROPERTY LOSS(14) MUST BE 7 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24,28, OR  37 ' FOR DATA TO BE ENTERED"
+        "err_message": "PROPERTY LOSS(14) MUST BE 7 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24,28, OR  37 ' FOR DATA TO BE ENTERED",
+        "desc_de18": "MUST be entered if {::nomarkdown}<ul><li>Louisiana Revised Statute (DE 6) has a NIBRS Offense Code of <b>240</b></li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/} OR {::nomarkdown}<ul><li>Property Description (DE 15) has Motor Vehicle codes</li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>The Louisiana Revised Statute Number is one of the following<ul><li>14:67</li><li>14:68</li><li>14:68.4</li></ul><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/}"
     },
     "13058": {
         "err_no": 13058,
@@ -594,7 +604,8 @@
     },
     "13059": {
         "err_no": 13059,
-        "err_message": "ALL NON VEHICULAR PROPERTY DESCRIPTIONS WERE ENTERED"
+        "err_message": "ALL NON VEHICULAR PROPERTY DESCRIPTIONS WERE ENTERED",
+        "desc_de18": "Property Description (DE 15) MUST contain at least one of the following vehicle codes:{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}"
     },
     "13060": {
         "err_no": 13060,
@@ -679,7 +690,8 @@
     },
     "13088": {
         "err_no": 13088,
-        "err_message": "NUMBER STOLEN IS LESS THAN NUMBER OF VEHICLE CODES"
+        "err_message": "NUMBER STOLEN IS LESS THAN NUMBER OF VEHICLE CODES",
+        "desc_de18": "If more than one vehicle code is entered in Property Description (DE 15), then Number of Stolen Vehicles (DE 18) must be equal to or greater than this number of different codes, unless the number of stolen vehicles is Unknown ('00')."
     },
     "13089": {
         "err_no": 13089,
@@ -691,7 +703,8 @@
     },
     "13091": {
         "err_no": 13091,
-        "err_message": "PROPERTY VALUE MUST BE ZERO FOR DESCRIPTION[PROP DESCRIPTION CODE]"
+        "err_message": "PROPERTY VALUE MUST BE ZERO FOR DESCRIPTION [PROP DESCRIPTION CODE]",
+        "desc_de16": "When Property Description (DE 15) has Credit/Debit Cards ('09') or Nonnegotiable Instruments ('22') entered, a ZERO ('0') value is required for Value of Property (DE 16)."
     },
     "13092": {
         "err_no": 13092,
@@ -1286,7 +1299,8 @@
     },
     "22065": {
         "err_no": 22065,
-        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER AND DE #15 = '03', '05', '24', '28', OR '37' WILL BE REPORTED AS MOTOR VEHICLE THEFT(240).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE"
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER AND DE #15 = '03', '05', '24', '28', OR '37' WILL BE REPORTED AS MOTOR VEHICLE THEFT(240).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE",
+        "desc_de18": "If the Louisiana Revised Statute code (DE 6) of '14:67' is submitted without a Qualifier but Property Description (DE 15) is one of the following:{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}Then the agency will receive Warning 22065"
     },
     "22070": {
         "err_no": 22070,
@@ -1294,11 +1308,13 @@
     },
     "22071": {
         "err_no": 22071,
-        "err_message": "WARNING - THIS LRS SUBMITTED WILL BE REPORTED AS ALL OTHER LARCENY - THEFT OFFENSE(23 H).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE."
+        "err_message": "WARNING - THIS LRS SUBMITTED WILL BE REPORTED AS ALL OTHER LARCENY - THEFT OFFENSE(23 H).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE.",
+        "desc_de18": "If the Louisiana Revised Statute code of '14:68' is submitted and if Property Description (DE 15) is not equal to:{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}Then the agency will receive Warning 22071."
     },
     "22072": {
         "err_no": 22072,
-        "err_message": "WARNING - THIS LRS SUBMITTED AND DE #15 = '03', '05', '24', '28', OR '37' WI LL BE REPORTED AS MOTOR VEHICLE THEFT(240).IF THIS IS NOT THE CORRECT PRO PERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE."
+        "err_message": "WARNING - THIS LRS SUBMITTED AND DE #15 = '03', '05', '24', '28', OR '37' WI LL BE REPORTED AS MOTOR VEHICLE THEFT(240).IF THIS IS NOT THE CORRECT PRO PERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE.",
+        "desc_de18": "If Louisiana Revised Statute code (DE 6) of '14:68' is submitted and if Property Description (DE 15) is{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks.</li></ul>{:/}Then the agency will receive Warning 22072."
     },
     "22075": {
         "err_no": 22075,
@@ -1807,7 +1823,8 @@
     },
     "23220": {
         "err_no": 23220,
-        "err_message": "UNDEFINED ERROR"
+        "err_message": "UNDEFINED ERROR",
+        "desc_de18": "Number of Stolen Vehicles (DE 18) must be left blank (G) if the Louisiana Revised Statute (DE 6) Offense is not reported as a Motor Vehicle Theft (NIBRS 240){::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}"
     },
     "90000": {
         "err_no": 90000,
