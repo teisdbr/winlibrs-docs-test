@@ -795,152 +795,75 @@ Requirment   | Requirement Description | Error Number | Error Message
 6 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15068"] -%}
 7 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error[""] -%}
+{% assign error = site.data.error["15070"] -%}
 8 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error[""] -%}
+{% assign error = site.data.error["15071"] -%}
 9 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error[""] -%}
+{% assign error = site.data.error["15074"] -%}
 10 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error[""] -%}
+{% assign error = site.data.error["15072"] -%}
 11 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error[""] -%}
+{% assign error = site.data.error["15075"] -%}
 12 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error[""] -%}
+{% assign error = site.data.error["15076"] -%}
 13 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error[""] -%}
+{% assign error = site.data.error["15059"] -%}
 14 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error[""] -%}
-15 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error[""] -%}
-16 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error[""] -%}
-17 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error[""] -%}
-18 | {{error.desc_de35}} | {{error.err_no}}| {{ error.err_message }} 
+
+`Notes: If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B and 40C) are *known*, then data value for Relationship of Victim to Offender (Data Element 34) MUST be supplied as well.`
+
+`Relationship of Victim to Offender (35) is used ONLY with Offender Number to be Related (34), to report the relationship of a 	Victim to Offenders who have perpetrated a Crime Against Person, or a Robbery against the Victim.`
+
+`Relationship of Victim to Offender (35) indicates the Victim's relationship with each Offender involved in the incident.`
+
+`Relationship of Victim to Offender (35) is NOT required if Type of Victim (25) is equal to Society/Public ('S').`
 
 ___
 
 <br>
 
-"desc_de35": "
+### Allowed Entries:
 
- **Error 15060**
- **Error** **15004**
- **Error** **15050, 14050**
-  **Error** **14054**
- **Error** **15068**
->
-> 7\) When Victim was Offender [(]{.underline}\"VO\"[)]{.underline} is
-> entered, a minimum of [two]{.underline} Victims Segments (50) and
-> [two]{.underline} Offender Segments (40) MUST be submitted. \"VO\"
-> indicates situations such as brawls and domestic disputes **where all of
-> the participants in the incident were Victims and Offenders of the same
-> Offense (for example, assaults or double murders where two people kill
-> each other).** In most cases, each Victim is also the Offender;
-> therefore, every Victim Segment (50) will contain a \"VO\" code.\
-> \
-> However, there may be some situations where only one of the Victims is
-> also the Offender, but where the other Victim(s) are not also the
-> Offender(s) (for example, a Victim who is not an Offender could be an
-> innocent bystander in a barroom brawl, or a child who is victimized as a
-> result of the parents domestic dispute). **Error** **15070**
->
-> 8\) When entered, Victim was Offender (\"VO\") can only be entered once
-> in a Victim Segment (50) and can refer to an Offender only once. Since
-> \"VO\" points to himself/herself, a Victim CANNOT at the same time be
-> two Offenders.
->
-> **Error** **15071, 15074**
->
-> 9\) When the related Offender has \"Unknown\" values entered for Age, Sex
-> and Race, the relationship must be Relationship Unknown (\"RU\"). This
-> edit ensures a logical relationship. For example, if Brother ("SB") was
-> entered fro Relationship of Victim to Offender (25), then Age, Sex and
-> Race would NOT be Unknown values.
->
-> **Error** **15072**
->
-> **10) In a multiple Offender incident, a Victim CANNOT have a
-> relationship of Spouse (\"SE\") to more than one Offender. Error
-> 15075**
->
-> **11) In a multiple Victim incident, two or more Victims CANNOT have a
-> Victim relationship of Spouse (\"SE\") to the same Offender. Error
-> 15076**
->
-> 12\) MUST be entered if Louisiana Revised Statute (6) is a *Crime Against
-> Person*, and has a **NIBRS Offense code \[as defined on Master LIBRS/LRS
-> Code Table\] of:\
-> \
-> 09A 09B 09C\
-> 100\
-> 11A 11B 11C 11D\
-> 120\
-> 13A 13B 13C\
-> 36A 36B\
-> 90Z\
-> \
-> *[and]{.underline}*** Louisiana Revised Statute (6) is one of the
-> following:
->
-> 14:28.1 14:30 14:30.1 14:31\
-> 14:32 14:32.1/AA 14:32.12 14:34 14:34.1\
-> 14:34.2 14:34.3 14:34.4 14:34.5 14:34.5.1
->
-> 14:34.6 14:34.7 14:35 14:35.1 14:35.2
->
-> 14:35.3 14:35.3/M 14:37 14:37.1 14:37.2
->
-> 14:37.3 14:37.4 14:37.5 14:38 14:38.1
->
-> 14:38.2 14:38.3 14:39 14:39.1 14:39.2
->
-> 14:40 14:40.1 14:40.2 14:40.3 14:40.4
->
-> 14:40.5 14:40.6 14:40.60 14:42/A 14:42/V
->
-> 14:42.1/A 14:42.1/V 14:43/A 14:43/V 14:43.1/N
->
-> 14:43.1/P 14:43.2/N 14:43.2/P 14:43.3 14:43.4
->
-> 14:43.5 14:43.6 14:44 14:44.1 14:44.1/A
->
-> 14:44.1/N 14:44.1/O 14:44.1/P 14:44.1/V 14:44.2
->
-> 14:45 14:45.1 14:46 14:46.1 14:46.30
->
-> 14:47 14:50.1 14:50.2 14:54.1 14:54.6
->
-> 14:78 14:78.1 14:79 14:80 14:80.1
->
-> 14:81 14:81.2 14:81.3 14:81.4 14:87.1
->
-> 14:87.2/F 14:87.2/L 14:87.5/F 14:87.5/L 14:89.1
->
-> 14:92.1 14:92.3 14:93/F 14:93.2.3 14:93.3
->
-> 14:93.5 14:94/E 14:102.21 14:103/A1 14:107.1/F
->
-> 14:108/B1BF 14:108/B1B 14:108.2 14:122/F 14:122/T
->
-> 14:122.1 14:122.2 14:129/A1 14:129/A2F 14:129/A2T
->
-> 14:129.1 14:129.1/F 14:129.1/T 14:130.1/A 14:130.1/T
->
-> 14:130.1/F 14:133.1/F 14:133.1/T 14:133.5 14:285
->
-> 14:286 14:404/J 14:404/Q 14:501 32:668
->
-> **Relationship of Victim to Offender (35) MUST be Blank (G) when
-> \"000\" is entered into Offender Number to be Related (34). Error**
-> **15059**
->
-> **13) If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B
-> and 40C) are *known*, then data value for Relationship of Victim to
-> Offender (Data Element 34) MUST be supplied as well.**
+___
 
-**Allowed Entries:** MUST enter [ONE]{.underline} code for each Victim
-Segment (50). MUST enter relationship of each Victim to each Offender
+MUST enter (1) code for each Victim Segment (50). MUST enter relationship of each Victim to each Offender
+when Offense is a *Crime Against Person* or a Robbery against a Victim:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Relationship of Victim to Offender</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '35' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+
+**Allowed Entries:** MUST enter (1) code for each Victim Segment (50). MUST enter relationship of each Victim to each Offender
 when Offense is a *Crime Against Person* or a Robbery against a Victim:
 
   Relationship of Victim to Offender    
