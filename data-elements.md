@@ -772,6 +772,1669 @@ ___
 
 <br>
 
+
+## Type of Criminal Activity/Gang Information Nos. 1, 2 and 3 (12)
+
+This section is split into two parts. The first part details the requirements when DE 12 is used as a Type of Criminal Activity descriptor, and the second when used as a Gang Activity descriptor. 
+
+**Data Characteristics**: 1 Character Alpha
+
+### Requirements (Criminal Activity):
+___ 
+
+The following requirements are for **Type of Criminal Activity Only**:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["12004"] -%}
+1 | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["12006"] -%}
+2 | {{error.desc_de12}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["12019"] -%}
+3 | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["84005"] -%}
+3A | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["84007"] -%}
+3B | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["84015"] -%}
+3C | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["84020"] -%}
+3D | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["84021"] -%}
+3E | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["84210"] -%}
+3F | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["90031"] -%}
+3G | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
+
+<br>
+
+### Allowed Entries (Criminal Activity)
+___
+
+Up to three (3) of the following **Type of Criminal Activity** Codes can be entered for offenses. These offenses can only be of NIBRS type **250, 35B, 520, 280, 39C, 90A, 35A, 370 and 90Z**. 
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Type of Criminal Activity Codes</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '12' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title == "Criminal Activity" %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+                    {% endif %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+### Examples (Criminal Activity):
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | The Offenders published and sold pornographic photographs of children. Therefore, up to three types of Criminal Activity can be entered: Cultivating/Manufacture/Publishing ("C"), Distributing/Selling ("D"), and Exploiting Children ("E").
+
+<br>
+
+### Requirements (Gang Activity):
+___ 
+
+The following requirements are for **Gang Information Only**:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["12019"] -%}
+4 | {{error.desc_de12-2}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["12017"] -%}
+5 | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
+
+<br>
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Type of Gang Information Codes</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '12' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+            {% if subsection.title == "Gang Information" %}
+				<table class="subtable">
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+                    {% endif %}
+                    {% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+
+### Examples (Gang Information):
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | Two males, aged 19, were on bicycles riding through a neighborhood when they were approached by three males and forced to stop. Words were exchanged and one of the bicyclists was attacked. Each of the three attackers, one, aged 16 and the other two, aged 17, had identical tattoos on their upper arm. This marking was commonly associated with a local gang. The entry for Type of Criminal Activity/Gang Information should be Juvenile Gang ("J").
+
+<br>
+
+## Type of Weapon/Force Involved Nos. 1, 2 and 3 (13)
+
+**Data Characteristics:** 3 Character Alpha
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["12004"] -%}
+1 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["12006"] -%}
+2 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["12007"] -%}
+3 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["12019"] -%}
+4 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["12058"] -%}
+5 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["12055"] -%}
+6 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["12065"] -%}
+7 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["12067"] -%}
+8 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["12069"] -%}
+9 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error[""] -%}
+10 | For Human Trafficking Offenses (NIBRS Codes 64A, 64B and 40C), a data value for Type of Weapon/Force Involved (13) MUST be specified.||
+{% assign error = site.data.error["90036"] -%}
+11 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
+
+
+### Allowed Entries:
+Can enter up to three (3) codes for each offense:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Types of Weapon/Force Involved</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '13' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th{% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+### Examples:
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | Three robbers held up a bank. One was armed with a revolver, the second had a sawed-off shotgun, and the third had an automatic machine gun. The entries would be: Handgun ('12'), Shotgun ('14') and Other Automatic Firearm ('15A').
+
+<br>
+
+## Property Sequence Number (P1)
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["90019"] -%}
+1 | {{error.desc_dep1}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90020"] -%}
+2 | {{error.desc_dep1}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["25001"] -%}
+3 | {{error.desc_dep1}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+`Note: There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.`
+
+___
+
+<br>
+
+## Property Sequence Number Reference (P1R)
+
+**\*\*\* New Data Element in LIBRS 2.5 \*\*\***
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["90019"] -%}
+1 | {{error.desc_dep1r}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90020"] -%}
+2 | {{error.desc_dep1r}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90024"] -%}
+3 | {{error.desc_dep1r}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+`Note: There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.`
+
+<br>
+
+## Type of Property Loss (14)
+
+**Data Characteristics**: 1 Character Numeric
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13001"] -%}
+1 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13004"] -%}
+2 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13052"] -%}
+3 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["84001"] -%}
+3A | {{error.desc_de14}} | {{error.err_no}}, 84003, 84104, 84105, 84107, 84108, 84009, 84010, 84112, 84013, 84014, 84117, 84120 | {{ error.err_message }}
+{% assign error = site.data.error["13019"] -%}
+4 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10072"] -%}
+5 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13072"] -%}
+6 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13078"] -%}
+7 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["84203"] -%}
+8 | {{error.desc_de14}} | {{error.err_no}}, 84304, 84312 | {{ error.err_message }}
+{% assign error = site.data.error["13087"] -%}
+9 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10081"] -%}
+10 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
+
+<br>
+
+### Allowed Entries:
+___
+
+Enter only one (1) code for each Property Description Segment. However, as many property segments as applicable can be submitted per incident:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Types of Weapon/Force Involved</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '14' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th{% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+___
+
+<br>
+
+
+## Property Description (15)
+___
+
+**Data Characteristics:** 2 Character **Alpha/**Numeric
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13004"] -%}
+1 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13006"] -%}
+2 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13053"] -%}
+3 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13075"] -%}
+4 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10072"] -%}
+5 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
+
+
+<br>
+
+
+### Allowed Entries: 
+___
+
+Enter one Property Description (DE 15) code per Property Description (31) Segment, but can enter multiple Property Description (31) Segments. Do NOT enter duplicate Property Description (DE 15) codes within an Incident, unless a different Type of Property Loss (DE 14) code is used. An exception would be if there is more than one Drug that was Seized in the Incident. However, rules found in the Mandatory Data Element Requirements must still be followed.
+
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Types of Weapon/Force Involved</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '15' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th{% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+
+<br>
+
+## Value of Property (16)
+
+**Data Characteristics:** 9 Character Numeric
+
+### Requirements :
+___ 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13002"] -%}
+1 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13051"] -%}
+2 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13091"] -%}
+3 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13054"] -%}
+4 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10084"] -%}
+5 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13042"] -%}
+6 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
+
+<br>
+
+### Examples:
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | A man purchases a new power saw from the hardware store. Later that same day someone breaks into his truck and steals the saw. The saw was purchased for $95.73. The value of the property would be rounded to the nearest whole dollar and reported as '000000096'- $96.00.
+
+<br>
+
+
+## Date Recovered (17)
+___
+
+**Data Characteristics:** 8 Character Date
+
+**Format:** MMDDYYYY
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13007"] -%}
+1 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13005"] -%}
+2 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13056"] -%}
+3 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13055"] -%}
+4 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13020"] -%}
+5 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
+
+<br>
+
+## Number of Stolen Vehicles (18)
+
+___
+
+**Data Characteristics:** 2 Character **Alpha/Numeric**
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13002"] -%}
+1 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13057"] -%}
+2 | {{error.desc_de18}} | {{error.err_no}}, 13058| {{ error.err_message }}
+{% assign error = site.data.error["13059"] -%}
+3 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13088"] -%}
+4 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22065"] -%}
+5 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22071"] -%}
+6 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22072"] -%}
+7 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["23220"] -%}
+8 | {{error.desc_de18}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+<br>
+
+
+## Number of Recovered Motor Vehicles (19)
+
+**Data Characteristics:** 2 Character **Alpha/Numeric**
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13002"] -%}
+1 | {{error.desc_de19}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13060"] -%}
+2 | {{error.desc_de19}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10073"] -%}
+3 | {{error.desc_de19}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13061"] -%}
+4 | {{error.desc_de19}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13059"] -%}
+5 | {{error.desc_de19}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13089"] -%}
+6 | {{error.desc_de19}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["23230"] -%}
+7 | {{error.desc_de19}} | {{error.err_no}}| {{ error.err_message }}
+
+`Note: Number of Recovered Motor Vehicles (19) indicates how many motor vehicles were recovered in an incident that reported Motor Vehicle Thefts.`
+
+
+
+___
+
+<br>
+
+## Suspected Drug Type (20)
+
+**Data Characteristics:** 2 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13065"] -%}
+1 | {{error.desc_de20}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13006"] -%}
+2 | {{error.desc_de20}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13004"] -%}
+3 | {{error.desc_de20}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13064"] -%}
+4 | {{error.desc_de20}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13092"] -%}
+5 | {{error.desc_de20}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["23201"] -%}
+6 | {{error.desc_de20}} | {{error.err_no}}| {{ error.err_message }}
+
+`Notes: Suspected Drug Type (20) identifies the type of drugs or narcotics Seized in a drug case. If the Suspected Drug Type (20)is a Counterfeit, append an "X" to the drug code, otherwise leave the second character Blank (G). Suspected Drug Type (20) is not to be used when drugs or narcotics were Burned, Stolen, etc., in connection with other offenses, such as Arson, Larceny/Theft, etc.`
+
+ <br>
+
+
+### Allowed Entries: Enter as many as apply, but do not duplicate codes.
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "27" style="align-text:center;"></th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '20' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+___
+
+<br>
+
+
+## Estimated Drug Quantity (21)
+
+
+**Data Characteristics:** 13 Character **Alpha/Numeric**
+
+**Format:** #########.###
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13002"] -%}
+1 | {{error.desc_de21}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13066"] -%}
+2 | {{error.desc_de21}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13065"] -%}
+3 | {{error.desc_de21}} | {{error.err_no}}| {{ error.err_message }}
+
+
+`Notes: Estimated Drug Quantity (21) indicates the quantity of drugs or narcotics seized in a drug case, it is not to be used when drugs or narcotics were Burned, Stolen, etc. in connection with other Offenses, such as Arson, Burglary, Breaking and Entering, Larceny, Theft, etc.`
+
+`Nine (9) characters are available to enter the number of WHOLE pounds, ounces, grams, etc., and three (3) more characters are available to enter the DECIMAL amount. A DECIMAL POINT must be entered to separate the whole and decimal amounts. Zero ('0') or space fill (G) should be added to the right or left of the value **to preserve the decimal's position as the tenth character in the field.**`
+
+`When Estimated Drug Quantity (21) is Unknown enter '000000001.000', a value of '1', to signify that the value is not known or not reported. Also, Type Drug Measurement (22) MUST be entered as Not Reported/Unknown ('XX') and Value of Property (16) MUST be entered as Unknown (000000001).`
+
+`If LRS Offense (6) is not reportable as a drug violation (35A), this data element MUST BE LEFT BLANK (G).`
+
+
+
+___
+
+<br>
+
+## Type Drug Measurement (22)
+
+**Data Characteristics:** 2 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["13004"] -%}
+1 | {{error.desc_de22}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13065"] -%}
+2 | {{error.desc_de22}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["20003"] -%}
+3 | {{error.desc_de22}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13068"] -%}
+4 | {{error.desc_de22}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13084"] -%}
+5 | {{error.desc_de22}} | {{error.err_no}}| {{ error.err_message }}
+
+`Note: Type Drug Measurement (22) indicates how Seized drugs and narcotics are quantified in a drug case.`
+
+ <br>
+
+### Allowed Entries:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "27" style="align-text:center;">Type Drug Measurements</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '22' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+
+___
+
+<br>
+
+
+## Victim Sequence Number (23)
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15001"] -%}
+1 | {{error.desc_de23}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15002"] -%}
+2 | {{error.desc_de23}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15051"] -%}
+3 | {{error.desc_de23}} | {{error.err_no}}| {{ error.err_message }}
+
+`Note: Each victim in an incident MUST be assigned a unique Victim Sequence Number (23) from '001' to '999'.`
+
+
+___
+
+<br>
+
+## Offense Connected to Victim Sequence Number (24)
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15001"] -%}
+1 | {{error.desc_de24}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15004"] -%}
+2 | {{error.desc_de24}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15064"] -%}
+3 | {{error.desc_de24}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15065"] -%}
+4 | {{error.desc_de24}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15066"] -%}
+5 | {{error.desc_de24}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15079"] -%}
+6 | {{error.desc_de24}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10065"] -%}
+7 | {{error.desc_de24}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15078"] -%}
+8 | {{error.desc_de24}} | {{error.err_no}}| {{ error.err_message }}
+
+
+`The chart on the following page shows Offenses that CANNOT occur to the same victim in the same incident. Each 'X' on the chart where offenses intersect denotes that those two offenses CANNOT occur to the same victim in an incident.`
+
+`Note: This data element is to be used to link each offense to each victim. That is, the offense which was perpetrated against the victim during the incident. If this data element does not match one of the values submitted in Data Element # 23 (Victim Segment Number), the submission will be returned with errors.`
+
+<br>
+
+Example Number | Description
+:-------------:|:-----------
+1 | Two victims, Victim 001 and Victim 002, were robbed, and Victim 001 was also taken hostage by the Offender with a hand gun in a parking lot. The incident's Offense Segments could be submitted as follows:
+Offense 001 -- Aggravated Robbery (14:64) would be connected to Victim 001.
+Offense 002 -- Aggravated Robbery (14:64) would be connected to Victim 002.
+Offense 003 -- Second Degree Kidnaping (14:44.1) would be connected to Victim 001.
+
+
+___
+
+<br>
+
+
+## Type of Victim (25)
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15001"] -%}
+1 | {{error.desc_de25}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15004"] -%}
+2 | {{error.desc_de25}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15064"] -%}
+3 | {{error.desc_de25}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15065"] -%}
+4 | {{error.desc_de25}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15067"] -%}
+5 | {{error.desc_de25}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10080"] -%}
+6 | {{error.desc_de25}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22110"] -%}
+7 | {{error.desc_de25}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22251"] -%}
+8 | {{error.desc_de25}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22252"] -%}
+9 | {{error.desc_de25}} | {{error.err_no}}| {{ error.err_message }}
+
+
+`NO ERROR NUMBER For Human Trafficking Offenses (NIBRS Codes 64A, 64B and 40C), the data value for Type of Victim (25) must be Individual ('I').`
+
+<br>
+
+### Allowed Entries:
+
+Enter only one (1) code per Victim Segment (50):
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "27" style="align-text:center;"></th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '25' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+<br>
+
+### Example: 
+
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | During a bank robbery *(Crime Against Property)*, the Offender pointed a gun at a teller and demanded and received money. The robber also pistol-whipped a customer who stood in his way as he made his getaway from the bank. Assuming the facts above, there were **3** victims: Victim 001 was the bank which would be coded as a Financial Institution ('F'). Victim 002 was the teller which would be coded as Individual ('I'). Victim 003 was the customer who was pistol whipped which would be coded as an Individual ('I')
+
+`Note: One Type of Victim (25) code MUST be entered for each victim.`
+
+`Definition of Law Enforcement Officer/Peace Officer: Deputy sheriffs, municipal police officers, probation and enforcement parole officers, wildlife enforcement agents, city marshals and deputies would be considered a Law Enforcement Officer if a Victim and should have a Type of Victim (25) code of "L".`
+
+`The Officer should be "In-the-Line-of-Duty" when victimized in order to report Type of Victim (25) as Law Enforcement Officer ("L"). The same rules that apply to the LEOKA form in UCR Summary also apply to this Type of Victim (25).`
+
+`This Type of Victim (25) can ONLY be used for simple assaults, aggravated assaults, negligent manslaughter, murders and non-negligent homicide offenses to a Law Enforcement Officer, that took place when the Officer was On Duty as a Law Enforcement Officer.`
+
+___
+
+<br>
+
+
+
+## Type of Officer Activity/Circumstance (25A)
+
+***New Data Element in LIBRS 2.5***
+
+**Data Characteristics:** 2 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15004"] -%}
+1 | {{error.desc_de25a}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10001"] -%}
+2 | {{error.desc_de25a}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10255"] -%}
+3 | {{error.desc_de25a}} | {{error.err_no}}| {{ error.err_message }}
+
+
+<br>
+
+### Allowed Entries:
+
+Enter only one (1) code for each Victim Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "4" style="align-text:center;"></th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '25A' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="4">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+						<td> {{values.comment}} </td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+
+___
+
+<br>
+
+## Officer Assignment Type (25B)
+
+*** New Data Element in LIBRS 2.5 ***
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["10256"] -%}
+1 | {{error.desc_de25b}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10257"] -%}
+2 | {{error.desc_de25b}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10258"] -%}
+3 | {{error.desc_de25b}} | {{error.err_no}}| {{ error.err_message }}
+
+
+<br>
+
+### Allowed Entries:
+
+Enter only one (1) code for each Victim Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "4" style="align-text:center;"></th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '25B' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="4">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+						<td> {{values.comment}} </td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+___
+
+<br>
+
+## Officer ORI, Other Jurisdiction (25C)
+
+*** New Data Element in LIBRS 2.5 ***
+
+**Data Characteristics:** 9 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["10259"] -%}
+1 | {{error.desc_de25c}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10254"] -%}
+2 | {{error.desc_de25c}} | {{error.err_no}}| {{ error.err_message }}
+
+
+`Note: This is the 9-character NCIC Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. This ORI is used to record the ORI of a victim who is an officer involved in a multijurisdictional incident.`
+
+
+<br>
+
+### Allowed Entries:
+
+Enter only (1) code for each Victim Segment:
+
+### Acceptable Data Values: 
+
+A thru Z (Uppercase letter only), or 0 thru 9
+
+
+___
+
+<br>
+
+### Age of Victim [At Time Incident Occurred] (26)
+
+**Data Characteristics:** 3 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15053"] -%}
+1 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15058"] -%}
+2 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15050"] -%}
+3 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15004"] -%}
+4 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15008"] -%}
+5 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15009"] -%}
+6 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["25010"] -%}
+7 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15022"] -%}
+8 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15081"] -%}
+9 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+
+<br>
+
+`Notes: If the Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), his/her age is to be entered into Age of Victim (26) either as an Exact Age, an Estimated Age, or as Unknown.`
+
+`If the Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), then Age of Victim (26) is required to be entered. If Type of Victim (25) is not a person, then Age of Victim (26) MUST be left Blank (G).`
+
+`If the Victim's Exact Age is not known, estimate the victim's age. Use one of the codes in the above table, and append an 'E',for Estimated. If it is impossible to determine even an Estimated Age of the victim, then enter Unknown ('00').`
+
+___
+
+<br>
+
+### Allowed Entries:
+
+Enter only (1) code for each Victim Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Valid Ages of Victims</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '26' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+
+
+<br>
+
+### Example: 
+
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | If the victim was 18 years old, enter '18'.
+2 | If the victim appeared 25 to 30 years old, **average the age range** to get 27.5, then **round down** and enter '27E'.
+
+
+___
+
+<br>
+
+
+
+## Date of Birth of Victim (L26)
+
+**Data Characteristics:** 8 Character Date
+
+**Format:** MMDDYYYY
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["25030"] -%}
+1 | {{error.desc_del26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["25031"] -%}
+2 | {{error.desc_del26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["25010"] -%}
+3 | {{error.desc_del26}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15058"] -%}
+4 | {{error.desc_del26}} | {{error.err_no}}| {{ error.err_message }}
+
+`Note: If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her date of birth, if available, is to be indicated in Date of Birth of Victim (L26).`
+___
+
+<br>
+
+
+## Sex of Victim (27)
+
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15004"] -%}
+1 | {{error.desc_de27}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15053"] -%}
+2 | {{error.desc_de27}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15058"] -%}
+3 | {{error.desc_de27}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15069"] -%}
+4 | {{error.desc_de27}} | {{error.err_no}}| {{ error.err_message }}
+
+`Note: If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her sex is to be indicated in Sex of Victim (27).`
+
+___
+
+<br>
+
+### Allowed Entries:
+
+Enter only (1) code for each Victim Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "27" style="align-text:center;">Sex of Victim</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '27' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+
+___
+
+<br>
+
+## Race of Victim (28)
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15004"] -%}
+1 | {{error.desc_de28}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15053"] -%}
+2 | {{error.desc_de28}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15058"] -%}
+3 | {{error.desc_de28}} | {{error.err_no}}| {{ error.err_message }}
+
+`Note: If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then, his/her race is to be indicated in Race of Victim (28).`
+
+___
+
+<br>
+
+### Allowed Entries:
+
+Enter only (1) code for each Victim Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Race of Victim</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '28' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+
+___
+
+<br>
+
+## Ethnicity of Victim (29)
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15004"] -%}
+1 | {{error.desc_de29}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15058"] -%}
+2 | {{error.desc_de29}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+`Note: If Victim is a person (that is, Individual ('I') or Law Enforcement Officer ('L') is entered into Type of Victim (25), then his/her ethnic origin is to be indicated in Ethnicity of Victim (29).`
+
+<br>
+
+### Allowed Entries:
+
+Enter only (1) code for each Victim Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Ethnicity of Victim</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '29' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+
+___
+
+<br>
+
+## Resident Status of Victim (30)
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15004"] -%}
+1 | {{error.desc_de30}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15058"] -%}
+2 | {{error.desc_de30}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+`Notes: If Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L'), then, whether he/she was a resident or nonresident, the Resident Status of Victim (30) is to be entered.)`
+
+`A 'Resident' is a person who maintains his/her permanent home for legal purposes in the locality (i.e., town, city, or community) where the crime took place.`
+
+<br>
+
+### Allowed Entries:
+
+Enter only (1) code for each Victim Segment:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Resident Status of Victim</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '30' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+
+
+___
+
+<br>
+
+## Aggravated Assault/Homicide Circumstance Nos. 1 and 2 (31)
+
+
+**Assault on Law Enforcement Officer (Shaded Brown) is a new Aggravated Assault and Non-Negligent Manslaughter Circumstance,beginning with LIBRS Spec 2.5.**
+
+**Data Characteristics:** 2 Character Numeric
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15002"] -%}
+1 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15004"] -%}
+2 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15006"] -%}
+3 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15019"] -%}
+4 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15056a"] -%}
+5 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15056b"] -%}
+6 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15080"] -%}
+7 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15062"] -%}
+8 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+
+<br>
+
+***Aggravated Assault and Non-Negligent Manslaughter Circumstances***
+
+{% assign error = site.data.error["31008"] -%}
+9 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+
+<br>
+
+***Negligent Manslaughter Circumstances***
+
+{% assign error = site.data.error["31009"] -%}
+10 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["22120"] -%}
+11 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+
+<br>
+
+***Justifiable Homicide Circumstances***
+
+{% assign error = site.data.error["31010"] -%}
+12 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15055"] -%}
+13 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["12066"] -%}
+14 | {{error.desc_de31}} | {{error.err_no}}| {{ error.err_message }}
+
+<br>
+
+`WHERE TO PUT____Error or Note---WARNING: At MOST, TWO Assault Circumstances (31) are allowed. Beginning with LIBRS 2.5 Specifications, the third Assault Circumstance is ignored. *New Warning Message in LIBRS 2.5*`
+
+`Notes: Aggravated Assault/Homicide Circumstances and Law Enforcement Officers Killed/Assaulted (InLine of Duty (31) describes the circumstances of either an Aggravated Assault or Homicide.`
+
+
+<br>
+
+### Allowed Entries:
+
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "4" style="align-text:center;"></th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '31' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="4">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+						<td> {{values.comment}} </td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+
+
+<br>
+
+`Note: Assault on Law Enforcement Officer (Shaded) is a new Aggravated Assault and Non-Negligent Manslaughter Circumstance,beginning with LIBRS Spec 2.5.`
+
+
+`DEFINITION: A Justifiable Homicide is the killing of a perpetrator of a serious criminal offense by a peace officer in the line of duty; or the killing, during the commission of a serious criminal offense, of the perpetrator by a private individual.`
+
+`The crime being committed when the Justifiable Homicide took place MUST BE REPORTED AS A SEPARATE INCIDENT. These instructions are based on the definition of an "incident". Therefore, Justifiable Homicide cases involve two incidents rather than one. For the Justifiable Homicide incident, code the police officer or the civilian who killed the criminal as the "Offender" and the criminal who was killed as the "Victim". The Justifiable Homicide incident IS NOT CLEARED EXCEPTIONALLY, as no crime has occurred in reality. In the second incident, report the Offense(s) that were being committed when the Justifiable Homicide occurred.`
+
+___
+
+### Example: 
+
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | Two rival juvenile street gangs rumble over 'turf' rights to sell drugs and one of the gang members is killed. Possible entries are **Argument** ('01'), **Drug Dealing** ('03'), and **Juvenile Gang** ('05'). While all threewould apply, there is a *limit of two entries*. Therefore, the two most descriptive codes (as determined by the reporting agency) should be used. In this case, the reporting agency entered '03' and '05'.
+
+<br>
+ 
+___
+
+<br>
+
+
+## Additional Justifiable Homicide Circumstance (32)
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15004"] -%}
+1 | {{error.desc_de32}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15057"] -%}
+2 | {{error.desc_de32}} | {{error.err_no}}, 13058| {{ error.err_message }}
+
+___
+
+<br>
+
+### Allowed Entries for Justifiable Homicide:
+
+___
+ 
+Enter only (1) code for Justifiable Homicide (NIBRS 09C):
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Justifiable Homicide Circumstance</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '32' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+___
+
+<br>
+
+### Examples: 
+
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | In resisting arrest, a fugitive pulled a gun and fired two times in the direction of two police officers who were attempting to take him into custody. Neither officer was hit, but both drew their weapons and returned fire, killing the fugitive. As this was a Justifiable Homicide (NIBRS 09C), Criminal Killed by Police Officer ('21') should be entered into *Data Element 31*.
+Assuming the facts above, the possible entries for *Data Element 32*
+are:
+A Criminal Attacked Police Officer and That Officer Killed Criminal
+B Criminal Attacked Police Officer and Criminal Killed by Another Police Officer
+F Criminal Resisted Arrest
+As **only one code** can be entered into this Data Element (32), the most descriptive code (as determined by the reporting agency)
+should be used. In this case, the reporting agency entered *Criminal Attached Police Officer and That Officer Killed Criminal('A')*.
+
+___
+
+<br>
+
+
+## Type of Injury (33)
+
+___
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+___
+
+Requirment   | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15004"] -%}
+1 | {{error.desc_de33}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15006"] -%}
+2 | {{error.desc_de33}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15007"] -%}
+3 | {{error.desc_de33}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15019"] -%}
+4 | {{error.desc_de33}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15079"] -%}
+5 | {{error.desc_de33}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["90029"] -%}
+6 | {{error.desc_de33}} | {{error.err_no}}| {{ error.err_message }}
+
+`Notes: This Data Element (32) describes the type(s) of bodily injury suffered by a person.`
+
+   `Minor injury is described as an injury not requiring immediate medical attention.`
+
+   `Major injury is described as an injury requiring immediate medical attention.`
+
+___
+
+<br>
+
+
+### Allowed Entries:
+
+___
+ 
+Enter only (1) code for each Victim Injury Segment; however, can submit as many Victim Injury Segments (51) as applicable:
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "2" style="align-text:center;">Type of Injury</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '33' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>  
+
+___
+
+<br>
+
+## Offender Number to be Related (34)
+
+**Data Characteristics:** 3 Character Numeric
+
+### Requirements:
+___
+
+Requirment   | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15059"] -%}
+1 | {{error.desc_de34}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15002"] -%}
+2 | {{error.desc_de34}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15058"] -%}
+3 | {{error.desc_de34}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15006"] -%}
+4 | {{error.desc_de34}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15068"] -%}
+5 | {{error.desc_de34}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["10070"] -%}
+6 | {{error.desc_de34}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10085"] -%}
+7 | {{error.desc_de34}} | {{error.err_no}}| {{ error.err_message }}
+
+`If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B and 40C) are *known*, then data value for Offender Number to be Related (Data Element 34) MUST be supplied as well.`
+
+`If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B and 40C) are *unknown*, then data value for Offender Number to be Related (Data Element 34) MUST be '000' (UNKNOWN)`
+
+`Notes: Offender Number to be Related (34) along with Relationship of Victim to Offender (35) describe the relationship of each Victim to each Offender who has perpetrated a Crime Against Person or a Robbery against the Victim. If the Victim is related to the offender in more than one way, use the closest relationship.`
+
+`Enter Offender Sequence Number (36) of the Offenders for whom Victim-to-Offender relationships are going to be reported in Relationship of Victim to Offender (35).`
+
+`The Reporting Agency MUST report each Victim's relationship to EVERY Offender when the Offense is a Crime Against Person or a Robbery against the Victim.`
+
+___
+
+<br>
+
+### Examples: 
+
+___
+
+Example Number | Description
+:-------------:|:-----------
+1 | If Victim 001's relationship to Offender 004 is to be reported, enter '004'.
+
+
+___
+
+<br>
+
+
 ## Relationship of Victim to Offender (35)
 
 **Data Characteristics:** 2 Character Alpha
@@ -822,17 +2485,17 @@ ___
 
 <br>
 
+
 ### Allowed Entries:
 
 ___
 
-MUST enter (1) code for each Victim Segment (50). MUST enter relationship of each Victim to each Offender
-when Offense is a *Crime Against Person* or a Robbery against a Victim:
+MUST enter **ONE** code for each Victim Segment (50). MUST enter relationship of each Victim to each Offender when Offense is a *Crime Against Person* or a Robbery against a Victim:
 
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Relationship of Victim to Offender</th>
+		<th colspan = "2" style="align-text:center;">RELATIONSHIP OF VICTIM TO OFFENDERS</th>
 	</tr>
     </thead>
     <tbody>
@@ -858,60 +2521,18 @@ when Offense is a *Crime Against Person* or a Robbery against a Victim:
 </tbody>
 </table>
 
-___
-
 <br>
 
 
-**Allowed Entries:** MUST enter (1) code for each Victim Segment (50). MUST enter relationship of each Victim to each Offender
-when Offense is a *Crime Against Person* or a Robbery against a Victim:
+### Examples: 
 
-  Relationship of Victim to Offender    
-  ------------------------------------- ---------------------------------------------------------------------------------
-  Within Family                         
-  SE                                    Victim was Spouse
-  CS                                    Victim was Common-Law Spouse
-  PA                                    Victim was Parent
-  SB                                    Victim was Sibling (brother or sister)
-  CH                                    Victim was Child
-  GP                                    Victim was Grandparent
-  GC                                    Victim was Grandchild
-  IL                                    Victim was In-Law
-  SP                                    Victim was Stepparent
-  SC                                    Victim was Stepchild
-  SS                                    Victim was Step sibling (stepbrother or stepsister)
-  OF                                    Victim was Other Family Member (step-grandparents, ex-common law spouses. etc.)
-  NM                                    Victim was Non-Married Live-In (to NIBRS as CS)
-  Outside Family, But Known to Victim   
-  AQ                                    Victim was Acquaintance
-  FR                                    Victim was Friend
-  NE                                    Victim was Neighbor
-  BE                                    Victim was Babysittee (the baby)
-  BG                                    Victim was Boyfriend/Girlfriend
-  XB                                    **Victim was Ex-Boyfriend/Ex-Girlfriend** (to NIBRS as BG)
-  CF                                    Victim was Child of Boyfriend or Girlfriend
-  HR                                    Victim was in Homosexual Relationship
-  XS                                    Victim was Ex-Spouse
-  EE                                    Victim was Employee
-  ER                                    Victim was Employer
-  OK                                    Victim was Otherwise Known
-  ES                                    Victim was Estranged Spouse (to NIBRS as SE)
-  Not Know By Victim                    
-  RU                                    Relationship Unknown
-  ST                                    Victim was Stranger
-  Other                                 
-  VO                                    Victim was Offender
+___
 
-**Examples**:
+Example Number | Description
+:-------------:|:-----------
+1 | An employee assaulted his employer (a person) with his fists. Victim was Employer (ER) should be entered.
+2 | Two unknown subjects rob a male and a female couple. Victim was Stranger ('ST') should be entered to indicate the relationship of each Victim to each Offender.
 
-\(1) An employee assaulted his employer (a person) with his fists. Victim
-was Employer (ER) should be entered.
-
-\(2) Two unknown subjects rob a male and a female couple. Victim was
-Stranger (\"ST\") should be entered to indicate the relationship of each
-Victim to each Offender.
-
-### 
 
 ___
 

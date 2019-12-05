@@ -705,75 +705,77 @@
             {
                 "title": "",
                 "values": [
-            {
-                "code": "11",
-                "desc": "Firearm (type not stated)"
-            },
-            {
-                "code": "12",
-                "desc": "Handgun"
-            },
-            {
-                "code": "13",
-                "desc": "Rifle"
-            },
-            {
-                "code": "14",
-                "desc": "Shotgun"
-            },
-            {
-                "code": "15",
-                "desc": "Other Firearm"
-            },
-            {
-                "code": "20",
-                "desc": "Knife or Cutting Instrument"
-            },
-            {
-                "code": "30",
-                "desc": "Blunt Object"
-            },
-            {
-                "code": "35",
-                "desc": "Motor Vehicle / Vessel (When used as a weapon)"
-            },
-            {
-                "code": "40",
-                "desc": "Personal Weapons"
-            },
-            {
-                "code": "50",
-                "desc": "Poison"
-            },
-            {
-                "code": "60",
-                "desc": "Explosives"
-            },
-            {
-                "code": "65",
-                "desc": "Fire or Incendiary Device"
-            },
-            {
-                "code": "70",
-                "desc": "Drugs, Narcotics or Sleeping Pills"
-            },
-            {
-                "code": "85",
-                "desc": "Asphyxiation"
-            },
-            {
-                "code": "90",
-                "desc": "Other"
-            },
-            {
-                "code": "95",
-                "desc": "Unknown"
-            },
-            {
-                "code": "99",
-                "desc": "None (Mutually Exclusive to any other value)"
+                    {
+                        "code": "11",
+                        "desc": "Firearm (type not stated)"
+                    },
+                    {
+                        "code": "12",
+                        "desc": "Handgun"
+                    },
+                    {
+                        "code": "13",
+                        "desc": "Rifle"
+                    },
+                    {
+                        "code": "14",
+                        "desc": "Shotgun"
+                    },
+                    {
+                        "code": "15",
+                        "desc": "Other Firearm"
+                    },
+                    {
+                        "code": "20",
+                        "desc": "Knife or Cutting Instrument"
+                    },
+                    {
+                        "code": "30",
+                        "desc": "Blunt Object"
+                    },
+                    {
+                        "code": "35",
+                        "desc": "Motor Vehicle / Vessel (When used as a weapon)"
+                    },
+                    {
+                        "code": "40",
+                        "desc": "Personal Weapons"
+                    },
+                    {
+                        "code": "50",
+                        "desc": "Poison"
+                    },
+                    {
+                        "code": "60",
+                        "desc": "Explosives"
+                    },
+                    {
+                        "code": "65",
+                        "desc": "Fire or Incendiary Device"
+                    },
+                    {
+                        "code": "70",
+                        "desc": "Drugs, Narcotics or Sleeping Pills"
+                    },
+                    {
+                        "code": "85",
+                        "desc": "Asphyxiation"
+                    },
+                    {
+                        "code": "90",
+                        "desc": "Other"
+                    },
+                    {
+                        "code": "95",
+                        "desc": "Unknown"
+                    },
+                    {
+                        "code": "99",
+                        "desc": "None (Mutually Exclusive to any other value)"
+                    }
+                ]
             }
-        ]}]
+        ]
     },
     {
         "de_num": "P1",
@@ -1173,78 +1175,82 @@
         "definition": "Enter the types of drugs/narcotics that were seized in a drug case.",
         "length": "2",
         "format": "A",
-        "values": [
+        "subsection": [
             {
-                "code": "A",
-                "desc": "'Crack' Cocaine"
-            },
-            {
-                "code": "B",
-                "desc": "Cocaine"
-            },
-            {
-                "code": "C",
-                "desc": "Hashish"
-            },
-            {
-                "code": "1",
-                "desc": "Hash Oil (LIBRS Only). Sent to NIBRS as “C”"
-            },
-            {
-                "code": "D",
-                "desc": "Heroin"
-            },
-            {
-                "code": "E",
-                "desc": "Marijuana"
-            },
-            {
-                "code": "F",
-                "desc": "Morphine"
-            },
-            {
-                "code": "G",
-                "desc": "Opium"
-            },
-            {
-                "code": "H",
-                "desc": "Other Narcotics: Codeine; Demerol; Dihydromorphinone or Dilaudid; Hydrocodone or Percodan; Methadone; Etc."
-            },
-            {
-                "code": "I",
-                "desc": "LSD"
-            },
-            {
-                "code": "J",
-                "desc": "PCP"
-            },
-            {
-                "code": "K",
-                "desc": "Other Hallucinogens: BMDA or 'White Acid'; MT; MDA, MDMA; Mescaline or Peyote; Psilocybin; STP; Etc."
-            },
-            {
-                "code": "L",
-                "desc": "Amphetamines / Methamphetamines"
-            },
-            {
-                "code": "M",
-                "desc": "Other Stimulants: Adipex, Fastine, and Ionamin (Derivatives of Phentermine); Benzedrine; Didrex; Methylphenidate or Ritalin; Phenmetrazine or Preludin; Tenuate; Etc."
-            },
-            {
-                "code": "N",
-                "desc": "Barbiturates"
-            },
-            {
-                "code": "O",
-                "desc": "Other Depressants: Glutethimide or Doriden; Methaqualone or Quaalude; Pentazocine or Talwin; Etc."
-            },
-            {
-                "code": "P",
-                "desc": "Other Drugs: Antidepressants (Elavil, Triavil, Tofranil, Etc.); Aromatic Hydrocarbons; Propoxyphene or Darvon; Tranquilizers (Chlordiazepoxide or Librium, Diazepam or Valium, Etc.); Etc."
-            },
-            {
-                "code": "U",
-                "desc": "Unknown Type Drug"
+                "values": [
+                    {
+                        "code": "A",
+                        "desc": "'Crack' Cocaine"
+                    },
+                    {
+                        "code": "B",
+                        "desc": "Cocaine"
+                    },
+                    {
+                        "code": "C",
+                        "desc": "Hashish"
+                    },
+                    {
+                        "code": "1",
+                        "desc": "Hash Oil (LIBRS Only). Sent to NIBRS as “C”"
+                    },
+                    {
+                        "code": "D",
+                        "desc": "Heroin"
+                    },
+                    {
+                        "code": "E",
+                        "desc": "Marijuana"
+                    },
+                    {
+                        "code": "F",
+                        "desc": "Morphine"
+                    },
+                    {
+                        "code": "G",
+                        "desc": "Opium"
+                    },
+                    {
+                        "code": "H",
+                        "desc": "Other Narcotics: Codeine; Demerol; Dihydromorphinone or Dilaudid; Hydrocodone or Percodan; Methadone; Etc."
+                    },
+                    {
+                        "code": "I",
+                        "desc": "LSD"
+                    },
+                    {
+                        "code": "J",
+                        "desc": "PCP"
+                    },
+                    {
+                        "code": "K",
+                        "desc": "Other Hallucinogens: BMDA or 'White Acid'; MT; MDA, MDMA; Mescaline or Peyote; Psilocybin; STP; Etc."
+                    },
+                    {
+                        "code": "L",
+                        "desc": "Amphetamines / Methamphetamines"
+                    },
+                    {
+                        "code": "M",
+                        "desc": "Other Stimulants: Adipex, Fastine, and Ionamin (Derivatives of Phentermine); Benzedrine; Didrex; Methylphenidate or Ritalin; Phenmetrazine or Preludin; Tenuate; Etc."
+                    },
+                    {
+                        "code": "N",
+                        "desc": "Barbiturates"
+                    },
+                    {
+                        "code": "O",
+                        "desc": "Other Depressants: Glutethimide or Doriden; Methaqualone or Quaalude; Pentazocine or Talwin; Etc."
+                    },
+                    {
+                        "code": "P",
+                        "desc": "Other Drugs: Antidepressants (Elavil, Triavil, Tofranil, Etc.); Aromatic Hydrocarbons; Propoxyphene or Darvon; Tranquilizers (Chlordiazepoxide or Librium, Diazepam or Valium, Etc.); Etc."
+                    },
+                    {
+                        "code": "U",
+                        "desc": "Unknown Type Drug"
+                    }
+                ]
             }
         ],
         "comment": "If the suspected drug type is a counterfeit, append an 'X' to the drug code, otherwise leave the second character blank."
@@ -1300,12 +1306,12 @@
                     {
                         "code": "FO",
                         "desc": "Fluid Ounce"
+                    },
+                    {
+                        "code": "GL",
+                        "desc": "Gallon"
                     }
                 ]
-            },
-            {
-                "code": "GL",
-                "desc": "Gallon"
             },
             {
                 "title": "UNITS CATEGORY",
@@ -1411,47 +1417,58 @@
                 "values": [
                     {
                         "code": "1",
-                        "desc": "Responding to 'Disturbance Calls' (LIBRS Only)"
+                        "desc": "Responding to 'Disturbance Calls' (LIBRS Only)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "2",
-                        "desc": "Burglaries in Progress or Pursuing Burglary Suspects (LIBRS Only)"
+                        "desc": "Burglaries in Progress or Pursuing Burglary Suspects (LIBRS Only)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "3",
-                        "desc": "Robberies in Progress or Pursuing Robbery Suspects (LIBRS Only)"
+                        "desc": "Robberies in Progress or Pursuing Robbery Suspects (LIBRS Only)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "4",
-                        "desc": "Attempting Other Arrests (LIBRS Only)"
+                        "desc": "Attempting Other Arrests (LIBRS Only)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "5",
-                        "desc": "Civil Disorder (LIBRS Only)"
+                        "desc": "Civil Disorder (LIBRS Only)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "6",
-                        "desc": "Handling, Transporting, Custody of Prisoners (LIBRS Only)"
+                        "desc": "Handling, Transporting, Custody of Prisoners (LIBRS Only)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "7",
-                        "desc": "Investigating Suspicious Persons or Circumstance"
+                        "desc": "Investigating Suspicious Persons or Circumstance",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "8",
-                        "desc": "Ambush - No Warning (LIBRS Only)"
+                        "desc": "Ambush - No Warning (LIBRS Only)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "9",
-                        "desc": "Mentally Deranged Assailant (LIBRS Only)"
+                        "desc": "Mentally Deranged Assailant (LIBRS Only)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "10",
-                        "desc": "Traffic Pursuits and Stops (LIBRS Only)"
+                        "desc": "Traffic Pursuits and Stops (LIBRS Only)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "11",
-                        "desc": "All Other (LIBRS Only)"
+                        "desc": "All Other (LIBRS Only)",
+                        "comment": "09A, 13A, 13B, 13C"
                     }
                 ]
             }
@@ -1470,31 +1487,38 @@
                 "values": [
                     {
                         "code": "F",
-                        "desc": "Two-Officer Vehicle"
+                        "desc": "Two-Officer Vehicle",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "G",
-                        "desc": "One-Officer Vehicle (Alone)"
+                        "desc": "One-Officer Vehicle (Alone)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "H",
-                        "desc": "One-Officer Vehicle (Assisted)"
+                        "desc": "One-Officer Vehicle (Assisted)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "I",
-                        "desc": "Detective or Special Assignment (Alone)"
+                        "desc": "Detective or Special Assignment (Alone)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "J",
-                        "desc": "Detective or Special Assignment (Assisted)"
+                        "desc": "Detective or Special Assignment (Assisted)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "K",
-                        "desc": "Other (Alone)"
+                        "desc": "Other (Alone)",
+                        "comment": "09A, 13A, 13B, 13C"
                     },
                     {
                         "code": "L",
-                        "desc": "Other (Assisted)"
+                        "desc": "Other (Assisted)",
+                        "comment": "09A, 13A, 13B, 13C"
                     }
                 ]
             }
@@ -1514,31 +1538,36 @@
         "definition": "",
         "length": "3",
         "format": "A/N",
-        "comment": "If the victim was a person (that is, Type of Victim (Data Element 25) is Individual (“I”) or Law Enforcement ('L'), then his/her age is to be entered into this data element.<br><br>If the Victim's EXACT AGE IS UNKNOWN, enter estimated age of Victim and append an 'E' into third character (for example, '49E'). If it is impossible to determine even an estimated age of the victim, then enter Unknown ('00') and leave the third character blank.<br><br>",
-        "values": [
+        "comment": "If the victim was a person (that is, Type of Victim (Data Element 25) is Individual ('I') or Law Enforcement ('L'), then his/her age is to be entered into this data element.<br><br>If the Victim's EXACT AGE IS UNKNOWN, enter estimated age of Victim and append an 'E' into third character (for example, '49E'). If it is impossible to determine even an estimated age of the victim, then enter Unknown ('00') and leave the third character blank.<br><br>",
+        "subsection": [
             {
-                "code": "NN",
-                "desc": "Under 24 hours (Neonate)"
-            },
-            {
-                "code": "NB",
-                "desc": "1-6 Days Old (New Born)"
-            },
-            {
-                "code": "BB",
-                "desc": "7-364 Days Old (Baby)"
-            },
-            {
-                "code": "01 to 98",
-                "desc": "Years Old (Age in Years)"
-            },
-            {
-                "code": "99",
-                "desc": "Over 98 Years Old"
-            },
-            {
-                "code": "00",
-                "desc": "Unknown"
+                "title": "",
+                "values": [
+                    {
+                        "code": "NN",
+                        "desc": "Under 24 hours (Neonate)"
+                    },
+                    {
+                        "code": "NB",
+                        "desc": "1-6 Days Old (New Born)"
+                    },
+                    {
+                        "code": "BB",
+                        "desc": "7-364 Days Old (Baby)"
+                    },
+                    {
+                        "code": "01 to 98",
+                        "desc": "Years Old (Age in Years)"
+                    },
+                    {
+                        "code": "99",
+                        "desc": "Over 98 Years Old"
+                    },
+                    {
+                        "code": "00",
+                        "desc": "Unknown"
+                    }
+                ]
             }
         ]
     },
@@ -1683,47 +1712,58 @@
                 "values": [
                     {
                         "code": "01",
-                        "desc": "Argument"
+                        "desc": "Argument",
+                        "comment": "13A, 09A"
                     },
                     {
                         "code": "02",
-                        "desc": "Assault on Law enforcement Officer(s)"
+                        "desc": "Assault on Law enforcement Officer(s)",
+                        "comment": "13A, 09A <br>(Must be entered if Victim Type = 'L')"
                     },
                     {
                         "code": "03",
-                        "desc": "Drug Dealing"
+                        "desc": "Drug Dealing",
+                        "comment": "13A, 09A"
                     },
                     {
                         "code": "04",
-                        "desc": "Gangland"
+                        "desc": "Gangland",
+                        "comment": "13A, 09A"
                     },
                     {
                         "code": "05",
-                        "desc": "Juvenile Gang"
+                        "desc": "Juvenile Gang",
+                        "comment": "13A, 09A"
                     },
                     {
                         "code": "06",
-                        "desc": "Domestic Violence"
+                        "desc": "Domestic Violence",
+                        "comment": "13A, 09A"
                     },
                     {
                         "code": "07",
-                        "desc": "Mercy Killing (Not applicable to aggravated assault)"
+                        "desc": "Mercy Killing (Not applicable to aggravated assault)",
+                        "comment": "09A"
                     },
                     {
                         "code": "08",
-                        "desc": "Other Felony Involved"
+                        "desc": "Other Felony Involved",
+                        "comment": "13A, 09A"
                     },
                     {
                         "code": "09",
-                        "desc": "Other Circumstances"
+                        "desc": "Other Circumstances",
+                        "comment": "13A, 09A"
                     },
                     {
                         "code": "10",
-                        "desc": "Unknown Circumstances"
+                        "desc": "Unknown Circumstances",
+                        "comment": "13A, 09A"
                     },
                     {
                         "code": "40",
-                        "desc": "Child Abuse (LIBRS Only) to NIBRS as code '09'"
+                        "desc": "Child Abuse (LIBRS Only) to NIBRS as code '09'",
+                        "comment": "13A, 09A"
                     }
                 ]
             },
@@ -1732,27 +1772,33 @@
                 "values": [
                     {
                         "code": "30",
-                        "desc": "Child Playing with Weapon"
+                        "desc": "Child Playing with Weapon",
+                        "comment": "09B"
                     },
                     {
                         "code": "31",
-                        "desc": "Gun-Cleaning Accident"
+                        "desc": "Gun-Cleaning Accident",
+                        "comment": "09B"
                     },
                     {
                         "code": "32",
-                        "desc": "Hunting Accident"
+                        "desc": "Hunting Accident",
+                        "comment": "09B"
                     },
                     {
                         "code": "33",
-                        "desc": "Other Negligent Weapon Handling"
+                        "desc": "Other Negligent Weapon Handling",
+                        "comment": "09B"
                     },
                     {
                         "code": "34",
-                        "desc": "Other Negligent Killing"
+                        "desc": "Other Negligent Killing",
+                        "comment": "09B"
                     },
                     {
                         "code": "40",
-                        "desc": "Child Abuse (LIBRS Only) to NIBRS as code '09'"
+                        "desc": "Child Abuse (LIBRS Only) to NIBRS as code '09'",
+                        "comment": "09B"
                     }
                 ]
             },
@@ -1761,11 +1807,13 @@
                 "values": [
                     {
                         "code": "20",
-                        "desc": "Criminal Killed by Private Citizen"
+                        "desc": "Criminal Killed by Private Citizen",
+                        "comment": "09C"
                     },
                     {
                         "code": "21",
-                        "desc": "Criminal Killed by Police Office"
+                        "desc": "Criminal Killed by Police Office",
+                        "comment": "09C"
                     }
                 ]
             }
@@ -1877,7 +1925,7 @@
         "format": "A",
         "subsection": [
             {
-                "title": "",
+                "title": "Within Family",
                 "values": [
                     {
                         "code": "SE",
@@ -1930,7 +1978,12 @@
                     {
                         "code": "NM",
                         "desc": "Non-Married Live-in (LIBRS Only) Sent to NIBRS as 'CS'"
-                    },
+                    }
+                ]
+            },
+            {
+                "title": "Outside Family, But Known to Victim",
+                "values": [
                     {
                         "code": "VO",
                         "desc": "Victim Was Offender"
@@ -1986,7 +2039,12 @@
                     {
                         "code": "ES",
                         "desc": "Victim Was Estranged Spouse (LIBRS Only) Sent to NIBRS as 'SE'"
-                    },
+                    }
+                ]
+            },
+            {
+                "title": "Not Know By Victim",
+                "values": [
                     {
                         "code": "RU",
                         "desc": "Relationship Unknown"
@@ -1994,6 +2052,15 @@
                     {
                         "code": "ST",
                         "desc": "Victim Was Strange"
+                    }
+                ]
+            },
+            {
+                "title": "Other",
+                "values": [
+                    {
+                        "code": "VO",
+                        "desc": "Victim Was Offender"
                     }
                 ],
                 "comment": "Used only if Crime is: (09A,09B,09C) Homicide Offenses, (100) Kidnaping/Abduction, (11A-11D) Forcible Sex Offenses, (120) Robbery (If Victim Type = 'I'), (13A,13B,13C) Assault Offenses, (36A,36B) Non-Forcible Sex Offenses and (90Z) Crime Against Person Offenses"
@@ -2065,6 +2132,32 @@
                     {
                         "code": "U",
                         "desc": "Unknown"
+                    }
+                ]
+            },
+            {
+                "title": "Disability",
+                "values": [
+                    {
+                        "code": "51",
+                        "desc": "Anti-Physical Disability"
+                    },
+                    {
+                        "code": "52",
+                        "desc": "Anti-Mental Disability"
+                    }
+                ]
+            },
+            {
+                "title": "Disability",
+                "values": [
+                    {
+                        "code": "51",
+                        "desc": "Anti-Physical Disability"
+                    },
+                    {
+                        "code": "52",
+                        "desc": "Anti-Mental Disability"
                     }
                 ]
             }

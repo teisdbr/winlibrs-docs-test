@@ -23,7 +23,8 @@
         "err_no": 10001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
         "desc_de1": "Must be present -- CANNOT be Blank (G).",
-        "desc_de2": "Must be present -- CANNOT be Blank (G)."
+        "desc_de2": "Must be present -- CANNOT be Blank (G).",
+        "desc_de25a": "When Type of Victim (25) is Law Enforcement Officer ('L'), then Type of Officer Activity/Circumstance (25A) CANNOT BE BLANK."
     },
     "06001": {
         "err_no": "06011",
@@ -89,6 +90,7 @@
         "err_no": 10059,
         "err_message": "ALL SEGMENTS ON MAGNETIC MEDIA MUST BE FROM SAME STATE - STATE = [state]",
         "desc_de1":"First two positions MUST be the code of the state 'LA' in which the incident occurred."
+        
     },
     "10060": {
         "err_no": 10060,
@@ -100,11 +102,13 @@
     },
     "10065": {
         "err_no": 10065,
-        "err_message": "EACH SEGMENT 20 MUST HAVE A CORRESPONDING VICTIM SEGMENT"
+        "err_message": "EACH SEGMENT 20 MUST HAVE A CORRESPONDING VICTIM SEGMENT",
+        "desc_de24": "Each Offense Segment (20) must have a corresponding Victim segment (50)."
     },
     "10070": {
         "err_no": 10070,
-        "err_message": "THE CORRESPONDING OFFENDER RECORD MUST BE PRESENT"
+        "err_message": "THE CORRESPONDING OFFENDER RECORD MUST BE PRESENT",
+        "desc_de34": "A corresponding Offender Segment (40) must be present."
     },
     "10071": {
         "err_no": 10071,
@@ -118,7 +122,8 @@
     },
     "10073": {
         "err_no": 10073,
-        "err_message": "NUMBER OF RECOVERED VEHICLES CANNOT BE GREATER THAN THE NUMBER STOLEN"
+        "err_message": "NUMBER OF RECOVERED VEHICLES CANNOT BE GREATER THAN THE NUMBER STOLEN",
+        "desc_de19": "If number between 01 and 99 is entered, it must be equal to or less than the number reported Stolen in Number of Stolen Motor Vehicles (18)."
     },
     "10074": {
         "err_no": 10074,
@@ -147,7 +152,8 @@
     },
     "10080": {
         "err_no": 10080,
-        "err_message": "CRIMES AGAINST SOCIETY CAN ONLY HAVE ONE VICTIM"
+        "err_message": "CRIMES AGAINST SOCIETY CAN ONLY HAVE ONE VICTIM",
+        "desc_de25": "*Crimes Against Society* can have only one Victim."
     },
     "10081": {
         "err_no": 10081,
@@ -161,7 +167,8 @@
     },
     "10085": {
         "err_no": 10085,
-        "err_message": "WHEN CONNECTED, EACH VICTIM MUST BE CONNECTED TO ALL OFFENDERS"
+        "err_message": "WHEN CONNECTED, EACH VICTIM MUST BE CONNECTED TO ALL OFFENDERS",
+        "desc_de34": "When a Victim is connected to a *Crime Against Person* or Robbery Offense, all Offender Sequence Numbers (36), MUST also be entered in Offender Number to be Related (34). If the Victim is related to the Offender in more than one way, use the closest relationship."
     },
     "10086": {
         "err_no": 10086,
@@ -201,6 +208,36 @@
     "10100": {
         "err_no": 10100,
         "err_message": "!!!!WARNING!!!!INVALID DATA VALUE--ORDINANCE NOT CURRENTLY CLASSIFIED BY LIBRS."
+    },
+    "10254": {
+        "err_no": 10254,
+        "err_message": "",
+        "desc_de25c": "When Type of Victim (25) **IS NOT** Law Enforcement Officer ('L') or Individual ('I'), then Officer ORI, Other Jurisdiction (25C) MUST BE BLANK."
+    },
+    "10255": {
+        "err_no": 10255,
+        "err_message": "",
+        "desc_de25a": "When Type of Victim (25) **IS NOT** Law Enforcement Officer ('L') or Individual ('I'), then Type of Officer Activity/Circumstance (25A) MUST BE BLANK."
+    },
+    "10256": {
+        "err_no": 10256,
+        "err_message": "",
+        "desc_de25b": "MUST contain a valid data value when entered."
+    },
+    "10257": {
+        "err_no": 10257,
+        "err_message": "",
+        "desc_de25b": "When Type of Victim (25) is Law Enforcement Officer ('L'), then Officer Assignment Type (25B) CANNOT BE BLANK."
+    },
+    "10258": {
+        "err_no": 10258,
+        "err_message": "",
+        "desc_de25b": "When Type of Victim (25) **IS NOT** Law Enforcement Officer ('L') or Individual ('I'), then Officer Assignment Type (25B) MUST BE BLANK."
+    },
+    "10259": {
+        "err_no": 10259,
+        "err_message": "",
+        "desc_de25c": "MUST be a valid 9-character NCIC number, where the last 2 positions of the ORI must reflect '00' for all state and local agencies."
     },
     "11001": {
         "err_no": 11001,
@@ -473,7 +510,8 @@
     },
     "12066": {
         "err_no": 12066,
-        "err_message": "NO OTHER OFFENSE CAN BE SUBMITTED WITH AN 09 C(JUSTIFIABLE HOMICIDE) OFFENSE"
+        "err_message": "NO OTHER OFFENSE CAN BE SUBMITTED WITH AN 09 C(JUSTIFIABLE HOMICIDE) OFFENSE",
+        "desc_de31": "When Justifiable Homicide (NIBRS Code **09C**) is reported, no other offense may be reported in the Incident Report."
     },
     "12067": {
         "err_no": 12067,
@@ -498,13 +536,17 @@
         "err_no": 13002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
         "desc_de16": "MUST be numeric entry with zero or blank left-fill if entered.",
-        "desc_de18": "MUST be numeric entry with zero left-fill, if entered."
-    },
+        "desc_de18": "MUST be numeric entry with zero left-fill, if entered.",
+        "desc_de21": "MUST be numeric entry with Zero ('0') or Blank (G) left-fill and right-fill. The **decimal fractional quantity must be expressed in thousandths as three digits**, and **a decimal point must separate the whole part of the number from the fractional part.** The decimal point must be the tenth character of the field.",
+        "desc_de19": "MUST be a numeric entry with zero left-fill if entered."
+    },   
     "13004": {
         "err_no": 13004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "desc_de14": "MUST be a valid code.",
-        "desc_de15": "MUST be a valid code."
+        "desc_de15": "MUST be a valid code.",
+        "desc_de22": "MUST be a valid code, if entered.",
+        "desc_de20": "MUST be a valid code."
     },
     "13005": {
         "err_no": 13005,
@@ -514,7 +556,8 @@
     "13006": {
         "err_no": 13006,
         "err_message": "ERROR - DUPLICATE VALUE = [value]",
-        "desc_de15": "If more than one code entered, CANNOT be duplicates."
+        "desc_de15": "If more than one code entered, CANNOT be duplicates.",
+        "desc_de20": "When more than one Suspected Drug Type (20) code is entered, there can be NO duplicates."
     },
     "13007": {
         "err_no": 13007,
@@ -607,27 +650,35 @@
     "13059": {
         "err_no": 13059,
         "err_message": "ALL NON VEHICULAR PROPERTY DESCRIPTIONS WERE ENTERED",
-        "desc_de18": "Property Description (DE 15) MUST contain at least one of the following vehicle codes:{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}"
+        "desc_de18": "Property Description (DE 15) MUST contain at least one of the following vehicle codes:{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}",
+        "desc_de19": "When '01' to '99' is entered into Number of Recovered Motor Vehicles (19), then Property Description (15) must contain at least one of the following vehicle codes: {::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}"
     },
     "13060": {
         "err_no": 13060,
-        "err_message": "PROPERTY LOSS(14) MUST BE 5 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24, 28, O R ' 37 ' FOR DATA TO BE ENTERED"
+        "err_message": "PROPERTY LOSS(14) MUST BE 5 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24, 28, O R ' 37 ' FOR DATA TO BE ENTERED",
+        "desc_de19": "MUST be entered if Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of **240** or has a hard-coded edit based on Property Description (15) containing a Motor Vehicle code indicating Recovered Property **and** Type of Property Loss (14) is Recovered ('5')."
     },
     "13061": {
         "err_no": 13061,
-        "err_message": "DATA MUST EXIST WITH A MOTOR VECHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28' OR '37' AND A PROPERTY LOSS OF 5"
+        "err_message": "DATA MUST EXIST WITH A MOTOR VECHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28' OR '37' AND A PROPERTY LOSS OF 5",
+        "desc_de19": "Entry must be made when Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of 240 **or** hard-coded edit based on Property Description (15) containing Motor Vehicle codes indicating Recovered property **and** Type of Property Loss (14) is Recovered ('5'), **and** Property Description (15) contains a vehicle code."
     },
     "13064": {
         "err_no": 13064,
-        "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE(20), QUANTITY(21) AND MEASUREMENT(22) MUST BE PRESENT"
+        "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE(20), QUANTITY(21) AND MEASUREMENT(22) MUST BE PRESENT",
+        "desc_de20": "When Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of 35A **and**, Type Property Loss (14) is Seized ('10'), Property Description (15) is Drugs/Narcotics ('10'), and a Suspected Drug Type (20) is entered, **then** Estimated Quantity (21), Type Drug Measurement (22), and Value of Property (16) must be entered."
     },
     "13065": {
         "err_no": 13065,
-        "err_message": "OFFENSE = DRUG OFFENSE & PROP LOSS = 6 AND DESCRIPTION = 10 MUST EXIST"
+        "err_message": "OFFENSE = DRUG OFFENSE & PROP LOSS = 6 AND DESCRIPTION = 10 MUST EXIST",
+        "desc_de22": "Type Drug Measurement (22) is used if Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of **35A** **and** Type of Property Loss (14) is Seized ('6'), **and** Property Description ('15') is Drugs Narcotics ('10').",
+        "desc_de21": "Estimated Drug Quantity (21) is valid only if Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of **35A** **and**, Type of Property Loss (14) is **Seized** ('6'), and Property Description (15)is Drugs/Narcotics ('10').",
+        "desc_de20": "Suspected Drug Type (20) MUST be entered if Louisiana Revised Statutes (6) has a NIBRS offense code [as defined on Master LIBRS/LRS Code Table] of 35A **and** Type of Property Loss (4) has a value of Seized ('6') **and** Property Description (15) has a value of Drugs/Narcotics ('10'). If there are multiple LRS Offenses (6) listed and Drugs/Narcotics ('10') was split between the different types of LRS Offenses (6), only enter the Suspected Drug Types (20) applicable to the Offenses listed above."
     },
     "13066": {
         "err_no": 13066,
-        "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE(20) AND MEASUREMENT(22) MUST BE PRESENT"
+        "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE(20) AND MEASUREMENT(22) MUST BE PRESENT",
+        "desc_de21": "When Estimated Drug Quantity (21) is entered, Suspected Drug Type (20), Type Drug Measurement (22) and Value of Property (16) must also be entered."
     },
     "13067": {
         "err_no": 13067,
@@ -635,7 +686,8 @@
     },
     "13068": {
         "err_no": 13068,
-        "err_message": "WITH DATA ENTERED DRUG TYPE(DATA ELEMENT 20), QUANTITY(DATA ELEMENT 21), AND VALUE(DATA ELEMENT 16) MUST BE PRESENT"
+        "err_message": "WITH DATA ENTERED DRUG TYPE(DATA ELEMENT 20), QUANTITY(DATA ELEMENT 21), AND VALUE(DATA ELEMENT 16) MUST BE PRESENT",
+        "desc_de22": "When Type Drug Measurement is entered, then Suspected Drug Type (20), Estimated Drug Quantity (21), and Value of Property (16) must also be completed."
     },
     "13070": {
         "err_no": 13070,
@@ -683,7 +735,8 @@
     },
     "13084": {
         "err_no": 13084,
-        "err_message": "WITH A MEASUREMENT OF 'XX'(NOT REPORTED) DRUG QTY MUST = 00000001.000"
+        "err_message": "WITH A MEASUREMENT OF 'XX'(NOT REPORTED) DRUG QTY MUST = 00000001.000",
+        "desc_de22": "Estimated Drug Quantity (21) must have a value of '000000001.000' when Type Drug Measurement (22) is Not Reported ('XX') and Value of Property (16) is Unknown ('1'). Submission of a Not Reported('XX') for Type Drug Measurement (22) requires that a value of '000000001.000' also be submitted for Estimated Drug Quantity (21) as a quality assurance check. Once the Type Drug Measurement (22) has been determined, the Incident will need to be **resubmitted** reflecting the completed data."
     },
     "13087": {
         "err_no": 13087,
@@ -697,7 +750,8 @@
     },
     "13089": {
         "err_no": 13089,
-        "err_message": "NUMBER RECOVERED IS LESS THAN NUMBER OF VEHICLE CODES"
+        "err_message": "NUMBER RECOVERED IS LESS THAN NUMBER OF VEHICLE CODES",
+        "desc_de19": "The Number of Recovered Motor Vehicles (19) must be greater than or equal to the number of Property Description (15) entries with motor vehicle designation. For example, if Property Description (15) vehicle codes of Automobiles ('03') and Buses ('05') have corresponding Type of Property Loss (14) entries of Recovered ('5'), then the Number of Recovered Motor Vehicles (19) must be at least 2, unless the Number of Recovered Motor Vehicles (19) is Unknown ('00')."
     },
     "13090": {
         "err_no": 13090,
@@ -710,7 +764,8 @@
     },
     "13092": {
         "err_no": 13092,
-        "err_message": "35 A OFFENSE ENTERED AND '1=NONE' ENTERED;MISSING SUSPECTED DRUG TYPE(20)"
+        "err_message": "35 A OFFENSE ENTERED AND '1=NONE' ENTERED;MISSING SUSPECTED DRUG TYPE(20)",
+        "desc_de20": "When Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of **35A** and Type Property Loss (14) is None ('1') **then** Suspected Drug Type (20) is required. **However**, if Type Property Loss (14) of Seized ('6') is also reported, this edit is bypassed."
     },
     "13100": {
         "err_no": 13100,
@@ -823,6 +878,7 @@
         "desc_de38": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
         "desc_de37": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
         "desc_de36": "For a Justifiable Homicide (NIBRS 09C), at least one of the Offenders must have 'known' information for Age, Sex, and Race. Consequently, Unknown ('000') is not valid as an Offender Sequence Number (36)."
+        
     },
     "14060": {
         "err_no": 14060,
@@ -839,12 +895,18 @@
     },
     "15001": {
         "err_no": 15001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
+        "desc_de25": "MUST be present -- CANNOT be blank.",
+        "desc_de24": "MUST be present -- CANNOT be blank.",
+        "desc_de23": "MUST be present -- CANNOT be blank."
     },
     "15002": {
         "err_no": 15002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
-        "desc_del6": "MUST be numeric entry (001 through 999) with zero left-fill. Offense Sequence Number (DE L6) distinguishes one offense from another."
+        "desc_del6": "MUST be numeric entry (001 through 999) with zero left-fill. Offense Sequence Number (DE L6) distinguishes one offense from another.",
+        "desc_de34": "MUST be numeric entry with zero left-fill, if entered.",
+        "desc_de31": "MUST contain numeric entry with ZERO left-fill.",
+        "desc_de23": "MUST be numeric entry (001 through 999) with zero left-fill. The purpose of Victim Sequence Number is to distinguish one victim from another."
     },
     "15003": {
         "err_no": 15003,
@@ -853,7 +915,18 @@
     "15004": {
         "err_no": 15004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
-        "desc_de35": "MUST be a valid code."
+        "desc_de35": "MUST be a valid code.",
+        "desc_de33": "MUST be a valid code.",
+        "desc_de32": "MUST be a valid code.",
+        "desc_de31": "MUST be a valid code.",
+        "desc_de30": "MUST be a valid code.",
+        "desc_de29": "MUST be a valid code.",
+        "desc_de28": "MUST be a valid code.",
+        "desc_de27": "MUST be a valid code.",
+        "desc_de26": "**Exact Age:** MUST be a valid code if alpha characters, i.e., NN, NB, or BB.",
+        "desc_de25a": "MUST contain a valid data value when entered.",
+        "desc_de25": "MUST be a valid code.",
+        "desc_de24": "MUST be a valid code."
     },
     "15005": {
         "err_no": 15005,
@@ -861,19 +934,25 @@
     },
     "15006": {
         "err_no": 15006,
-        "err_message": "ERROR - DUPLICATE VALUE = [value]"
+        "err_message": "ERROR - DUPLICATE VALUE = [value]",
+        "desc_de34": "If more than one number entered, then this Data Element (34) CANNOT be a duplicate.",
+        "desc_de33": "If more than one code entered, CANNOT be a duplicate.",
+        "desc_de31": "When more than one code is entered within Aggravated Assault/ Murder category, there can be NO duplicates."
     },
     "15007": {
         "err_no": 15007,
-        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]"
+        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]",
+        "desc_de33": "None ('N') is mutually exclusive with any other value entered. That is, None 'N' is to be used only if no other code applies."
     },
     "15008": {
         "err_no": 15008,
-        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS"
+        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS",
+        "desc_de26": "**Exact Age:** A single two-character age must be in first two positions of the field. The third position must be blank."
     },
     "15009": {
         "err_no": 15009,
-        "err_message": "ESTIMATED AGE MUST HAVE 'E' IN LAST POSITION"
+        "err_message": "ESTIMATED AGE MUST HAVE 'E' IN LAST POSITION",
+        "desc_de26": "**Estimated Age:** MUST be 2 numeric digits, and have a trailing 'E'."
     },
     "15015": {
         "err_no": 15015,
@@ -889,7 +968,9 @@
     },
     "15019": {
         "err_no": 15019,
-        "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES"
+        "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
+        "desc_de33": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person* and has a **NIBRS Offense code** as defined on Master LIBRS/LRS Code Table of: {::nomarkdown}<ul><li>100</li><li>11A, 11B, 11C, 11D</li><li>120</li><li>13A, 13B</li><li>210</li><li>90Z</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses.",
+        "desc_de31": "MUST be entered if Louisiana Revised Statute (6) has a **NIBRS Offense code** as defined on Master LIBRS/LRS Code Table of: {::nomarkdown}<ul><li>13A</li><li>09A, 09B or 09C</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
     },
     "15020": {
         "err_no": 15020,
@@ -897,40 +978,63 @@
     },
     "15022": {
         "err_no": 15022,
-        "err_message": "ESTIMATED AGE CANNOT BE '00' = UNKNOWN"
+        "err_message": "ESTIMATED AGE CANNOT BE '00' = UNKNOWN",
+        "desc_de26": "**Estimated Age:** The estimated age CANNOT be Unknown ('00') and have a trailing 'E'."
     },
     "15050": {
         "err_no": 15050,
         "err_message": "VICTIM IS SPOUSE, BUT AGE IS LESS THAN 10",
-        "desc_de35": "Husbands and wives (that is, spouses) must be at least 10 years of age."
+        "desc_de35": "Husbands and wives (that is, spouses) must be at least 10 years of age.",
+        "desc_de26": "When Relationship of Victim to Offender (35) contains a relationship of Spouse ('SE'), then the Victim CANNOT be less than 10 years old."
     },
     "15051": {
         "err_no": 15051,
-        "err_message": "VICTIM NUMBER ALREADY EXISTS"
+        "err_message": "VICTIM NUMBER ALREADY EXISTS",
+        "desc_de23": "MUST be unique -- can NOT have duplicates."
     },
     "15053": {
         "err_no": 15053,
-        "err_message": "MUST BE PRESENT WHEN VICTIM TYPE(25) = 'I' OR 'L'"
+        "err_message": "MUST BE PRESENT WHEN VICTIM TYPE(25) = 'I' OR 'L'",
+        "desc_de28": "MUST be present if Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L').",
+        "desc_de27": "MUST be present if Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L').",
+        "desc_de26": "MUST be present when Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L')."
     },
     "15055": {
         "err_no": 15055,
-        "err_message": "ADDITIONAL JUSTIFIABLE HOMICIDE IS MANDATORY WITH A '20' OR '21' ENTERED"
+        "err_message": "ADDITIONAL JUSTIFIABLE HOMICIDE IS MANDATORY WITH A '20' OR '21' ENTERED",
+        "desc_de31": "When Criminal Killed by Private Citizen ('20') or Criminal Killed by Police Officer ('21') is entered, then Additional Justifiable Homicide Circumstances (32) MUST be entered."
     },
-    "15056": {
+    "15056a": {
         "err_no": 15056,
-        "err_message": "ONLY ONE VALUE GREATER OR EQUAL TO '10' CAN BE ENTERED"
+        "err_message": "ONLY ONE VALUE GREATER OR EQUAL TO '10' CAN BE ENTERED",
+        "desc_de31": "Unknown Circumstances ('10') is mutually exclusive with all other codes, that is, no other code can be entered. Enter Unknown ('10') ONLY if no other code applies."
+            },
+    "15056b": {
+    "err_no": 15056,
+    "err_message": "ONLY ONE VALUE GREATER OR EQUAL TO '10' CAN BE ENTERED",
+    "desc_de31": "No more than (1) circumstance category (that is, Aggravated..., Negligent..., Justifiable...) can be entered."
     },
     "15057": {
         "err_no": 15057,
-        "err_message": "WHEN DATA ELEMENT 32 IS ENTERED, DATA ELEMENT 31 MUST EQUAL '20' OR '21' UN LESS TYPE OF VICTIM IS EQUAL TO 'L' = LAW ENFORCEMENT OFFICER"
+        "err_message": "WHEN DATA ELEMENT 32 IS ENTERED, DATA ELEMENT 31 MUST EQUAL '20' OR '21' UN LESS TYPE OF VICTIM IS EQUAL TO 'L' = LAW ENFORCEMENT OFFICER",
+        "desc_de32": "When this Data Element (32) is entered, then *Aggravated Assault/Homicide Circumstance (31)* MUST show one of the following Justifiable Homicide **(NIBRS 09C)** Circumstances: {::nomarkdown}<ul><li>20 Criminal Killed by Private Citizen</li><li>21 Criminal Killed by Police Officer</li></ul>{:/} when Type of Victim (25) is Individual ('I')."
     },
     "15058": {
         "err_no": 15058,
-        "err_message": "VICTIM TYPE(25) MUST BE 'I' OR 'L' FOR DATA TO BE ENTERED"
+        "err_message": "VICTIM TYPE(25) MUST BE 'I' OR 'L' FOR DATA TO BE ENTERED",
+        "desc_de34": "Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L') for data to be entered.",
+        "desc_de30": "Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L') for data to be entered.",
+        "desc_de29": "Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L') in order for data to be entered into Ethnicity of Victim (29).",
+        "desc_de28": "Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L') for data to be entered.",
+        "desc_de27": "Type of Victim (25) must be Individual ('I') or Law Enforcement Officer ('L') for data to be entered in Sex of Victim (27).",
+        "desc_del26": "Type of Victim (25) must be Individual ('I') **or Law Enforcement Officer** ('L') for data to be entered.",
+        "desc_de26": "Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L') for data to be entered."
     },
     "15059": {
         "err_no": 15059,
-        "err_message": "NEED A CRIME AGAINST PERSON OR ROBBERY FOR DATA TO BE ENTERED"
+        "err_message": "NEED A CRIME AGAINST PERSON OR ROBBERY FOR DATA TO BE ENTERED",
+        "desc_de35": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a **NIBRS Offense code** as defined on Master LIBRS/LRS Code Table of: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>120</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/} Relationship of Victim to Offender (35) MUST be Blank (G) when '000' is entered into Offender Number to be Related (34).",
+        "desc_de34": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a **NIBRS Offense code** as defined on Master LIBRS/LRS Code Table of: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>120</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
     },
     "15060": {
         "err_no": 15060,
@@ -943,7 +1047,8 @@
     },
     "15062": {
         "err_no": 15062,
-        "err_message": "INVALID AGGRAVATED ASSAULT / HOMICIDE FOR AGGRAVATED ASSAULT OFFENSE(13 A)"
+        "err_message": "INVALID AGGRAVATED ASSAULT / HOMICIDE FOR AGGRAVATED ASSAULT OFFENSE(13 A)",
+        "desc_de31": "Aggravated Assault CANNOT use Mercy Killing ('07'), as this code does not relate to Aggravated Assault."
     },
     "15063": {
         "err_no": 15063,
@@ -951,52 +1056,66 @@
     },
     "15064": {
         "err_no": 15064,
-        "err_message": "ENTRY FOR TYPE OF VICTIM MUST BE 'I' OR 'L' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM"
+        "err_message": "ENTRY FOR TYPE OF VICTIM MUST BE 'I' OR 'L' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM",
+        "desc_de25": "When Offense Connected to Victim Sequence Number (24) is a *Crime Against Person*, and the Offense is connected to a Victim, then Type of Victim (25) must be Individual ('I') or Law Enforcement Officer ('L'). ***Modified Error Message***",
+        "desc_de24": "If the Offense is a *Crime Against Person*, and the Offense is **connected to a Victim,** then Type of Victim (25) must be an Individual ('I') or Law Enforcement Officer ('L')."
     },
     "15065": {
         "err_no": 15065,
-        "err_message": "ENTRY FOR TYPE OF VICTIM MUST BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM"
+        "err_message": "ENTRY FOR TYPE OF VICTIM MUST BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM",
+        "desc_de25": "When Offense is a *Crime Against Society*, and the Offense is connected to a Victim, then Type of Victim (25) must be Society ('S').",
+        "desc_de24": "If the Offense is a *Crime Against Society*, and the Offense is **connected to a Victim,** then Type of Victim (25) **must** be Society ('S')."
     },
     "15066": {
         "err_no": 15066,
-        "err_message": "OFFENSE MUST BE SUBMITTED AS SEGMENT 20 RECORD IF VICTIM IS CONNECTED"
+        "err_message": "OFFENSE MUST BE SUBMITTED AS SEGMENT 20 RECORD IF VICTIM IS CONNECTED",
+        "desc_de24": "Each Offense Connected to Victim Sequence Number (24) entered in the Offense Segment (20) must also have a corresponding Victim Sequence Number (23) entered in a Victim Segment (50)."
     },
     "15067": {
         "err_no": 15067,
-        "err_message": "ENTRY FOR TYPE OF VICTIM CANNOT BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM"
+        "err_message": "ENTRY FOR TYPE OF VICTIM CANNOT BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM",
+        "desc_de25": "When Offense is a *Crime Against Property*, and the Offense is connected to a Victim, then Type of Victim (25) CANNOT be Society ('S'). Type of Victim (25) can only be: {::nomarkdown}<ul><li>I Individual</li><li>B Business</li><li>F Financial Institution</li><li>G Government</li><li>R Religious Organization</li><li>O Other</li><li>U Unknown</li></ul>{:/}"
     },
     "15068": {
         "err_no": 15068,
         "err_message": "RELATIONSHIP CANNOT BE ENTERED WHEN RELATED TO OFFENDER NUMBER '000'",
-        "desc_de35": "Relationship CANNOT be entered when Offender Number to be Related (34) is Unknown ('000')."
+        "desc_de35": "Relationship CANNOT be entered when Offender Number to be Related (34) is Unknown ('000').",
+        "desc_de34": "'000' may only be entered when there is only one Offender Segment (40) submitted and nothing was known about identity and number of offender(s)."
     },
     "15069": {
         "err_no": 15069,
-        "err_message": "VICTIM SEX MUST BE 'M' OR 'F' FOR AN 11 A OR 36 B OFFENSE"
+        "err_message": "VICTIM SEX MUST BE 'M' OR 'F' FOR AN 11 A OR 36 B OFFENSE",
+        "desc_de27": "Sex of Victim (27) must be Male ('M') or Female ('F') to be Connected to Offense codes of Forcible Rape ('11A') and Statutory Rape ('36B')."
     },
     "15070": {
         "err_no": 15070,
-        "err_message": "WHEN 'VO' RELATIONSHIP IS PRESENT, MUST HAVE TWO OR MORE VICTIMS AND OFFEND"
+        "err_message": "WHEN 'VO' RELATIONSHIP IS PRESENT, MUST HAVE TWO OR MORE VICTIMS AND OFFEND",
+        "desc_de35": "When Victim was Offender **('VO')** is entered, a minimum of **two** Victims Segments (50) and **two** Offender Segments (40) MUST be submitted. 'VO' indicates situations such as brawls and domestic disputes **where all of the participants in the incident were Victims and Offenders of the same Offense (for example, assaults or double murders where two people kill each other).** In most cases, each Victim is also the Offender; therefore, every Victim Segment (50) will contain a 'VO' code.  However, there may be some situations where only one of the Victims is also the Offender, but where the other Victim(s) are not also the Offender(s) (for example, a Victim who is not an Offender could be an innocent bystander in a barroom brawl, or a child who is victimized as a result of the parents domestic dispute)."
     },
     "15071": {
         "err_no": 15071,
-        "err_message": "ONLY ONE 'VO' RELATIONSHIP PER VICTIM"
+        "err_message": "ONLY ONE 'VO' RELATIONSHIP PER VICTIM",
+        "desc_de35": "When entered, Victim was Offender ('VO') can only be entered once in a Victim Segment (50) and can refer to an Offender only once. Since 'VO' points to himself/herself, a Victim CANNOT at the same time be two Offenders."
     },
     "15072": {
         "err_no": 15072,
-        "err_message": "WHEN OFFENDER AGE / SEX / RACE ARE UNKNOWN, RELATIONSHIP MUST BE 'RU' = UNKNOWN"
+        "err_message": "WHEN OFFENDER AGE / SEX / RACE ARE UNKNOWN, RELATIONSHIP MUST BE 'RU' = UNKNOWN",
+        "desc_de35": "When the related Offender has 'Unknown' values entered for Age, Sex and Race, the relationship must be Relationship Unknown ('RU'). This edit ensures a logical relationship. For example, if Brother ('SB') was entered fro Relationship of Victim to Offender (25), then Age, Sex and Race would NOT be Unknown values."
     },
     "15074": {
         "err_no": 15074,
-        "err_message": "ONLY ONE 'VO' RELATIONSHIP CAN BE ASSIGNED TO A SPECIFIC OFFENDER"
+        "err_message": "ONLY ONE 'VO' RELATIONSHIP CAN BE ASSIGNED TO A SPECIFIC OFFENDER",
+        "desc_de35": "When entered, Victim was Offender ('VO') can only be entered once in a Victim Segment (50) and can refer to an Offender only once. Since 'VO' points to himself/herself, a Victim CANNOT at the same time be two Offenders."
     },
     "15075": {
         "err_no": 15075,
-        "err_message": "ONLY ONE 'SE' RELATIONSHP PER VICTIM"
+        "err_message": "ONLY ONE 'SE' RELATIONSHP PER VICTIM",
+        "desc_de35": "In a multiple Offender incident, a Victim CANNOT have a relationship of Spouse ('SE') to more than one Offender."
     },
     "15076": {
         "err_no": 15076,
-        "err_message": "ONLY ONE 'SE' RELATIONSHIP CAN BE ASSIGNED TO A SPECIFIC OFFENDER"
+        "err_message": "ONLY ONE 'SE' RELATIONSHIP CAN BE ASSIGNED TO A SPECIFIC OFFENDER",
+        "desc_de35": "In a multiple Victim incident, two or more Victims CANNOT have a Victim relationship of Spouse ('SE') to the same Offender."
     },
     "15077": {
         "err_no": 15077,
@@ -1004,19 +1123,24 @@
     },
     "15078": {
         "err_no": 15078,
-        "err_message": "VICTIM CONNECTED TO AN INVALID COMBINATION OF OFFENSES"
+        "err_message": "VICTIM CONNECTED TO AN INVALID COMBINATION OF OFFENSES",
+        "desc_de24": "Victim CANNOT be connected to **Mutually Exclusive** or **Lesser Included** Offenses. {::nomarkdown}<ul><li>Offenses are **Mutually Exclusive** when they CANNOT occur to the same victim in an incident by NIBRS definitions.</li><li>Offenses are **Lesser Included** when, in the same incident, one Offense is an element of a second Offense, and should not both be reported as having happened to the Victim.</li></ul>{:/}"
     },
     "15079": {
         "err_no": 15079,
-        "err_message": "SIMPLE ASSAULT(13 B) CANNOT HAVE 'MAJOR INJURIES'"
+        "err_message": "SIMPLE ASSAULT(13 B) CANNOT HAVE 'MAJOR INJURIES'",
+        "desc_de33": "When Offense Connected to Victim Sequence Number (24) relates to the Offense of Simple Assault (NIBRS '13B'), there CANNOT be *major* injury codes which would indicate an Aggravated Assault. Permissible codes are Apparent Minor Injury ('M') and None ('N').",
+        "desc_de24": "When Offense Connected to Victim Sequence Number (24) relates to the Offense of Simple Assault (NIBRS '13B'), there **CANNOT be 'major' injury codes** indicating an Aggravated Assault. The permissible codes are Apparent Minor Injury ('M') and None ('N')."
     },
     "15080": {
         "err_no": 15080,
-        "err_message": "WHEN HOMICIDE / ASSAULT(DATA ELEMENT 31) IS '08,' INCIDENT MUST HAVE 2 OR MORE OFFENSES"
+        "err_message": "WHEN HOMICIDE / ASSAULT(DATA ELEMENT 31) IS '08,' INCIDENT MUST HAVE 2 OR MORE OFFENSES",
+        "desc_de31": "When Assault/Homicide Circumstances (31) is Other Felony Involved ('08'), then the incident must have **two or more** Offenses."
     },
     "15081": {
         "err_no": 15081,
-        "err_message": "STATUTORY RAPE OFFENSES REQUIRE A VICTIM WHO IS AT LEAST 13 YEARS OF AGE BUT NO OLDER THAN 16 YEARS OLD"
+        "err_message": "STATUTORY RAPE OFFENSES REQUIRE A VICTIM WHO IS AT LEAST 13 YEARS OF AGE BUT NO OLDER THAN 16 YEARS OLD",
+        "desc_de26": "Statutory Rape Victim's Age (26) must be 12 years to 16 years."
     },
     "15096": {
         "err_no": 15096,
@@ -1271,7 +1395,8 @@
     },
     "20003": {
         "err_no": 20003,
-        "err_message": "WARNING - INVALID TYPE DRUG MEASUREMENT(DE 22) FOR THE GIVEN SUSPECTED DRUG TYPE(DE 20)"
+        "err_message": "WARNING - INVALID TYPE DRUG MEASUREMENT(DE 22) FOR THE GIVEN SUSPECTED DRUG TYPE(DE 20)",
+        "desc_de22": "Each Suspected Drug Type (DE20) can only be measured using it's corresponding measurement category."
     },
     "20004": {
         "err_no": 20004,
@@ -1430,7 +1555,8 @@
     },
     "22110": {
         "err_no": 22110,
-        "err_message": "VICTIM TYPE CANNOT BE 'L' = LAW ENFORCEMENT OFFICER WHEN USING THIS LRS CODE"
+        "err_message": "VICTIM TYPE CANNOT BE 'L' = LAW ENFORCEMENT OFFICER WHEN USING THIS LRS CODE",
+        "desc_de25": "Type of Victim (25) must be Law Enforcement Officer ('L') when submitting certain Louisiana Revised Statute codes"
     },
     "22115": {
         "err_no": 22115,
@@ -1438,7 +1564,8 @@
     },
     "22120": {
         "err_no": 22120,
-        "err_message": "AGE DOES NOT INDICATE CHILD IS THE VICTIM CONNECTED TO THIS OFFENSE"
+        "err_message": "AGE DOES NOT INDICATE CHILD IS THE VICTIM CONNECTED TO THIS OFFENSE",
+        "desc_de31": "If Non-Negligent Circumstances (31) is Child Abuse ('40'), then the Victim that is Connected to this Offense must have an age that equals **NN NB BB 01-16 01-16, with a trailing 'E'**."
     },
     "22125": {
         "err_no": 22125,
@@ -1456,17 +1583,33 @@
         "err_no": 22140,
         "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS BRIBERY(510)"
     },
+    "22251": {
+        "err_no": 22251,
+        "err_message": "New Error Message",
+        "desc_de25": "Type of Victim (25) CANNOT be Law Enforcement Officer ('L'), unless Offense Connected to Victim Sequence Number (24) is one of the following NIBRS codes: {::nomarkdown}<ul><li>09A Murder and Non-negligent Manslaughter</li><li>13A Aggravated Assault</li><li>13B Simple Assault</li><li>13C Intimidation</li></ul>{:/}"
+    },
+    "22252": {
+        "err_no": 22252,
+        "err_message": "New Error Message",
+        "desc_de25": "When Type of Victim (25) is Law Enforcement Officer ('L') and Offense Connected to Victim Sequence Number (24) is one of the following NIBRS codes: {::nomarkdown}<ul><li>09A Murder and Non-negligent Manslaughter</li><li>13A Aggravated Assault</li><li>13B Simple Assault</li><li>13C Intimidation</li></ul>{:/} then, Incident Date/Hour (3) MUST be populated with a valid hour (00-23) and CANNOT BE BLANK."
+    },
     "23001": {
         "err_no": 23001,
         "err_message": "ONLY ONE SEGMENT 30 PER INCIDENT PER TAPE ALLOWED"
     },
     "23201": {
         "err_no": 23201,
-        "err_message": "SECOND CHARACTER MUST BE 'X' OR BLANK"
+        "err_message": "SECOND CHARACTER MUST BE 'X' OR BLANK",
+        "desc_de20": "Second character must be 'X' (indicates Counterfeit), or Blank G."
     },
     "23210": {
         "err_no": 23210,
         "err_message": "DECIMAL POINT EXPECTED BUT NOT FOUND"
+    },
+    "23230": {
+        "err_no": 23230,
+        "err_message": "",
+        "desc_de19": "Number of Recovered Motor Vehicles (19) must be left blank if the LRS Offense is not reported as a Motor Vehicle Theft (NIBRS 240), or Type of Property Loss (14) shows NO Recovered ('5') property with a Property Description (15) from the following list of motor vehicle codes: {::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}"
     },
     "23235": {
         "err_no": 23235,
@@ -1500,7 +1643,9 @@
     },
     "25010": {
         "err_no": 25010,
-        "err_message": "AGE CANNOT BE ESTIMATE IF DATE OF BIRTH AND INCIDENT DATE IS KNOWN"
+        "err_message": "AGE CANNOT BE ESTIMATE IF DATE OF BIRTH AND INCIDENT DATE IS KNOWN",
+        "desc_del26": "If entered, and Incident Date/Hour (3) contains the actual incident date, then Age of Victim (26) *at the time of the incident* must be an exact age.",
+        "desc_de26": "**Estimated Age:** Age CANNOT be an estimate if Date of Birth of Victim (L26) is entered, and Incident Date/Hour (3) is an actual Incident Date (that is, not a Report date ('R'))."
     },
     "25020": {
         "err_no": 25020,
@@ -1508,11 +1653,13 @@
     },
     "25030": {
         "err_no": 25030,
-        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE"
+        "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
+        "desc_del26": "Each component of the date must be valid (that is, months must be 01-12, days must be 01-31, and year must include the century (e.g., 19xx, 20xx)). In addition, days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days). The date CANNOT be greater than that entered within the *Month of Data Submission* and *Year of Data Submission* field on the data record. For example, if *Month of Data Submission* and *Year of Data Submission* are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
     },
     "25031": {
         "err_no": 25031,
-        "err_message": "MUST BE ON OR BEFORE INCIDENT DATE AND HOUR"
+        "err_message": "MUST BE ON OR BEFORE INCIDENT DATE AND HOUR",
+        "desc_del26": "MUST be on or before Incident Date/Hour (3)."
     },
     "25202": {
         "err_no": 25202,
@@ -1537,6 +1684,11 @@
         "err_no": 26202,
         "err_message": "ARREST CONNECTION TO OFFENSE FOUND DUPLICATE OFFENSE SEQUENCE NUMBERS FOR THIS OFFENSE."
     },
+    "31010": {
+        "err_no": 31010,
+        "err_message": "",
+        "desc_de31": "Enter only **one** code for Justifiable Homicide Circumstances when Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of 09C."
+    },
     "45001": {
         "err_no": 45001,
         "err_message": "",
@@ -1546,6 +1698,16 @@
         "err_no": 45002,
         "err_message": "MUST be a valid code.",
         "desc_den45": "MUST be a valid code."
+    },
+    "31008": {
+        "err_no": 31008,
+        "err_message": "",
+        "desc_de31": "Enter up to **two** codes for the Aggravated Assault, Murder and Non-Negligent Manslaughter Circumstances when Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of 09A or 13A."
+    },
+    "31009": {
+        "err_no": 31009,
+        "err_message": "",
+        "desc_de31": "Enter only **one** code for Negligent Manslaughter Circumstances (31) when Louisiana Revised Statue (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of 09B."
     },
     "81100": {
         "err_no": 81100,
@@ -2063,7 +2225,8 @@
     },
     "90029": {
         "err_no": 90029,
-        "err_message": "INVALID TYPE OF WEAPON / FORCE INVOLVED(DATA ELEMENT 13) OR INJURY TYPE(DATA ELEMENT 33) WITH AN OFFENSE OF NIBRS = 13 A;INJURY TYPE(DATA ELEMENT 33) CANNOT BE 'M' or 'N' WITH THE GIVEN TYPE OF WEAPON / FORCE = 'PERSONAL WEAPON'"
+        "err_message": "INVALID TYPE OF WEAPON / FORCE INVOLVED(DATA ELEMENT 13) OR INJURY TYPE(DATA ELEMENT 33) WITH AN OFFENSE OF NIBRS = 13 A;INJURY TYPE(DATA ELEMENT 33) CANNOT BE 'M' or 'N' WITH THE GIVEN TYPE OF WEAPON / FORCE = 'PERSONAL WEAPON'",
+        "desc_de33": "When the Offense Connected to Victim Sequence Number (24) relates to the Offense of Aggravated Assault (NIBRS '13A'), then Type of the Injury **cannot be** 'M' or 'N' with the Type of Weapon/Force Involved = 'Personal Weapon (40)'."
     },
     "90031": {
         "err_no": 90031,

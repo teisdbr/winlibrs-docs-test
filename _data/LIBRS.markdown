@@ -2758,11 +2758,7 @@ entered.\
 **\
 **
 
-Offense Connected to
---------------------
-
-Victim Sequence Number (24)
----------------------------
+## Offense Connected to Victim Sequence Number (24)
 
 **Data Characteristics:** 3 Character Numeric
 
@@ -3884,7 +3880,7 @@ Segment:
 Aggravated Assault/Homicide Circumstance
 ----------------------------------------
 
-Nos. 1 and 2 (31)
+## Nos. 1 and 2 (31)
 -----------------
 
 **\*\*\* Assault on Law Enforcement Officer (Shaded Brown) is a new
