@@ -14,18 +14,18 @@ ___
 
 **\*\*\* Indicated Cells are either New or Modified Data Elements beginning with LIBRS Spec 2.5 \*\*\***
 
-  Data Element Number             |         Description of Data Element       |  Position(s)  |  Length  |  Format  
-  :--------------------------------:|-------------------------------------------|:-------------:|:--------:|:--------:
-  [C1](#segment-descriptor-c1)    |   Segment Descriptor - **00**             |    1-2        |   2      |    N     
-  [C3](#submission-date-c3)       |   Submission Date                         |    23-30      |   8      |    D     
-  [C2](#submitting-agency-c2)     |   Submitting Agency                       |    3-22       |   20     |    A     
-  [C4](#reporting-period-c4)      |   Reporting Period                        |    31-36      |   6      |    D     
-  [C10](#software-id-c10)         |   Software ID                             |    37-41      |   5      |   A/N    
-  [C11](#software-version-c11)    |   Software Version                        |    42-51      |   10     |   A/N    
-  [C12](#librs-spec-indicator-c12)|   LIBRS Spec Indicator **\*\*\*New\*\*\***|    52-54      |   3      |   A/N    
-  \*\*                            |   Future Expansion Buffer                 |    55-56      |   2      |    A     
-  [C8](#end-of-segment-marker-c8) |   End of Segment Marker                   |    57-58      |   2      |    A     
-  [C9](#padding-c9)               |   Padding                                 |    59-150     |   \*\*   |   A/N 
+  Data Element Number                 |         Description of Data Element       |    Position(s)    |    Length    |  Format  
+  :----------------------------------:|-------------------------------------------|:-----------------:|:------------:|:--------:
+  [C1](#segment-descriptor-c1)        |   Segment Descriptor - **00**             |    1-2            |   2          |    N     
+  [C3](#submission-date-c3)           |   Submission Date                         |    23-30          |   8          |    D     
+  [C2](#submitting-agency-c2)         |   Submitting Agency                       |    3-22           |   20         |    A     
+  [C4](#reporting-period-c4)          |   Reporting Period                        |    31-36          |   6          |    D     
+  [C10](#software-id-c10)             |   Software ID                             |    37-41          |   5          |   A/N    
+  [C11](#software-version-c11)        |   Software Version                        |    42-51          |   10         |   A/N    
+  **[C12](#librs-spec-indicator-c12)**|   LIBRS Spec Indicator **\*\*\*New\*\*\***|    **52-54**      |   **3**      |   **A/N**    
+  \*\*                                |   Future Expansion Buffer                 |    55-56          |   2          |    A     
+  [C8](#end-of-segment-marker-c8)     |   End of Segment Marker                   |    57-58          |   2          |    A     
+  [C9](#padding-c9)                   |   Padding                                 |    59-150         |   \*\*       |   A/N 
 
 <br>
 
@@ -144,7 +144,7 @@ ___
    [13](#type-of-weaponforce-involved-nos.-1-2-and-3-13)                | Type of Weapon/Force Involved No. 3                    | 58-60         | 3        | A
    **[N6](#agency-supplied-nibrs-code-n6)**                             | **Agency Supplied NIBRS Code** **\*\*\*New\*\*\***     | **61-63**     | **3**    | **A**
    **70**                                                               | **Inchoate** **\*\*\*New\*\*\***                       | **64**        | **1**    | **A**
-   \*\*                                                                 | Future Expansion Buffer                                | 65-80         | 16       | A
+   \*\*                                                                 | **Future Expansion Buffer**                            | **65-80**     | **16**   | **A**
    [C8](#end-of-segment-marker-c8)                                      | End of Segment Marker                                  | 81-82         | 2        | A
    [C9](#padding-c9)                                                    | Padding                                                | 83-150        | \*\*     | A/N
 
@@ -290,13 +290,15 @@ ___
 
 `LIBRS uses the NIBRS Code of the Offenses to determine if it should apply properties to them to minimize the cases that this happens in. However, there are some NIBRS Codes that include both 'Crimes Against People' and 'Crimes Against Property' Offenses (EG: 13B Contains both LRS 14:35 (Simple Battery - Crime Against Person) as well as LRS 14:60 (Aggravated Burglary - Crime Against Property)) that break this assumption.`
 
+<br>
+
 #### Successful Segment 33 Inference Example
 An incident is submitted with a NIBRS 23H 'Crime Against Property' Offense, as well as a NIBRS 11A 'Crime Against Person' Offense, along with one or more properties that are intended to be linked to the 23H Offense. Since NIBRS 11A has no related Offenses that are a 'Crime Against Property', if Segment 33 is missing LIBRS knows that it should not apply the properties to the 11A Offense. As a result, LIBRS will only infer the properties to be related to the 23H Offense, successfully validating the Incident submission.
 
 #### Unsuccessful Segment 33 Inference Example
 An incident is submitted with a NIBRS 23H 'Crime Against Property' Offense, as well as a NIBRS 13B 'Crime Against Person' Offense, along with one or more properties that are intended to be linked to the 23H Offense. Since 13B has some offenses that are 'Crime Against Property', if Segment 33 is missing LIBRS cannot know that it shouldn't apply the properties to the 13B Offense. As a result, LIBRS will interpret all properties to be related to all offenses, which in this case will throw validation errors. 
 
-**Therefore it is always recommended to submit a Segment 33 with the Incident ir order to more accurately report the Offenses**
+##### Therefore it is always recommended to submit a Segment 33 with the Incident ir order to more accurately report the Offenses
 
 <br>
 
@@ -307,10 +309,14 @@ Error Number  | Error Message | Explaination of Error
 {% assign error = site.data.error["90023"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.desc33}}
 
+___
+
 <br>
 
 #### INVALID Combinations of NIBRS Offense Codes and Property Descriptions
-There are a number of illogical combinations for various NIBRS Offense Codes (Data Element 6) having certain Property Descriptions (Data Element 15). For example, it is illogical for Purse Snatching (NIBRS Code 23B) to be connected to property having a Property Description data value of Aircraft (01) or Livestock (18). The table below shows invalid combinations of NIBRS Offense Codes and Property Descriptions. X's on this table represent that the combination of the Property Description and NIBRS Code are incompatible and should **NOT** be used together. 
+There are a number of illogical combinations for various NIBRS Offense Codes (Data Element 6) having certain Property Descriptions (Data Element 15). For example, it is illogical for Purse Snatching (NIBRS Code 23B) to be connected to property having a Property Description data value of Aircraft (01) or Livestock (18). 
+
+The table below shows invalid combinations of NIBRS Offense Codes and Property Descriptions. X's on this table represent that the combination of the Property Description and NIBRS Code are incompatible and should **NOT** be used together. 
 
    Invalid Property Descriptions       | 220               |     23A   |     23B   |     23C   |     23D   |     23E   |     23F   |     23G   |     23H   |   240
   :-----------------------------------:|:-----------------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:|:---------:
@@ -422,12 +428,12 @@ ___
    [30](#resident-status-of-victim-30)                        | Resident Status                                                                     | 43              | 1           | A
    **[31](#nos.-1-and-2-31)**                                 | **Aggravated Assault / Homicide Circumstance No. 1 \*\*\*Modified\*\*\***           | **44-45**       | **2**       | **N**
    **[31](#nos.-1-and-2-31)**                                 | **Aggravated Assault / Homicide Circumstance No. 2 \*\*\*Modified\*\*\***           | **46-47**       | **2**       | **N**
-   ~~31~~                                                     | ~~Aggravated Assault / Homicide Circumstance No. 3**~~ \*No Longer In Use\*   | ~~48-49~~   | ~~2~~   | ~~N~~
+   ~~31~~                                                     | ~~Aggravated Assault / Homicide Circumstance No. 3~~  **\*No Longer In Use\***      | ~~48-49~~       | ~~2~~       | ~~N~~
    **[32](#additional-justifiable-homicide-circumstance-32)** | **Additional Justifiable Homicide Circumstance \*\*\*Modified\*\*\***               | **50**          | **1**       | **A**
    **[25A](#type-of-officer-activitycircumstance-25a)**       | **Type of Officer Activity/Circumstance \*\*\*New\*\*\***                           | **51-52**       | **2**       | **N**
    **[25B](#officer-assignment-type-25b)**                    | **Officer Assignment Type \*\*\*New\*\*\***                                         | **53**          | **1**       | **A**
    **[25C](#officer-ori-other-jurisdiction-25c)**             | **Officer ORI, Other Jurisdiction \*\*\*New\*\*\***                                 | **54-62**       | **9**       | **A**
-   \*\*                                                       | Future Expansion Buffer                                                             | 63-68           | 6           | A
+   \*\*                                                       | **Future Expansion Buffer**                                                         | **63-68**       | **6**       | **A**
    [C8](#end-of-segment-marker-c8)                            | End of Segment Marker                                                               | 69-70           | 2           | A
    [C9](#padding-c9)                                          | Padding                                                                             | 71-150          | \*\*        | A/N
 
@@ -570,17 +576,17 @@ ___
 
    Data Element Number                        | Description of Data Element                      | Position(s)   | Length   | Format
   :------------------------------------------:|--------------------------------------------------|:-------------:|:--------:|:---------:
-   [C1](#segment-descriptor-c1)               | Segment Descriptor - **62**                      | 1-2           | 2        | N
-   [C5](#action-type-c5)                      | Action Type                                      | 3             | 1        | A
-   [1](#ori-number-1)                         | ORI Number                                       | 4-12          | 9        | A
-   [2](#incident-number-2)                    | Incident Number                                  | 13-24         | 12       | A
-   [40](#arrestee-sequence-number-40)         | Arrestee Sequence Number                         | 25-27         | 3        | N
-   [45](#of-arrest-45)                        | Louisiana Revised Statute Number of Arrest       | 28-39         | 12       | A
-   [L45](#arrest-connection-to-offense-l45)   | Arrest Connection to Offense                     | 40-54         | 15       | A
-   [N45](#for-arrest-n45)                     | Agency Supplied NIBRS Code **\*\*\*New\*\*\***   | 55-57         | 3        | A
+   [C1](data-elements/#segment-descriptor-c1)               | Segment Descriptor - **62**                      | 1-2           | 2        | N
+   [C5](data-elements/#action-type-c5)                      | Action Type                                      | 3             | 1        | A
+   [1](data-elements/#ori-number-1)                         | ORI Number                                       | 4-12          | 9        | A
+   [2](data-elements/#incident-number-2)                    | Incident Number                                  | 13-24         | 12       | A
+   [40](data-elements/#arrestee-sequence-number-40)         | Arrestee Sequence Number                         | 25-27         | 3        | N
+   [45](data-elements/#of-arrest-45)                        | Louisiana Revised Statute Number of Arrest       | 28-39         | 12       | A
+   [L45](data-elements/#arrest-connection-to-offense-l45)   | Arrest Connection to Offense                     | 40-54         | 15       | A
+   **[N45](data-elements/#for-arrest-n45)**                 | **Agency Supplied NIBRS Code \*\*\*New\*\*\***   | **55-57**     | **3**    | **A**
    \*\*                                       | Future Expansion Buffer                          | 58-74         | 17       | A
-   [C8](#end-of-segment-marker-c8)            | End of Segment Marker                            | 75-76         | 2        | A
-   [C9](#padding-c9)                          | Padding                                          | 77-150        | \*\*     | A/N
+   [C8](data-elements/#end-of-segment-marker-c8)            | End of Segment Marker                            | 75-76         | 2        | A
+   [C9](data-elements/#padding-c9)                          | Padding                                          | 77-150        | \*\*     | A/N
 
 <br>
 

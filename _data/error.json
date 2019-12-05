@@ -133,7 +133,7 @@
     "10075": {
         "err_no": 10075,
         "err_message": "MISSING A MANDATORY RECORD SEGMENT FOR A COMPLETE INCIDENT",
-        "desc10":"When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included:<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 10 - Administrative Segment <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 20 - Offense Segment <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 40 - Offender Segment <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 41 - Offender Using Segment/Gaming Motivation <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - 50 - Victim Segment"
+        "desc10":"When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included: {::nomarkdown}<ul><li>10 - Administrative Segment</li><li>20 - Offense Segment</li><li>40 - Offender Segment</li><li>41 - Offender Using Segment/Gaming Motivation</li><li>50 - Victim Segment</li></ul>{:/} One or more of these segments was missing."
     },
     "10076": {
         "err_no": 10076,
@@ -714,7 +714,8 @@
     },
     "13077": {
         "err_no": 13077,
-        "err_message": "PROPERTY SEGMENT A - O - F ADDED ON [MMDDYYYY] RECOVERY DATE = [MMDDYYYY]"
+        "err_message": "PROPERTY SEGMENT A - O - F ADDED ON [MMDDYYYY] RECOVERY DATE = [MMDDYYYY]",
+        "desc32": "Property Segment A-O-F (already on file) added on (MMDDYYYY) Recovery Date = (MMDDYYYY)"
     },
     "13078": {
         "err_no": 13078,
@@ -2194,7 +2195,7 @@
     "90023": {
         "err_no": 90023,
         "err_message": "DUPLICATE - A PRIOR PROPERTY OFFENSE SEGMENT ALREADY EXISTS WITH THE SAME SEQUENCE NUMBERS",
-        "desc33": "Each Property/Offense segment submitted MUST have UNIQUE COMBINATIONS of Property Sequence Number References (P1R) to Offense Sequence Number References (L6R). <br>  Offenses are allowed to be related to many properties and properties are allowed to be related to many offenses. <br> However, Property/Offense segments CANNOT be submitted relating a single Property to a Single Offense multiple times, that is NO duplicate combinations of Sequence Numbers."
+        "desc33": "Each Property/Offense segment submitted MUST have UNIQUE COMBINATIONS of Property Sequence Number References (P1R) to Offense Sequence Number References (L6R). <br><br>  Offenses are allowed to be related to many properties and properties are allowed to be related to many offenses. <br><br> However, Property/Offense segments CANNOT be submitted relating a single Property to a Single Offense multiple times, that is NO duplicate combinations of Sequence Numbers."
     },
     "90024": {
         "err_no": 90024,
