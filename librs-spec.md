@@ -576,17 +576,17 @@ ___
 
    Data Element Number                        | Description of Data Element                      | Position(s)   | Length   | Format
   :------------------------------------------:|--------------------------------------------------|:-------------:|:--------:|:---------:
-   [C1](data-elements/#segment-descriptor-c1)               | Segment Descriptor - **62**                      | 1-2           | 2        | N
-   [C5](data-elements/#action-type-c5)                      | Action Type                                      | 3             | 1        | A
-   [1](data-elements/#ori-number-1)                         | ORI Number                                       | 4-12          | 9        | A
-   [2](data-elements/#incident-number-2)                    | Incident Number                                  | 13-24         | 12       | A
-   [40](data-elements/#arrestee-sequence-number-40)         | Arrestee Sequence Number                         | 25-27         | 3        | N
-   [45](data-elements/#of-arrest-45)                        | Louisiana Revised Statute Number of Arrest       | 28-39         | 12       | A
-   [L45](data-elements/#arrest-connection-to-offense-l45)   | Arrest Connection to Offense                     | 40-54         | 15       | A
-   **[N45](data-elements/#for-arrest-n45)**                 | **Agency Supplied NIBRS Code \*\*\*New\*\*\***   | **55-57**     | **3**    | **A**
+   [C1](data-elements#segment-descriptor-c1)               | Segment Descriptor - **62**                      | 1-2           | 2        | N
+   [C5](data-elements#action-type-c5)                      | Action Type                                      | 3             | 1        | A
+   [1](data-elements#ori-number-1)                         | ORI Number                                       | 4-12          | 9        | A
+   [2](data-elements#incident-number-2)                    | Incident Number                                  | 13-24         | 12       | A
+   [40](data-elements#arrestee-sequence-number-40)         | Arrestee Sequence Number                         | 25-27         | 3        | N
+   [45](data-elements#of-arrest-45)                        | Louisiana Revised Statute Number of Arrest       | 28-39         | 12       | A
+   [L45](data-elements#arrest-connection-to-offense-l45)   | Arrest Connection to Offense                     | 40-54         | 15       | A
+   **[N45](data-elements#for-arrest-n45)**                 | **Agency Supplied NIBRS Code \*\*\*New\*\*\***   | **55-57**     | **3**    | **A**
    \*\*                                       | Future Expansion Buffer                          | 58-74         | 17       | A
-   [C8](data-elements/#end-of-segment-marker-c8)            | End of Segment Marker                            | 75-76         | 2        | A
-   [C9](data-elements/#padding-c9)                          | Padding                                          | 77-150        | \*\*     | A/N
+   [C8](data-elements#end-of-segment-marker-c8)            | End of Segment Marker                            | 75-76         | 2        | A
+   [C9](data-elements#padding-c9)                          | Padding                                          | 77-150        | \*\*     | A/N
 
 <br>
 
