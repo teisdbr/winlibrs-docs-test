@@ -1,6 +1,6 @@
 ---
-title: LIBRS Specifications
+title: LIBRS Mandatories
 layout: default
-permalink: /librs-spec
+permalink: /mandatories
 ---
 
