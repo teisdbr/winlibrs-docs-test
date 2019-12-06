@@ -1058,7 +1058,7 @@
     "15064": {
         "err_no": 15064,
         "err_message": "ENTRY FOR TYPE OF VICTIM MUST BE 'I' OR 'L' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM",
-        "desc_de25": "When Offense Connected to Victim Sequence Number (24) is a *Crime Against Person*, and the Offense is connected to a Victim, then Type of Victim (25) must be Individual ('I') or Law Enforcement Officer ('L'). ***Modified Error Message***",
+        "desc_de25": "When Offense Connected to Victim Sequence Number (24) is a *Crime Against Person*, and the Offense is connected to a Victim, then Type of Victim (25) must be Individual ('I') or Law Enforcement Officer ('L').",
         "desc_de24": "If the Offense is a *Crime Against Person*, and the Offense is **connected to a Victim,** then Type of Victim (25) must be an Individual ('I') or Law Enforcement Officer ('L')."
     },
     "15065": {
@@ -1075,7 +1075,7 @@
     "15067": {
         "err_no": 15067,
         "err_message": "ENTRY FOR TYPE OF VICTIM CANNOT BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM",
-        "desc_de25": "When Offense is a *Crime Against Property*, and the Offense is connected to a Victim, then Type of Victim (25) CANNOT be Society ('S'). Type of Victim (25) can only be: {::nomarkdown}<ul><li>I Individual</li><li>B Business</li><li>F Financial Institution</li><li>G Government</li><li>R Religious Organization</li><li>O Other</li><li>U Unknown</li></ul>{:/}"
+        "desc_de25": "When Offense is a *Crime Against Property*, and the Offense is connected to a Victim, then Type of Victim (25) CANNOT be Society ('S'). Type of Victim (25) can only be: {::nomarkdown}<ul><li>I - Individual</li><li>B - Business</li><li>F - Financial Institution</li><li>G - Government</li><li>R  -Religious Organization</li><li>O - Other</li><li>U - Unknown</li></ul>{:/}"
     },
     "15068": {
         "err_no": 15068,
@@ -1587,12 +1587,12 @@
     "22251": {
         "err_no": 22251,
         "err_message": "New Error Message",
-        "desc_de25": "Type of Victim (25) CANNOT be Law Enforcement Officer ('L'), unless Offense Connected to Victim Sequence Number (24) is one of the following NIBRS codes: {::nomarkdown}<ul><li>09A Murder and Non-negligent Manslaughter</li><li>13A Aggravated Assault</li><li>13B Simple Assault</li><li>13C Intimidation</li></ul>{:/}"
+        "desc_de25": "Type of Victim (25) CANNOT be Law Enforcement Officer ('L'), unless Offense Connected to Victim Sequence Number (24) is one of the following NIBRS codes: {::nomarkdown}<ul><li>09A - Murder and Non-negligent Manslaughter</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>{:/}"
     },
     "22252": {
         "err_no": 22252,
         "err_message": "New Error Message",
-        "desc_de25": "When Type of Victim (25) is Law Enforcement Officer ('L') and Offense Connected to Victim Sequence Number (24) is one of the following NIBRS codes: {::nomarkdown}<ul><li>09A Murder and Non-negligent Manslaughter</li><li>13A Aggravated Assault</li><li>13B Simple Assault</li><li>13C Intimidation</li></ul>{:/} then, Incident Date/Hour (3) MUST be populated with a valid hour (00-23) and CANNOT BE BLANK."
+        "desc_de25": "When Type of Victim (25) is Law Enforcement Officer ('L') and Offense Connected to Victim Sequence Number (24) is one of the following NIBRS codes: {::nomarkdown}<ul><li>09A - Murder and Non-negligent Manslaughter</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>{:/} Incident Date/Hour (3) MUST be populated with a valid hour (00-23) and CANNOT BE BLANK."
     },
     "23001": {
         "err_no": 23001,
@@ -1655,7 +1655,7 @@
     "25030": {
         "err_no": 25030,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
-        "desc_del26": "Each component of the date must be valid (that is, months must be 01-12, days must be 01-31, and year must include the century (e.g., 19xx, 20xx)). In addition, days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days). The date CANNOT be greater than that entered within the *Month of Data Submission* and *Year of Data Submission* field on the data record. For example, if *Month of Data Submission* and *Year of Data Submission* are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
+        "desc_del26": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record<ul><li>EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater.</li></ul></li></ul>{:/}"
     },
     "25031": {
         "err_no": 25031,

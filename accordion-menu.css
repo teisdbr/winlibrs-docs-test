@@ -6,6 +6,10 @@ td {
     padding-bottom: 2px;
 }
 
+.big-image{
+    width: 75%;
+}
+
 h1{
     font-size: 1.75rem;
 }

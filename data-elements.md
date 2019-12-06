@@ -1410,6 +1410,8 @@ ___
 
 ### Requirements:
 
+___
+
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["13002"] -%}
@@ -1443,6 +1445,8 @@ ___
 
 ### Requirements:
 
+___
+
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["13002"] -%}
@@ -1472,6 +1476,8 @@ ___
 **Data Characteristics:** 2 Character Alpha
 
 ### Requirements:
+
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -1532,15 +1538,15 @@ ___
 
 <br>
 
-
 ## Estimated Drug Quantity (21)
-
 
 **Data Characteristics:** 13 Character **Alpha/Numeric**
 
 **Format:** #########.###
 
 ### Requirements:
+
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -1554,7 +1560,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Notes: Estimated Drug Quantity (21) indicates the quantity of drugs or narcotics seized in a drug case, it is not to be used when drugs or narcotics were Burned, Stolen, etc. in connection with other Offenses, such as Arson, Burglary, Breaking and Entering, Larceny, Theft, etc.`
+* `Estimated Drug Quantity (21) indicates the quantity of drugs or narcotics seized in a drug case, it is not to be used when drugs or narcotics were Burned, Stolen, etc. in connection with other Offenses, such as Arson, Burglary, Breaking and Entering, Larceny, Theft, etc.`
 * `Nine (9) characters are available to enter the number of WHOLE pounds, ounces, grams, etc., and three (3) more characters are available to enter the DECIMAL amount. A DECIMAL POINT must be entered to separate the whole and decimal amounts. Zero ('0') or space fill (G) should be added to the right or left of the value **to preserve the decimal's position as the tenth character in the field.**`
 * `When Estimated Drug Quantity (21) is Unknown enter '000000001.000', a value of '1', to signify that the value is not known or not reported. Also, Type Drug Measurement (22) MUST be entered as Not Reported/Unknown ('XX') and Value of Property (16) MUST be entered as Unknown (000000001).`
 * `If LRS Offense (6) is not reportable as a drug violation (35A), this data element MUST BE LEFT BLANK (G).`
@@ -1571,6 +1577,8 @@ ___
 
 ### Requirements:
 
+___
+
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["13004"] -%}
@@ -1584,11 +1592,16 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["13084"] -%}
 5 | {{error.desc_de22}} | {{error.err_no}}| {{ error.err_message }}
 
-`Note: Type Drug Measurement (22) indicates how Seized drugs and narcotics are quantified in a drug case.`
+___
+
+### Notes:
+* `Type Drug Measurement (22) indicates how Seized drugs and narcotics are quantified in a drug case.`
 
  <br>
 
 ### Allowed Entries:
+
+___
 
 <table>
 <thead>
@@ -1631,6 +1644,8 @@ ___
 
 ### Requirements:
 
+___
+
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["15001"] -%}
@@ -1640,7 +1655,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["15051"] -%}
 3 | {{error.desc_de23}} | {{error.err_no}}| {{ error.err_message }}
 
-`Note: Each victim in an incident MUST be assigned a unique Victim Sequence Number (23) from '001' to '999'.`
+____
+
+### Notes:
+* `Each victim in an incident MUST be assigned a unique Victim Sequence Number (23) from '001' to '999'.`
 
 
 ___
@@ -1672,19 +1690,27 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["15078"] -%}
 8 | {{error.desc_de24}} | {{error.err_no}}| {{ error.err_message }}
 
+___
 
-`The chart on the following page shows Offenses that CANNOT occur to the same victim in the same incident. Each 'X' on the chart where offenses intersect denotes that those two offenses CANNOT occur to the same victim in an incident.`
 
-`Note: This data element is to be used to link each offense to each victim. That is, the offense which was perpetrated against the victim during the incident. If this data element does not match one of the values submitted in Data Element # 23 (Victim Segment Number), the submission will be returned with errors.`
+### Notes:
 
-<br>
+
+
+
+* `This data element is to be used to link each offense to each victim. That is, the offense which was perpetrated against the victim during the incident.`
+* `If this data element does not match one of the values submitted in Data Element # 23 (Victim Segment Number), the submission will be returned with errors.`
+
+The following chart shows Offenses that CANNOT occur to the same victim in the same incident. Each 'X' on the chart where offenses intersect denotes that those two offenses CANNOT occur to the same victim in an incident.
+
+![DE 24 Invalid Pairs Chart](https://storage.googleapis.com/te-public-files/librs/DE24_Chart.png){: class="big-image"}
+
+### Examples:
+___
 
 Example Number | Description
 :-------------:|:-----------
-1 | Two victims, Victim 001 and Victim 002, were robbed, and Victim 001 was also taken hostage by the Offender with a hand gun in a parking lot. The incident's Offense Segments could be submitted as follows:
-Offense 001 -- Aggravated Robbery (14:64) would be connected to Victim 001.
-Offense 002 -- Aggravated Robbery (14:64) would be connected to Victim 002.
-Offense 003 -- Second Degree Kidnaping (14:44.1) would be connected to Victim 001.
+1 | Two victims, Victim 001 and Victim 002, were robbed, and Victim 001 was also taken hostage by the Offender with a hand gun in a parking lot. The incident's Offense Segments could be submitted as follows: {::nomarkdown}<ul><li>Offense 001 -- Aggravated Robbery (14:64) would be connected to Victim 001.</li><li>Offense 002 -- Aggravated Robbery (14:64) would be connected to Victim 002.</li><li>Offense 003 -- Second Degree Kidnaping (14:44.1) would be connected to Victim 001.</li></ul>{:/}
 
 
 ___
@@ -1719,19 +1745,25 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["22252"] -%}
 9 | {{error.desc_de25}} | {{error.err_no}}| {{ error.err_message }}
 
+___
 
-`NO ERROR NUMBER For Human Trafficking Offenses (NIBRS Codes 64A, 64B and 40C), the data value for Type of Victim (25) must be Individual ('I').`
+Notes:
+* `NO ERROR NUMBER For Human Trafficking Offenses (NIBRS Codes 64A, 64B and 40C), the data value for Type of Victim (25) must be Individual ('I').`
+* `One Type of Victim (25) code MUST be entered for each victim.`
+* `Definition of Law Enforcement Officer/Peace Officer: Deputy sheriffs, municipal police officers, probation and enforcement parole officers, wildlife enforcement agents, city marshals and deputies would be considered a Law Enforcement Officer if a Victim and should have a Type of Victim (25) code of "L".`
+* `The Officer should be "In-the-Line-of-Duty" when victimized in order to report Type of Victim (25) as Law Enforcement Officer ("L"). The same rules that apply to the LEOKA form in UCR Summary also apply to this Type of Victim (25).`
+* `This Type of Victim (25) can ONLY be used for simple assaults, aggravated assaults, negligent manslaughter, murders and non-negligent homicide offenses to a Law Enforcement Officer, that took place when the Officer was On Duty as a Law Enforcement Officer.`
 
 <br>
 
 ### Allowed Entries:
 
-Enter only one (1) code per Victim Segment (50):
+Enter only one (1) code per Type of Victim Segment (25):
 
 <table>
 <thead>
 	<tr>
-		<th colspan = "27" style="align-text:center;"></th>
+		<th colspan = "3" style="align-text:center;"></th>
 	</tr>
     </thead>
     <tbody>
@@ -1765,29 +1797,23 @@ ___
 
 Example Number | Description
 :-------------:|:-----------
-1 | During a bank robbery *(Crime Against Property)*, the Offender pointed a gun at a teller and demanded and received money. The robber also pistol-whipped a customer who stood in his way as he made his getaway from the bank. Assuming the facts above, there were **3** victims: Victim 001 was the bank which would be coded as a Financial Institution ('F'). Victim 002 was the teller which would be coded as Individual ('I'). Victim 003 was the customer who was pistol whipped which would be coded as an Individual ('I')
-
-`Note: One Type of Victim (25) code MUST be entered for each victim.`
-
-`Definition of Law Enforcement Officer/Peace Officer: Deputy sheriffs, municipal police officers, probation and enforcement parole officers, wildlife enforcement agents, city marshals and deputies would be considered a Law Enforcement Officer if a Victim and should have a Type of Victim (25) code of "L".`
-
-`The Officer should be "In-the-Line-of-Duty" when victimized in order to report Type of Victim (25) as Law Enforcement Officer ("L"). The same rules that apply to the LEOKA form in UCR Summary also apply to this Type of Victim (25).`
-
-`This Type of Victim (25) can ONLY be used for simple assaults, aggravated assaults, negligent manslaughter, murders and non-negligent homicide offenses to a Law Enforcement Officer, that took place when the Officer was On Duty as a Law Enforcement Officer.`
+1 | During a bank robbery *(Crime Against Property)*, the Offender pointed a gun at a teller and demanded and received money. The robber also pistol-whipped a customer who stood in his way as he made his getaway from the bank.<br><br>Assuming the facts above, there were **3** victims: {::nomarkdown}<ul><li>Victim 001 was the bank which would be coded as a Financial Institution ('F')</li><li>Victim 002 was the teller which would be coded as Individual ('I')</li><li>Victim 003 was the customer who was pistol whipped which would be coded as an Individual ('I')</li></ul>{:/}
 
 ___
 
 <br>
 
-
-
 ## Type of Officer Activity/Circumstance (25A)
+
+___
 
 ***New Data Element in LIBRS 2.5***
 
 **Data Characteristics:** 2 Character Alpha
 
 ### Requirements:
+
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -1842,6 +1868,8 @@ ___
 
 ## Officer Assignment Type (25B)
 
+___
+
 *** New Data Element in LIBRS 2.5 ***
 
 **Data Characteristics:** 1 Character Alpha
@@ -1857,6 +1885,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["10258"] -%}
 3 | {{error.desc_de25b}} | {{error.err_no}}| {{ error.err_message }}
 
+___
 
 <br>
 
@@ -1876,7 +1905,7 @@ Enter only one (1) code for each Victim Segment:
     <tr><td>
 			{% for subsection in de.subsection %}
 				<table class="subtable">
-				{% if subsection.title != "" %}<th colspan="4">{{subsection.title}}</th> {% endif %}
+				{% if subsection.title != "" %}<th colspan="4">{{subsection.title}}</th>{% endif %}
 					{% for values in subsection.values %}
 					<tr>
             			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
@@ -1900,11 +1929,15 @@ ___
 
 ## Officer ORI, Other Jurisdiction (25C)
 
+___
+
 *** New Data Element in LIBRS 2.5 ***
 
 **Data Characteristics:** 9 Character Alpha
 
 ### Requirements:
+
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -1913,11 +1946,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["10254"] -%}
 2 | {{error.desc_de25c}} | {{error.err_no}}| {{ error.err_message }}
 
-
-`Note: This is the 9-character NCIC Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. This ORI is used to record the ORI of a victim who is an officer involved in a multijurisdictional incident.`
-
-
-<br>
+### Notes:
+* `This is the 9-character NCIC Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. This ORI is used to record the ORI of a victim who is an officer involved in a multijurisdictional incident.`
 
 ### Allowed Entries:
 
@@ -1927,12 +1957,11 @@ Enter only (1) code for each Victim Segment:
 
 A thru Z (Uppercase letter only), or 0 thru 9
 
-
 ___
 
 <br>
 
-### Age of Victim [At Time Incident Occurred] (26)
+## Age of Victim [At Time Incident Occurred] (26)
 
 **Data Characteristics:** 3 Character Alpha
 
@@ -1947,29 +1976,26 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["15050"] -%}
 3 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15004"] -%}
-4 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+4A | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15008"] -%}
-5 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+4B | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15009"] -%}
-6 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+5A | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["25010"] -%}
-7 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+5B | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15022"] -%}
-8 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
+5C | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15081"] -%}
-9 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
-
-<br>
-
-`Notes: If the Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), his/her age is to be entered into Age of Victim (26) either as an Exact Age, an Estimated Age, or as Unknown.`
-
-`If the Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), then Age of Victim (26) is required to be entered. If Type of Victim (25) is not a person, then Age of Victim (26) MUST be left Blank (G).`
-
-`If the Victim's Exact Age is not known, estimate the victim's age. Use one of the codes in the above table, and append an 'E',for Estimated. If it is impossible to determine even an Estimated Age of the victim, then enter Unknown ('00').`
+6 | {{error.desc_de26}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
-<br>
+### Notes:
+* `If the Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), his/her age is to be entered into Age of Victim (26) either as an Exact Age, an Estimated Age, or as Unknown.`
+* `If the Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), then Age of Victim (26) is required to be entered. If Type of Victim (25) is not a person, then Age of Victim (26) MUST be left Blank (G).`
+* `If the Victim's Exact Age is not known, estimate the victim's age. Use one of the codes in the above table, and append an 'E',for Estimated. If it is impossible to determine even an Estimated Age of the victim, then enter Unknown ('00').`
+
+___
 
 ### Allowed Entries:
 
@@ -1978,7 +2004,7 @@ Enter only (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Valid Ages of Victims</th>
+		<th colspan = "3" style="align-text:center;">Valid Ages of Victims</th>
 	</tr>
     </thead>
     <tbody>
@@ -2004,10 +2030,6 @@ Enter only (1) code for each Victim Segment:
 </tbody>
 </table>  
 
-
-
-<br>
-
 ### Example: 
 
 ___
@@ -2017,20 +2039,21 @@ Example Number | Description
 1 | If the victim was 18 years old, enter '18'.
 2 | If the victim appeared 25 to 30 years old, **average the age range** to get 27.5, then **round down** and enter '27E'.
 
-
 ___
 
 <br>
 
-
-
 ## Date of Birth of Victim (L26)
+
+___
 
 **Data Characteristics:** 8 Character Date
 
 **Format:** MMDDYYYY
 
 ### Requirements:
+
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -2043,7 +2066,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["15058"] -%}
 4 | {{error.desc_del26}} | {{error.err_no}}| {{ error.err_message }}
 
-`Note: If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her date of birth, if available, is to be indicated in Date of Birth of Victim (L26).`
+___
+
+### Notes:
+* `If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her date of birth, if available, is to be indicated in Date of Birth of Victim (L26).`
 ___
 
 <br>
@@ -2051,10 +2077,13 @@ ___
 
 ## Sex of Victim (27)
 
+___
 
 **Data Characteristics:** 1 Character Alpha
 
 ### Requirements:
+
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -2067,7 +2096,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["15069"] -%}
 4 | {{error.desc_de27}} | {{error.err_no}}| {{ error.err_message }}
 
-`Note: If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her sex is to be indicated in Sex of Victim (27).`
+___
+
+### Notes:
+* `If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her sex is to be indicated in Sex of Victim (27).`
 
 ___
 
@@ -2113,9 +2145,13 @@ ___
 
 ## Race of Victim (28)
 
+___
+
 **Data Characteristics:** 1 Character Alpha
 
 ### Requirements:
+
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -2126,7 +2162,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["15058"] -%}
 3 | {{error.desc_de28}} | {{error.err_no}}| {{ error.err_message }}
 
-`Note: If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then, his/her race is to be indicated in Race of Victim (28).`
+___
+
+### Notes:
+* `If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then, his/her race is to be indicated in Race of Victim (28).`
 
 ___
 
@@ -2139,7 +2178,7 @@ Enter only (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Race of Victim</th>
+		<th colspan = "3" style="align-text:center;">Race of Victim</th>
 	</tr>
     </thead>
     <tbody>
@@ -2172,6 +2211,8 @@ ___
 
 ## Ethnicity of Victim (29)
 
+___
+
 **Data Characteristics:** 1 Character Alpha
 
 ### Requirements:
@@ -2185,11 +2226,14 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-`Note: If Victim is a person (that is, Individual ('I') or Law Enforcement Officer ('L') is entered into Type of Victim (25), then his/her ethnic origin is to be indicated in Ethnicity of Victim (29).`
+### Notes:
+* `If Victim is a person (that is, Individual ('I') or Law Enforcement Officer ('L') is entered into Type of Victim (25), then his/her ethnic origin is to be indicated in Ethnicity of Victim (29).`
 
 <br>
 
 ### Allowed Entries:
+
+___
 
 Enter only (1) code for each Victim Segment:
 
@@ -2242,13 +2286,15 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-`Notes: If Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L'), then, whether he/she was a resident or nonresident, the Resident Status of Victim (30) is to be entered.)`
+### Notes: 
+* `If Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L'), then, whether he/she was a resident or nonresident, the Resident Status of Victim (30) is to be entered.)`
+* `A 'Resident' is a person who maintains his/her permanent home for legal purposes in the locality (i.e., town, city, or community) where the crime took place.`
 
-`A 'Resident' is a person who maintains his/her permanent home for legal purposes in the locality (i.e., town, city, or community) where the crime took place.`
-
-<br>
+___
 
 ### Allowed Entries:
+
+___
 
 Enter only (1) code for each Victim Segment:
 

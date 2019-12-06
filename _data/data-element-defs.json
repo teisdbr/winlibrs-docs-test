@@ -1273,7 +1273,7 @@
         "comment": "For example, if two one-pound bags of marijuana are seized, they CANNOT be reported as two separate property seizures of one pound each, but instead should be reported as one seizure of two pounds of marijuana. <br><br>On the other hand, if a one-pound bag and a three-ounce bag of marijuana are seized, then they should be reported separately as a one-pound bag and a three-ounce bag.<br><br> <br><br>Note: XX = should be used for any category of drug when the substance is awaiting lab analysis<br><br>",
         "subsection": [
             {
-                "title": "WEIGHT CATEGORY",
+                "title": "Weight Category",
                 "values": [
                     {
                         "code": "GM",
@@ -1294,7 +1294,7 @@
                 ]
             },
             {
-                "title": "CAPACITY CATEGORY",
+                "title": "Capacity Category",
                 "values": [
                     {
                         "code": "ML",
@@ -1315,7 +1315,7 @@
                 ]
             },
             {
-                "title": "UNITS CATEGORY",
+                "title": "Units Category",
                 "values": [
                     {
                         "code": "DU",
@@ -1328,7 +1328,7 @@
                 ]
             },
             {
-                "title": "OTHER",
+                "title": "Other",
                 "values": [
                     {
                         "code": "XX",
