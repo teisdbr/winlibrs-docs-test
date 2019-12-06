@@ -10,14 +10,15 @@ ____
 This page contains information on how LIBRS Flat Files should be processed and generated for use in submitting data to the State of Louisiana, and subsequently the FBI via NIBRS. 
 
 This site contains the following information:
-- <a href="./librs-spec">LIBRS Specification Documentation</a>
-- <a href="./data-elements">LIBRS Data Element Definitions</a>
+- <a href="./librs-spec">Technical Specification Documentation</a>
+- <a href="./data-elements-values">Data Element Available Values</s>
+- <a href="./data-elements">Data Element Definitions</a>
 - <a href="./lrs-master-list">Master LIBRS LRS List</a>
 - LRS to NIBRS Translations
   
 
 <table>
-<thead style="font-size: 14px;">
+<thead>
 	<tr>
 		<th style="max-width:80px;text-align: center;">Element Number</th>
 		<th>Element Name</th>
@@ -28,7 +29,7 @@ This site contains the following information:
 		<th>Comments</th>
 	</tr>
     </thead>
-    <tbody style="font-size: 13px;">
+    <tbody>
 {% for de in site.data.data-element-defs %}
 	<tr>
 		<td style="max-width:80px;text-align: center;">{{de.de_num}}</td>

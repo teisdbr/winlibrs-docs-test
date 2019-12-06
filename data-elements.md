@@ -31,7 +31,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-`Note: This is the 9-character NCIC Originating Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. For state or local agency submissions, the last two positions must be "00".`
+### Notes: 
+* `This is the 9-character NCIC Originating Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. For state or local agency submissions, the last two positions must be "00".`
 
 <br>
 
@@ -64,9 +65,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-`Note: Incident Number is the reporting agency's UNIQUE, in-house assigned case number. It is used to link subsequent update submissions to the original submission. This number will be encrypted prior to any dissemination of data to ensure that the recipient cannot identify the actual case. `
-
-<br>
+### Notes: 
+* `Incident Number is the reporting agency's UNIQUE, in-house assigned case number. It is used to link subsequent update submissions to the original submission. This number will be encrypted prior to any dissemination of data to ensure that the recipient cannot identify the actual case. `
 
 ### Definitions:
 
@@ -93,6 +93,13 @@ ___
 
 **Format:** MMDDYYYYXHH
 
+### Important Note:
+* In the process to certify an agency as LIBRS-compliant, when an agency reaches the Certification and Production stages, please note the following: 
+  * The “Base Date” for an agency is the date that agency starts sending actual, live “production” data that is kept on both LIBRS (state) and NIBRS (FBI) databases.
+  * If an incident occurred before the agency’s “Base Date”, but was not reported to LIBRS until after your “Base Date” has been implemented; or this incident was already reported in the UCR summary reports, this incident will be REJECTED **(Error 11073)**.
+  * If this happens, contact a member of the LIBRS staff at the Louisiana Commission on Law Enforcement.
+  * If this incident was not reported until after your “Base Date” was implemented, your agency may have to submit an adjusted UCR summary form to capture these offenses.
+
 ### Requirements:
 ___
 
@@ -113,7 +120,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["11075"] -%}
 7 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["10018"] -%}
-8 | Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) CANNOT have a date in 'Incident Date/Hour' (DE 3) that would be a valid date for an Incident occurring since the agency's Base Date.<br>This is also true for any Administrative Segments (10) subsequently submitted with. ||
+8 | Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) CANNOT have a date in 'Incident Date/Hour' (DE 3) that would be a valid date for an Incident occurring since the agency's Base Date. This is also true for any Administrative Segments (10) subsequently submitted with. 
 {% assign error = site.data.error["11061"] -%}
 9 | {{error.desc_de3}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11062"] -%}
@@ -127,12 +134,14 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-Notes
-`This data element is to be used to enter the month, day, year and hours when the incident occurred or started, or the beginning of the time period in which it occurred. "Military" twenty-four (24) hour time is to be used.`
-`If the incident occurred on or between midnight and 0059, enter "00" for the hour; if on or between 0100 and 0159, enter "01" for the hour if on or between 2300 and 2359, enter "23" for the hour, etc.`
-`If the incident occurred at exactly midnight, it is considered to have occurred at the beginning of the next day.  Therefore "00" should be entered for the hour, along with the next day's date.`
-`If the incident date is unknown, enter the date of the report with the indicator "R" = Report.  Otherwise leave the report column nine (9) blank.`
-`If the incident hour is unknown, leave the hour blank.`
+### Notes:
+
+* `This data element is to be used to enter the month, day, year and hours when the incident occurred or started, or the beginning of the time period in which it occurred. "Military" twenty-four (24) hour time is to be used.`
+* `If the incident occurred on or between midnight and 0059, enter "00" for the hour; if on or between 0100 and 0159, enter "01" for the hour if on or between 2300 and 2359, enter "23" for the hour, etc.`
+* `If the incident occurred at exactly midnight, it is considered to have occurred at the beginning of the next day.  Therefore "00" should be entered for the hour, along with the next day's date.`
+* `If the incident date is unknown, enter the date of the report with the indicator "R" = Report.  Otherwise leave the report column nine (9) blank.`
+* `If the incident hour is unknown, leave the hour blank.`
+* `When LIBRS requires a Blank (G), it must be a Blank (G), NOT A ZERO.`
 
 
 <br>
@@ -179,7 +188,15 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+### Notes:
+* `The Cleared Exceptionally data element indicates if the incident has been cleared by an exceptional event such as the death of the offender, and if so, the reason for the clearance.  In multiple offense incidents, the exceptional clearance of one offense clears the entire incident.  An incident CANNOT BE CLEARED EXCEPTIONALLY if it was previously, or at the same time, cleared by an arrest, (that is, if an Arrestee Segment was or is being submitted).`
+* `In order to clear an offense by exceptional means, ALL of the following four conditions must be met:`
+	* `The investigation must have clearly and definitely established the identity of at least one offender.`
+	* `Sufficient probable cause must have been developed to support the arrest, charging, and prosecution of the offender.`
+	* `The exact location of the offender must be known so that an arrest could be made.`
+	* `There must be a reason outside the control of law enforcement that prevents arresting, charging, and prosecuting the offender.`
+* `DO NOT report exceptional clearance information for justifiable homicide, as no crimes have occurred, in reality.`
+* `The closing of a case or the clearing of it by an agency's policy does not permit exceptionally clearing an offense unless all four conditions are met.`
 
 ### Allowed Entries
 ___
@@ -216,8 +233,6 @@ Enter one code per incident.
 </table>
 
 ____
-
-<br>
 
 ### Examples:
 ___
@@ -260,7 +275,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+### Notes:
+* `If an incident was cleared by exceptional means, then the month, day and year when the incident was cleared is to be entered into this data element.`
 
 ### Examples:
 ___
@@ -292,6 +308,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+### Notes:
+* `Each offense in an incident must be assigned a unique sequence number from "001" to "999".`
+
 <br>
 
 ## Offense Sequence Number Reference (L6R)
@@ -311,6 +330,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 3 | {{error.desc_del6r}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
+
+### Notes:
+* `There is no UNIQUE constraint for the Offense Sequence Number Reference (L6R). This allows for an Offense to relate to many properties if multiple Property/Offense segments are submitted within a single incident.`
 
 <br>
 
@@ -342,8 +364,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
-
 ### Examples:
 ___
 
@@ -352,6 +372,14 @@ Example Number | Description
 1 | When 14:42 is submitted as a Louisiana Revised Statute LRS (6), LIBRS will need Qualifiers to determine if the offense should be classified as a forcible rape or as a forcible sodomy. If the offense is submitted as a **14:42/V**, this would translate to a forcible rape offense, whereas if this offense is submitted as a **14:42/A** this would translate to a forcible sodomy offense.<br><br>Without any Qualifiers, LIBRS has no way to determine which offense this LRS should be reported as, and the entire incident would be rejected. The agency will receive the following error message: 'This LRS Code must be submitted with a Qualifier to define offense applicable.'
 2 | If an incident involved a robbery (14:64) and a forcible rape (**14:42.1/V**), two LRS offenses should be submitted. The 14:64 does not require any Qualifier, but the 14:42.1 does require a Qualifier.
 3 | If two females were raped in an incident, two LRS offenses should be submitted for rape: One LRS should be reported for each victim -- in this case, both LRS codes should be submitted as 14:42.1/V for Victim 001 and **14:42.1/V** for Victim 002)
+4 | 14:59/A1  --  In this example, “A1" refers to Subpart A, Paragraph 1 of the LRS, and would be reported to the FBI as being in the category of All Other Offenses (NIBRS 90Z).
+5 | 14:59/A9  --  In this example, “A9" refers to the Subpart A, Paragraph 9 and would be reported to the FBI as being in the category of Weapon Law Violation (NIBRS 520).
+6 | 14:228/A6  --  In this example, "A6" refers to the Subpart A, Paragraph 6 of the LRS, and with no Qualifier would be reported to the FBI as All Other Larceny (NIBRS 23H). 
+7 | 14:228/A6Y  --  In this examle"A6" refers to the Subpart A, Paragraph 6 of the LRS, and with a Qualifier of "Y", would be reported to the FBI as Destruction/Damage/Vandalism of Property (NIBRS 290)
+8 | 14:90/G  --  “G” refers to a Qualifier (see Qualifier List) and would be reported to the FBI as the offense of Betting/Wagering (NIBRS 39A).
+9 | 14:51/U  --  “U” refers to a Qualifier (see Qualifier List) and would be reported to the FBI as the offense of Arson (NIBRS 200).
+10 | If the LRS offense is Aggravated Assault (14:87.2/F) and the Offender or the Arrestee was responsible for Accessory After the Fact then the agency would submit the following: 14:87.2/F-A. This will be reported to the FBI as an Aggravated Assault, Accessory After the Fact as the offense and for LIBRS reporting this will be considered as All Other Offenses (NIBRS 90Z).
+
 
 <br>
 
@@ -361,9 +389,111 @@ Example Number | Description
 - Index Class assigned to each LRS
 - IBR and NIBRS rankings.
 
-**To determine definitions of Qualifiers see the list at the end of this section.**
+____
+
+#### Warning Messages will be returned for the following LRS codes:
+
+LRS Code | Description | Warning Number | Warning Message
+:-------:|:------------|:--------------:|:----------------
+{% assign error = site.data.error["22125"] -%}
+14:30.1 | With no Qualifier will be reported to the FBI as Murder and Non-negligent Homicide (NIBRS 09A)| {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22025"] -%}
+14:32.1 | With no Qualifier will be reported to the FBI as Driving Under the Influence (NIBRS 90D) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22030"] -%}
+14:44.1 | With no Qualifier will be reported to the FBI as Kidnaping (NIBRS 100) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22130"] -%}
+14:60 | With no Qualifier will be reported to the FBI as a Robbery (NIBRS 120) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22035"] -%}
+14:65.1 | With no Qualifier will be reported to the FBI as a Purse Snatching (NIBRS 23B) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22135"] -%}
+14:70.4 | With no Qualifier will be reported to the FBI as a Credit Card/Automatic Teller Machine Fraud (NIBRS 26B) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22140"] -%}
+14:70.5 | With no Qualifier will be reported to the FBI as Bribery (NIBRS 510) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22040"] -%}
+14:93 | With no Qualifier will be reported to the FBI as a Family Offense Nonviolent (NIBRS 90F) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22045"] -%}
+14:107.1 | With no Qualifier will be reported to the FBI as All Other Offenses (NIBRS 90Z) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22050"] -%}
+14:129.1 | With no Qualifier will be reported to the FBI as a Simple Assault (NIBRS 13B) | {{error.err_no}}| {{ error.err_message }} 
 
 ___
+
+#### Hard-Coded Edits for LRS Codes Without a Property Description-Based Qualifier:
+
+LRS Code | Description | Warning Number | Warning Message
+:-------:|:------------|:--------------:|:----------------
+14:67 | When submitted with no Qualifier will be reported to the FBI as All Other Larceny-Theft (NIBRS 23H)
+{% assign error = site.data.error["22055"] -%}
+14:67 | When submitted with no Qualifier AND Property Description (DE 15) is other than: '03', '04', '05', '24', '28', '37' or '38'  | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22060"] -%}
+14:67 | When LRS 14:67 is submitted with no Qualifier AND Property Description (DE 15) is "38", the offense will be reported to the FBI as Theft of Motor Vehicle Parts (NIBRS 23G) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22065"] -%}
+14:67 | When LRS 14:67 is submitted with no Qualifier AND Property Description (DE 15) is "03", "05", "24", "28", or "37", the offense will be reported to the FBI as Motor Vehicle Theft (240) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22070"] -%}
+14:67 | When LRS 14:67 is submitted with no Qualifier AND Property Description (DE 15) is "04", the offense will be reported as Theft of a Bicycle | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22071"] -%}
+14:68 | LRS 14:68 will be reported to the FBI as All Other Larceny-Theft (NIBRS 23H) | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22072"] -%}
+14:68 | When LRS 14:68 is submitted AND Property Description (DE 15) is “03", “05", “24", “28" or “37", Motor Vehicle Theft (NIBRS 240) | {{error.err_no}}| {{ error.err_message }} 
+
+____
+
+#### Allowed Entries for Juvenile Qualifiers:
+
+LIBRS accepts the following juvenile specific reportable offenses that are NOT part of the list of LRS codes. Agency should submit the following codes in this data element for juvenile specific offenses:
+
+LRS Code | Description | NIBRS | Crime Against
+:-------:|:------------|:-----:|:------------:
+JU:CUR	| Juvenile Curfew Violations will be reported to the FBI as Curfew/Loitering/Vagrancy violations | 90B | Society
+JU:RUN	| Juvenile Runaways will be reported to the FBI under Runaways offense | 90I | Society - Not a crime
+JU:TRU	| Juvenile Truancy will be reported to the FBI as All Other Offenses | 90Z | Society - Not a Crime
+JU:UNG	| Juvenile Ungovernables will be reported to the FBI under Disorderly Conduct Offense | 90C | Society
+
+___
+
+#### LRS Qualifiers List
+ 
+Qualifiers must be associated with the LRS codes as shown in the LIBRS/LRS Master Code Table.  Only the combinations shown in the table below qualify as a valid entry in Data Element # 6 (LRS of Offense) and Data Element # 45 (LRS of Arrest Offense).  An agency CANNOT append these Qualifiers to any LRS Code to classify offense to be reported, unless it is a valid LRS Code combination as classified on the LIBRS/LRS Master Code Table.
+
+Qualifier | Description | NIBRS Description | NIBRS Code | Crime Against
+:--------:|:------------|:------------------|:----------:|:-------------:
+AA | Vehicular Homicide with Intent to Kill  | Murder and Nonnegligent Manslaughter | 09A | Person
+A | Anal penetration - Anal sexual intercourse with another person, forcibly and/or against that person's will; or not forcibly or against the persons will where the victim is incapable of giving consent because of his/her youth or because of his/her temporary or permanent mental or physical incapacity | Forcible Sodomy | 11B | Person 
+B | Theft from Building - A theft from within a building which is either open to the general public or where the offender has legal access. | Theft from Building | 23D | Property
+C | Theft from Coin Operated Machine - Theft from a machine or device which is operated or activated by the use of coins. | Theft from Coin Operated Machine | 23E | Property
+D | Drug/Narcotic Violations - Offender unlawfully distributes or dispenses a controlled dangerous substance to a recipient or to another who subsequently distributes or dispenses such controlled dangerous substance, which is the direct cause of the death of the person who ingested or consumed the controlled dangerous substance.  | Drug/Narcotic Violations | 35A | Society 
+E | Embezzlement - Unlawful misappropriation by an offender to his/her own use or purpose of money, property, or some other thing of value entrusted to his/her care, custody, or control.  |Embezzlement | 270 | Property
+F | Actual Force Used Against a Victim or Threat of Force Displaying a Weapon - Might be used to determine if a purse snatching is to be reported as Strong Arm Robbery 14:65.1/F, or as Larceny Theft 14:65.1  | Aggravated Assault, Person, or Robbery | 13A or 120 | Person
+FR | Fraud - False Pretense/Swindle/Confidence Game  Intentional misrepresentation of existing fact or condition, or the use of some other deceptive scheme or device, to obtain money, goods, or other things of value.  |False Pretense/Swindle/Confidence Game | 26A | Property
+G | Betting and Wagering - To unlawfully stake money or something else of value on the happening of an uncertain event or on the ascertainment of a fact in dispute. |Betting/Wagering | 39A | Society
+H | Inhabited Dwelling - Structure occupied as a place of settled residence or habitat lived in regularly or routinely. Arson reporting | Arson | 200 | Property
+I | Immovable Structures - Fixed permanent or immovable things; include house trailer or houseboat if used as permanent dwelling. <br><br>Burglary: Unlawful entry into a building or other structure with intent to commit a felony or a theft <br><br> Trespass of Real Property: To unlawfully enter land, a dwelling, or other real property | Burglary or Trespass of Real Property | 220 or 90J | Property or Society
+J | Self Inflicted Serious Bodily Injuries  | All Other Offenses | 90Z | Person
+JU:CUR | Juvenile Curfew Violations - will be reported to the FBI as curfew/loitering/ vagrancy violations | Curfew/Loitering/Vagrancy Violations | 90B | Society 
+JU:RUN | Juvenile Runaways - will be reported to the FBI under Runaways offense | Runaway | 90I | Society - Not a Crime
+JU:TRU | Juvenile Truancy - Absent from school without permission. | All Other Offenses |90Z | Society - Not a Crime
+JU:UNG | Juvenile Ungovernables - will be reported to the FBI as Disorderly Conduct |Disorderly Conduct | 90C | Society
+K | Pocket Picking - Theft of articles from another person's physical possession by stealth where the victim usually does not become immediately aware of the theft |Pocket Picking | 23A | Property
+L | Murder and Non Negligent Manslaughter - Willful nonnegligent killing of one human being by another human being live born not an embryo or fetus in utero |Murder and Non-Negligent Manslaughter | 09A | Person
+M | Movable Structures - Tents, boats, airplanes, lawnmowers, hand tools, farm and construction equipment, etc... not permanent dwellings | Larceny Theft - All Other Larceny | 23H | Property
+N | Rubbing/Touching - No actual penetration 'indecent liberties', 'child molesting', no elements of 11A, 11B or 11C were applicable | Forcible Fondling | 11D | Person
+0 | Oral Intercourse - Oral sexual intercourse with another person, forcibly and/or against that person's will.  Or, not forcibly or against the persons will where the victim is incapable of giving consent because of his/her youth or because of his/her temporary or permanent mental or physical incapacity |Forcible Sodomy | 11B | Person
+P | Sexual Assault With an Object - To use an object or instrument to unlawfully penetrate, however slightly, the genital or anal opening of the body of another person, forcibly and/or against that person's will.  Or, not forcibly or against the persons will where the victim is incapable of giving consent because of his/her youth or because of his/her temporary or permanent mental or physical incapacity |Sexual Assault With an Object | 11C | Person 
+Q | Victim Had Offender Inflict Serious Bodily Injuries to Him/Her - Victim made the offender inflict injuries to his/her person no intent on part of the offender |Aggravated Assault | 13A | Person
+R | Operating/Assisting Gambling - To unlawfully operate, promote, or assist in the operation of a game of chance |Operating/Promoting/ Assisting Gambling | 39B | Property
+S | Shoplifting - The theft, by someone other than an employee of the victim, of goods or merchandise exposed for sale |Shoplifting | 23C | Property
+T | Threat of Force Used Against the Victim - No weapons and no physical attack used in this threat |Intimidation | 13C | Person
+U | Uninhabited Dwelling - Structures uninhabited or abandoned or not normally in use. Arson reporting |Arson | 200 | Property
+V | Vaginal penetration - With force or without force where the victim is incapable of giving consent because of youth or because of temporary or permanent mental incapacity  |Forcible Rape | 11A | Person
+W | Fetal Death - Human embryo or fetus in utero |All Other Offenses | 90Z | Society 
+X | Falsified Records by Forgery or Counterfeiting - Altering, copying, or imitation of something, without authority or right, with the intent to deceive or defraud by passing the copy or thing altered or imitated as that which is original or genuine.  Or, the selling, buying, or possession of an altered, copied, or imitated thing with the intent to deceive or defraud |Counterfeiting/Forgery | 250 | Property
+Y | Destroyed Records or Property | Destruction/Damage/Vandalism of Property | 290 | Property
+Z | Theft from a Motor Vehicle - Theft of articles from motor vehicle whether locked or unlocked |Theft from a Motor Vehicle | 23F | Property
+
+___
+
+### Notes:
+* `An LRS Code appended with "-H" indicates the offense is a Hate Crime, and the penalty will be enhanced by 14:107.2. Offenses with an Inchoate appended will be reported based on the base LRS (usually shown in the first ten digits of Louisiana Revised Statute (6) or Louisiana Revised Statute of Arrest (45).`
 
 <br>
 
@@ -412,7 +542,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+### Notes:
+* `This element is used to indicate whether each offense in the incident was completed or merely attempted.`
 
 ### Allowed Entries
 
@@ -486,7 +617,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+### Notes:
+* `Offender Suspected of Using/Gaming Motivation (8) indicates that an Offender is suspected of consuming alcohol, or using drugs/ narcotics during, or shortly before, the incident; or, of using a computer, computer terminal, or other computer equipment to perpetrate the crime. Can also indicate if an Offender's gaming activity was a motive in the commission of a crime.`
 
 ### Allowed Entries
 ___
@@ -538,7 +670,7 @@ _____
 <br>
 
 ## Bias Motivation/Bias Crime Type (8A)
-
+___
 
 **Data Characteristics:** 2 Character Alpha
 
@@ -552,8 +684,12 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["14004"] -%}
 2 | {{error.desc_de8a}} | {{error.err_no}} | {{ error.err_message }} 
 
-<br>
+___
 
+### Notes: 
+* `Bias Motivation/Bias Crime Type (8) indicates an Offender’s motivation to commit an offense because of their bias against a Victim’s race, religion, ethnicity, national origin, sexual orientation, disability group, or other bias.`
+* `Because of the difficulty in ascertaining the Offender's subjective motivation, bias is to be reported only when an investigation reveals sufficient objective facts to lead a reasonable and prudent person to conclude that the Offender's actions were motivated, in whole or in part, by bias.`
+  
 ### Allowed Entries:
 ___
 
@@ -599,6 +735,7 @@ ___
 <br>
 
 ## Location Type (9)
+___
 
 **Data Characteristics:** 2 Character Alpha
 
@@ -612,14 +749,17 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["12004"] -%}
 2 | {{error.desc_de9}} | {{error.err_no}} | {{ error.err_message }} 
 
-<br>
+___
+
+### Notes:
+* `This data element is to be used to report the type of location/ premises where each offense took place.  Only one (1) location can be entered for each offense.`
+
+___
 
 ### Allowed Entries:
 ___
 
 Enter only one (1) code per Offense Segment:
-
-<br>
 
 <table>
 <thead>
@@ -652,8 +792,6 @@ Enter only one (1) code per Offense Segment:
 
 ___
 
-<br>
-
 ### Examples:
 
 Example Number | Description
@@ -684,10 +822,14 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
-
+### Notes:
+* `This data element is used only if the offense is burglary and the "Hotel Rule" is applicable.  In such cases, the number of structures (premises) entered is to be reported.  If the LRS offense (6) is not reportable as a Burglary (NIBRS 220), then this data element MUST be left blank.`
+* `In the Summary UCR Reporting System, the "Hotel Rule" is only applied to temporary lodging.  It states: If a number of dwelling units under a single manager are burglarized, then the offenses are most likely to be reported to the police by the manager rather than the individual tenants. The burglary should be reported as a single offense.  The total number of individual rooms, units, storage compartments, etc. entered is to be reported into this data element.`
+* `In LIBRS the "Hotel Rule" has been expanded to include rental storage facilities, i.e., "mini-storage" and "self storage" buildings.`
 
 ### Examples:
+
+___
 
 Example Number | Description
 :-------------:|:-----------
@@ -695,9 +837,7 @@ Example Number | Description
 
 ___
 
-
 <br>
-
 
 ## Method of Entry (11)
 
@@ -719,9 +859,11 @@ Requirment   | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
-
-
+### Notes:
+* `This data element is to report whether force or no force was used by the burglar(s) to enter the structure.`
+* `A forced entry is where force of any degree, or a mechanical contrivance of any kind (including a passkey or skeleton key), was used to unlawfully enter a building or other structure. `
+* `An unforced entry is one where the unlawful entry was achieved without force through an unlocked door or window.`
+* `If both forced and unforced entries were involved in the crime, the entry should be reported as having been accomplished through "Force".`
 
 ### Allowed Entries:
 ___
@@ -759,8 +901,6 @@ Enter only one (1) code per Offense Segment:
 
 ___
 
-<br>
-
 ### Examples: 
 ___
 
@@ -771,7 +911,6 @@ Example Number | Description
 ___
 
 <br>
-
 
 ## Type of Criminal Activity/Gang Information Nos. 1, 2 and 3 (12)
 
@@ -807,7 +946,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["90031"] -%}
 3G | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
 
-<br>
+___
+
+### Notes: 
+* `(Criminal Activity):  Use this data element to provide additional information on the criminal activity of Offender(s) in the incident.`
 
 ### Allowed Entries (Criminal Activity)
 ___
@@ -865,7 +1007,18 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["12017"] -%}
 5 | {{error.desc_de12}} | {{error.err_no}}| {{ error.err_message }} 
 
-<br>
+___
+
+### Notes:
+* `(Gang Information):  This data element is used to provide Gang Information on Offender(s).`
+* `Definition of a Gang:  A gang must meet the following criteria in order to be considered a gang:`
+	* `Be an ongoing organization, association, or group of three or more persons`
+	* `Have a common interest and/or activity characterized by the commission of or involvement in a pattern of criminal or delinquent conduct.`
+* `If a value of None/Unknown (“N”) is entered, codes "J" and "G" cannot to be entered.`
+
+
+### Allowed Values
+___
 
 <table>
 <thead>
@@ -940,6 +1093,12 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["90036"] -%}
 11 | {{error.desc_de13}} | {{error.err_no}}| {{ error.err_message }}
 
+___
+
+### Notes:
+* `This data element is used to enter the Type of Weapon/Force Used (13) by an Offender.`
+* `Append an "A" if the weapon is automatic.`
+  * `Any firearm that can fire more than one shot by a single pull of the trigger without manual reloading is classified as an Automatic Firearm.`
 
 ### Allowed Entries:
 Can enter up to three (3) codes for each offense:
@@ -975,7 +1134,6 @@ Can enter up to three (3) codes for each offense:
 
 ___
 
-<br>
 
 ### Examples:
 ___
@@ -1004,7 +1162,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-`Note: There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.`
+### Notes:
+`Each property in an incident must be assigned a unique sequence number from "001" to "999".`
 
 ___
 
@@ -1030,7 +1189,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-`Note: There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.`
+### Notes:
+* `There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.`
 
 <br>
 
@@ -1066,7 +1226,11 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["10081"] -%}
 10 | {{error.desc_de14}} | {{error.err_no}}| {{ error.err_message }}
 
-<br>
+____
+
+### Notes:
+* `Type of Property Loss (14) describes the various type(s) of property loss that can occur during an incident, such as Recovery, Seizure, etc.`
+* `Every different type of property loss that occurs during an incident must be submitted in a separate Property Description Segment (31), when the incident involved one or more of the Offenses listed above.`
 
 ### Allowed Entries:
 ___
@@ -1076,7 +1240,7 @@ Enter only one (1) code for each Property Description Segment. However, as many 
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Types of Weapon/Force Involved</th>
+		<th colspan = "2" style="align-text:center;">Types of Property Loss</th>
 	</tr>
     </thead>
     <tbody>
@@ -1128,9 +1292,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["10072"] -%}
 5 | {{error.desc_de15}} | {{error.err_no}}| {{ error.err_message }}
 
+___
 
-<br>
-
+### Notes:
+* `Property Description (DE 15) is to be used to enter descriptions of the property that was burned, counterfeited, destroyed/damaged/ vandalized, etc., during, or as a result of, the incident.`
 
 ### Allowed Entries: 
 ___
@@ -1191,7 +1356,12 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["13042"] -%}
 6 | {{error.desc_de16}} | {{error.err_no}}| {{ error.err_message }}
 
-<br>
+___
+
+### Notes:
+* `Value of Property (16) is to be used to enter the total dollar value of property that was burned (includes damage caused in fighting the fire), counterfeited, destroyed/damaged/ vandalized, recovered, seized, stolen, etc., as a result of the incident.`
+* `DO NOT INCLUDE partial dollar amounts (cents).  Round values to the nearest whole dollar amounts.  If the value is unknown, enter one dollar ($1.00), that is, "000000001".`
+* `If value is known and it is between $1.00 and $2.00 the reporting agency should enter $2.00, that is, "000000002".  This is the minimum dollar value that can be entered in Value of Property (16), as "1" (or “000000001”) is used for Unknown.`
 
 ### Examples:
 ___
@@ -1225,7 +1395,12 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["13020"] -%}
 5 | {{error.desc_de17}} | {{error.err_no}}| {{ error.err_message }}
 
-<br>
+___
+
+### Notes:
+* `If previously stolen property is recovered, the month, day, and year (MMDDYYYY) of its recovery should be entered into this data element.`
+* `If there is more than one Date Recovered (DE 17) for the same Property Description (DE 15), enter the earliest date.`
+* `If the Date Recovered is unknown, enter the date of the report.`
 
 ## Number of Stolen Vehicles (18)
 
@@ -1256,6 +1431,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+### Notes:
+* `Number of Stolen Vehicles (18) indicates how many motor vehicles were stolen in an incident reported as a Motor Vehicle Theft.`
+
 <br>
 
 
@@ -1282,9 +1460,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["23230"] -%}
 7 | {{error.desc_de19}} | {{error.err_no}}| {{ error.err_message }}
 
-`Note: Number of Recovered Motor Vehicles (19) indicates how many motor vehicles were recovered in an incident that reported Motor Vehicle Thefts.`
-
-
+### Notes:
+* `Number of Recovered Motor Vehicles (19) indicates how many motor vehicles were recovered in an incident that reported Motor Vehicle Thefts.`
 
 ___
 
@@ -1311,17 +1488,21 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["23201"] -%}
 6 | {{error.desc_de20}} | {{error.err_no}}| {{ error.err_message }}
 
-`Notes: Suspected Drug Type (20) identifies the type of drugs or narcotics Seized in a drug case. If the Suspected Drug Type (20)is a Counterfeit, append an "X" to the drug code, otherwise leave the second character Blank (G). Suspected Drug Type (20) is not to be used when drugs or narcotics were Burned, Stolen, etc., in connection with other offenses, such as Arson, Larceny/Theft, etc.`
+___
 
- <br>
+### Notes:
+* `Suspected Drug Type (20) identifies the type of drugs or narcotics Seized in a drug case.`
+* `If the Suspected Drug Type (20)is a Counterfeit, append an "X" to the drug code, otherwise leave the second character Blank (G).`
+* `Suspected Drug Type (20) is not to be used when drugs or narcotics were Burned, Stolen, etc., in connection with other offenses, such as Arson, Larceny/Theft, etc.`
 
 
-### Allowed Entries: Enter as many as apply, but do not duplicate codes.
+### Allowed Entries: 
+Enter as many as apply, but do not duplicate codes.
 
 <table>
 <thead>
 	<tr>
-		<th colspan = "27" style="align-text:center;"></th>
+		<th colspan = "27" style="align-text:center;">Suspected Drug Types</th>
 	</tr>
     </thead>
     <tbody>
@@ -1370,14 +1551,13 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["13065"] -%}
 3 | {{error.desc_de21}} | {{error.err_no}}| {{ error.err_message }}
 
+___
 
-`Notes: Estimated Drug Quantity (21) indicates the quantity of drugs or narcotics seized in a drug case, it is not to be used when drugs or narcotics were Burned, Stolen, etc. in connection with other Offenses, such as Arson, Burglary, Breaking and Entering, Larceny, Theft, etc.`
-
-`Nine (9) characters are available to enter the number of WHOLE pounds, ounces, grams, etc., and three (3) more characters are available to enter the DECIMAL amount. A DECIMAL POINT must be entered to separate the whole and decimal amounts. Zero ('0') or space fill (G) should be added to the right or left of the value **to preserve the decimal's position as the tenth character in the field.**`
-
-`When Estimated Drug Quantity (21) is Unknown enter '000000001.000', a value of '1', to signify that the value is not known or not reported. Also, Type Drug Measurement (22) MUST be entered as Not Reported/Unknown ('XX') and Value of Property (16) MUST be entered as Unknown (000000001).`
-
-`If LRS Offense (6) is not reportable as a drug violation (35A), this data element MUST BE LEFT BLANK (G).`
+### Notes:
+* `Notes: Estimated Drug Quantity (21) indicates the quantity of drugs or narcotics seized in a drug case, it is not to be used when drugs or narcotics were Burned, Stolen, etc. in connection with other Offenses, such as Arson, Burglary, Breaking and Entering, Larceny, Theft, etc.`
+* `Nine (9) characters are available to enter the number of WHOLE pounds, ounces, grams, etc., and three (3) more characters are available to enter the DECIMAL amount. A DECIMAL POINT must be entered to separate the whole and decimal amounts. Zero ('0') or space fill (G) should be added to the right or left of the value **to preserve the decimal's position as the tenth character in the field.**`
+* `When Estimated Drug Quantity (21) is Unknown enter '000000001.000', a value of '1', to signify that the value is not known or not reported. Also, Type Drug Measurement (22) MUST be entered as Not Reported/Unknown ('XX') and Value of Property (16) MUST be entered as Unknown (000000001).`
+* `If LRS Offense (6) is not reportable as a drug violation (35A), this data element MUST BE LEFT BLANK (G).`
 
 
 

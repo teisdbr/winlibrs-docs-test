@@ -6,6 +6,38 @@ td {
     padding-bottom: 2px;
 }
 
+h1{
+    font-size: 1.75rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h3{
+    font-size: 1.25rem;
+}
+h4{
+    font-size: 1rem;
+}
+h5{
+    font-size: 0.75rem;
+}
+
+p{
+    font-size: 14px;
+}
+
+li {
+    font-size: 14px;
+}
+
+tbody {
+    font-size: 14px;
+}
+
+thead {
+    font-size: 14px;
+}
+
 tbody tr:nth-child(even){
     background-color: #E0E0E0;
 }

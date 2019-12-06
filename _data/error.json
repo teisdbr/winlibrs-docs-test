@@ -253,7 +253,7 @@
     "11005": {
         "err_no": 11005,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
-        "desc_de3":"Each component of the date must be valid; that is, months must be 01-12, days must be 01-31, and year must include the century (19xx, 20xx).<br>In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br>The Incident Date CANNOT exceed the current date. ",
+        "desc_de3": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Four-Digit Year</li><li>Days CANNOT exceed maximum for the month (EG June CANNOT have 31 days)</li><li>Incident Date CANNOT exceed the current date.</li></ul>{:/}",
         "desc_de5": "Each component of the date must be valid: Months must be 0-12, days must be 01-31, and year must include the century (19xx, 20xx). In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br><br>The Exceptional Clearance Date CANNOT be greater than that entered within the Reporting Period (DE C4).<br><br>For example, if the Reporting Period is 062019 (June 2019), then the Exceptional Clearance Date CANNOT contain any date 07/01/2019 or greater."
     },
     "11015": {
@@ -272,7 +272,7 @@
     "11018": {
         "err_no": 11018,
         "err_message": "DATE CANNOT BE ON OR AFTER THE INACTIVE DATE [MMDDYYYY] OF THE ORI",
-        "desc_de3": "When an ORI becomes inactive, no incident data may be submitted to LIBRS with an incident date on or after that date.<br>However, adjustments to previously submitted data may be done."
+        "desc_de3": "When an ORI becomes inactive, no incident data may be submitted to LIBRS with an incident date on or after that date. However, adjustments to previously submitted data may be done."
     },
     "11020": {
         "err_no": 11020,
@@ -291,7 +291,7 @@
     "11052": {
         "err_no": 11052,
         "err_message": "INVALID HOUR ENTRY",
-        "desc_de3":"If HOUR is entered it must be 00 through 23.<br>Note: If the Incident Date occurred at exactly midnight, enter theIncident Date as if the time was 1 minute past midnight. <br><br>Example: If the incident occurred at exactly midnight on Thursday, enter Friday's date and 00 for the hour."
+        "desc_de3":"If HOUR is entered it must be 00 through 23. Note: If the Incident Date occurred at exactly midnight, enter the Incident Date as if the time was 1 minute past midnight. EG: If the incident occurred at exactly midnight on Thursday, enter Friday's date and 00 for the hour."
     },
     "11053": {
         "err_no": 11053,
@@ -369,7 +369,7 @@
     "11070": {
         "err_no": 11070,
         "err_message": "INCIDENT DATE CANNOT BE AFTER YEAR [YYYY] AND MONTH [MM] OF TAPE",
-        "desc_de3": "Incident Date/Hour CANNOT be later than the year and month the data submission file represents. (EG A June 2019 data submission CANNOT contain incidents occurring after June)."
+        "desc_de3": "Incident Date/Hour CANNOT be later than the year and month the data submission file represents. (EG: A June 2019 data submission CANNOT contain incidents occurring after June)."
     },
     "11071": {
         "err_no": 11071,
@@ -384,7 +384,7 @@
     "11073": {
         "err_no": 11073,
         "err_message": "INCIDENT DATE CANNOT BE BEFORE DATE ORI WENT IBR",
-        "desc_de3": "No data regarding an incident previously submitted under the Summary UCR reporting system can be submitted with an incident date later than the date the agency commenced reporting.<br>It will be regarded as a duplicate submission and be rejected since the Summary UCR system already contains the aggregate data for the months before LIBRS conversion.<br><br>In other words, if an agency sends Incident Based Reporting (IBR) data for the first time on 20 July 2019, all 'Incident Date/Hour' (DE 3) entries for incidents, recovered property, and arrests must be within July, 2019<br><br>The exception is when Exceptional Clearances occur for a pre-IBR incident<br>In this case, 'Incident Date/Hour' (DE 3) may be earlier than July, 2019, but Exceptional Clearance Date (5) must be within July, 2019<br>LIBRS maintains a table of start dates (Agency Base Dates) for every law enforcement agency in the state<br>Except for the above example, LIBRS will reject data submitted with an 'Incident Date/Hour' prior to the agency's Base Date (start date)."
+        "desc_de3": "No data regarding an incident previously submitted under the Summary UCR reporting system can be submitted with an incident date later than the date the agency commenced reporting.<br>It will be regarded as a duplicate submission and be rejected since the Summary UCR system already contains the aggregate data for the months before LIBRS conversion.<br><br>In other words, if an agency sends Incident Based Reporting (IBR) data for the first time on 20 July 2019, all 'Incident Date/Hour' (DE 3) entries for incidents, recovered property, and arrests must be within July, 2019<br><br>The exception is when Exceptional Clearances occur for a pre-IBR incident<br>In this case, 'Incident Date/Hour' (DE 3) may be earlier than July, 2019, but Exceptional Clearance Date (5) must be within July, 2019<br><br>LIBRS maintains a table of start dates (Agency Base Dates) for every law enforcement agency in the state<br>Except for the above example, LIBRS will reject data submitted with an 'Incident Date/Hour' prior to the agency's Base Date (start date)."
     },
     "11074": {
         "err_no": 11074,
@@ -394,7 +394,7 @@
     "11075": {
         "err_no": 11075,
         "err_message": "CANNOT CALCULATE BASE DATE FROM INCIDENT DATE[MMDDYYYY]",
-        "desc_de3": "The **Submission Date (C3), in positions 23-30,** and the Incident Date MUST be valid entries.<br>LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as 'Time Window' submissions."
+        "desc_de3": "The Submission Date (C3), in positions 23-30, and the Incident Date MUST be valid entries.<br><br>LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as 'Time Window' submissions."
     },
     "11076": {
         "err_no": 11076,
@@ -641,7 +641,7 @@
     "13057": {
         "err_no": 13057,
         "err_message": "PROPERTY LOSS(14) MUST BE 7 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24,28, OR  37 ' FOR DATA TO BE ENTERED",
-        "desc_de18": "MUST be entered if {::nomarkdown}<ul><li>Louisiana Revised Statute (DE 6) has a NIBRS Offense Code of <b>240</b></li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/} OR {::nomarkdown}<ul><li>Property Description (DE 15) has Motor Vehicle codes</li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>The Louisiana Revised Statute Number is one of the following<ul><li>14:67</li><li>14:68</li><li>14:68.4</li></ul><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/}"
+        "desc_de18": "MUST be entered if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (DE 6) has a NIBRS Offense Code of <b>240</b></li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/} OR if the following four conditions are true:{::nomarkdown}<ul><li>Property Description (DE 15) has Motor Vehicle codes</li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>The Louisiana Revised Statute Number is one of the following<ul><li>14:67</li><li>14:68</li><li>14:68.4</li></ul><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/}"
     },
     "13058": {
         "err_no": 13058,
@@ -666,14 +666,14 @@
     "13064": {
         "err_no": 13064,
         "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE(20), QUANTITY(21) AND MEASUREMENT(22) MUST BE PRESENT",
-        "desc_de20": "When Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of 35A **and**, Type Property Loss (14) is Seized ('10'), Property Description (15) is Drugs/Narcotics ('10'), and a Suspected Drug Type (20) is entered, **then** Estimated Quantity (21), Type Drug Measurement (22), and Value of Property (16) must be entered."
+        "desc_de20": "When the following conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code of <b>35A</b></li><li> Type Property Loss (14) is Seized ('10') </li><li> Property Description (15) is Drugs/Narcotics ('10') </li><li> Suspected Drug Type (20) is entered</li></ul>{:/} Estimated Quantity (21), Type Drug Measurement (22), and Value of Property (16) must be entered."
     },
     "13065": {
         "err_no": 13065,
         "err_message": "OFFENSE = DRUG OFFENSE & PROP LOSS = 6 AND DESCRIPTION = 10 MUST EXIST",
-        "desc_de22": "Type Drug Measurement (22) is used if Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of **35A** **and** Type of Property Loss (14) is Seized ('6'), **and** Property Description ('15') is Drugs Narcotics ('10').",
-        "desc_de21": "Estimated Drug Quantity (21) is valid only if Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of **35A** **and**, Type of Property Loss (14) is **Seized** ('6'), and Property Description (15)is Drugs/Narcotics ('10').",
-        "desc_de20": "Suspected Drug Type (20) MUST be entered if Louisiana Revised Statutes (6) has a NIBRS offense code [as defined on Master LIBRS/LRS Code Table] of 35A **and** Type of Property Loss (4) has a value of Seized ('6') **and** Property Description (15) has a value of Drugs/Narcotics ('10'). If there are multiple LRS Offenses (6) listed and Drugs/Narcotics ('10') was split between the different types of LRS Offenses (6), only enter the Suspected Drug Types (20) applicable to the Offenses listed above."
+        "desc_de22": "Type Drug Measurement (22) is used if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code <b>35A</b></li><li>Type of Property Loss (14) is Seized ('6')</li><li> Property Description ('15') is Drugs Narcotics ('10')</li></ul>{:/}",
+        "desc_de21": "Estimated Drug Quantity (21) is valid only if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of <b>35A</b></li><li> Type of Property Loss (14) is Seized ('6')</li><li>Property Description (15)is Drugs/Narcotics ('10')</li></ul>{:/}",
+        "desc_de20": "Suspected Drug Type (20) MUST be entered if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statutes (DE 6) has a NIBRS offense code of <b>35A</b></li><li>Type of Property Loss (DE 14) has a value of Seized ('6')</li><li>Property Description (15) has a value of Drugs/Narcotics ('10')</li></ul>{:/} If there are multiple LRS Offenses (6) listed and Drugs/Narcotics ('10') was split between the different types of LRS Offenses (6), only enter the Suspected Drug Types (20) applicable to the Offenses listed above."
     },
     "13066": {
         "err_no": 13066,
@@ -766,7 +766,7 @@
     "13092": {
         "err_no": 13092,
         "err_message": "35 A OFFENSE ENTERED AND '1=NONE' ENTERED;MISSING SUSPECTED DRUG TYPE(20)",
-        "desc_de20": "When Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of **35A** and Type Property Loss (14) is None ('1') **then** Suspected Drug Type (20) is required. **However**, if Type Property Loss (14) of Seized ('6') is also reported, this edit is bypassed."
+        "desc_de20": "When the following conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code of <b>35A</b></li><li>Type Property Loss (14) is None ('1')</li></ul>{:/} Suspected Drug Type (20) is required. **However**, if Type Property Loss (14) of Seized ('6') is also reported, this edit is bypassed."
     },
     "13100": {
         "err_no": 13100,
@@ -1570,19 +1570,19 @@
     },
     "22125": {
         "err_no": 22125,
-        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER WILL BE REPORTED AS MURDER AND NONNEGLIGENT MANSLAUGHTER(09 A)"
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER WILL BE REPORTED AS MURDER AND NONNEGLIGENT MANSLAUGHTER (09A)"
     },
     "22130": {
         "err_no": 22130,
-        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS A ROBBERY(120)"
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS A ROBBERY (120)"
     },
     "22135": {
         "err_no": 22135,
-        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS CREDIT CARD / AUTOMATIC TELLER MACHINE FRAUD(26 B)"
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS CREDIT CARD / AUTOMATIC TELLER MACHINE FRAUD (26B)"
     },
     "22140": {
         "err_no": 22140,
-        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS BRIBERY(510)"
+        "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER IS REPORTED AS BRIBERY (510)"
     },
     "22251": {
         "err_no": 22251,
@@ -1610,7 +1610,7 @@
     "23230": {
         "err_no": 23230,
         "err_message": "",
-        "desc_de19": "Number of Recovered Motor Vehicles (19) must be left blank if the LRS Offense is not reported as a Motor Vehicle Theft (NIBRS 240), or Type of Property Loss (14) shows NO Recovered ('5') property with a Property Description (15) from the following list of motor vehicle codes: {::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}"
+        "desc_de19": "Number of Recovered Motor Vehicles (19) must be left blank if: {::nomarkdown}<ul><li>The LRS Offense is not reported as a Motor Vehicle Theft (NIBRS 240)</li></ul>{:/} OR {::nomarkdown}<ul><li>Type of Property Loss (14) shows NO Recovered ('5') property with a Property Description (15) from the following list of motor vehicle codes: <ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul></li></ul>{:/}"
     },
     "23235": {
         "err_no": 23235,

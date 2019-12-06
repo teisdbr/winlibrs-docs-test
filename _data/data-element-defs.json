@@ -1177,6 +1177,7 @@
         "format": "A",
         "subsection": [
             {
+                "title": "",
                 "values": [
                     {
                         "code": "A",
@@ -1212,7 +1213,7 @@
                     },
                     {
                         "code": "H",
-                        "desc": "Other Narcotics: Codeine; Demerol; Dihydromorphinone or Dilaudid; Hydrocodone or Percodan; Methadone; Etc."
+                        "desc": "Other Narcotics: <ul><li>Codeine</li><li>Demerol</li><li>Dihydromorphinone or Dilaudid</li><li>Hydrocodone or Percodan</li><li>Methadone</li></ul>"
                     },
                     {
                         "code": "I",
@@ -1224,7 +1225,7 @@
                     },
                     {
                         "code": "K",
-                        "desc": "Other Hallucinogens: BMDA or 'White Acid'; MT; MDA, MDMA; Mescaline or Peyote; Psilocybin; STP; Etc."
+                        "desc": "Other Hallucinogens: <ul><li>BMDA or 'White Acid'</li><li> MT, MDA, or MDMA</li><li>Mescaline or Peyote</li><li>Psilocybin</li><li>STP</li></ul>"
                     },
                     {
                         "code": "L",
@@ -1232,7 +1233,7 @@
                     },
                     {
                         "code": "M",
-                        "desc": "Other Stimulants: Adipex, Fastine, and Ionamin (Derivatives of Phentermine); Benzedrine; Didrex; Methylphenidate or Ritalin; Phenmetrazine or Preludin; Tenuate; Etc."
+                        "desc": "Other Stimulants: <ul><li>Adipex, Fastine, and Ionamin (Derivatives of Phentermine)</li><li> Benzedrine</li><li> Didrex</li><li> Methylphenidate or Ritalin</li><li> Phenmetrazine or Preludin</li><li> Tenuate</li></ul>"
                     },
                     {
                         "code": "N",
@@ -1240,11 +1241,11 @@
                     },
                     {
                         "code": "O",
-                        "desc": "Other Depressants: Glutethimide or Doriden; Methaqualone or Quaalude; Pentazocine or Talwin; Etc."
+                        "desc": "Other Depressants: <ul><li>Glutethimide or Doriden</li><li> Methaqualone or Quaalude</li><li> Pentazocine or Talwin</li></ul>"
                     },
                     {
                         "code": "P",
-                        "desc": "Other Drugs: Antidepressants (Elavil, Triavil, Tofranil, Etc.); Aromatic Hydrocarbons; Propoxyphene or Darvon; Tranquilizers (Chlordiazepoxide or Librium, Diazepam or Valium, Etc.); Etc."
+                        "desc": "Other Drugs: <ul><li>Antidepressants (Elavil, Triavil, Tofranil, Etc.)</li><li> Aromatic Hydrocarbons</li><li> Propoxyphene or Darvon</li><li> Tranquilizers (Chlordiazepoxide or Librium, Diazepam or Valium, Etc.)</li></ul>"
                     },
                     {
                         "code": "U",
