@@ -14,6 +14,7 @@ This site contains the following information:
 - <a href="./data-elements-values">Data Element Available Values</s>
 - <a href="./data-elements">Data Element Definitions</a>
 - <a href="./lrs-master-list">Master LIBRS LRS List</a>
+- <a href="./mandatories">LIBRS Mandatories</a>
 - LRS to NIBRS Translations
   
 

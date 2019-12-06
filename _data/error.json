@@ -39,7 +39,6 @@
     "10003": {
         "err_no": 10003,
         "err_message": "MULTIPLE 00 SEGMENTS ENCOUNTERED.ONLY ONE PER SUBMISSION ALLOWED.DATA CANNOT BE PROCESSED FURTHER."
-
     },
     "10015": {
         "err_no": 10015,
@@ -66,7 +65,7 @@
     "10052": {
         "err_no": 10052,
         "err_message": "NOT A VALID ORI--NOT ON LIBRS ORI FILE",
-        "desc_de1":"MUST be a valid 9-character NCIC number, where the last 2 positions of the ORI must reflect '00' for all state and local agencies."
+        "desc_de1": "MUST be a valid 9-character NCIC number, where the last 2 positions of the ORI must reflect '00' for all state and local agencies."
     },
     "10053": {
         "err_no": 10053,
@@ -89,8 +88,7 @@
     "10059": {
         "err_no": 10059,
         "err_message": "ALL SEGMENTS ON MAGNETIC MEDIA MUST BE FROM SAME STATE - STATE = [state]",
-        "desc_de1":"First two positions MUST be the code of the state 'LA' in which the incident occurred."
-        
+        "desc_de1": "First two positions MUST be the code of the state 'LA' in which the incident occurred."
     },
     "10060": {
         "err_no": 10060,
@@ -133,7 +131,7 @@
     "10075": {
         "err_no": 10075,
         "err_message": "MISSING A MANDATORY RECORD SEGMENT FOR A COMPLETE INCIDENT",
-        "desc10":"When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included: {::nomarkdown}<ul><li>10 - Administrative Segment</li><li>20 - Offense Segment</li><li>40 - Offender Segment</li><li>41 - Offender Using Segment/Gaming Motivation</li><li>50 - Victim Segment</li></ul>{:/} One or more of these segments was missing."
+        "desc10": "When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included: {::nomarkdown}<ul><li>10 - Administrative Segment</li><li>20 - Offense Segment</li><li>40 - Offender Segment</li><li>41 - Offender Using Segment/Gaming Motivation</li><li>50 - Victim Segment</li></ul>{:/} One or more of these segments was missing."
     },
     "10076": {
         "err_no": 10076,
@@ -177,7 +175,7 @@
     "10087": {
         "err_no": 10087,
         "err_message": "WINDOW SEGMENTS ALREADY ON FILE WITH THIS INCIDENT NUMBER",
-        "desc_de2":"CANNOT have duplicate Incident Number for 'Time-Window' Segment."
+        "desc_de2": "CANNOT have duplicate Incident Number for 'Time-Window' Segment."
     },
     "10090": {
         "err_no": 10090,
@@ -267,7 +265,7 @@
     "11017": {
         "err_no": 11017,
         "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A-Z, 0-9, HYPHEN, AND/OR BLANKS",
-        "desc_de2":"Valid character combinations can include A-Z, 0-9, hyphens, and/or blanks."
+        "desc_de2": "Valid character combinations can include A-Z, 0-9, hyphens, and/or blanks."
     },
     "11018": {
         "err_no": 11018,
@@ -291,7 +289,7 @@
     "11052": {
         "err_no": 11052,
         "err_message": "INVALID HOUR ENTRY",
-        "desc_de3":"If HOUR is entered it must be 00 through 23. Note: If the Incident Date occurred at exactly midnight, enter the Incident Date as if the time was 1 minute past midnight. EG: If the incident occurred at exactly midnight on Thursday, enter Friday's date and 00 for the hour."
+        "desc_de3": "If HOUR is entered it must be 00 through 23. Note: If the Incident Date occurred at exactly midnight, enter the Incident Date as if the time was 1 minute past midnight. EG: If the incident occurred at exactly midnight on Thursday, enter Friday's date and 00 for the hour."
     },
     "11053": {
         "err_no": 11053,
@@ -340,7 +338,7 @@
     "11063": {
         "err_no": 11063,
         "err_message": "CANNOT MDIFY AN INCIDENT HOUR THIS WAY--ON FILE IS [MMDDYYYYRHH]",
-        "desc_de3":"Administrative Segments (Segment 10) submitted with an Action Type of 'M' (Modify) CANNOT change the hour part of 'Incident Date/Hour' (DE 3) of incidents previously submitted with in the original Incident Report (Action Type of 'I')."
+        "desc_de3": "Administrative Segments (Segment 10) submitted with an Action Type of 'M' (Modify) CANNOT change the hour part of 'Incident Date/Hour' (DE 3) of incidents previously submitted with in the original Incident Report (Action Type of 'I')."
     },
     "11064": {
         "err_no": 11064,
@@ -374,7 +372,7 @@
     "11071": {
         "err_no": 11071,
         "err_message": "INCIDENT DATE IS OUTSIDE THE BASE DATE CALCULATION",
-        "desc_de4" : "When a value other than 'N' (Not Applicable) is entered, there can be NO Arrestee Segments associated with the Incident."
+        "desc_de4": "When a value other than 'N' (Not Applicable) is entered, there can be NO Arrestee Segments associated with the Incident."
     },
     "11072": {
         "err_no": 11072,
@@ -399,7 +397,7 @@
     "11076": {
         "err_no": 11076,
         "err_message": "INCIDENT DATE FOR WINDOW RECORDS CANNOT BE WITHIN BOUNDARIES OF INCIDENT",
-        "desc_de3":"The **Submission Date (C3), in positions 23-30,** and the Incident Date MUST be valid entries.<br>LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as 'Time Window' submissions."
+        "desc_de3": "The **Submission Date (C3), in positions 23-30,** and the Incident Date MUST be valid entries.<br>LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as 'Time Window' submissions."
     },
     "11097": {
         "err_no": 11097,
@@ -425,7 +423,8 @@
         "desc_de9": "MUST be a valid code on Master LIBRS/LRS Code Table.",
         "desc_de11": "MUST be a valid code.",
         "desc_de12": "MUST be a valid code.",
-        "desc_de13": "MUST be a valid code."    },
+        "desc_de13": "MUST be a valid code."
+    },
     "12005": {
         "err_no": 12005,
         "err_message": "INVALID LRS--NOT IN LIBRS REVISED STATUTES TABLE"
@@ -471,7 +470,7 @@
     "12052": {
         "err_no": 12052,
         "err_message": "OFFENSE CODE MUST BE BURGLARY WITH LOCATION TYPE OF 14, 19 FOR DATA TO BE ENTERED",
-        "desc_de10":"When entered, Location Type 9 (9) must be Hotel/Motel/Etc. ('14') or Rental Storage Facility ('19'), and LRS (DE 6) has a related NIBRS offense code of <b>220</b> as defined on the Master LIBRS/LRS Code Table"
+        "desc_de10": "When entered, Location Type 9 (9) must be Hotel/Motel/Etc. ('14') or Rental Storage Facility ('19'), and LRS (DE 6) has a related NIBRS offense code of <b>220</b> as defined on the Master LIBRS/LRS Code Table"
     },
     "12053": {
         "err_no": 12053,
@@ -496,7 +495,7 @@
     "12057": {
         "err_no": 12057,
         "err_message": "MUST BE PRESENT WITH AN OFFENSE CODE OF 220 AND A LOCATION TYPE OF 14 OR 19",
-        "desc_de10":"MUST be entered if Louisiana Revised Statute (DE 6) has a NIBRS Offense code as defined on the Master LIBRS/LRS Code Table of <b>220</b> and Location Type (DE 9) contains Hotels/Motels/Etc. ('14') or Rental Storage Facility ('19')."
+        "desc_de10": "MUST be entered if Louisiana Revised Statute (DE 6) has a NIBRS Offense code as defined on the Master LIBRS/LRS Code Table of <b>220</b> and Location Type (DE 9) contains Hotels/Motels/Etc. ('14') or Rental Storage Facility ('19')."
     },
     "12058": {
         "err_no": 12058,
@@ -530,7 +529,7 @@
     "13001": {
         "err_no": 13001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
-        "desc_de14":"MUST be present -- CANNOT be blank."
+        "desc_de14": "MUST be present -- CANNOT be blank."
     },
     "13002": {
         "err_no": 13002,
@@ -539,7 +538,7 @@
         "desc_de18": "MUST be numeric entry with zero left-fill, if entered.",
         "desc_de21": "MUST be numeric entry with Zero ('0') or Blank (G) left-fill and right-fill. The **decimal fractional quantity must be expressed in thousandths as three digits**, and **a decimal point must separate the whole part of the number from the fractional part.** The decimal point must be the tenth character of the field.",
         "desc_de19": "MUST be a numeric entry with zero left-fill if entered."
-    },   
+    },
     "13004": {
         "err_no": 13004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
@@ -742,7 +741,7 @@
     "13087": {
         "err_no": 13087,
         "err_message": "WITH PROPERTY LOSS = 6 & ONLY DRUG OFFENSE, CANNOT HAVE A DESCRIPTION 11;OR PROPERTY LOSS = 6 & ONLY DRUG EQUIP OFNSE CANNOT HAVE DESCRIPTION 10",
-        "desc_de14":"To ensure that Drug/Narcotic Offenses (NIBRS 35A and 35B) are properly reported, Property Description (DE 15) CANNOT have a value of Drug/Narcotic Equipment ('11') for a Drug/Narcotic Violation of NIBRS 35A. Similarly, Drug/Narcotics ('10') CANNOT be entered for a Drug Equipment Violation of (35B). This is enforced by software when there is a single 'Crime Against Property' Offense.<br><br>However, when an incident contains multiple 'Crimes Against Property' Offenses, where, for example, one Offense is a Drug/Narcotic Violation (NIBRS 35A), and the other is a Robbery (NIBRS 120), that involves Drug/Narcotic Equipment ('11'), it can be entered. In this case, the above edit rule should be bypassed. Similarly, Drugs/Narcotics ('10') can be entered along with a Drug Equipment Violation (35B), as long as that property is involved in the Robbery (NIBRS 120)."
+        "desc_de14": "To ensure that Drug/Narcotic Offenses (NIBRS 35A and 35B) are properly reported, Property Description (DE 15) CANNOT have a value of Drug/Narcotic Equipment ('11') for a Drug/Narcotic Violation of NIBRS 35A. Similarly, Drug/Narcotics ('10') CANNOT be entered for a Drug Equipment Violation of (35B). This is enforced by software when there is a single 'Crime Against Property' Offense.<br><br>However, when an incident contains multiple 'Crimes Against Property' Offenses, where, for example, one Offense is a Drug/Narcotic Violation (NIBRS 35A), and the other is a Robbery (NIBRS 120), that involves Drug/Narcotic Equipment ('11'), it can be entered. In this case, the above edit rule should be bypassed. Similarly, Drugs/Narcotics ('10') can be entered along with a Drug Equipment Violation (35B), as long as that property is involved in the Robbery (NIBRS 120)."
     },
     "13088": {
         "err_no": 13088,
@@ -879,7 +878,6 @@
         "desc_de38": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
         "desc_de37": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
         "desc_de36": "For a Justifiable Homicide (NIBRS 09C), at least one of the Offenders must have 'known' information for Age, Sex, and Race. Consequently, Unknown ('000') is not valid as an Offender Sequence Number (36)."
-        
     },
     "14060": {
         "err_no": 14060,
@@ -1009,11 +1007,11 @@
         "err_no": 15056,
         "err_message": "ONLY ONE VALUE GREATER OR EQUAL TO '10' CAN BE ENTERED",
         "desc_de31": "Unknown Circumstances ('10') is mutually exclusive with all other codes, that is, no other code can be entered. Enter Unknown ('10') ONLY if no other code applies."
-            },
+    },
     "15056b": {
-    "err_no": 15056,
-    "err_message": "ONLY ONE VALUE GREATER OR EQUAL TO '10' CAN BE ENTERED",
-    "desc_de31": "No more than (1) circumstance category (that is, Aggravated..., Negligent..., Justifiable...) can be entered."
+        "err_no": 15056,
+        "err_message": "ONLY ONE VALUE GREATER OR EQUAL TO '10' CAN BE ENTERED",
+        "desc_de31": "No more than (1) circumstance category (that is, Aggravated..., Negligent..., Justifiable...) can be entered."
     },
     "15057": {
         "err_no": 15057,
@@ -1710,13 +1708,25 @@
         "err_message": "",
         "desc_de31": "Enter only **one** code for Negligent Manslaughter Circumstances (31) when Louisiana Revised Statue (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of 09B."
     },
+    "81000": {
+        "err_no": 81000,
+        "err_message": "",
+        "desc_md1": "Incident missing a mandatory data element required for all incident submissions."
+    },
     "81100": {
         "err_no": 81100,
-        "err_message": "EXCEPTIONAL CLEARANCE DATE IS REQUIRED IF THIS INCIDENT HAS ANY CODE EXCEP T 'N' IN DE 4 '"
+        "err_message": "EXCEPTIONAL CLEARANCE DATE IS REQUIRED IF THIS INCIDENT HAS ANY CODE EXCEP T 'N' IN DE 4 '",
+        "desc_md1": "Exceptional Clearance Date (5) is required if this incident has any code, except None (N), in Cleared Exceptionally (4)."
     },
-    "81200": {
+    "81200a": {
         "err_no": 81200,
-        "err_message": "WHEN TYPE OF VICTIM(DE 25) IS 'I' OR 'L' THE FOLLOWING DATA ELEMENT(S) MU ST HAVE A VALID CODE"
+        "err_message": "WHEN TYPE OF VICTIM(DE 25) IS 'I' OR 'L' THE FOLLOWING DATA ELEMENT(S) MUST HAVE A VALID CODE",
+        "desc_md1": "When Type of Victim (25) is Individual (I) or Law Enforcement (L) the following data element(s) MUST have a valid code."
+    },
+    "81200b": {
+        "err_no": 81200,
+        "err_message": "WHEN TYPE OF VICTIM(DE 25) IS 'I' OR 'L' THE FOLLOWING DATA ELEMENT(S) MUST HAVE A VALID CODE",
+        "desc_md1": "When Offender Sequence Number (36) is NOT '000', the following data elements MUST have a valid code."
     },
     "81300": {
         "err_no": 81300,
@@ -1725,15 +1735,18 @@
     "81400": {
         "err_no": 81400,
         "err_message": "WHEN DE 36 = 000 ', THEN DE 8 MUST BE ' N ' AND DE 8A MUST BE ' 88 '.'",
-        "desc_de36": "When Offender Sequence Number (36) is Unknown ('000'), Offender Suspected of Using/Gaming Motivation (8) must be Not Applicable ('N') and Bias Motivation/Bias Crime Type (8A) must be None ('88')."
+        "desc_de36": "When Offender Sequence Number (36) is Unknown ('000'), Offender Suspected of Using/Gaming Motivation (8) must be Not Applicable ('N') and Bias Motivation/Bias Crime Type (8A) must be None ('88').",
+        "desc_md1": "When Offender Sequence Number (36) is ‘000’, then Offender Suspected of Using/Gaming Motivation (8) MUST be None ('N') and Bias Motivation/Bias Crime Type (8A) MUST be None ('88')."
     },
     "82000": {
         "err_no": 82000,
-        "err_message": "ARREST SEGMENT IS MISSING A MANDATORY DATA ELEMENT."
+        "err_message": "ARREST SEGMENT IS MISSING A MANDATORY DATA ELEMENT.",
+        "desc_md2": "Arrest Segment is missing a mandatory data element."
     },
     "82100": {
         "err_no": 82100,
-        "err_message": "WHEN DE 47 IS LESS THAN 17 ', MUST HAVE A VALID CODE IN DE 52.'"
+        "err_message": "WHEN DE 47 IS LESS THAN 17 ', MUST HAVE A VALID CODE IN DE 52.'",
+        "desc_md2": "When Age of Arrestee (47) is LESS THAN ‘17’, then MUST have a valid code in Disposition of Arrestee Under 17 (52)."
     },
     "83000": {
         "err_no": 83000,
@@ -1741,11 +1754,13 @@
     },
     "83100": {
         "err_no": 83100,
-        "err_message": "WHEN SUBMITTING AN ARRESTEE SEGMENT A MANDATORY DATA ELEMENT IS MISSING."
+        "err_message": "WHEN SUBMITTING AN ARRESTEE SEGMENT A MANDATORY DATA ELEMENT IS MISSING.",
+        "desc_md3": "An Arrestee segment is missing a mandatory data element."
     },
     "83200": {
         "err_no": 83200,
-        "err_message": "WHEN DE 47 IS LESS THAN 17 ', MUST HAVE A VALID CODE IN DE 52.'"
+        "err_message": "WHEN DE 47 IS LESS THAN 17 ', MUST HAVE A VALID CODE IN DE 52.'",
+        "desc_md3": "When Age of Arrestee (47) is LESS THAN ‘17’, then MUST have a valid code in Disposition of Arrestee Under 17 (52)."
     },
     "84001": {
         "err_no": 84001,
@@ -1916,7 +1931,7 @@
     "84203": {
         "err_no": 84203,
         "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROPER TY SEGMENT CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE IN CIDENT WILL REJECT IF AN AGENCY SENDS A '7'  AND ALSO AN '8' WITHIN THE SAM",
-        "desc_de14":"When there is only one completed 'Crime Against Property' Offense in an incident, any Property Description Segments (31) reported with the incident can contain ONLY values of EITHER:{::nomarkdown}<ul><li>Stolen Property ('7')</li><li>Unknown ('8')</li></ul>{:/} The incident will be rejected if an agency sends both Stolen Property ('7') and Unknown ('8') for Type of Property Loss/Etc. within the same incident."
+        "desc_de14": "When there is only one completed 'Crime Against Property' Offense in an incident, any Property Description Segments (31) reported with the incident can contain ONLY values of EITHER:{::nomarkdown}<ul><li>Stolen Property ('7')</li><li>Unknown ('8')</li></ul>{:/} The incident will be rejected if an agency sends both Stolen Property ('7') and Unknown ('8') for Type of Property Loss/Etc. within the same incident."
     },
     "84204": {
         "err_no": 84204,
@@ -2174,7 +2189,6 @@
         "err_message": "PROPERTY SEQUENCE NUMBER MUST BE PRESENT--CANNOT BE BLANK",
         "desc_dep1": "MUST be present -- CANNOT be blank.",
         "desc_dep1r": "MUST be present -- CANNOT be blank."
-        
     },
     "90020": {
         "err_no": 90020,
@@ -2207,7 +2221,7 @@
         "err_no": 90025,
         "err_message": "OFFENSE SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED OFFENSES' SEQUENCE NUMBERS"
     },
-    "90026":{
+    "90026": {
         "err_no": 90026,
         "err_message": "CRIME AGAINST PROPERTY REQUIRES A RELATIONSHIP TO PROPERTY. SEGMENTS 31 AND 33 MAY EITHER OR BOTH BE MISSING",
         "desc20": "If an offense is a Crime Against Property based on the Crime Against category for the Louisiana Revised Statute (LRS, or LRS-NIBRS combination) submitted, then the offense must have a proper relationship to at least one property.  This relationship is defined by submitting both Segments 31 and 33 where the data element pairs (L6, L6R) and (P1, P1R) match exactly with an Offense segment."
