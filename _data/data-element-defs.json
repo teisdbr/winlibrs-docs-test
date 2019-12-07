@@ -1709,7 +1709,7 @@
         "comment": "Use ONLY if Crime is: Homicide (09A, 09B or 09C), Assault Offenses (13A or 13B) only when the 13B Victim is a ‘L’ and Law Enforcement Officer. <br><br>Child Abuse (“40”) can ONLY be used when Offenses are: Murder and Nonnegligent Manslaughter (09A), Negligent Homicide (09B), Aggravated Assault (13A)<br><br>",
         "subsection": [
             {
-                "title": "AGGRAVATED ASSAULT and NON-NEGLIGENT MANSLAUGHTER CIRCUMSTANCES<br>Can enter UP TO TWO of the following codes:<br>",
+                "title": "Aggravated Assault and Non-Negligent Manslaughter Circumstances",
                 "values": [
                     {
                         "code": "01",
@@ -1719,7 +1719,7 @@
                     {
                         "code": "02",
                         "desc": "Assault on Law enforcement Officer(s)",
-                        "comment": "13A, 09A <br>(Must be entered if Victim Type = 'L')"
+                        "comment": "13A, 09A (Must be entered if Victim Type = 'L')"
                     },
                     {
                         "code": "03",
@@ -1769,7 +1769,7 @@
                 ]
             },
             {
-                "title": "NEGLIGENT MANSLAUGHTER CIRCUMSTANCES<br>Can enter ONLY ONE of the following codes:<br>",
+                "title": "Negligent Manslaughter Circumstances",
                 "values": [
                     {
                         "code": "30",
@@ -1804,7 +1804,7 @@
                 ]
             },
             {
-                "title": "JUSTIFIABLE HOMICIDE CIRCUMSTANCES<br>Can enter ONLY ONE of the following codes:<br>",
+                "title": "Justifiable Homicide Circumstances",
                 "values": [
                     {
                         "code": "20",
@@ -1822,14 +1822,14 @@
     },
     {
         "de_num": "32",
-        "name": "ADDITIONAL JUSTIFIABLE HOMICIDE CIRCUMSTANCES *Modified*",
+        "name": "ADDITIONAL JUSTIFIABLE HOMICIDE CIRCUMSTANCES",
         "definition": "Used to further describe the circumstances of a justifiable homicide, and homicide, or assault, against a law enforcement officer",
         "length": "1",
         "format": "A",
         "comment": "Enter ONLY ONE of the following codes",
         "subsection": [
             {
-                "title": "Enter ONLY ONE of the following codes:",
+                "title": "",
                 "values": [
                     {
                         "code": "A",

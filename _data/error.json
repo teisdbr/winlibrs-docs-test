@@ -166,7 +166,7 @@
     "10085": {
         "err_no": 10085,
         "err_message": "WHEN CONNECTED, EACH VICTIM MUST BE CONNECTED TO ALL OFFENDERS",
-        "desc_de34": "When a Victim is connected to a *Crime Against Person* or Robbery Offense, all Offender Sequence Numbers (36), MUST also be entered in Offender Number to be Related (34). If the Victim is related to the Offender in more than one way, use the closest relationship."
+        "desc_de34": "When a Victim is connected to a *Crime Against Person* or Robbery Offense, all Offender Sequence Numbers (36) MUST also be entered in Offender Number to be Related (34). If the Victim is related to the Offender in more than one way, use the closest relationship."
     },
     "10086": {
         "err_no": 10086,
@@ -784,7 +784,7 @@
     "14002": {
         "err_no": 14002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
-        "desc_de36": "MUST be numeric entry with zero left-fill. Offender Sequence Number (36) distinguishes one Offender from another and identifies a situation where nothing was known about the number of Offenders, or who they were. For example, a corpse was found in a ditch and there were no eyewitnesses or other information that could provide data about possible Offenders. In this case, Unknown ('000') would be entered. However, if five Offenders were seen running from the scene, then five Offender records would be submitted, each with a difference Offender Sequence Number (36)."
+        "desc_de36": "MUST be numeric entry with zero left-fill.<br><br>Offender Sequence Number (36) distinguishes one Offender from another and identifies a situation where nothing was known about the number of Offenders, or who they were. {::nomarkdown}<ul><li> EG: A corpse was found in a ditch and there were no eyewitnesses or other information that could provide data about possible Offenders. In this case, Unknown ('000') would be entered</li><li>However, if five Offenders were seen running from the scene, then five Offender records would be submitted, each with a difference Offender Sequence Number (36)</li></ul>{:/}"
     },
     "14004": {
         "err_no": 14004,
@@ -862,7 +862,7 @@
     "14057": {
         "err_no": 14057,
         "err_message": "OFFENDER SEQUENCE NUMBER CANNOT BE UNKNOWN IF INCIDENT CLEARED EXCEPTIONALL",
-        "desc_de36": "If an incident is Exceptionally Cleared (4), then Unknown ('000') CANNOT be entered. Unknown ('000') indicates that nothing is known about the Offender(s) regarding number and any identifying information. One of the criteria for Exceptionally Clearing (4) an incident is that at least one of the Offenders be known."
+        "desc_de36": "If an incident is Exceptionally Cleared (4), then Unknown ('000') CANNOT be entered.<br><br>Unknown ('000') indicates that nothing is known about the Offender(s) regarding number and any identifying information. One of the criteria for Exceptionally Clearing (4) an incident is that at least one of the Offenders be known."
     },
     "14058": {
         "err_no": 14058,
@@ -968,8 +968,8 @@
     "15019": {
         "err_no": 15019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
-        "desc_de33": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person* and has a **NIBRS Offense code** as defined on Master LIBRS/LRS Code Table of: {::nomarkdown}<ul><li>100</li><li>11A, 11B, 11C, 11D</li><li>120</li><li>13A, 13B</li><li>210</li><li>90Z</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses.",
-        "desc_de31": "MUST be entered if Louisiana Revised Statute (6) has a **NIBRS Offense code** as defined on Master LIBRS/LRS Code Table of: {::nomarkdown}<ul><li>13A</li><li>09A, 09B or 09C</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
+        "desc_de33": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person* and has a NIBRS Offense code of: {::nomarkdown}<ul><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>210</li><li>13A, 13B</li><li>90Z</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses.",
+        "desc_de31": "MUST be entered if Louisiana Revised Statute (6) has a NIBRS Offense code of : {::nomarkdown}<ul><li>13A</li><li>09A, 09B or 09C</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
     },
     "15020": {
         "err_no": 15020,
@@ -1016,7 +1016,7 @@
     "15057": {
         "err_no": 15057,
         "err_message": "WHEN DATA ELEMENT 32 IS ENTERED, DATA ELEMENT 31 MUST EQUAL '20' OR '21' UN LESS TYPE OF VICTIM IS EQUAL TO 'L' = LAW ENFORCEMENT OFFICER",
-        "desc_de32": "When this Data Element (32) is entered, then *Aggravated Assault/Homicide Circumstance (31)* MUST show one of the following Justifiable Homicide **(NIBRS 09C)** Circumstances: {::nomarkdown}<ul><li>20 Criminal Killed by Private Citizen</li><li>21 Criminal Killed by Police Officer</li></ul>{:/} when Type of Victim (25) is Individual ('I')."
+        "desc_de32": "When this Data Element (32) is entered and Type of Victim (25) is Individual ('I'), Aggravated Assault/Homicide Circumstance (31) MUST show one of the following Justifiable Homicide (<b>09C</b>) Circumstances: {::nomarkdown}<ul><li>20 Criminal Killed by Private Citizen</li><li>21 Criminal Killed by Police Officer</li></ul>{:/}"
     },
     "15058": {
         "err_no": 15058,
@@ -1032,8 +1032,8 @@
     "15059": {
         "err_no": 15059,
         "err_message": "NEED A CRIME AGAINST PERSON OR ROBBERY FOR DATA TO BE ENTERED",
-        "desc_de35": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a **NIBRS Offense code** as defined on Master LIBRS/LRS Code Table of: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>120</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/} Relationship of Victim to Offender (35) MUST be Blank (G) when '000' is entered into Offender Number to be Related (34).",
-        "desc_de34": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a **NIBRS Offense code** as defined on Master LIBRS/LRS Code Table of: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>120</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
+        "desc_de35": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a NIBRS Offense code of: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/} Relationship of Victim to Offender (35) MUST be Blank (G) when '000' is entered into Offender Number to be Related (34).",
+        "desc_de34": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a NIBRS Offense code of: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
     },
     "15060": {
         "err_no": 15060,
@@ -1089,7 +1089,7 @@
     "15070": {
         "err_no": 15070,
         "err_message": "WHEN 'VO' RELATIONSHIP IS PRESENT, MUST HAVE TWO OR MORE VICTIMS AND OFFEND",
-        "desc_de35": "When Victim was Offender **('VO')** is entered, a minimum of **two** Victims Segments (50) and **two** Offender Segments (40) MUST be submitted. 'VO' indicates situations such as brawls and domestic disputes **where all of the participants in the incident were Victims and Offenders of the same Offense (for example, assaults or double murders where two people kill each other).** In most cases, each Victim is also the Offender; therefore, every Victim Segment (50) will contain a 'VO' code.  However, there may be some situations where only one of the Victims is also the Offender, but where the other Victim(s) are not also the Offender(s) (for example, a Victim who is not an Offender could be an innocent bystander in a barroom brawl, or a child who is victimized as a result of the parents domestic dispute)."
+        "desc_de35": "When Victim was Offender ('VO') is entered, a minimum of **two** Victims Segments (50) and **two** Offender Segments (40) MUST be submitted.<br><br>'VO' indicates situations such as brawls and domestic disputes where all of the participants in the incident were Victims and Offenders of the same Offense (for example, assaults or double murders where two people kill each other).<br><br>In most cases, each Victim is also the Offender; therefore, every Victim Segment (50) will contain a 'VO' code.  However, there may be some situations where only one of the Victims is also the Offender, but where the other Victim(s) are not also the Offender(s) (for example, a Victim who is not an Offender could be an innocent bystander in a barroom brawl, or a child who is victimized as a result of the parents domestic dispute)."
     },
     "15071": {
         "err_no": 15071,
@@ -1179,7 +1179,7 @@
     "16005": {
         "err_no": 16005,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
-        "desc_de42": "Each component of Arrest Date (42) MUST be valid; that is, months must be 01-12, days must be 01-31, and year must include the century (that is, 19xx, 20xx). In addition, days CANNOT exceed maximum for the month (for example, June CANNOT have 31 days). Arrest Date (42) CANNOT exceed the current date. Arrest Date CANNOT be greater than that entered with the \"Month of Data Submission\" and \"Year of Data Submission\" fields on the data record.<br>For example, if \"Month of Data Submission\" and \"Year of Data Submission\" are \"06/2014\", the Arrest Date (42) CANNOT contain any date 07/01/2014 or greater."
+        "desc_de42": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
     },
     "16006": {
         "err_no": 16006,
@@ -1220,7 +1220,7 @@
     "16020": {
         "err_no": 16020,
         "err_message": "ARREST DATE CANNOT PREDATE BASE DATE",
-        "desc_de42": "Arrestee Segments (60) submitted as Time-Window Submission (Action Type of Time Window ('W')) CANNOT have Arrest Date (42) [earlier]{.underline} than the Agency's Base Date.<br>This also applies to any subsequent Modify Submission ('M') of a previously submitted Time-Window Submission ('W')."
+        "desc_de42": "Arrestee Segments (60) submitted as Time-Window Submission (Action Type of Time Window ('W')) CANNOT have Arrest Date (42) earlierthan the Agency's Base Date.<br><br>This also applies to any subsequent Modify Submission ('M') of a previously submitted Time-Window Submission ('W')."
     },
     "16021": {
         "err_no": 16021,
@@ -1260,7 +1260,7 @@
     "16055": {
         "err_no": 16055,
         "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR",
-        "desc_de46": "If the firearm is Automatic, add Automatic ('A') as the third character of code; valid only with the following codes:{::nomarkdown}<ul><li>(11) Firearm</li><li>(12) Handgun</li><li>(13) Rifle</li><li>(14) Shotgun</li><li>(15) Other Firearm</li></ul>{:/}"
+        "desc_de46": "If the firearm is Automatic, add Automatic ('A') as the third character of code; valid only with the following codes:{::nomarkdown}<ul><li>11 - Firearm</li><li>12 - Handgun</li><li>13 - Rifle</li><li>14 - Shotgun</li><li>15 - Other Firearm</li></ul>{:/}"
     },
     "16056": {
         "err_no": 16056,
@@ -1550,7 +1550,7 @@
     "22105": {
         "err_no": 22105,
         "err_message": "AGE CANNOT BE UNKNOWN IF DATE OF BIRTH IS KNOWN",
-        "desc_del47": "AGE CANNOT BE UNKNOWN if Date of Birth (L47) is Known. If Age of an Arrestee (at Time of Arrest) is reported as Unknown ('00') and Date of Birth of Arrestee (L47) is also reported, this incident will be rejected. If Date of Birth is Known, Age CANNOT be unknown."
+        "desc_del47": "AGE CANNOT BE UNKNOWN if Date of Birth (L47) is Known. If the following two conditions are true: {::nomarkdown}<ul><li> Age of an Arrestee (at Time of Arrest) is reported as Unknown ('00')</li><li>Date of Birth of Arrestee (L47) is also reported</li></ul>{:/} This incident will be rejected. If Date of Birth is Known, Age CANNOT be unknown."
     },
     "22110": {
         "err_no": 22110,
@@ -1627,7 +1627,7 @@
     "24030": {
         "err_no": 24030,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
-        "desc_del37": "Each component of the date must be valid; that is, months must be 01-12, days must be 01-31, and year must include the century (i.e., 19xx, 20xx). In addition, days CANNOT exceed maximum for the month (for example, June CANNOT have 31 days). The data CANNOT be greater than that entered within the 'Month of Data Submission' and 'Year of Data Submission' fields on the data record. For example, if 'Month of Data Submission' and 'Year of Data Submission' are '06/2014', the Date of Birth CANNOT contain any date 07/01/2014 or greater."
+        "desc_del37": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
     },
     "24031": {
         "err_no": 24031,
@@ -1653,7 +1653,7 @@
     "25030": {
         "err_no": 25030,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
-        "desc_del26": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record<ul><li>EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater.</li></ul></li></ul>{:/}"
+        "desc_del26": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
     },
     "25031": {
         "err_no": 25031,
@@ -1673,7 +1673,7 @@
         "err_no": 26010,
         "err_message": "AGE CANNOT BE ESTIMATED IF DATE OF BIRTH IS KNOWN",
         "desc_de47": "ESTIMATED AGE: Age CANNOT be an estimate if Date of Birth of Arrestee (47) is reported.",
-        "desc_del47": "Age CANNOT BE ESTIMATED when Date of Birth is Known. If the age is reported as Estimated (with trailing 'E') in Age of Arrestee at the Time of Arrest (47), and the agency also reports Date of Birth of Arrestee (L47) this incident will be rejected. When Date of Birth is known, Age CANNOT be estimated."
+        "desc_del47": "Age CANNOT BE ESTIMATED when Date of Birth is Known. If the following two conditions are true: {::nomarkdown}<ul><li>The age is reported as Estimated (with trailing 'E') in Age of Arrestee at the Time of Arrest (47) </li><li> The agency also reports Date of Birth of Arrestee (L47)</li></ul>{:/} This incident will be rejected. When Date of Birth is known, Age CANNOT be estimated."
     },
     "26201": {
         "err_no": 26201,
