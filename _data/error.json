@@ -1750,7 +1750,8 @@
     },
     "83000": {
         "err_no": 83000,
-        "err_message": "THIS SEGMENT MUST HAVE A VALID CODE IN DE 1 AND DE 2."
+        "err_message": "THIS SEGMENT MUST HAVE A VALID CODE IN DE 1 AND DE 2.",
+        "desc_md3": "This segment must have valid data in ORI Number (1) and Incident Number (2)."
     },
     "83100": {
         "err_no": 83100,
@@ -1765,338 +1766,423 @@
     "84001": {
         "err_no": 84001,
         "err_message": "WHEN LRS = 200 AND DE 7 = 'A', THEN DE 14 MUST BE A CODE OF '1' OR '8'",
-        "desc_de14": "For NIBRS 35A Offenses, If Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST be None ('1') or Unknown ('8'). These are the only two data values accepted."
+        "desc_de14": "For NIBRS 35A Offenses, If Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST be None ('1') or Unknown ('8'). These are the only two data values accepted.",
+        "desc_md4s1": "When an Incident contains an offense of ARSON (NIBRS Code '200') and Offense Attempted/Completed (7) is Attempted (“''), then Type of Property Loss (14) MUST contain a value of None ('1') or Unknown ('8')."
+        
     },
     "84002": {
         "err_no": 84002,
-        "err_message": "WHEN LRS = 13 A, 13 B OR 13 C DE 7 MUST EQUAL 'C', AND DE 25 MUST BE A CODE OF 'I' OR 'L'"
+        "err_message": "WHEN LRS = 13 A, 13 B OR 13 C DE 7 MUST EQUAL 'C', AND DE 25 MUST BE A CODE OF 'I' OR 'L'",
+        "desc_md4s2": "When an Incident contains an offense of AGGRAVATED ASSAULT, SIMIPLE ASSAULT OR INTIMIDATION (NIBRS Code 13A, 13B or 13C), then Offense Attempted/Completed (7) MUST contain a value of Completed ('C'), and Type of Victim (25) MUST contain a value of Individual ('I') or Law Enforcement Officer ('L')."
     },
     "84003": {
         "err_no": 84003,
-        "err_message": "WHEN LRS = 510 AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'."
+        "err_message": "WHEN LRS = 510 AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'.",
+        "desc_md4s3": "When an Incident contains an offense of BRIBERY (NIBRS Code 510), and Offense Attempted/Completed (7) contains a value of Attempted ('A'), then Type of Property Loss (14) MUST contain a value of None ('1') or Unknown ('8')."
     },
     "84004": {
         "err_no": 84004,
-        "err_message": "WHEN LRS = 220 AND DE 9 = '14' OR '19', THEN DE 10 AND 11 MUST HAVE A VAL ID CODE."
+        "err_message": "WHEN LRS = 220 AND DE 9 = '14' OR '19', THEN DE 10 AND 11 MUST HAVE A VAL ID CODE.",
+        "desc_md4s4": "When an Incident contains an offense of BURGLARY/BREAKING AND ENTERING (NIBRS Code 220), and Location Type (9) contains a value of Hotel/Motel ('14') or Rental Storage Facility ('19'), then Number of Premises Entered (10) and Method of Entry (11) MUST contain valid values."
     },
     "84005": {
         "err_no": 84005,
         "err_message": "WHEN LRS = 250, DE 12 MUST HAVE A VALID CODE.",
-        "desc_de12": "Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code when NIBRS Offense Code is <b>250</b>."
+        "desc_de12": "Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code when NIBRS Offense Code is <b>250</b>.",
+        "desc_md4s5": "When an Incident contains an offense of COUNTERFEITING/FORGERY (NIBRS Code 250), then Type of Criminal Activity/Gang Information (12) MUST contain a valid value."
     },
     "84006": {
         "err_no": 84006,
-        "err_message": "WHEN LRS = 290 AND DE 7 = 'A', AND DE 14 MUST HAVE A CODE OF '1' OR '8'."
+        "err_message": "WHEN LRS = 290 AND DE 7 = 'A', AND DE 14 MUST HAVE A CODE OF '1' OR '8'.",
+        "desc_md4s6": "When an Incident contains an offense of DESTRUCTION/DAMAGE/VANDALISM (NIBRS Code 290) and Offense Attempted/Completed (7) = 'A', then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84007": {
         "err_no": 84007,
         "err_message": "WHEN LRS = 35 A OR 35 B, DE 12 MUST HAVE A VALID CODE.",
-        "desc_de12": "When NIBRS Offense Code is <b>35A or 35B</b>, then Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code."
+        "desc_de12": "When NIBRS Offense Code is <b>35A or 35B</b>, then Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.",
+        "desc_md4s7": "Incidents submitted with a DRUG/NARCOTIC VIOLATION (NIBRS Code 35A) or DRUG EQUIPMENT VIOLATION (NIBRS Code 35B), MUST contain a valid value in Type of Criminal Activity/Gang Information (12)."
     },
     "84008": {
         "err_no": 84008,
-        "err_message": "WHEN LRS = 210, DE 13 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 210, DE 13 MUST HAVE A VALID CODE.",
+        "desc_md4s8": "Incidents submitted with an EXTORTION/BLACKMAIL (NIBRS Code 210) offense, MUST contain a valid value in Type of Weapon/Force Involved (13)."
     },
     "84009": {
         "err_no": 84009,
-        "err_message": "WHEN LRS = 26 A - E AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'."
+        "err_message": "WHEN LRS = 26 A - E AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'.",
+        "desc_md4s9": "When an Incident contains FRAUD OFFENSES (NIBRS Code 26A-E) and Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84010": {
         "err_no": 84010,
-        "err_message": "WHEN LRS = 39 A - D AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'."
+        "err_message": "WHEN LRS = 39 A - D AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'.",
+        "desc_md4s10": "When an Incident contains GAMBLING OFFENSES (NIBRS Code 39A-D) and Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8').",
+        "desc_md4s22": "When an Incident contains ANIMAL CRUELTY OFFENSES (720) and Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84011": {
         "err_no": 84011,
-        "err_message": "WHEN LRS = 09 A, 09 B OR 09 C, DE 7 MUST EQUAL 'C', DE 13 & 31 MUST HAVE A VALID CODE, AND DE 25 MUST EQUAL 'I' OR 'L'."
+        "err_message": "WHEN LRS = 09 A, 09 B OR 09 C, DE 7 MUST EQUAL 'C', DE 13 & 31 MUST HAVE A VALID CODE, AND DE 25 MUST EQUAL 'I' OR 'L'.",
+        "desc_md4s11": "When an Incident contains HOMICIDE OFFENSES (NIBRS Code 09A, 09B and 09C), then Offense Attempted/Completed (7) MUST contain Completed ('C'), Type of Weapon/Force Involved (13) and Aggravated Assault/Homicide Circumstance (31) MUST contain valid values, and Type of Victim (25) MUST be an Individual ('I') ."
     },
     "84012": {
         "err_no": 84012,
-        "err_message": "WHEN LRS = 100, DE 13 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 100, DE 13 MUST HAVE A VALID CODE.",
+        "desc_md4s12": "When an Incident contains KIDNAPPING/ABDUCTION (NIBRS Code 100), THEN Type of Weapon/Force Involved (13) MUST contain a valid value."
     },
     "84013": {
         "err_no": 84013,
-        "err_message": "WHEN LRS = 23 A - H OR 270 AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'."
+        "err_message": "WHEN LRS = 23 A - H OR 270 AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'.",
+        "desc_md4s13": "When an Incident contains LARCENY/THEFT OFFENSES (NIBRS Codes 23A-H) or EMBEZZLEMENT (NIBRS Code 270) offenses, and Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84014": {
         "err_no": 84014,
-        "err_message": "WHEN LRS = 240 AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'."
+        "err_message": "WHEN LRS = 240 AND DE 7 = 'A', THEN DE 14 MUST HAVE A CODE OF '1' OR '8'.",
+        "desc_md4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense and Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84015": {
         "err_no": 84015,
         "err_message": "WHEN LRS = 370, DE 12 MUST HAVE A VALID CODE AND DE 25 MUST EQUAL 'S'.",
-        "desc_de12": "When NIBRS Offense Code is <b>370</b> the following MUST be true::{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}"
+        "desc_de12": "When NIBRS Offense Code is <b>370</b> the following MUST be true::{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}",
+        "desc_md4s15": "When an Incident contains PORNOGRAPHY/OBSCENE MATERIAL OFFENSES (NIBRS Code 370), Type of Criminal Activity/Gang Information (12) MUST contain a valid value and Type of Victim (25) MUST be Society ('S')."
     },
     "84016": {
         "err_no": 84016,
-        "err_message": "WHEN LRS = 40 A OR 40 B, DE 25 MUST EQUAL 'S'."
+        "err_message": "WHEN LRS = 40 A OR 40 B, DE 25 MUST EQUAL 'S'.",
+        "desc_md4s16": "When an Incident contains PROSTITUTION OFFENSES (NIBRS Code 40A AND 40B), then Type of Victim (25) MUST be Society ('S')."
     },
     "84017": {
         "err_no": 84017,
-        "err_message": "WHEN LRS = 120, DE 13 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 120, DE 13 MUST HAVE A VALID CODE.",
+        "desc_md4s17": "When an Incident contains ROBBERY OFFENSES (NIBRS Code 120), then Type of Weapon/Force Involved (13) MUST contain a valid value."
     },
     "84018": {
         "err_no": 84018,
-        "err_message": "WHEN LRS = 11 A - 11 D OR 64 A OR 64 B, DE 13 MUST HAVE A VALID CODE, DE 25 MUST HAVE A 'I' OR 'L', AND DE 33 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 11 A - 11 D OR 64 A OR 64 B, DE 13 MUST HAVE A VALID CODE, DE 25 MUST HAVE A 'I' OR 'L', AND DE 33 MUST HAVE A VALID CODE.",
+        "desc_md4s18": "When an Incident contains SEX OFFENSES – FORCIBLE (NIBRS Code 11A-D), then Type of Weapon/Force Involved (13) MUST contain a valid value, Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L'), and Type of Injury (33) MUST contain a valid value."
     },
     "84019": {
         "err_no": 84019,
-        "err_message": "WHEN LRS = 36 A OR 36 B, DE 25 MUST HAVE A 'I' OR 'L'."
+        "err_message": "WHEN LRS = 36 A OR 36 B, DE 25 MUST HAVE A 'I' OR 'L'.",
+        "desc_md4s19": "When an Incident contains SEX OFFENSES – NON-FORCIBLE (NIBRS Codes 36A or 36B), then Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L')."
     },
     "84020": {
         "err_no": 84020,
         "err_message": "WHEN LRS = 280, DE 12 MUST HAVE A VALID CODE.",
-        "desc_de12": "When NIBRS Offense Code is <b>280</b> the following MUST be true::{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li></ul>{:/}"
+        "desc_de12": "When NIBRS Offense Code is <b>280</b> the following MUST be true::{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li></ul>{:/}",
+        "desc_md4s20": "When an Incident contains STOLEN PROPERTY OFFENSES (NIBRS Code 280), Type of Criminal Activity/Gang Information (12) MUST contain a valid value."
     },
     "84021": {
         "err_no": 84021,
         "err_message": "WHEN LRS = 520, DE 12 & DE 13 MUST HAVE A VALID CODE AND DE 25 MUST BE EQUAL TO 'S'.",
-        "desc_de12": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}"
+        "desc_de12": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}",
+        "desc_md4s21": "When an Incident is submitted with WEAPONS LAW VIOLATIONS (Crimes Against Society) (NIBRS Code 520) then Type of Criminal Activity/Gang Information (12) and Type of Weapon/Force Involved (13) MUST contain valid values and Type of Victim (25) MUST be Society ('S')."
     },
     "84101": {
         "err_no": 84101,
-        "err_message": "WHEN LRS = 200 AND DE 7 = 'C', THEN DE 14 MUST BE A CODE OF '2' AND DE 15 AND 16 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 200 AND DE 7 = 'C', THEN DE 14 MUST BE A CODE OF '2' AND DE 15 AND 16 MUST HAVE A VALID CODE.",
+        "desc_md4s1": "When an Incident contains an offense of ARSON (NIBRS Code '200') and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST contain a value of Burned ('2'), Property Description (15) MUST contain a valid code, and Value of Property (16) MUST contain a valid value."
     },
     "84102": {
         "err_no": 84102,
-        "err_message": "WHEN LRS = 13 A, 13 B OR 13 C DE 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MU ST HAVE A VALID CODE.'"
+        "err_message": "WHEN LRS = 13 A, 13 B OR 13 C DE 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MU ST HAVE A VALID CODE.'",
+        "desc_md4s2": "When an Incident contains an offense of AGGRAVATED ASSAULT, SIMIPLE ASSAULT OR INTIMIDATION (NIBRS Code 13A, 13B or 13C), and Offender Sequence Number (36) IS NOT EQUAL to '000', then Offender Number to be Related (34) and Relationship of Victim to Offender (35) MUST have valid codes."
     },
     "84103": {
         "err_no": 84103,
-        "err_message": "WHEN LRS = 510 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 1 ', ' 5 ', ' 7 ' OR ' 8 '.'"
+        "err_message": "WHEN LRS = 510 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 1 ', ' 5 ', ' 7 ' OR ' 8 '.'",
+        "desc_md4s3": "When an Incident contains an offense of BRIBERY (NIBRS Code 510), and Offense Attempted/Completed (7) contains a value of Completed ('C'), then Type of Property Loss (14) MUST contain a value of None ('1'), Seized ('5'), Stolen ('7') or Unknown ('8')."
     },
     "84104": {
         "err_no": 84104,
-        "err_message": "WHEN LRS = 220 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+        "err_message": "WHEN LRS = 220 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '.'",
+        "desc_md4s4": "When an Incident contains an offense of BURGLARY/BREAKING AND ENTERING (NIBRS Code 220), and Offense Attempted/Completed (7) = 'A', then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84105": {
         "err_no": 84105,
-        "err_message": "WHEN LRS = 250 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+        "err_message": "WHEN LRS = 250 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '.'",
+        "desc_md4s5": "When an Incident contains an offense of COUNTERFEITING/FORGERY (NIBRS Code 250) and Offense Attempted/Completed (7) = 'A', then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84106": {
         "err_no": 84106,
-        "err_message": "WHEN LRS = 290 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 4 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'"
+        "err_message": "WHEN LRS = 290 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 4 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'",
+        "desc_md4s6": "When an Incident contains an offense of DESTRUCTION/DAMAGE/VANDALISM (NIBRS Code 290) and Offense Attempted/Completed (7) = 'C', then Type of Property Loss (14) MUST have a value of Destroyed/Damaged/Vandalized ('4') and Property Description (15) and Value of Property (16) MUST contain valid values."
     },
     "84107": {
         "err_no": 84107,
-        "err_message": "WHEN LRS = 35 A OR 35 B AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '.'"
+        "err_message": "WHEN LRS = 35 A OR 35 B AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '.'",
+        "desc_md4s7": "When an Incident contains an offense of DRUG/NARCOTIC VIOLATION (NIBRS Code 35A) or DRUG EQUIPMENT VIOLATION (NIBRS Code 35B) and Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84108": {
         "err_no": 84108,
-        "err_message": "WHEN LRS = 210 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+        "err_message": "WHEN LRS = 210 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '",
+        "desc_md4s8": "When an Incident contains an offense of EXTORTION/BLACKMAIL (NIBRS Code 210) and Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84109": {
         "err_no": 84109,
-        "err_message": "WHEN LRS = 26 A - E AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 5 ' OR ' 7 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'"
+        "err_message": "WHEN LRS = 26 A - E AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 5 ' OR ' 7 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'",
+        "desc_md4s9": "When an Incident contains FRAUD OFFENSES (NIBRS Code 26A-E) and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST have a value of Recovered ('5') or Stolen ('7') and Property Description (15) and Value of Property (16) MUST both contain valid values."
     },
     "84110": {
         "err_no": 84110,
-        "err_message": "WHEN LRS = 39 A - D AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 6 ', DE 15 & 16 MUST HAVE A VALID CODE, AND DE 25 MUST BE ' S '.'"
+        "err_message": "WHEN LRS = 39 A - D AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 6 ', DE 15 & 16 MUST HAVE A VALID CODE, AND DE 25 MUST BE ' S '.'",
+        "desc_md4s10": "When an Incident contains GAMBLING OFFENSES (NIBRS Code 39A-D) and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST contain a value of Seized ('6'), Property Description (15) and Value of Property (16) MUST contain valid values, and Type of Victim (25) MUST be Society ('S').",
+        "desc_md4s22": "When an Incident contains ANIMAL CRUELTY OFFENSES (720) and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST contain a value of Seized ('6'), Property Description (15) and Value of Property (16) MUST contain valid values, and Type of Victim (25) MUST be Society ('S')."
     },
     "84111": {
         "err_no": 84111,
-        "err_message": "WHEN LRS = 09 A, 09 B OR 09 C, IF DE 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MUST HAVE A VALID CODE.'"
+        "err_message": "WHEN LRS = 09 A, 09 B OR 09 C, IF DE 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MUST HAVE A VALID CODE.'",
+        "desc_md4s11": "When an Incident contains HOMICIDE OFFENSES (NIBRS Code 09A, 09B and 09C) and Offender Sequence Number (36) is NOT EQUAL to '000', then Offender Number to be Related (34) and Relationship of Victim to Offender (35) MUST have valid values."
     },
     "84112": {
         "err_no": 84112,
-        "err_message": "WHEN LRS = 100 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+        "err_message": "WHEN LRS = 100 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '",
+        "desc_md4s12": "When an Incident contains KIDNAPPING/ABDUCTION (NIBRS Code 100) and Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84113": {
         "err_no": 84113,
-        "err_message": "WHEN LRS = 23 A - H OR 270 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 5 ' OR ' 7 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'"
+        "err_message": "WHEN LRS = 23 A - H OR 270 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 5 ' OR ' 7 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'",
+        "desc_md4s13": "When an Incident contains LARCENY/THEFT OFFENSES (NIBRS Codes 23A-H) or EMBEZZLEMENT (NIBRS Code 270) offenses, and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST have a value of Recovered ('5') or Stolen ('7'), and. Property Description (15) and Value of Property (16) MUST contain valid values."
     },
     "84114": {
         "err_no": 84114,
-        "err_message": "WHEN LRS = 240 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 5 ' OR ' 7 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'"
+        "err_message": "WHEN LRS = 240 AND DE 7 = C ', THEN DE 14 MUST HAVE A CODE OF ' 5 ' OR ' 7 ' AND DE 15 & 16 MUST HAVE A VALID CODE.'",
+        "desc_md4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST have a value of Recovered ('5') or Stolen ('7'), and. Property Description (15) and Value of Property (16) MUST contain valid values."
     },
     "84117": {
         "err_no": 84117,
-        "err_message": "WHEN LRS = 120 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+        "err_message": "WHEN LRS = 120 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '",
+        "desc_md4s17": "When an Incident contains ROBBERY OFFENSES (NIBRS Code 120) and Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84118": {
         "err_no": 84118,
-        "err_message": "WHEN LRS = 11 A - 11 D OR 64 A OR 64 B AND 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MUST HA VE A VALID CODE.'"
+        "err_message": "WHEN LRS = 11 A - 11 D OR 64 A OR 64 B AND 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MUST HA VE A VALID CODE.'",
+        "desc_md4s18": "When an Incident contains SEX OFFENSES – FORCIBLE (NIBRS Code 11A-D), and Offender Sequence Number (36) IS NOT EQUAL to '000', then Offender Number to be Related (34) and Relationship of Victim to Offender (35) MUST contain valid values."
     },
     "84119": {
         "err_no": 84119,
-        "err_message": "WHEN LRS = 36 A OR 36 B AND DE 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MUS T HAVE A VALID CODE.'"
+        "err_message": "WHEN LRS = 36 A OR 36 B AND DE 36 NOT EQUAL TO 000 ', THEN DE 34 AND 35 MUS T HAVE A VALID CODE.'",
+        "desc_md4s19": "When an Incident contains SEX OFFENSES – NON-FORCIBLE (NIBRS Codes 36A or 36B) and Offender Sequence Number (36) IS NOT EQUAL to '000', then Offender Number to be Related (34) and Relationship of Victim to Offender (35) MUST contain valid values."
     },
     "84120": {
         "err_no": 84120,
-        "err_message": "WHEN LRS = 280 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '"
+        "err_message": "WHEN LRS = 280 AND DE 7 = A ', THEN DE 14 MUST HAVE A CODE OF ' 1 ' OR ' 8 '. '",
+        "desc_md4s20": "When an Incident contains STOLEN PROPERTY OFFENSES (NIBRS Code 280), and Offense Attempted/Completed (7) is Attempted ('A'), then Type of Property Loss (14) MUST have a value of None ('1') or Unknown ('8')."
     },
     "84202": {
         "err_no": 84202,
-        "err_message": "WHEN LRS = 13 A, DE 13, 31 & 33 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 13 A, DE 13, 31 & 33 MUST HAVE A VALID CODE.",
+        "desc_md4s2": "When an Incident contains an offense of AGGRAVATED ASSAULT (NIBRS Code 13A) **then** Type of Weapon Involved (13), Aggravated Assault/Homicide Circumstances (31) and Injury Type (33) MUST have valid codes."
     },
     "84203": {
         "err_no": 84203,
         "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROPER TY SEGMENT CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE IN CIDENT WILL REJECT IF AN AGENCY SENDS A '7'  AND ALSO AN '8' WITHIN THE SAM",
-        "desc_de14": "When there is only one completed 'Crime Against Property' Offense in an incident, any Property Description Segments (31) reported with the incident can contain ONLY values of EITHER:{::nomarkdown}<ul><li>Stolen Property ('7')</li><li>Unknown ('8')</li></ul>{:/} The incident will be rejected if an agency sends both Stolen Property ('7') and Unknown ('8') for Type of Property Loss/Etc. within the same incident."
+        "desc_de14": "When there is only one completed 'Crime Against Property' Offense in an incident, any Property Description Segments (31) reported with the incident can contain ONLY values of EITHER:{::nomarkdown}<ul><li>Stolen Property ('7')</li><li>Unknown ('8')</li></ul>{:/} The incident will be rejected if an agency sends both Stolen Property ('7') and Unknown ('8') for Type of Property Loss/Etc. within the same incident.",
+        "desc_md4s3": "When there is ONLY ONE Crime Against Property offense with an Offense Attempted/Completed (7) value of Completed ('C') within an incident, a Property Description Segment (31) can contain either a Type of Property Loss (14) value of Stolen ('7') or Unknown ('8'), but NOT both.  The incident MUST be rejected if an agency sends a Property Description Segment (31) with both a Type of Property Loss (14) of Stolen ('7') and Unknown ('8') within the same incident."
     },
     "84204": {
         "err_no": 84204,
-        "err_message": "WHEN LRS = 220 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1', '5', '7' OR '8'."
+        "err_message": "WHEN LRS = 220 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1', '5', '7' OR '8'.",
+        "desc_md4s4": "When an Incident contains an offense of BURGLARY/BREAKING AND ENTERING (NIBRS Code 220), and Offense Attempted/Completed (7) contains a value of Completed ('C'), then Type of Property Loss (14) MUST contain a value of None ('1'), Seized ('5'), Stolen ('7') or Unknown ('8')."
     },
     "84205": {
         "err_no": 84205,
-        "err_message": "WHEN LRS = 250 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '3', '5' OR '6' AND DE 15 & 16 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 250 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '3', '5' OR '6' AND DE 15 & 16 MUST HAVE A VALID CODE.",
+        "desc_md4s5": "When an Incident contains an offense of COUNTERFEITING/FORGERY (NIBRS Code 250), and Offense Attempted/Completed (7) contains a value of Completed ('C'), then Type of Property Loss (14) MUST contain a value of Counterfeited/ Forged ('3'), Recovered ('5') or Seized ('6'), and Property Description (15) and Value of Property (16) MUST contain valid values."
     },
     "84207": {
         "err_no": 84207,
-        "err_message": "WHEN LRS = 35 A OR 35 B AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1' OR '6'."
+        "err_message": "WHEN LRS = 35 A OR 35 B AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1' OR '6'.",
+        "desc_md4s7": "When an Incident contains an offense of DRUG/NARCOTIC VIOLATION (NIBRS Code 35A) or DRUG EQUIPMENT VIOLATION (NIBRS Code 35B) and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST have a value of None '1' or Seized '6'."
     },
     "84208": {
         "err_no": 84208,
-        "err_message": "WHEN LRS = 210 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '5' OR '7' AND DE 15 & 16 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 210 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '5' OR '7' AND DE 15 & 16 MUST HAVE A VALID CODE.",
+        "desc_md4s8": "When an Incident contains an offense of EXTORTION/BLACKMAIL (NIBRS Code 210) and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST have a value of Recovered ('5') or Stolen ('7') and Property Description (15) and Value of Property (16) MUST both contain valid values."
     },
     "84209": {
         "err_no": 84209,
-        "err_message": "WHEN LRS = 26 A - E AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+        "err_message": "WHEN LRS = 26 A - E AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE.",
+        "desc_md4s9": "When an Incident contains FRAUD OFFENSES (NIBRS Code 26A-E) and Type of Property Loss (14) is Recovered ('5'), then Date Recovered ('17') MUST contain a valid date."
     },
     "84210": {
         "err_no": 84210,
         "err_message": "WHEN LRS = 39 C, DE 12 MUST HAVE A VALID CODE.",
-        "desc_de12": "Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code when NIBRS Offense Code is <b>39C</b>."
+        "desc_de12": "Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code when NIBRS Offense Code is <b>39C</b>.",
+        "desc_md4s10": "Incidents submitted with a NIBRS Codes 39C (GAMBLING OFFENSE) MUST have a valid value entered for Type of Criminal Activity/Gang Information (12)."
     },
     "84211": {
         "err_no": 84211,
-        "err_message": "WHEN LRS = 09 C, DE 31 MUST HAVE '20' OR '21' AND DE 32 MUST HAVE A VALID CODE OF 'A-G'."
+        "err_message": "WHEN LRS = 09 C, DE 31 MUST HAVE '20' OR '21' AND DE 32 MUST HAVE A VALID CODE OF 'A-G'.",
+        "desc_md4s11": "Incidents submitted with a JUSTIFIABLE HOMICIDE (NIBRS Codes 09C) offense MUST contain an Aggravated Assault/Homicide Circumstance (31) value of Criminal Killed by Private Citizen ('20') or Criminal Killed by Police Officer ('21'), and Additional Justifiable Homicide Circumstances (32) MUST contain one of the following values: {::nomarkdown}<ul><li><b>'A'  (Criminal Attacked Police Officer and That Officer Killed Criminal)</li><li>'B'  (Criminal Attacked Police Officer and Criminal Killed by Another Police Officer)</li><li>'C'  (Criminal Attacked by Civilian)</li><li>'D'  (Criminal Attempted Flight from a Crime)</li><li>'E'  (Criminal Killed in the Commission of a Crime)</li><li>'F'  (Criminal Resisted Arrest)</li><li>'G'  (Unable to Determine/Not Enough Informatioin.</b></li></ul>{:/}"
     },
     "84212": {
         "err_no": 84212,
-        "err_message": "WHEN LRS = 100 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1', '5', '7', OR '8'."
+        "err_message": "WHEN LRS = 100 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1', '5', '7', OR '8'.",
+        "desc_md4s12": "When an Incident contains an offense of KIDNAPPING/ABDUCTION (NIBRS Code 100) and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST have a value of None ('1'), Recovered ('5'), Stolen ('7') or Unknown ('8')."
     },
     "84213": {
         "err_no": 84213,
-        "err_message": "WHEN LRS = 23 A - H OR 270 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+        "err_message": "WHEN LRS = 23 A - H OR 270 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE.",
+        "desc_md4s13": "When an Incident contains LARCENY/THEFT OFFENSES (NIBRS Codes 23A-H) or EMBEZZLEMENT (NIBRS Code 270) offenses, and Type of Property Loss (14) is Recovered ('5'), then Date Recovered (17) MUST contain a valid date."
     },
     "84214": {
         "err_no": 84214,
-        "err_message": "WHEN LRS = 240 AND DE 14 = '5', THEN DE 15 MUST HAVE A VALID CODE, AND DATA ELEMENT 17 MUST HAVE A VALID DATE."
+        "err_message": "WHEN LRS = 240 AND DE 14 = '5', THEN DE 15 MUST HAVE A VALID CODE, AND DATA ELEMENT 17 MUST HAVE A VALID DATE.",
+        "desc_md4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (14) is Recovered ('5'), then Property Description (15) MUST contain a valid value and Date Recovered (17) MUST contain a valid date."
     },
     "84217": {
         "err_no": 84217,
-        "err_message": "WHEN LRS = 120 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '5' OR '7' AND DE 15 & 16 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 120 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '5' OR '7' AND DE 15 & 16 MUST HAVE A VALID CODE.",
+        "desc_md4s17": "When an Incident contains ROBBERY OFFENSES (NIBRS Code 120) and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST have a value of Recovered ('5') or Stolen ('7'), and. Property Description (15) and Value of Property (16) MUST contain valid values."
     },
     "84220": {
         "err_no": 84220,
-        "err_message": "WHEN LRS = 280 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1' OR '5'."
+        "err_message": "WHEN LRS = 280 AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1' OR '5'.",
+        "desc_md4s20": "When an Incident contains STOLEN PROPERTY OFFENSES (NIBRS Code 280), and Offense Attempted/Completed (7) is Completed ('C'), then Type of Property Loss (14) MUST have a value of None ('1') or Recovered ('5')."
     },
     "84302": {
         "err_no": 84302,
-        "err_message": "WHEN LRS = 13 A AND DE 25 = 'L' MUST HAVE THREE VALID CODES, ONE OF '02' AND ANOTHER VALID CODE OF '01' OR '03-10' AND ONE CODE OF '12-18' IN DE 31 AND A CODE OF 'K-U' IN DE 32"
+        "err_message": "WHEN LRS = 13 A AND DE 25 = 'L' MUST HAVE THREE VALID CODES, ONE OF '02' AND ANOTHER VALID CODE OF '01' OR '03-10' AND ONE CODE OF '12-18' IN DE 31 AND A CODE OF 'K-U' IN DE 32",
+        "desc_md4s2": "When an Incident contains an offense of AGGRAVATED ASSAULT (NIBRS Code 13A) **and** Type of Victim (25) is Law Enforcement Officer ('L'), then Type of Officer Activity/Circumstance (25A)  and Officer Assignment Type (25B) MUST contain valid values."
     },
     "84303": {
         "err_no": 84303,
-        "err_message": "WHEN LRS = 510 AND DE 14 = '5' OR '7', THEN DE 15 AND 16 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 510 AND DE 14 = '5' OR '7', THEN DE 15 AND 16 MUST HAVE A VALID CODE.",
+        "desc_md4s3": "When an Incident contains an offense of BRIBERY (NIBRS Code 510), and Type of Property Loss (14) contains a value of Recovered ('5') or Stolen ('7'), then Property Description (15) and Value of Property (16) MUST contain valid data values."
     },
     "84304": {
         "err_no": 84304,
-        "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROPER TY SEGMENT CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE IN CIDENT WILL REJECT IF AN AGENCY SENDS A '7' AND ALSO AN '8' WITHIN THE SAM"
+        "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROPER TY SEGMENT CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE IN CIDENT WILL REJECT IF AN AGENCY SENDS A '7' AND ALSO AN '8' WITHIN THE SAM",
+        "desc_md4s4": "When there is ONLY ONE Crime Against Property offense with an Offense Attempted/Completed (7) value of Completed ('C') within an incident, a Property Description Segment (31) can contain either a Type of Property Loss (14) value of Stolen ('7') or Unknown ('8'), but NOT both.  The incident MUST be rejected if an agency sends a Property Description Segment (31) with both a Type of Property Loss (14) of Stolen ('7') and Unknown ('8') within the same incident."
     },
     "84305": {
         "err_no": 84305,
-        "err_message": "WHEN LRS = 250 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+        "err_message": "WHEN LRS = 250 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE.",
+        "desc_md4s5": "When an Incident contains an offense of COUNTERFEITING/FORGERY (NIBRS Code 250), and Type of Property Loss (14) contains a value of Recovered ('5'), then Date Recovered (17) MUST have a valid date."
     },
     "84307": {
         "err_no": 84307,
-        "err_message": "WHEN LRS = 35 A OR 35 B, DE 16 MUST HAVE A VALID CODE ** * (OR MUST BE BLANK IF DE 14 = '1 OR '8') AND DE 25 MUST BE 'S'."
+        "err_message": "WHEN LRS = 35 A OR 35 B, DE 16 MUST HAVE A VALID CODE ** * (OR MUST BE BLANK IF DE 14 = '1 OR '8') AND DE 25 MUST BE 'S'.",
+        "desc_md4s7": "When an Incident contains an offense of DRUG/NARCOTIC VIOLATION (NIBRS Code 35A) or DRUG EQUIPMENT VIOLATION (NIBRS Code 35B), then Type of Victim (25) MUST be Society ('S'). Also, Value of Property (16) MUST contain a valid value; or MUST be BLANK (G) if Type of Property Loss (14) contains None ('1') or Unknown ('8')."
     },
     "84308": {
         "err_no": 84308,
-        "err_message": "WHEN LRS = 210 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+        "err_message": "WHEN LRS = 210 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE.",
+        "desc_md4s8": "When an Incident contains an offense of EXTORTION/BLACKMAIL (NIBRS Code 210) and Type of Property Loss (14) is Recovered ('5'), then Date Recovered ('17') MUST contain a valid date."
     },
     "84311": {
         "err_no": 84311,
-        "err_message": "WHEN LRS = 09 A AND DE 25 = 'L', MUST HAVE TWO VALID CODES;ONE CODE '01' OR '03-10' AND ONE CODE OF '12-18' IN DE 31 AND A VALID CODE OF 'K-U' IN DATA ELEMENT 32."
+        "err_message": "WHEN LRS = 09 A AND DE 25 = 'L', MUST HAVE TWO VALID CODES;ONE CODE '01' OR '03-10' AND ONE CODE OF '12-18' IN DE 31 AND A VALID CODE OF 'K-U' IN DATA ELEMENT 32.",
+        "desc_md4s11": "Incidents submitted with a MURDER OR NONNEGLIGENT MANSLAUGHTER (NIBRS Codes 09A) offense and where Type of Victim (25) contains Law Enforcement Officer ('L'), then Type of Officer Activity/Circumstance (25A) and Officer Assignment Type (25B) MUST contain valid values."
     },
     "84312": {
         "err_no": 84312,
-        "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROP - ERTY SEG.CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE INCIDENT WILL REJECT IF AN AGENCY SENDS A '7' AND ALSO AN '8' WITHIN THE SA"
+        "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROP - ERTY SEG.CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE INCIDENT WILL REJECT IF AN AGENCY SENDS A '7' AND ALSO AN '8' WITHIN THE SA",
+        "desc_md4s12": "When there is only ONE COMPLETED PROPERTY OFFENSE in an incident, a property segment can contain a '7' = Stolen Property or an '8' = Unknown.  The incident will reject if an agency sends a '7' and also an '8' within the same incident, when there is only one completed property offense within the incident."
     },
     "84314": {
         "err_no": 84314,
-        "err_message": "WHEN LRS = 240 AND DE 14 = '5', IF DE 15 HAS A CODE OF '03, ' 05 ', ' 24 ', ' 28 ', OR ' 37 ', THEN DATA ELEMENT 19 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 240 AND DE 14 = '5', IF DE 15 HAS A CODE OF '03, ' 05 ', ' 24 ', ' 28 ', OR ' 37 ', THEN DATA ELEMENT 19 MUST HAVE A VALID CODE.",
+        "desc_md4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (14) is Recovered ('5'), then Property Description (15) MUST contain one of the following codes, {::nomarkdown}<ul><li><b>'03'  (Automobiles)</li><li>'05'  (Buses)</li><li>'24'  (Other Motor Vehicles)</li><li>'28'  (Recreational Vehicles)</li><li>'37'  (Trucks)</li></b></li></ul>{:/} <br> and Number of Recovered Vehicles (19) MUST contain a valid value."
     },
     "84317": {
         "err_no": 84317,
-        "err_message": "WHEN LRS = 120 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+        "err_message": "WHEN LRS = 120 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE.",
+        "desc_md4s17": "When an Incident contains ROBBERY OFFENSES (NIBRS Code 120) and Type of Property Loss (14) is Recovered ('5'), then Date Recovered (17) MUST contain a valid date."
     },
     "84320": {
         "err_no": 84320,
-        "err_message": "WHEN LRS = 280 AND DE 14 = '5', THEN DE 15, 16 & 17 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 280 AND DE 14 = '5', THEN DE 15, 16 & 17 MUST HAVE A VALID CODE.",
+        "desc_md4s20": "When an Incident contains STOLEN PROPERTY OFFENSES (NIBRS Code 280) and Type of Property Loss (14) is Recovered ('5'), then Property Description (15), Value of Property (16) and Date Recovered (17) MUST all contain valid values."
     },
     "84402": {
         "err_no": 84402,
-        "err_message": "WHEN LRS = 13 B, DE 13 MUST HAVE A VALID CODE AND DE 33 MUST HAVE A CODE OF 'M' OR 'N'."
+        "err_message": "WHEN LRS = 13 B, DE 13 MUST HAVE A VALID CODE AND DE 33 MUST HAVE A CODE OF 'M' OR 'N'.",
+        "desc_md4s2": "When an Incident contains an offense of SIMPLE ASSAULT (NIBRS Code 13B) **then** Type of Weapon/Force Involved (13) MUST contain a valid value, and Type of Injury (33) MUST have a value of Apparent Minor Injury ('M') or None ('N')."
     },
     "84403": {
         "err_no": 84403,
-        "err_message": "WHEN LRS = 510 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+        "err_message": "WHEN LRS = 510 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE.",
+        "desc_md4s3": "When an Incident contains an offense of BRIBERY (NIBRS Code 510), and Type of Property Loss (14) contains a value of Recovered ('5'), then Date Recovered (17) MUST contain a valid date."
     },
     "84404": {
         "err_no": 84404,
-        "err_message": "WHEN LRS = 220 AND DE 14 = '5' OR '7', THEN DE 15 & 16 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 220 AND DE 14 = '5' OR '7', THEN DE 15 & 16 MUST HAVE A VALID CODE.",
+        "desc_md4s4": "When an Incident contains an offense of BURGLARY/BREAKING AND ENTERING (NIBRS Code 220), and Type of Property Loss (14) contains a value of Recovered ('5') or Stolen ('7'), then Property Description (15) and Value of Property (16) MUST contain valid data values."
     },
     "84407": {
         "err_no": 84407,
-        "err_message": "WHEN LRS = 35 A AND DE 14 = '6', THEN DE 15 CANNOT BE EQUAL TO '11'."
+        "err_message": "WHEN LRS = 35 A AND DE 14 = '6', THEN DE 15 CANNOT BE EQUAL TO '11'.",
+        "desc_md4s7": "When an Incident contains an offense of DRUG/NARCOTIC VIOLATION (NIBRS Code 35A) and Type of Property Loss (14) is Seized '6', then Property Description (15) CANNOT BE EQUAL to Drug Narcotic Equipment '11'."
     },
     "84408": {
         "err_no": 84408,
-        "err_message": "WHEN LRS = 210 AND DE 25 = 'I' OR 'L', THEN DE 33 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 210 AND DE 25 = 'I' OR 'L', THEN DE 33 MUST HAVE A VALID CODE.",
+        "desc_md4s8": "When an Incident contains an offense of EXTORTION/BLACKMAIL (NIBRS Code 210) and Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L'), then Type of Injury (33) MUST contain a valid value."
     },
     "84411": {
         "err_no": 84411,
-        "err_message": "WHEN LRS = 09 B AND DE 25 = 'L', MUST HAVE TWO VALID CODES;ONE CODE OF '30-34' AND ONE CODE OF '12-18' IN DE 31 AND A VALID CODE OF 'K-U' IN DATA ELEMENT 32"
+        "err_message": "WHEN LRS = 09 B AND DE 25 = 'L', MUST HAVE TWO VALID CODES;ONE CODE OF '30-34' AND ONE CODE OF '12-18' IN DE 31 AND A VALID CODE OF 'K-U' IN DATA ELEMENT 32",
+        "desc_md4s11": "Incidents submitted with a NEGLIGENT MANSLAUGHTER (NIBRS Codes 09B) offense and where Type of Victim (25) contains Law Enforcement Officer ('L'), then Type of Officer Activity/Circumstance (25A) and Officer Assignment Type (25B) MUST contain  valid values."
     },
     "84412": {
         "err_no": 84412,
-        "err_message": "WHEN LRS = 100 AND DE 14 EQUALS TO '5' OR '7', THEN DE 15 AND 16 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 100 AND DE 14 EQUALS TO '5' OR '7', THEN DE 15 AND 16 MUST HAVE A VALID CODE.",
+        "desc_md4s12": "When an Incident contains KIDNAPPING/ABDUCTION (NIBRS Code 100) and Type of Property Loss (14) is Recovered ('5') or Stolen ('7'), then Property Description (15) and Value of Property (16) MUST contain valid values."
     },
     "84414": {
         "err_no": 84414,
-        "err_message": "WHEN LRS = 240 AND DE 14 = '7', THEN DE 15 MUST HAVE A CODE OF '03', '05', '24', '28', OR '37' AND DATA ELEMENT 18 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 240 AND DE 14 = '7', THEN DE 15 MUST HAVE A CODE OF '03', '05', '24', '28', OR '37' AND DATA ELEMENT 18 MUST HAVE A VALID CODE.",
+        "desc_md4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (14) is Stolen ('7'), then Property Description (15) MUST contain one of the following codes, {::nomarkdown}<ul><li><b>'03'  (Automobiles)</li><li>'05'  (Buses)</li><li>'24'  (Other Motor Vehicles)</li><li>'28'  (Recreational Vehicles)</li><li>'37'  (Trucks)</li></b></li></ul>{:/} <br> and Number of Stolen Vehicles (18) MUST contain a valid value."
     },
     "84417": {
         "err_no": 84417,
-        "err_message": "WHEN LRS = 120 AND DE 25 = 'I' OR 'L', THEN DE 33 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 120 AND DE 25 = 'I' OR 'L', THEN DE 33 MUST HAVE A VALID CODE.",
+        "desc_md4s17": "When an Incident contains ROBBERY OFFENSES (NIBRS Code 120) and Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L'), then Type of Injury  (33) MUST contain a valid value."
     },
     "84502": {
         "err_no": 84502,
-        "err_message": "WHEN LRS = 13 B AND DE 25 = 'L' MUST HAVE THREE VALID CODES, ONE OF '02' AND ANOTHER VALID CODE OF '01' OR '03-10' AND ONE CODE OF '12-18' IN DE 31 AND A VALID CODE OF 'K-U' IN DE 32"
+        "err_message": "WHEN LRS = 13 B AND DE 25 = 'L' MUST HAVE THREE VALID CODES, ONE OF '02' AND ANOTHER VALID CODE OF '01' OR '03-10' AND ONE CODE OF '12-18' IN DE 31 AND A VALID CODE OF 'K-U' IN DE 32",
+        "desc_md4s2": "When an Incident contains an offense of SIMPLE ASSAULT (NIBRS Code 13B) **and** Type of Victim (25) is Law Enforcement Officer ('L'), then Type of Officer Activity/Circumstance (25A) and Officer Assignment Type (25B) MUST contain valid values."
     },
     "84504": {
         "err_no": 84504,
-        "err_message": "WHEN LRS = 220 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+        "err_message": "WHEN LRS = 220 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE.",
+        "desc_md4s4": "When an Incident contains an offense of BURGLARY/BREAKING AND ENTERING (NIBRS Code 220), and Type of Property Loss (14) contains a value of Recovered ('5'), then Date Recovered (17) MUST contain a valid date."
     },
     "84507": {
         "err_no": 84507,
-        "err_message": "WHEN LRS = 35 A AND DE 14 = '1', THEN DE 20 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 35 A AND DE 14 = '1', THEN DE 20 MUST HAVE A VALID CODE.",
+        "desc_md4s7": "When an Incident contains an offense of DRUG/NARCOTIC VIOLATION (NIBRS Code 35A) and Type of Property Loss (14) is None '1', then Suspected Drug Type (20) MUST contain a valid value."
     },
     "84512": {
         "err_no": 84512,
-        "err_message": "WHEN LRS = 100 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE."
+        "err_message": "WHEN LRS = 100 AND DE 14 = '5', THEN DE 17 MUST HAVE A VALID DATE.",
+        "desc_md4s12": "When an Incident contains KIDNAPPING/ABDUCTION (NIBRS Code 100) and Type of Property Loss (14) is Recovered ('5'), then Date Recovered (17) MUST contain a valid date."
     },
     "84517": {
         "err_no": 84517,
-        "err_message": "WHEN LRS = 120 AND DE 25 = 'I' OR 'L' AND DE 36 NOT EQUAL TO '000', THEN DE 34 AND 35 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 120 AND DE 25 = 'I' OR 'L' AND DE 36 NOT EQUAL TO '000', THEN DE 34 AND 35 MUST HAVE A VALID CODE.",
+        "desc_md4s17": "When an Incident contains ROBBERY OFFENSES (NIBRS Code 120) and Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L') and Offender Sequence Number (36) IS NOT EQUAL to '000', then Offender Number to be Related (34) and Relationship of Victim to Offender (35) MUST contain valid values."
     },
     "84607": {
         "err_no": 84607,
-        "err_message": "WHEN LRS = 35 A, DE 14 = '6' AND DE 15 = '10', THEN DE 16, 20, 21 AND 22 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 35 A, DE 14 = '6' AND DE 15 = '10', THEN DE 16, 20, 21 AND 22 MUST HAVE A VALID CODE.",
+        "desc_md4s7": "When an Incident contains an offense of DRUG/NARCOTIC VIOLATION (NIBRS Code 35A) and Type of Property Loss (14) is Seized '6', and Property Description (15) is Drugs/Narcotics '10', then Value of Property (16), Suspected Drug Type (20), Estimated Drug Quantity (21) and Type Drug Measurement (22) MUST all contain valid values."
     },
     "84612": {
         "err_no": 84612,
-        "err_message": "WHEN LRS = 100 AND DE 25 EQUALS TO 'I' OR 'L', THEN DE 33 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 100 AND DE 25 EQUALS TO 'I' OR 'L', THEN DE 33 MUST HAVE A VALID CODE.",
+        "desc_md4s12": "When an Incident contains KIDNAPPING/ABDUCTION (NIBRS Code 100) and Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L'), then Type of Injury (33) MUST contain a valid value."
     },
     "84707": {
         "err_no": 84707,
-        "err_message": "WHEN LRS = 35 B AND DE 14 = '6', THEN DE 15 CANNOT BE EQUAL TO '10'."
+        "err_message": "WHEN LRS = 35 B AND DE 14 = '6', THEN DE 15 CANNOT BE EQUAL TO '10'.",
+        "desc_md4s7": "Incidents submitted with a DRUG EQUIPMENT VIOLATION (Crime Against Society) offense (NIBRS Code 35B) and have a Type of Property Loss (14) of Seized '6', CANNOT contain a Property Description (15) of Drugs/Narcotics '10'."
     },
     "84712": {
         "err_no": 84712,
-        "err_message": "WHEN LRS = 100 AND DE 36 IS NOT EQUAL TO '000', DE 34 AND 35 MUST HAVE A VALID CODE."
+        "err_message": "WHEN LRS = 100 AND DE 36 IS NOT EQUAL TO '000', DE 34 AND 35 MUST HAVE A VALID CODE.",
+        "desc_md4s12": "When an Incident contains KIDNAPPING/ABDUCTION (NIBRS Code 100) and Offender Sequence Number (36) IS NOT EQUAL to '000', then Offender Number to be Related (34) and Relationship of Victim to Offender (35) MUST contain valid values."
     },
     "23220": {
         "err_no": 23220,
