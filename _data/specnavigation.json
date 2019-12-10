@@ -2,79 +2,79 @@
     "title": "Segment Layouts",
     "submenu": [{
         "subtitle": "00 - Submission Header",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#submission-header-00"
       },
       {
         "subtitle": "10 - Administrative",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#administrative-10"
       },
       {
         "subtitle": "11 - Administrative Modification",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#administrative-modification-11"
       },
       {
         "subtitle": "20 - Offense",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#offense-20"
       },
       {
         "subtitle": "30 - Property",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#property-30"
       },
       {
         "subtitle": "31 - Property Description",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#property-description-31"
       },
       {
         "subtitle": "32 - Property Modification",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#property-modification-32"
       },
       {
         "subtitle": "33 - Property/Offense",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#propertyoffense-33"
       },
       {
         "subtitle": "40 - Offender",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#offender-40"
       },
       {
         "subtitle": "41 - Offender Using/Gaming Motivation",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#offender-usinggaming-motivation-41"
       },
       {
         "subtitle": "50 - Victim",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#victim-50"
       },
       {
         "subtitle": "51 - Victim Injury",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#victim-injury-51"
       },
       {
         "subtitle": "52 - Victim/Offender Relation",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#victimoffender-relation-52"
       },
       {
         "subtitle": "60 - Arrestee",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#arrestee-60"
       },
       {
         "subtitle": "61 - Arrestee Armed",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#arrestee-armed-61"
       },
       {
         "subtitle": "62 - Arrestee Statute",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#arrestee-statute-62"
       },
       {
         "subtitle": "63 - Arrestee Modification",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#arrestee-modification-63"
       },
       {
         "subtitle": "99 - Submission Trailer",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#submission-trailer-99"
       },
       {
         "subtitle ": "01 - Zero Record",
-        "url": "./librs-spec#"
+        "url": "./librs-spec#zero-record-01"
       }
     ]
   },
