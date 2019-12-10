@@ -1,71 +1,191 @@
-[
-  {
+[{
     "title": "Segment Layouts",
-    "submenu": [
-      {"subtitle": "00 - Submission Header"},
-      {"subtitle": "10 - Administrative"},
-      {"subtitle": "11 - Administrative Modification"},
-      {"subtitle": "20 - Offense"},
-      {"subtitle": "30 - Property"},
-      {"subtitle": "31 - Property Description"},
-      {"subtitle": "32 - Property Modification"},
-      {"subtitle": "33 - Property/Offense"},
-      {"subtitle": "40 - Offender"},
-      {"subtitle": "41 - Offender Using/Gaming Motivation"},
-      {"subtitle": "50 - Victim"},
-      {"subtitle": "51 - Victim Injury"},
-      {"subtitle": "52 - Victim/Offender Relation"},
-      {"subtitle": "60 - Arrestee"},
-      {"subtitle": "61 - Arrestee Armed"},
-      {"subtitle": "62 - Arrestee Statute"},
-      {"subtitle": "63 - Arrestee Modification"},
-      {"subtitle": "99 - Submission Trailer"},
-      {"subtitle": "01 - Zero Record"}
-    ]
-  },
-  {
-    "title": "Geographical Coordinates",
-    "submenu": [
-      {"subtitle": "L54 - Station/Division/Precinct Identifier"},
-      {"subtitle": "L55 - Arrest Transaction Number"}
+    "submenu": [{
+        "subtitle": "00 - Submission Header",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "10 - Administrative",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "11 - Administrative Modification",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "20 - Offense",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "30 - Property",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "31 - Property Description",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "32 - Property Modification",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "33 - Property/Offense",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "40 - Offender",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "41 - Offender Using/Gaming Motivation",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "50 - Victim",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "51 - Victim Injury",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "52 - Victim/Offender Relation",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "60 - Arrestee",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "61 - Arrestee Armed",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "62 - Arrestee Statute",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "63 - Arrestee Modification",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle": "99 - Submission Trailer",
+        "url": "./librs-spec#"
+      },
+      {
+        "subtitle ": "01 - Zero Record",
+        "url": "./librs-spec#"
+      }
     ]
   },
   {
     "title": "Mandatories",
-    "submenu": [
-      {
+    "submenu": [{
         "subtitle": "Error Messages",
-        "sub_submenu": [
-          {"subtitle": "Initial Reports"},
-          {"subtitle": "Initial Reports with Arrestees"},
-          {"subtitle": "Updates to Submitted Incidents"},
-          {"subtitle": "Mandatory Edits"}
+        "sub_submenu": [{
+            "subtitle": "Initial Reports",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "Initial Reports with Arrestees",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "Updates to Submitted Incidents",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "Mandatory Edits",
+            "url": "./mandatories#"
+          }
         ]
       },
       {
         "subtitle": "NIBRS Mandatories",
-        "sub_submenu": [
-          {"subtitle": "ARSON (200)"},
-          {"subtitle": "AGGRAVATED ASSAULT, SIMPLE ASSAULT or INTIMIDATION (13A, 13B and 13C) 178"},
-          {"subtitle": "BRIBERY (510) 179"},
-          {"subtitle": "BURGLARY/BREAKING AND ENTERING (220)"},
-          {"subtitle": "COUNTERFEITING/FORGERY (250)"},
-          {"subtitle": "DESTRUCTION/DAMAGE/VANDALISM (290)"},
-          {"subtitle": "DRUG/NARCOTIC VIOLATION (35A) or DRUG EQUIPMENT VIOLATION (35B)"},
-          {"subtitle": "EXTORTION/BLACKMAIL (210)"},
-          {"subtitle": "FRAUD OFFENSES (26A-E)"},
-          {"subtitle": "GAMBLING OFFENSES (39A-D)"},
-          {"subtitle": "HOMICIDE OFFENSES (09A, 09B or 09C)"},
-          {"subtitle": "KIDNAPPING/ABDUCTION (100)"},
-          {"subtitle": "LARCENY/THEFT OFFENSES (23A-H)"},
-          {"subtitle": "MOTOR VEHICLE THEFT (240)"},
-          {"subtitle": "PORNOGRAPHY/OBSCENE MATERIAL OFFENSES (370)"},
-          {"subtitle": "PROSTITUTION OFFENSES (40A, 40B)"},
-          {"subtitle": "ROBBERY OFFENSES (120)"},
-          {"subtitle": "SEX OFFENSES - FORCIBLE (11A-D)"},
-          {"subtitle": "SEX OFFENSES - NON-FORCIBLE (36A-36B)"},
-          {"subtitle": "STOLEN PROPERTY OFFENSES (280)"},
-          {"subtitle": "WEAPONS LAW VIOLATIONS (520)"}
+        "sub_submenu": [{
+            "subtitle": "ARSON (200)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "AGGRAVATED ASSAULT, SIMPLE ASSAULT or INTIMIDATION (13A, 13B and 13C) 178",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "BRIBERY (510) 179",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "BURGLARY/BREAKING AND ENTERING (220)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "COUNTERFEITING/FORGERY (250)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "DESTRUCTION/DAMAGE/VANDALISM (290)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "DRUG/NARCOTIC VIOLATION (35A) or DRUG EQUIPMENT VIOLATION (35B)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "EXTORTION/BLACKMAIL (210)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "FRAUD OFFENSES (26A-E)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "GAMBLING OFFENSES (39A-D)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "HOMICIDE OFFENSES (09A, 09B or 09C)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "KIDNAPPING/ABDUCTION (100)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "LARCENY/THEFT OFFENSES (23A-H)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "MOTOR VEHICLE THEFT (240)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "PORNOGRAPHY/OBSCENE MATERIAL OFFENSES (370)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "PROSTITUTION OFFENSES (40A, 40B)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "ROBBERY OFFENSES (120)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "SEX OFFENSES - FORCIBLE (11A-D)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "SEX OFFENSES - NON-FORCIBLE (36A-36B)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "STOLEN PROPERTY OFFENSES (280)",
+            "url": "./mandatories#"
+          },
+          {
+            "subtitle": "WEAPONS LAW VIOLATIONS (520)",
+            "url": "./mandatories#"
+          }
         ]
       }
     ]

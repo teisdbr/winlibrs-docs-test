@@ -4181,7 +4181,7 @@ ___
 
 <br>
 
-### Reporting Period (C4)
+## Reporting Period (C4)
 ___
 
 **Data Characteristics:** 6 Character Date
