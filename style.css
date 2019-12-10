@@ -1,7 +1,10 @@
 
 @media print{
-    .forprinting{
-        width: 100vw;
+    @page{
+        margin-top:5mm;
+        margin-bottom:5mm;
+        margin-left:1mm;
+        margin-right:1mm;
     }
 }
 .accordian {

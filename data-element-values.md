@@ -25,7 +25,7 @@ ____
 		<td><u>{{de.name}}</u><br>{{de.definition}}</td>
 		<td style="text-align: center;">{{de.length}}</td>
 		<td style="text-align: center;">{{de.format}}</td>
-        <td style="min-width: 250px">
+        <td style="min-width: 400px">
 			{% for subsection in de.subsection %}
 				<table class="subtable">
 				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
