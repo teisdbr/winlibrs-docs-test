@@ -45,7 +45,7 @@ ____
             {% endfor %}</td>
         <td style="text-align: center;">{{ lrs.GP }}</td>
         <td style="text-align: center;">{{ lrs.PT }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.OneA_Index }}</td>
+        <td style="text-align: center;">{{ lrs.OneA_Index }}</td>
         <td style="text-align: center; white-space: nowrap">{{ lrs.Index_Class }}</td>
         <td style="text-align: center; white-space: nowrap">{{ lrs.UCR_Index }}</td>
         <td style="text-align: center; white-space: nowrap">{{ lrs.LIBRS_Index }}</td>

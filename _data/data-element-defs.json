@@ -1,14 +1,14 @@
 [
     {
         "de_num": "1",
-        "name": "ORI Number",
+        "name": "ORI NUMBER",
         "definition": "NCIC originating agency identifier number.",
         "length": "9",
         "format": "A/N"
     },
     {
         "de_num": "2",
-        "name": "Incident Number",
+        "name": "INCIDENT NUMBER",
         "definition": "Agency unique, in-house assigned case number",
         "length": "12",
         "format": "A/N",
@@ -16,7 +16,7 @@
     },
     {
         "de_num": "3",
-        "name": "Incident Date/Hour",
+        "name": "INCIDENT DATE/HOUR",
         "definition": "Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown",
         "length": "11",
         "format": "MMDDYYYYXHH",
@@ -24,7 +24,7 @@
     },
     {
         "de_num": "4",
-        "name": "Cleared Exceptionally",
+        "name": "CLEARED EXCEPTIONALLY",
         "definition": "Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident.",
         "length": "1",
         "format": "A",
@@ -67,14 +67,14 @@
     },
     {
         "de_num": "5",
-        "name": "Exceptional Clearance Date",
+        "name": "EXCEPTIONAL CLEARANCE DATE",
         "definition": "When the incident was cleared, if cleared by exceptional means.",
         "length": "8",
         "format": "MMDDYYYY"
     },
     {
         "de_num": "L6",
-        "name": "Offense Sequence Number",
+        "name": "OFFENSE SEQUENCE NUMBER",
         "definition": "Each Offense within the incident MUST be assigned a sequence number.",
         "length": "3",
         "format": "N",
@@ -82,7 +82,7 @@
     },
     {
         "de_num": "L6R",
-        "name": "Offense Sequence Number Reference",
+        "name": "OFFENSE SEQUENCE NUMBER REFERENCES",
         "definition": "<b>**NEW**</b> UNIQUE constraint that allows an Offense to relate to many Properties.",
         "length": "3",
         "format": "N",
@@ -90,7 +90,7 @@
     },
     {
         "de_num": "6",
-        "name": "Louisiana Revised Statute Number (LRS Number)",
+        "name": "LOUISIANA REVISED STATUTE NUMBER (LRS Number)",
         "definition": "Each Offense (LRS) that occurred as part of the incident.",
         "length": "12",
         "format": "A/N",
@@ -98,7 +98,7 @@
     },
     {
         "de_num": "N6",
-        "name": "Agency Supplied NIBRS Code",
+        "name": "AGENCY SUPPLIED NIBRS CODE",
         "definition": "NIBRS Code assigned to every Offense within an incident.",
         "length": "3",
         "format": "A/N",
@@ -106,7 +106,7 @@
     },
     {
         "de_num": "7",
-        "name": "Offense Attempted/Completed",
+        "name": "OFFENSE ATTEMPTED/COMPLETED",
         "definition": "Indicates whether each Offense was completed or merely attempted.",
         "length": "1",
         "format": "A/N",
@@ -129,7 +129,7 @@
     },
     {
         "de_num": "8",
-        "name": "Offender Suspected of Using/Gaming Motivation",
+        "name": "OFFENDER SUSPECTED OF USING/GAMING MOTIVATION",
         "definition": "Indicates if the Offender was suspected of consuming alcohol or using drugs/narcotics during or shortly before the incident; or of using a computer to perpetrate the crime.<br><br>Also identifies whether the Offender’s gaming activity was the motive for commission of the crime.",
         "length": "1",
         "format": "A",
@@ -164,7 +164,7 @@
     },
     {
         "de_num": "8A",
-        "name": "Bias Motivation/Bias Crime Type",
+        "name": "BIAS MOTIVATION/BIAS CRIME TYPE",
         "definition": "Indicates whether the Offender was motivated to commit the Offense because of his/her bias against a racial, religious, ethnic/national origin, sexual, or disability group.",
         "length": "2",
         "format": "N",
@@ -378,7 +378,7 @@
     },
     {
         "de_num": "9",
-        "name": "Location Type",
+        "name": "LOCATION TYPE",
         "definition": "Location where each Offense took place.",
         "length": "2",
         "format": "N",
@@ -612,7 +612,7 @@
         "definition": "Provides additional information on the criminal activity and gang information of the Offender.",
         "length": "1",
         "format": "A",
-        "comment": "For Type of Criminal Activity, use ONLY if one of the following Offenses: (250) Counterfeiting/Forgery, (280) Stolen Property Offenses, (35A & 35B) Drug/Narcotic Offenses, (39C) Gambling Equip. Violations, (370) Pornography Materials, (520) Weapons Law Violations, (90A) Bad Checks, (90Z) 'Crime Against Property' Offenses and (720) Animal Cruelty.<br><br>Note: Can enter up to THREE codes of TYPE OF CRIMINAL ACTIVITY for each offense.<br><br><br><br>Note: Codes A, F, I and S may only be used for 720 Animal Cruelty Offenses.<br><br><br><br>For Gang Information, use only if the crime is one of the following offenses codes of “J”, ” G”, or ”N”: (09A) Murder and Nonnegligent Manslaughter, (09B) Negligent Homicide, (100) Kidnaping o r Abduction, (120) Robbery, (11A) Forcible Rape, (11B) Forcible Sodomy, (11C) Sexual Assault with An Object, (11D) Forcible Fondling, (13A) Aggravated Assault, (13B) Simple Assault and (13C) Intimidation<br><br><br><br>Note: Can enter up to TWO codes of GANG INFORMATION for each offense.<br><br>",
+        "comment": "For Type of Criminal Activity, use ONLY if one of the following Offenses:<ul><li>250 - Counterfeiting/Forgery</li><li>280 - Stolen Property Offenses</li><li>35A & 35B - Drug/Narcotic Offenses</li><li>39C - Gambling Equip. Violations</li><li>370 - Pornography Materials</li><li>520 - Weapons Law Violations</li><li>90A - Bad Checks</li><li>90Z - 'Crime Against Property' Offenses</li><li>720 - Animal Cruelty</li></ul>Note: Can enter up to THREE codes of TYPE OF CRIMINAL ACTIVITY for each offense. Codes A, F, I and S may only be used for 720 Animal Cruelty Offenses.<br><br>For Gang Information, use only if the crime is one of the following offenses codes of “J”, ” G”, or ”N”: <ul><li>09A - Murder and Nonnegligent Manslaughter</li><li>09B - Negligent Homicide</li><li>100 - Kidnaping or Abduction</li><li>120 - Robbery</li><li>11A - Forcible Rape</li><li>11B - Forcible Sodomy</li><li>11C - Sexual Assault with An Object</li><li>11D - Forcible Fondling</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>Note: Can enter up to TWO codes of GANG INFORMATION for each offense.",
         "subsection": [
             {
                 "title": "Criminal Activity",
@@ -1407,7 +1407,7 @@
     },
     {
         "de_num": "25A",
-        "name": "Type of Officer Activity/Circumstance *New*",
+        "name": "TYPE OF OFFICER ACTIVITY/CIRCUMSTANCE *New*",
         "definition": "Describes Activity being performed by a Law Enforcement Officer, and Other Circumstances, at time of the Incident.",
         "length": "2",
         "format": "N",
@@ -2133,32 +2133,6 @@
                     {
                         "code": "U",
                         "desc": "Unknown"
-                    }
-                ]
-            },
-            {
-                "title": "Disability",
-                "values": [
-                    {
-                        "code": "51",
-                        "desc": "Anti-Physical Disability"
-                    },
-                    {
-                        "code": "52",
-                        "desc": "Anti-Mental Disability"
-                    }
-                ]
-            },
-            {
-                "title": "Disability",
-                "values": [
-                    {
-                        "code": "51",
-                        "desc": "Anti-Physical Disability"
-                    },
-                    {
-                        "code": "52",
-                        "desc": "Anti-Mental Disability"
                     }
                 ]
             }

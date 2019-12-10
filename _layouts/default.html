@@ -6,9 +6,9 @@
     
     {% include header.html %}
     <!-- CONTENT -->
-    <div style="display: inline-flex;">
-      <div class="col-2" style="display: inline-flex; min-width: 325px; max-width: 325px;"> {% include navigation.md %}</div>
-      <div class="col-9" style="padding-top: 20px;">{{ content }}</div>
+    <div class="d-flex">
+      <div class="col-2 accordian d-print-none"> {% include navigation.md %} </div>
+      <div class="maincontent"> {{ content }} </div>
     </div>
     <!-- FOOTER -->
     <div class="footer">

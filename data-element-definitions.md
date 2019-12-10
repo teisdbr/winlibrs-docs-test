@@ -1,7 +1,7 @@
 ---
-title: Data Elements
+title: LIBRS Data Element Definitions
 layout: default
-permalink: /data-elements
+permalink: /data-element-definitions
 ---
 
 # LIBRS Data Elements
@@ -35,6 +35,8 @@ ___
 * `This is the 9-character NCIC Originating Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. For state or local agency submissions, the last two positions must be "00".`
 
 <br>
+
+<div class="newpage"></div>
 
 ## Incident Number (2)
 ___
@@ -83,6 +85,8 @@ Normally, the offenses must have occurred during an unbroken time duration and a
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Incident Date/Hour (3)
 ___
@@ -143,9 +147,6 @@ ___
 * `If the incident hour is unknown, leave the hour blank.`
 * `When LIBRS requires a Blank (G), it must be a Blank (G), NOT A ZERO.`
 
-
-<br>
-
 ### Examples:
 ___
 
@@ -160,6 +161,8 @@ Example Number | Description
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Cleared Exceptionally (4)
 ___
@@ -203,10 +206,10 @@ ___
 
 Enter one code per incident.
 
-<table>
+<table class="de-table">
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Cleared Exceptionally Indicators</th>
+		<th colspan = "1" style="align-text:center;">Cleared Exceptionally Indicators</th>
 	</tr>
     </thead>
     <tbody>
@@ -244,6 +247,8 @@ Example Number | Description
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Exceptional Cleared Date (5)
 
@@ -290,6 +295,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Offense Sequence Number (L6)
 ___
 
@@ -313,6 +320,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Offense Sequence Number Reference (L6R)
 ___
 
@@ -335,6 +344,8 @@ ___
 * `There is no UNIQUE constraint for the Offense Sequence Number Reference (L6R). This allows for an Offense to relate to many properties if multiple Property/Offense segments are submitted within a single incident.`
 
 <br>
+
+<div class="newpage"></div>
 
 
 ## Louisiana Revised Statute (6)
@@ -390,6 +401,10 @@ Example Number | Description
 - IBR and NIBRS rankings.
 
 ____
+
+
+<div class="newpage"></div>
+
 
 #### Warning Messages will be returned for the following LRS codes:
 
@@ -497,6 +512,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Agency Supplied NIBRS Code (N6)
 
 ___
@@ -517,6 +534,8 @@ ___
 
 <br>
 
+
+<div class="newpage"></div>
 
 ## Offense Attempted/Completed (7)
 
@@ -554,7 +573,7 @@ Enter one code per incident.
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Offense Attempted/Completed</th>
+		<th colspan = "1" style="align-text:center;">Offense Attempted/Completed</th>
 	</tr>
     </thead>
     <tbody>
@@ -595,6 +614,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Offender Suspected of Using/Gaming Motivation (8)
 
 ___
@@ -626,7 +647,7 @@ ___
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Offender Suspected of Using/Gaming Motivation</th>
+		<th colspan = "1" style="align-text:center;">Offender Suspected of Using/Gaming Motivation</th>
 	</tr>
     </thead>
     <tbody>
@@ -669,6 +690,8 @@ _____
 
 <br>
 
+<div class="newpage"></div>
+
 ## Bias Motivation/Bias Crime Type (8A)
 ___
 
@@ -689,7 +712,11 @@ ___
 ### Notes: 
 * `Bias Motivation/Bias Crime Type (8) indicates an Offender’s motivation to commit an offense because of their bias against a Victim’s race, religion, ethnicity, national origin, sexual orientation, disability group, or other bias.`
 * `Because of the difficulty in ascertaining the Offender's subjective motivation, bias is to be reported only when an investigation reveals sufficient objective facts to lead a reasonable and prudent person to conclude that the Offender's actions were motivated, in whole or in part, by bias.`
-  
+
+### List of Allowed Entries for DE 8A is on the following page:
+
+<div class="newpage"></div>
+
 ### Allowed Entries:
 ___
 
@@ -698,7 +725,7 @@ Enter only one code for each Offender Segment (40):
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Bias Motivation/Bias Crime Type</th>
+		<th colspan = "1" style="align-text:center;">Bias Motivation/Bias Crime Type</th>
 	</tr>
     </thead>
     <tbody>
@@ -764,7 +791,7 @@ Enter only one (1) code per Offense Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Location Type</th>
+		<th colspan = "1" style="align-text:center;">Location Type</th>
 	</tr>
     </thead>
     <tbody>
@@ -803,6 +830,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Number of Premises Entered (10)
 ___
 
@@ -839,6 +868,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Method of Entry (11)
 
 ___
@@ -873,7 +904,7 @@ Enter only one (1) code per Offense Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Location Type</th>
+		<th colspan = "1" style="align-text:center;">Location Type</th>
 	</tr>
     </thead>
     <tbody>
@@ -911,6 +942,8 @@ Example Number | Description
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Type of Criminal Activity/Gang Information Nos. 1, 2 and 3 (12)
 
@@ -959,7 +992,7 @@ Up to three (3) of the following **Type of Criminal Activity** Codes can be ente
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Type of Criminal Activity Codes</th>
+		<th colspan = "1" style="align-text:center;">Type of Criminal Activity Codes</th>
 	</tr>
     </thead>
     <tbody>
@@ -1023,7 +1056,7 @@ ___
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Type of Gang Information Codes</th>
+		<th colspan = "1" style="align-text:center;">Type of Gang Information Codes</th>
 	</tr>
     </thead>
     <tbody>
@@ -1106,7 +1139,7 @@ Can enter up to three (3) codes for each offense:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Types of Weapon/Force Involved</th>
+		<th colspan = "1" style="align-text:center;">Types of Weapon/Force Involved</th>
 	</tr>
     </thead>
     <tbody>
@@ -1240,7 +1273,7 @@ Enter only one (1) code for each Property Description Segment. However, as many 
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Types of Property Loss</th>
+		<th colspan = "1" style="align-text:center;">Types of Property Loss</th>
 	</tr>
     </thead>
     <tbody>
@@ -1306,7 +1339,7 @@ Enter one Property Description (DE 15) code per Property Description (31) Segmen
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Types of Weapon/Force Involved</th>
+		<th colspan = "1" style="align-text:center;">Types of Weapon/Force Involved</th>
 	</tr>
     </thead>
     <tbody>
@@ -1763,7 +1796,7 @@ Enter only one (1) code per Type of Victim Segment (25):
 <table>
 <thead>
 	<tr>
-		<th colspan = "3" style="align-text:center;"></th>
+		<th colspan = "1" style="align-text:center;"></th>
 	</tr>
     </thead>
     <tbody>
@@ -1834,7 +1867,7 @@ Enter only one (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "4" style="align-text:center;"></th>
+		<th colspan = "1" style="align-text:center;"></th>
 	</tr>
     </thead>
     <tbody>
@@ -1896,7 +1929,7 @@ Enter only one (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "4" style="align-text:center;"></th>
+		<th colspan = "1" style="align-text:center;"></th>
 	</tr>
     </thead>
     <tbody>
@@ -2004,7 +2037,7 @@ Enter only (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "3" style="align-text:center;">Valid Ages of Victims</th>
+		<th colspan = "1" style="align-text:center;">Valid Ages of Victims</th>
 	</tr>
     </thead>
     <tbody>
@@ -2179,7 +2212,7 @@ Enter only (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "3" style="align-text:center;">Race of Victim</th>
+		<th colspan = "1" style="align-text:center;">Race of Victim</th>
 	</tr>
     </thead>
     <tbody>
@@ -2241,7 +2274,7 @@ Enter only (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Ethnicity of Victim</th>
+		<th colspan = "1" style="align-text:center;">Ethnicity of Victim</th>
 	</tr>
     </thead>
     <tbody>
@@ -2302,7 +2335,7 @@ Enter only (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Resident Status of Victim</th>
+		<th colspan = "1" style="align-text:center;">Resident Status of Victim</th>
 	</tr>
     </thead>
     <tbody>
@@ -2425,7 +2458,7 @@ ___
 <table>
 <thead>
 	<tr>
-		<th colspan = "4" style="align-text:center;"></th>
+		<th colspan = "1" style="align-text:center;"></th>
 	</tr>
     </thead>
     <tbody>
@@ -2494,7 +2527,7 @@ Enter only (1) code for Justifiable Homicide (NIBRS 09C):
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Justifiable Homicide Circumstance</th>
+		<th colspan = "1" style="align-text:center;">Justifiable Homicide Circumstance</th>
 	</tr>
     </thead>
     <tbody>
@@ -2579,7 +2612,7 @@ Enter only (1) code for each Victim Injury Segment; however, can submit as many 
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Type of Injury</th>
+		<th colspan = "1" style="align-text:center;">Type of Injury</th>
 	</tr>
     </thead>
     <tbody>
@@ -2716,7 +2749,7 @@ MUST enter **ONE** code for each Victim Segment (50). MUST enter relationship of
 <table>
 <thead>
 	<tr>
-		<th colspan = "3" style="align-text:center;">Relationships of Victims to Offenders</th>
+		<th colspan = "1" style="align-text:center;">Relationships of Victims to Offenders</th>
 	</tr>
     </thead>
     <tbody>
@@ -2851,7 +2884,7 @@ Enter only one code per Offender Segment (40):
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Age of Offender</th>
+		<th colspan = "1" style="align-text:center;">Age of Offender</th>
 	</tr>
     </thead>
     <tbody>
@@ -2959,7 +2992,7 @@ Enter only (1) code per Offender Segment (40):
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Sex of Offender</th>
+		<th colspan = "1" style="align-text:center;">Sex of Offender</th>
 	</tr>
     </thead>
     <tbody>
@@ -3038,7 +3071,7 @@ Enter only (1) code per Offender Segment (40):
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Race of Offender</th>
+		<th colspan = "1" style="align-text:center;">Race of Offender</th>
 	</tr>
     </thead>
     <tbody>
@@ -3231,7 +3264,7 @@ Enter only <span style="text-decoration: underline">one</span> code per Arrest S
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Type of Arrest</th>
+		<th colspan = "1" style="align-text:center;">Type of Arrest</th>
 	</tr>
     </thead>
     <tbody>
@@ -3293,7 +3326,7 @@ Enter only one (1) code per Arrestee Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Multiple Arrestee Segment Indicator</th>
+		<th colspan = "1" style="align-text:center;">Multiple Arrestee Segment Indicator</th>
 	</tr>
     </thead>
     <tbody>
@@ -3473,7 +3506,7 @@ Enter as many codes as apply. However, DO NOT enter the same code more than once
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Arrestee was Armed With</th>
+		<th colspan = "1" style="align-text:center;">Arrestee was Armed With</th>
 	</tr>
     </thead>
     <tbody>
@@ -3565,7 +3598,7 @@ Enter only <span style="text-decoration: underline">one</span> code per Arrest S
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Age of Arrestee</th>
+		<th colspan = "1" style="align-text:center;">Age of Arrestee</th>
 	</tr>
     </thead>
     <tbody>
@@ -3664,7 +3697,7 @@ Enter only (1) code per Arrest Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Age of Arrestee</th>
+		<th colspan = "1" style="align-text:center;">Age of Arrestee</th>
 	</tr>
     </thead>
     <tbody>
@@ -3727,7 +3760,7 @@ Enter only (1) code per Arrest Segment (60):
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Race of Arrestee</th>
+		<th colspan = "1" style="align-text:center;">Race of Arrestee</th>
 	</tr>
     </thead>
     <tbody>
@@ -3788,7 +3821,7 @@ Enter only (1) code per Arrest Segment (60):
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Ethnicity of Arrestee</th>
+		<th colspan = "1" style="align-text:center;">Ethnicity of Arrestee</th>
 	</tr>
     </thead>
     <tbody>
@@ -3848,7 +3881,7 @@ Enter only (1) code per Arrest Segment (60):
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Resident Status of Arrestee</th>
+		<th colspan = "1" style="align-text:center;">Resident Status of Arrestee</th>
 	</tr>
     </thead>
     <tbody>
@@ -3916,7 +3949,7 @@ Enter only (1) code per Arrest Segment (60) for Juveniles only:
 <table>
 <thead>
 	<tr>
-		<th colspan = "2" style="align-text:center;">Disposition of Arrestee Under 17</th>
+		<th colspan = "1" style="align-text:center;">Disposition of Arrestee Under 17</th>
 	</tr>
     </thead>
     <tbody>
@@ -4373,3 +4406,5 @@ Requirement  | Requirement Description |
 
 ___
 
+
+</div>

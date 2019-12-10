@@ -1,5 +1,5 @@
 ---
-title: Home Page
+title: LIBRS Documentation Home Page
 layout: default
 permalink: /
 ---
@@ -11,50 +11,9 @@ This page contains information on how LIBRS Flat Files should be processed and g
 
 This site contains the following information:
 - <a href="./librs-spec">Technical Specification Documentation</a>
-- <a href="./data-elements-values">Data Element Available Values</s>
-- <a href="./data-elements">Data Element Definitions</a>
+- <a href="./data-element-values">Data Element Available Values</a>
+- <a href="./data-element-definitions">Data Element Definitions</a>
 - <a href="./lrs-master-list">Master LIBRS LRS List</a>
 - <a href="./mandatories">LIBRS Mandatories</a>
-- LRS to NIBRS Translations
-  
 
-<table>
-<thead>
-	<tr>
-		<th style="max-width:80px;text-align: center;">Element Number</th>
-		<th>Element Name</th>
-		<th>Definition</th>
-		<th style="text-align: center;">Length</th>
-		<th style="text-align: center;">Format</th>
-		<th>Values</th>
-		<th>Comments</th>
-	</tr>
-    </thead>
-    <tbody>
-{% for de in site.data.data-element-defs %}
-	<tr>
-		<td style="max-width:80px;text-align: center;">{{de.de_num}}</td>
-		<td>{{de.name}}</td>
-		<td>{{de.definition}}</td>
-		<td style="text-align: center;">{{de.length}}</td>
-		<td style="text-align: center;">{{de.format}}</td>
-        <td style="min-width: 250px">
-			{% for subsection in de.subsection %}
-				<table class="subtable">
-				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
-					{% for values in subsection.values %}
-					<tr>
-            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
-						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
-            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
-            		</tr>
-					{% endfor %}
-				</table>
-			{% if forloop.last == false %}<br>{% endif %}
-        	{% endfor %}
-		</td>
-        <td style="min-width: 300px">{{de.comment}}</td>
-    </tr>
-{% endfor %}
-</tbody>
-</table>
+More information about the LIBRS Program and its requirements can be found at <a href="http://crimeinla.org">http://crimeinla.org</a>

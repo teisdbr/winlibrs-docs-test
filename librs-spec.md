@@ -1,5 +1,5 @@
 ---
-title: LIBRS Specifications
+title: LIBRS Validation Specifications
 layout: default
 permalink: /librs-spec
 ---
@@ -35,7 +35,6 @@ ___
 
 ### Segment 00 Errors and Explanations
 
-
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["10090"] -%}
@@ -52,6 +51,8 @@ Error Number  | Error Message | Explaination of Error
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Administrative (10)
 ___
@@ -86,6 +87,7 @@ ___
 
 <br>
 
+<div class="newpage"></div>
 
 ## Administrative Modification (11)
 ___
@@ -118,6 +120,8 @@ Error Number  | Error Message | Explaination of Error
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Offense (20) 
 ___
@@ -167,6 +171,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Property (30)
 
 ___
@@ -198,6 +204,8 @@ Error Number  | Error Message | Explaination of Error
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Property Description (31)
 ___
@@ -235,6 +243,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Property Modification (32)
 ___
 
@@ -266,6 +276,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Property/Offense (33)
 
 **\*\*\* Indicated Cells are either New or Modified Data Elements beginning with LIBRS Spec 2.5 \*\*\***
@@ -290,15 +302,13 @@ ___
 
 `LIBRS uses the NIBRS Code of the Offenses to determine if it should apply properties to them to minimize the cases that this happens in. However, there are some NIBRS Codes that include both 'Crimes Against People' and 'Crimes Against Property' Offenses (EG: 13B Contains both LRS 14:35 (Simple Battery - Crime Against Person) as well as LRS 14:60 (Aggravated Burglary - Crime Against Property)) that break this assumption.`
 
-<br>
-
 #### Successful Segment 33 Inference Example
 An incident is submitted with a NIBRS 23H 'Crime Against Property' Offense, as well as a NIBRS 11A 'Crime Against Person' Offense, along with one or more properties that are intended to be linked to the 23H Offense. Since NIBRS 11A has no related Offenses that are a 'Crime Against Property', if Segment 33 is missing LIBRS knows that it should not apply the properties to the 11A Offense. As a result, LIBRS will only infer the properties to be related to the 23H Offense, successfully validating the Incident submission.
 
 #### Unsuccessful Segment 33 Inference Example
 An incident is submitted with a NIBRS 23H 'Crime Against Property' Offense, as well as a NIBRS 13B 'Crime Against Person' Offense, along with one or more properties that are intended to be linked to the 23H Offense. Since 13B has some offenses that are 'Crime Against Property', if Segment 33 is missing LIBRS cannot know that it shouldn't apply the properties to the 13B Offense. As a result, LIBRS will interpret all properties to be related to all offenses, which in this case will throw validation errors. 
 
-##### Therefore it is always recommended to submit a Segment 33 with the Incident ir order to more accurately report the Offenses
+#### Therefore it is always recommended to submit a Segment 33 with the Incident ir order to more accurately report the Offenses
 
 <br>
 
@@ -313,7 +323,9 @@ ___
 
 <br>
 
-#### INVALID Combinations of NIBRS Offense Codes and Property Descriptions
+<div class="newpage"></div>
+
+### INVALID Combinations of NIBRS Offense Codes and Property Descriptions
 There are a number of illogical combinations for various NIBRS Offense Codes (Data Element 6) having certain Property Descriptions (Data Element 15). For example, it is illogical for Purse Snatching (NIBRS Code 23B) to be connected to property having a Property Description data value of Aircraft (01) or Livestock (18). 
 
 The table below shows invalid combinations of NIBRS Offense Codes and Property Descriptions. X's on this table represent that the combination of the Property Description and NIBRS Code are incompatible and should **NOT** be used together. 
@@ -343,6 +355,8 @@ The table below shows invalid combinations of NIBRS Offense Codes and Property D
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Offender (40)
 
@@ -383,6 +397,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ### Offender Using/Gaming Motivation (41)
 ___
 
@@ -406,6 +422,8 @@ None
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Victim (50)
 ___
@@ -446,6 +464,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Victim Injury (51)
 ___
 
@@ -473,6 +493,8 @@ Error Number  | Error Message | Explaination of Error
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Victim/Offender Relation (52)
 ___
@@ -502,6 +524,8 @@ Error Number  | Error Message | Explaination of Error
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Arrestee (60)
 ___
@@ -542,7 +566,7 @@ Error Number  | Error Message | Explaination of Error
 
 <br>
 
-___
+<div class="newpage"></div>
 
 ## Arrestee Armed (61)
 ___
@@ -568,8 +592,10 @@ ___
 
 <br>
 
+<div class="newpage"></div>
 
 ## Arrestee Statute (62)
+
 ___
 
 **\*\*\* Indicated Cells are either New or Modified Data Elements beginning with LIBRS Spec 2.5 \*\*\***
@@ -601,6 +627,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ### Arrestee Modification (63)
 ___
 
@@ -630,6 +658,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Submission Trailer (99)
 ___
 
@@ -656,6 +686,8 @@ Error Number  | Error Message | Explaination of Error
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ### Zero Record (01)
 ___

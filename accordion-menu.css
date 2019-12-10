@@ -1,59 +1,9 @@
 ﻿/* Accordion Menu by www.menucool.com/vertical/accordion-menu*/
-td {
+.accordian td {
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 2px;
     padding-bottom: 2px;
-}
-
-.big-image{
-    width: 75%;
-}
-
-h1{
-    font-size: 1.75rem;
-}
-h2{
-    font-size: 1.5rem;
-}
-h3{
-    font-size: 1.25rem;
-}
-h4{
-    font-size: 1rem;
-}
-h5{
-    font-size: 0.75rem;
-}
-
-p{
-    font-size: 13px;
-}
-
-li {
-    font-size: 13px;
-}
-
-tbody {
-    font-size: 13px;
-}
-
-thead {
-    font-size: 14px;
-}
-
-tbody tr:nth-child(even){
-    background-color: #E0E0E0;
-}
-
-.subtable tbody tr:nth-child(even) {
-    background-color: transparent;
-}
-
-th{
-    background-color: #E0E0E0;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 #accordion {

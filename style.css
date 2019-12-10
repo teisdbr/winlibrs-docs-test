@@ -1,0 +1,105 @@
+
+@media print{
+    .forprinting{
+        width: 100vw;
+    }
+}
+.accordian {
+    min-width: 325px;
+    max-width: 325px;
+}
+
+.accordian table {
+    border: none !important
+}
+
+.maincontent {
+    margin: 5px;
+    width: 100%;
+}
+
+.maincontent h1 {
+    font-size: 1.75rem;
+}
+
+.maincontent h2 {
+    font-size: 1.5rem;
+}
+
+.maincontent h3 {
+    font-size: 1.25rem;
+}
+
+.maincontent h4 {
+    font-size: 1rem;
+}
+
+.maincontent h5 {
+    font-size: 0.75rem;
+}
+
+.maincontent p {
+    font-size: 13px;
+}
+
+.maincontent li {
+    font-size: 13px;
+}
+
+.maincontent tbody {
+    font-size: 13px;
+}
+
+.maincontent thead {
+    font-size: 14px;
+}
+
+.maincontent tbody tr:nth-child(even) {
+    background-color: #E0E0E0;
+}
+
+.maincontent table, .maincontent tr {
+    border: 1px solid black;
+}
+
+.maincontent th {
+    background-color: rgb(184, 184, 184);
+    padding-left: 15px;
+    padding-right: 15px;
+    border-color: 1px solid black;
+}
+
+.maincontent td {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.maincontent th, .maincontent tr td {
+    page-break-inside: avoid !important;
+}
+
+table.subtable, .subtable tr{
+    border: none !important;
+}
+
+.subtable td {
+    border: none !important;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.subtable tbody tr:nth-child(even) {
+    background-color: transparent;
+}
+
+.big-image {
+    width: 75%;
+}
+
+.newpage {
+    page-break-after: always !important;
+}
