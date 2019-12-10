@@ -2,13 +2,12 @@
 <html lang="en">
   <!-- HEAD -->
   {% include head.html %}
-  <body>
+  <body">
     
     {% include header.html %}
     <!-- CONTENT -->
-    <div class="d-flex">
-      <div class="col-2 accordian d-print-none"> {% include navigation.md %} </div>
-      <div class="maincontent"> {{ content }} </div>
+    <div class="d-flex" id="content">
+      <div class="maincontent" style="padding-left: 30px;padding-right: 30px;padding-top: 50px;"> {{ content }} </div>
     </div>
     <!-- FOOTER -->
     <div class="footer">

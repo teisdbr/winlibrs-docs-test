@@ -12,12 +12,22 @@
     max-width: 325px;
 }
 
+.maincontent [id]::before {
+    content: '';
+    display: block;
+    height:      75px;
+    margin-top: -70px;
+    visibility: hidden;
+  }
+
 .accordian table {
     border: none !important
 }
 
 .maincontent {
-    margin: 5px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
     width: 100%;
 }
 
