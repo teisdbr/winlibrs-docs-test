@@ -13,7 +13,7 @@
                         {% for subitem in item.submenu %}
                             {% if forloop.first %}<ul style="padding-left: 5px;">{% endif %}
                                 <li>
-                                <a href = "{{ subitem.url }}">{{ subitem.subtitle }}</a>
+                                <a onclick="document.getElementById('sidebar').style.display = 'none'; document.getElementById('showmenu').style.paddingLeft = 'unset'; document.getElementById('content').style.paddingLeft = 'unset'; document.getElementById('menuiconopen').style.display = 'block';" href = "{{ subitem.url }}">{{ subitem.subtitle }}</a>
                                 </li>
                                 {% if forloop.last %}</ul>{% endif %}
                         {% endfor %}
@@ -29,7 +29,7 @@
                         {% for subitem in item.submenu %}
                             {% if forloop.first %}<ul style="padding-right:5px;">{% endif %}
                                 <li>
-                                <a href = "{{ subitem.url }}"><table><tr>
+                                <a href = "{{ subitem.url }}"><table><tr onclick="document.getElementById('sidebar').style.display = 'none'; document.getElementById('showmenu').style.paddingLeft = 'unset'; document.getElementById('content').style.paddingLeft = 'unset'; document.getElementById('menuiconopen').style.display = 'block';">
                                 <td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{ subitem.de_num }}</td><td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
                                 <td style="vertical-align: top; padding-left:0px;">{{subitem.subtitle}}</td>
                                 </tr></table></a>
