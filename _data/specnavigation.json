@@ -84,112 +84,11 @@
     "url":"",
     "submenu": [{
         "subtitle": "Error Messages",
-        "sub_submenu": [{
-            "subtitle": "Initial Reports",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "Initial Reports with Arrestees",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "Updates to Submitted Incidents",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "Mandatory Edits",
-            "url": "./mandatories#"
-          }
-        ]
+        "url": "./mandatories#error-messages"
       },
       {
         "subtitle": "NIBRS Mandatories",
-        "url":"",
-        "sub_submenu": [{
-            "subtitle": "ARSON (200)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "AGGRAVATED ASSAULT, SIMPLE ASSAULT or INTIMIDATION (13A, 13B and 13C) 178",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "BRIBERY (510) 179",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "BURGLARY/BREAKING AND ENTERING (220)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "COUNTERFEITING/FORGERY (250)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "DESTRUCTION/DAMAGE/VANDALISM (290)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "DRUG/NARCOTIC VIOLATION (35A) or DRUG EQUIPMENT VIOLATION (35B)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "EXTORTION/BLACKMAIL (210)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "FRAUD OFFENSES (26A-E)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "GAMBLING OFFENSES (39A-D)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "HOMICIDE OFFENSES (09A, 09B or 09C)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "KIDNAPPING/ABDUCTION (100)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "LARCENY/THEFT OFFENSES (23A-H)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "MOTOR VEHICLE THEFT (240)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "PORNOGRAPHY/OBSCENE MATERIAL OFFENSES (370)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "PROSTITUTION OFFENSES (40A, 40B)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "ROBBERY OFFENSES (120)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "SEX OFFENSES - FORCIBLE (11A-D)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "SEX OFFENSES - NON-FORCIBLE (36A-36B)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "STOLEN PROPERTY OFFENSES (280)",
-            "url": "./mandatories#"
-          },
-          {
-            "subtitle": "WEAPONS LAW VIOLATIONS (520)",
-            "url": "./mandatories#"
-          }
-        ]
+        "url":"./mandatories#nibrs-mandatories"
       }
     ]
   }

@@ -4,11 +4,20 @@ layout: default
 permalink: /mandatories
 ---
 
-# LIBRS Data Elements
+# LIBRS/NIBRS Mandatories
 ____
 
-# Mandatories
+# Error Messages
 ____
+
+## Structure for Numbering of Mandatory Error Messages
+
+|               1st Character         |     2nd Character    |             3rd Character          |                    4th and 5th Characters                    |
+|:-----------------------------------:|:--------------------:|:----------------------------------:|:------------------------------------------------------------:|
+|8                                    |1                     |0                                   |00: Overall Data Element Edits all Sections (Except Section 4)|
+|**Denotes Mandatory Error Message**  |Section with Mandatory| Error Message Number within Section|   01 - 21<br>Data Elemeber Specific Edits Within Section 4   |
+
+___
 
 ## Section (1) Error Message for: Initial Incident Reports
 
@@ -72,7 +81,7 @@ ___
 
 <br>
 
-## SECTION (2) Error Message for: Initial Incident Reports Containing Arrestee Segments
+## Section (2) Error Message for: Initial Incident Reports Containing Arrestee Segments
 
 ____
 
@@ -107,7 +116,7 @@ ___
 
 <br>
 
-## SECTION (3) Error Message for: Subsequent Updates (ADD ARRESTs, MODIFYs, and DELETEs) to Previously Submitted Incidents
+## Section (3) Error Message for: Subsequent Updates (ADD ARRESTs, MODIFYs, and DELETEs) to Previously Submitted Incidents
 
 ____
 
@@ -147,7 +156,13 @@ ___
 
 <br>
 
-## SECTION (4) Data Element MANDATORY Edits 
+___
+
+<div class="newpage"></div>
+
+<br>
+
+# NIBRS Mandatories
 
 ___
 
@@ -204,6 +219,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+<div class="newpage"></div>
 
 ### Subsection 03:  BRIBERY (510)
 
@@ -264,6 +280,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+<div class="newpage"></div>
 
 ### Subsection 05:  COUNTERFEITING/FORGERY (250)
 
@@ -312,6 +329,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+<div class="newpage"></div>
 
 ### Subsection 07:  DRUG/NARCOTIC VIOLATION (35A) or DRUG EQUIPMENT VIOLATION (35B)
 
@@ -355,6 +373,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+<div class="newpage"></div>
 
 ### Subsection 08:  EXTORTION/BLACKMAIL (210)
 
@@ -408,6 +427,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+<div class="newpage"></div>
 
 ### Subsection 10:  GAMBLING OFFENSES (39A-D)
 
@@ -461,6 +481,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+<div class="newpage"></div>
 
 ### Subsection 12:  KIDNAPPING/ABDUCTION (100)
 
@@ -521,6 +542,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+<div class="newpage"></div>
 
 ### Subsection 14:  MOTOR VEHICLE THEFT (240)
 
@@ -548,7 +570,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 <br>
 
 ___
-
 
 ### Subsection 15:  PORNOGRAPHY/OBSCENE MATERIAL OFFENSES (370)
 
@@ -590,6 +611,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+<div class="newpage"></div>
 
 ### Subsection 17:  ROBBERY OFFENSES (120)
 
@@ -666,6 +688,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
+<div class="newpage"></div>
 
 ### Subsection 20:  STOLEN PROPERTY OFFENSES (280)
 

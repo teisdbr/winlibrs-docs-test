@@ -322,9 +322,9 @@ ___
 ### Notes:
 * `Each offense in an incident must be assigned a unique sequence number from "001" to "999".`
 
-<br>
+___
 
-<div class="newpage"></div>
+<br>
 
 ## Offense Sequence Number Reference (L6R)
 ___
@@ -515,8 +515,6 @@ ___
 * `An LRS Code appended with "-H" indicates the offense is a Hate Crime, and the penalty will be enhanced by 14:107.2. Offenses with an Inchoate appended will be reported based on the base LRS (usually shown in the first ten digits of Louisiana Revised Statute (6) or Louisiana Revised Statute of Arrest (45).`
 
 <br>
-
-<div class="newpage"></div>
 
 ## Agency Supplied NIBRS Code (N6)
 
@@ -717,6 +715,8 @@ ___
 * `Bias Motivation/Bias Crime Type (8) indicates an Offender’s motivation to commit an offense because of their bias against a Victim’s race, religion, ethnicity, national origin, sexual orientation, disability group, or other bias.`
 * `Because of the difficulty in ascertaining the Offender's subjective motivation, bias is to be reported only when an investigation reveals sufficient objective facts to lead a reasonable and prudent person to conclude that the Offender's actions were motivated, in whole or in part, by bias.`
 
+___
+
 ### List of Allowed Entries for DE 8A is on the following page:
 
 <div class="newpage"></div>
@@ -786,6 +786,10 @@ ___
 * `This data element is to be used to report the type of location/ premises where each offense took place.  Only one (1) location can be entered for each offense.`
 
 ___
+
+### List of Allowed Entries for DE 8A is on the following page:
+
+<div class="newpage"></div>
 
 ### Allowed Entries:
 ___
@@ -988,6 +992,12 @@ ___
 ### Notes: 
 * `(Criminal Activity):  Use this data element to provide additional information on the criminal activity of Offender(s) in the incident.`
 
+___
+
+### List of Allowed Entries for DE 8A is on the following page:
+
+<div class="newpage"></div>
+
 ### Allowed Entries (Criminal Activity)
 ___
 
@@ -1023,6 +1033,10 @@ Up to three (3) of the following **Type of Criminal Activity** Codes can be ente
 </tbody>
 </table>
 
+____
+
+<br>
+
 ### Examples (Criminal Activity):
 ___
 
@@ -1030,7 +1044,15 @@ Example Number | Description
 :-------------:|:-----------
 1 | The Offenders published and sold pornographic photographs of children. Therefore, up to three types of Criminal Activity can be entered: Cultivating/Manufacture/Publishing ("C"), Distributing/Selling ("D"), and Exploiting Children ("E").
 
+___
+
 <br>
+
+<div class="newpage"></div>
+
+## Type of Criminal Activity/Gang Information Nos. 1, 2 and 3 (12)
+
+___
 
 ### Requirements (Gang Activity):
 ___ 
@@ -1088,6 +1110,7 @@ ___
 </tbody>
 </table>
 
+___
 
 ### Examples (Gang Information):
 ___
@@ -1096,7 +1119,11 @@ Example Number | Description
 :-------------:|:-----------
 1 | Two males, aged 19, were on bicycles riding through a neighborhood when they were approached by three males and forced to stop. Words were exchanged and one of the bicyclists was attacked. Each of the three attackers, one, aged 16 and the other two, aged 17, had identical tattoos on their upper arm. This marking was commonly associated with a local gang. The entry for Type of Criminal Activity/Gang Information should be Juvenile Gang ("J").
 
+___
+
 <br>
+
+<div class="newpage"></div>
 
 ## Type of Weapon/Force Involved Nos. 1, 2 and 3 (13)
 
@@ -1137,7 +1164,14 @@ ___
 * `Append an "A" if the weapon is automatic.`
   * `Any firearm that can fire more than one shot by a single pull of the trigger without manual reloading is classified as an Automatic Firearm.`
 
+___
+
+### List of Allowed Entries for DE 13 is on the following page:
+
+<div class="newpage"></div>
+
 ### Allowed Entries:
+
 Can enter up to three (3) codes for each offense:
 
 <table>
@@ -1152,7 +1186,7 @@ Can enter up to three (3) codes for each offense:
     <tr><td>
 			{% for subsection in de.subsection %}
 				<table class="subtable">
-				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th{% endif %}
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th>{% endif %}
 					{% for values in subsection.values %}
 					<tr>
             			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
@@ -1179,7 +1213,11 @@ Example Number | Description
 :-------------:|:-----------
 1 | Three robbers held up a bank. One was armed with a revolver, the second had a sawed-off shotgun, and the third had an automatic machine gun. The entries would be: Handgun ('12'), Shotgun ('14') and Other Automatic Firearm ('15A').
 
+___
+
 <br>
+
+<div class="newpage"></div>
 
 ## Property Sequence Number (P1)
 
@@ -1230,6 +1268,10 @@ ___
 * `There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.`
 
 <br>
+
+___
+
+<div class="newpage"></div>
 
 ## Type of Property Loss (14)
 
@@ -1307,6 +1349,7 @@ ___
 
 <br>
 
+<div class="newpage"></div>
 
 ## Property Description (15)
 ___
@@ -1371,6 +1414,8 @@ Enter one Property Description (DE 15) code per Property Description (31) Segmen
 
 <br>
 
+<div class="newpage"></div>
+
 ## Value of Property (16)
 
 **Data Characteristics:** 9 Character Numeric
@@ -1409,6 +1454,7 @@ Example Number | Description
 
 <br>
 
+<div class="newpage"></div>
 
 ## Date Recovered (17)
 ___
@@ -1438,6 +1484,11 @@ ___
 * `If previously stolen property is recovered, the month, day, and year (MMDDYYYY) of its recovery should be entered into this data element.`
 * `If there is more than one Date Recovered (DE 17) for the same Property Description (DE 15), enter the earliest date.`
 * `If the Date Recovered is unknown, enter the date of the report.`
+
+
+____
+
+<div class="newpage"></div>
 
 ## Number of Stolen Vehicles (18)
 
@@ -1473,8 +1524,11 @@ ___
 ### Notes:
 * `Number of Stolen Vehicles (18) indicates how many motor vehicles were stolen in an incident reported as a Motor Vehicle Theft.`
 
+____
+
 <br>
 
+<div class="newpage"></div>
 
 ## Number of Recovered Motor Vehicles (19)
 
@@ -1501,12 +1555,16 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["23230"] -%}
 7 | {{error.desc_de19}} | {{error.err_no}}| {{ error.err_message }}
 
+___
+
 ### Notes:
 * `Number of Recovered Motor Vehicles (19) indicates how many motor vehicles were recovered in an incident that reported Motor Vehicle Thefts.`
 
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Suspected Drug Type (20)
 
@@ -1538,6 +1596,11 @@ ___
 * `If the Suspected Drug Type (20)is a Counterfeit, append an "X" to the drug code, otherwise leave the second character Blank (G).`
 * `Suspected Drug Type (20) is not to be used when drugs or narcotics were Burned, Stolen, etc., in connection with other offenses, such as Arson, Larceny/Theft, etc.`
 
+___
+
+### List of Allowed Entries for DE 20 is on the following page:
+
+<div class="newpage"></div>
 
 ### Allowed Entries: 
 Enter as many as apply, but do not duplicate codes.
@@ -1545,7 +1608,7 @@ Enter as many as apply, but do not duplicate codes.
 <table>
 <thead>
 	<tr>
-		<th colspan = "27" style="align-text:center;">Suspected Drug Types</th>
+		<th colspan = "1" style="align-text:center;">Suspected Drug Types</th>
 	</tr>
     </thead>
     <tbody>
@@ -1575,6 +1638,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Estimated Drug Quantity (21)
 
 **Data Characteristics:** 13 Character **Alpha/Numeric**
@@ -1602,11 +1667,11 @@ ___
 * `When Estimated Drug Quantity (21) is Unknown enter '000000001.000', a value of '1', to signify that the value is not known or not reported. Also, Type Drug Measurement (22) MUST be entered as Not Reported/Unknown ('XX') and Value of Property (16) MUST be entered as Unknown (000000001).`
 * `If LRS Offense (6) is not reportable as a drug violation (35A), this data element MUST BE LEFT BLANK (G).`
 
-
-
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Type Drug Measurement (22)
 
@@ -1634,7 +1699,7 @@ ___
 ### Notes:
 * `Type Drug Measurement (22) indicates how Seized drugs and narcotics are quantified in a drug case.`
 
- <br>
+___
 
 ### Allowed Entries:
 
@@ -1643,7 +1708,7 @@ ___
 <table>
 <thead>
 	<tr>
-		<th colspan = "27" style="align-text:center;">Type Drug Measurements</th>
+		<th colspan = "1" style="align-text:center;">Type Drug Measurements</th>
 	</tr>
     </thead>
     <tbody>
@@ -1674,6 +1739,7 @@ ___
 
 <br>
 
+<div class="newpage"></div>
 
 ## Victim Sequence Number (23)
 
@@ -1701,6 +1767,8 @@ ____
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Offense Connected to Victim Sequence Number (24)
 
@@ -1732,11 +1800,13 @@ ___
 
 ### Notes:
 
-
-
-
 * `This data element is to be used to link each offense to each victim. That is, the offense which was perpetrated against the victim during the incident.`
 * `If this data element does not match one of the values submitted in Data Element # 23 (Victim Segment Number), the submission will be returned with errors.`
+* 
+___
+
+<div class="newpage"></div>
+
 
 The following chart shows Offenses that CANNOT occur to the same victim in the same incident. Each 'X' on the chart where offenses intersect denotes that those two offenses CANNOT occur to the same victim in an incident.
 
@@ -1754,6 +1824,7 @@ ___
 
 <br>
 
+<div class="newpage"></div>
 
 ## Type of Victim (25)
 
@@ -1791,7 +1862,11 @@ Notes:
 * `The Officer should be "In-the-Line-of-Duty" when victimized in order to report Type of Victim (25) as Law Enforcement Officer ("L"). The same rules that apply to the LEOKA form in UCR Summary also apply to this Type of Victim (25).`
 * `This Type of Victim (25) can ONLY be used for simple assaults, aggravated assaults, negligent manslaughter, murders and non-negligent homicide offenses to a Law Enforcement Officer, that took place when the Officer was On Duty as a Law Enforcement Officer.`
 
-<br>
+___
+
+### List of Allowed Entries for DE 25 is on the following page:
+
+<div class="newpage"></div>
 
 ### Allowed Entries:
 
@@ -1800,7 +1875,7 @@ Enter only one (1) code per Type of Victim Segment (25):
 <table>
 <thead>
 	<tr>
-		<th colspan = "1" style="align-text:center;"></th>
+		<th colspan = "1" style="align-text:center;">Type of Victim</th>
 	</tr>
     </thead>
     <tbody>
@@ -1871,7 +1946,7 @@ Enter only one (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "1" style="align-text:center;"></th>
+		<th colspan = "1" style="align-text:center;">Type of Officer Activity/Circumstance</th>
 	</tr>
     </thead>
     <tbody>
@@ -1903,6 +1978,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Officer Assignment Type (25B)
 
 ___
@@ -1933,7 +2010,7 @@ Enter only one (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "1" style="align-text:center;"></th>
+		<th colspan = "1" style="align-text:center;">Officer Assignment Types</th>
 	</tr>
     </thead>
     <tbody>
@@ -1983,8 +2060,12 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["10254"] -%}
 2 | {{error.desc_de25c}} | {{error.err_no}}| {{ error.err_message }}
 
+___
+
 ### Notes:
 * `This is the 9-character NCIC Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. This ORI is used to record the ORI of a victim who is an officer involved in a multijurisdictional incident.`
+
+___
 
 ### Allowed Entries:
 
@@ -1997,6 +2078,8 @@ A thru Z (Uppercase letter only), or 0 thru 9
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Age of Victim [At Time Incident Occurred] (26)
 
@@ -2080,6 +2163,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Date of Birth of Victim (L26)
 
 ___
@@ -2111,7 +2196,6 @@ ___
 ___
 
 <br>
-
 
 ## Sex of Victim (27)
 
@@ -2150,7 +2234,7 @@ Enter only (1) code for each Victim Segment:
 <table>
 <thead>
 	<tr>
-		<th colspan = "27" style="align-text:center;">Sex of Victim</th>
+		<th colspan = "1" style="align-text:center;">Sex of Victim</th>
 	</tr>
     </thead>
     <tbody>
@@ -2180,6 +2264,8 @@ Enter only (1) code for each Victim Segment:
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Race of Victim (28)
 
@@ -2309,6 +2395,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Resident Status of Victim (30)
 
 **Data Characteristics:** 1 Character Alpha
@@ -2370,6 +2458,8 @@ Enter only (1) code for each Victim Segment:
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Aggravated Assault/Homicide Circumstance Nos. 1 and 2 (31)
 
@@ -2462,7 +2552,7 @@ ___
 <table>
 <thead>
 	<tr>
-		<th colspan = "1" style="align-text:center;"></th>
+		<th colspan = "1" style="align-text:center;">Aggravated Assault/Homicide Circumstances</th>
 	</tr>
     </thead>
     <tbody>
@@ -2502,6 +2592,8 @@ Example Number | Description
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Additional Justifiable Homicide Circumstance (32)
 
@@ -2572,6 +2664,8 @@ Example Number | Description
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Type of Injury (33)
 
@@ -2646,6 +2740,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Offender Number to be Related (34)
 
 ___
@@ -2696,6 +2792,8 @@ ___
 <br>
 
 
+<div class="newpage"></div>
+
 ## Relationship of Victim to Offender (35)
 
 ___
@@ -2743,6 +2841,11 @@ ___
 * `Relationship of Victim to Offender (35) is used ONLY with Offender Number to be Related (34), to report the relationship of a 	Victim to Offenders who have perpetrated a Crime Against Person, or a Robbery against the Victim.`
 * `Relationship of Victim to Offender (35) indicates the Victim's relationship with each Offender involved in the incident.`
 * `Relationship of Victim to Offender (35) is NOT required if Type of Victim (25) is equal to Society/Public ('S').`
+___
+
+### List of Allowed Entries for DE 35 is on the following page:
+
+<div class="newpage"></div>
 
 ### Allowed Entries:
 
@@ -2795,6 +2898,10 @@ ___
 
 <br>
 
+
+<div class="newpage"></div>
+
+
 ## Offender Sequence Number (36)
 
 ___
@@ -2839,6 +2946,8 @@ Example Number | Description
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Age of Offender [At Time of Incident] (37)
 
@@ -2928,6 +3037,8 @@ ___
 <br>
 
 
+<div class="newpage"></div>
+
 ## Date of Birth of Offender (L37)
 
 ___
@@ -2956,6 +3067,8 @@ ___
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Sex of Offender (38)
 
@@ -3037,6 +3150,8 @@ ___
 
 <br>
 
+
+<div class="newpage"></div>
 
 
 ## Race of Offender (39)
@@ -3144,6 +3259,9 @@ _____
 
 <br>
 
+
+<div class="newpage"></div>
+
 ## Arrestee Name (L40)
 
 ___
@@ -3203,6 +3321,9 @@ ___
 
 <br>
 
+
+<div class="newpage"></div>
+
 ## Arrest Date (42)
 
 ___
@@ -3233,6 +3354,7 @@ ___
 ___
 
 <br>
+
 
 ## Type of Arrest (43)
 
@@ -3297,6 +3419,8 @@ Enter only <span style="text-decoration: underline">one</span> code per Arrest S
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Multiple Arrestee Segment Indicator (44)
 
@@ -3372,6 +3496,8 @@ Example Number | Description
 
 <br>
 
+<div class="newpage"></div>
+
 ## Louisiana Revised Statute Number of Arrest (45)
 
 ___
@@ -3439,6 +3565,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Arrest Connection to Offense (L45)
 
 ___
@@ -3466,6 +3594,8 @@ ___
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Arrestee was Armed With [At Time of Arrest] (46)
 
@@ -3554,6 +3684,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Age of Arrestee [At Time of Arrest] (47)
 
 ___
@@ -3640,6 +3772,8 @@ Example Number | Description
 
 <br>
 
+<div class="newpage"></div>
+
 ## Date of Birth of Arrestee (L47)
 
 ___
@@ -3667,6 +3801,8 @@ ___
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## Sex of Arrestee (48)
 
@@ -3794,6 +3930,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Ethnicity of Arrestee (50)
 
 ___
@@ -3915,6 +4053,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Disposition of Arrestee Under 17 (52)
 
 ___
@@ -3992,6 +4132,8 @@ Example Number | Description
 2 | The Arrestee, age 16, was arrested for rape, and turned over to the Adult Court to be tried as an adult. The entry would be Referred to Criminal or Adult Court ('A').
 
 <br>
+
+<div class="newpage"></div>
 
 ## Location of Incident (Geographical Coordinates) (L53)
 
@@ -4092,6 +4234,8 @@ ___
 
 ___
 
+<div class="newpage"></div>
+
 # Control Data Elements
 ___
 
@@ -4158,6 +4302,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## Submission Date (C3)
 ___
 
@@ -4214,6 +4360,9 @@ ____
 
 <br>
 
+
+<div class="newpage"></div>
+
 ## Action Type (C5)
 ___
 
@@ -4246,6 +4395,8 @@ ___
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ##  Clearance Indicator (C6)
 ___
@@ -4311,6 +4462,8 @@ ___
 ___
 
 <br>
+
+<div class="newpage"></div>
 
 ## End of Segment Marker (C8)
 ___
@@ -4394,6 +4547,8 @@ ___
 
 <br>
 
+<div class="newpage"></div>
+
 ## LIBRS Spec Indicator (C12)
 
 ___
@@ -4409,6 +4564,3 @@ Requirement  | Requirement Description |
 1 | Indicates the LIBRS Spec is to be used by WinLIBRS when validating a data submission
 
 ___
-
-
-</div>

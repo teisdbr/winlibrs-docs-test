@@ -1,5 +1,7 @@
 <div id="accordion" style="min-width:300px; max-width:300px;height: 100%; position: fixed; overflow-x: hidden;">
-    <ul>
+<ul>
+        <li>
+            <div><a href=".">Home</a></div></li>
         <li>
             <div>LIBRS Specifications</div>
                 {% for item in site.data.specnavigation %}
