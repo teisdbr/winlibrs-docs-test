@@ -3,7 +3,7 @@ var amenuOptions = {
     linkIdToMenuHtml: null,
     expand: "single", //"single", "full,180px", "multiple", "all" or "alltop"
     speed: 200, //in ms
-    license: "2a8e9"
+    license: "2a5i8"
 };
 
 var amenu = new McAcdnMenu(amenuOptions);
