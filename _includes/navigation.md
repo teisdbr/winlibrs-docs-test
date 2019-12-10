@@ -26,7 +26,7 @@
                         {% for subitem in item.submenu %}
                             {% if forloop.first %}<ul style="padding-right:5px;">{% endif %}
                                 <li>
-                                <a href = "{{ subitem.url }}"><table style="width:100%"><tr>
+                                <a href = "{{ subitem.url }}"><table><tr>
                                 <td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{ subitem.de_num }}</td><td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
                                 <td style="vertical-align: top; padding-left:0px;">{{subitem.subtitle}}</td>
                                 </tr></table></a>
