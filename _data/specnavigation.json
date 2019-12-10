@@ -1,5 +1,6 @@
 [{
     "title": "Segment Layouts",
+    "url":"",
     "submenu": [{
         "subtitle": "00 - Submission Header",
         "url": "./librs-spec#submission-header-00"
@@ -80,6 +81,7 @@
   },
   {
     "title": "Mandatories",
+    "url":"",
     "submenu": [{
         "subtitle": "Error Messages",
         "sub_submenu": [{
@@ -102,6 +104,7 @@
       },
       {
         "subtitle": "NIBRS Mandatories",
+        "url":"",
         "sub_submenu": [{
             "subtitle": "ARSON (200)",
             "url": "./mandatories#"

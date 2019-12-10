@@ -10,6 +10,8 @@ ____
 # Data Element Definitions
 ____
 
+#### This page contains information about the specific requirements that go into each of the LIBRS Data Elements. For the short list of available values for each Data Element, go [here](./data-element-values).
+
 ## ORI Number (1)
 ____
 

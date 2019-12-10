@@ -51,6 +51,14 @@
     font-size:large;
     color:#333;
 }
+
+#accordion li > div > a{
+    font-family:'Lucida Grande', Geneva, sans-serif;
+    font-weight:bold;
+    font-size:large;
+    color:#333;
+}
+
 #accordion .active > div{
     color:black;
 }

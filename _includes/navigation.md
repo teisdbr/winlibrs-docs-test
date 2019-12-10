@@ -5,7 +5,8 @@
                 {% for item in site.data.specnavigation %}
                     {% if forloop.first %}<ul>{% endif %}
                     <li>
-                        <div>{{ item.title }}</div>
+                        <div>
+                        {% if item.url != "" %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</div>
                         {% for subitem in item.submenu %}
                             {% if forloop.first %}<ul style="padding-left: 5px;">{% endif %}
                                 <li>
@@ -21,7 +22,7 @@
                 {% for item in site.data.dataelementsnavigation %}
                     {% if forloop.first %}<ul>{% endif %}
                     <li>
-                        <div>{{ item.title }}</div>
+                        <div>{% if item.url != "" %}<a href="{{ item.url }}">{{ item.title }}</a>{% else %}{{ item.title }}{% endif %}</div>
                         {% for subitem in item.submenu %}
                             {% if forloop.first %}<ul style="padding-right:5px;">{% endif %}
                                 <li>

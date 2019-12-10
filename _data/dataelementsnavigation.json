@@ -1,5 +1,9 @@
 [{
+  "title":"&nbsp;&nbsp;&nbsp;Available Values",
+  "url":"./data-element-values"
+},{
     "title": "Data Element Definitions",
+    "url":"",
     "submenu": [{
         "de_num": "1",
         "subtitle": "ORI Number",
@@ -354,6 +358,7 @@
   },
   {
     "title": "Control Data Elements",
+    "url":"",
     "submenu": [{
       "de_num": "C1",
         "subtitle": "Segment Descriptor",
