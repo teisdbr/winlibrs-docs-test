@@ -53,11 +53,10 @@
     color:#333;
 }
 
-#accordion li > div > a{
+#accordion li > div > a, #accordion > ul > li:nth-child(3) > ul > li:nth-child(1) > div > a{
     font-family:'Lucida Grande', Geneva, sans-serif;
     font-weight:bold;
     font-size:large;
-    color:#333;
     padding-top: 6px;
     padding-bottom: 6px;
 }
@@ -81,7 +80,7 @@
 }
 
 /* links */
-#accordion a {
+#accordion a:not(.no-format) {
     color:#333;
     font-weight:normal;
     font-size:13px;

@@ -28,4 +28,12 @@
     }
 
     document.addEventListener("DOMContentLoaded", addAnchorLinksToHeadings);
+
+    function changeActiveMenuItem(newActiveElement) {
+        // Remove active from any existing anchor with this class
+        $('a').removeClass('active');
+
+        // Set the new active element
+        $(newActiveElement).addClass('active');
+    }
 </script>
