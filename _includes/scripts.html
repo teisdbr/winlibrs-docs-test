@@ -14,7 +14,7 @@
 <script>
     // Automatically add anchor tags to each h1 and h2
     function addAnchorLinksToHeadings() {
-        const headerElements = document.querySelectorAll('h1, h2');
+        const headerElements = document.querySelectorAll('h1:not(.no-link), h2:not(.no-link)');
         if (!!headerElements) {
             headerElements.forEach(e => {
                 const newAnchor = document.createElement('a');
@@ -31,7 +31,7 @@
 
     function changeActiveMenuItem(newActiveElement) {
         // Remove active from any existing anchor with this class
-        $('a').removeClass('active');
+        $('.active').removeClass('active');
 
         // Set the new active element
         $(newActiveElement).addClass('active');
