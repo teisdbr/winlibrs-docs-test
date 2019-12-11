@@ -12,6 +12,28 @@
     max-width: 325px;
 }
 
+.special td{
+    border: 1px solid black;
+}
+.rotated {
+    text-align: left;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: 1.5em;
+  }
+
+  .rotated div {
+    transform: rotate(-90deg);
+       -moz-transform: rotate(-90.0deg);  /* FF3.5+ */
+         -o-transform: rotate(-90.0deg);  /* Opera 10.5 */
+    -webkit-transform: rotate(-90.0deg);  /* Saf3.1+, Chrome */
+               filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
+           -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
+           margin-left: -10em;
+           margin-right: -10em;
+           padding-left: 23px;
+  }
+
 .maincontent [id]::before {
     content: '';
     display: block;

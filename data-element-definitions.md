@@ -1802,15 +1802,70 @@ ___
 
 * `This data element is to be used to link each offense to each victim. That is, the offense which was perpetrated against the victim during the incident.`
 * `If this data element does not match one of the values submitted in Data Element # 23 (Victim Segment Number), the submission will be returned with errors.`
-* 
+
 ___
 
 <div class="newpage"></div>
 
+### Offenses That Cannot Occur to the Same Victim
 
 The following chart shows Offenses that CANNOT occur to the same victim in the same incident. Each 'X' on the chart where offenses intersect denotes that those two offenses CANNOT occur to the same victim in an incident.
 
-![DE 24 Invalid Pairs Chart](https://storage.googleapis.com/te-public-files/librs/DE24_Chart.png){: class="big-image"}
+<table class="special">
+	<thead>
+		<tr>
+			<th colspan="22" style="text-align: center">Offenses That Cannot Occur to the Same Victim</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td style="white-space: nowrap;">09A - Murder</td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td style="white-space: nowrap;">09B - Negligent Manslaughter</td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td style="white-space: nowrap;">11A - Forcible Rape</td><td></td><td></td><td><b>X</b></td><td></td><td></td><td><b>X</b></td><td></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td><b>X</b></td></tr>
+		<tr><td style="white-space: nowrap;">11B - Forcible Sodomy</td><td></td><td></td><td></td><td><b>X</b></td><td></td><td><b>X</b></td><td></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td><b>X</b></td></tr>
+		<tr><td style="white-space: nowrap;">11C - Sexual Assault w/ Object</td><td></td><td></td><td></td><td></td><td><b>X</b></td><td><b>X</b></td><td></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td><b>X</b></td></tr>
+		<tr><td style="white-space: nowrap;">11D - Forcible Fondling</td><td></td><td></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td><b>X</b></td></tr>
+		<tr><td style="white-space: nowrap;">120 - Robbery</td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">13A - Aggravated Assault</td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">13B - Simple Assault</td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">13C - Intimidation</td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">23A - Pocket-Picking</td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">23B - Purse Snatching</td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">23C - Shoplifting</td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">23D - Theft from Building</td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">23E - Theft from Coin Machine</td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">23F - Theft from Motor Vehicle</td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">23G - Theft of Motor Vehicle Parts</td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">23H - All Other Larceny</td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">240 - Motor Vehicle Theft</td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">36A - Incest</td><td></td><td></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td><td></td></tr>
+  		<tr><td style="white-space: nowrap;">36B - Statutory Rape</td><td></td><td></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td><b>X</b></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td><b>X</b></td></tr>
+  		<tr style="height: 230px"><td>Space</td>
+		    <td class="rotated"><div>09A - Murder</div></td>
+		    <td class="rotated"><div>09B - Negligent Manslaughter</div></td>
+		    <td class="rotated"><div>11A - Forcible Rape</div></td>
+		    <td class="rotated"><div>11B - Forcible Sodomy</div></td>
+		    <td class="rotated"><div>11C - Sexual Assault w/ Object</div></td>
+		    <td class="rotated"><div>11D - Forcible Fondling</div></td>
+		    <td class="rotated"><div>120 - Robbery</div></td>
+		    <td class="rotated"><div>13A - Aggravated Assault</div></td>
+		    <td class="rotated"><div>13B - Simple Assault</div></td>
+		    <td class="rotated"><div>13C - Intimidation</div></td>
+		    <td class="rotated"><div>23A - Pocket-Picking</div></td>
+		    <td class="rotated"><div>23B - Purse Snatching</div></td>
+		    <td class="rotated"><div>23C - Shoplifting</div></td>
+		    <td class="rotated"><div>23D - Theft from Building</div></td>
+		    <td class="rotated"><div>23E - Theft from Coin Machine</div></td>
+		    <td class="rotated"><div>23F - Theft from Motor Vehicle</div></td>
+		    <td class="rotated"><div>23G - Theft of Motor Vehicle Parts</div></td>
+		    <td class="rotated"><div>23H - All Other Larceny</div></td>
+		    <td class="rotated"><div>240 - Motor Vehicle Theft</div></td>
+		    <td class="rotated"><div>36A - Incest</div></td>
+		    <td class="rotated"><div>36B - Statutory Rape</div></td></tr>
+ </tbody>
+</table>
+
+____
+
 
 ### Examples:
 ___
