@@ -615,7 +615,7 @@
     "13052": {
         "err_no": 13052,
         "err_message": "DATA ELEMENTS 15 - 22 MUST BE BLANK WHEN PROPERTY LOSS CODE = 1 OR 8",
-        "desc_de14": "When Type of Property Loss (DE 14) is None (1) or Unknown (8), then Data Elements 15 through 22 must be Blank () for all Offenses, except when the following Louisiana Revised Statute (DE 6) Drug Violation Offenses (NIBRS 35A) are reported. <br><br>If Type of Property Loss (14) has a value of None ('1') entered when one of the above LRS codes is present in the incident, then Suspected Drug Type (20) must have a valid entry."
+        "desc_de14": "When Type of Property Loss (DE 14) is None (1) or Unknown (8), then Data Elements 15 through 22 must be Blank () for all Offenses, except when Louisiana Revised Statute (DE 6) has a Drug Violation Offense (NIBRS 35A) reported. <br><br>If Type of Property Loss (14) has a value of None ('1') entered when the above case is satisfied, then Suspected Drug Type (20) must have a valid entry."
     },
     "13053": {
         "err_no": 13053,
