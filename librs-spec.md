@@ -177,8 +177,6 @@ Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["22075"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.desc20}}
-{% assign error = site.data.error["90026"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc20}}
 
 ___
 
