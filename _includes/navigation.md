@@ -60,6 +60,8 @@
                     {% if forloop.last %}</ul>{% endif %}
             {% endfor %}
         </li>
+        <li><div><a href="./lrs-master-list">Master LRS List</a></div></li>
+        <li><div><a href="./mandatories">LIBRS/NIBRS Mandatories</a></div></li>
     </ul>
     </li>
     </ul>
