@@ -852,39 +852,39 @@
                 "title": "",
                 "values": [
                     {
-                        "code": "1",
+                        "code": "01",
                         "desc": "Aircraft"
                     },
                     {
-                        "code": "2",
+                        "code": "02",
                         "desc": "Alcohol"
                     },
                     {
-                        "code": "3",
+                        "code": "03",
                         "desc": "Automobiles"
                     },
                     {
-                        "code": "4",
+                        "code": "04",
                         "desc": "Bicycles"
                     },
                     {
-                        "code": "5",
+                        "code": "05",
                         "desc": "Buses"
                     },
                     {
-                        "code": "6",
+                        "code": "06",
                         "desc": "Clothes or Furs"
                     },
                     {
-                        "code": "7",
+                        "code": "07",
                         "desc": "Computer Hardware or Software"
                     },
                     {
-                        "code": "8",
+                        "code": "08",
                         "desc": "Consumable Goods"
                     },
                     {
-                        "code": "9",
+                        "code": "09",
                         "desc": "Credit or Debit Cards"
                     },
                     {
@@ -1417,47 +1417,47 @@
                 "title": "",
                 "values": [
                     {
-                        "code": "1",
+                        "code": "01",
                         "desc": "Responding to 'Disturbance Calls' (LIBRS Only)",
                         "comment": "09A, 13A, 13B, 13C"
                     },
                     {
-                        "code": "2",
+                        "code": "02",
                         "desc": "Burglaries in Progress or Pursuing Burglary Suspects (LIBRS Only)",
                         "comment": "09A, 13A, 13B, 13C"
                     },
                     {
-                        "code": "3",
+                        "code": "03",
                         "desc": "Robberies in Progress or Pursuing Robbery Suspects (LIBRS Only)",
                         "comment": "09A, 13A, 13B, 13C"
                     },
                     {
-                        "code": "4",
+                        "code": "04",
                         "desc": "Attempting Other Arrests (LIBRS Only)",
                         "comment": "09A, 13A, 13B, 13C"
                     },
                     {
-                        "code": "5",
+                        "code": "05",
                         "desc": "Civil Disorder (LIBRS Only)",
                         "comment": "09A, 13A, 13B, 13C"
                     },
                     {
-                        "code": "6",
+                        "code": "06",
                         "desc": "Handling, Transporting, Custody of Prisoners (LIBRS Only)",
                         "comment": "09A, 13A, 13B, 13C"
                     },
                     {
-                        "code": "7",
+                        "code": "07",
                         "desc": "Investigating Suspicious Persons or Circumstance",
                         "comment": "09A, 13A, 13B, 13C"
                     },
                     {
-                        "code": "8",
+                        "code": "08",
                         "desc": "Ambush - No Warning (LIBRS Only)",
                         "comment": "09A, 13A, 13B, 13C"
                     },
                     {
-                        "code": "9",
+                        "code": "09",
                         "desc": "Mentally Deranged Assailant (LIBRS Only)",
                         "comment": "09A, 13A, 13B, 13C"
                     },
