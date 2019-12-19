@@ -1386,7 +1386,7 @@ Enter one Property Description (DE 15) code per Property Description (31) Segmen
 <table>
 <thead>
 	<tr>
-		<th colspan = "1" style="align-text:center;">Types of Weapon/Force Involved</th>
+		<th colspan = "1" style="align-text:center;">Property Descriptions</th>
 	</tr>
     </thead>
     <tbody>
