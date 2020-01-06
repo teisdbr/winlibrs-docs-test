@@ -1243,9 +1243,9 @@
     },
     "16052": {
         "err_no": 16052,
-        "err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS LESS THAN 17",
-        "desc_de47": "If age is under 17, then Data Element # 52 (disposition of Arrestee Under 17) must be entered.",
-        "desc_de52": "MUST be entered if Arrestee Age is Under 17."
+        "err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS LESS THAN 18",
+        "desc_de47": "If age is under 18, then Data Element #52 (Disposition of Arrestee Under 18) must be entered.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles.",
+        "desc_de52": "MUST be entered if Arrestee Age is Under 18.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
     },
     "16053": {
         "err_no": 16053,
@@ -1544,8 +1544,8 @@
     },
     "22100": {
         "err_no": 22100,
-        "err_message": "AGE MUST BE '01' - '16' FOR JUVENILE OFFENSES",
-        "desc_de47": "When Juvenile Qualifiers are used, Age of Arrestee (47) must be '01' thru '16' for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}"
+        "err_message": "AGE MUST BE '01' - '17' FOR JUVENILE OFFENSES",
+        "desc_de47": "When Juvenile Qualifiers are used, Age of Arrestee (47) must be '01' thru '17' for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
     },
     "22105": {
         "err_no": 22105,
@@ -2232,7 +2232,7 @@
     },
     "90010": {
         "err_no": 90010,
-        "err_message": "FOR RAPE OFFENSES (11 A OR 36 B), AGE OF OFFENDlATER",
+        "err_message": "FOR RAPE OFFENSES (11 A OR 36 B), AGE OF OFFENDER MUST BE '17' OR GREATER",
         "desc40": "For First Degree (NIBRS Code 11A) and Statutory Rape (NIBRS Code 36B), the Age of Offender (DE 37) MUST be at least seventeen (17) years of age or older."
     },
     "90011": {
