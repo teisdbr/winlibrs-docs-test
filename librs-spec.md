@@ -395,8 +395,6 @@ Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["90008"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
-{% assign error = site.data.error["90010"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
 {% assign error = site.data.error["90011"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
 {% assign error = site.data.error["90013"] -%}
