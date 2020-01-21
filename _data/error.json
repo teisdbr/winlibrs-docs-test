@@ -842,7 +842,7 @@
     "14053": {
         "err_no": 14053,
         "err_message": "SEX OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP",
-        "desc_de35": "The Sex of Victim (DE 27) and Sex of Offender (DE 38) MUST reflect the implied relationship. The following relationships must reflect a specific sex for the Victim, Offender, or both depending on the relationship: <br><br>The following Victim/Offender Genders are implied to be DIFFERENT: {::nomarkdown}<ul><li>XS - Victim was Ex-Spouse</li><li>SE - Victim Was Spouse</li><li>CS - Victim was Common-Law Spouse</li><li>ES - Victim was Estranged Spouse</li><li>BG - Victim was Boyfriend/Girlfriend</li><li>XB - Victim was Ex-Boyfriend/Girlfriend</li><li>NM - Non-Married Live-In</li></ul>{:/}The following Victim/Offender Geners are implied to be SAME:{::nomarkdown}<ul><li>HR - Homosexual Relationship (No Longer Used)</li><li>VO - Victim was Offender</li></ul>{:/}"
+        "desc_de35": "If DE 35 is 'VO' (Victim was Offender), then DE 27 (Sex of Victim) and DE 38 (Sex of Offender) MUST match."
     },
     "14054": {
         "err_no": 14054,
