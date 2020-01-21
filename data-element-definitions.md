@@ -3146,8 +3146,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 4 | {{error.desc_de38}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14059"] -%}
 5 | {{error.desc_de38}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["14060"] -%}
-6 | {{error.desc_de38}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
 
