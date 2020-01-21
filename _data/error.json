@@ -882,7 +882,7 @@
     "14060": {
         "err_no": 14060,
         "err_message": "VICTIM'S SEX CANNOT BE SAME AS ALL OFFENDERS FOR OFFENSES OF '11A' AND '36B'",
-        "desc_de38": "For Forcible Rape (NIBRS 11A) or Statutory Rape (NIBRS36B), one or more of the Offenders MUST have a different sex than the rape Victim."
+        "desc_de38": "For Forcible Rape (NIBRS 11A) or Statutory Rape (NIBRS 36B), one or more of the Offenders MUST have a different sex than the rape Victim."
     },
     "14061": {
         "err_no": 14061,
