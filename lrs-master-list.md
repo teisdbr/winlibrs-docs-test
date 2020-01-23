@@ -17,7 +17,7 @@ ____
 
 ## Current and Active Master LRS Code List
 
-#### Please note, the last update of this list was performed on Jan 23, 2020. Your records may be out of date if you have not updated your Application's Master LRS List since then. 
+#### Last Updated Jan 23, 2020
 
 <table>
 <thead style="font-size: 14px;">

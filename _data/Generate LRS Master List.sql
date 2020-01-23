@@ -1,21 +1,19 @@
-/****** Script to generate the LIBRS Master LRS Spreadsheet  ******/
-
 SELECT DISTINCT la.statute_num AS 'LRS', 
 la.statute_desc AS 'LRS_Description' ,
 la.lrank AS 'Lrank',
 la.ucr AS 'UCR',
 la.nibr AS 'Default_NIBRS',
-CONCAT('[', SUBSTRING((SELECT DISTINCT '", "' + NIBRS FROM validate v WHERE v.statute_num = la.statute_num FOR XML PATH('') ), 3 , 100), '"]') AS 'Available_NIBRS',
+CONCAT('[', SUBSTRING((SELECT DISTINCT '", "' + NIBRS FROM validate v WHERE v.statute_num = la.statute_num AND v.SPEC = 'L2.5' FOR XML PATH('') ), 3 , 100), '"]') AS 'Available_NIBRS',
 la.lgroup AS 'GP',
 la.lpart AS 'PT',
 la.lindex AS 'OneA_Index',
 la.landxcls AS 'Index_Class',
 la.fbindxcl AS 'UCR_Index',
 la.ibrndxcl AS 'LIBRS_INDEX',
-la.EXPIRATION_DATE AS 'Expiration_Date'
+CAST(la.EXPIRATION_DATE AS date) AS 'Expiration_Date'
 INTO #TempTable
 FROM lars la
-INNER JOIN validate v on v.statute_num = la.statute_num 
+INNER JOIN validate v on v.statute_num = la.statute_num
 
 Update #TempTable SET OneA_Index='Agg. Assault' WHERE OneA_Index='AGG ASSAULT'
 Update #TempTable SET OneA_Index='Agg. Assault' WHERE OneA_Index='Agg Assault'
@@ -186,21 +184,3 @@ Update #TempTable SET Librs_Index='Property' WHERE Librs_Index='Propety'
 SELECT * FROM #TempTable
 
 Drop table #TempTable
---WHERE la.EXPIRATION_DATE IS NULL OR la.EXPIRATION_DATE >= GETDATE()
-
-SELECT DISTINCT la.statute_num AS 'LRS #', 
-la.statute_desc AS 'Actual LRS Description / Another Offense to be Reported' ,
-la.lrank AS Lrank,
-la.ucr AS UCR,
-v.NIBRS AS 'NIBRS',
-la.lgroup AS GP,
-la.lpart AS PT,
-la.lindex AS '1 A Index',
-la.landxcls AS 'Index Class',
-la.fbindxcl AS 'UCR Index',
-la.ibrndxcl AS 'LIBRS INDEX'
-
-FROM lars la
-INNER JOIN validate v on v.statute_num = la.statute_num
-
-WHERE la.EXPIRATION_DATE IS NULL OR la.EXPIRATION_DATE >= GETDATE()
