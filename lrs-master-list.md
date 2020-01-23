@@ -34,7 +34,7 @@ ____
 	</tr>
     </thead>
     <tbody style="font-size: 13px;">
-{% assign active_lrs = site.data.lrs-codes %}
+{% assign active_lrs = site.data.lrs-codes | sort:"LRS" %}
 {% for lrs in active_lrs %}
 {% if lrs.Expiration_Date == "Active" %}
 	<tr>
@@ -90,7 +90,7 @@ ____
 	</tr>
     </thead>
     <tbody style="font-size: 13px;">
-{% assign active_lrs = site.data.lrs-codes %}
+{% assign active_lrs = site.data.lrs-codes | sort:"Expiration_Date" %}
 {% for lrs in active_lrs %}
 {% if lrs.Expiration_Date != "Active" %}
 	<tr>
