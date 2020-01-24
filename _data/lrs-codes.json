@@ -5654,12 +5654,12 @@
 		"Expiration_Date": "Active"
 	},
 	{
-		"LRS": "14:70.4",
+		"LRS": "14.70.4",
 		"LRS_Description": "Illegal Transmission Of Monetary Funds",
 		"Lrank": "27",
 		"UCR": "11.4",
 		"Default_NIBRS": "26E",
-		"Available_NIBRS": ["26B", "26E"],
+		"Available_NIBRS": ["26E"],
 		"GP": "A",
 		"PT": "II",
 		"OneA_Index": "Other",
@@ -6465,7 +6465,7 @@
 		"Lrank": "24.02",
 		"UCR": "11.1",
 		"Default_NIBRS": "26B",
-		"Available_NIBRS": ["26B", "26E"],
+		"Available_NIBRS": ["26B"],
 		"GP": "A",
 		"PT": "II",
 		"OneA_Index": "Other",
