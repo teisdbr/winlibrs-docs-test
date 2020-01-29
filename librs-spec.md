@@ -51,15 +51,15 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["10090"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc00}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["00"]}}
 {% assign error = site.data.error["10091"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc00}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["00"]}}
 {% assign error = site.data.error["10093"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc00}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["00"]}}
 {% assign error = site.data.error["10094"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc00}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["00"]}}
 {% assign error = site.data.error["90038"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc00}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["00"]}}
 
 ___
 
@@ -92,9 +92,9 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["10055"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc10}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["10"]}}
 {% assign error = site.data.error["10075"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc10}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["10"]}}
 
 ___
 
@@ -126,9 +126,9 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["11060"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc11}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["11"]}}
 {% assign error = site.data.error["11069"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc11}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["11"]}}
 
 ___
 
@@ -176,7 +176,7 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["22075"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc20}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["20"]}}
 
 ___
 
@@ -208,9 +208,9 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["10074"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc30}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["30"]}}
 {% assign error = site.data.error["10076"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc30}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["30"]}}
 
 ___
 
@@ -246,9 +246,9 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["13043"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc31}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["31"]}}
 {% assign error = site.data.error["90018"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc31}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["31"]}}
 
 ___
 
@@ -279,9 +279,9 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["13071"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc32}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["32"]}}
 {% assign error = site.data.error["13077"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc32}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["32"]}}
 
 ___
 
@@ -328,7 +328,7 @@ An incident is submitted with a NIBRS 23H 'Crime Against Property' Offense, as w
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["90023"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc33}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["33"]}}
 
 ___
 
@@ -394,11 +394,11 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["90008"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["40"]}}
 {% assign error = site.data.error["90011"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["40"]}}
 {% assign error = site.data.error["90013"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc40}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["40"]}}
 
 ___
 
@@ -495,7 +495,7 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["22080"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc51}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["51"]}}
 
 ___
 
@@ -526,7 +526,7 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["22081"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc52}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["52"]}}
 
 ___
 
@@ -569,7 +569,7 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["16058"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc60}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["60"]}}
 
 <br>
 
@@ -628,7 +628,7 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["16060"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc62}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["62"]}}
 
 ___
 
@@ -659,7 +659,7 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["16059"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc63}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["63"]}}
 
 ___
 
@@ -684,11 +684,11 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["19901"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc99}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["99"]}}
 {% assign error = site.data.error["19902"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc99}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["99"]}}
 {% assign error = site.data.error["19903"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc99}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["99"]}}
 
 ___
 
@@ -713,6 +713,6 @@ ___
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["10092"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.desc01}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["01"]}}
 
 ___
