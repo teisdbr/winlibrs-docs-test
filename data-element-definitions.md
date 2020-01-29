@@ -311,11 +311,11 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["12001"] -%}
-1 | {{error.err_desc[l6]}} | {{error.err_no}} | {{ error.err_message }} 
+1 | {{error.err_desc["l6"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["15002"] -%}
-2 | {{error.err_desc[l6]}} | {{error.err_no}} | {{ error.err_message }} 
+2 | {{error.err_desc["l6"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["25001"] -%}
-3 | {{error.err_desc[l6]}} | {{error.err_no}}| {{ error.err_message }} 
+3 | {{error.err_desc["l6"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
 
@@ -336,11 +336,11 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["90021"] -%}
-1 | {{error.err_desc[l6r]}} | {{error.err_no}}| {{ error.err_message }} 
+1 | {{error.err_desc["l6r"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["90022"] -%}
-2 | {{error.err_desc[l6r]}} | {{error.err_no}} | {{ error.err_message }} 
+2 | {{error.err_desc["l6r"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["90024"] -%}
-3 | {{error.err_desc[l6r]}} | {{error.err_no}}| {{ error.err_message }} 
+3 | {{error.err_desc["l6r"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
 
@@ -373,9 +373,9 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["12001"] -%}
-1 | {{error.err_desc[l6r]}} | {{error.err_no}}| {{ error.err_message }} 
+1 | {{error.err_desc["l6r"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["90022"] -%}
-2 | {{error.err_desc[l6r]}} | {{error.err_no}} | {{ error.err_message }} 
+2 | {{error.err_desc["l6r"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -528,9 +528,9 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["06001"] -%}
-1 | {{error.err_desc[n6]}} | {{error.err_no}}| {{ error.err_message }} 
+1 | {{error.err_desc["n6"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["06002"] -%}
-2 | {{error.err_desc[n6]}} | {{error.err_no}} | {{ error.err_message }} 
+2 | {{error.err_desc["n6"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -1228,11 +1228,11 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["90019"] -%}
-1 | {{error.err_desc[p1]}} | {{error.err_no}}| {{ error.err_message }}
+1 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["90020"] -%}
-2 | {{error.err_desc[p1]}} | {{error.err_no}}| {{ error.err_message }}
+2 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["25001"] -%}
-3 | {{error.err_desc[p1]}} | {{error.err_no}}| {{ error.err_message }}
+3 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 

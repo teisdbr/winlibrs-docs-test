@@ -138,8 +138,8 @@
         "err_no": 10072,
         "err_message": "RECOVERED PROPERTY MUST ALSO BE SUBMITTED AS STOLEN",
         "err_desc": {
-            "14": "For every Property Description code (DE 15) entered into a Property Description Segment (31) having a Type of Property Loss (DE 14) of Recovered ('5'), there MUST also be a corresponding Property Description Segment (DE 31) with a matching Property Description (DE 15) code and a Type of Property Loss (DE 14) of Stolen/Etc. ('7').<br><br>This applies to both initial submissions and resubmissions for Incident Reports (Action Type of 'I'). This rule does not apply to:{::nomarkdown}}<ul><li>NIBRS Offense codes of <b>280 and 250</b>.</li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, and individual parts within a vehicle were not reported as Stolen.</li></ul>{:/}} ",
-            "15": "For every Property Description code (DE 15) entered into a Property Description Segment (31) having a Type of Property Loss (DE 14) of Recovered ('5'), there MUST also be a corresponding Property Description Segment (DE 31) with a matching Property Description (DE 15) code and a Type of Property Loss (DE 14) of Stolen/Etc. ('7').<br><br>This applies to both initial submissions and resubmissions for Incident Reports (Action Type of 'I'). This rule does not apply to:{::nomarkdown}}<ul><li>NIBRS Offense codes of <b>280 and 250</b></li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, and individual parts within a vehicle were not reported as Stolen.</li></ul>{:/}}"
+            "14": "For every Property Description code (DE 15) entered into a Property Description Segment (31) having a Type of Property Loss (DE 14) of Recovered ('5'), there MUST also be a corresponding Property Description Segment (DE 31) with a matching Property Description (DE 15) code and a Type of Property Loss (DE 14) of Stolen/Etc. ('7').<br><br>This applies to both initial submissions and resubmissions for Incident Reports (Action Type of 'I'). This rule does not apply to:{::nomarkdown}<ul><li>NIBRS Offense codes of <b>280 and 250</b>.</li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, and individual parts within a vehicle were not reported as Stolen.</li></ul>{:/}} ",
+            "15": "For every Property Description code (DE 15) entered into a Property Description Segment (31) having a Type of Property Loss (DE 14) of Recovered ('5'), there MUST also be a corresponding Property Description Segment (DE 31) with a matching Property Description (DE 15) code and a Type of Property Loss (DE 14) of Stolen/Etc. ('7').<br><br>This applies to both initial submissions and resubmissions for Incident Reports (Action Type of 'I'). This rule does not apply to:{::nomarkdown}<ul><li>NIBRS Offense codes of <b>280 and 250</b></li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, and individual parts within a vehicle were not reported as Stolen.</li></ul>{:/}}"
         }
     },
     "10073": {
@@ -160,7 +160,7 @@
         "err_no": 10075,
         "err_message": "MISSING A MANDATORY RECORD SEGMENT FOR A COMPLETE INCIDENT",
         "seq_desc": {
-            "10": "When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included: {::nomarkdown}}<ul><li>10 - Administrative Segment</li><li>20 - Offense Segment</li><li>40 - Offender Segment</li><li>41 - Offender Using Segment/Gaming Motivation</li><li>50 - Victim Segment</li></ul>{:/}} One or more of these segments was missing."
+            "10": "When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included: {::nomarkdown}<ul><li>10 - Administrative Segment</li><li>20 - Offense Segment</li><li>40 - Offender Segment</li><li>41 - Offender Using Segment/Gaming Motivation</li><li>50 - Victim Segment</li></ul>{:/}} One or more of these segments was missing."
         }
     },
     "10076": {
@@ -326,7 +326,7 @@
         "err_no": 11005,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
         "err_desc": {
-            "3": "Each component of the date must be valid: {::nomarkdown}}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Four-Digit Year</li><li>Days CANNOT exceed maximum for the month (EG June CANNOT have 31 days)</li><li>Incident Date CANNOT exceed the current date.</li></ul>{:/}}",
+            "3": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Four-Digit Year</li><li>Days CANNOT exceed maximum for the month (EG June CANNOT have 31 days)</li><li>Incident Date CANNOT exceed the current date.</li></ul>{:/}}",
             "5": "Each component of the date must be valid: Months must be 0-12, days must be 01-31, and year must include the century (19xx, 20xx). In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br><br>The Exceptional Clearance Date CANNOT be greater than that entered within the Reporting Period (DE C4).<br><br>For example, if the Reporting Period is 062019 (June 2019), then the Exceptional Clearance Date CANNOT contain any date 07/01/2019 or greater."
         }
     },
@@ -597,9 +597,9 @@
         "err_no": 12019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
         "err_desc": {
-            "12": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Property': {::nomarkdown}}<ul><li><b>250, 280</li><li>35A, 35B</li><li>370</li><li>39C</li><li>520</li><li>90A, 90Z</b></li></ul>{:/}}",
-            "12-2": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Person': {::nomarkdown}}<ul><li><b>09A, 09B</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</b></li></ul>{:/}} OR Is one of the following NIBRS Offense code AND is an LRS of type 'Crime Against Property': {::nomarkdown}}<ul><li><b>120</b></li></ul>{:/}}",
-            "13": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes: {::nomarkdown}}<ul><li><b>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 210</li><li>520</b></li></ul>{:/}}"
+            "12": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Property': {::nomarkdown}<ul><li><b>250, 280</li><li>35A, 35B</li><li>370</li><li>39C</li><li>520</li><li>90A, 90Z</b></li></ul>{:/}}",
+            "12-2": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Person': {::nomarkdown}<ul><li><b>09A, 09B</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</b></li></ul>{:/}} OR Is one of the following NIBRS Offense code AND is an LRS of type 'Crime Against Property': {::nomarkdown}<ul><li><b>120</b></li></ul>{:/}}",
+            "13": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes: {::nomarkdown}<ul><li><b>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 210</li><li>520</b></li></ul>{:/}}"
         }
     },
     "12051": {
@@ -655,7 +655,7 @@
         "err_no": 12058,
         "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR",
         "err_desc": {
-            "13": "If the firearm is one of the following types of automatic weapons, add 'A' as the third character:{::nomarkdown}}<ul><li>11 Firearm (Type not Stated)</li><li>12 Handgun</li><li>13 Rifle</li><li>14 Shotgun</li><li>15 Other Firearm.</li></ul>{:/}}"
+            "13": "If the firearm is one of the following types of automatic weapons, add 'A' as the third character:{::nomarkdown}<ul><li>11 Firearm (Type not Stated)</li><li>12 Handgun</li><li>13 Rifle</li><li>14 Shotgun</li><li>15 Other Firearm.</li></ul>{:/}}"
         }
     },
     "12065": {
@@ -683,7 +683,7 @@
         "err_no": 12069,
         "err_message": "POSSIBLE CLASSIFICATION ERROR OF AGGRAVATED ASSAULT '13A' CODED AS SIMPLE '13B'",
         "err_desc": {
-            "13": "If the Louisiana Revised Statute (DE 6) is a simple assault (NIBRS 13B), but the weapon involved is: {::nomarkdown}}<ul><li>11/11A Firearm or Automatic Firearm</li><li>12/12A Handgun or Automatic Handgun</li><li>13/13A Rifle or Automatic Rifle</li><li>14/14A Shotgun or Automatic Shotgun</li><li>15/15A Other Firearm or Other Automatic Firearm</li></ul>{:/}}This Offense should be reported as an Aggravated Assault (NIBRS 13A)."
+            "13": "If the Louisiana Revised Statute (DE 6) is a simple assault (NIBRS 13B), but the weapon involved is: {::nomarkdown}<ul><li>11/11A Firearm or Automatic Firearm</li><li>12/12A Handgun or Automatic Handgun</li><li>13/13A Rifle or Automatic Rifle</li><li>14/14A Shotgun or Automatic Shotgun</li><li>15/15A Other Firearm or Other Automatic Firearm</li></ul>{:/}}This Offense should be reported as an Aggravated Assault (NIBRS 13A)."
         }
     },
     "12090": {
@@ -739,7 +739,7 @@
         "err_no": 13007,
         "err_message": "CANNOT BE EARLIER THAN INCIDENT DATE / HOUR.",
         "err_desc": {
-            "17": "Each component of the date must be valid: {::nomarkdown}}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must include the century (i.e., 19xx, 20xx)</li><li>Days cannot exceed maximum for the month (e.g., June CANNOT have 31 days)</li></ul>{:/}}The date CANNOT be greater than that entered within the 'Month of Submission' and 'Year of Submission' fields on the data record. For example, if 'Month of Submission' and 'Year of Submission' are '06/1995,' the recovered date CANNOT contain any date 07/01/1995 or greater."
+            "17": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must include the century (i.e., 19xx, 20xx)</li><li>Days cannot exceed maximum for the month (e.g., June CANNOT have 31 days)</li></ul>{:/}}The date CANNOT be greater than that entered within the 'Month of Submission' and 'Year of Submission' fields on the data record. For example, if 'Month of Submission' and 'Year of Submission' are '06/1995,' the recovered date CANNOT contain any date 07/01/1995 or greater."
         }
     },
     "13008": {
@@ -762,14 +762,14 @@
         "err_no": 13019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
         "err_desc": {
-            "14": "Type of Property Loss (DE 14) MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes and is a 'Crime Against Property': {::nomarkdown}}<b><ul><li>100, 120</li><li>200, 210, 220, 240, 250, 270, 280, 290</li><li>23A, 23B, 23C, 23D, 23E, 23F, 23G, 23H</li><li>26A, 26B, 26C, 26D, 26E</li><li>35A, 35B</li><li>39A, 39B, 39C, 39D</li><li>510</li><li>90A, 90Z</li></ul></b>{:/}}"
+            "14": "Type of Property Loss (DE 14) MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes and is a 'Crime Against Property': {::nomarkdown}<b><ul><li>100, 120</li><li>200, 210, 220, 240, 250, 270, 280, 290</li><li>23A, 23B, 23C, 23D, 23E, 23F, 23G, 23H</li><li>26A, 26B, 26C, 26D, 26E</li><li>35A, 35B</li><li>39A, 39B, 39C, 39D</li><li>510</li><li>90A, 90Z</li></ul></b>{:/}}"
         }
     },
     "13020": {
         "err_no": 13020,
         "err_message": "RECOVERED DATE CANNOT PREDATE BASE DATE",
         "err_desc": {
-            "17": "Property Description Segments (31) submitted with as part of a Time-Window (Action Type of 'W') CANNOT have a Date Recovered (DE 17) before:{::nomarkdown}}<ul><li>January 1 of the year prior to the current year</li><li>The date the agency started submitting Incident-Based Reporting data</li></ul>{:/}}For any subsequent Modify (Action Type of 'M') submission of a previously submitted Time-Window Submission (Action Type of 'W'), this edit also applies."
+            "17": "Property Description Segments (31) submitted with as part of a Time-Window (Action Type of 'W') CANNOT have a Date Recovered (DE 17) before:{::nomarkdown}<ul><li>January 1 of the year prior to the current year</li><li>The date the agency started submitting Incident-Based Reporting data</li></ul>{:/}}For any subsequent Modify (Action Type of 'M') submission of a previously submitted Time-Window Submission (Action Type of 'W'), this edit also applies."
         }
     },
     "13021": {
@@ -798,7 +798,7 @@
         "err_no": 13051,
         "err_message": "PROPERTY VALUE OF ZERO IS NOT ALLOWED",
         "err_desc": {
-            "16": "If Value of Property (DE 16) is unknown, must enter a value of Unknown ('1', representing $1.00). A value of zero ('0') is allowed only when Property Description (DE 15) codes are the following:<br><br>ZERO ('0') value is required for the following:{::nomarkdown}}<ul><li>09 Credit/Debit Cards</li><li>22 Nonnegotiable Instruments</li><li>48 Documents/Personal or Business</li><li>65 Identity Documents</li><li>66 Identity-Intangible</li></ul>{:/}} ZERO ('0') value is optional for the following:{::nomarkdown}}<ul><li>77 Other</li><li>99 Special Category.</li></ul>{:/}}"
+            "16": "If Value of Property (DE 16) is unknown, must enter a value of Unknown ('1', representing $1.00). A value of zero ('0') is allowed only when Property Description (DE 15) codes are the following:<br><br>ZERO ('0') value is required for the following:{::nomarkdown}<ul><li>09 Credit/Debit Cards</li><li>22 Nonnegotiable Instruments</li><li>48 Documents/Personal or Business</li><li>65 Identity Documents</li><li>66 Identity-Intangible</li></ul>{:/}} ZERO ('0') value is optional for the following:{::nomarkdown}<ul><li>77 Other</li><li>99 Special Category.</li></ul>{:/}}"
         }
     },
     "13052": {
@@ -840,7 +840,7 @@
         "err_no": 13057,
         "err_message": "PROPERTY LOSS(14) MUST BE 7 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24,28, OR  37 ' FOR DATA TO BE ENTERED",
         "err_desc": {
-            "18": "MUST be entered if the following three conditions are true: {::nomarkdown}}<ul><li>Louisiana Revised Statute (DE 6) has a NIBRS Offense Code of <b>240</b></li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/}} OR if the following four conditions are true:{::nomarkdown}}<ul><li>Property Description (DE 15) has Motor Vehicle codes</li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>The Louisiana Revised Statute Number is one of the following<ul><li>14:67</li><li>14:68</li><li>14:68.4</li></ul><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/}}"
+            "18": "MUST be entered if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (DE 6) has a NIBRS Offense Code of <b>240</b></li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/}} OR if the following four conditions are true:{::nomarkdown}<ul><li>Property Description (DE 15) has Motor Vehicle codes</li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>The Louisiana Revised Statute Number is one of the following<ul><li>14:67</li><li>14:68</li><li>14:68.4</li></ul><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/}}"
         }
     },
     "13058": {
@@ -851,8 +851,8 @@
         "err_no": 13059,
         "err_message": "ALL NON VEHICULAR PROPERTY DESCRIPTIONS WERE ENTERED",
         "err_desc": {
-            "18": "Property Description (DE 15) MUST contain at least one of the following vehicle codes:{::nomarkdown}}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}}",
-            "19": "When '01' to '99' is entered into Number of Recovered Motor Vehicles (19), then Property Description (15) must contain at least one of the following vehicle codes: {::nomarkdown}}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}}"
+            "18": "Property Description (DE 15) MUST contain at least one of the following vehicle codes:{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}}",
+            "19": "When '01' to '99' is entered into Number of Recovered Motor Vehicles (19), then Property Description (15) must contain at least one of the following vehicle codes: {::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}}"
         }
     },
     "13060": {
@@ -873,16 +873,16 @@
         "err_no": 13064,
         "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE(20), QUANTITY(21) AND MEASUREMENT(22) MUST BE PRESENT",
         "err_desc": {
-            "20": "When the following conditions are true: {::nomarkdown}}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code of <b>35A</b></li><li> Type Property Loss (14) is Seized ('10') </li><li> Property Description (15) is Drugs/Narcotics ('10') </li><li> Suspected Drug Type (20) is entered</li></ul>{:/}} Estimated Quantity (21), Type Drug Measurement (22), and Value of Property (16) must be entered."
+            "20": "When the following conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code of <b>35A</b></li><li> Type Property Loss (14) is Seized ('10') </li><li> Property Description (15) is Drugs/Narcotics ('10') </li><li> Suspected Drug Type (20) is entered</li></ul>{:/}} Estimated Quantity (21), Type Drug Measurement (22), and Value of Property (16) must be entered."
         }
     },
     "13065": {
         "err_no": 13065,
         "err_message": "OFFENSE = DRUG OFFENSE & PROP LOSS = 6 AND DESCRIPTION = 10 MUST EXIST",
         "err_desc": {
-            "22": "Type Drug Measurement (22) is used if the following three conditions are true: {::nomarkdown}}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code <b>35A</b></li><li>Type of Property Loss (14) is Seized ('6')</li><li> Property Description ('15') is Drugs Narcotics ('10')</li></ul>{:/}}",
-            "21": "Estimated Drug Quantity (21) is valid only if the following three conditions are true: {::nomarkdown}}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of <b>35A</b></li><li> Type of Property Loss (14) is Seized ('6')</li><li>Property Description (15)is Drugs/Narcotics ('10')</li></ul>{:/}}",
-            "20": "Suspected Drug Type (20) MUST be entered if the following three conditions are true: {::nomarkdown}}<ul><li>Louisiana Revised Statutes (DE 6) has a NIBRS offense code of <b>35A</b></li><li>Type of Property Loss (DE 14) has a value of Seized ('6')</li><li>Property Description (15) has a value of Drugs/Narcotics ('10')</li></ul>{:/}} If there are multiple LRS Offenses (6) listed and Drugs/Narcotics ('10') was split between the different types of LRS Offenses (6), only enter the Suspected Drug Types (20) applicable to the Offenses listed above."
+            "22": "Type Drug Measurement (22) is used if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code <b>35A</b></li><li>Type of Property Loss (14) is Seized ('6')</li><li> Property Description ('15') is Drugs Narcotics ('10')</li></ul>{:/}}",
+            "21": "Estimated Drug Quantity (21) is valid only if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of <b>35A</b></li><li> Type of Property Loss (14) is Seized ('6')</li><li>Property Description (15)is Drugs/Narcotics ('10')</li></ul>{:/}}",
+            "20": "Suspected Drug Type (20) MUST be entered if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statutes (DE 6) has a NIBRS offense code of <b>35A</b></li><li>Type of Property Loss (DE 14) has a value of Seized ('6')</li><li>Property Description (15) has a value of Drugs/Narcotics ('10')</li></ul>{:/}} If there are multiple LRS Offenses (6) listed and Drugs/Narcotics ('10') was split between the different types of LRS Offenses (6), only enter the Suspected Drug Types (20) applicable to the Offenses listed above."
         }
     },
     "13066": {
@@ -918,14 +918,14 @@
         "err_no": 13072,
         "err_message": "DATA ELEMENTS 15 - 22 WERE ALL BLANK WITH THIS PROPERTY LOSS CODE",
         "err_desc": {
-            "14": "When the Type of Property Loss is...{::nomarkdown}}<ul><li>2 Burned</li><li>3 Counterfeited/Forged</li><li>4 Destroyed /Damaged/Vandalized</li><li>5 Recovered</li><li>6 Seized</li><li>7 Stolen/Etc.</li></ul>{:/}}Then the following data elements in the Property Description Segment (DE 31) must have applicable entries:{::nomarkdown}}<ul><li>Property Description (15)</li><li>Value of Property (16)</li><li>Date Recovered (17)</li><li>Number of Stolen Motor Vehicles (18)</li><li>Number of Recovered Motor Vehicles (19)</li><li>Suspected Drug Type (20)</li><li>Estimated Drug Quantity (21)</li><li>Type of Drug Measurement (22)</li></ul>{:/}}"
+            "14": "When the Type of Property Loss is...{::nomarkdown}<ul><li>2 Burned</li><li>3 Counterfeited/Forged</li><li>4 Destroyed /Damaged/Vandalized</li><li>5 Recovered</li><li>6 Seized</li><li>7 Stolen/Etc.</li></ul>{:/}}Then the following data elements in the Property Description Segment (DE 31) must have applicable entries:{::nomarkdown}<ul><li>Property Description (15)</li><li>Value of Property (16)</li><li>Date Recovered (17)</li><li>Number of Stolen Motor Vehicles (18)</li><li>Number of Recovered Motor Vehicles (19)</li><li>Suspected Drug Type (20)</li><li>Estimated Drug Quantity (21)</li><li>Type of Drug Measurement (22)</li></ul>{:/}}"
         }
     },
     "13075": {
         "err_no": 13075,
         "err_message": "MANDATORY FIELD WITH THE PROPERTY LOSS CODE ENTERED",
         "err_desc": {
-            "15": "A Property Description (DE 15) code must be entered when the value entered in Type of Property Loss/Etc. (DE 14) contains the following:{::nomarkdown}}<ul><li>2 Burned</li><li>3 Counterfeited or Forged</li><li>4 Destroyed, Damaged or Vandalized</li><li>5 Recovered</li><li>6 Seized</li><li>7 Stolen/Etc.</li></ul>{:/}}"
+            "15": "A Property Description (DE 15) code must be entered when the value entered in Type of Property Loss/Etc. (DE 14) contains the following:{::nomarkdown}<ul><li>2 Burned</li><li>3 Counterfeited or Forged</li><li>4 Destroyed, Damaged or Vandalized</li><li>5 Recovered</li><li>6 Seized</li><li>7 Stolen/Etc.</li></ul>{:/}}"
         }
     },
     "13076": {
@@ -1001,7 +1001,7 @@
         "err_no": 13092,
         "err_message": "35 A OFFENSE ENTERED AND '1=NONE' ENTERED;MISSING SUSPECTED DRUG TYPE(20)",
         "err_desc": {
-            "20": "When the following conditions are true: {::nomarkdown}}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code of <b>35A</b></li><li>Type Property Loss (14) is None ('1')</li></ul>{:/}} Suspected Drug Type (20) is required. **However**, if Type Property Loss (14) of Seized ('6') is also reported, this edit is bypassed."
+            "20": "When the following conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code of <b>35A</b></li><li>Type Property Loss (14) is None ('1')</li></ul>{:/}} Suspected Drug Type (20) is required. **However**, if Type Property Loss (14) of Seized ('6') is also reported, this edit is bypassed."
         }
     },
     "13100": {
@@ -1024,7 +1024,7 @@
         "err_no": 14002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
         "err_desc": {
-            "36": "MUST be numeric entry with zero left-fill.<br><br>Offender Sequence Number (36) distinguishes one Offender from another and identifies a situation where nothing was known about the number of Offenders, or who they were. {::nomarkdown}}<ul><li> EG: A corpse was found in a ditch and there were no eyewitnesses or other information that could provide data about possible Offenders. In this case, Unknown ('000') would be entered</li><li>However, if five Offenders were seen running from the scene, then five Offender records would be submitted, each with a difference Offender Sequence Number (36)</li></ul>{:/}}"
+            "36": "MUST be numeric entry with zero left-fill.<br><br>Offender Sequence Number (36) distinguishes one Offender from another and identifies a situation where nothing was known about the number of Offenders, or who they were. {::nomarkdown}<ul><li> EG: A corpse was found in a ditch and there were no eyewitnesses or other information that could provide data about possible Offenders. In this case, Unknown ('000') would be entered</li><li>However, if five Offenders were seen running from the scene, then five Offender records would be submitted, each with a difference Offender Sequence Number (36)</li></ul>{:/}}"
         }
     },
     "14004": {
@@ -1105,7 +1105,7 @@
         "err_no": 14054,
         "err_message": "AGE OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP",
         "err_desc": {
-            "35": "The Age of Victim and Age of Offender MUST reflect the implied relationship. <br><br>The following Implied Age Difference Between Victims and Offenders where victim Must be **Younger**: {::nomarkdown}}<ul><li>CH - Victim was Child</li><li>GC - Victim was Grandchild</li><li>BE - Victim was Babysitee (the Baby)</li></ul>{:/}}The following Implied Age Difference Between Victims and Offenders where victim Must be **Older**:{::nomarkdown}}<ul><li>PA - Victim was Parent</li><li>GP - Victim was Grandparent</li></ul>{:/}}The following Implied Age Difference Between Victims and Offenders where victim Must be **Same Age**:{::nomarkdown}}<ul><li>VO - Victim was Offender</li></ul>{:/}}The following Implied Age Difference Between Victims and Offenders where victim Must be **At Least 10 Yrs Old**:{::nomarkdown}}<ul><li>SE - Victim was Spouse</li><li>ES - Victim was Estranged Spouse</li><li>CS - Victim was Common-Law Spouse</li><li>XS - Victim was Ex-Spouse</li><li>NM - Victim was Non-Married Live-In</li></ul>{:/}}"
+            "35": "The Age of Victim and Age of Offender MUST reflect the implied relationship. <br><br>The following Implied Age Difference Between Victims and Offenders where victim Must be **Younger**: {::nomarkdown}<ul><li>CH - Victim was Child</li><li>GC - Victim was Grandchild</li><li>BE - Victim was Babysitee (the Baby)</li></ul>{:/}}The following Implied Age Difference Between Victims and Offenders where victim Must be **Older**:{::nomarkdown}<ul><li>PA - Victim was Parent</li><li>GP - Victim was Grandparent</li></ul>{:/}}The following Implied Age Difference Between Victims and Offenders where victim Must be **Same Age**:{::nomarkdown}<ul><li>VO - Victim was Offender</li></ul>{:/}}The following Implied Age Difference Between Victims and Offenders where victim Must be **At Least 10 Yrs Old**:{::nomarkdown}<ul><li>SE - Victim was Spouse</li><li>ES - Victim was Estranged Spouse</li><li>CS - Victim was Common-Law Spouse</li><li>XS - Victim was Ex-Spouse</li><li>NM - Victim was Non-Married Live-In</li></ul>{:/}}"
         }
     },
     "14055": {
@@ -1247,8 +1247,8 @@
         "err_no": 15019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
         "err_desc": {
-            "33": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person* and has a NIBRS Offense code of: {::nomarkdown}}<ul><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>210</li><li>13A, 13B</li><li>90Z</li></ul>{:/}} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses.",
-            "31": "MUST be entered if Louisiana Revised Statute (6) has a NIBRS Offense code of : {::nomarkdown}}<ul><li>13A</li><li>09A, 09B or 09C</li></ul>{:/}} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
+            "33": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person* and has a NIBRS Offense code of: {::nomarkdown}<ul><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>210</li><li>13A, 13B</li><li>90Z</li></ul>{:/}} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses.",
+            "31": "MUST be entered if Louisiana Revised Statute (6) has a NIBRS Offense code of : {::nomarkdown}<ul><li>13A</li><li>09A, 09B or 09C</li></ul>{:/}} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
         }
     },
     "15020": {
@@ -1311,7 +1311,7 @@
         "err_no": 15057,
         "err_message": "WHEN DATA ELEMENT 32 IS ENTERED, DATA ELEMENT 31 MUST EQUAL '20' OR '21' UN LESS TYPE OF VICTIM IS EQUAL TO 'L' = LAW ENFORCEMENT OFFICER",
         "err_desc": {
-            "32": "When this Data Element (32) is entered and Type of Victim (25) is Individual ('I'), Aggravated Assault/Homicide Circumstance (31) MUST show one of the following Justifiable Homicide (<b>09C</b>) Circumstances: {::nomarkdown}}<ul><li>20 Criminal Killed by Private Citizen</li><li>21 Criminal Killed by Police Officer</li></ul>{:/}}"
+            "32": "When this Data Element (32) is entered and Type of Victim (25) is Individual ('I'), Aggravated Assault/Homicide Circumstance (31) MUST show one of the following Justifiable Homicide (<b>09C</b>) Circumstances: {::nomarkdown}<ul><li>20 Criminal Killed by Private Citizen</li><li>21 Criminal Killed by Police Officer</li></ul>{:/}}"
         }
     },
     "15058": {
@@ -1331,8 +1331,8 @@
         "err_no": 15059,
         "err_message": "NEED A CRIME AGAINST PERSON OR ROBBERY FOR DATA TO BE ENTERED",
         "err_desc": {
-            "35": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a NIBRS Offense code of: {::nomarkdown}}<ul><li>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/}} Relationship of Victim to Offender (35) MUST be Blank (G) when '000' is entered into Offender Number to be Related (34).",
-            "34": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a NIBRS Offense code of: {::nomarkdown}}<ul><li>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/}} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
+            "35": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a NIBRS Offense code of: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/}} Relationship of Victim to Offender (35) MUST be Blank (G) when '000' is entered into Offender Number to be Related (34).",
+            "34": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a NIBRS Offense code of: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/}} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
         }
     },
     "15060": {
@@ -1384,7 +1384,7 @@
         "err_no": 15067,
         "err_message": "ENTRY FOR TYPE OF VICTIM CANNOT BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM",
         "err_desc": {
-            "25": "When Offense is a *Crime Against Property*, and the Offense is connected to a Victim, then Type of Victim (25) CANNOT be Society ('S'). Type of Victim (25) can only be: {::nomarkdown}}<ul><li>I - Individual</li><li>B - Business</li><li>F - Financial Institution</li><li>G - Government</li><li>R  -Religious Organization</li><li>O - Other</li><li>U - Unknown</li></ul>{:/}}"
+            "25": "When Offense is a *Crime Against Property*, and the Offense is connected to a Victim, then Type of Victim (25) CANNOT be Society ('S'). Type of Victim (25) can only be: {::nomarkdown}<ul><li>I - Individual</li><li>B - Business</li><li>F - Financial Institution</li><li>G - Government</li><li>R  -Religious Organization</li><li>O - Other</li><li>U - Unknown</li></ul>{:/}}"
         }
     },
     "15068": {
@@ -1406,7 +1406,7 @@
         "err_no": 15070,
         "err_message": "WHEN 'VO' RELATIONSHIP IS PRESENT, MUST HAVE TWO OR MORE VICTIMS AND OFFEND",
         "err_desc": {
-            "35": "When Victim was Offender ('VO') is entered, a minimum of **two** Victims Segments (50) and **two** Offender Segments (40) MUST be submitted.<br><br>'VO' indicates situations such as brawls and domestic disputes where all of the participants in the incident were Victims and Offenders of the same Offense.{::nomarkdown}}<ul><li>EG: Assaults or double murders where two people kill each other.</li></ul>{:/}}In most cases, each Victim is also the Offender; therefore, every Victim Segment (50) will contain a 'VO' code. However, there may be some situations where only one of the Victims is also the Offender, but where the other Victim(s) are not also the Offender(s) {::nomarkdown}}<ul><li>EG: A victim who is not an Offender could be an innocent bystander in a barroom brawl, or a child who is victimized as a result of the parents domestic dispute</li></ul>{:/}}"
+            "35": "When Victim was Offender ('VO') is entered, a minimum of **two** Victims Segments (50) and **two** Offender Segments (40) MUST be submitted.<br><br>'VO' indicates situations such as brawls and domestic disputes where all of the participants in the incident were Victims and Offenders of the same Offense.{::nomarkdown}<ul><li>EG: Assaults or double murders where two people kill each other.</li></ul>{:/}}In most cases, each Victim is also the Offender; therefore, every Victim Segment (50) will contain a 'VO' code. However, there may be some situations where only one of the Victims is also the Offender, but where the other Victim(s) are not also the Offender(s) {::nomarkdown}<ul><li>EG: A victim who is not an Offender could be an innocent bystander in a barroom brawl, or a child who is victimized as a result of the parents domestic dispute</li></ul>{:/}}"
         }
     },
     "15071": {
@@ -1452,7 +1452,7 @@
         "err_no": 15078,
         "err_message": "VICTIM CONNECTED TO AN INVALID COMBINATION OF OFFENSES",
         "err_desc": {
-            "24": "Victim CANNOT be connected to **Mutually Exclusive** or **Lesser Included** Offenses. {::nomarkdown}}<ul><li>Offenses are **Mutually Exclusive** when they CANNOT occur to the same victim in an incident by NIBRS definitions.</li><li>Offenses are **Lesser Included** when, in the same incident, one Offense is an element of a second Offense, and should not both be reported as having happened to the Victim.</li></ul>{:/}}"
+            "24": "Victim CANNOT be connected to **Mutually Exclusive** or **Lesser Included** Offenses. {::nomarkdown}<ul><li>Offenses are **Mutually Exclusive** when they CANNOT occur to the same victim in an incident by NIBRS definitions.</li><li>Offenses are **Lesser Included** when, in the same incident, one Offense is an element of a second Offense, and should not both be reported as having happened to the Victim.</li></ul>{:/}}"
         }
     },
     "15079": {
@@ -1522,7 +1522,7 @@
         "err_no": 16005,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
         "err_desc": {
-            "42": "Each component of the date must be valid: {::nomarkdown}}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
+            "42": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
         }
     },
     "16006": {
@@ -1633,7 +1633,7 @@
         "err_no": 16055,
         "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR",
         "err_desc": {
-            "46": "If the firearm is Automatic, add Automatic ('A') as the third character of code; valid only with the following codes:{::nomarkdown}}<ul><li>11 - Firearm</li><li>12 - Handgun</li><li>13 - Rifle</li><li>14 - Shotgun</li><li>15 - Other Firearm</li></ul>{:/}}"
+            "46": "If the firearm is Automatic, add Automatic ('A') as the third character of code; valid only with the following codes:{::nomarkdown}<ul><li>11 - Firearm</li><li>12 - Handgun</li><li>13 - Rifle</li><li>14 - Shotgun</li><li>15 - Other Firearm</li></ul>{:/}}"
         }
     },
     "16056": {
@@ -1927,7 +1927,7 @@
         "err_no": 22065,
         "err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER AND DE #15 = '03', '05', '24', '28', OR '37' WILL BE REPORTED AS MOTOR VEHICLE THEFT(240).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE",
         "err_desc": {
-            "18": "If the Louisiana Revised Statute code (DE 6) of '14:67' is submitted without a Qualifier but Property Description (DE 15) is one of the following:{::nomarkdown}}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}}Then the agency will receive Warning 22065"
+            "18": "If the Louisiana Revised Statute code (DE 6) of '14:67' is submitted without a Qualifier but Property Description (DE 15) is one of the following:{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}}Then the agency will receive Warning 22065"
         }
     },
     "22070": {
@@ -1938,14 +1938,14 @@
         "err_no": 22071,
         "err_message": "WARNING - THIS LRS SUBMITTED WILL BE REPORTED AS ALL OTHER LARCENY - THEFT OFFENSE(23 H).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE.",
         "err_desc": {
-            "18": "If the Louisiana Revised Statute code of '14:68' is submitted and if Property Description (DE 15) is not equal to:{::nomarkdown}}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}}Then the agency will receive Warning 22071."
+            "18": "If the Louisiana Revised Statute code of '14:68' is submitted and if Property Description (DE 15) is not equal to:{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}}Then the agency will receive Warning 22071."
         }
     },
     "22072": {
         "err_no": 22072,
         "err_message": "WARNING - THIS LRS SUBMITTED AND DE #15 = '03', '05', '24', '28', OR '37' WI LL BE REPORTED AS MOTOR VEHICLE THEFT(240).IF THIS IS NOT THE CORRECT PRO PERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE.",
         "err_desc": {
-            "18": "If Louisiana Revised Statute code (DE 6) of '14:68' is submitted and if Property Description (DE 15) is{::nomarkdown}}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks.</li></ul>{:/}}Then the agency will receive Warning 22072."
+            "18": "If Louisiana Revised Statute code (DE 6) of '14:68' is submitted and if Property Description (DE 15) is{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks.</li></ul>{:/}}Then the agency will receive Warning 22072."
         }
     },
     "22075": {
@@ -1981,14 +1981,14 @@
         "err_no": 22100,
         "err_message": "AGE MUST BE '01' - '17' FOR JUVENILE OFFENSES",
         "err_desc": {
-            "47": "When Juvenile Qualifiers are used, Age of Arrestee (47) must be '01' thru '17' for the following Juvenile Qualifiers:{::nomarkdown}}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}}<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
+            "47": "When Juvenile Qualifiers are used, Age of Arrestee (47) must be '01' thru '17' for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}}<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
         }
     },
     "22105": {
         "err_no": 22105,
         "err_message": "AGE CANNOT BE UNKNOWN IF DATE OF BIRTH IS KNOWN",
         "err_desc": {
-            "l47": "AGE CANNOT BE UNKNOWN if Date of Birth (L47) is Known. If the following two conditions are true: {::nomarkdown}}<ul><li> Age of an Arrestee (at Time of Arrest) is reported as Unknown ('00')</li><li>Date of Birth of Arrestee (L47) is also reported</li></ul>{:/}} This incident will be rejected. If Date of Birth is Known, Age CANNOT be unknown."
+            "l47": "AGE CANNOT BE UNKNOWN if Date of Birth (L47) is Known. If the following two conditions are true: {::nomarkdown}<ul><li> Age of an Arrestee (at Time of Arrest) is reported as Unknown ('00')</li><li>Date of Birth of Arrestee (L47) is also reported</li></ul>{:/}} This incident will be rejected. If Date of Birth is Known, Age CANNOT be unknown."
         }
     },
     "22110": {
@@ -2029,14 +2029,14 @@
         "err_no": 22251,
         "err_message": "New Error Message",
         "err_desc": {
-            "25": "Type of Victim (25) CANNOT be Law Enforcement Officer ('L'), unless Offense Connected to Victim Sequence Number (24) is one of the following NIBRS codes: {::nomarkdown}}<ul><li>09A - Murder and Non-negligent Manslaughter</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>{:/}}"
+            "25": "Type of Victim (25) CANNOT be Law Enforcement Officer ('L'), unless Offense Connected to Victim Sequence Number (24) is one of the following NIBRS codes: {::nomarkdown}<ul><li>09A - Murder and Non-negligent Manslaughter</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>{:/}}"
         }
     },
     "22252": {
         "err_no": 22252,
         "err_message": "New Error Message",
         "err_desc": {
-            "25": "When Type of Victim (25) is Law Enforcement Officer ('L') and Offense Connected to Victim Sequence Number (24) is one of the following NIBRS codes: {::nomarkdown}}<ul><li>09A - Murder and Non-negligent Manslaughter</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>{:/}} Incident Date/Hour (3) MUST be populated with a valid hour (00-23) and CANNOT BE BLANK."
+            "25": "When Type of Victim (25) is Law Enforcement Officer ('L') and Offense Connected to Victim Sequence Number (24) is one of the following NIBRS codes: {::nomarkdown}<ul><li>09A - Murder and Non-negligent Manslaughter</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>{:/}} Incident Date/Hour (3) MUST be populated with a valid hour (00-23) and CANNOT BE BLANK."
         }
     },
     "23001": {
@@ -2058,7 +2058,7 @@
         "err_no": 23230,
         "err_message": "",
         "err_desc": {
-            "19": "Number of Recovered Motor Vehicles (19) must be left blank if: {::nomarkdown}}<ul><li>The LRS Offense is not reported as a Motor Vehicle Theft (NIBRS 240)</li></ul>{:/}} OR {::nomarkdown}}<ul><li>Type of Property Loss (14) shows NO Recovered ('5') property with a Property Description (15) from the following list of motor vehicle codes: <ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul></li></ul>{:/}}"
+            "19": "Number of Recovered Motor Vehicles (19) must be left blank if: {::nomarkdown}<ul><li>The LRS Offense is not reported as a Motor Vehicle Theft (NIBRS 240)</li></ul>{:/}} OR {::nomarkdown}<ul><li>Type of Property Loss (14) shows NO Recovered ('5') property with a Property Description (15) from the following list of motor vehicle codes: <ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul></li></ul>{:/}}"
         }
     },
     "23235": {
@@ -2081,7 +2081,7 @@
         "err_no": 24030,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
         "err_desc": {
-            "l37": "Each component of the date must be valid: {::nomarkdown}}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
+            "l37": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
         }
     },
     "24031": {
@@ -2115,7 +2115,7 @@
         "err_no": 25030,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
         "err_desc": {
-            "l26": "Each component of the date must be valid: {::nomarkdown}}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
+            "l26": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
         }
     },
     "25031": {
@@ -2141,7 +2141,7 @@
         "err_message": "AGE CANNOT BE ESTIMATED IF DATE OF BIRTH IS KNOWN",
         "err_desc": {
             "47": "ESTIMATED AGE: Age CANNOT be an estimate if Date of Birth of Arrestee (47) is reported.",
-            "l47": "Age CANNOT BE ESTIMATED when Date of Birth is Known. If the following two conditions are true: {::nomarkdown}}<ul><li>The age is reported as Estimated (with trailing 'E') in Age of Arrestee at the Time of Arrest (47) </li><li> The agency also reports Date of Birth of Arrestee (L47)</li></ul>{:/}} This incident will be rejected. When Date of Birth is known, Age CANNOT be estimated."
+            "l47": "Age CANNOT BE ESTIMATED when Date of Birth is Known. If the following two conditions are true: {::nomarkdown}<ul><li>The age is reported as Estimated (with trailing 'E') in Age of Arrestee at the Time of Arrest (47) </li><li> The agency also reports Date of Birth of Arrestee (L47)</li></ul>{:/}} This incident will be rejected. When Date of Birth is known, Age CANNOT be estimated."
         }
     },
     "26201": {
@@ -2377,7 +2377,7 @@
         "err_no": 84015,
         "err_message": "WHEN LRS = 370, DE 12 MUST HAVE A VALID CODE AND DE 25 MUST EQUAL 'S'.",
         "err_desc": {
-            "12": "When NIBRS Offense Code is <b>370</b> the following MUST be true::{::nomarkdown}}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}}"
+            "12": "When NIBRS Offense Code is <b>370</b> the following MUST be true::{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}}"
         },
         "mandatory": {
             "4s15": "When an Incident contains PORNOGRAPHY/OBSCENE MATERIAL OFFENSES (NIBRS Code 370), Type of Criminal Activity/Gang Information (12) MUST contain a valid value and Type of Victim (25) MUST be Society ('S')."
@@ -2415,7 +2415,7 @@
         "err_no": 84020,
         "err_message": "WHEN LRS = 280, DE 12 MUST HAVE A VALID CODE.",
         "err_desc": {
-            "12": "When NIBRS Offense Code is <b>280</b> the following MUST be true::{::nomarkdown}}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li></ul>{:/}}"
+            "12": "When NIBRS Offense Code is <b>280</b> the following MUST be true::{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li></ul>{:/}}"
         },
         "mandatory": {
             "4s20": "When an Incident contains STOLEN PROPERTY OFFENSES (NIBRS Code 280), Type of Criminal Activity/Gang Information (12) MUST contain a valid value."
@@ -2425,7 +2425,7 @@
         "err_no": 84021,
         "err_message": "WHEN LRS = 520, DE 12 & DE 13 MUST HAVE A VALID CODE AND DE 25 MUST BE EQUAL TO 'S'.",
         "err_desc": {
-            "12": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}}"
+            "12": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}}"
         },
         "mandatory": {
             "4s21": "When an Incident is submitted with WEAPONS LAW VIOLATIONS (Crimes Against Society) (NIBRS Code 520) then Type of Criminal Activity/Gang Information (12) and Type of Weapon/Force Involved (13) MUST contain valid values and Type of Victim (25) MUST be Society ('S')."
@@ -2569,7 +2569,7 @@
         "err_no": 84203,
         "err_message": "WHEN THERE IS ONLY ONE COMPLETED PROPERTY OFFENSE IN AN INCIDENT, A PROPER TY SEGMENT CAN CONTAIN A '7' = STOLEN PROPERTY OR AN '8' = UNKNOWN.THE IN CIDENT WILL REJECT IF AN AGENCY SENDS A '7'  AND ALSO AN '8' WITHIN THE SAM",
         "err_desc": {
-            "14": "When there is only one completed 'Crime Against Property' Offense in an incident, any Property Description Segments (31) reported with the incident can contain ONLY values of EITHER:{::nomarkdown}}<ul><li>Stolen Property ('7')</li><li>Unknown ('8')</li></ul>{:/}} The incident will be rejected if an agency sends both Stolen Property ('7') and Unknown ('8') for Type of Property Loss/Etc. within the same incident."
+            "14": "When there is only one completed 'Crime Against Property' Offense in an incident, any Property Description Segments (31) reported with the incident can contain ONLY values of EITHER:{::nomarkdown}<ul><li>Stolen Property ('7')</li><li>Unknown ('8')</li></ul>{:/}} The incident will be rejected if an agency sends both Stolen Property ('7') and Unknown ('8') for Type of Property Loss/Etc. within the same incident."
         },
         "mandatory": {
             "4s3": "When there is ONLY ONE Crime Against Property offense with an Offense Attempted/Completed (7) value of Completed ('C') within an incident, a Property Description Segment (31) can contain either a Type of Property Loss (14) value of Stolen ('7') or Unknown ('8'), but NOT both.  The incident MUST be rejected if an agency sends a Property Description Segment (31) with both a Type of Property Loss (14) of Stolen ('7') and Unknown ('8') within the same incident."
@@ -2624,7 +2624,7 @@
         "err_no": 84211,
         "err_message": "WHEN LRS = 09 C, DE 31 MUST HAVE '20' OR '21' AND DE 32 MUST HAVE A VALID CODE OF 'A-G'.",
         "mandatory": {
-            "4s11": "Incidents submitted with a JUSTIFIABLE HOMICIDE (NIBRS Codes 09C) offense MUST contain an Aggravated Assault/Homicide Circumstance (31) value of Criminal Killed by Private Citizen ('20') or Criminal Killed by Police Officer ('21'), and Additional Justifiable Homicide Circumstances (32) MUST contain one of the following values: {::nomarkdown}}<ul><li><b>'A'  (Criminal Attacked Police Officer and That Officer Killed Criminal)</li><li>'B'  (Criminal Attacked Police Officer and Criminal Killed by Another Police Officer)</li><li>'C'  (Criminal Attacked by Civilian)</li><li>'D'  (Criminal Attempted Flight from a Crime)</li><li>'E'  (Criminal Killed in the Commission of a Crime)</li><li>'F'  (Criminal Resisted Arrest)</li><li>'G'  (Unable to Determine/Not Enough Informatioin.</b></li></ul>{:/}}"
+            "4s11": "Incidents submitted with a JUSTIFIABLE HOMICIDE (NIBRS Codes 09C) offense MUST contain an Aggravated Assault/Homicide Circumstance (31) value of Criminal Killed by Private Citizen ('20') or Criminal Killed by Police Officer ('21'), and Additional Justifiable Homicide Circumstances (32) MUST contain one of the following values: {::nomarkdown}<ul><li><b>'A'  (Criminal Attacked Police Officer and That Officer Killed Criminal)</li><li>'B'  (Criminal Attacked Police Officer and Criminal Killed by Another Police Officer)</li><li>'C'  (Criminal Attacked by Civilian)</li><li>'D'  (Criminal Attempted Flight from a Crime)</li><li>'E'  (Criminal Killed in the Commission of a Crime)</li><li>'F'  (Criminal Resisted Arrest)</li><li>'G'  (Unable to Determine/Not Enough Informatioin.</b></li></ul>{:/}}"
         }
     },
     "84212": {
@@ -2722,7 +2722,7 @@
         "err_no": 84314,
         "err_message": "WHEN LRS = 240 AND DE 14 = '5', IF DE 15 HAS A CODE OF '03, ' 05 ', ' 24 ', ' 28 ', OR ' 37 ', THEN DATA ELEMENT 19 MUST HAVE A VALID CODE.",
         "mandatory": {
-            "4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (14) is Recovered ('5'), then Property Description (15) MUST contain one of the following codes, {::nomarkdown}}<ul><li><b>'03'  (Automobiles)</li><li>'05'  (Buses)</li><li>'24'  (Other Motor Vehicles)</li><li>'28'  (Recreational Vehicles)</li><li>'37'  (Trucks)</li></b></li></ul>{:/}} <br> and Number of Recovered Vehicles (19) MUST contain a valid value."
+            "4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (14) is Recovered ('5'), then Property Description (15) MUST contain one of the following codes, {::nomarkdown}<ul><li><b>'03'  (Automobiles)</li><li>'05'  (Buses)</li><li>'24'  (Other Motor Vehicles)</li><li>'28'  (Recreational Vehicles)</li><li>'37'  (Trucks)</li></b></li></ul>{:/}} <br> and Number of Recovered Vehicles (19) MUST contain a valid value."
         }
     },
     "84317": {
@@ -2792,7 +2792,7 @@
         "err_no": 84414,
         "err_message": "WHEN LRS = 240 AND DE 14 = '7', THEN DE 15 MUST HAVE A CODE OF '03', '05', '24', '28', OR '37' AND DATA ELEMENT 18 MUST HAVE A VALID CODE.",
         "mandatory": {
-            "4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (14) is Stolen ('7'), then Property Description (15) MUST contain one of the following codes, {::nomarkdown}}<ul><li><b>'03'  (Automobiles)</li><li>'05'  (Buses)</li><li>'24'  (Other Motor Vehicles)</li><li>'28'  (Recreational Vehicles)</li><li>'37'  (Trucks)</li></b></li></ul>{:/}} <br> and Number of Stolen Vehicles (18) MUST contain a valid value."
+            "4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (14) is Stolen ('7'), then Property Description (15) MUST contain one of the following codes, {::nomarkdown}<ul><li><b>'03'  (Automobiles)</li><li>'05'  (Buses)</li><li>'24'  (Other Motor Vehicles)</li><li>'28'  (Recreational Vehicles)</li><li>'37'  (Trucks)</li></b></li></ul>{:/}} <br> and Number of Stolen Vehicles (18) MUST contain a valid value."
         }
     },
     "84417": {
@@ -2869,7 +2869,7 @@
         "err_no": 23220,
         "err_message": "UNDEFINED ERROR",
         "err_desc": {
-            "18": "Number of Stolen Vehicles (DE 18) must be left blank (G) if the Louisiana Revised Statute (DE 6) Offense is not reported as a Motor Vehicle Theft (NIBRS 240){::nomarkdown}}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}}"
+            "18": "Number of Stolen Vehicles (DE 18) must be left blank (G) if the Louisiana Revised Statute (DE 6) Offense is not reported as a Motor Vehicle Theft (NIBRS 240){::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}}"
         }
     },
     "90000": {
