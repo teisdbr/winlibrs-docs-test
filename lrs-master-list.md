@@ -24,14 +24,9 @@ ____
 	<tr>
 		<th style="padding-left: 8px; padding-right:3px;">LRS #</th>
 		<th style="padding-left: 0px; padding-right:3px;">LRS Description</th>
-		<th style="text-align: center;">LRank</th>
-		<th style="text-align: center;">UCR</th>
 		<th style="text-align: center;">NIBRS</th>
 		<th style="text-align: center;">Group</th>
 		<th style="text-align: center;">Part</th>
-        <th style="text-align: center; white-space: nowrap">1A Index</th>
-        <th style="text-align: center; white-space: nowrap">Index Class</th>
-        <th style="text-align: center; white-space: nowrap">UCR Index</th>
         <th style="text-align: center; white-space: nowrap">LIBRS Index</th>
 	</tr>
     </thead>
@@ -41,17 +36,10 @@ ____
 {% if lrs.Expiration_Date == "3000-01-01" %}
 	<tr>
 		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
-		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td>
-		<td style="text-align: center;">{{ lrs.Lrank }}</td>
-		<td style="text-align: center;">{{ lrs.UCR }}</td>         
-        <td style="text-align: center; min-width: 120px;">{% for values in lrs.Available_NIBRS %}
-		        {{values}}{% if forloop.rindex0 > 0%}, {% endif %}
-            {% endfor %}</td>
+		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td>    
+        <td style="text-align: center;">{{ lrs.NIBRS }}</td>
         <td style="text-align: center;">{{ lrs.GP }}</td>
         <td style="text-align: center;">{{ lrs.PT }}</td>
-        <td style="text-align: center;">{{ lrs.OneA_Index }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.Index_Class }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.UCR_Index }}</td>
         <td style="text-align: center; white-space: nowrap">{{ lrs.LIBRS_Index }}</td>
     </tr>
     {% endif %}
@@ -79,14 +67,9 @@ ____
 	<tr>
 		<th style="padding-left: 8px; padding-right:3px;">LRS #</th>
 		<th style="padding-left: 0px; padding-right:3px;">LRS Description</th>
-		<th style="text-align: center;">LRank</th>
-		<th style="text-align: center;">UCR</th>
 		<th style="text-align: center;">NIBRS</th>
 		<th style="text-align: center;">Group</th>
 		<th style="text-align: center;">Part</th>
-        <th style="text-align: center; white-space: nowrap">1A Index</th>
-        <th style="text-align: center; white-space: nowrap">Index Class</th>
-        <th style="text-align: center; white-space: nowrap">UCR Index</th>
         <th style="text-align: center; white-space: nowrap">LIBRS Index</th>
         <th>Date Expired</th>
 	</tr>
@@ -97,17 +80,10 @@ ____
 {% if lrs.Expiration_Date != "3000-01-01" %}
 	<tr>
 		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
-		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td>
-		<td style="text-align: center;">{{ lrs.Lrank }}</td>
-		<td style="text-align: center;">{{ lrs.UCR }}</td>         
-        <td style="text-align: center; min-width: 120px;">{% for values in lrs.Available_NIBRS %}
-		        {{values}}{% if forloop.rindex0 > 0%}, {% endif %}
-            {% endfor %}</td>
+		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td>       
+        <td style="text-align: center;">{{ lrs.NIBRS }}</td>
         <td style="text-align: center;">{{ lrs.GP }}</td>
         <td style="text-align: center;">{{ lrs.PT }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.OneA_Index }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.Index_Class }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.UCR_Index }}</td>
         <td style="text-align: center; white-space: nowrap">{{ lrs.LIBRS_Index }}</td>
         <td>{{ lrs.Expiration_Date }}</td>
     </tr>
