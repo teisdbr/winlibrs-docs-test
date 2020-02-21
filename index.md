@@ -28,6 +28,14 @@ ___
 
 ___
 
+## Recent Changes
+___
+
+2020-02-21
+* Changelog started. Please Contact the LIBRS Administrator if you would like to be notified of changes to the LIBRS Spec and Documentation on a weekly basis. 
+
+___
+
 <br>
 
 #### More information about the LIBRS Program and its requirements can be found at <a href="http://www.crimeinla.org">http://www.crimeinla.org</a>
