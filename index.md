@@ -31,6 +31,9 @@ ___
 ## Recent Changes
 ___
 
+2020-02-28
+* Found multiple Mandatories that were throwing an Error Code 10077 when they should have been throwing particular Error Codes based on the Mandatory. The Mandatories were: 1, 5, 6, 9, 17, and 20. Changes to LIBRS and Validator were deployed; no changes to documentation were required. 
+
 2020-02-21
 * Changelog started. Please Contact the LIBRS Administrator if you would like to be notified of changes to the LIBRS Spec and Documentation on a weekly basis. 
 
