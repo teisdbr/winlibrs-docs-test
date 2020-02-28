@@ -29,14 +29,14 @@
         }
     },
     "06001": {
-        "err_no": "06011",
+        "err_no": 06001,
         "err_message": "WARNING - PROVIDE VALID NIBRS CODE",
         "err_desc": {
             "n6": "If the value of LIBRS Spec Indicator (C12) is '2.5', then EVERY Offense Segment (20) in the data submission MUST have an Agency Supplied NIBRS Code (N6).<br><br>If Agency Supplied NIBRS Code (N6) is missing, WinLIBRS will insert the *default* NIBRS value based on the LRS for that particular offense. This may not be the intended NIBRS Code for the submitted offense."
         }
     },
     "06002": {
-        "err_no": "06011",
+        "err_no": 06002,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "err_desc": {
             "n6": "MUST be a valid code."
