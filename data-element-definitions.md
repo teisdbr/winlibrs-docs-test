@@ -787,7 +787,7 @@ ___
 
 ___
 
-### List of Allowed Entries for DE 8A is on the following page:
+### List of Allowed Entries for DE 9 is on the following page:
 
 <div class="newpage"></div>
 
@@ -965,27 +965,27 @@ ___
 The following requirements are for **Type of Criminal Activity Only**:
 
 Requirement  | Requirement Description | Error Number | Error Message
-:-----------:|-------------------------|:------------:|----------
+:-----------:|-------------------------|:------------:|-------------|
 {% assign error = site.data.error["12004"] -%}
-1 | {{error.err_desc["12"]}} | {{error.err_no}}| {{ error.err_message }} 
+1 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12006"] -%}
 2 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12019"] -%}
-3 | {{error.err_desc["12"]}} | {{error.err_no}}| {{ error.err_message }} 
+3 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84005"] -%}
-3A | {{error.err_desc["12"]}} | {{error.err_no}}| {{ error.err_message }} 
+3A | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84007"] -%}
-3B | {{error.err_desc["12"]}} | {{error.err_no}}| {{ error.err_message }} 
+3B | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84015"] -%}
-3C | {{error.err_desc["12"]}} | {{error.err_no}}| {{ error.err_message }} 
+3C | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84020"] -%}
-3D | {{error.err_desc["12"]}} | {{error.err_no}}| {{ error.err_message }} 
+3D | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84021"] -%}
-3E | {{error.err_desc["12"]}} | {{error.err_no}}| {{ error.err_message }} 
+3E | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84210"] -%}
-3F | {{error.err_desc["12"]}} | {{error.err_no}}| {{ error.err_message }} 
+3F | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["90031"] -%}
-3G | {{error.err_desc["12"]}} | {{error.err_no}}| {{ error.err_message }} 
+3G | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -994,7 +994,7 @@ ___
 
 ___
 
-### List of Allowed Entries for DE 8A is on the following page:
+### List of Allowed Entries for DE 12 is on the following page:
 
 <div class="newpage"></div>
 
