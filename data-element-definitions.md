@@ -1060,11 +1060,12 @@ ___
 The following requirements are for **Gang Information Only**:
 
 Requirement  | Requirement Description | Error Number | Error Message
-:-----------:|-------------------------|:------------:|----------
+:-----------:|-------------------------|:------------:|-------------|
 {% assign error = site.data.error["12019"] -%}
 4 | {{error.err_desc["12-2"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["12017"] -%}
 5 | {{error.err_desc["12"]}} | {{error.err_no}}| {{ error.err_message }} 
+
 ___
 
 ### Notes:
