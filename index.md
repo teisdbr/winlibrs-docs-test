@@ -31,6 +31,13 @@ ___
 ## Recent Changes
 ___
 
+2020-03-12
+* Fixed Misspelling in LRS 14:42.1/V Description.
+* Remapped LRS 14:42.A4 as an 11A Offense as opposed to a 36B Offense. 
+* Added 13A Alternate NIBRS Mapping for LRS 14:30.
+* Added 13B Alternate NIBRS Mapping for LRS 14:34.5.
+* Improved Logic that was causing Errors 14054 and 22120 to be tripped when they shouldn't have. 
+
 2020-02-28
 * Found multiple Mandatories that were throwing an Error Code 10077 when they should have been throwing particular Error Codes based on the Mandatory. The Mandatories were: 1, 5, 6, 9, 17, and 20. Changes to LIBRS and Validator were deployed; no changes to documentation were required. 
 * Validation update for LRS 14:56.4 to resolve Error 13019. 
