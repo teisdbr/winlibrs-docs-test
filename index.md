@@ -31,6 +31,11 @@ ___
 ## Recent Changes
 ___
 
+2020-03-25
+* Added Logic to handle Error Code 14060.
+* Resolved issue where Error Code 90039 was being thronw for all Crime Against Property Offenses. 
+* Restricted 90A Offenses to only allow a Property Loss Type of "None" or "Unknown". 
+
 2020-03-12
 * Fixed Misspelling in LRS 14:42.1/V Description.
 * Remapped LRS 14:42.A4 as an 11A Offense as opposed to a 36B Offense. 
