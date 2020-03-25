@@ -33,7 +33,7 @@ ___
 
 2020-03-25
 * Added Logic to handle Error Code 14060.
-* Resolved issue where Error Code 90039 was being thronw for all Crime Against Property Offenses. 
+* Resolved issue where Error Code 90039 was being thrown for all Crime Against Property Offenses. 
 * Restricted 90A Offenses to only allow a Property Loss Type of "None" or "Unknown". 
 
 2020-03-12
