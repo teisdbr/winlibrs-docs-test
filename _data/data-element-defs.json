@@ -700,7 +700,7 @@
         "definition": "The type(s) of weapon(s), or force, used by the Offender in committing the Offense.",
         "length": "3",
         "format": "A/N",
-        "comment": "Use this data element ONLY if crime is one of the following Offenses: ::nomarkdown<ul><li>09A, 09B, 09C Homicide Offenses</li><li>100 Kidnaping or Abduction</li><li>11A, 11B, 11C, 11D Forcible Sex Offenses</li><li>120 Robbery</li><li>13A Assault Offenses</li><li>64A Human Trafficking and Commercial Sex Acts</li><li>64B Human Trafficking and Involuntary Servitude</li><li>210 Extortion/Blackmail</li><li>520) Weapon Law Violations</li></ul>::<br><br>If weapon is an Automatic Weapon (capable of continued fire if the trigger is held down), append an 'A' to the weapon code as a third character.<br><br>",
+        "comment": "Use this data element ONLY if crime is one of the following Offenses: {::nomarkdown}<ul><li>09A, 09B, 09C Homicide Offenses</li><li>100 Kidnaping or Abduction</li><li>11A, 11B, 11C, 11D Forcible Sex Offenses</li><li>120 Robbery</li><li>13A Assault Offenses</li><li>64A Human Trafficking and Commercial Sex Acts</li><li>64B Human Trafficking and Involuntary Servitude</li><li>210 Extortion/Blackmail</li><li>520 Weapon Law Violations</li></ul>{:/}<br><br>If weapon is an Automatic Weapon (capable of continued fire if the trigger is held down), append an 'A' to the weapon code as a third character.<br><br>",
         "subsection": [
             {
                 "title": "",
