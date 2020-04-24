@@ -383,7 +383,7 @@ ___
    [38](./data-element-definitions#sex-of-offender-38)                  | Sex of Offender                          | 39            | 1        | A
    [39](./data-element-definitions#race-of-offender-39)                 | Race of Offender                         | 40            | 1        | A  
    [8A](./data-element-definitions#bias-motivationbias-crime-type-8a)   | Bias Motivation / Bias Crime Type        | 41-42         | 2        | A
-   [39A](./data-element-definitions#ethnicity-of-offender-39A)           | Ethnicity of Offender                    | 43            | 1        | A 
+   [39A](./data-element-definitions#ethnicity-of-offender-39a)           | Ethnicity of Offender                    | 43            | 1        | A 
    \*\*                                       | Future Expansion Buffer                  | 44-62         | 20       | A
    [C8](./data-element-definitions#end-of-segment-marker-c8)            | End of Segment Marker                    | 63-64         | 2        | A
    [C9](./data-element-definitions#padding-c9)                          | Padding                                  | 65-150        | \*\*     | A/N
