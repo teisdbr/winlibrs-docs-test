@@ -255,6 +255,11 @@
         "url": "./data-element-definitions#race-of-offender-39"
       },
       {
+        "de_num": "39A",
+        "subtitle": "Ethnicity of Offender",
+        "url": "./data-element-definitions#ethnicity-of-offender-39A"
+      },
+      {
         "de_num": "40",
         "subtitle": "Arrestee Sequence Number",
         "url": "./data-element-definitions#arrestee-sequence-number-40"

@@ -32,6 +32,10 @@ ___
 ___
 
 #### 2020-04-24
+* **New Data Element**: Added in support for Data Element 39A - Ethnicity of Offender. 
+  * Included at character 43 on the Offender Segment (40)
+  * LIBRS has always been processing this value, but it was not stored in the database. 
+  * This is not a mandatory data element to include. 
 * Changed validations for Data Element 35 (Victim/Offender Relationship):
   * Expired "HR - Homosexual Relationship"; FBI has not accepted this for NIBRS since 2017.
   * Added "XR - Ex Relationship" as a valid value. 

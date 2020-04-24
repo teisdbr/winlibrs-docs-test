@@ -238,7 +238,6 @@ Enter one code per incident.
 {% endfor %}
 </tbody>
 </table>
-
 ____
 
 ### Examples:
@@ -471,7 +470,7 @@ JU:UNG	| Juvenile Ungovernables will be reported to the FBI under Disorderly Con
 ___
 
 #### LRS Qualifiers List
- 
+
 Qualifiers must be associated with the LRS codes as shown in the LIBRS/LRS Master Code Table.  Only the combinations shown in the table below qualify as a valid entry in Data Element # 6 (LRS of Offense) and Data Element # 45 (LRS of Arrest Offense).  An agency CANNOT append these Qualifiers to any LRS Code to classify offense to be reported, unless it is a valid LRS Code combination as classified on the LIBRS/LRS Master Code Table.
 
 Qualifier | Description | NIBRS Description | NIBRS Code | Crime Against
@@ -600,7 +599,6 @@ Enter one code per incident.
 {% endfor %}
 </tbody>
 </table>
-
 ____
 
 <br>
@@ -674,7 +672,6 @@ ___
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 <br>
@@ -824,7 +821,6 @@ Enter only one (1) code per Offense Segment:
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 ### Examples:
@@ -937,7 +933,6 @@ Enter only one (1) code per Offense Segment:
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 ### Examples: 
@@ -960,7 +955,7 @@ This section is split into two parts. The first part details the requirements wh
 **Data Characteristics**: 1 Character Alpha
 
 ### Requirements (Criminal Activity):
-___ 
+___
 
 The following requirements are for **Type of Criminal Activity Only**:
 
@@ -1032,7 +1027,6 @@ Up to three (3) of the following **Type of Criminal Activity** Codes can be ente
 {% endfor %}
 </tbody>
 </table>
-
 ____
 
 <br>
@@ -1055,7 +1049,7 @@ ___
 ___
 
 ### Requirements (Gang Activity):
-___ 
+___
 
 The following requirements are for **Gang Information Only**:
 
@@ -1103,9 +1097,9 @@ ___
                     {% endfor %}
 				</table>
 			{% if forloop.last == false %}<br>{% endif %}
-        	
+
 		</td></tr>
-    {% endif %}
+	{% endif %}
 {% endfor %}
 </tbody>
 </table>
@@ -1130,7 +1124,7 @@ ___
 **Data Characteristics:** 3 Character Alpha
 
 ### Requirements :
-___ 
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -1202,7 +1196,6 @@ Can enter up to three (3) codes for each offense:
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 
@@ -1224,7 +1217,7 @@ ___
 **Data Characteristics:** 3 Character Numeric
 
 ### Requirements :
-___ 
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -1251,7 +1244,7 @@ ___
 **Data Characteristics:** 3 Character Numeric
 
 ### Requirements :
-___ 
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -1278,7 +1271,7 @@ ___
 **Data Characteristics**: 1 Character Numeric
 
 ### Requirements :
-___ 
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -1344,7 +1337,6 @@ Enter only one (1) code for each Property Description Segment. However, as many 
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 <br>
@@ -1357,7 +1349,7 @@ ___
 **Data Characteristics:** 2 Character **Alpha/**Numeric
 
 ### Requirements :
-___ 
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -1421,7 +1413,7 @@ Enter one Property Description (DE 15) code per Property Description (31) Segmen
 **Data Characteristics:** 9 Character Numeric
 
 ### Requirements :
-___ 
+___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -1484,7 +1476,6 @@ ___
 * `If previously stolen property is recovered, the month, day, and year (MMDDYYYY) of its recovery should be entered into this data element.`
 * `If there is more than one Date Recovered (DE 17) for the same Property Description (DE 15), enter the earliest date.`
 * `If the Date Recovered is unknown, enter the date of the report.`
-
 
 ____
 
@@ -1633,7 +1624,6 @@ Enter as many as apply, but do not duplicate codes.
 {% endfor %}
 </tbody>
 </table>  
-
 ___
 
 <br>
@@ -1763,7 +1753,6 @@ ____
 ### Notes:
 * `Each victim in an incident MUST be assigned a unique Victim Sequence Number (23) from '001' to '999'.`
 
-
 ___
 
 <br>
@@ -1863,7 +1852,6 @@ The following chart shows Offenses that CANNOT occur to the same victim in the s
 		    <td class="rotated"><div>36B - Statutory Rape</div></td></tr>
  </tbody>
 </table>
-
 ____
 
 
@@ -1873,7 +1861,6 @@ ___
 Example Number | Description
 :-------------:|:-----------
 1 | Two victims, Victim 001 and Victim 002, were robbed, and Victim 001 was also taken hostage by the Offender with a hand gun in a parking lot. The incident's Offense Segments could be submitted as follows: {::nomarkdown}<ul><li>Offense 001 -- Aggravated Robbery (14:64) would be connected to Victim 001.</li><li>Offense 002 -- Aggravated Robbery (14:64) would be connected to Victim 002.</li><li>Offense 003 -- Second Degree Kidnaping (14:44.1) would be connected to Victim 001.</li></ul>{:/}
-
 
 ___
 
@@ -2091,7 +2078,6 @@ Enter only one (1) code for each Victim Segment:
 {% endfor %}
 </tbody>
 </table>  
-
 ___
 
 <br>
@@ -2509,7 +2495,6 @@ Enter only (1) code for each Victim Segment:
 </table>  
 
 
-
 ___
 
 <br>
@@ -2633,7 +2618,6 @@ ___
 {% endfor %}
 </tbody>
 </table>  
-
 ___
 
 ### Examples: 
@@ -2643,7 +2627,7 @@ ___
 Example Number | Description
 :-------------:|:-----------
 1 | Two rival juvenile street gangs rumble over 'turf' rights to sell drugs and one of the gang members is killed. Possible entries are: {::nomarkdown}<ul><li>01 - Argument</li><li>03 - Drug Dealing</li><li>05 - Juvenile Gang</li></ul>{:/} While all three would apply, there is a *limit of two entries*. Therefore, the two most descriptive codes (as determined by the reporting agency) should be used. In this case, the reporting agency entered '03' and '05'.
- 
+
 ___
 
 <br>
@@ -2672,7 +2656,7 @@ ___
 ### Allowed Entries for Justifiable Homicide:
 
 ___
- 
+
 Enter only (1) code for Justifiable Homicide (NIBRS 09C):
 
 <table>
@@ -2703,7 +2687,6 @@ Enter only (1) code for Justifiable Homicide (NIBRS 09C):
 {% endfor %}
 </tbody>
 </table>  
-
 ___
 
 <br>
@@ -2759,7 +2742,7 @@ ___
 ### Allowed Entries:
 
 ___
- 
+
 Enter only (1) code for each Victim Injury Segment; however, can submit as many Victim Injury Segments (51) as applicable:
 
 <table>
@@ -2790,7 +2773,6 @@ Enter only (1) code for each Victim Injury Segment; however, can submit as many 
 {% endfor %}
 </tbody>
 </table>  
-
 ___
 
 <br>
@@ -3077,7 +3059,6 @@ Enter only one code per Offender Segment (40):
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 ### Examples: 
@@ -3187,7 +3168,6 @@ Enter only (1) code per Offender Segment (40):
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 ### Examples: 
@@ -3268,11 +3248,70 @@ Enter only (1) code per Offender Segment (40):
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 <br>
 
+## Ethnicity of Offender (39A)
+
+___
+
+**Data Characteristics:** 1 Character Alpha
+
+### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["16004"] -%}
+1 | {{error.err_desc["39A"]}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+### Notes:
+
+* `This Data Element indicates the ethnic origin of the Arrestee.`
+
+___
+
+### Allowed Entries
+
+___
+
+Enter only (1) code per Offense Segment (40):
+
+<table>
+<thead>
+	<tr>
+		<th colspan = "1" style="align-text:center;">Ethnicity of Arrestee</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.data-element-defs %}
+    {% if de.de_num == '39A' %}
+    <tr><td>
+			{% for subsection in de.subsection %}
+				<table class="subtable">
+				{% if subsection.title != "" %}<th colspan="3">{{subsection.title}}</th> {% endif %}
+					{% for values in subsection.values %}
+					<tr>
+            			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+            		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
+            		</tr>
+					{% endfor %}
+				</table>
+			{% if forloop.last == false %}<br>{% endif %}
+        	{% endfor %}
+		</td></tr>
+    {% endif %}
+{% endfor %}
+</tbody>
+</table>
+___
+
+<br>
 
 ## Arrestee Sequence Number (40)
 
@@ -3426,7 +3465,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["16004"] -%}
 2 | {{error.err_desc["43"]}} | {{error.err_no}}| {{ error.err_message }} 
 
-
 ___
 
 ### Notes:
@@ -3468,7 +3506,6 @@ Enter only <span style="text-decoration: underline">one</span> code per Arrest S
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 <br>
@@ -3532,7 +3569,6 @@ Enter only one (1) code per Arrestee Segment:
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 <br>
@@ -3718,7 +3754,6 @@ Enter as many codes as apply. However, DO NOT enter the same code more than once
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 <br>
@@ -3812,7 +3847,6 @@ Enter only <span style="text-decoration: underline">one</span> code per Arrest S
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 ### Examples: 
@@ -3915,7 +3949,6 @@ Enter only (1) code per Arrest Segment:
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 <br>
@@ -3978,7 +4011,6 @@ Enter only (1) code per Arrest Segment (60):
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 <br>
@@ -4041,7 +4073,6 @@ Enter only (1) code per Arrest Segment (60):
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 <br>
@@ -4059,7 +4090,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["16004"] -%}
 1 | {{error.err_desc["51"]}} | {{error.err_no}}| {{ error.err_message }}
 
-___ 
+___
 
 ### Notes:
 * `The Arrestee’s Residency Status, whether Resident ('R') or Nonresident ('N'), is entered into this Data Element.`
@@ -4101,7 +4132,6 @@ Enter only (1) code per Arrest Segment (60):
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 <br>
@@ -4171,7 +4201,6 @@ Enter only (1) code per Arrest Segment (60) for Juveniles only:
 {% endfor %}
 </tbody>
 </table>
-
 ___
 
 ### Examples: 
@@ -4317,18 +4346,18 @@ ___
 
 ### Allowed Entries for Data Element C1:
 
-  | Value |     Segment Descriptors      |  Value   |  Segment Descriptors         |          
-  |:-----:|:-----------------------------|:--------:|:-----------------------------| 
-  |00     | Submission Header            | 41       | Offender Using               |
-  |01     | Zero Records                 | 50       | Victim                       |
-  |10     | Administration               | 51       | Victim Injury                |
-  |11     | Administration Modification  | 52       | Victim/Offender Relation     |
-  |20     | Offense                      | 60       | Arrestee                     |
-  |30     | Property                     | 61       | Arrestee Armed               |
-  |31     | Property Description         | 62       | Arrestee Statute             |
-  |32     | Property Modification        | 63       | Arrestee Modification        |
-  |33     | Property/Offense             | 99       | Submission Trailer           |
-  |40     | Offender                     |
+| Value |     Segment Descriptors      |  Value   |  Segment Descriptors         |
+|:-----:|:-----------------------------|:--------:|:-----------------------------|
+|00     | Submission Header            | 41       | Offender Using               |
+|01     | Zero Records                 | 50       | Victim                       |
+|10     | Administration               | 51       | Victim Injury                |
+|11     | Administration Modification  | 52       | Victim/Offender Relation     |
+|20     | Offense                      | 60       | Arrestee                     |
+|30     | Property                     | 61       | Arrestee Armed               |
+|31     | Property Description         | 62       | Arrestee Statute             |
+|32     | Property Modification        | 63       | Arrestee Modification        |
+|33     | Property/Offense             | 99       | Submission Trailer           |
+|40     | Offender                     |
 
 <br>
 

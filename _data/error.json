@@ -1508,6 +1508,7 @@
         "err_no": 16004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "err_desc": {
+            "39A": "If entered, MUST be a valid code.",
             "45": "MUST be a valid code on Master LIBRS/LRS Code Table. This code does not have to match one of the code(s) entered for Louisiana Revised Statute (6) within Offense Segments (6) submitted in an Incident Report.",
             "44": "MUST be a valid code.",
             "43": "MUST be a valid code.",

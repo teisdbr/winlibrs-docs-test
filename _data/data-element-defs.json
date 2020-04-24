@@ -2072,6 +2072,29 @@
 			]
 		}]
 	}, {
+		"de_num": "39A",
+		"name": "ETHNICITY OF OFFENDER",
+		"definition": "(Optional) The Ethnicity of the Offender is to be entered in this data element.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "H",
+					"desc": "Hispanic Origin"
+				},
+				{
+					"code": "N",
+					"desc": "Not of Hispanic Origin"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	},{
 		"de_num": "40",
 		"name": "ARRESTEE SEQUENCE NUMBER",
 		"definition": "Each Arrestee in an incident is to be assigned a sequence number",
