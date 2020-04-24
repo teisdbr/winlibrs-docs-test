@@ -2011,7 +2011,7 @@
                     },
                     {
                         "code": "XB",
-                        "desc": "Victim Was Ex-Boyfriend/Girlfriend (LIBRS Only) Sent to NIBRS as 'BG'"
+                        "desc": "Victim Was Ex-Boyfriend/Girlfriend (LIBRS Only). Now Maps to 'XR'; Sent to NIBRS as 'BG'"
                     },
                     {
                         "code": "CF",
@@ -2019,7 +2019,7 @@
                     },
                     {
                         "code": "HR",
-                        "desc": "Homosexual Relationship *no longer used"
+                        "desc": "Homosexual Relationship *no longer used*"
                     },
                     {
                         "code": "XS",
@@ -2040,6 +2040,9 @@
                     {
                         "code": "ES",
                         "desc": "Victim Was Estranged Spouse (LIBRS Only) Sent to NIBRS as 'SE'"
+                    },
+                        "code": "XR",
+                        "desc": "Victim was from an Ex Relationship"
                     }
                 ]
             },
