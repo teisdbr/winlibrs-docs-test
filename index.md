@@ -16,10 +16,10 @@ ___
 
 - ### <a href="./librs-spec">Technical Specification Documentation</a>
   - #### Information about the specifications of each of the LIBRS Segments, how they're constructed, error messages associated with them, examples, and other requirements.
-- ### <a href="./data-element-values">Data Element Available Values</a>
-  - #### Table of all of the available values that can be entered for each LIBRS Data Element.
 - ### <a href="./data-element-definitions">Data Element Definitions</a>
   - #### In depth information about each of the LIBRS Data Elements, as well as error messages, examples, and other requirements that are associated with them.
+- ### <a href="./data-element-values">Data Element Available Values</a>
+  - #### Table of all of the available values that can be entered for each LIBRS Data Element.
 - ### <a href="./lrs-master-list">Master LIBRS LRS List</a>
   - #### The master list of all Louisiana Revisec Statute (LRS) Codes that the LIBRS Program currently accepts, as well as information about expired LRS Codes. 
   - #### Links are available for vendors and agencies to download a JSON list of the current Master LIBRS LRS List for ingestion into their RMS.
@@ -31,23 +31,90 @@ ___
 ## Recent Changes
 ___
 
-2020-03-25
+#### 2020-04-24
+* Changed validations for Data Element 35 (Victim/Offender Relationship):
+  * Expired "HR - Homosexual Relationship"; FBI has not accepted this for NIBRS since 2017.
+  * Added "XR - Ex Relationship" as a valid value. 
+  * Relationship "XB - Ex Boyfriend/Girlfriend" now maps to "XR - Ex Relationship".
+  * Prohibitions on use of same-sex couples in relationships have been removed (EG: Marriage can be two men or women). 
+* NIBRS 35A now allows for ANY Property Description for Data Element 15 to be used. The only exception is for 11 (Drugs/Equiment) UNLESS Data Element 14 (Property Loss Types) is Seized (7).
+* NIBRS 35B now allows for ANY Property Description for Data Element 15 to be used EXCEPT for 10 (Drugs/Narcotics).
+* Logic that will trip Error 14060 was implemented so it only can be thrown for NIBRS 11A Offenses. 
+* LRS 14:71 now ONLY allows Data Element 14 (Property Loss Type) to be "1 - None", or "8 - Unknown". 
+
+#### 2020-04-14
+
+##### LRS Updates (Note: Master LRS List has been updated)
+* Unexpired the Following LRS Codes:
+  * 14:89.A1 - Crime Against Nature - Unnatural Carnal Copulation by a Human Being with Another Human Being or Animal
+  * 14:102.1 - Cruelty to Animals
+  * 14:102.4 - Confined Animals; Necessary Food and Water
+  * 14:102.5 - Dogfighting
+  * 14:102.8 - Injuring or Killing of a Police Animal
+* Remapped the Following Animal Cruelty LRS Codes from 90Z to 720:
+  * 14:89.A1
+  * 14:102.13
+  * 14:102.14
+  * 14:102.15
+  * 14:102.16
+  * 14:102.17
+  * 14:102.18
+
+##### Processing Updates:
+
+These bugs in the processing of the LIBRS Flat Files did not cause any LIBRS Validation issues, but rather created errors when performing the NIBRS Submission of the incidents. Only about 80 Incidents in total were affected by these.
+
+* Fixed ingestion issue where Data Element 10 (Number of Premesis Entered) was being duplicated across other Offenses submitted in the same incident.
+* Fixed NIBRS Extraction issue where Offenses that were using an Alternative NIBRS Mapping were being sent as the Default NIBRS Code.
+
+##### Validation Updates:
+
+* Fixed multiple validations for Data Element 13 (Type of Weapon or Force Involved):
+  * The following Offenses *disallow* Data Element 13 (Type of Weapon or Force Involved) from being submitted with them
+    * 220, 240, 250, 270, 280, 290
+    * 13C
+    * 23B, 23C, 23F, 23H
+    * 26A, 26B, 26C, 26E
+    * 35A, 35B
+    * 370
+    * 40A
+  * For Offenses of NIBRS 13B, Data Element 13 (Type of Weapon or Force Involved) is ***required and restricted to the following values***:
+    * 40, 90, 95, 99
+  * HOWEVER, when a NIBRS 13B Offense is passed with Data Element 13 (Type of Weapon or Force Involved) as one of the following values, an error will be thrown telling the user to submit the offense as a 13A rather than a 13B:
+    * 11, 12, 13, 14, 15
+* Fixed validations to ensure Offenses with the following NIBRS Codes require Data Element 14 (Type of Property Loss) to be 1 or 8:
+  * 250, 290
+  * 26B
+  * 35A, 35B
+* Fixed validations to ensure Data Element 14 (Type of Property Loss) is being included with Offenses of NIBRS 120 and 220. 
+* Fixed validations to ensure Offenses with the following NIBRS Codes ***disallow*** "S" for Data Element 24 (Victim Type):
+  * 200, 220, 250, 280, 290
+  * 23D, 23E, 23F, 23H
+  * 26A
+* Fixed validations to ensure Data Element 33 (Injury Type) is being included with Offenses of the following NIBRS Codes:
+  * 100, 120
+  * 11A, 11B, 11C, 11D
+  * 13A, 13B - Note 13B is limited to "M" and "N"
+  * 210
+  * 90Z (Only when the Offense is a "Crime Against Person")
+
+#### 2020-03-25
 * Added Logic to handle Error Code 14060.
 * Resolved issue where Error Code 90039 was being thrown for all Crime Against Property Offenses. 
 * Restricted 90A Offenses to only allow a Property Loss Type of "None" or "Unknown". 
 
-2020-03-12
+#### 2020-03-12
 * Fixed Misspelling in LRS 14:42.1/V Description.
 * Remapped LRS 14:42.A4 as an 11A Offense as opposed to a 36B Offense. 
 * Added 13A Alternate NIBRS Mapping for LRS 14:30.
 * Added 13B Alternate NIBRS Mapping for LRS 14:34.5.
 * Improved Logic that was causing Errors 14054 and 22120 to be tripped when they shouldn't have. 
 
-2020-02-28
+#### 2020-02-28
 * Found multiple Mandatories that were throwing an Error Code 10077 when they should have been throwing particular Error Codes based on the Mandatory. The Mandatories were: 1, 5, 6, 9, 17, and 20. Changes to LIBRS and Validator were deployed; no changes to documentation were required. 
 * Validation update for LRS 14:56.4 to resolve Error 13019. 
 
-2020-02-21
+#### 2020-02-21
 * Changelog started. Please Contact the LIBRS Administrator if you would like to be notified of changes to the LIBRS Spec and Documentation on a weekly basis. 
 
 ___
