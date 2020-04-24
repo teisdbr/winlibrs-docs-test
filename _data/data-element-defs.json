@@ -1,2542 +1,2391 @@
-[
-    {
-        "de_num": "1",
-        "name": "ORI NUMBER",
-        "definition": "NCIC originating agency identifier number.",
-        "length": "9",
-        "format": "A/N"
-    },
-    {
-        "de_num": "2",
-        "name": "INCIDENT NUMBER",
-        "definition": "Agency unique, in-house assigned case number",
-        "length": "12",
-        "format": "A/N",
-        "comment": "The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years."
-    },
-    {
-        "de_num": "3",
-        "name": "INCIDENT DATE/HOUR",
-        "definition": "Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown",
-        "length": "11",
-        "format": "MMDDYYYYXHH",
-        "comment": ""
-    },
-    {
-        "de_num": "4",
-        "name": "CLEARED EXCEPTIONALLY",
-        "definition": "Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident.",
-        "length": "1",
-        "format": "A",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "A",
-                        "desc": "Death of Offender"
-                    },
-                    {
-                        "code": "B",
-                        "desc": "Prosecution Declined"
-                    },
-                    {
-                        "code": "C",
-                        "desc": "Extradition Denied"
-                    },
-                    {
-                        "code": "D",
-                        "desc": "Victim Refused to Cooperate"
-                    },
-                    {
-                        "code": "E",
-                        "desc": "Juvenile / No Custody"
-                    },
-                    {
-                        "code": "O",
-                        "desc": "Other (Administrative Closing)"
-                    },
-                    {
-                        "code": "N",
-                        "desc": "Not Applicable"
-                    }
-                ]
-            }
-        ],
-        "comment": "For Code O (Other) - LIBRS Only, Does not clear NIBRS Incident"
-    },
-    {
-        "de_num": "5",
-        "name": "EXCEPTIONAL CLEARANCE DATE",
-        "definition": "When the incident was cleared, if cleared by exceptional means.",
-        "length": "8",
-        "format": "MMDDYYYY"
-    },
-    {
-        "de_num": "L6",
-        "name": "OFFENSE SEQUENCE NUMBER",
-        "definition": "Each Offense within the incident MUST be assigned a sequence number.",
-        "length": "3",
-        "format": "N",
-        "comment": "Each Offense within an incident MUST be assigned a UNIQUE Offense Sequence Number."
-    },
-    {
-        "de_num": "L6R",
-        "name": "OFFENSE SEQUENCE NUMBER REFERENCES",
-        "definition": "<b>**NEW**</b> UNIQUE constraint that allows an Offense to relate to many Properties.",
-        "length": "3",
-        "format": "N",
-        "comment": "Important: Internal system data element that allows for an Offense to relate to many properties where multiple Property/Offense segments are submitted within a single incident."
-    },
-    {
-        "de_num": "6",
-        "name": "LOUISIANA REVISED STATUTE NUMBER (LRS Number)",
-        "definition": "Each Offense (LRS) that occurred as part of the incident.",
-        "length": "12",
-        "format": "A/N",
-        "comment": "MUST be in Master LIBRS/LRS Code Table to be accepted by LIBRS. Note: Contact LIBRS Program staff before adding new LRS codes to insure proper mappings."
-    },
-    {
-        "de_num": "N6",
-        "name": "AGENCY SUPPLIED NIBRS CODE",
-        "definition": "NIBRS Code assigned to every Offense within an incident.",
-        "length": "3",
-        "format": "A/N",
-        "comment": "Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes. Please consult the LIBRS Master LRS Table to review these mappings and contact LIBRS Program Staff if you have questions. "
-    },
-    {
-        "de_num": "7",
-        "name": "OFFENSE ATTEMPTED/COMPLETED",
-        "definition": "Indicates whether each Offense was completed or merely attempted.",
-        "length": "1",
-        "format": "A/N",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "A",
-                        "desc": "Attempted"
-                    },
-                    {
-                        "code": "C",
-                        "desc": "Completed"
-                    }
-                ]
-            }
-        ],
-        "comment": "Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes. Please consult the LIBRS Master LRS Table to review these mappings and contact LIBRS Program Staff if you have questions. "
-    },
-    {
-        "de_num": "8",
-        "name": "OFFENDER SUSPECTED OF USING/GAMING MOTIVATION",
-        "definition": "Indicates if the Offender was suspected of consuming alcohol or using drugs/narcotics during or shortly before the incident; or of using a computer to perpetrate the crime.<br><br>Also identifies whether the Offender’s gaming activity was the motive for commission of the crime.",
-        "length": "1",
-        "format": "A",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "A",
-                        "desc": "Alcohol"
-                    },
-                    {
-                        "code": "C",
-                        "desc": "Computer Equipment"
-                    },
-                    {
-                        "code": "D",
-                        "desc": "Drugs/Narcotics"
-                    },
-                    {
-                        "code": "G",
-                        "desc": "Gaming Activity Motive for Crime"
-                    },
-                    {
-                        "code": "N",
-                        "desc": "Not Applicable (LIBRS Only)"
-                    }
-                ]
-            }
-        ],
-        "comment": "This Data Element is located within Offender Segment.<br><br>Can enter up to four codes per Offender. "
-    },
-    {
-        "de_num": "8A",
-        "name": "BIAS MOTIVATION/BIAS CRIME TYPE",
-        "definition": "Indicates whether the Offender was motivated to commit the Offense because of his/her bias against a racial, religious, ethnic/national origin, sexual, or disability group.",
-        "length": "2",
-        "format": "N",
-        "subsection": [
-            {
-                "title": "Race/Ethnicity/Ancestry",
-                "values": [
-                    {
-                        "code": "11",
-                        "desc": "Anti-White"
-                    },
-                    {
-                        "code": "12",
-                        "desc": "Anti-Black or African American"
-                    },
-                    {
-                        "code": "13",
-                        "desc": "Anti-American Indian / Alaskan Native"
-                    },
-                    {
-                        "code": "14",
-                        "desc": "Anti-Asian"
-                    },
-                    {
-                        "code": "15",
-                        "desc": "Anti-Multiple Races, Group"
-                    },
-                    {
-                        "code": "16",
-                        "desc": "Anti-Native Hawaiian or Other Pacific Islander"
-                    },
-                    {
-                        "code": "31",
-                        "desc": "Anti-Arab"
-                    },
-                    {
-                        "code": "32",
-                        "desc": "Anti-Hispanic or Latino"
-                    },
-                    {
-                        "code": "33",
-                        "desc": "Anti-Other Race/Ethnicity/Ancestry"
-                    }
-                ]
-            },
-            {
-                "title": "Religion",
-                "values": [
-                    {
-                        "code": "21",
-                        "desc": "Anti-Jewish"
-                    },
-                    {
-                        "code": "22",
-                        "desc": "Anti-Catholic"
-                    },
-                    {
-                        "code": "23",
-                        "desc": "Anti-Protestant"
-                    },
-                    {
-                        "code": "24",
-                        "desc": "Anti-Islamic (Muslim)"
-                    },
-                    {
-                        "code": "25",
-                        "desc": "Anti-Other Religion"
-                    },
-                    {
-                        "code": "26",
-                        "desc": "Anti-Multiple Religions, Group"
-                    },
-                    {
-                        "code": "27",
-                        "desc": "Anti-Atheism/Agnosticism"
-                    },
-                    {
-                        "code": "28",
-                        "desc": "Anti-Mormon"
-                    },
-                    {
-                        "code": "29",
-                        "desc": "Anti-Jehovah’s Witness"
-                    },
-                    {
-                        "code": "81",
-                        "desc": "Anti-Eastern Orthodox (Russian, Greek, Other)"
-                    },
-                    {
-                        "code": "82",
-                        "desc": "Anti-Other Christian"
-                    },
-                    {
-                        "code": "83",
-                        "desc": "Anti-Buddhist"
-                    },
-                    {
-                        "code": "84",
-                        "desc": "Anti-Hindu"
-                    },
-                    {
-                        "code": "85",
-                        "desc": "Anti-Sikh"
-                    }
-                ]
-            },
-            {
-                "title": "Sexual Orientation",
-                "values": [
-                    {
-                        "code": "41",
-                        "desc": "Anti-Gay (Male)"
-                    },
-                    {
-                        "code": "42",
-                        "desc": "Anti-Lesbian (Female)"
-                    },
-                    {
-                        "code": "43",
-                        "desc": "Anti-Lesbian, Gay, Bisexual or Transgender (Mixed Group)"
-                    },
-                    {
-                        "code": "44",
-                        "desc": "Anti-Heterosexual"
-                    },
-                    {
-                        "code": "45",
-                        "desc": "Anti-Bisexual"
-                    }
-                ]
-            },
-            {
-                "title": "Disability",
-                "values": [
-                    {
-                        "code": "51",
-                        "desc": "Anti-Physical Disability"
-                    },
-                    {
-                        "code": "52",
-                        "desc": "Anti-Mental Disability"
-                    }
-                ]
-            },
-            {
-                "title": "Gender",
-                "values": [
-                    {
-                        "code": "61",
-                        "desc": "Anti-Male"
-                    },
-                    {
-                        "code": "62",
-                        "desc": "Anti-Female"
-                    }
-                ]
-            },
-            {
-                "title": "Gender Identity",
-                "values": [
-                    {
-                        "code": "71",
-                        "desc": "Anti-Transgender"
-                    },
-                    {
-                        "code": "72",
-                        "desc": "Anti-Gender Non-Conforming"
-                    }
-                ]
-            },
-            {
-                "title": "None/Unkown",
-                "values": [
-                    {
-                        "code": "88",
-                        "desc": "None (No Bias)"
-                    },
-                    {
-                        "code": "99",
-                        "desc": "Unknown (Offender’s Motivation Not Known)"
-                    }
-                ]
-            },
-            {
-                "title": "Other Bias (LIBRS Only)",
-                "values": [
-                    {
-                        "code": "70",
-                        "desc": "Age (LIBRS Only). Sent to NIBRS as “99”"
-                    },
-                    {
-                        "code": "71",
-                        "desc": "Ancestry (LIBRS Only). Sent to NIBRS as “33”"
-                    },
-                    {
-                        "code": "72",
-                        "desc": "Creed (LIBRS Only). Sent to NIBRS as “25”"
-                    },
-                    {
-                        "code": "73",
-                        "desc": "Gender (LIBRS Only). Sent to NIBRS as “99”"
-                    },
-                    {
-                        "code": "74",
-                        "desc": "Organizational Affiliation (LIBRS Only). Sent to NIBRS as “99”"
-                    }
-                ]
-            }
-        ],
-        "comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offender Segment."
-    },
-    {
-        "de_num": "9",
-        "name": "LOCATION TYPE",
-        "definition": "Location where each Offense took place.",
-        "length": "2",
-        "format": "N",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "01",
-                        "desc": "Air, Bus, Train or Terminal"
-                    },
-                    {
-                        "code": "02",
-                        "desc": "Bank, Savings and Loan (incl. other Financial Institutions)"
-                    },
-                    {
-                        "code": "03",
-                        "desc": "Bar or Night Club"
-                    },
-                    {
-                        "code": "04",
-                        "desc": "Church, Synagogue or Temple (includes other Religious Buildings..)"
-                    },
-                    {
-                        "code": "05",
-                        "desc": "Commercial or Office Building"
-                    },
-                    {
-                        "code": "06",
-                        "desc": "Construction Site"
-                    },
-                    {
-                        "code": "07",
-                        "desc": "Convenience Store"
-                    },
-                    {
-                        "code": "08",
-                        "desc": "Department or Discount Store"
-                    },
-                    {
-                        "code": "09",
-                        "desc": "Drug Store, Doctor's Office or Hospital (includes Medical Supply Building)"
-                    },
-                    {
-                        "code": "10",
-                        "desc": "Field or Woods"
-                    },
-                    {
-                        "code": "11",
-                        "desc": "Government or Public Building"
-                    },
-                    {
-                        "code": "12",
-                        "desc": "Grocery or Supermarket"
-                    },
-                    {
-                        "code": "13",
-                        "desc": "Highway, Road or Alley (includes Street)"
-                    },
-                    {
-                        "code": "14",
-                        "desc": "Hotel, Motel, Etc. (includes Temporary Lodgings)"
-                    },
-                    {
-                        "code": "15",
-                        "desc": "Jail or Prison"
-                    },
-                    {
-                        "code": "16",
-                        "desc": "Lake or Waterway"
-                    },
-                    {
-                        "code": "17",
-                        "desc": "Liquor Store"
-                    },
-                    {
-                        "code": "18",
-                        "desc": "Parking lot/Garage"
-                    },
-                    {
-                        "code": "19",
-                        "desc": "Rental storage Facility"
-                    },
-                    {
-                        "code": "20",
-                        "desc": "Residence/Home"
-                    },
-                    {
-                        "code": "21",
-                        "desc": "Restaurant"
-                    },
-                    {
-                        "code": "22",
-                        "desc": "School"
-                    },
-                    {
-                        "code": "23",
-                        "desc": "Service or Gas Station"
-                    },
-                    {
-                        "code": "24",
-                        "desc": "Specialty Store (incl. Fur Store, Jewelry Store, TV Store, Dress Shop, etc.)"
-                    },
-                    {
-                        "code": "25",
-                        "desc": "Other or Unknown (use only if no other code applies)"
-                    },
-                    {
-                        "code": "37",
-                        "desc": "Abandoned or Condemned Structure"
-                    },
-                    {
-                        "code": "38",
-                        "desc": "Amusement Park"
-                    },
-                    {
-                        "code": "39",
-                        "desc": "Arena, Stadium, Fairgrounds or Coliseum"
-                    },
-                    {
-                        "code": "40",
-                        "desc": "ATM Separate from Bank"
-                    },
-                    {
-                        "code": "41",
-                        "desc": "Auto Dealership (New or Used)"
-                    },
-                    {
-                        "code": "42",
-                        "desc": "Camp or Campground"
-                    },
-                    {
-                        "code": "44",
-                        "desc": "Daycare Facility"
-                    },
-                    {
-                        "code": "45",
-                        "desc": "Dock, Wharf, Freight or Modal Terminal"
-                    },
-                    {
-                        "code": "46",
-                        "desc": "Farm Facility"
-                    },
-                    {
-                        "code": "47",
-                        "desc": "Gambling Facility, Casino or Race Track"
-                    },
-                    {
-                        "code": "48",
-                        "desc": "Industrial Site"
-                    },
-                    {
-                        "code": "49",
-                        "desc": "Military Installation"
-                    },
-                    {
-                        "code": "50",
-                        "desc": "Park or Playground"
-                    },
-                    {
-                        "code": "51",
-                        "desc": "Rest Area"
-                    },
-                    {
-                        "code": "52",
-                        "desc": "School: College or University"
-                    },
-                    {
-                        "code": "53",
-                        "desc": "School: Elementary or Secondary"
-                    },
-                    {
-                        "code": "54",
-                        "desc": "Shelter: Mission or Homeless"
-                    },
-                    {
-                        "code": "55",
-                        "desc": "Shopping Mall"
-                    },
-                    {
-                        "code": "56",
-                        "desc": "Tribal Lands"
-                    },
-                    {
-                        "code": "57",
-                        "desc": " Community Center"
-                    },
-                    {
-                        "code": "58",
-                        "desc": "Cyberspace"
-                    }
-                ]
-            }
-        ],
-        "comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offender Segment.<br><br>Note: Data value School (22) was replaced by Location Codes 52 and 53 and is to be used only by agencies that have not adopted the new codes<br><br>"
-    },
-    {
-        "de_num": "10",
-        "name": "NUMBER OF PREMISES ENTERED",
-        "definition": "Number of structures entered.",
-        "length": "2",
-        "format": "N",
-        "comment": "Used only if crime is Burglary (220) AND if the Hotel Rule is applicable. Also, Location Type (Data Element No. 9) MUST be Hotel/Motel (14) or Jail/Prison (19)"
-    },
-    {
-        "de_num": "11",
-        "name": "METHOD OF ENTRY",
-        "definition": "Indicates whether Force or No Force was used by the burglar in entering a structure",
-        "length": "1",
-        "format": "A",
-        "comment": "Used only if crime is Burglary (220).",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "F",
-                        "desc": "Force"
-                    },
-                    {
-                        "code": "N",
-                        "desc": "No Force"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "12",
-        "name": "TYPE OF CRIMINAL ACTIVITY/GANG INFORMATION",
-        "definition": "Provides additional information on the criminal activity and gang information of the Offender.",
-        "length": "1",
-        "format": "A",
-        "comment": "For Type of Criminal Activity, use ONLY if one of the following Offenses:<ul><li>250 - Counterfeiting/Forgery</li><li>280 - Stolen Property Offenses</li><li>35A & 35B - Drug/Narcotic Offenses</li><li>39C - Gambling Equip. Violations</li><li>370 - Pornography Materials</li><li>520 - Weapons Law Violations</li><li>90A - Bad Checks</li><li>90Z - 'Crime Against Property' Offenses</li><li>720 - Animal Cruelty</li></ul>Note: Can enter up to THREE codes of TYPE OF CRIMINAL ACTIVITY for each offense. Codes A, F, I and S may only be used for 720 Animal Cruelty Offenses.<br><br>For Gang Information, use only if the crime is one of the following offenses codes of “J”, ” G”, or ”N”: <ul><li>09A - Murder and Nonnegligent Manslaughter</li><li>09B - Negligent Homicide</li><li>100 - Kidnaping or Abduction</li><li>120 - Robbery</li><li>11A - Forcible Rape</li><li>11B - Forcible Sodomy</li><li>11C - Sexual Assault with An Object</li><li>11D - Forcible Fondling</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>Note: Can enter up to TWO codes of GANG INFORMATION for each offense.",
-        "subsection": [
-            {
-                "title": "Criminal Activity",
-                "values": [
-                    {
-                        "code": "B",
-                        "desc": "Buying / Receiving"
-                    },
-                    {
-                        "code": "C",
-                        "desc": "Cultivation / Manufacturing / Publishing"
-                    },
-                    {
-                        "code": "D",
-                        "desc": "Distribution / Selling"
-                    },
-                    {
-                        "code": "E",
-                        "desc": "Exploiting Children"
-                    },
-                    {
-                        "code": "I",
-                        "desc": "Possession with Intent to Sell. Sent to NIBRS as code 'P'"
-                    },
-                    {
-                        "code": "O",
-                        "desc": "Operating/Promotion/Assisting"
-                    },
-                    {
-                        "code": "P",
-                        "desc": "Possessing/Concealing"
-                    },
-                    {
-                        "code": "T",
-                        "desc": "Transporting/Transmitting/Importing"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Using/Consuming"
-                    },
-                    {
-                        "code": "X",
-                        "desc": "Other. Sent to NIBRS as code 'P'"
-                    },
-                    {
-                        "code": "A",
-                        "desc": "Simple/Gross Neglect"
-                    },
-                    {
-                        "code": "F",
-                        "desc": "Organised Abuse"
-                    },
-                    {
-                        "code": "I",
-                        "desc": "Intentional Abuse and Torture"
-                    },
-                    {
-                        "code": "S",
-                        "desc": "Animal Sexual Abuse"
-                    }
-                ]
-            },
-            {
-                "title": "Gang Information",
-                "values": [
-                    {
-                        "code": "J",
-                        "desc": "Juvenile Gang"
-                    },
-                    {
-                        "code": "G",
-                        "desc": "Other Gang"
-                    },
-                    {
-                        "code": "N",
-                        "desc": "None or Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "13",
-        "name": "TYPE OF WEAPON/FORCE INVOLVED",
-        "definition": "The type(s) of weapon(s), or force, used by the Offender in committing the Offense.",
-        "length": "3",
-        "format": "A/N",
-        "comment": "Use this data element ONLY if crime is one of the following Offenses: {::nomarkdown}<ul><li>09A, 09B, 09C Homicide Offenses</li><li>100 Kidnaping or Abduction</li><li>11A, 11B, 11C, 11D Forcible Sex Offenses</li><li>120 Robbery</li><li>13A Assault Offenses</li><li>64A Human Trafficking and Commercial Sex Acts</li><li>64B Human Trafficking and Involuntary Servitude</li><li>210 Extortion/Blackmail</li><li>520 Weapon Law Violations</li></ul>{:/}<br><br>If weapon is an Automatic Weapon (capable of continued fire if the trigger is held down), append an 'A' to the weapon code as a third character.<br><br>",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "11",
-                        "desc": "Firearm (type not stated)"
-                    },
-                    {
-                        "code": "12",
-                        "desc": "Handgun"
-                    },
-                    {
-                        "code": "13",
-                        "desc": "Rifle"
-                    },
-                    {
-                        "code": "14",
-                        "desc": "Shotgun"
-                    },
-                    {
-                        "code": "15",
-                        "desc": "Other Firearm"
-                    },
-                    {
-                        "code": "20",
-                        "desc": "Knife or Cutting Instrument"
-                    },
-                    {
-                        "code": "30",
-                        "desc": "Blunt Object"
-                    },
-                    {
-                        "code": "35",
-                        "desc": "Motor Vehicle / Vessel (When used as a weapon)"
-                    },
-                    {
-                        "code": "40",
-                        "desc": "Personal Weapons"
-                    },
-                    {
-                        "code": "50",
-                        "desc": "Poison"
-                    },
-                    {
-                        "code": "60",
-                        "desc": "Explosives"
-                    },
-                    {
-                        "code": "65",
-                        "desc": "Fire or Incendiary Device"
-                    },
-                    {
-                        "code": "70",
-                        "desc": "Drugs, Narcotics or Sleeping Pills"
-                    },
-                    {
-                        "code": "85",
-                        "desc": "Asphyxiation"
-                    },
-                    {
-                        "code": "90",
-                        "desc": "Other"
-                    },
-                    {
-                        "code": "95",
-                        "desc": "Unknown"
-                    },
-                    {
-                        "code": "99",
-                        "desc": "None (Mutually Exclusive to any other value)"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "P1",
-        "name": "PROPERTY SEQUENCE NUMBER",
-        "definition": "Each Property in the Incident MUST be assigned a UNIQUE Sequence Number.",
-        "length": "3",
-        "format": "N",
-        "comment": "Important: Internal system data element that allows for a Property to relate to many Offenses where multiple Property/Offense segments are submitted within a single incident."
-    },
-    {
-        "de_num": "P1R",
-        "name": "PROPERTY SEQUENCE NUMBER REFERENCE",
-        "definition": "UNIQUE constraint that allows a Property to relate to many Offenses.",
-        "length": "3",
-        "format": "N",
-        "comment": "Important: Internal system data element that allows for multiple Property/Offense segments to be submitted within a single Incident."
-    },
-    {
-        "de_num": "14",
-        "name": "TYPE OF PROPERTY LOSS",
-        "definition": "Describes the type of property loss, recovered, seized, etc., which occurred in an incident.",
-        "length": "1",
-        "format": "N",
-        "comment": "Property segments submitted only if crime is:",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "1",
-                        "desc": "None"
-                    },
-                    {
-                        "code": "2",
-                        "desc": "Burned"
-                    },
-                    {
-                        "code": "3",
-                        "desc": "Counterfeited or Forged"
-                    },
-                    {
-                        "code": "4",
-                        "desc": "Destroyed, Damaged or Vandalized"
-                    },
-                    {
-                        "code": "5",
-                        "desc": "Recovered"
-                    },
-                    {
-                        "code": "6",
-                        "desc": "Seized"
-                    },
-                    {
-                        "code": "7",
-                        "desc": "Stolen, Etc."
-                    },
-                    {
-                        "code": "8",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "15",
-        "name": "PROPERTY DESCRIPTION",
-        "definition": "Description of property that was burned, counterfeited, stolen, etc., during the incident.",
-        "length": "2",
-        "format": "N",
-        "comment": "‘99’ CANNOT be used unless state programs are directed to use it for trend crimes by the FBI and will be rejected if used normal submissions.",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "01",
-                        "desc": "Aircraft"
-                    },
-                    {
-                        "code": "02",
-                        "desc": "Alcohol"
-                    },
-                    {
-                        "code": "03",
-                        "desc": "Automobiles"
-                    },
-                    {
-                        "code": "04",
-                        "desc": "Bicycles"
-                    },
-                    {
-                        "code": "05",
-                        "desc": "Buses"
-                    },
-                    {
-                        "code": "06",
-                        "desc": "Clothes or Furs"
-                    },
-                    {
-                        "code": "07",
-                        "desc": "Computer Hardware or Software"
-                    },
-                    {
-                        "code": "08",
-                        "desc": "Consumable Goods"
-                    },
-                    {
-                        "code": "09",
-                        "desc": "Credit or Debit Cards"
-                    },
-                    {
-                        "code": "10",
-                        "desc": "Drugs or Narcotics"
-                    },
-                    {
-                        "code": "11",
-                        "desc": "Drug Narcotic Equipment"
-                    },
-                    {
-                        "code": "12",
-                        "desc": "Farm Equipment"
-                    },
-                    {
-                        "code": "13",
-                        "desc": "Firearms"
-                    },
-                    {
-                        "code": "14",
-                        "desc": "Gambling Equipment"
-                    },
-                    {
-                        "code": "15",
-                        "desc": "Heavy Construction or Industrial Equipment"
-                    },
-                    {
-                        "code": "16",
-                        "desc": "Household Goods"
-                    },
-                    {
-                        "code": "17",
-                        "desc": "Jewelry, Precious Metals"
-                    },
-                    {
-                        "code": "18",
-                        "desc": "Livestock"
-                    },
-                    {
-                        "code": "19",
-                        "desc": "Merchandise"
-                    },
-                    {
-                        "code": "20",
-                        "desc": "Money"
-                    },
-                    {
-                        "code": "21",
-                        "desc": "Negotiable Instruments"
-                    },
-                    {
-                        "code": "22",
-                        "desc": "Non-negotiable Instruments"
-                    },
-                    {
-                        "code": "23",
-                        "desc": "Office-type Equipment"
-                    },
-                    {
-                        "code": "24",
-                        "desc": "Other Motor Vehicles"
-                    },
-                    {
-                        "code": "25",
-                        "desc": "Purses, Handbags or Wallets"
-                    },
-                    {
-                        "code": "26",
-                        "desc": "Radios, TVs, VCRs or Cameras"
-                    },
-                    {
-                        "code": "27",
-                        "desc": "Recordings: Audio or Visual"
-                    },
-                    {
-                        "code": "28",
-                        "desc": "Recreational Vehicles"
-                    },
-                    {
-                        "code": "29",
-                        "desc": "Structures: Single Occupancy Dwellings"
-                    },
-                    {
-                        "code": "30",
-                        "desc": "Structures: Other Dwellings"
-                    },
-                    {
-                        "code": "31",
-                        "desc": "Structures: Other Commercial/Business"
-                    },
-                    {
-                        "code": "32",
-                        "desc": "Structures :Industrial/Manufacturing"
-                    },
-                    {
-                        "code": "33",
-                        "desc": "Structures: Public/Community"
-                    },
-                    {
-                        "code": "34",
-                        "desc": "Structures: Storage"
-                    },
-                    {
-                        "code": "35",
-                        "desc": "Structures: Other"
-                    },
-                    {
-                        "code": "36",
-                        "desc": "Tools"
-                    },
-                    {
-                        "code": "37",
-                        "desc": "Trucks"
-                    },
-                    {
-                        "code": "38",
-                        "desc": "Vehicle Parts or Accessories"
-                    },
-                    {
-                        "code": "39",
-                        "desc": "Watercraft"
-                    },
-                    {
-                        "code": "41",
-                        "desc": "Aircraft Parts/Accessories"
-                    },
-                    {
-                        "code": "42",
-                        "desc": "Artistic Supplies/Accessories"
-                    },
-                    {
-                        "code": "43",
-                        "desc": "Building Materials"
-                    },
-                    {
-                        "code": "44",
-                        "desc": "Camping/Hunting/Fishing Equipment/Supplies"
-                    },
-                    {
-                        "code": "45",
-                        "desc": "Chemicals"
-                    },
-                    {
-                        "code": "46",
-                        "desc": "Collections/Collectibles"
-                    },
-                    {
-                        "code": "47",
-                        "desc": "Crops"
-                    },
-                    {
-                        "code": "48",
-                        "desc": "Documents/Personal or Business"
-                    },
-                    {
-                        "code": "49",
-                        "desc": "Explosives"
-                    },
-                    {
-                        "code": "59",
-                        "desc": "Firearm Accessories"
-                    },
-                    {
-                        "code": "64",
-                        "desc": "Fuel"
-                    },
-                    {
-                        "code": "65",
-                        "desc": "Identity Documents"
-                    },
-                    {
-                        "code": "66",
-                        "desc": "Identity–Intangible"
-                    },
-                    {
-                        "code": "67",
-                        "desc": "Law Enforcement Equipment"
-                    },
-                    {
-                        "code": "68",
-                        "desc": "Lawn/Yard/Garden Equipment"
-                    },
-                    {
-                        "code": "69",
-                        "desc": "Logging Equipment"
-                    },
-                    {
-                        "code": "70",
-                        "desc": "Medical/Medical Lab Equipment"
-                    },
-                    {
-                        "code": "71",
-                        "desc": "Metals, Non-Precious"
-                    },
-                    {
-                        "code": "72",
-                        "desc": "Musical Instruments"
-                    },
-                    {
-                        "code": "73",
-                        "desc": "Pets"
-                    },
-                    {
-                        "code": "74",
-                        "desc": "Photographic/Optical Equipment"
-                    },
-                    {
-                        "code": "75",
-                        "desc": "Portable Electronic Communications"
-                    },
-                    {
-                        "code": "76",
-                        "desc": "Recreational/Sports Equipment"
-                    },
-                    {
-                        "code": "77",
-                        "desc": "Other"
-                    },
-                    {
-                        "code": "78",
-                        "desc": "Trailers"
-                    },
-                    {
-                        "code": "79",
-                        "desc": "Watercraft Equipment/Parts/Accessories"
-                    },
-                    {
-                        "code": "80",
-                        "desc": "Weapons–Other"
-                    },
-                    {
-                        "code": "88",
-                        "desc": "Pending Inventory"
-                    },
-                    {
-                        "code": "99",
-                        "desc": "Special category used by the National UCR program to compile statistics."
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "16",
-        "name": "VALUE OF PROPERTY",
-        "definition": "The total dollar value of the property burned, counterfeited, stolen, etc., during and incident",
-        "length": "9",
-        "format": "MMDDYYYY",
-        "comment": "Values are also entered for Seized Drugs and Narcotics. (LIBRS Only)",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "1",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "17",
-        "name": "DATE RECOVERED",
-        "length": "8",
-        "format": "MMDDYYYY",
-        "comment": "If previously stolen property is recovered, the date of its recovery is to be entered. If there are more than one recovery dates for the same 'Property Description' enter the earliest date. If the recovery date is Unknown, enter the date of the report."
-    },
-    {
-        "de_num": "18",
-        "name": "NUMBER OF STOLEN MOTOR VEHICLES",
-        "definition": "Indicates number of motor vehicles stolen during an incident. If the number is Unknown, enter '00'.",
-        "length": "2",
-        "format": "N",
-        "comment": "MUST BE ENTERED if NIBRS Offense Code is 240. Otherwise, MUST BE BLANK."
-    },
-    {
-        "de_num": "19",
-        "name": "NUMBER OF RECOVERED VEHICLES",
-        "definition": "Indicates how many motor vehicles were recovered in the incident. If the number is unknown, enter '00'.",
-        "length": "2",
-        "format": "N",
-        "comment": "MUST BE ENTERED if NIBRS Offense Code is 240. Otherwise, MUST BE BLANK."
-    },
-    {
-        "de_num": "20",
-        "name": "SUSPECTED DRUG TYPE",
-        "definition": "Enter the types of drugs/narcotics that were seized in a drug case.",
-        "length": "2",
-        "format": "A",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "A",
-                        "desc": "'Crack' Cocaine"
-                    },
-                    {
-                        "code": "B",
-                        "desc": "Cocaine"
-                    },
-                    {
-                        "code": "C",
-                        "desc": "Hashish"
-                    },
-                    {
-                        "code": "1",
-                        "desc": "Hash Oil (LIBRS Only). Sent to NIBRS as “C”"
-                    },
-                    {
-                        "code": "D",
-                        "desc": "Heroin"
-                    },
-                    {
-                        "code": "E",
-                        "desc": "Marijuana"
-                    },
-                    {
-                        "code": "F",
-                        "desc": "Morphine"
-                    },
-                    {
-                        "code": "G",
-                        "desc": "Opium"
-                    },
-                    {
-                        "code": "H",
-                        "desc": "Other Narcotics: <ul><li>Codeine</li><li>Demerol</li><li>Dihydromorphinone or Dilaudid</li><li>Hydrocodone or Percodan</li><li>Methadone</li></ul>"
-                    },
-                    {
-                        "code": "I",
-                        "desc": "LSD"
-                    },
-                    {
-                        "code": "J",
-                        "desc": "PCP"
-                    },
-                    {
-                        "code": "K",
-                        "desc": "Other Hallucinogens: <ul><li>BMDA or 'White Acid'</li><li> MT, MDA, or MDMA</li><li>Mescaline or Peyote</li><li>Psilocybin</li><li>STP</li></ul>"
-                    },
-                    {
-                        "code": "L",
-                        "desc": "Amphetamines / Methamphetamines"
-                    },
-                    {
-                        "code": "M",
-                        "desc": "Other Stimulants: <ul><li>Adipex, Fastine, and Ionamin (Derivatives of Phentermine)</li><li> Benzedrine</li><li> Didrex</li><li> Methylphenidate or Ritalin</li><li> Phenmetrazine or Preludin</li><li> Tenuate</li></ul>"
-                    },
-                    {
-                        "code": "N",
-                        "desc": "Barbiturates"
-                    },
-                    {
-                        "code": "O",
-                        "desc": "Other Depressants: <ul><li>Glutethimide or Doriden</li><li> Methaqualone or Quaalude</li><li> Pentazocine or Talwin</li></ul>"
-                    },
-                    {
-                        "code": "P",
-                        "desc": "Other Drugs: <ul><li>Antidepressants (Elavil, Triavil, Tofranil, Etc.)</li><li> Aromatic Hydrocarbons</li><li> Propoxyphene or Darvon</li><li> Tranquilizers (Chlordiazepoxide or Librium, Diazepam or Valium, Etc.)</li></ul>"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown Type Drug"
-                    }
-                ]
-            }
-        ],
-        "comment": "If the suspected drug type is a counterfeit, append an 'X' to the drug code, otherwise leave the second character blank."
-    },
-    {
-        "de_num": "21",
-        "name": "ESTIMATED DRUG QUANTITY",
-        "definition": "The quantity of drugs or narcotics seized in a drug incident.",
-        "length": "13",
-        "format": "N",
-        "comment": "If Drug Quantity is UNKNOWN, then value should be 1.000"
-    },
-    {
-        "de_num": "22",
-        "name": "TYPE OF DRUG MEASUREMENT",
-        "definition": "Used in quantifying drugs or narcotics seized in a drug incident. The same drugs or narcotics code CANNOT be entered within the same “Type of Measurement” category, but could be reported if in different categories.",
-        "length": "2",
-        "format": "A",
-        "comment": "For example, if two one-pound bags of marijuana are seized, they CANNOT be reported as two separate property seizures of one pound each, but instead should be reported as one seizure of two pounds of marijuana. <br><br>On the other hand, if a one-pound bag and a three-ounce bag of marijuana are seized, then they should be reported separately as a one-pound bag and a three-ounce bag.<br><br> <br><br>Note: XX = should be used for any category of drug when the substance is awaiting lab analysis<br><br>",
-        "subsection": [
-            {
-                "title": "Weight Category",
-                "values": [
-                    {
-                        "code": "GM",
-                        "desc": "Gram"
-                    },
-                    {
-                        "code": "KG",
-                        "desc": "Kilogram"
-                    },
-                    {
-                        "code": "OZ",
-                        "desc": "Ounce"
-                    },
-                    {
-                        "code": "LB",
-                        "desc": "Pound"
-                    }
-                ]
-            },
-            {
-                "title": "Capacity Category",
-                "values": [
-                    {
-                        "code": "ML",
-                        "desc": "Milliliter"
-                    },
-                    {
-                        "code": "LT",
-                        "desc": "Liter"
-                    },
-                    {
-                        "code": "FO",
-                        "desc": "Fluid Ounce"
-                    },
-                    {
-                        "code": "GL",
-                        "desc": "Gallon"
-                    }
-                ]
-            },
-            {
-                "title": "Units Category",
-                "values": [
-                    {
-                        "code": "DU",
-                        "desc": "Dosage Units, Items (Number of Capsules, Pills, Tablets, Etc.)"
-                    },
-                    {
-                        "code": "NP",
-                        "desc": "Number of Plants (e.g., Marijuana Plants (Bushes), Etc.)"
-                    }
-                ]
-            },
-            {
-                "title": "Other",
-                "values": [
-                    {
-                        "code": "XX",
-                        "desc": "Not Reported or Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "23",
-        "name": "VICTIM SEQUENCE NUMBER",
-        "definition": "Each victim in an incident is to be assigned a sequence number.",
-        "length": "3",
-        "format": "N",
-        "comment": ""
-    },
-    {
-        "de_num": "24",
-        "name": "OFFENSE CONNECTED TO VICTIM SEQUENCE NUMBER",
-        "definition": "Used to link each offense to each victim. That is, the offense       which was perpetrated against the victim during the incident.",
-        "length": "3",
-        "format": "N",
-        "comment": "Must have an offense segment for each victim. (e.g. 3 rape victims) Even though the same LRS was violated during the incident, this LRS code must be submitted for each victim. One offense segment of 14:42/ V must be submitted for each victim. <br><br>Note: This Data Element is in the Offense Segment.<br><br>"
-    },
-    {
-        "de_num": "25",
-        "name": "TYPE OF VICTIM",
-        "definition": "The type of victim.",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "I",
-                        "desc": "Individual"
-                    },
-                    {
-                        "code": "B",
-                        "desc": "Business"
-                    },
-                    {
-                        "code": "F",
-                        "desc": "Financial Institution"
-                    },
-                    {
-                        "code": "G",
-                        "desc": "Government"
-                    },
-                    {
-                        "code": "L",
-                        "desc": "Law Enforcement Officer (LIBRS Only). Sent to NIBRS as “L” starting with 2.5"
-                    },
-                    {
-                        "code": "R",
-                        "desc": "Religious Organization"
-                    },
-                    {
-                        "code": "S",
-                        "desc": "Society/Public"
-                    },
-                    {
-                        "code": "O",
-                        "desc": "Other"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "25A",
-        "name": "TYPE OF OFFICER ACTIVITY/CIRCUMSTANCE *New*",
-        "definition": "Describes Activity being performed by a Law Enforcement Officer, and Other Circumstances, at time of the Incident.",
-        "length": "2",
-        "format": "N",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "01",
-                        "desc": "Responding to 'Disturbance Calls' (LIBRS Only)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "02",
-                        "desc": "Burglaries in Progress or Pursuing Burglary Suspects (LIBRS Only)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "03",
-                        "desc": "Robberies in Progress or Pursuing Robbery Suspects (LIBRS Only)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "04",
-                        "desc": "Attempting Other Arrests (LIBRS Only)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "05",
-                        "desc": "Civil Disorder (LIBRS Only)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "06",
-                        "desc": "Handling, Transporting, Custody of Prisoners (LIBRS Only)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "07",
-                        "desc": "Investigating Suspicious Persons or Circumstance",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "08",
-                        "desc": "Ambush - No Warning (LIBRS Only)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "09",
-                        "desc": "Mentally Deranged Assailant (LIBRS Only)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "10",
-                        "desc": "Traffic Pursuits and Stops (LIBRS Only)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "11",
-                        "desc": "All Other (LIBRS Only)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "25B",
-        "name": "OFFICER ASSIGNMENT TYPE *NEW*",
-        "definition": "Describes Type of Assignment for Law Enforcement Officer(s) during Incident.",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "F",
-                        "desc": "Two-Officer Vehicle",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "G",
-                        "desc": "One-Officer Vehicle (Alone)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "H",
-                        "desc": "One-Officer Vehicle (Assisted)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "I",
-                        "desc": "Detective or Special Assignment (Alone)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "J",
-                        "desc": "Detective or Special Assignment (Assisted)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "K",
-                        "desc": "Other (Alone)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    },
-                    {
-                        "code": "L",
-                        "desc": "Other (Assisted)",
-                        "comment": "09A, 13A, 13B, 13C"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "25C",
-        "name": "OFFICER ORI, OTHER JURISDICTION *New*",
-        "definition": "During a Multi-Jurisdictional Incident, this ORI Number is recorded if a Law Enforcement Officer who is the Victim is from a Jurisdiction outside the Jurisdiction where the Incident occurred.",
-        "length": "9",
-        "format": "N",
-        "comment": "Format: Same as Agency ORI Number. If the ORI Number is unknown please contact LIBRS Program staff for assistance."
-    },
-    {
-        "de_num": "26",
-        "name": "AGE OF VICTIM (At Time of the Incident)",
-        "definition": "",
-        "length": "3",
-        "format": "A/N",
-        "comment": "If the victim was a person (that is, Type of Victim (Data Element 25) is Individual ('I') or Law Enforcement ('L'), then his/her age is to be entered into this data element.<br><br>If the Victim's EXACT AGE IS UNKNOWN, enter estimated age of Victim and append an 'E' into third character (for example, '49E'). If it is impossible to determine even an estimated age of the victim, then enter Unknown ('00') and leave the third character blank.<br><br>",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "NN",
-                        "desc": "Under 24 hours (Neonate)"
-                    },
-                    {
-                        "code": "NB",
-                        "desc": "1-6 Days Old (New Born)"
-                    },
-                    {
-                        "code": "BB",
-                        "desc": "7-364 Days Old (Baby)"
-                    },
-                    {
-                        "code": "01 to 98",
-                        "desc": "Years Old (Age in Years)"
-                    },
-                    {
-                        "code": "99",
-                        "desc": "Over 98 Years Old"
-                    },
-                    {
-                        "code": "00",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "L26",
-        "name": "DATE OF BIRTH OF VICTIM",
-        "definition": "If the Victim was a person (that is, Type of Victim (Data Element 25) is Individual (“I”) or Law Enforcement ('L')), then his/her Date of Birth should be entered here.",
-        "length": "8",
-        "format": "MMDDYYYY",
-        "comment": ""
-    },
-    {
-        "de_num": "27",
-        "name": "SEX OF VICTIM",
-        "definition": "If the victim was a person (that is, Type of Victim (Data Element 25) is Individual ('I') or Law Enforcement ('L')), then his/her sex should be entered here.",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "M",
-                        "desc": "Male"
-                    },
-                    {
-                        "code": "F",
-                        "desc": "Female"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "28",
-        "name": "RACE OF VICTIM",
-        "definition": "If the victim was a person (that is, Type of Victim (Data Element 25) is Individual (“I”) or Law Enforcement ('L'), then his/her Race is to be entered into this data element.",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "W",
-                        "desc": "White"
-                    },
-                    {
-                        "code": "B",
-                        "desc": "Black"
-                    },
-                    {
-                        "code": "I",
-                        "desc": "American Indian / Alaskan Native"
-                    },
-                    {
-                        "code": "A",
-                        "desc": "Asian"
-                    },
-                    {
-                        "code": "P",
-                        "desc": "Native Hawiian or Other Pacific Islander"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "29",
-        "name": "ETHNICITY OF VICTIM",
-        "definition": "If the victim was a person (i.e., 'I'= Individual or 'L' = Law Enforcement was entered into DE # 25 “Type of Victim”), his/her ethnicity is to be entered into this data element.",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "H",
-                        "desc": "Hispanic Origin"
-                    },
-                    {
-                        "code": "N",
-                        "desc": "Not of Hispanic Origin"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "30",
-        "name": "RESIDENT STATUS OF VICTIM",
-        "definition": "A 'Resident' is a person who maintains his/her permanent home for legal purposes in the locality (i.e., town, city, or community) where the crime took place.",
-        "length": "1",
-        "format": "A",
-        "comment": "If the victim was a person (i.e., 'I'= Individual or 'L' = Law Enforcement was entered into DE # 25 “Type of Victim”), his/her resident status is to be entered into this data element.",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "R",
-                        "desc": "Resident"
-                    },
-                    {
-                        "code": "N",
-                        "desc": "Nonresident"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "31",
-        "name": "AGGRAVATED ASSAULT / HOMICIDE CIRCUMSTANCE *Modified*",
-        "definition": "Describes the circumstances of either an Aggravated Assault or Homicide",
-        "length": "2",
-        "format": "N",
-        "comment": "Use ONLY if Crime is: Homicide (09A, 09B or 09C), Assault Offenses (13A or 13B) only when the 13B Victim is a ‘L’ and Law Enforcement Officer. <br><br>Child Abuse (“40”) can ONLY be used when Offenses are: Murder and Nonnegligent Manslaughter (09A), Negligent Homicide (09B), Aggravated Assault (13A)<br><br>",
-        "subsection": [
-            {
-                "title": "Aggravated Assault and Non-Negligent Manslaughter Circumstances",
-                "values": [
-                    {
-                        "code": "01",
-                        "desc": "Argument",
-                        "comment": "13A, 09A"
-                    },
-                    {
-                        "code": "02",
-                        "desc": "Assault on Law enforcement Officer(s)",
-                        "comment": "13A, 09A (Must be entered if Victim Type = 'L')"
-                    },
-                    {
-                        "code": "03",
-                        "desc": "Drug Dealing",
-                        "comment": "13A, 09A"
-                    },
-                    {
-                        "code": "04",
-                        "desc": "Gangland",
-                        "comment": "13A, 09A"
-                    },
-                    {
-                        "code": "05",
-                        "desc": "Juvenile Gang",
-                        "comment": "13A, 09A"
-                    },
-                    {
-                        "code": "06",
-                        "desc": "Domestic Violence",
-                        "comment": "13A, 09A"
-                    },
-                    {
-                        "code": "07",
-                        "desc": "Mercy Killing (Not applicable to aggravated assault)",
-                        "comment": "09A"
-                    },
-                    {
-                        "code": "08",
-                        "desc": "Other Felony Involved",
-                        "comment": "13A, 09A"
-                    },
-                    {
-                        "code": "09",
-                        "desc": "Other Circumstances",
-                        "comment": "13A, 09A"
-                    },
-                    {
-                        "code": "10",
-                        "desc": "Unknown Circumstances",
-                        "comment": "13A, 09A"
-                    },
-                    {
-                        "code": "40",
-                        "desc": "Child Abuse (LIBRS Only) to NIBRS as code '09'",
-                        "comment": "13A, 09A"
-                    }
-                ]
-            },
-            {
-                "title": "Negligent Manslaughter Circumstances",
-                "values": [
-                    {
-                        "code": "30",
-                        "desc": "Child Playing with Weapon",
-                        "comment": "09B"
-                    },
-                    {
-                        "code": "31",
-                        "desc": "Gun-Cleaning Accident",
-                        "comment": "09B"
-                    },
-                    {
-                        "code": "32",
-                        "desc": "Hunting Accident",
-                        "comment": "09B"
-                    },
-                    {
-                        "code": "33",
-                        "desc": "Other Negligent Weapon Handling",
-                        "comment": "09B"
-                    },
-                    {
-                        "code": "34",
-                        "desc": "Other Negligent Killing",
-                        "comment": "09B"
-                    },
-                    {
-                        "code": "40",
-                        "desc": "Child Abuse (LIBRS Only) to NIBRS as code '09'",
-                        "comment": "09B"
-                    }
-                ]
-            },
-            {
-                "title": "Justifiable Homicide Circumstances",
-                "values": [
-                    {
-                        "code": "20",
-                        "desc": "Criminal Killed by Private Citizen",
-                        "comment": "09C"
-                    },
-                    {
-                        "code": "21",
-                        "desc": "Criminal Killed by Police Office",
-                        "comment": "09C"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "32",
-        "name": "ADDITIONAL JUSTIFIABLE HOMICIDE CIRCUMSTANCES",
-        "definition": "Used to further describe the circumstances of a justifiable homicide, and homicide, or assault, against a law enforcement officer",
-        "length": "1",
-        "format": "A",
-        "comment": "Enter ONLY ONE of the following codes",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "A",
-                        "desc": "Criminal Attacked Police Officer and That Officer Killed Criminal"
-                    },
-                    {
-                        "code": "B",
-                        "desc": "Criminal Attacked Police Officer and Criminal Killed by Another Police Officer"
-                    },
-                    {
-                        "code": "C",
-                        "desc": "Criminal Attacked by Civilian"
-                    },
-                    {
-                        "code": "D",
-                        "desc": "Criminal Attempted Flight from a Crime"
-                    },
-                    {
-                        "code": "E",
-                        "desc": "Criminal Killed in the Commission of a Crime"
-                    },
-                    {
-                        "code": "F",
-                        "desc": "Criminal Resisted Arrest"
-                    },
-                    {
-                        "code": "G",
-                        "desc": "Unable to Determine / Not Enough Information"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "33",
-        "name": "TYPE OF INJURY",
-        "definition": "Describes types of bodily injury suffered by a person.",
-        "length": "1",
-        "format": "A",
-        "comment": "Used only if Crime is: (100)Kidnaping/Abduction, (11A-11D)Forcible Sex Offenses, (120)Robbery, (13A,13B)Assault Offenses, (210)Extortion/Blackmail and (90Z)Crime Against Person Offenses. <br><br>Can enter as many codes as are applicable<br><br>",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "N",
-                        "desc": "None"
-                    },
-                    {
-                        "code": "B",
-                        "desc": "Apparent Broken Bones"
-                    },
-                    {
-                        "code": "I",
-                        "desc": "Possible Internal Injury"
-                    },
-                    {
-                        "code": "L",
-                        "desc": "Severe Laceration"
-                    },
-                    {
-                        "code": "M",
-                        "desc": "Apparent Minor Injury"
-                    },
-                    {
-                        "code": "O",
-                        "desc": "Other Major Injury"
-                    },
-                    {
-                        "code": "T",
-                        "desc": "Loss of Teeth"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unconsciousness"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "34",
-        "name": "OFFENDER NUMBER TO BE RELATED",
-        "definition": "Used along with Relationship of Victim to Offender (Data Element 35) to report the relationships of each Victim to each Offender who has perpetrated a Crime against a Person or a Robbery against the Victim(Individual).",
-        "length": "3",
-        "format": "N",
-        "comment": "Used only if Crime is: (09A, 09B, 09C) Homicide Offenses, (100) Kidnaping/Abduction, (11A-11D) Forcible Sex Offenses, (120) Robbery, (13A,13B,13C) Assault Offenses, (36A,36B) Non-Forcible Sex Offenses and (90Z) Crime Against Person Offenses"
-    },
-    {
-        "de_num": "35",
-        "name": "RELATIONSHIP OF VICTIM TO OFFENDERS",
-        "definition": "Used along with Offender Number to be Related (Data Element 34) to report the relationships of each Victim to each Offender who has perpetrated a Crime against a Person or a Robbery against the Victim (Individual).",
-        "length": "2",
-        "format": "A",
-        "subsection": [
-            {
-                "title": "Within Family",
-                "values": [
-                    {
-                        "code": "SE",
-                        "desc": "Victim Was Spouse"
-                    },
-                    {
-                        "code": "CS",
-                        "desc": "Victim Was Common-Law Spouse"
-                    },
-                    {
-                        "code": "PA",
-                        "desc": "Victim Was Parent"
-                    },
-                    {
-                        "code": "SB",
-                        "desc": "Victim Was Sibling"
-                    },
-                    {
-                        "code": "CH",
-                        "desc": "Victim Was Child"
-                    },
-                    {
-                        "code": "GP",
-                        "desc": "Victim Was Grandparent"
-                    },
-                    {
-                        "code": "GC",
-                        "desc": "Victim Was Grandchild"
-                    },
-                    {
-                        "code": "IL",
-                        "desc": "Victim Was In-Law"
-                    },
-                    {
-                        "code": "SP",
-                        "desc": "Victim Was Stepparent"
-                    },
-                    {
-                        "code": "SC",
-                        "desc": "Victim Was Stepchild"
-                    },
-                    {
-                        "code": "SS",
-                        "desc": "Victim Was Step-Sibling (stepbrother or stepsister)"
-                    },
-                    {
-                        "code": "OF",
-                        "desc": "Victim Was Other Family Member"
-                    },
-                    {
-                        "code": "NM",
-                        "desc": "Non-Married Live-in (LIBRS Only) Sent to NIBRS as 'CS'"
-                    }
-                ]
-            },
-            {
-                "title": "Outside Family, But Known to Victim",
-                "values": [
-                    {
-                        "code": "VO",
-                        "desc": "Victim Was Offender"
-                    },
-                    {
-                        "code": "AQ",
-                        "desc": "Victim Was Acquaintance"
-                    },
-                    {
-                        "code": "FR",
-                        "desc": "Victim Was Friend"
-                    },
-                    {
-                        "code": "NE",
-                        "desc": "Victim Was Neighbor"
-                    },
-                    {
-                        "code": "BE",
-                        "desc": "Victim Was Babysittee (the baby)"
-                    },
-                    {
-                        "code": "BG",
-                        "desc": "Victim Was Boyfriend/Girlfriend"
-                    },
-                    {
-                        "code": "XB",
-                        "desc": "Victim Was Ex-Boyfriend/Girlfriend (LIBRS Only). Now Maps to 'XR'; Sent to NIBRS as 'BG'"
-                    },
-                    {
-                        "code": "CF",
-                        "desc": "Victim Was Child of Boyfriend or Girlfriend"
-                    },
-                    {
-                        "code": "HR",
-                        "desc": "Homosexual Relationship *no longer used*"
-                    },
-                    {
-                        "code": "XS",
-                        "desc": "Victim Was Ex-Spouse"
-                    },
-                    {
-                        "code": "EE",
-                        "desc": "Victim Was Employee"
-                    },
-                    {
-                        "code": "ER",
-                        "desc": "Victim Was Employer"
-                    },
-                    {
-                        "code": "OK",
-                        "desc": "Victim Was Otherwise Known"
-                    },
-                    {
-                        "code": "ES",
-                        "desc": "Victim Was Estranged Spouse (LIBRS Only) Sent to NIBRS as 'SE'"
-                    },
-                        "code": "XR",
-                        "desc": "Victim was from an Ex Relationship"
-                    }
-                ]
-            },
-            {
-                "title": "Not Know By Victim",
-                "values": [
-                    {
-                        "code": "RU",
-                        "desc": "Relationship Unknown"
-                    },
-                    {
-                        "code": "ST",
-                        "desc": "Victim Was Strange"
-                    }
-                ]
-            },
-            {
-                "title": "Other",
-                "values": [
-                    {
-                        "code": "VO",
-                        "desc": "Victim Was Offender"
-                    }
-                ],
-                "comment": "Used only if Crime is: (09A,09B,09C) Homicide Offenses, (100) Kidnaping/Abduction, (11A-11D) Forcible Sex Offenses, (120) Robbery (If Victim Type = 'I'), (13A,13B,13C) Assault Offenses, (36A,36B) Non-Forcible Sex Offenses and (90Z) Crime Against Person Offenses"
-            }
-        ]
-    },
-    {
-        "de_num": "36",
-        "name": "OFFENDER SEQUENCE NUMBER",
-        "definition": "Each Offender in an incident is assigned a UNIQUE sequence number",
-        "length": "3",
-        "format": "N",
-        "comment": "If '000' entered (that is, nothing is known about Offender) leave Age of Offender, Date of Birth of Offender, Sex of Offender and Race of Offender (Data Elements 37-39) Blank <br><br>000...Nothing Known About Offender. However, must submit Offender Segment (40) and Offender Using Segment (41), even if Offender is Unknown.<br><br>"
-    },
-    {
-        "de_num": "37",
-        "name": "AGE OF OFFENDER [At Time of the Incident]",
-        "definition": "",
-        "length": "3",
-        "format": "N",
-        "comment": "If Offender’s exact age is Unknown, enter estimated age of Offender and append an 'E' into third character (for example: 49E). <br><br>If it is not possible to determine even an estimated age of the Offender, then enter '00' (Unknown) and leave the third character Blank<br><br>",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "01-98",
-                        "desc": "Age in years"
-                    },
-                    {
-                        "code": "99",
-                        "desc": "Over 98 Years Old"
-                    },
-                    {
-                        "code": "00",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "L37",
-        "name": "DATE OF BIRTH OF OFFENDER",
-        "definition": "",
-        "length": "8",
-        "format": "MMDDYYYY",
-        "comment": "If the date of birth of the offender is known, it is to be entered in this data element."
-    },
-    {
-        "de_num": "38",
-        "name": "SEX OF OFFENDER",
-        "definition": "The sex of the Offender is to be entered in this data element.",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "M",
-                        "desc": "Male"
-                    },
-                    {
-                        "code": "F",
-                        "desc": "Female"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "39",
-        "name": "RACE OF OFFENDER",
-        "definition": "The race of the Offender is to be entered in this data element.",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "W",
-                        "desc": "White"
-                    },
-                    {
-                        "code": "B",
-                        "desc": "Black"
-                    },
-                    {
-                        "code": "I",
-                        "desc": "American Indian / Alaskan Native"
-                    },
-                    {
-                        "code": "A",
-                        "desc": "Asian/Pacific Islander"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "40",
-        "name": "ARRESTEE SEQUENCE NUMBER",
-        "definition": "Each Arrestee in an incident is to be assigned a sequence number",
-        "length": "3",
-        "format": "N",
-        "comment": ""
-    },
-    {
-        "de_num": "L40",
-        "name": "ARRESTEE NAME",
-        "definition": "Enter the full name of Arrestee. If the full name will not fit in the field, enter as much as possible",
-        "length": "20",
-        "format": "A",
-        "comment": ""
-    },
-    {
-        "de_num": "41",
-        "name": "ARREST NUMBER/LOCAL BOOKING NUMBER for ARREST",
-        "definition": "The number assigned by your agency to the Arrest Report to identify it uniquely. It may be the Incident Number of the reported incident relating to the arrest, or a separate Arrest Transaction Number.",
-        "length": "12",
-        "format": "N",
-        "comment": ""
-    },
-    {
-        "de_num": "42",
-        "name": "ARREST DATE",
-        "definition": "The month, date, and year when the arrest took place",
-        "length": "8",
-        "format": "MMDDYYYY",
-        "comment": ""
-    },
-    {
-        "de_num": "43",
-        "name": "TYPE OF ARREST",
-        "definition": "Indicates the type of apprehension",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "O",
-                        "desc": "On-View Arrest (taken into custody without a warrant or previous incident report.)"
-                    },
-                    {
-                        "code": "S",
-                        "desc": "Summoned / Cited (not taken into custody)"
-                    },
-                    {
-                        "code": "T",
-                        "desc": "Taken Into Custody (based on warrant and/or previously submitted incident report.)"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "44",
-        "name": "MULTIPLE ARRESTEE SEGMENT INDICATOR",
-        "definition": "Used to ensure that an arrestee is counted only once when the arrestee’s apprehension causes the arresting agency to submit two or more arrestee segments concerning separate incident reports",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "M",
-                        "desc": "Multiple"
-                    },
-                    {
-                        "code": "C",
-                        "desc": "Count Arrestee"
-                    },
-                    {
-                        "code": "N",
-                        "desc": "Not Applicable"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "45",
-        "name": "LOUISIANA REVISED STATUTE NUMBER OF ARREST",
-        "definition": "Used to enter the Louisiana Revised Statute Number(s) that the arrestee was charged with",
-        "length": "12",
-        "format": "N",
-        "comment": "Must be on Master LIBRS/LRS Code Table to be accepted into LIBRS."
-    },
-    {
-        "de_num": "N45",
-        "name": "AGENCY SUPPLIED NIBRS CODE FOR ARREST *NEW*",
-        "definition": "",
-        "length": "3",
-        "format": "N",
-        "comment": "EVERY Offense Segment (20) in the data submission MUST have an Agency Supplied NIBRS Code (N6). Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes and should consult the LIBRS Master LRS Table to review these mappings."
-    },
-    {
-        "de_num": "L45",
-        "name": "ARREST CONNECTION TO OFFENSE",
-        "definition": "Used to relate the arrest with the offense which gave rise to the arrest",
-        "length": "15",
-        "format": "N",
-        "comment": "This Data Element is optional at this time."
-    },
-    {
-        "de_num": "46",
-        "name": "ARRESTEE WAS ARMED WITH",
-        "definition": "Used to indicate whether the arrestee was armed with a commonly known weapon at the time of his/her apprehension",
-        "length": "3",
-        "format": "A/N",
-        "comment": "Append an 'A' to the Weapon code if an Automatic Weapon. (That is, place an 'A' in third character) <br><br>Can enter as many codes as are applicable.<br><br>",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "01",
-                        "desc": "Unarmed"
-                    },
-                    {
-                        "code": "11",
-                        "desc": "Firearm (Type Not Stated)"
-                    },
-                    {
-                        "code": "12",
-                        "desc": "Handgun"
-                    },
-                    {
-                        "code": "13",
-                        "desc": "Rifle"
-                    },
-                    {
-                        "code": "14",
-                        "desc": "Shotgun"
-                    },
-                    {
-                        "code": "15",
-                        "desc": "Other Firearm"
-                    },
-                    {
-                        "code": "16",
-                        "desc": "Lethal Cutting Instrument (switchblade knife, martial arts 'stars', Etc.)"
-                    },
-                    {
-                        "code": "17",
-                        "desc": "Club, Blackjack or Brass Knuckles"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "47",
-        "name": "AGE OF ARRESTEE [At Time of Arrest]",
-        "definition": "The age of the Arrestee at the time of arrest is to be entered",
-        "length": "3",
-        "format": "N",
-        "comment": "If the Arrestee’s exact age is UNKNOWN, enter Estimated Age of Arrestee and Append an 'E' into third character (for example, “49E”). If it is not possible to determine even an Estimated Age of the Arrestee, then enter '00' (Unknown) and leave the third character blank",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "01-98",
-                        "desc": "Age in years"
-                    },
-                    {
-                        "code": "99",
-                        "desc": "Over 98 Years Old"
-                    },
-                    {
-                        "code": "00",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "L47",
-        "name": "DATE OF BIRTH OF ARRESTEE",
-        "definition": "If the Date of Birth of the Arrestee is known, entered it in this data element.",
-        "length": "8",
-        "format": "MMDDYYYY",
-        "comment": ""
-    },
-    {
-        "de_num": "48",
-        "name": "SEX OF ARRESTEE",
-        "definition": "Enter Sex of the Arrestee in this data element.",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "M",
-                        "desc": "Male"
-                    },
-                    {
-                        "code": "F",
-                        "desc": "Female"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "49",
-        "name": "RACE OF ARRESTEE",
-        "definition": "Enter Race of the Arrestee in this data element.",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "W",
-                        "desc": "White"
-                    },
-                    {
-                        "code": "B",
-                        "desc": "Black"
-                    },
-                    {
-                        "code": "I",
-                        "desc": "American Indian/Alaskan Native"
-                    },
-                    {
-                        "code": "A",
-                        "desc": "Asian or Pacific Islander"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "50",
-        "name": "ETHNICITY OF ARRESTEE",
-        "definition": "Enter Ethnic Origin of the Arrestee in this data element.",
-        "length": "1",
-        "format": "A",
-        "comment": "",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "H",
-                        "desc": "Hispanic Origin"
-                    },
-                    {
-                        "code": "N",
-                        "desc": "Not of Hispanic Origin"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "51",
-        "name": "RESIDENT STATUS OF ARRESTEE",
-        "definition": "A 'Resident' is a person who maintains his or her permanent home for legal purposes in the locality (town, city, or community) where the crime took place.",
-        "length": "1",
-        "format": "A",
-        "comment": "Enter Resident Status of the Arrestee in this data element.",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "R",
-                        "desc": "Resident"
-                    },
-                    {
-                        "code": "N",
-                        "desc": "Nonresident"
-                    },
-                    {
-                        "code": "U",
-                        "desc": "Unknown"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "52",
-        "name": "DISPOSITION OF ARRESTEE UNDER 17",
-        "definition": "Used only if the arrestee was 16 years of age or younger at the time of arrest.",
-        "length": "1",
-        "format": "A",
-        "comment": "This will change to Arrestee under 18 on 01/01/2020",
-        "subsection": [
-            {
-                "title": "",
-                "values": [
-                    {
-                        "code": "D",
-                        "desc": "Handled Within Department and Released."
-                    },
-                    {
-                        "code": "J",
-                        "desc": "Referred to Juvenile Court or Probation Department"
-                    },
-                    {
-                        "code": "W",
-                        "desc": "Referred to Welfare Agency"
-                    },
-                    {
-                        "code": "P",
-                        "desc": "Referred to Other Police Agency"
-                    },
-                    {
-                        "code": "A",
-                        "desc": "Referred to Criminal or Adult Court"
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        "de_num": "L53",
-        "name": "LOCATION OF INCIDENT (Geographical Coordinates)",
-        "definition": "This field is for reporting the Geographical Location of the incident.",
-        "length": "12",
-        "format": "N",
-        "comment": "This field is NOT REQUIRED and may be left Blank.<br><br>Optional: This field is not validated nor submitted to the FBI.<br><br>"
-    },
-    {
-        "de_num": "L54",
-        "name": "STATION/DIVISION/PRECINCT IDENTIFIER",
-        "definition": "OPTIONAL field for Agency’s use in locating incidents.",
-        "length": "6",
-        "format": "N",
-        "comment": "Optional"
-    },
-    {
-        "de_num": "L55",
-        "name": "ARREST TRANSACTION NUMBER (ATN) for LOUISIANA",
-        "definition": "This data element will be generated by the Live Scan when finger printing an Arrestee, or can be a Pre-Assigned Number generated and assigned at the time of the finger printing",
-        "length": "15",
-        "format": "N",
-        "comment": "Based on characters as assigned by AFIS. Required on all Offenses reported to the Bureau of Identification of the Louisiana State Police."
-    }
+[{
+		"de_num": "1",
+		"name": "ORI NUMBER",
+		"definition": "NCIC originating agency identifier number.",
+		"length": "9",
+		"format": "A/N"
+	},
+	{
+		"de_num": "2",
+		"name": "INCIDENT NUMBER",
+		"definition": "Agency unique, in-house assigned case number",
+		"length": "12",
+		"format": "A/N",
+		"comment": "The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years."
+	},
+	{
+		"de_num": "3",
+		"name": "INCIDENT DATE/HOUR",
+		"definition": "Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown",
+		"length": "11",
+		"format": "MMDDYYYYXHH",
+		"comment": ""
+	},
+	{
+		"de_num": "4",
+		"name": "CLEARED EXCEPTIONALLY",
+		"definition": "Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident.",
+		"length": "1",
+		"format": "A",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "A",
+					"desc": "Death of Offender"
+				},
+				{
+					"code": "B",
+					"desc": "Prosecution Declined"
+				},
+				{
+					"code": "C",
+					"desc": "Extradition Denied"
+				},
+				{
+					"code": "D",
+					"desc": "Victim Refused to Cooperate"
+				},
+				{
+					"code": "E",
+					"desc": "Juvenile / No Custody"
+				},
+				{
+					"code": "O",
+					"desc": "Other (Administrative Closing)"
+				},
+				{
+					"code": "N",
+					"desc": "Not Applicable"
+				}
+			]
+		}],
+		"comment": "For Code O (Other) - LIBRS Only, Does not clear NIBRS Incident"
+	},
+	{
+		"de_num": "5",
+		"name": "EXCEPTIONAL CLEARANCE DATE",
+		"definition": "When the incident was cleared, if cleared by exceptional means.",
+		"length": "8",
+		"format": "MMDDYYYY"
+	},
+	{
+		"de_num": "L6",
+		"name": "OFFENSE SEQUENCE NUMBER",
+		"definition": "Each Offense within the incident MUST be assigned a sequence number.",
+		"length": "3",
+		"format": "N",
+		"comment": "Each Offense within an incident MUST be assigned a UNIQUE Offense Sequence Number."
+	},
+	{
+		"de_num": "L6R",
+		"name": "OFFENSE SEQUENCE NUMBER REFERENCES",
+		"definition": "<b>**NEW**</b> UNIQUE constraint that allows an Offense to relate to many Properties.",
+		"length": "3",
+		"format": "N",
+		"comment": "Important: Internal system data element that allows for an Offense to relate to many properties where multiple Property/Offense segments are submitted within a single incident."
+	},
+	{
+		"de_num": "6",
+		"name": "LOUISIANA REVISED STATUTE NUMBER (LRS Number)",
+		"definition": "Each Offense (LRS) that occurred as part of the incident.",
+		"length": "12",
+		"format": "A/N",
+		"comment": "MUST be in Master LIBRS/LRS Code Table to be accepted by LIBRS. Note: Contact LIBRS Program staff before adding new LRS codes to insure proper mappings."
+	},
+	{
+		"de_num": "N6",
+		"name": "AGENCY SUPPLIED NIBRS CODE",
+		"definition": "NIBRS Code assigned to every Offense within an incident.",
+		"length": "3",
+		"format": "A/N",
+		"comment": "Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes. Please consult the LIBRS Master LRS Table to review these mappings and contact LIBRS Program Staff if you have questions. "
+	},
+	{
+		"de_num": "7",
+		"name": "OFFENSE ATTEMPTED/COMPLETED",
+		"definition": "Indicates whether each Offense was completed or merely attempted.",
+		"length": "1",
+		"format": "A/N",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "A",
+					"desc": "Attempted"
+				},
+				{
+					"code": "C",
+					"desc": "Completed"
+				}
+			]
+		}],
+		"comment": "Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes. Please consult the LIBRS Master LRS Table to review these mappings and contact LIBRS Program Staff if you have questions. "
+	},
+	{
+		"de_num": "8",
+		"name": "OFFENDER SUSPECTED OF USING/GAMING MOTIVATION",
+		"definition": "Indicates if the Offender was suspected of consuming alcohol or using drugs/narcotics during or shortly before the incident; or of using a computer to perpetrate the crime.<br><br>Also identifies whether the Offender’s gaming activity was the motive for commission of the crime.",
+		"length": "1",
+		"format": "A",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "A",
+					"desc": "Alcohol"
+				},
+				{
+					"code": "C",
+					"desc": "Computer Equipment"
+				},
+				{
+					"code": "D",
+					"desc": "Drugs/Narcotics"
+				},
+				{
+					"code": "G",
+					"desc": "Gaming Activity Motive for Crime"
+				},
+				{
+					"code": "N",
+					"desc": "Not Applicable (LIBRS Only)"
+				}
+			]
+		}],
+		"comment": "This Data Element is located within Offender Segment.<br><br>Can enter up to four codes per Offender. "
+	},
+	{
+		"de_num": "8A",
+		"name": "BIAS MOTIVATION/BIAS CRIME TYPE",
+		"definition": "Indicates whether the Offender was motivated to commit the Offense because of his/her bias against a racial, religious, ethnic/national origin, sexual, or disability group.",
+		"length": "2",
+		"format": "N",
+		"subsection": [{
+				"title": "Race/Ethnicity/Ancestry",
+				"values": [{
+						"code": "11",
+						"desc": "Anti-White"
+					},
+					{
+						"code": "12",
+						"desc": "Anti-Black or African American"
+					},
+					{
+						"code": "13",
+						"desc": "Anti-American Indian / Alaskan Native"
+					},
+					{
+						"code": "14",
+						"desc": "Anti-Asian"
+					},
+					{
+						"code": "15",
+						"desc": "Anti-Multiple Races, Group"
+					},
+					{
+						"code": "16",
+						"desc": "Anti-Native Hawaiian or Other Pacific Islander"
+					},
+					{
+						"code": "31",
+						"desc": "Anti-Arab"
+					},
+					{
+						"code": "32",
+						"desc": "Anti-Hispanic or Latino"
+					},
+					{
+						"code": "33",
+						"desc": "Anti-Other Race/Ethnicity/Ancestry"
+					}
+				]
+			},
+			{
+				"title": "Religion",
+				"values": [{
+						"code": "21",
+						"desc": "Anti-Jewish"
+					},
+					{
+						"code": "22",
+						"desc": "Anti-Catholic"
+					},
+					{
+						"code": "23",
+						"desc": "Anti-Protestant"
+					},
+					{
+						"code": "24",
+						"desc": "Anti-Islamic (Muslim)"
+					},
+					{
+						"code": "25",
+						"desc": "Anti-Other Religion"
+					},
+					{
+						"code": "26",
+						"desc": "Anti-Multiple Religions, Group"
+					},
+					{
+						"code": "27",
+						"desc": "Anti-Atheism/Agnosticism"
+					},
+					{
+						"code": "28",
+						"desc": "Anti-Mormon"
+					},
+					{
+						"code": "29",
+						"desc": "Anti-Jehovah’s Witness"
+					},
+					{
+						"code": "81",
+						"desc": "Anti-Eastern Orthodox (Russian, Greek, Other)"
+					},
+					{
+						"code": "82",
+						"desc": "Anti-Other Christian"
+					},
+					{
+						"code": "83",
+						"desc": "Anti-Buddhist"
+					},
+					{
+						"code": "84",
+						"desc": "Anti-Hindu"
+					},
+					{
+						"code": "85",
+						"desc": "Anti-Sikh"
+					}
+				]
+			},
+			{
+				"title": "Sexual Orientation",
+				"values": [{
+						"code": "41",
+						"desc": "Anti-Gay (Male)"
+					},
+					{
+						"code": "42",
+						"desc": "Anti-Lesbian (Female)"
+					},
+					{
+						"code": "43",
+						"desc": "Anti-Lesbian, Gay, Bisexual or Transgender (Mixed Group)"
+					},
+					{
+						"code": "44",
+						"desc": "Anti-Heterosexual"
+					},
+					{
+						"code": "45",
+						"desc": "Anti-Bisexual"
+					}
+				]
+			},
+			{
+				"title": "Disability",
+				"values": [{
+						"code": "51",
+						"desc": "Anti-Physical Disability"
+					},
+					{
+						"code": "52",
+						"desc": "Anti-Mental Disability"
+					}
+				]
+			},
+			{
+				"title": "Gender",
+				"values": [{
+						"code": "61",
+						"desc": "Anti-Male"
+					},
+					{
+						"code": "62",
+						"desc": "Anti-Female"
+					}
+				]
+			},
+			{
+				"title": "Gender Identity",
+				"values": [{
+						"code": "71",
+						"desc": "Anti-Transgender"
+					},
+					{
+						"code": "72",
+						"desc": "Anti-Gender Non-Conforming"
+					}
+				]
+			},
+			{
+				"title": "None/Unkown",
+				"values": [{
+						"code": "88",
+						"desc": "None (No Bias)"
+					},
+					{
+						"code": "99",
+						"desc": "Unknown (Offender’s Motivation Not Known)"
+					}
+				]
+			},
+			{
+				"title": "Other Bias (LIBRS Only)",
+				"values": [{
+						"code": "70",
+						"desc": "Age (LIBRS Only). Sent to NIBRS as “99”"
+					},
+					{
+						"code": "71",
+						"desc": "Ancestry (LIBRS Only). Sent to NIBRS as “33”"
+					},
+					{
+						"code": "72",
+						"desc": "Creed (LIBRS Only). Sent to NIBRS as “25”"
+					},
+					{
+						"code": "73",
+						"desc": "Gender (LIBRS Only). Sent to NIBRS as “99”"
+					},
+					{
+						"code": "74",
+						"desc": "Organizational Affiliation (LIBRS Only). Sent to NIBRS as “99”"
+					}
+				]
+			}
+		],
+		"comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offender Segment."
+	},
+	{
+		"de_num": "9",
+		"name": "LOCATION TYPE",
+		"definition": "Location where each Offense took place.",
+		"length": "2",
+		"format": "N",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "01",
+					"desc": "Air, Bus, Train or Terminal"
+				},
+				{
+					"code": "02",
+					"desc": "Bank, Savings and Loan (incl. other Financial Institutions)"
+				},
+				{
+					"code": "03",
+					"desc": "Bar or Night Club"
+				},
+				{
+					"code": "04",
+					"desc": "Church, Synagogue or Temple (includes other Religious Buildings..)"
+				},
+				{
+					"code": "05",
+					"desc": "Commercial or Office Building"
+				},
+				{
+					"code": "06",
+					"desc": "Construction Site"
+				},
+				{
+					"code": "07",
+					"desc": "Convenience Store"
+				},
+				{
+					"code": "08",
+					"desc": "Department or Discount Store"
+				},
+				{
+					"code": "09",
+					"desc": "Drug Store, Doctor's Office or Hospital (includes Medical Supply Building)"
+				},
+				{
+					"code": "10",
+					"desc": "Field or Woods"
+				},
+				{
+					"code": "11",
+					"desc": "Government or Public Building"
+				},
+				{
+					"code": "12",
+					"desc": "Grocery or Supermarket"
+				},
+				{
+					"code": "13",
+					"desc": "Highway, Road or Alley (includes Street)"
+				},
+				{
+					"code": "14",
+					"desc": "Hotel, Motel, Etc. (includes Temporary Lodgings)"
+				},
+				{
+					"code": "15",
+					"desc": "Jail or Prison"
+				},
+				{
+					"code": "16",
+					"desc": "Lake or Waterway"
+				},
+				{
+					"code": "17",
+					"desc": "Liquor Store"
+				},
+				{
+					"code": "18",
+					"desc": "Parking lot/Garage"
+				},
+				{
+					"code": "19",
+					"desc": "Rental storage Facility"
+				},
+				{
+					"code": "20",
+					"desc": "Residence/Home"
+				},
+				{
+					"code": "21",
+					"desc": "Restaurant"
+				},
+				{
+					"code": "22",
+					"desc": "School"
+				},
+				{
+					"code": "23",
+					"desc": "Service or Gas Station"
+				},
+				{
+					"code": "24",
+					"desc": "Specialty Store (incl. Fur Store, Jewelry Store, TV Store, Dress Shop, etc.)"
+				},
+				{
+					"code": "25",
+					"desc": "Other or Unknown (use only if no other code applies)"
+				},
+				{
+					"code": "37",
+					"desc": "Abandoned or Condemned Structure"
+				},
+				{
+					"code": "38",
+					"desc": "Amusement Park"
+				},
+				{
+					"code": "39",
+					"desc": "Arena, Stadium, Fairgrounds or Coliseum"
+				},
+				{
+					"code": "40",
+					"desc": "ATM Separate from Bank"
+				},
+				{
+					"code": "41",
+					"desc": "Auto Dealership (New or Used)"
+				},
+				{
+					"code": "42",
+					"desc": "Camp or Campground"
+				},
+				{
+					"code": "44",
+					"desc": "Daycare Facility"
+				},
+				{
+					"code": "45",
+					"desc": "Dock, Wharf, Freight or Modal Terminal"
+				},
+				{
+					"code": "46",
+					"desc": "Farm Facility"
+				},
+				{
+					"code": "47",
+					"desc": "Gambling Facility, Casino or Race Track"
+				},
+				{
+					"code": "48",
+					"desc": "Industrial Site"
+				},
+				{
+					"code": "49",
+					"desc": "Military Installation"
+				},
+				{
+					"code": "50",
+					"desc": "Park or Playground"
+				},
+				{
+					"code": "51",
+					"desc": "Rest Area"
+				},
+				{
+					"code": "52",
+					"desc": "School: College or University"
+				},
+				{
+					"code": "53",
+					"desc": "School: Elementary or Secondary"
+				},
+				{
+					"code": "54",
+					"desc": "Shelter: Mission or Homeless"
+				},
+				{
+					"code": "55",
+					"desc": "Shopping Mall"
+				},
+				{
+					"code": "56",
+					"desc": "Tribal Lands"
+				},
+				{
+					"code": "57",
+					"desc": " Community Center"
+				},
+				{
+					"code": "58",
+					"desc": "Cyberspace"
+				}
+			]
+		}],
+		"comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offender Segment.<br><br>Note: Data value School (22) was replaced by Location Codes 52 and 53 and is to be used only by agencies that have not adopted the new codes<br><br>"
+	},
+	{
+		"de_num": "10",
+		"name": "NUMBER OF PREMISES ENTERED",
+		"definition": "Number of structures entered.",
+		"length": "2",
+		"format": "N",
+		"comment": "Used only if crime is Burglary (220) AND if the Hotel Rule is applicable. Also, Location Type (Data Element No. 9) MUST be Hotel/Motel (14) or Jail/Prison (19)"
+	},
+	{
+		"de_num": "11",
+		"name": "METHOD OF ENTRY",
+		"definition": "Indicates whether Force or No Force was used by the burglar in entering a structure",
+		"length": "1",
+		"format": "A",
+		"comment": "Used only if crime is Burglary (220).",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "F",
+					"desc": "Force"
+				},
+				{
+					"code": "N",
+					"desc": "No Force"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "12",
+		"name": "TYPE OF CRIMINAL ACTIVITY/GANG INFORMATION",
+		"definition": "Provides additional information on the criminal activity and gang information of the Offender.",
+		"length": "1",
+		"format": "A",
+		"comment": "For Type of Criminal Activity, use ONLY if one of the following Offenses:<ul><li>250 - Counterfeiting/Forgery</li><li>280 - Stolen Property Offenses</li><li>35A & 35B - Drug/Narcotic Offenses</li><li>39C - Gambling Equip. Violations</li><li>370 - Pornography Materials</li><li>520 - Weapons Law Violations</li><li>90A - Bad Checks</li><li>90Z - 'Crime Against Property' Offenses</li><li>720 - Animal Cruelty</li></ul>Note: Can enter up to THREE codes of TYPE OF CRIMINAL ACTIVITY for each offense. Codes A, F, I and S may only be used for 720 Animal Cruelty Offenses.<br><br>For Gang Information, use only if the crime is one of the following offenses codes of “J”, ” G”, or ”N”: <ul><li>09A - Murder and Nonnegligent Manslaughter</li><li>09B - Negligent Homicide</li><li>100 - Kidnaping or Abduction</li><li>120 - Robbery</li><li>11A - Forcible Rape</li><li>11B - Forcible Sodomy</li><li>11C - Sexual Assault with An Object</li><li>11D - Forcible Fondling</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>Note: Can enter up to TWO codes of GANG INFORMATION for each offense.",
+		"subsection": [{
+				"title": "Criminal Activity",
+				"values": [{
+						"code": "B",
+						"desc": "Buying / Receiving"
+					},
+					{
+						"code": "C",
+						"desc": "Cultivation / Manufacturing / Publishing"
+					},
+					{
+						"code": "D",
+						"desc": "Distribution / Selling"
+					},
+					{
+						"code": "E",
+						"desc": "Exploiting Children"
+					},
+					{
+						"code": "I",
+						"desc": "Possession with Intent to Sell. Sent to NIBRS as code 'P'"
+					},
+					{
+						"code": "O",
+						"desc": "Operating/Promotion/Assisting"
+					},
+					{
+						"code": "P",
+						"desc": "Possessing/Concealing"
+					},
+					{
+						"code": "T",
+						"desc": "Transporting/Transmitting/Importing"
+					},
+					{
+						"code": "U",
+						"desc": "Using/Consuming"
+					},
+					{
+						"code": "X",
+						"desc": "Other. Sent to NIBRS as code 'P'"
+					},
+					{
+						"code": "A",
+						"desc": "Simple/Gross Neglect"
+					},
+					{
+						"code": "F",
+						"desc": "Organised Abuse"
+					},
+					{
+						"code": "I",
+						"desc": "Intentional Abuse and Torture"
+					},
+					{
+						"code": "S",
+						"desc": "Animal Sexual Abuse"
+					}
+				]
+			},
+			{
+				"title": "Gang Information",
+				"values": [{
+						"code": "J",
+						"desc": "Juvenile Gang"
+					},
+					{
+						"code": "G",
+						"desc": "Other Gang"
+					},
+					{
+						"code": "N",
+						"desc": "None or Unknown"
+					}
+				]
+			}
+		]
+	},
+	{
+		"de_num": "13",
+		"name": "TYPE OF WEAPON/FORCE INVOLVED",
+		"definition": "The type(s) of weapon(s), or force, used by the Offender in committing the Offense.",
+		"length": "3",
+		"format": "A/N",
+		"comment": "Use this data element ONLY if crime is one of the following Offenses: {::nomarkdown}<ul><li>09A, 09B, 09C Homicide Offenses</li><li>100 Kidnaping or Abduction</li><li>11A, 11B, 11C, 11D Forcible Sex Offenses</li><li>120 Robbery</li><li>13A Assault Offenses</li><li>64A Human Trafficking and Commercial Sex Acts</li><li>64B Human Trafficking and Involuntary Servitude</li><li>210 Extortion/Blackmail</li><li>520 Weapon Law Violations</li></ul>{:/}<br><br>If weapon is an Automatic Weapon (capable of continued fire if the trigger is held down), append an 'A' to the weapon code as a third character.<br><br>",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "11",
+					"desc": "Firearm (type not stated)"
+				},
+				{
+					"code": "12",
+					"desc": "Handgun"
+				},
+				{
+					"code": "13",
+					"desc": "Rifle"
+				},
+				{
+					"code": "14",
+					"desc": "Shotgun"
+				},
+				{
+					"code": "15",
+					"desc": "Other Firearm"
+				},
+				{
+					"code": "20",
+					"desc": "Knife or Cutting Instrument"
+				},
+				{
+					"code": "30",
+					"desc": "Blunt Object"
+				},
+				{
+					"code": "35",
+					"desc": "Motor Vehicle / Vessel (When used as a weapon)"
+				},
+				{
+					"code": "40",
+					"desc": "Personal Weapons"
+				},
+				{
+					"code": "50",
+					"desc": "Poison"
+				},
+				{
+					"code": "60",
+					"desc": "Explosives"
+				},
+				{
+					"code": "65",
+					"desc": "Fire or Incendiary Device"
+				},
+				{
+					"code": "70",
+					"desc": "Drugs, Narcotics or Sleeping Pills"
+				},
+				{
+					"code": "85",
+					"desc": "Asphyxiation"
+				},
+				{
+					"code": "90",
+					"desc": "Other"
+				},
+				{
+					"code": "95",
+					"desc": "Unknown"
+				},
+				{
+					"code": "99",
+					"desc": "None (Mutually Exclusive to any other value)"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "P1",
+		"name": "PROPERTY SEQUENCE NUMBER",
+		"definition": "Each Property in the Incident MUST be assigned a UNIQUE Sequence Number.",
+		"length": "3",
+		"format": "N",
+		"comment": "Important: Internal system data element that allows for a Property to relate to many Offenses where multiple Property/Offense segments are submitted within a single incident."
+	},
+	{
+		"de_num": "P1R",
+		"name": "PROPERTY SEQUENCE NUMBER REFERENCE",
+		"definition": "UNIQUE constraint that allows a Property to relate to many Offenses.",
+		"length": "3",
+		"format": "N",
+		"comment": "Important: Internal system data element that allows for multiple Property/Offense segments to be submitted within a single Incident."
+	},
+	{
+		"de_num": "14",
+		"name": "TYPE OF PROPERTY LOSS",
+		"definition": "Describes the type of property loss, recovered, seized, etc., which occurred in an incident.",
+		"length": "1",
+		"format": "N",
+		"comment": "Property segments submitted only if crime is:",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "1",
+					"desc": "None"
+				},
+				{
+					"code": "2",
+					"desc": "Burned"
+				},
+				{
+					"code": "3",
+					"desc": "Counterfeited or Forged"
+				},
+				{
+					"code": "4",
+					"desc": "Destroyed, Damaged or Vandalized"
+				},
+				{
+					"code": "5",
+					"desc": "Recovered"
+				},
+				{
+					"code": "6",
+					"desc": "Seized"
+				},
+				{
+					"code": "7",
+					"desc": "Stolen, Etc."
+				},
+				{
+					"code": "8",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "15",
+		"name": "PROPERTY DESCRIPTION",
+		"definition": "Description of property that was burned, counterfeited, stolen, etc., during the incident.",
+		"length": "2",
+		"format": "N",
+		"comment": "‘99’ CANNOT be used unless state programs are directed to use it for trend crimes by the FBI and will be rejected if used normal submissions.",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "01",
+					"desc": "Aircraft"
+				},
+				{
+					"code": "02",
+					"desc": "Alcohol"
+				},
+				{
+					"code": "03",
+					"desc": "Automobiles"
+				},
+				{
+					"code": "04",
+					"desc": "Bicycles"
+				},
+				{
+					"code": "05",
+					"desc": "Buses"
+				},
+				{
+					"code": "06",
+					"desc": "Clothes or Furs"
+				},
+				{
+					"code": "07",
+					"desc": "Computer Hardware or Software"
+				},
+				{
+					"code": "08",
+					"desc": "Consumable Goods"
+				},
+				{
+					"code": "09",
+					"desc": "Credit or Debit Cards"
+				},
+				{
+					"code": "10",
+					"desc": "Drugs or Narcotics"
+				},
+				{
+					"code": "11",
+					"desc": "Drug Narcotic Equipment"
+				},
+				{
+					"code": "12",
+					"desc": "Farm Equipment"
+				},
+				{
+					"code": "13",
+					"desc": "Firearms"
+				},
+				{
+					"code": "14",
+					"desc": "Gambling Equipment"
+				},
+				{
+					"code": "15",
+					"desc": "Heavy Construction or Industrial Equipment"
+				},
+				{
+					"code": "16",
+					"desc": "Household Goods"
+				},
+				{
+					"code": "17",
+					"desc": "Jewelry, Precious Metals"
+				},
+				{
+					"code": "18",
+					"desc": "Livestock"
+				},
+				{
+					"code": "19",
+					"desc": "Merchandise"
+				},
+				{
+					"code": "20",
+					"desc": "Money"
+				},
+				{
+					"code": "21",
+					"desc": "Negotiable Instruments"
+				},
+				{
+					"code": "22",
+					"desc": "Non-negotiable Instruments"
+				},
+				{
+					"code": "23",
+					"desc": "Office-type Equipment"
+				},
+				{
+					"code": "24",
+					"desc": "Other Motor Vehicles"
+				},
+				{
+					"code": "25",
+					"desc": "Purses, Handbags or Wallets"
+				},
+				{
+					"code": "26",
+					"desc": "Radios, TVs, VCRs or Cameras"
+				},
+				{
+					"code": "27",
+					"desc": "Recordings: Audio or Visual"
+				},
+				{
+					"code": "28",
+					"desc": "Recreational Vehicles"
+				},
+				{
+					"code": "29",
+					"desc": "Structures: Single Occupancy Dwellings"
+				},
+				{
+					"code": "30",
+					"desc": "Structures: Other Dwellings"
+				},
+				{
+					"code": "31",
+					"desc": "Structures: Other Commercial/Business"
+				},
+				{
+					"code": "32",
+					"desc": "Structures :Industrial/Manufacturing"
+				},
+				{
+					"code": "33",
+					"desc": "Structures: Public/Community"
+				},
+				{
+					"code": "34",
+					"desc": "Structures: Storage"
+				},
+				{
+					"code": "35",
+					"desc": "Structures: Other"
+				},
+				{
+					"code": "36",
+					"desc": "Tools"
+				},
+				{
+					"code": "37",
+					"desc": "Trucks"
+				},
+				{
+					"code": "38",
+					"desc": "Vehicle Parts or Accessories"
+				},
+				{
+					"code": "39",
+					"desc": "Watercraft"
+				},
+				{
+					"code": "41",
+					"desc": "Aircraft Parts/Accessories"
+				},
+				{
+					"code": "42",
+					"desc": "Artistic Supplies/Accessories"
+				},
+				{
+					"code": "43",
+					"desc": "Building Materials"
+				},
+				{
+					"code": "44",
+					"desc": "Camping/Hunting/Fishing Equipment/Supplies"
+				},
+				{
+					"code": "45",
+					"desc": "Chemicals"
+				},
+				{
+					"code": "46",
+					"desc": "Collections/Collectibles"
+				},
+				{
+					"code": "47",
+					"desc": "Crops"
+				},
+				{
+					"code": "48",
+					"desc": "Documents/Personal or Business"
+				},
+				{
+					"code": "49",
+					"desc": "Explosives"
+				},
+				{
+					"code": "59",
+					"desc": "Firearm Accessories"
+				},
+				{
+					"code": "64",
+					"desc": "Fuel"
+				},
+				{
+					"code": "65",
+					"desc": "Identity Documents"
+				},
+				{
+					"code": "66",
+					"desc": "Identity–Intangible"
+				},
+				{
+					"code": "67",
+					"desc": "Law Enforcement Equipment"
+				},
+				{
+					"code": "68",
+					"desc": "Lawn/Yard/Garden Equipment"
+				},
+				{
+					"code": "69",
+					"desc": "Logging Equipment"
+				},
+				{
+					"code": "70",
+					"desc": "Medical/Medical Lab Equipment"
+				},
+				{
+					"code": "71",
+					"desc": "Metals, Non-Precious"
+				},
+				{
+					"code": "72",
+					"desc": "Musical Instruments"
+				},
+				{
+					"code": "73",
+					"desc": "Pets"
+				},
+				{
+					"code": "74",
+					"desc": "Photographic/Optical Equipment"
+				},
+				{
+					"code": "75",
+					"desc": "Portable Electronic Communications"
+				},
+				{
+					"code": "76",
+					"desc": "Recreational/Sports Equipment"
+				},
+				{
+					"code": "77",
+					"desc": "Other"
+				},
+				{
+					"code": "78",
+					"desc": "Trailers"
+				},
+				{
+					"code": "79",
+					"desc": "Watercraft Equipment/Parts/Accessories"
+				},
+				{
+					"code": "80",
+					"desc": "Weapons–Other"
+				},
+				{
+					"code": "88",
+					"desc": "Pending Inventory"
+				},
+				{
+					"code": "99",
+					"desc": "Special category used by the National UCR program to compile statistics."
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "16",
+		"name": "VALUE OF PROPERTY",
+		"definition": "The total dollar value of the property burned, counterfeited, stolen, etc., during and incident",
+		"length": "9",
+		"format": "MMDDYYYY",
+		"comment": "Values are also entered for Seized Drugs and Narcotics. (LIBRS Only)",
+		"subsection": [{
+			"title": "",
+			"values": [{
+				"code": "1",
+				"desc": "Unknown"
+			}]
+		}]
+	},
+	{
+		"de_num": "17",
+		"name": "DATE RECOVERED",
+		"length": "8",
+		"format": "MMDDYYYY",
+		"comment": "If previously stolen property is recovered, the date of its recovery is to be entered. If there are more than one recovery dates for the same 'Property Description' enter the earliest date. If the recovery date is Unknown, enter the date of the report."
+	},
+	{
+		"de_num": "18",
+		"name": "NUMBER OF STOLEN MOTOR VEHICLES",
+		"definition": "Indicates number of motor vehicles stolen during an incident. If the number is Unknown, enter '00'.",
+		"length": "2",
+		"format": "N",
+		"comment": "MUST BE ENTERED if NIBRS Offense Code is 240. Otherwise, MUST BE BLANK."
+	},
+	{
+		"de_num": "19",
+		"name": "NUMBER OF RECOVERED VEHICLES",
+		"definition": "Indicates how many motor vehicles were recovered in the incident. If the number is unknown, enter '00'.",
+		"length": "2",
+		"format": "N",
+		"comment": "MUST BE ENTERED if NIBRS Offense Code is 240. Otherwise, MUST BE BLANK."
+	},
+	{
+		"de_num": "20",
+		"name": "SUSPECTED DRUG TYPE",
+		"definition": "Enter the types of drugs/narcotics that were seized in a drug case.",
+		"length": "2",
+		"format": "A",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "A",
+					"desc": "'Crack' Cocaine"
+				},
+				{
+					"code": "B",
+					"desc": "Cocaine"
+				},
+				{
+					"code": "C",
+					"desc": "Hashish"
+				},
+				{
+					"code": "1",
+					"desc": "Hash Oil (LIBRS Only). Sent to NIBRS as “C”"
+				},
+				{
+					"code": "D",
+					"desc": "Heroin"
+				},
+				{
+					"code": "E",
+					"desc": "Marijuana"
+				},
+				{
+					"code": "F",
+					"desc": "Morphine"
+				},
+				{
+					"code": "G",
+					"desc": "Opium"
+				},
+				{
+					"code": "H",
+					"desc": "Other Narcotics: <ul><li>Codeine</li><li>Demerol</li><li>Dihydromorphinone or Dilaudid</li><li>Hydrocodone or Percodan</li><li>Methadone</li></ul>"
+				},
+				{
+					"code": "I",
+					"desc": "LSD"
+				},
+				{
+					"code": "J",
+					"desc": "PCP"
+				},
+				{
+					"code": "K",
+					"desc": "Other Hallucinogens: <ul><li>BMDA or 'White Acid'</li><li> MT, MDA, or MDMA</li><li>Mescaline or Peyote</li><li>Psilocybin</li><li>STP</li></ul>"
+				},
+				{
+					"code": "L",
+					"desc": "Amphetamines / Methamphetamines"
+				},
+				{
+					"code": "M",
+					"desc": "Other Stimulants: <ul><li>Adipex, Fastine, and Ionamin (Derivatives of Phentermine)</li><li> Benzedrine</li><li> Didrex</li><li> Methylphenidate or Ritalin</li><li> Phenmetrazine or Preludin</li><li> Tenuate</li></ul>"
+				},
+				{
+					"code": "N",
+					"desc": "Barbiturates"
+				},
+				{
+					"code": "O",
+					"desc": "Other Depressants: <ul><li>Glutethimide or Doriden</li><li> Methaqualone or Quaalude</li><li> Pentazocine or Talwin</li></ul>"
+				},
+				{
+					"code": "P",
+					"desc": "Other Drugs: <ul><li>Antidepressants (Elavil, Triavil, Tofranil, Etc.)</li><li> Aromatic Hydrocarbons</li><li> Propoxyphene or Darvon</li><li> Tranquilizers (Chlordiazepoxide or Librium, Diazepam or Valium, Etc.)</li></ul>"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown Type Drug"
+				}
+			]
+		}],
+		"comment": "If the suspected drug type is a counterfeit, append an 'X' to the drug code, otherwise leave the second character blank."
+	},
+	{
+		"de_num": "21",
+		"name": "ESTIMATED DRUG QUANTITY",
+		"definition": "The quantity of drugs or narcotics seized in a drug incident.",
+		"length": "13",
+		"format": "N",
+		"comment": "If Drug Quantity is UNKNOWN, then value should be 1.000"
+	},
+	{
+		"de_num": "22",
+		"name": "TYPE OF DRUG MEASUREMENT",
+		"definition": "Used in quantifying drugs or narcotics seized in a drug incident. The same drugs or narcotics code CANNOT be entered within the same “Type of Measurement” category, but could be reported if in different categories.",
+		"length": "2",
+		"format": "A",
+		"comment": "For example, if two one-pound bags of marijuana are seized, they CANNOT be reported as two separate property seizures of one pound each, but instead should be reported as one seizure of two pounds of marijuana. <br><br>On the other hand, if a one-pound bag and a three-ounce bag of marijuana are seized, then they should be reported separately as a one-pound bag and a three-ounce bag.<br><br> <br><br>Note: XX = should be used for any category of drug when the substance is awaiting lab analysis<br><br>",
+		"subsection": [{
+				"title": "Weight Category",
+				"values": [{
+						"code": "GM",
+						"desc": "Gram"
+					},
+					{
+						"code": "KG",
+						"desc": "Kilogram"
+					},
+					{
+						"code": "OZ",
+						"desc": "Ounce"
+					},
+					{
+						"code": "LB",
+						"desc": "Pound"
+					}
+				]
+			},
+			{
+				"title": "Capacity Category",
+				"values": [{
+						"code": "ML",
+						"desc": "Milliliter"
+					},
+					{
+						"code": "LT",
+						"desc": "Liter"
+					},
+					{
+						"code": "FO",
+						"desc": "Fluid Ounce"
+					},
+					{
+						"code": "GL",
+						"desc": "Gallon"
+					}
+				]
+			},
+			{
+				"title": "Units Category",
+				"values": [{
+						"code": "DU",
+						"desc": "Dosage Units, Items (Number of Capsules, Pills, Tablets, Etc.)"
+					},
+					{
+						"code": "NP",
+						"desc": "Number of Plants (e.g., Marijuana Plants (Bushes), Etc.)"
+					}
+				]
+			},
+			{
+				"title": "Other",
+				"values": [{
+					"code": "XX",
+					"desc": "Not Reported or Unknown"
+				}]
+			}
+		]
+	},
+	{
+		"de_num": "23",
+		"name": "VICTIM SEQUENCE NUMBER",
+		"definition": "Each victim in an incident is to be assigned a sequence number.",
+		"length": "3",
+		"format": "N",
+		"comment": ""
+	},
+	{
+		"de_num": "24",
+		"name": "OFFENSE CONNECTED TO VICTIM SEQUENCE NUMBER",
+		"definition": "Used to link each offense to each victim. That is, the offense       which was perpetrated against the victim during the incident.",
+		"length": "3",
+		"format": "N",
+		"comment": "Must have an offense segment for each victim. (e.g. 3 rape victims) Even though the same LRS was violated during the incident, this LRS code must be submitted for each victim. One offense segment of 14:42/ V must be submitted for each victim. <br><br>Note: This Data Element is in the Offense Segment.<br><br>"
+	},
+	{
+		"de_num": "25",
+		"name": "TYPE OF VICTIM",
+		"definition": "The type of victim.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "I",
+					"desc": "Individual"
+				},
+				{
+					"code": "B",
+					"desc": "Business"
+				},
+				{
+					"code": "F",
+					"desc": "Financial Institution"
+				},
+				{
+					"code": "G",
+					"desc": "Government"
+				},
+				{
+					"code": "L",
+					"desc": "Law Enforcement Officer (LIBRS Only). Sent to NIBRS as “L” starting with 2.5"
+				},
+				{
+					"code": "R",
+					"desc": "Religious Organization"
+				},
+				{
+					"code": "S",
+					"desc": "Society/Public"
+				},
+				{
+					"code": "O",
+					"desc": "Other"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "25A",
+		"name": "TYPE OF OFFICER ACTIVITY/CIRCUMSTANCE *New*",
+		"definition": "Describes Activity being performed by a Law Enforcement Officer, and Other Circumstances, at time of the Incident.",
+		"length": "2",
+		"format": "N",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "01",
+					"desc": "Responding to 'Disturbance Calls' (LIBRS Only)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "02",
+					"desc": "Burglaries in Progress or Pursuing Burglary Suspects (LIBRS Only)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "03",
+					"desc": "Robberies in Progress or Pursuing Robbery Suspects (LIBRS Only)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "04",
+					"desc": "Attempting Other Arrests (LIBRS Only)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "05",
+					"desc": "Civil Disorder (LIBRS Only)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "06",
+					"desc": "Handling, Transporting, Custody of Prisoners (LIBRS Only)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "07",
+					"desc": "Investigating Suspicious Persons or Circumstance",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "08",
+					"desc": "Ambush - No Warning (LIBRS Only)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "09",
+					"desc": "Mentally Deranged Assailant (LIBRS Only)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "10",
+					"desc": "Traffic Pursuits and Stops (LIBRS Only)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "11",
+					"desc": "All Other (LIBRS Only)",
+					"comment": "09A, 13A, 13B, 13C"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "25B",
+		"name": "OFFICER ASSIGNMENT TYPE *NEW*",
+		"definition": "Describes Type of Assignment for Law Enforcement Officer(s) during Incident.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "F",
+					"desc": "Two-Officer Vehicle",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "G",
+					"desc": "One-Officer Vehicle (Alone)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "H",
+					"desc": "One-Officer Vehicle (Assisted)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "I",
+					"desc": "Detective or Special Assignment (Alone)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "J",
+					"desc": "Detective or Special Assignment (Assisted)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "K",
+					"desc": "Other (Alone)",
+					"comment": "09A, 13A, 13B, 13C"
+				},
+				{
+					"code": "L",
+					"desc": "Other (Assisted)",
+					"comment": "09A, 13A, 13B, 13C"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "25C",
+		"name": "OFFICER ORI, OTHER JURISDICTION *New*",
+		"definition": "During a Multi-Jurisdictional Incident, this ORI Number is recorded if a Law Enforcement Officer who is the Victim is from a Jurisdiction outside the Jurisdiction where the Incident occurred.",
+		"length": "9",
+		"format": "N",
+		"comment": "Format: Same as Agency ORI Number. If the ORI Number is unknown please contact LIBRS Program staff for assistance."
+	},
+	{
+		"de_num": "26",
+		"name": "AGE OF VICTIM (At Time of the Incident)",
+		"definition": "",
+		"length": "3",
+		"format": "A/N",
+		"comment": "If the victim was a person (that is, Type of Victim (Data Element 25) is Individual ('I') or Law Enforcement ('L'), then his/her age is to be entered into this data element.<br><br>If the Victim's EXACT AGE IS UNKNOWN, enter estimated age of Victim and append an 'E' into third character (for example, '49E'). If it is impossible to determine even an estimated age of the victim, then enter Unknown ('00') and leave the third character blank.<br><br>",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "NN",
+					"desc": "Under 24 hours (Neonate)"
+				},
+				{
+					"code": "NB",
+					"desc": "1-6 Days Old (New Born)"
+				},
+				{
+					"code": "BB",
+					"desc": "7-364 Days Old (Baby)"
+				},
+				{
+					"code": "01 to 98",
+					"desc": "Years Old (Age in Years)"
+				},
+				{
+					"code": "99",
+					"desc": "Over 98 Years Old"
+				},
+				{
+					"code": "00",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "L26",
+		"name": "DATE OF BIRTH OF VICTIM",
+		"definition": "If the Victim was a person (that is, Type of Victim (Data Element 25) is Individual (“I”) or Law Enforcement ('L')), then his/her Date of Birth should be entered here.",
+		"length": "8",
+		"format": "MMDDYYYY",
+		"comment": ""
+	},
+	{
+		"de_num": "27",
+		"name": "SEX OF VICTIM",
+		"definition": "If the victim was a person (that is, Type of Victim (Data Element 25) is Individual ('I') or Law Enforcement ('L')), then his/her sex should be entered here.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "M",
+					"desc": "Male"
+				},
+				{
+					"code": "F",
+					"desc": "Female"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "28",
+		"name": "RACE OF VICTIM",
+		"definition": "If the victim was a person (that is, Type of Victim (Data Element 25) is Individual (“I”) or Law Enforcement ('L'), then his/her Race is to be entered into this data element.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "W",
+					"desc": "White"
+				},
+				{
+					"code": "B",
+					"desc": "Black"
+				},
+				{
+					"code": "I",
+					"desc": "American Indian / Alaskan Native"
+				},
+				{
+					"code": "A",
+					"desc": "Asian"
+				},
+				{
+					"code": "P",
+					"desc": "Native Hawiian or Other Pacific Islander"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "29",
+		"name": "ETHNICITY OF VICTIM",
+		"definition": "If the victim was a person (i.e., 'I'= Individual or 'L' = Law Enforcement was entered into DE # 25 “Type of Victim”), his/her ethnicity is to be entered into this data element.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "H",
+					"desc": "Hispanic Origin"
+				},
+				{
+					"code": "N",
+					"desc": "Not of Hispanic Origin"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "30",
+		"name": "RESIDENT STATUS OF VICTIM",
+		"definition": "A 'Resident' is a person who maintains his/her permanent home for legal purposes in the locality (i.e., town, city, or community) where the crime took place.",
+		"length": "1",
+		"format": "A",
+		"comment": "If the victim was a person (i.e., 'I'= Individual or 'L' = Law Enforcement was entered into DE # 25 “Type of Victim”), his/her resident status is to be entered into this data element.",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "R",
+					"desc": "Resident"
+				},
+				{
+					"code": "N",
+					"desc": "Nonresident"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "31",
+		"name": "AGGRAVATED ASSAULT / HOMICIDE CIRCUMSTANCE *Modified*",
+		"definition": "Describes the circumstances of either an Aggravated Assault or Homicide",
+		"length": "2",
+		"format": "N",
+		"comment": "Use ONLY if Crime is: Homicide (09A, 09B or 09C), Assault Offenses (13A or 13B) only when the 13B Victim is a ‘L’ and Law Enforcement Officer. <br><br>Child Abuse (“40”) can ONLY be used when Offenses are: Murder and Nonnegligent Manslaughter (09A), Negligent Homicide (09B), Aggravated Assault (13A)<br><br>",
+		"subsection": [{
+				"title": "Aggravated Assault and Non-Negligent Manslaughter Circumstances",
+				"values": [{
+						"code": "01",
+						"desc": "Argument",
+						"comment": "13A, 09A"
+					},
+					{
+						"code": "02",
+						"desc": "Assault on Law enforcement Officer(s)",
+						"comment": "13A, 09A (Must be entered if Victim Type = 'L')"
+					},
+					{
+						"code": "03",
+						"desc": "Drug Dealing",
+						"comment": "13A, 09A"
+					},
+					{
+						"code": "04",
+						"desc": "Gangland",
+						"comment": "13A, 09A"
+					},
+					{
+						"code": "05",
+						"desc": "Juvenile Gang",
+						"comment": "13A, 09A"
+					},
+					{
+						"code": "06",
+						"desc": "Domestic Violence",
+						"comment": "13A, 09A"
+					},
+					{
+						"code": "07",
+						"desc": "Mercy Killing (Not applicable to aggravated assault)",
+						"comment": "09A"
+					},
+					{
+						"code": "08",
+						"desc": "Other Felony Involved",
+						"comment": "13A, 09A"
+					},
+					{
+						"code": "09",
+						"desc": "Other Circumstances",
+						"comment": "13A, 09A"
+					},
+					{
+						"code": "10",
+						"desc": "Unknown Circumstances",
+						"comment": "13A, 09A"
+					},
+					{
+						"code": "40",
+						"desc": "Child Abuse (LIBRS Only) to NIBRS as code '09'",
+						"comment": "13A, 09A"
+					}
+				]
+			},
+			{
+				"title": "Negligent Manslaughter Circumstances",
+				"values": [{
+						"code": "30",
+						"desc": "Child Playing with Weapon",
+						"comment": "09B"
+					},
+					{
+						"code": "31",
+						"desc": "Gun-Cleaning Accident",
+						"comment": "09B"
+					},
+					{
+						"code": "32",
+						"desc": "Hunting Accident",
+						"comment": "09B"
+					},
+					{
+						"code": "33",
+						"desc": "Other Negligent Weapon Handling",
+						"comment": "09B"
+					},
+					{
+						"code": "34",
+						"desc": "Other Negligent Killing",
+						"comment": "09B"
+					},
+					{
+						"code": "40",
+						"desc": "Child Abuse (LIBRS Only) to NIBRS as code '09'",
+						"comment": "09B"
+					}
+				]
+			},
+			{
+				"title": "Justifiable Homicide Circumstances",
+				"values": [{
+						"code": "20",
+						"desc": "Criminal Killed by Private Citizen",
+						"comment": "09C"
+					},
+					{
+						"code": "21",
+						"desc": "Criminal Killed by Police Office",
+						"comment": "09C"
+					}
+				]
+			}
+		]
+	},
+	{
+		"de_num": "32",
+		"name": "ADDITIONAL JUSTIFIABLE HOMICIDE CIRCUMSTANCES",
+		"definition": "Used to further describe the circumstances of a justifiable homicide, and homicide, or assault, against a law enforcement officer",
+		"length": "1",
+		"format": "A",
+		"comment": "Enter ONLY ONE of the following codes",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "A",
+					"desc": "Criminal Attacked Police Officer and That Officer Killed Criminal"
+				},
+				{
+					"code": "B",
+					"desc": "Criminal Attacked Police Officer and Criminal Killed by Another Police Officer"
+				},
+				{
+					"code": "C",
+					"desc": "Criminal Attacked by Civilian"
+				},
+				{
+					"code": "D",
+					"desc": "Criminal Attempted Flight from a Crime"
+				},
+				{
+					"code": "E",
+					"desc": "Criminal Killed in the Commission of a Crime"
+				},
+				{
+					"code": "F",
+					"desc": "Criminal Resisted Arrest"
+				},
+				{
+					"code": "G",
+					"desc": "Unable to Determine / Not Enough Information"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "33",
+		"name": "TYPE OF INJURY",
+		"definition": "Describes types of bodily injury suffered by a person.",
+		"length": "1",
+		"format": "A",
+		"comment": "Used only if Crime is: (100)Kidnaping/Abduction, (11A-11D)Forcible Sex Offenses, (120)Robbery, (13A,13B)Assault Offenses, (210)Extortion/Blackmail and (90Z)Crime Against Person Offenses. <br><br>Can enter as many codes as are applicable<br><br>",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "N",
+					"desc": "None"
+				},
+				{
+					"code": "B",
+					"desc": "Apparent Broken Bones"
+				},
+				{
+					"code": "I",
+					"desc": "Possible Internal Injury"
+				},
+				{
+					"code": "L",
+					"desc": "Severe Laceration"
+				},
+				{
+					"code": "M",
+					"desc": "Apparent Minor Injury"
+				},
+				{
+					"code": "O",
+					"desc": "Other Major Injury"
+				},
+				{
+					"code": "T",
+					"desc": "Loss of Teeth"
+				},
+				{
+					"code": "U",
+					"desc": "Unconsciousness"
+				}
+			]
+		}]
+	},
+	{
+		"de_num": "34",
+		"name": "OFFENDER NUMBER TO BE RELATED",
+		"definition": "Used along with Relationship of Victim to Offender (Data Element 35) to report the relationships of each Victim to each Offender who has perpetrated a Crime against a Person or a Robbery against the Victim(Individual).",
+		"length": "3",
+		"format": "N",
+		"comment": "Used only if Crime is: (09A, 09B, 09C) Homicide Offenses, (100) Kidnaping/Abduction, (11A-11D) Forcible Sex Offenses, (120) Robbery, (13A,13B,13C) Assault Offenses, (36A,36B) Non-Forcible Sex Offenses and (90Z) Crime Against Person Offenses"
+	},
+	{
+		"de_num": "35",
+		"name": "RELATIONSHIP OF VICTIM TO OFFENDERS",
+		"definition": "Used along with Offender Number to be Related (Data Element 34) to report the relationships of each Victim to each Offender who has perpetrated a Crime against a Person or a Robbery against the Victim (Individual).",
+		"length": "2",
+		"format": "A",
+		"subsection": [{
+				"title": "Within Family",
+				"values": [{
+						"code": "SE",
+						"desc": "Victim Was Spouse"
+					},
+					{
+						"code": "CS",
+						"desc": "Victim Was Common-Law Spouse"
+					},
+					{
+						"code": "PA",
+						"desc": "Victim Was Parent"
+					},
+					{
+						"code": "SB",
+						"desc": "Victim Was Sibling"
+					},
+					{
+						"code": "CH",
+						"desc": "Victim Was Child"
+					},
+					{
+						"code": "GP",
+						"desc": "Victim Was Grandparent"
+					},
+					{
+						"code": "GC",
+						"desc": "Victim Was Grandchild"
+					},
+					{
+						"code": "IL",
+						"desc": "Victim Was In-Law"
+					},
+					{
+						"code": "SP",
+						"desc": "Victim Was Stepparent"
+					},
+					{
+						"code": "SC",
+						"desc": "Victim Was Stepchild"
+					},
+					{
+						"code": "SS",
+						"desc": "Victim Was Step-Sibling (stepbrother or stepsister)"
+					},
+					{
+						"code": "OF",
+						"desc": "Victim Was Other Family Member"
+					},
+					{
+						"code": "NM",
+						"desc": "Non-Married Live-in (LIBRS Only) Sent to NIBRS as 'CS'"
+					}
+				]
+			},
+			{
+				"title": "Outside Family, But Known to Victim",
+				"values": [{
+						"code": "VO",
+						"desc": "Victim Was Offender"
+					},
+					{
+						"code": "AQ",
+						"desc": "Victim Was Acquaintance"
+					},
+					{
+						"code": "FR",
+						"desc": "Victim Was Friend"
+					},
+					{
+						"code": "NE",
+						"desc": "Victim Was Neighbor"
+					},
+					{
+						"code": "BE",
+						"desc": "Victim Was Babysittee (the baby)"
+					},
+					{
+						"code": "BG",
+						"desc": "Victim Was Boyfriend/Girlfriend"
+					},
+					{
+						"code": "XB",
+						"desc": "Victim Was Ex-Boyfriend/Girlfriend (LIBRS Only). Now Maps to 'XR'; Sent to NIBRS as 'BG'"
+					},
+					{
+						"code": "CF",
+						"desc": "Victim Was Child of Boyfriend or Girlfriend"
+					},
+					{
+						"code": "HR",
+						"desc": "Homosexual Relationship *no longer used*"
+					},
+					{
+						"code": "XS",
+						"desc": "Victim Was Ex-Spouse"
+					},
+					{
+						"code": "EE",
+						"desc": "Victim Was Employee"
+					},
+					{
+						"code": "ER",
+						"desc": "Victim Was Employer"
+					},
+					{
+						"code": "OK",
+						"desc": "Victim Was Otherwise Known"
+					},
+					{
+						"code": "ES",
+						"desc": "Victim Was Estranged Spouse (LIBRS Only) Sent to NIBRS as 'SE'"
+					}, {
+						"code": "XR",
+						"desc": "Victim was from an Ex Relationship"
+					}
+				]
+			},
+			{
+				"title": "Not Know By Victim",
+				"values": [{
+						"code": "RU",
+						"desc": "Relationship Unknown"
+					},
+					{
+						"code": "ST",
+						"desc": "Victim Was Strange"
+					}
+				]
+			},
+			{
+				"title": "Other",
+				"values": [{
+					"code": "VO",
+					"desc": "Victim Was Offender"
+				}],
+				"comment": "Used only if Crime is: (09A,09B,09C) Homicide Offenses, (100) Kidnaping/Abduction, (11A-11D) Forcible Sex Offenses, (120) Robbery (If Victim Type = 'I'), (13A,13B,13C) Assault Offenses, (36A,36B) Non-Forcible Sex Offenses and (90Z) Crime Against Person Offenses"
+			}
+		]
+	}, {
+		"de_num": "36",
+		"name": "OFFENDER SEQUENCE NUMBER",
+		"definition": "Each Offender in an incident is assigned a UNIQUE sequence number",
+		"length": "3",
+		"format": "N",
+		"comment": "If '000' entered (that is, nothing is known about Offender) leave Age of Offender, Date of Birth of Offender, Sex of Offender and Race of Offender (Data Elements 37-39) Blank <br><br>000...Nothing Known About Offender. However, must submit Offender Segment (40) and Offender Using Segment (41), even if Offender is Unknown.<br><br>"
+	}, {
+		"de_num": "37",
+		"name": "AGE OF OFFENDER [At Time of the Incident]",
+		"definition": "",
+		"length": "3",
+		"format": "N",
+		"comment": "If Offender’s exact age is Unknown, enter estimated age of Offender and append an 'E' into third character (for example: 49E). <br><br>If it is not possible to determine even an estimated age of the Offender, then enter '00' (Unknown) and leave the third character Blank<br><br>",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "01-98",
+					"desc": "Age in years"
+				},
+				{
+					"code": "99",
+					"desc": "Over 98 Years Old"
+				},
+				{
+					"code": "00",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	}, {
+		"de_num": "L37",
+		"name": "DATE OF BIRTH OF OFFENDER",
+		"definition": "",
+		"length": "8",
+		"format": "MMDDYYYY",
+		"comment": "If the date of birth of the offender is known, it is to be entered in this data element."
+	}, {
+		"de_num": "38",
+		"name": "SEX OF OFFENDER",
+		"definition": "The sex of the Offender is to be entered in this data element.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "M",
+					"desc": "Male"
+				},
+				{
+					"code": "F",
+					"desc": "Female"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	}, {
+		"de_num": "39",
+		"name": "RACE OF OFFENDER",
+		"definition": "The race of the Offender is to be entered in this data element.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "W",
+					"desc": "White"
+				},
+				{
+					"code": "B",
+					"desc": "Black"
+				},
+				{
+					"code": "I",
+					"desc": "American Indian / Alaskan Native"
+				},
+				{
+					"code": "A",
+					"desc": "Asian/Pacific Islander"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	}, {
+		"de_num": "40",
+		"name": "ARRESTEE SEQUENCE NUMBER",
+		"definition": "Each Arrestee in an incident is to be assigned a sequence number",
+		"length": "3",
+		"format": "N",
+		"comment": ""
+	}, {
+		"de_num": "L40",
+		"name": "ARRESTEE NAME",
+		"definition": "Enter the full name of Arrestee. If the full name will not fit in the field, enter as much as possible",
+		"length": "20",
+		"format": "A",
+		"comment": ""
+	}, {
+		"de_num": "41",
+		"name": "ARREST NUMBER/LOCAL BOOKING NUMBER for ARREST",
+		"definition": "The number assigned by your agency to the Arrest Report to identify it uniquely. It may be the Incident Number of the reported incident relating to the arrest, or a separate Arrest Transaction Number.",
+		"length": "12",
+		"format": "N",
+		"comment": ""
+	}, {
+		"de_num": "42",
+		"name": "ARREST DATE",
+		"definition": "The month, date, and year when the arrest took place",
+		"length": "8",
+		"format": "MMDDYYYY",
+		"comment": ""
+	}, {
+		"de_num": "43",
+		"name": "TYPE OF ARREST",
+		"definition": "Indicates the type of apprehension",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "O",
+					"desc": "On-View Arrest (taken into custody without a warrant or previous incident report.)"
+				},
+				{
+					"code": "S",
+					"desc": "Summoned / Cited (not taken into custody)"
+				},
+				{
+					"code": "T",
+					"desc": "Taken Into Custody (based on warrant and/or previously submitted incident report.)"
+				}
+			]
+		}]
+	}, {
+		"de_num": "44",
+		"name": "MULTIPLE ARRESTEE SEGMENT INDICATOR",
+		"definition": "Used to ensure that an arrestee is counted only once when the arrestee’s apprehension causes the arresting agency to submit two or more arrestee segments concerning separate incident reports",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "M",
+					"desc": "Multiple"
+				},
+				{
+					"code": "C",
+					"desc": "Count Arrestee"
+				},
+				{
+					"code": "N",
+					"desc": "Not Applicable"
+				}
+			]
+		}]
+	}, {
+		"de_num": "45",
+		"name": "LOUISIANA REVISED STATUTE NUMBER OF ARREST",
+		"definition": "Used to enter the Louisiana Revised Statute Number(s) that the arrestee was charged with",
+		"length": "12",
+		"format": "N",
+		"comment": "Must be on Master LIBRS/LRS Code Table to be accepted into LIBRS."
+	}, {
+		"de_num": "N45",
+		"name": "AGENCY SUPPLIED NIBRS CODE FOR ARREST *NEW*",
+		"definition": "",
+		"length": "3",
+		"format": "N",
+		"comment": "EVERY Offense Segment (20) in the data submission MUST have an Agency Supplied NIBRS Code (N6). Agencies should be aware that many Louisiana Revised Statutes map to multiple NIBRS codes and should consult the LIBRS Master LRS Table to review these mappings."
+	}, {
+		"de_num": "L45",
+		"name": "ARREST CONNECTION TO OFFENSE",
+		"definition": "Used to relate the arrest with the offense which gave rise to the arrest",
+		"length": "15",
+		"format": "N",
+		"comment": "This Data Element is optional at this time."
+	}, {
+		"de_num": "46",
+		"name": "ARRESTEE WAS ARMED WITH",
+		"definition": "Used to indicate whether the arrestee was armed with a commonly known weapon at the time of his/her apprehension",
+		"length": "3",
+		"format": "A/N",
+		"comment": "Append an 'A' to the Weapon code if an Automatic Weapon. (That is, place an 'A' in third character) <br><br>Can enter as many codes as are applicable.<br><br>",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "01",
+					"desc": "Unarmed"
+				},
+				{
+					"code": "11",
+					"desc": "Firearm (Type Not Stated)"
+				},
+				{
+					"code": "12",
+					"desc": "Handgun"
+				},
+				{
+					"code": "13",
+					"desc": "Rifle"
+				},
+				{
+					"code": "14",
+					"desc": "Shotgun"
+				},
+				{
+					"code": "15",
+					"desc": "Other Firearm"
+				},
+				{
+					"code": "16",
+					"desc": "Lethal Cutting Instrument (switchblade knife, martial arts 'stars', Etc.)"
+				},
+				{
+					"code": "17",
+					"desc": "Club, Blackjack or Brass Knuckles"
+				}
+			]
+		}]
+	}, {
+		"de_num": "47",
+		"name": "AGE OF ARRESTEE [At Time of Arrest]",
+		"definition": "The age of the Arrestee at the time of arrest is to be entered",
+		"length": "3",
+		"format": "N",
+		"comment": "If the Arrestee’s exact age is UNKNOWN, enter Estimated Age of Arrestee and Append an 'E' into third character (for example, “49E”). If it is not possible to determine even an Estimated Age of the Arrestee, then enter '00' (Unknown) and leave the third character blank",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "01-98",
+					"desc": "Age in years"
+				},
+				{
+					"code": "99",
+					"desc": "Over 98 Years Old"
+				},
+				{
+					"code": "00",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	}, {
+		"de_num": "L47",
+		"name": "DATE OF BIRTH OF ARRESTEE",
+		"definition": "If the Date of Birth of the Arrestee is known, entered it in this data element.",
+		"length": "8",
+		"format": "MMDDYYYY",
+		"comment": ""
+	}, {
+		"de_num": "48",
+		"name": "SEX OF ARRESTEE",
+		"definition": "Enter Sex of the Arrestee in this data element.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "M",
+					"desc": "Male"
+				},
+				{
+					"code": "F",
+					"desc": "Female"
+				}
+			]
+		}]
+	}, {
+		"de_num": "49",
+		"name": "RACE OF ARRESTEE",
+		"definition": "Enter Race of the Arrestee in this data element.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "W",
+					"desc": "White"
+				},
+				{
+					"code": "B",
+					"desc": "Black"
+				},
+				{
+					"code": "I",
+					"desc": "American Indian/Alaskan Native"
+				},
+				{
+					"code": "A",
+					"desc": "Asian or Pacific Islander"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	}, {
+		"de_num": "50",
+		"name": "ETHNICITY OF ARRESTEE",
+		"definition": "Enter Ethnic Origin of the Arrestee in this data element.",
+		"length": "1",
+		"format": "A",
+		"comment": "",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "H",
+					"desc": "Hispanic Origin"
+				},
+				{
+					"code": "N",
+					"desc": "Not of Hispanic Origin"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	}, {
+		"de_num": "51",
+		"name": "RESIDENT STATUS OF ARRESTEE",
+		"definition": "A 'Resident' is a person who maintains his or her permanent home for legal purposes in the locality (town, city, or community) where the crime took place.",
+		"length": "1",
+		"format": "A",
+		"comment": "Enter Resident Status of the Arrestee in this data element.",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "R",
+					"desc": "Resident"
+				},
+				{
+					"code": "N",
+					"desc": "Nonresident"
+				},
+				{
+					"code": "U",
+					"desc": "Unknown"
+				}
+			]
+		}]
+	}, {
+		"de_num": "52",
+		"name": "DISPOSITION OF ARRESTEE UNDER 17",
+		"definition": "Used only if the arrestee was 16 years of age or younger at the time of arrest.",
+		"length": "1",
+		"format": "A",
+		"comment": "This will change to Arrestee under 18 on 01/01/2020",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "D",
+					"desc": "Handled Within Department and Released."
+				},
+				{
+					"code": "J",
+					"desc": "Referred to Juvenile Court or Probation Department"
+				},
+				{
+					"code": "W",
+					"desc": "Referred to Welfare Agency"
+				},
+				{
+					"code": "P",
+					"desc": "Referred to Other Police Agency"
+				},
+				{
+					"code": "A",
+					"desc": "Referred to Criminal or Adult Court"
+				}
+			]
+		}]
+	}, {
+		"de_num": "L53",
+		"name": "LOCATION OF INCIDENT (Geographical Coordinates)",
+		"definition": "This field is for reporting the Geographical Location of the incident.",
+		"length": "12",
+		"format": "N",
+		"comment": "This field is NOT REQUIRED and may be left Blank.<br><br>Optional: This field is not validated nor submitted to the FBI.<br><br>"
+	}, {
+		"de_num": "L54",
+		"name": "STATION/DIVISION/PRECINCT IDENTIFIER",
+		"definition": "OPTIONAL field for Agency’s use in locating incidents.",
+		"length": "6",
+		"format": "N",
+		"comment": "Optional"
+	}, {
+		"de_num": "L55",
+		"name": "ARREST TRANSACTION NUMBER (ATN) for LOUISIANA",
+		"definition": "This data element will be generated by the Live Scan when finger printing an Arrestee, or can be a Pre-Assigned Number generated and assigned at the time of the finger printing",
+		"length": "15",
+		"format": "N",
+		"comment": "Based on characters as assigned by AFIS. Required on all Offenses reported to the Bureau of Identification of the Louisiana State Police."
+	}
 ]
