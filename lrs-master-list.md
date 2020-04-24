@@ -17,7 +17,7 @@ ____
 
 ## Current and Active Master LRS Code List
 
-#### Last Updated Jan 23, 2020
+#### Last Updated Apr 24, 2020
 
 <table>
 <thead style="font-size: 14px;">
