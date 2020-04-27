@@ -31,6 +31,18 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-04-27
+* Fixed missing validations for the following LRS Codes (All of them are 35A NIBRS):
+  * 32:681
+  * 40:1041
+  * 40:1238.2
+  * 40:963
+  * 40:964
+  * 40:964.1
+  * 40:983
+  * 40:983.1
+  * 40:989.1
+
 #### 2020-04-24
 * **New Data Element**: Added in support for Data Element 39A - Ethnicity of Offender. 
   * Included at character 43 on the Offender Segment (40)
