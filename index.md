@@ -48,6 +48,8 @@ ___
   * Included at character 43 on the Offender Segment (40)
   * LIBRS has always been processing this value, but it was not stored in the database. 
   * This is not a mandatory data element to include. 
+    * Acceptable values are 'U' for Unkonwn, 'N' for Non-Hispanic, or 'H' for Hispanic, just the same as the other Ethnicities used in LIBRS. 
+    * Since it's not a required value a blank space (" ") is also acceptable. In that case we will not store a value in the database (It will not be saved as 'U' for Unknown).
 * Changed validations for Data Element 35 (Victim/Offender Relationship):
   * Expired "HR - Homosexual Relationship"; FBI has not accepted this for NIBRS since 2017.
   * Added "XR - Ex Relationship" as a valid value. 
