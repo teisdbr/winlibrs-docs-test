@@ -2883,6 +2883,7 @@
         "err_desc": {
             "31": "If DE 25 (Victim Type) is 'L' for Law Enforcement Officer, DE 31 (Aggravated Assault Circumstance) MUST be '02 - Assault on Law Enforcement Officer(s).",
             "25": "If DE 31 (Aggravated Assault Circumstance) is '02 - Assault on Law Enforcement Officer(s), DE 25 (Victim Type) MUST be 'L' for Law Enforcement Officer."
+        }
     },
     "90002": {
         "err_no": 90002,
