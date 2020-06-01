@@ -34,8 +34,11 @@ ___
 #### 2020-06-01
 * Updated Requirements 2 and 3 for Data Element 16 based on revised NIBRS Requirements. 
   * Old Requirements:
+  
 ![Previous Data Element 16 Requirements](https://storage.googleapis.com/te-public-files/librs/Old%20DE%2016.png)
+
   * New Requirements:
+  
 ![New Data Element 16 Requirements](https://storage.googleapis.com/te-public-files/librs/New%20DE%2016.png)
 
 #### 2020-04-27
