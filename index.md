@@ -39,7 +39,7 @@ ___
 
   * New Requirements:
   
-![New Data Element 16 Requirements](https://storage.googleapis.com/te-public-files/librs/New%20DE%2016.png)
+![New Data Element 16 Requirements](https://storage.googleapis.com/te-public-files/librs/New%20DE%2016-2.png)
 
 #### 2020-04-27
 * Fixed missing validations for the following LRS Codes (All of them are 35A NIBRS):
