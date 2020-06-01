@@ -31,6 +31,9 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-06-01
+* Updated Requirements 2 and 3 for Data Element 16 based on revised NIBRS Requirements. 
+
 #### 2020-04-27
 * Fixed missing validations for the following LRS Codes (All of them are 35A NIBRS):
   * 32:681
