@@ -1,285 +1,285 @@
 [{
 "OffenseCode": "220",
 "OffenseDescription": "Arson",
-"Crime Against": "Property"
+"CrimeAgainst": "Property"
 },
 {
 "OffenseCode": "13A",
 "OffenseDescription": "Aggravated Assault",
-"Crime Against": "Person"
+"CrimeAgainst": "Person"
 },
 {
 	"OffenseCode": "13B",
     "OffenseDescription": "Simple Assault",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
 	"OffenseCode": "13C",
     "OffenseDescription": "Intimidation",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
 	"OffenseCode": "510",
     "OffenseDescription": "Bribery",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "220",
     "OffenseDescription": "Burglary/Breaking & Entering",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "250",
     "OffenseDescription": "Counterfeiting/Forgery",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "290",
     "OffenseDescription": "Destruction/Damage/Vandalism of Property",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "35A",
     "OffenseDescription": "Drug/Narcotic Violations",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "35B",
     "OffenseDescription": "Drug Equipment Violations",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "270",
     "OffenseDescription": "Embezzlement",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "210",
     "OffenseDescription": "Extortion/Blackmail",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "26A",
     "OffenseDescription": "False Pretenses/Swindle/Confidence Game",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "26B",
     "OffenseDescription": "Credit Card/Automated Teller Machine Fraud",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "26C",
     "OffenseDescription": "Impersonation",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "26D",
     "OffenseDescription": "Welfare Fraud",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "26E",
     "OffenseDescription": "Wire Fraud",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "39A",
     "OffenseDescription": "Betting/Wagering",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "39B",
     "OffenseDescription": "Operating/Promoting/Assisting Gambling",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "39C",
     "OffenseDescription": "Gambling Equipment Violations",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "39D",
     "OffenseDescription": "Sports Tampering",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
     "OffenseCode": "09A",
     "OffenseDescription": "Murder & Nonnegligent Manslaughter",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
     "OffenseCode": "09B",
     "OffenseDescription": "Negligent Manslaughter",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
     "OffenseCode": "09C",
     "OffenseDescription": "Justifiable Homicide",
-    "Crime Against": "Person/Not A Crime"
+    "CrimeAgainst": "Person/Not A Crime"
 },
 {
     "OffenseCode": "100",
     "OffenseDescription": "Kidnapping/Abduction",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
     "OffenseCode": "23A",
     "OffenseDescription": "Pocket-picking",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
     "OffenseCode": "23B",
     "OffenseDescription": "Purse-snatching",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
     "OffenseCode": "23C",
     "OffenseDescription": "Shoplifting",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
     "OffenseCode": "23D",
     "OffenseDescription": "Theft From Building",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
     "OffenseCode": "23E",
     "OffenseDescription": "Theft From Coin-Operated Machine or Device",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
     "OffenseCode": "23F",
     "OffenseDescription": "Theft From Motor Vehicle",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },	
 {
     "OffenseCode": "23G",
     "OffenseDescription": "Theft of Motor Vehicle Parts or Accessories",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
     "OffenseCode": "23H",
     "OffenseDescription": "All Other Larceny",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	 "OffenseCode": "240",
     "OffenseDescription": "Motor Vehicle Theft",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	 "OffenseCode": "370",
     "OffenseDescription": "Pornography/Obscene Material",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	 "OffenseCode": "40A",
     "OffenseDescription": "Prostitution",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	 "OffenseCode": "40B",
     "OffenseDescription": "Assisting or Promoting Prostitution",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	 "OffenseCode": "120",
     "OffenseDescription": "Robbery",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	 "OffenseCode": "11A",
     "OffenseDescription": "Forcible Rape",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
 	 "OffenseCode": "11B",
     "OffenseDescription": "Forcible Sodomy",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
 	"OffenseCode": "11C",
     "OffenseDescription": "Sexual Assault With An Object",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
 	"OffenseCode": "11D",
     "OffenseDescription": "Forcible Fondling",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
 	"OffenseCode": "36A",
     "OffenseDescription": "Incest",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
 	"OffenseCode": "36B",
     "OffenseDescription": "Statutory Rape",
-    "Crime Against": "Person"
+    "CrimeAgainst": "Person"
 },
 {
 	"OffenseCode": "280",
     "OffenseDescription": "Stolen Property Offenses",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "520",
     "OffenseDescription": "Weapon Law Violations",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "90A",
     "OffenseDescription": "Bad Checks",
-    "Crime Against": "Property"
+    "CrimeAgainst": "Property"
 },
 {
 	"OffenseCode": "90B",
     "OffenseDescription": "Curfew/Loitering/Vagrancy Violations",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "90C",
     "OffenseDescription": "Disorderly Conduct",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "90D",
     "OffenseDescription": "Driving Under the Influence",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "90E",
     "OffenseDescription": "Drunkenness",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "90F",
     "OffenseDescription": "Family Offenses, Nonviolent",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "90G",
     "OffenseDescription": "Liquor Law Violations",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "90H",
     "OffenseDescription": "Peeping Tom",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "90I",
     "OffenseDescription": "Runaway",
-    "Crime Against": "Not a Crime"
+    "CrimeAgainst": "Not a Crime"
 },
 {
 	"OffenseCode": "90J",
     "OffenseDescription": "Trespass of Real Property",
-    "Crime Against": "Society"
+    "CrimeAgainst": "Society"
 },
 {
 	"OffenseCode": "90Z",
     "OffenseDescription": "All Other Offenses",
-    "Crime Against": "Person, Property, or Society"
+    "CrimeAgainst": "Person, Property,or Society"
 }]
