@@ -329,30 +329,6 @@
 						"desc": "Unknown (Offender’s Motivation Not Known)"
 					}
 				]
-			},
-			{
-				"title": "Other Bias (LIBRS Only)",
-				"values": [{
-						"code": "70",
-						"desc": "Age (LIBRS Only). Sent to NIBRS as “99”"
-					},
-					{
-						"code": "71",
-						"desc": "Ancestry (LIBRS Only). Sent to NIBRS as “33”"
-					},
-					{
-						"code": "72",
-						"desc": "Creed (LIBRS Only). Sent to NIBRS as “25”"
-					},
-					{
-						"code": "73",
-						"desc": "Gender (LIBRS Only). Sent to NIBRS as “99”"
-					},
-					{
-						"code": "74",
-						"desc": "Organizational Affiliation (LIBRS Only). Sent to NIBRS as “99”"
-					}
-				]
 			}
 		],
 		"comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offender Segment."
