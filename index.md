@@ -31,6 +31,9 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-06-08
+* Removed the section for "Other Bias" for Data Element 8A; that section listed Legacy values that are no longer used and were being translated into other NIBRS values. 
+
 #### 2020-06-01
 * Updated Requirements 2 and 3 for Data Element 16 based on revised NIBRS Requirements. 
   * Old Requirements:
