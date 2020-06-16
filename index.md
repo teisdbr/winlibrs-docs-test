@@ -31,6 +31,9 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-06-16 (Note: Master LRS List has been updated)
+* Added validations to the LRS Codes that were listed as remapped from 90Z to 720 on 04/14/2020. That's my bad, sorry, forgot that part. 
+
 #### 2020-06-08
 * Removed the section for "Other Bias" for Data Element 8A; that section listed Legacy values that are no longer used and were being translated into other NIBRS values. 
 
