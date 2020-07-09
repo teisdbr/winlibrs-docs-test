@@ -598,8 +598,14 @@
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
         "err_desc": {
             "12": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Property': {::nomarkdown}<ul><li><b>250, 280</li><li>35A, 35B</li><li>370</li><li>39C</li><li>520</li><li>90A, 90Z</b></li></ul>{:/}",
-            "12-2": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Person': {::nomarkdown}<ul><li><b>09A, 09B</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</b></li></ul>{:/} OR Is one of the following NIBRS Offense code AND is an LRS of type 'Crime Against Property': {::nomarkdown}<ul><li><b>120</b></li></ul>{:/}",
             "13": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes: {::nomarkdown}<ul><li><b>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 210</li><li>520</b></li></ul>{:/}"
+        }
+    },
+    "12020": {
+        "err_no": 12020,
+        "err_message": "DATA ELEMENT 12 MUST BE ENTERED FOR ASSAULT, HOMICIDE (EXCEPT 09C), KIDNAPPING/ABDUCTION, ROBBERY, AND FORCIBLE SEX OFFENSES",
+        "err_desc": {
+            "12": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Person': {::nomarkdown}<ul><li><b>09A, 09B</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</b></li></ul>{:/} OR Is one of the following NIBRS Offense code AND is an LRS of type 'Crime Against Property': {::nomarkdown}<ul><li><b>120</b></li></ul>{:/}"
         }
     },
     "12051": {
@@ -1147,10 +1153,6 @@
             "37": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
             "36": "For a Justifiable Homicide (NIBRS 09C), at least one of the Offenders must have 'known' information for Age, Sex, and Race. Consequently, Unknown ('000') is not valid as an Offender Sequence Number (36)."
         }
-    },
-    "14060":{
-         "err_no": 14060,
-        "err_message": "VICTIM'S SEX CANNOT BE SAME AS ALL OFFENDERS FOR OFFENSES OF '11A' AND '36B'"        
     },
     "14061": {
         "err_no": 14061,
