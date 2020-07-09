@@ -981,6 +981,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 3F | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["90031"] -%}
 3G | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["12020"] -%}
+3G | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
