@@ -31,6 +31,10 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-07-09
+* Added Error 12020 to try and help eliminate confusion surrounding Error 12019.
+   * Error 12020 states "DATA ELEMENT 12 MUST BE ENTERED FOR ASSAULT, HOMICIDE (EXCEPT 09C), KIDNAPPING/ABDUCTION, ROBBERY, AND FORCIBLE SEX OFFENSES"
+
 #### 2020-06-16 (Note: Master LRS List has been updated)
 * Added validations to the LRS Codes that were listed as remapped from 90Z to 720 on 04/14/2020. That's my bad, sorry, forgot that part. 
 
