@@ -31,9 +31,11 @@ ___
 ## Recent Changes
 ___
 
-#### 2020-07-09
+#### 2020-07-09 (Note: Master LRS List has been updated)
 * Added Error 12020 to try and help eliminate confusion surrounding Error 12019.
    * Error 12020 states "DATA ELEMENT 12 MUST BE ENTERED FOR ASSAULT, HOMICIDE (EXCEPT 09C), KIDNAPPING/ABDUCTION, ROBBERY, AND FORCIBLE SEX OFFENSES"
+* Added LRS 14:52 - Simple Arson (Was already present, but required a modifier to be used). 
+* Fix logic that was causing Error 14060 to be thrown for all 11-Series offenses, rather than just 11A and 36B.
 
 #### 2020-06-16 (Note: Master LRS List has been updated)
 * Added validations to the LRS Codes that were listed as remapped from 90Z to 720 on 04/14/2020. That's my bad, sorry, forgot that part. 
