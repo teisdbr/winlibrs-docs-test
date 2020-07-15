@@ -31,6 +31,11 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-17-15
+* Fixed bug that was causing 90A and 90Z Offenses to fail on the following conditions:
+   * DE 7 = Completed, DE 14 = 1
+   * DE 7 = Completed, DE 14 = 8
+
 #### 2020-07-09 (Note: Master LRS List has been updated)
 * Added Error 12020 to try and help eliminate confusion surrounding Error 12019.
    * Error 12020 states "DATA ELEMENT 12 MUST BE ENTERED FOR ASSAULT, HOMICIDE (EXCEPT 09C), KIDNAPPING/ABDUCTION, ROBBERY, AND FORCIBLE SEX OFFENSES"
