@@ -28,13 +28,6 @@
             "25a": "When Type of Victim (25) is Law Enforcement Officer ('L'), then Type of Officer Activity/Circumstance (25A) CANNOT BE BLANK."
         }
     },
-    "06001": {
-        "err_no": "06001",
-        "err_message": "WARNING - PROVIDE VALID NIBRS CODE",
-        "err_desc": {
-            "n6": "If the value of LIBRS Spec Indicator (C12) is '2.5', then EVERY Offense Segment (20) in the data submission MUST have an Agency Supplied NIBRS Code (N6).<br><br>If Agency Supplied NIBRS Code (N6) is missing, WinLIBRS will insert the *default* NIBRS value based on the LRS for that particular offense. This may not be the intended NIBRS Code for the submitted offense."
-        }
-    },
     "06002": {
         "err_no": "06002",
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
@@ -3037,7 +3030,10 @@
     },
     "90034": {
         "err_no": 90034,
-        "err_message": "WARNING - PROVIDE VALID NIBRS CODE"
+        "err_message": "MUST PROVIDE A NIBRS CODE",
+        "err_desc": {
+            "N6": "All Offenses must have a valid NIBRS Code submitted with them. In the past, LIBRS would make an assumption based on a 'Default' NIBRS Code associated with each LRS Code. This is not longer in practice, and therefore each Offense must now contain an Agency Submitted NIBRS Code."
+        }
     },
     "90029": {
         "err_no": 90029,

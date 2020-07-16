@@ -31,7 +31,14 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-17-16
+
+* Made changes to Logic to throw errors rather than Warnings when a NIBRS Code is not supplied by the Agency:
+  * Error 90034: MUST PROVIDE A NIBRS CODE
+  * This mistake is no longer treated as a Warning, it will cause the Incident to fail validation. 
+
 #### 2020-17-15
+
 * Fixed bug that was causing 90A and 90Z Offenses to fail on the following conditions:
    * DE 7 = Completed, DE 14 = 1
    * DE 7 = Completed, DE 14 = 8
@@ -52,10 +59,11 @@ ___
 * Updated Requirements 2 and 3 for Data Element 16 based on revised NIBRS Requirements. 
   * Old Requirements:
   
+
 ![Previous Data Element 16 Requirements](https://storage.googleapis.com/te-public-files/librs/Old%20DE%2016.png)
 
   * New Requirements:
-  
+
 ![New Data Element 16 Requirements](https://storage.googleapis.com/te-public-files/librs/New%20DE%2016-2.png)
 
 #### 2020-04-27
