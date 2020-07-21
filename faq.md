@@ -1,8 +1,8 @@
-```
+---
 title: LIBRS Frequently Asked Questions
 layout: default
 permalink: /faq
-```
+---
 
 # LIBRS FAQ
 
@@ -17,7 +17,7 @@ This page contains the questions and responses we've gotten from vendors and use
 * Since there is not a limit to how many Segment 31's that can be entered, can there be duplicate property description types allowed for same incident? Example, if in the same incident three (3) TV's were damaged, Would there be 3 Segment 31's with same Property Description Type and Property Loss Type?
   * Yes, since they are three distinct properties you will need to include three distinct Segment 31's (Property Description). You can handle that in your RMS however you want, so long as LIBRS gets sent the three segments (EG: If your RMS wants to store the property once and list it three times in the Incident, so long as we get those three segments to say that there are three TV's then it doesn't matter to us if you use the same property in the RMS or make three different ones.)
 
-
+____
 
 ### Offenders (Segments 40 and 41)
 
