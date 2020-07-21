@@ -16,28 +16,41 @@ ___
 
 - ### <a href="./librs-spec">Technical Specification Documentation</a>
   - #### Information about the specifications of each of the LIBRS Segments, how they're constructed, error messages associated with them, examples, and other requirements.
+  
 - ### <a href="./data-element-definitions">Data Element Definitions</a>
   - #### In depth information about each of the LIBRS Data Elements, as well as error messages, examples, and other requirements that are associated with them.
+  
 - ### <a href="./data-element-values">Data Element Available Values</a>
   - #### Table of all of the available values that can be entered for each LIBRS Data Element.
+  
 - ### <a href="./lrs-master-list">Master LIBRS LRS List</a>
   - #### The master list of all Louisiana Revisec Statute (LRS) Codes that the LIBRS Program currently accepts, as well as information about expired LRS Codes. 
   - #### Links are available for vendors and agencies to download a JSON list of the current Master LIBRS LRS List for ingestion into their RMS.
+  
 - ### <a href="./mandatories">LIBRS/NIBRS Mandatories</a>
   - #### Groupings of multiple LIBRS Data Elements and their required values when certain Data Elements are present with particular NIBRS Submissions. 
+  
+- ### <a href="./faq">Frequently Asked Questions</a>
+
+
+  - #### Questions we've gotten from Vendors and Users about LIBRS that might be helpful to others. 
 
 ___
 
 ## Recent Changes
 ___
 
-#### 2020-17-16
+#### 2020-07-21
+
+* Added an <a href="./faq">FAQ</a> to this site. We're going to start posting the questions and responses that we get from Vendors and users to start building that up for everyone's reference.
+
+#### 2020-07-16
 
 * Made changes to Logic to throw errors rather than Warnings when a NIBRS Code is not supplied by the Agency:
   * Error 90034: MUST PROVIDE A NIBRS CODE
   * This mistake is no longer treated as a Warning, it will cause the Incident to fail validation. 
 
-#### 2020-17-15
+#### 2020-07-15
 
 * Fixed bug that was causing 90A and 90Z Offenses to fail on the following conditions:
    * DE 7 = Completed, DE 14 = 1
