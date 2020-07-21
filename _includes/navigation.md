@@ -64,7 +64,7 @@
         <li><div><a href="./mandatories"><span style="font-size: large; font-weight: bold;">LIBRS/NIBRS Mandatories</span></a></div></li>
     </ul>
     <ul>
-        <li><a href="./faq">LIBRS FAQ</a></li>
+        <li><span style="font-size: large; font-weight: bold;"><a href="./faq">LIBRS FAQ</a></span></li>
     </ul>
 </div>
 
