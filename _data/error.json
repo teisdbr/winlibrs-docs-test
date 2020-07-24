@@ -1609,7 +1609,7 @@
     },
     "16052": {
         "err_no": 16052,
-        "err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS LESS THAN 18",
+        "err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS 17 AND YOUNGER",
         "err_desc": {
             "47": "If age is under 18, then Data Element #52 (Disposition of Arrestee Under 18) must be entered.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles.",
             "52": "MUST be entered if Arrestee Age is Under 18.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
@@ -1617,9 +1617,9 @@
     },
     "16053": {
         "err_no": 16053,
-        "err_message": "FOR AGE GREATER THAN 16 DISPOSITION SHOULD NOT BE ENTERED",
+        "err_message": "FOR AGE 18 AND OLDER DISPOSITION SHOULD NOT BE ENTERED",
         "err_desc": {
-            "52": "CANNOT be entered if Arrestee Age is 17 or Over."
+            "52": "CANNOT be entered if Arrestee Age is 18 or Over."
         }
     },
     "16054": {
