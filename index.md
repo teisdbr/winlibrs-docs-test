@@ -40,6 +40,10 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-07-28
+
+* Added "How to Solve Errors in Flat Files" and "What's Wrong with my Flat File" to the <a href="./faq">FAQ</a>.
+
 #### 2020-07-21
 
 * Added an <a href="./faq">FAQ</a> to this site. We're going to start posting the questions and responses that we get from Vendors and users to start building that up for everyone's reference.
