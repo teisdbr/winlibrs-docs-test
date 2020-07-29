@@ -18,6 +18,8 @@ However, UCR has since been found to be not nearly as descriptive as NIBRS is ab
 
 In short, LIBRS is a reporting standard that is a superset of NIBRS (slightly more restrictive in some places) that allows for agencies to simultaneously meet their State and Federal reporting requirements. Since reporting to the Federal Government is crucial in securing funding for LEA's in the state, it's critical that Officers and Deputies are properly trained and equipped to use their Records Management Systems (RMS) to accurately track Incidents in their jurisdiction. 
 
+
+
 ### Benefits
 * Error Checking and Validation via an API (https://validator.librs.org).
   * Note: We're currently working on a way to open that up to Vendors so they can implement error checking directly in their RMS. Expected Delivery September 2020.
@@ -27,15 +29,7 @@ In short, LIBRS is a reporting standard that is a superset of NIBRS (slightly mo
 * We're very nice people to talk to. 
 
 ### Requirements
-Coming Soon!
-
-### How Dates Work
-In LIBRS there are three important Dates:
-1. The Incident Date
-2. The Last Date that the Incident was Updated
-3. The Reporting Period (Currently we only allow for Monthly submissions, so it's kind of a date). 
-
-Initially there was a long paragraph that explained the importance of these dates, but that got out of hand quickly. Instead, here's a diagram:
+We are currently reviewing the requirements in order for an Agency to become LIBRS Certified. We will update this section when decisions have been made.
 
 
 
@@ -45,8 +39,49 @@ Submitting through LIBRS means that for each submission period there will be a n
 1. Error Summary - This is a broad-strokes look at the accuracy of your submission. It shows you the errors and warnings present, and gives you an overall total of how well the submission did by outlining the Accepted and Rejected Incidents. 
 2. Error Detail Report - This is a very narrow look at the errors that occurred in the submission. This shows you all of the inputs that went into the incidents that were rejected so that you can see the full context for what might have been throwing the error. 
 3. Scorecard - This is a table that gets updated every time you make a submission. It references the ***INCIDENT DATES*** on your submissions, and updates the score for each submission period every time you submit a new file. 
-  * EG: In January your agency had 90 Accepted Incidents, and 10 Rejected Incidents, providing an Average of 90%. Next month, you go back and correct those errors, so now when those incidents get reprocessed, they'll be accepted this time. This will cause the Scorecard to update, and now show that you have 100 Accepted Incidents and 0 Rejected in January. Good work!
-  * 
+   * EG: In January your agency had 90 Accepted Incidents, and 10 Rejected Incidents, providing an Average of 90%. Next month, you go back and correct those errors, so now when those incidents get reprocessed, they'll be accepted this time. This will cause the Scorecard to update, and now show that you have 100 Accepted Incidents and 0 Rejected in January. Good work!
+
+
+
+### How Dates Work
+
+Dates in LIBRS can get a little convoluted. In LIBRS there are four important Dates:
+
+1. Incident Date - The date on which the Incident being submitted occurred. 
+
+2. Incident Update Date - The most recent date on which the Incident that is being submitted was modified. 
+
+3. Reporting Period - The reporting month and year that is being submitted. 
+
+4. Reporting Date - The date on which the submission is being made. 
+
+   
+
+#### Reporting Periods and Out of Sequence
+
+LIBRS requires that each Reporting Period is sent sequentially. You can't send us March if you haven't sent us February. Further, we require that a month has ended before you are able to submit that Reporting Period (EG: Can't submit January on Jan 25th, has to be Feb 1 or later).
+
+We do this in order to keep track of Incidents that have been edited and modified. Effectively it allows us to keep everything straight with when an Incident first occurred, was first submitted, and the subsequent edits and modifications that have occurred since. If we allowed Agencies to skip months, then we would often find ourselves in a position where someone is trying to edit an incident that we have no record of, or entire months would be forgotten to be submitted. 
+
+Because of that we have something called "Out of Sequence". If you submit a LIBRS Flat File to us and we have no record of the previous month being submitted, then LIBRS will throw an Out of Sequence Error. The file will be moved to that folder on the FTP, and the LIBRS Administrator for the Agency will be notified. 
+
+The only way to resolve this error is to submit the missing month to us either before or alongside the submission you are trying to make. If you feel that you are getting Out of Sequence Errors by mistake, feel free to reach out to LIBRS Support. 
+
+
+
+#### Incident Dates, Making Modifications, and on Which Submission They Appear
+
+It can get a little confusing as to on what Submission Period an Incident will appear on. By default, the date that an Incident occurs will be the Reporting Period (Month) that it will get submitted with. If any edits or changes are made to that incident after it is submitted, it will need to be submitted again with the file for the Reporting Period (Month) that it was edited in. 
+
+In the following flow chart, we are following a single incident that occurred in January. 
+
+![LIBRS Incident Submission Timeline (1)](images/LIBRS%20Incident%20Submission%20Timeline%20(1).png)
+
+On Feb 1, the January Submission is made, and LIBRS Processes the Incident. If there are no errors with the incident, then everything is accepted and it's all fine. If there are, then edits need to be made to the Incident. Since the edits being made to the Incident are done in February (Remember, January couldn't have been submitted unless it was a future month already), the Incident will need to be picked up again and submitted with the February Submission, which is being made (in this example) on March 1, where it is then accepted. 
+
+Since the submission was made in both January and February, if you check the Error Reports they will say that one incident was submitted in both months. On January it will say it was rejected, and in February it will say it was accepted. This does not mean that two incidents have been submitted, only that the same incident was submitted twice, and on the second time overwrote the first record. However, since the Incident date is in January, the Scorecard will be updated to reflect that an Incident in January was fixed, and the score for that month will increase. 
+
+
 
 ____
 
