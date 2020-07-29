@@ -22,7 +22,7 @@ In short, LIBRS is a reporting standard that is a superset of NIBRS (slightly mo
 
 ### Benefits
 * Error Checking and Validation via an API (https://validator.librs.org).
-  * Note: We're currently working on a way to open that up to Vendors so they can implement error checking directly in their RMS. Expected Delivery September 2020.
+  * Note: We're currently working on a way to open that up to Vendors so they can implement error checking directly in their RMS. 
 * No need for Agencies to learn NIBRS standards, or purchase and RMS that has to know how to report to both the State and FBI. 
 * Appropriate and consistent records keeping in your Agency's RMS. 
 * As of 2021 it will be the only way for Agencies to comply with their reporting requirements. 
