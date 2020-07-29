@@ -10,6 +10,48 @@ This page contains the questions and responses we've gotten from vendors and use
 
 <br>
 
+## What is LIBRS?
+
+LIBRS (Louisiana Incident Based Reporting System) is a reporting standard that allows Law Enforcement Agencies in Louisiana to submit their data to satisfy both Louisiana State Law, and Federal Reporting requirements. In the past, there were two methods that the Federal Government accepted data: UCR and NIBRS. To accommodate both the State and Federal Reporting requirements, LUCR and LIBRS were created. These reporting standards mirrored their FBI Counterparts, and subsequently checked the boxes for agencies complying with both the State and Federal reporting requirements all at once.
+
+However, UCR has since been found to be not nearly as descriptive as NIBRS is able to be as it follows hierarchy rules and only counts arrests, while NIBRS is able to track offenses, offenders, properties, and victims. As such, the FBI has announced that in 2021, UCR will be retired, leaving NIBRS as the only suitable way to submit data to the FBI. 
+
+In short, LIBRS is a reporting standard that is a superset of NIBRS (slightly more restrictive in some places) that allows for agencies to simultaneously meet their State and Federal reporting requirements. Since reporting to the Federal Government is crucial in securing funding for LEA's in the state, it's critical that Officers and Deputies are properly trained and equipped to use their Records Management Systems (RMS) to accurately track Incidents in their jurisdiction. 
+
+### Benefits
+* Error Checking and Validation via an API (https://validator.librs.org).
+  * Note: We're currently working on a way to open that up to Vendors so they can implement error checking directly in their RMS. Expected Delivery September 2020.
+* No need for Agencies to learn NIBRS standards, or purchase and RMS that has to know how to report to both the State and FBI. 
+* Appropriate and consistent records keeping in your Agency's RMS. 
+* As of 2021 it will be the only way for Agencies to comply with their reporting requirements. 
+* We're very nice people to talk to. 
+
+### Requirements
+Coming Soon!
+
+### How Dates Work
+In LIBRS there are three important Dates:
+1. The Incident Date
+2. The Last Date that the Incident was Updated
+3. The Reporting Period (Currently we only allow for Monthly submissions, so it's kind of a date). 
+
+Initially there was a long paragraph that explained the importance of these dates, but that got out of hand quickly. Instead, here's a diagram:
+
+
+
+### Reports
+Submitting through LIBRS means that for each submission period there will be a number of reports that get generated for your use automatically:
+
+1. Error Summary - This is a broad-strokes look at the accuracy of your submission. It shows you the errors and warnings present, and gives you an overall total of how well the submission did by outlining the Accepted and Rejected Incidents. 
+2. Error Detail Report - This is a very narrow look at the errors that occurred in the submission. This shows you all of the inputs that went into the incidents that were rejected so that you can see the full context for what might have been throwing the error. 
+3. Scorecard - This is a table that gets updated every time you make a submission. It references the ***INCIDENT DATES*** on your submissions, and updates the score for each submission period every time you submit a new file. 
+  * EG: In January your agency had 90 Accepted Incidents, and 10 Rejected Incidents, providing an Average of 90%. Next month, you go back and correct those errors, so now when those incidents get reprocessed, they'll be accepted this time. This will cause the Scorecard to update, and now show that you have 100 Accepted Incidents and 0 Rejected in January. Good work!
+  * 
+
+____
+
+<br>
+
 ## Questions from Vendors
 
 ### Offenses (Segment 20)
