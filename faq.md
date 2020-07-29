@@ -226,55 +226,55 @@ This file was kicking back the following errors:
 * 10081 - This Property Code cannot exist with this offense.
 * 90018 - Property must have a valid relationship to at least one offense.
 
-```
-10ILA05200T12019005456                    06012019 20N                            ZZ
-20ILA05200T12019005456  00114:67       C00107               23H                 ZZ
-20ILA05200T12019005456  00214:67       C00207               23H                 ZZ
-20ILA05200T12019005456  00314:67       C00307               23H                 ZZ
-30ILA05200T12019005456                          ZZ
-31ILA05200T12019005456  777100                               001                 ZZ
-31ILA05200T12019005456  777100                               002                 ZZ
-31ILA05200T12019005456  777100                               003                 ZZ
-33ILA05200T12019005456  001001                    ZZ
-33ILA05200T12019005456  001002                    ZZ
-33ILA05200T12019005456  001003                    ZZ
-50ILA05200T12019005456  001B                                        ZZ
-50ILA05200T12019005456  002I26 01161993FWNU                         ZZ
-50ILA05200T12019005456  003I45 06121974FWNU                         ZZ
-40ILA05200T12019005456  000             88                    ZZ
-41ILA05200T12019005456  000N                    ZZ
-9919    ZZ
-```
+ ```
+ 10ILA05200T12019005456                    06012019 20N                            ZZ
+ 20ILA05200T12019005456  00114:67       C00107               23H                 ZZ
+ 20ILA05200T12019005456  00214:67       C00207               23H                 ZZ
+ 20ILA05200T12019005456  00314:67       C00307               23H                 ZZ
+ 30ILA05200T12019005456                          ZZ
+ 31ILA05200T12019005456  777100                               001                 ZZ
+ 31ILA05200T12019005456  777100                               002                 ZZ
+ 31ILA05200T12019005456  777100                               003                 ZZ
+ 33ILA05200T12019005456  001001                    ZZ
+ 33ILA05200T12019005456  001002                    ZZ
+ 33ILA05200T12019005456  001003                    ZZ
+ 50ILA05200T12019005456  001B                                        ZZ
+ 50ILA05200T12019005456  002I26 01161993FWNU                         ZZ
+ 50ILA05200T12019005456  003I45 06121974FWNU                         ZZ
+ 40ILA05200T12019005456  000             88                    ZZ
+ 41ILA05200T12019005456  000N                    ZZ
+ 9919    ZZ
+ ```
 
 The first thing to notice is that the Footer Segment is not correct. The footer should always be 10 characters long with leading zeros before the number of lines in the file. Currently the Footer Segment looks like this:
 
-```
-9919    ZZ
-```
+ ```
+ 9919    ZZ
+ ```
 
 However, it should look like this:
 
-```
-99000019ZZ
-```
+ ```
+ 99000019ZZ
+ ```
 
 
 
 Next, we're getting a 90018 that states that we should have at least one offense linked to this property. Looking at the file, we do have three Segment 20's, 31's and 33's, so it's to be inferred that each Property is to belong to one offense. The first thing to look at is the Segment 33's, since that's the Segment that will link the properties to the offenses:
 
-```
-33ILA05200T12019005456  001001                    ZZ
-33ILA05200T12019005456  001002                    ZZ
-33ILA05200T12019005456  001003                    ZZ	
-```
+ ```
+ 33ILA05200T12019005456  001001                    ZZ
+ 33ILA05200T12019005456  001002                    ZZ
+ 33ILA05200T12019005456  001003                    ZZ	
+ ```
 
 Right off the bat, we can see the problem. Each of the DE P1R's (Property Sequence Number Reference) is listed as 001, while the DE L6R's (Offense Sequence Number Reference) point to each of the three offenses. This means that Property Sequence Number 1 has inadvertently been applied to all of the Offenses, while the other two properties (002 and 003) have been orphaned. We can fix that by changing the Segment 33's to the following (the *'s are just there to get your attention to what changed, they aren't actually included in the file):
 
-```
-33ILA05200T12019005456  **001001**                    ZZ
-33ILA05200T12019005456  **002002**                    ZZ
-33ILA05200T12019005456  **003003**                    ZZ
-```
+ ```
+ 33ILA05200T12019005456  **001001**                    ZZ
+ 33ILA05200T12019005456  **002002**                    ZZ
+ 33ILA05200T12019005456  **003003**                    ZZ
+ ```
 
 Running the File again, we've removed the 10081 and 90018 Errors. The 10081 Error went away because we fixed the 90018, and now we're applying a single stolen property to each offense. 
 
@@ -282,43 +282,43 @@ Running the File again, we've removed the 10081 and 90018 Errors. The 10081 Erro
 
 Next we need to resolve the 13042 Error. This error has to do with the value of the Properties. So, we need to take a look at the Segment 31's:
 
-```
-31ILA05200T12019005456  777100                               001                 ZZ
-31ILA05200T12019005456  777100                               002                 ZZ
-31ILA05200T12019005456  777100                               003                 ZZ
-```
+ ```
+ 31ILA05200T12019005456  777100                               001                 ZZ
+ 31ILA05200T12019005456  777100                               002                 ZZ
+ 31ILA05200T12019005456  777100                               003                 ZZ
+ ```
 
 Again, this one is pretty clear as to what the problem is. after the "777" is where the value of the property begins. The value field is 9 characters long, and lead with zeros. Here it looks like it was intended to submit a property value of 100. However, since there are no leading zeros, LIBRS is interpreting the trailing spaces to be zeros, meaning that it's actually seeing a value of 100,000,000. LIBRS doesn't accept values of over 1 million. We added two extra digits to that in the event that someone is trying to enter cents onto the value of the property (cents should be rounded off)
 
 So, correcting that gets us the following (Again, the *'s are there to show the difference and shouldn't be included in the Flat File):
 
-```
-31ILA05200T12019005456  777**000000100**                         001                 ZZ
-31ILA05200T12019005456  777**000000100**                         002                 ZZ
-31ILA05200T12019005456  777**000000100**                         003                 ZZ
-```
+ ```
+ 31ILA05200T12019005456  777**000000100**                         001                 ZZ
+ 31ILA05200T12019005456  777**000000100**                         002                 ZZ
+ 31ILA05200T12019005456  777**000000100**                         003                 ZZ
+ ```
 
 
 
 Putting it back together, we now have the following file that validates without Error:
 
-```
-10ILA05200T12019005456                    06012019 20N                            ZZ
-20ILA05200T12019005456  00114:67       C00107               23H                 ZZ
-20ILA05200T12019005456  00214:67       C00207               23H                 ZZ
-20ILA05200T12019005456  00314:67       C00307               23H                 ZZ
-30ILA05200T12019005456                          ZZ
-31ILA05200T12019005456  777000000100                         001                 ZZ
-31ILA05200T12019005456  777000000100                         002                 ZZ
-31ILA05200T12019005456  777000000100                         003                 ZZ
-33ILA05200T12019005456  001001                    ZZ
-33ILA05200T12019005456  002002                    ZZ
-33ILA05200T12019005456  003003                    ZZ
-50ILA05200T12019005456  001B                                        ZZ
-50ILA05200T12019005456  002I26 01161993FWNU                         ZZ
-50ILA05200T12019005456  003I45 06121974FWNU                         ZZ
-40ILA05200T12019005456  000             88                    ZZ
-41ILA05200T12019005456  000N                    ZZ
-99000019ZZ
-```
+ ```
+ 10ILA05200T12019005456                    06012019 20N                            ZZ
+ 20ILA05200T12019005456  00114:67       C00107               23H                 ZZ
+ 20ILA05200T12019005456  00214:67       C00207               23H                 ZZ
+ 20ILA05200T12019005456  00314:67       C00307               23H                 ZZ
+ 30ILA05200T12019005456                          ZZ
+ 31ILA05200T12019005456  777000000100                         001                 ZZ
+ 31ILA05200T12019005456  777000000100                         002                 ZZ
+ 31ILA05200T12019005456  777000000100                         003                 ZZ
+ 33ILA05200T12019005456  001001                    ZZ
+ 33ILA05200T12019005456  002002                    ZZ
+ 33ILA05200T12019005456  003003                    ZZ
+ 50ILA05200T12019005456  001B                                        ZZ
+ 50ILA05200T12019005456  002I26 01161993FWNU                         ZZ
+ 50ILA05200T12019005456  003I45 06121974FWNU                         ZZ
+ 40ILA05200T12019005456  000             88                    ZZ
+ 41ILA05200T12019005456  000N                    ZZ
+ 99000019ZZ
+ ```
 
