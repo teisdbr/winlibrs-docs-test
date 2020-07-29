@@ -28,7 +28,9 @@ In short, LIBRS is a reporting standard that is a superset of NIBRS (slightly mo
 * As of 2021 it will be the only way for Agencies to comply with their reporting requirements. 
 * We're very nice people to talk to. 
 
-### Requirements
+### Certification Requirements
+In order to have your data sent to the FBI through LIBRS, we require that Agencies meet a set of requirements in order to first become Certified. Certification implies that your Agency has been properly trained and thoroughly understands LIBRS/NIBRS Requirements, and how the Agency's data should be entered and stored in the RMS. 
+
 We are currently reviewing the requirements in order for an Agency to become LIBRS Certified. We will update this section when decisions have been made.
 
 
@@ -82,6 +84,23 @@ On Feb 1, the January Submission is made, and LIBRS Processes the Incident. If t
 Since the submission was made in both January and February, if you check the Error Reports they will say that one incident was submitted in both months. On January it will say it was rejected, and in February it will say it was accepted. This does not mean that two incidents have been submitted, only that the same incident was submitted twice, and on the second time overwrote the first record. However, since the Incident date is in January, the Scorecard will be updated to reflect that an Incident in January was fixed, and the score for that month will increase. 
 
 
+
+### How to Submit Data
+
+Data is currently submitted to the Louisiana Sheriff's Association (LSA) via ftp (https://ftp.lsa.org). If you're in need of assistance with the FTP Server, please contact the Louisiana Commission on Law Enforcement, and they will dispatch one of our techs.
+
+ Once logged in, you will be presented with a number of folders:
+
+* Analytics - This is the folder that receives the QAR data that LIBRS is able to ingest. Currently only Lemis IBR Agencies are using this feature.
+* Backups - No longer used
+* **Data - This is the folder in which you upload the LIBRS Flat File**
+* Failed - This is the folder where the Flat File will be moved to if there is an error in reading its contents (wrong encoding, incorrect line lengths, etc...)
+* NIBRS - This is the folder where NIBRS data will be generated for each submission period. Since LIBRS is a passthrough to NIBRS, this data will be used to submit data to the FBI on behalf of the Agency. 
+* OutOfSequence - This is the folder where the Flat File will be moved if it is found that the file bring processed is not the next Reporting Period that should be submitted according the the database. 
+* Processed - This is where Flat Files are moved to once they've been successfully ingesting by LIBRS. 
+* Reports - This is where automated reports will be generated and stored after a Flat File is processed. 
+* Scorecard - This is where the Scorecard will get generated and stored. The scorecard is a running total of the accepted and rejected Incidents for and Agency.
+* UCR Reports - Soon to be deprecated. LIBRS will automatically generate UCR submissions for Agencies based on their LIBRS data. This can be used by Agencies that are working towards Certification to submit their data to the State and FBI via UCR. 
 
 ____
 
@@ -144,6 +163,25 @@ ____
 
 ____
 
+## Flat Files and Troubleshooting
+
+### General Flat File Formatting Requirements
+
+Currently, LIBRS accepts data submissions in the form of a character delimited flat file. At this time we do not accept XML or JSON Format submissions. 
+
+Flat Files need to be sure to meet the following General Requirements:
+
+1. A single Segment 00 (Header) and 99 (Footer) need to be included at the start and end of the file; you do not need to wrap each incident with one. 
+2. There should be no blank lines present in the document, except for one blank line after the Footer Segment (Segment 99) (allowed, not required). Otherwise each line should have content on it. This includes the first line of the file being the Header Segment (Segment 00). 
+3. All lines must have an exact length of 150 characters, as specified in the Technical Specifications. The exception is the Footer Segment (Segment 99) should only be 10 characters long. 
+4. We don't have a restriction on file extensions, however we do have a restriction on file formats. We don't accept PDF, XML, JSON, HTML, RTF, etc... Each file you send us must be UTF-8 Encoded. The file extension doesn't matter, though. For instance if you'd like you could name the files *.librs if you like. Just so long as it's a UTF-8 Encoded file. 
+5. We allow CR, LF, and CRLF Line Endings. 
+6. The only thing that should get uploaded to the FTP Server are the Flat Files. They go into the Data Folder where they will be picked up for processing, and disseminated into one of three folders:
+   * Failed: This means that there was something drastically wrong with the formatting of the file, and LIBRS wasn't able to read the contents properly. 
+   * Out of Sequence: This means that the Reporting Period that the file represents isn't the next one in line to be submitted. We require a linear submission of Reporting Periods to ensure that Updates and Edits to existing incidents are able to be made successfully. 
+   * Processed: Everything went as expected, and the data was read properly and processed. 
+7. At this time we are unable to accept NIBRS text files. We are able to accept NIBRS Files in the IEPD Format, however. 
+
 ### How to Solve Errors on Flat Files
 
 Sometimes the errors LIBRS gives can be difficult to interpret. We're actively working on improving this so that Errors are easier to understand and correct. In general, though, here's how to fix Errors on your Error Summary:
@@ -163,7 +201,7 @@ Here's a couple of tips on things to check before you reach out for help:
 
 1. Does the Flat File have a Header and Footer Segment?
    * These are required Segments no matter if you're submitting 0 Incidents or 1000. 
-2. Are there blank lines between each of your segments?
+2. Are there blank lines between, before, or after each of your segments?
    * There shouldn't be. Take a look at the examples below. 
 3. Does the Flat File have padding to make each line 150 characters long?
    * Open it up in a Text Editor (Sublime Text, for instance) and verify that all the lines are the same length and the last selectable character is character number 151. Since the line starts on character 1 rather than character 0, being on character 151 means that you have 150 characters to the left of your cursor. 
