@@ -70,20 +70,20 @@ ___
 ## Administrative (10)
 ___
 
-  |           Data Element Number                  |Description of Data Element                     |Position(s)|Length|Format|
-  |:------------------------------------------------:|------------------------------------------------|:-----------:|:------:|:------:|
-  |[C1](./data-element-definitions#segment-descriptor-c1)                    |Segment Descriptor - **10**                     |   1-2     |  2   |  N  |
-  |[C5](./data-element-definitions#action-type-c5)                           |Action Type                                     |    3      |  1   |  A      |
-  |[1](./data-element-definitions#ori-number-1)                              |ORI Number                                      |   4-12    |  9   |  A      |
-  |[2](./data-element-definitions#incident-number-2)                         |Incident Number                                 |  13-24    |  12  |  A      |
-  |[L53](./data-element-definitions#location-of-incident-l53)                |Location of Incident (Geographical Coordinates) |  25-36    |  12  |  A/N    |
-  |[L54](./data-element-definitions#stationdivisionprecinct-identifier-l54)  |Station/Division/Precinct Identifier            |  37-42    |  6   |  A      |
-  |[3](./data-element-definitions#incident-datehour-3)                       |Incident Date/Hour                              |  43-53    |  11  |  A      |
-  |[4](./data-element-definitions#cleared-exceptionally-4)                   |Cleared Exceptionally                           |    54     |  1   |  A      |
-  |[5](./data-element-definitions#exceptional-cleared-date-5)                |Exceptional Clearance Date                      |  55-62    |  8   |  D      |
-  |\*\*                                            |Future Expansion Buffer                         |  63-82    |  20  |  A      |
-  |[C8](./data-element-definitions#end-of-segment-marker-c8)                 |End of Segment Marker                           |  83-84    |  2   |  A      |
-  |[C9](./data-element-definitions#padding-c9)                               |Padding                                         |  85-150   | \*\* |  A/N    |
+|           Data Element Number                  |Description of Data Element                     |Position(s)|Length|Format|
+|:------------------------------------------------:|------------------------------------------------|:-----------:|:------:|:------:|
+|[C1](./data-element-definitions#segment-descriptor-c1)                    |Segment Descriptor - **10**                     |   1-2     |  2   |  N  |
+|[C5](./data-element-definitions#action-type-c5)                           |Action Type                                     |    3      |  1   |  A      |
+|[1](./data-element-definitions#ori-number-1)                              |ORI Number                                      |   4-12    |  9   |  A      |
+|[2](./data-element-definitions#incident-number-2)                         |Incident Number                                 |  13-24    |  12  |  A      |
+|[L53](./data-element-definitions#location-of-incident-l53)                |Location of Incident (Geographical Coordinates) |  25-36    |  12  |  A/N    |
+|[L54](./data-element-definitions#stationdivisionprecinct-identifier-l54)  |Station/Division/Precinct Identifier            |  37-42    |  6   |  A      |
+|[3](./data-element-definitions#incident-datehour-3)                       |Incident Date/Hour                              |  43-53    |  11  |  A      |
+|[4](./data-element-definitions#cleared-exceptionally-4)                   |Cleared Exceptionally                           |    54     |  1   |  A      |
+|[5](./data-element-definitions#exceptional-cleared-date-5)                |Exceptional Clearance Date                      |  55-62    |  8   |  D      |
+|\*\*                                            |Future Expansion Buffer                         |  63-82    |  20  |  A      |
+|[C8](./data-element-definitions#end-of-segment-marker-c8)                 |End of Segment Marker                           |  83-84    |  2   |  A      |
+|[C9](./data-element-definitions#padding-c9)                               |Padding                                         |  85-150   | \*\* |  A/N    |
 
 <br>
 
@@ -371,6 +371,14 @@ ___
 
 ## Offender (40)
 
+
+
+More information and common questions and errors can be found on the LIBRS FAQ for this Segment 
+
+[here]: ./faq#offenders-segments-40-and-41
+
+
+
    Data Element Number                        | Description of Data Element              | Position(s)   | Length   | Format
   :------------------------------------------:|------------------------------------------|:-------------:|:--------:|:---------:
    [C1](./data-element-definitions#segment-descriptor-c1)               | Segment Descriptor - **40**              | 1-2           | 2        | N
@@ -408,7 +416,16 @@ ___
 <div class="newpage"></div>
 
 ### Offender Using/Gaming Motivation (41)
+
 ___
+
+
+
+More information and common questions and errors can be found on the LIBRS FAQ for this Segment 
+
+[here]: ./faq/offenders-segments-40-and-41
+
+
 
    Data Element Number                                    | Description of Data Element                           | Position(s)   | Length   | Format
   :------------------------------------------------------:|-------------------------------------------------------|:-------------:|:--------:|:---------:
@@ -434,6 +451,15 @@ ___
 <div class="newpage"></div>
 
 ## Victim (50)
+
+
+
+More information and common questions and errors can be found on the LIBRS FAQ for this Segment 
+
+[here]: ./faq#victims-segments-50-51-and-52
+
+
+
 ___
 
 **\*\*\* Indicated Cells are either New or Modified Data Elements beginning with LIBRS Spec 2.5 \*\*\***
@@ -475,6 +501,15 @@ ___
 <div class="newpage"></div>
 
 ## Victim Injury (51)
+
+
+
+More information and common questions and errors can be found on the LIBRS FAQ for this Segment 
+
+[here]: ./faq#victims-segments-50-51-and-52
+
+
+
 ___
 
    Data Element Number                | Description of Data Element   | Position(s)   | Length   | Format
@@ -505,6 +540,15 @@ ___
 <div class="newpage"></div>
 
 ## Victim/Offender Relation (52)
+
+
+
+More information and common questions and errors can be found on the LIBRS FAQ for this Segment 
+
+[here]: ./faq#victims-segments-50-51-and-52
+
+
+
 ___
 
    Data Element Number                            | Description of Data Element          | Position(s)   | Length   | Format

@@ -130,6 +130,8 @@ ____
     * One thing to note is that 'G - Gaming Activity Motivate for Crime' is not a NIBRS Reportable code. 
       * If more than one Motivation Type is supplied and one of them is 'G', then it will simply be left off the NIBRS Submission Data. 
       * If 'G' is the only Motivation Type supplied, then it will be converted to 'N - Not Applicable' when the data is sent to the FBI. 
+* NIBRS Reports allow for up to five (5) Bias/Motivation Types. Are we supposed to submit multiple Segment 40's to submit multiple Bias/Motivation Types?
+  * Unfortunately LIBRS only allows one Segment 40 (Offender) to be submitted for each Offender Sequence Number, and therefore we can only allow the submission of a Single DE 84 - Bias/Motivation type for each Offender. 
 
 ____
 
