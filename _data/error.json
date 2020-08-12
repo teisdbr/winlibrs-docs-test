@@ -1247,8 +1247,8 @@
         "err_no": 15019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
         "err_desc": {
-            "33": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person* and has a NIBRS Offense code of: {::nomarkdown}<ul><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>210</li><li>13A, 13B</li><li>90Z</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses.",
-            "31": "MUST be entered if Louisiana Revised Statute (6) has a NIBRS Offense code of : {::nomarkdown}<ul><li>13A</li><li>09A, 09B or 09C</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
+            "33": "CAN ONLY be entered if Louisiana Revised Statute (6) is a *Crime Against Person* and has a NIBRS Offense code of: {::nomarkdown}<ul><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>210</li><li>13A, 13B</li><li>90Z</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses.",
+            "31": "CAN ONLY be entered if Louisiana Revised Statute (6) has a NIBRS Offense code of : {::nomarkdown}<ul><li>13A</li><li>09A, 09B or 09C</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
         }
     },
     "15020": {
