@@ -592,7 +592,7 @@
         "err_desc": {
             "12": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Property': {::nomarkdown}<ul><li><b>250, 280</li><li>35A, 35B</li><li>370</li><li>39C</li><li>520</li><li>90A, 90Z</b></li></ul>{:/}",
             "13": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes: {::nomarkdown}<ul><li><b>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 210</li><li>520</b></li></ul>{:/}",
-            "13A": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes: {::nomarkdown}<ul><li><b>09A, 09B</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li></b></li></ul>{:/}"
+            "12A": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes: {::nomarkdown}<ul><li><b>09A, 09B</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li></b></li></ul>{:/}"
         }
     },
     "12020": {
