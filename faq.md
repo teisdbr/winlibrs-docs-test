@@ -102,6 +102,28 @@ Data is currently submitted to the Louisiana Sheriff's Association (LSA) via ftp
 * Scorecard - This is where the Scorecard will get generated and stored. The scorecard is a running total of the accepted and rejected Incidents for and Agency.
 * UCR Reports - Soon to be deprecated. LIBRS will automatically generate UCR submissions for Agencies based on their LIBRS data. This can be used by Agencies that are working towards Certification to submit their data to the State and FBI via UCR. 
 
+
+
+### How to Resubmit Data or Update Existing Incidents
+
+In LIBRS, you don't "Resubmit" Data. Instead, you submit corrections. While we accept A and M (Arrest Addition and Modification) Action Types, by far the easiest way to handle making updates is to submit a Delete, and then just send us back the whole Incident again. Deletes are just a single line, and they're exactly the same as Segment 10 (Administrative Segment) except for the fact that you have a "D" instead of an "I" in the Action type. While we *can* do A's and M's, for the sake of consistency in submitting we highly recommend the aforementioned method. 
+
+So what do you do when you'd submitted a Month and it turns out there are a ton of errors on it? From a User's Point-of-View, they should be able to go back into the RMS and make the required changes to the Incidents that had errors. From a Vendor's Point-of-View, a LIBRS-Compliant RMS should be able to manage when corrections need to be generated and on which monthly submission they should be included on. 
+
+For Example, Agency A has not yet submitted their April, May, and June of 2020 LIBRS Files. However, through those months, their staff have made updates in June to an Incident that occurred in April. The best way to handle this is to hold off sending us the data on the April Submission, and just send it along in June. 
+
+As another example, let's say Agency B has submitted April and May, but not June of 2020. They also made revisions in June to an incident that occurred in April. Therefore they should also include the Incident on their June Submission, but they should first include a Delete Segment so LIBRS doesn't complain that the incident already exists in the database. 
+
+
+
+An easy way to keep track of this would be to implement a "Last LIBRS-Significant Update" date along with a "Submitted" boolean in your database. The "Last LIBRS-Significant Update" field should be updated to the current date when a LIBRS-Relevant update is made to the Incident (EG: A LIBRS Data Element's value has changed). From there you can easily extrapolate if you need to :
+
+1. Perform an initial submission of the Incident. 
+2. Don't need to do anything because the Incident was already submitted and there have been no changes made to it. 
+3. Need to generate a Delete and resubmit the Incident because changes were made to it after it as initially submitted. 
+
+As a reminder, to submit a Month in LIBRS, that month needs to be over. So the easiest way to keep track of what needs to be resubmitted and when would be to keep track of when it was last updated. It doesn't matter if you send us the same incident on each Month, so long as you're sending the Delete Segment to accompany them we'll process it all the same. 
+
 ____
 
 <br>
@@ -110,9 +132,8 @@ ____
 
 ### Offenses (Segment 20)
 
-For Segment 20 (Offense), there is a Victim Sequence Number. Does that mean there can be multiple Segment 20's per incident and that each victim (Segment 50) needs to have a Segment 20 associated with them?
-
-* Yes, because each Offender (Segment 40) can be implicated in multiple Offenses and can be related to multiple Victims, each Offense (Segment 20) must be tied to one (1) Victim Sequence Number. This means if you have three (3) Victims of the same offense in your RMS, you will require three Offense Segments. (Segment 20)
+* For Segment 20 (Offense), there is a Victim Sequence Number. Does that mean there can be multiple Segment 20's per incident and that each victim (Segment 50) needs to have a Segment 20 associated with them?
+  * Yes, because each Offender (Segment 40) can be implicated in multiple Offenses and can be related to multiple Victims, each Offense (Segment 20) must be tied to one (1) Victim Sequence Number. This means if you have three (3) Victims of the same offense in your RMS, you will require three Offense Segments. (Segment 20)
 
 ____
 
