@@ -982,7 +982,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["90031"] -%}
 3G | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12020"] -%}
-4 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
+4 | {{error.err_desc["12A"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
