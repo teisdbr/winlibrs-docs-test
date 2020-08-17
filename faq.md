@@ -159,14 +159,12 @@ ____
 ### Victims (Segments 50, 51, and 52)
 
 * If there are multiple injuries, does that mean there will be multiple Segment 51's for each Segment 50?
-
   * Yes, you can include up to five (5) Segment 51's (Victim Injury) as needed. However, the selected Injury types will need to be valid for the NIBRS Offense Code. 
     * For example, the two of the valid Injury Types for NIBRS 13A are 'O - Other Major Injury', and 'U - Unconsciousness', while 'M - Apparent Minor Injury' is not. 
       * If you were to send us two Segment 51's for the same Victim Sequence number where the Injury Types are 'O' and 'U', we **would not reject the incident**. 
       * However, if one of those Segment 51's were to have an Injury Type of 'M', instead, then we would reject it because that's not a valid Injury Type for the NIBRS 13A, even though the other Injury Type is valid.  
 
   
-
 * If there are multiple Victim/Offender Relationships, will there be multiple Segment 52's for each Segment 50?
 
   * Yes, You'll need to add a Segment 52 for each Victim/Offender Relationship. 
@@ -184,6 +182,9 @@ ____
 
       Where LAXXXXXXXX is the Agency's ORI Number, and %% is the Victim/Offender Relationship Type. The first three Segments relate Victim 001 to each of the Offenders, and the last three Segments related Victim 002 to each of the Offenders. 
 
+* Is there a limit to the number of Victims that can be associated with an Offender?
+  * No, but to help prevent us from making an incorrect assumption we would encourage you to follow the NIBRS Requirements on that one. They limit it to 10, so to prevent us from interpreting that incorrectly it might be best for you to send us exactly what you would want to be passed to the FBI should you exceed that number. 
+  
 ____
 
 ## Flat Files and Troubleshooting
