@@ -3087,7 +3087,7 @@
         "err_no": 90040,
         "err_message": "WARNING: OFFENDER AGE, SEX OR RACE MUST BE KNOWN TO HAVE OFFENDER SEQUENCE NUMBER OTHER THAN '000'",
         "seq_desc": {
-            "14": "WARNING: OFFENDER AGE, SEX OR RACE MUST BE KNOWN TO HAVE OFFENDER SEQUENCE NUMBER OTHER THAN '000'"
+            "14": "This occurs when Age, Sex, and Race are all sent as Unknown."
         }
     }
 }
