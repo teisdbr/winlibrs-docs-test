@@ -18,8 +18,6 @@ However, UCR has since been found to be not nearly as descriptive as NIBRS is ab
 
 In short, LIBRS is a reporting standard that is a superset of NIBRS (slightly more restrictive in some places) that allows for agencies to simultaneously meet their State and Federal reporting requirements. Since reporting to the Federal Government is crucial in securing funding for LEA's in the state, it's critical that Officers and Deputies are properly trained and equipped to use their Records Management Systems (RMS) to accurately track Incidents in their jurisdiction. 
 
-
-
 ### Benefits
 * Error Checking and Validation via an API (https://validator.librs.org).
   * Note: We're currently working on a way to open that up to Vendors so they can implement error checking directly in their RMS. 
@@ -32,8 +30,6 @@ In short, LIBRS is a reporting standard that is a superset of NIBRS (slightly mo
 In order to have your data sent to the FBI through LIBRS, we require that Agencies meet a set of requirements in order to first become Certified. Certification implies that your Agency has been properly trained and thoroughly understands LIBRS/NIBRS Requirements, and how the Agency's data should be entered and stored in the RMS. 
 
 We are currently reviewing the requirements in order for an Agency to become LIBRS Certified. We will update this section when decisions have been made.
-
-
 
 ### Reports
 Submitting through LIBRS means that for each submission period there will be a number of reports that get generated for your use automatically:
@@ -89,7 +85,9 @@ Since the submission was made in both January and February, if you check the Err
 
 Data is currently submitted to the Louisiana Sheriff's Association (LSA) via ftp (https://ftp.lsa.org). If you're in need of assistance with the FTP Server, please contact the Louisiana Commission on Law Enforcement, and they will dispatch one of our techs.
 
- Once logged in, you will be presented with a number of folders:
+### FTP File Structure
+
+Once logged in, you will be presented with a number of folders:
 
 * Analytics - This is the folder that receives the QAR data that LIBRS is able to ingest. Currently only Lemis IBR Agencies are using this feature.
 * Backups - No longer used
@@ -102,7 +100,15 @@ Data is currently submitted to the Louisiana Sheriff's Association (LSA) via ftp
 * Scorecard - This is where the Scorecard will get generated and stored. The scorecard is a running total of the accepted and rejected Incidents for and Agency.
 * UCR Reports - Soon to be deprecated. LIBRS will automatically generate UCR submissions for Agencies based on their LIBRS data. This can be used by Agencies that are working towards Certification to submit their data to the State and FBI via UCR. 
 
+LIBRS looks in the Data folder for new files to process. Every 5 minutes LIBRS kicks off a new check, and will process whatever is in the Data folders. Once LIBRS is done processing each file in there, it will move them to one of three folders:
+1. If the file was successfully processed, and the records added to our database, it is then moved to the "Processed" folder. 
+  * Note: This doesn't mean your file had no errors. Just that there were significant formatting or data errors that caused LIBRS to be unable to continue processing the file's data. 
+2. If the file that is next in line to be processed according to the database (EG: June 2019 has been submitted, LIBRS is expecting to find July 2019 next) is not present, the files will be moved to the "Out of Sequence" folder. 
+3. If there are major formatting or data issues with the file that caused LIBRS to be unable to process it without having a full-blown existential crisis, then the file will be moved to the "Failed" folder. 
 
+It should also be noted that you can upload as many files as you like at once, so long as the expected Sequence is maintained. 
+* For example, if the last month processed by LIBRS was January 2020, you can upload February through July all at once (though we would certainly hope you're submitting more frequently than that...). However, if you're missing your file for March LIBRS will process February and move it to the Processed folder, and the remaining files will be placed in Out of Sequence. 
+* You're welcome to retrieve the files from Out of Sequence and reprocess them, but just know that until LIBRS sees that March file those other files are going to continue being Out of Sequence. 
 
 ### How to Resubmit Data or Update Existing Incidents
 
