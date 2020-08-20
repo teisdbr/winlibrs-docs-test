@@ -3082,5 +3082,12 @@
         "seq_desc": {
             "14": "WHEN THE OFFENSE WITH NIBRS = 90A; THE PORPERTY LOSS TYPE (14) MUST BE NONE (1) OR UNKNOWN (8)"
         }
+    },
+    "90040": {
+        "err_no": 90040,
+        "err_message": "WARNING: OFFENDER AGE, SEX OR RACE MUST BE KNOWN TO HAVE OFFENDER SEQUENCE NUMBER OTHER THAN '000'",
+        "seq_desc": {
+            "14": "WARNING: OFFENDER AGE, SEX OR RACE MUST BE KNOWN TO HAVE OFFENDER SEQUENCE NUMBER OTHER THAN '000'"
+        }
     }
 }
