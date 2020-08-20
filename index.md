@@ -40,6 +40,13 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-08-20
+* Made a number of improvements to LIBRS Processing in General. 
+   * Cleared up confusing wording and placements on the Error Summary.
+   * Went through and removed over 6000 lines of code for more optimal processing of files. 
+   * **FIXED THE 23H/240 BUG!!**
+     * We have reprocessed everyone in the "Prod" Environment that experienced this error, and will follow up with Certified Agencies soon. 
+
 #### 2020-07-28
 
 * Added "How to Solve Errors in Flat Files" and "What's Wrong with my Flat File" to the <a href="./faq">FAQ</a>.
