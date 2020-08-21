@@ -40,17 +40,42 @@ In order to have your data sent to the FBI through LIBRS, we require that Agenci
 
 We are currently reviewing the requirements in order for an Agency to become LIBRS Certified. We will update this section when decisions have been made.
 
+### Certification Process
+
+To get Certified in LIBRS your agency will need to first contact the Louisiana Commission on Law Enforcement, and notify them of your intent to begin the LIBRS Certification Process. You can find the list of contacts at https://lcle.la.gov. Your agency will be contacted about setting up a training session with LCLE for how to use LIBRS, interpret Error Summaries, and gain a general overview of how everything works together. 
+
+Next, FTP Credentials will be generated for you by the LIBRS Administrator. These are going to be required in order to actually start submitting data to the State. 
+
+When starting out, your Agency will be in "Test", or Environment "T". In this environment nothing is actually saved to our database, but reports are generated as usual. There is no restriction on the Sequence of the files you submit (details below), so you can work at your leisure on whichever months are causing the most issues for you. 
+
+When your agency reaches an Incident Acceptance Rate of 85% or more, you will be moved to the Production, or "P" Environment. Despite its name, that's not the last stop. In this environment, everything behaves exactly the same as it would if your agency was Certified, except we don't extract your data and send it along to the FBI with our NIBRS Submissions. 
+
+Your agency will remain in "P" while LCLE Staff review your previous submissions for accuracy and completeness. They will be in touch frequently to offer advice and guidance on how to resolve errors, and monitoring the accuracy of your agency's submissions until you achieve the requirements laid out under "Certification Requirements". At that point your agency will become LIBRS Certified, and be moved to the Certified, or "C" Environment. The data that you submit will be passed along to the FBI, and your agency will be monitored for continued accuracy in its future LIBRS Submissions. 
+
 
 ## How to Use LIBRS
 
 ### Getting Started
-The best way to get started with LIBRS is to start generating LIBRS Flat Files and testing them out at https://validator.librs.org. That is an free tool that mirrors the Production LIBRS Environment, and will check and return any and all errors that your file has in it. It's a great way to test both individual incidents, and large batches of incidents for errors. 
+The best way to get started with LIBRS is to start generating LIBRS Flat Files and testing them out at https://validator.librs.org. That is an free tool that mirrors the Production LIBRS Environment, and will check and return any and all errors that your file has in it. It's a great way to test both individual incidents, and large batches of incidents for errors. Users can simply drag and drop their Flat Files into the interface and it will return a LIBRS Error Summary. 
+
+Using the Validator Tool does not constitute participation in the LIBRS Program. Running files through the validator site **does not** mean that you qualify as testing. The Validator Tool is meant as a means of getting immediate feedback on errors before submitting Flat Files to LIBRS. The Validator Tool does not save any data, other than a log of the IP Addresses that hit it. We do not consider this log when determining if an agency has been actively testing in LIBRS. The only way to participate in LIBRS is to submit files through the FTP Server (details below). 
 
 The tool is open to everyone, and is also accessible as an API at https://api.librs.org. Here's endpoints that you can use and their definitions:
+
+| Endpoint              | Method | Body                                                         | Returns                                                      |
+| --------------------- | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| /api/validate/rtf     | POST   | JSON Formatted LIBRS Object<br /><br />{"LibrsFlatFileName": null, "LibrsFlatFileContents": %File Contents%} | JSON File that contains the Error Summary formatted as an RTF File. |
+| /api/validate/txt     | POST   | JSON Formatted LIBRS Object<br /><br />{"LibrsFlatFileName": null, "LibrsFlatFileContents": %File Contents%} | Unformatted Plain Text Error Summary                         |
+| /api/lrs/version      | GET    | Empty                                                        | Date and Time on which the last update to the validator's LRS and validation definitions were made. |
+| /api/lrs/definitions  | GET    | Empty                                                        | XML File containing the LIBRS Table of LRS Codes. <br /><br />Note that the NIBRS Code listed here is the deprecated "Default NIBRS" Code. The full list of NIBRS Codes available for each Statute should be found using the LRS Master List |
+| /api/lrs/requirements | GET    | Empty                                                        | XML File containing the validations that are present on the LIBRS validation table. These are what LIBRS uses as definitions for how it should validate certain offenses. |
+
+Please note that we cannot guarantee the availability of the validation tool in the future; implement its usage into your program at your own risk. Additionally for the /api/validate endpoints, "LibrsFlatFileContents" should be formatted as a single line with /r/n line endings, and include all of the trailing spaces.
 
 
 
 ### Reports
+
 Submitting through LIBRS means that for each submission period there will be a number of reports that get generated for your use automatically:
 
 1. Error Summary - This is a broad-strokes look at the accuracy of your submission. It shows you the errors and warnings present, and gives you an overall total of how well the submission did by outlining the Accepted and Rejected Incidents. 
@@ -189,7 +214,6 @@ ____
       * If you were to send us two Segment 51's for the same Victim Sequence number where the Injury Types are 'O' and 'U', we **would not reject the incident**. 
       * However, if one of those Segment 51's were to have an Injury Type of 'M', instead, then we would reject it because that's not a valid Injury Type for the NIBRS 13A, even though the other Injury Type is valid.  
 
-  
 * If there are multiple Victim/Offender Relationships, will there be multiple Segment 52's for each Segment 50?
 
   * Yes, You'll need to add a Segment 52 for each Victim/Offender Relationship. 
