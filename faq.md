@@ -18,7 +18,7 @@ However, UCR has since been found to be not nearly as descriptive as NIBRS is ab
 
 In short, LIBRS is a reporting standard that is a superset of NIBRS (slightly more restrictive in some places) that allows for agencies to simultaneously meet their State and Federal reporting requirements. Since reporting to the Federal Government is crucial in securing funding for LEA's in the state, it's critical that Officers and Deputies are properly trained and equipped to use their Records Management Systems (RMS) to accurately track Incidents in their jurisdiction. 
 
-### Benefits
+### Benefits of Using LIBRS
 * Error Checking and Validation via an API (https://validator.librs.org).
   * Note: We're currently working on a way to open that up to Vendors so they can implement error checking directly in their RMS. 
 * No need for Agencies to learn NIBRS standards, or purchase and RMS that has to know how to report to both the State and FBI. 
@@ -26,10 +26,29 @@ In short, LIBRS is a reporting standard that is a superset of NIBRS (slightly mo
 * As of 2021 it will be the only way for Agencies to comply with their reporting requirements. 
 * We're very nice people to talk to. 
 
+### Can I Buy a LIBRS Certified RMS?
+Short answer? No. 
+
+LIBRS Certification has as much to do with the RMS as it does the Users of the RMS. Certainly your Agency will require an RMS that is capable to generating the Submission Files that LIBRS requires to process your data, but there are no "Certified RMSes" for LIBRS; anyone that tells you that is being untruthful. 
+
+We do not maintain a list of Vendors or Softwares that can be purchased by an Agency that already has the capability of generating LIBRS Submission Files, nor do we verify any claims for vendors that they are "LIBRS Compliant". It is impossible for us to verify the claims of 100% compliance for all vendors, as it's unlikely that we will ever see 100% of all possible reporting cases from all vendors. Therefore, it is as much the responsibility of the RMS to generate the Submission Files properly as it is the Usse of the RMS to input the data for those files properly. 
+
+## LIBRS Certification
+
 ### Certification Requirements
 In order to have your data sent to the FBI through LIBRS, we require that Agencies meet a set of requirements in order to first become Certified. Certification implies that your Agency has been properly trained and thoroughly understands LIBRS/NIBRS Requirements, and how the Agency's data should be entered and stored in the RMS. 
 
 We are currently reviewing the requirements in order for an Agency to become LIBRS Certified. We will update this section when decisions have been made.
+
+
+## How to Use LIBRS
+
+### Getting Started
+The best way to get started with LIBRS is to start generating LIBRS Flat Files and testing them out at https://validator.librs.org. That is an free tool that mirrors the Production LIBRS Environment, and will check and return any and all errors that your file has in it. It's a great way to test both individual incidents, and large batches of incidents for errors. 
+
+The tool is open to everyone, and is also accessible as an API at https://api.librs.org. Here's endpoints that you can use and their definitions:
+
+
 
 ### Reports
 Submitting through LIBRS means that for each submission period there will be a number of reports that get generated for your use automatically:
@@ -85,7 +104,7 @@ Since the submission was made in both January and February, if you check the Err
 
 Data is currently submitted to the Louisiana Sheriff's Association (LSA) via ftp (https://ftp.lsa.org). If you're in need of assistance with the FTP Server, please contact the Louisiana Commission on Law Enforcement, and they will dispatch one of our techs.
 
-### FTP File Structure
+#### FTP File Structure
 
 Once logged in, you will be presented with a number of folders:
 
@@ -110,7 +129,7 @@ It should also be noted that you can upload as many files as you like at once, s
 * For example, if the last month processed by LIBRS was January 2020, you can upload February through July all at once (though we would certainly hope you're submitting more frequently than that...). However, if you're missing your file for March LIBRS will process February and move it to the Processed folder, and the remaining files will be placed in Out of Sequence. 
 * You're welcome to retrieve the files from Out of Sequence and reprocess them, but just know that until LIBRS sees that March file those other files are going to continue being Out of Sequence. 
 
-### How to Resubmit Data or Update Existing Incidents
+#### How to Resubmit Data or Update Existing Incidents
 
 In LIBRS, you don't "Resubmit" Data. Instead, you submit corrections. While we accept A and M (Arrest Addition and Modification) Action Types, by far the easiest way to handle making updates is to submit a Delete, and then just send us back the whole Incident again. Deletes are just a single line, and they're exactly the same as Segment 10 (Administrative Segment) except for the fact that you have a "D" instead of an "I" in the Action type. While we *can* do A's and M's, for the sake of consistency in submitting we highly recommend the aforementioned method. 
 
