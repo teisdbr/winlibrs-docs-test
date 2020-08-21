@@ -1071,7 +1071,7 @@
 		"name": "VALUE OF PROPERTY",
 		"definition": "The total dollar value of the property burned, counterfeited, stolen, etc., during and incident",
 		"length": "9",
-		"format": "MMDDYYYY",
+		"format": "NNNNNNNNN",
 		"comment": "Values are also entered for Seized Drugs and Narcotics. (LIBRS Only)",
 		"subsection": [{
 			"title": "",

@@ -2840,9 +2840,9 @@
     },
     "84607": {
         "err_no": 84607,
-        "err_message": "WHEN LRS = 35 A, DE 14 = '6' AND DE 15 = '10', THEN DE 16, 20, 21 AND 22 MUST HAVE A VALID CODE.",
+        "err_message": "WHEN LRS = 35 A, DE 14 = '6' AND DE 15 = '10', THEN DE 20, 21 AND 22 MUST HAVE A VALID CODE.",
         "mandatory": {
-            "4s7": "When an Incident contains an offense of DRUG/NARCOTIC VIOLATION (NIBRS Code 35A) and Type of Property Loss (14) is Seized '6', and Property Description (15) is Drugs/Narcotics '10', then Value of Property (16), Suspected Drug Type (20), Estimated Drug Quantity (21) and Type Drug Measurement (22) MUST all contain valid values."
+            "4s7": "When an Incident contains an offense of DRUG/NARCOTIC VIOLATION (NIBRS Code 35A) and Type of Property Loss (14) is Seized '6', and Property Description (15) is Drugs/Narcotics '10', then Suspected Drug Type (20), Estimated Drug Quantity (21) and Type Drug Measurement (22) MUST all contain valid values."
         }
     },
     "84612": {
