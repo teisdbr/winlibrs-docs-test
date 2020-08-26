@@ -15,9 +15,13 @@ ____
 
 <br>
 
+#### Please note that LRS Codes need to be submitted exactly as written on this page. The only available NIBRS Codes you can submit with are listed in the "NIBRS" field. Please contact us if you'd like to get an LRS Code or NIBRS Mapping added. 
+
+<br>
+
 ## Current and Active Master LRS Code List
 
-#### Last Updated July 9th, 2020
+#### Last Updated August 25th, 2020
 
 <table>
 <thead style="font-size: 14px;">
