@@ -3089,5 +3089,12 @@
         "seq_desc": {
             "14": "This occurs when Age, Sex, and Race are all sent as Unknown. It's intended to warn the User that they may be missing some information they did not intend to leave out."
         }
+    },
+    "90041": {
+        "err_no": 90040,
+        "err_message": "TYPE PROPERTY LOSS CODE IS NOT VALID WITH THE OFFENSES SUBMITTED",
+        "err_desc": {
+            "31": "A Property Loss Type of '1 - None' is invalid for the following NIBRS Codes: {::nomarkdown}<ul><li>100</li><li>220, 280</li><li>35A, 35B</li><li>510</li><li>90A, 90Z</li></ul>{:/}A Property Loss Type of '8 - Unkonwn' is invalid for the following NIBRS Codes: {::nomarkdown}<ul><li>100</li><li>220</li><li>510</li><li>90A, 90Z</li></ul>{:/}"
+        }
     }
 }
