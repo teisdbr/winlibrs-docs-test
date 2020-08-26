@@ -19,12 +19,29 @@ ____
 
 #### Last Updated July 9th, 2020
 
+<script src="https://kit.fontawesome.com/yourcode.js"></script>
+<script type="text/javascript">$(".rotate").click(function(){
+    $(this).toggleClass("down"); 
+});</script>
+
 <table>
 <thead style="font-size: 14px;">
 	<tr>
+        <th style="padding-left: 12px; padding-right:3px;">Details</th>
 		<th style="padding-left: 8px; padding-right:3px;">LRS #</th>
 		<th style="padding-left: 0px; padding-right:3px;">LRS Description</th>
-		<th style="text-align: center;">LRank</th>
+	</tr>
+</thead>
+{% assign active_lrs = site.data.lrs-codes | sort:"LRS" %}
+<tbody>
+{% for lrs in active_lrs %}
+{% if lrs.Expiration_Date == "3000-01-01" %}
+	<tr data-toggle="collapse" data-target="#accordion{{ lrs.LRS }}" class="accordion-toggle" style="padding-top:0px; padding-bottom:0px;">
+        <td><i class="fas fa-chevron-right"></i></td>
+		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
+		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td></tr><tr>
+    <td colspan = "3" class="hiddenRow"><div class="accordion-body collapse" id ="accordion{{ lrs.LRS }}"><table><thead><tr>
+        <th style="text-align: center;">LRank</th>
 		<th style="text-align: center;">UCR</th>
 		<th style="text-align: center;">NIBRS</th>
 		<th style="text-align: center;">Group</th>
@@ -32,16 +49,7 @@ ____
         <th style="text-align: center; white-space: nowrap">1A Index</th>
         <th style="text-align: center; white-space: nowrap">Index Class</th>
         <th style="text-align: center; white-space: nowrap">UCR Index</th>
-        <th style="text-align: center; white-space: nowrap">LIBRS Index</th>
-	</tr>
-    </thead>
-    <tbody style="font-size: 13px;">
-{% assign active_lrs = site.data.lrs-codes | sort:"LRS" %}
-{% for lrs in active_lrs %}
-{% if lrs.Expiration_Date == "3000-01-01" %}
-	<tr>
-		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
-		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td>
+        <th style="text-align: center; white-space: nowrap">LIBRS Index</th></tr></thead><tbody style="font-size: 13px;"><tr>
 		<td style="text-align: center;">{{ lrs.Lrank }}</td>
 		<td style="text-align: center;">{{ lrs.UCR }}</td>         
         <td style="text-align: center; min-width: 120px;">{% for values in lrs.Available_NIBRS %}
@@ -52,12 +60,17 @@ ____
         <td style="text-align: center;">{{ lrs.OneA_Index }}</td>
         <td style="text-align: center; white-space: nowrap">{{ lrs.Index_Class }}</td>
         <td style="text-align: center; white-space: nowrap">{{ lrs.UCR_Index }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.LIBRS_Index }}</td>
-    </tr>
-    {% endif %}
+        <td style="text-align: center; white-space: nowrap">{{ lrs.LIBRS_Index }}</td></tr>
+    </tbody>
+    </table>
+    </div>
+    </td>
+    </tr> 
+    {% endif %}  
 {% endfor %}
-</tbody>
+</tbody>  
 </table>
+
 
 ___
 
