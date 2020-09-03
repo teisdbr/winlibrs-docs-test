@@ -2931,7 +2931,7 @@
     },
     "90010": {
         "err_no": 90010,
-        "err_message": "FOR RAPE OFFENSES (11 A OR 36 B), AGE OF OFFENDER MUST BE '18' OR GREATER"
+        "err_message": "FOR 36B, AGE OF OFFENDER MUST BE '18' OR GREATER"
     },
     "90011": {
         "err_no": 90011,
