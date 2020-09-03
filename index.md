@@ -12,7 +12,9 @@ ____
 #### Use the links below, or the side menu to get started. This site contains the following information:
 
 ___
-
+  
+- ### <a href="./faq">Frequently Asked Questions</a>
+  - #### Questions we've gotten from Vendors and Users about LIBRS that might be helpful to others. A great place to get started learning about LIBRS!
 
 - ### <a href="./librs-spec">Technical Specification Documentation</a>
   - #### Information about the specifications of each of the LIBRS Segments, how they're constructed, error messages associated with them, examples, and other requirements.
@@ -29,11 +31,6 @@ ___
   
 - ### <a href="./mandatories">LIBRS/NIBRS Mandatories</a>
   - #### Groupings of multiple LIBRS Data Elements and their required values when certain Data Elements are present with particular NIBRS Submissions. 
-  
-- ### <a href="./faq">Frequently Asked Questions</a>
-
-
-  - #### Questions we've gotten from Vendors and Users about LIBRS that might be helpful to others. 
 
 ___
 
