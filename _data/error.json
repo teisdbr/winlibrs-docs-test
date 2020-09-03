@@ -1148,6 +1148,15 @@
             "36": "For a Justifiable Homicide (NIBRS 09C), at least one of the Offenders must have 'known' information for Age, Sex, and Race. Consequently, Unknown ('000') is not valid as an Offender Sequence Number (36)."
         }
     },
+     "14060": {
+        "err_no": 14060,
+        "err_message": "VICTIM'S SEX CANNOT BE SAME AS ALL OFFENDERS FOR OFFENSES OF '11A'",
+         "err_desc": {
+             "27": "When the Offense Code is 11A, at least one of the Offenders must be a different sex than the Victim(s). If all Victims and Offenders are the same sex, 11B, 11C, or 11D may be the offense code you actually want to use.",
+             "38": "When the Offense Code is 11A, at least one of the Offenders must be a different sex than the Victim(s). If all Victims and Offenders are the same sex, 11B, 11C, or 11D may be the offense code you actually want to use."
+         }
+         
+    },
     "14061": {
         "err_no": 14061,
         "err_message": "SEGMENT 41(OFFENDER USING) SEGMENT MISSING;OR, NO SEGMENT 41 TO MATCH EXISTING SEGMENT 40"
@@ -1982,7 +1991,7 @@
         "err_no": 22100,
         "err_message": "AGE MUST BE '01' - '17' FOR JUVENILE OFFENSES",
         "err_desc": {
-            "47": "When Juvenile Qualifiers are used, Age of Arrestee (47) must be '01' thru '17' for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
+            "47": "When Juvenile Qualifiers are used, Age of Arrestee (47) must be '01' thru '17' (this includes 17) for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
         }
     },
     "22105": {
@@ -2922,7 +2931,7 @@
     },
     "90010": {
         "err_no": 90010,
-        "err_message": "FOR RAPE OFFENSES (11 A OR 36 B), AGE OF OFFENDER MUST BE '17' OR GREATER"
+        "err_message": "FOR RAPE OFFENSES (11 A OR 36 B), AGE OF OFFENDER MUST BE '18' OR GREATER"
     },
     "90011": {
         "err_no": 90011,
