@@ -40,6 +40,11 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-09-03
+* Changed up the error message for 22100 because it was wrong. It now reads that for Juvenile Offenses the offender age must be between (and including) 1 and 17.
+* Added more context for Error 14060.
+* Added missing validations for a number of 90Z Crimes Against Persons. 
+
 #### 2020-08-20
 * Made a number of improvements to LIBRS Processing in General. 
    * Cleared up confusing wording and placements on the Error Summary.
