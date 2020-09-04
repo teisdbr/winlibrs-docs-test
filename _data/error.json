@@ -2925,10 +2925,6 @@
             "40": "A Statutory Rape (NIBRS Code 36B) MUST be classified as a MISDEMEANOR (LRS 14:80.1 Misdemeanor Carnal Knowledge of a Juvenile) if the Offender is at least two (2), but less than four (4) years older than the Victim."
         }
     },
-    "90009": {
-        "err_no": 90009,
-        "err_message": "FOR FIRST DEGREE RAPE OFFENSES, AGE OF VICTIM CANNOT BE '13', '14', '15', OR '16'. CONSIDER REPORTING THE ASSOCIATED OFFENSE AS A STATUTORY RAPE (36B)"
-    },
     "90010": {
         "err_no": 90010,
         "err_message": "FOR 36B, AGE OF OFFENDER MUST BE '18' OR GREATER"
@@ -2937,7 +2933,7 @@
         "err_no": 90011,
         "err_message": "MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE (14:80.1) OFFENSES ARE APPLICABLE ONLY WHEN THE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM",
         "seq_desc": {
-            "40": "A Statutory Rape (NIBRS Code 36B) MUST be classified as a FELONY (LRS 14:80 Carnal Knowledge of a Juvenile) if the Offender is four (4) or more years older than the Victim"
+            "40": "Statutory Rape is defined as consentual sexual relations between two people where the Offender is 17 or older, and the Victim is no more than 4 years younger than the Offender. In Louisiana, if the Victim is at least 2 years, but no more than 4 years younger than the Offender, then it should be reported as LRS 14:80.1. If"
         }
     },
     "90012": {
