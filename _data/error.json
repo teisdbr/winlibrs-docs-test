@@ -1481,9 +1481,9 @@
     },
     "15081": {
         "err_no": 15081,
-        "err_message": "STATUTORY RAPE OFFENSES REQUIRE A VICTIM WHO IS AT LEAST 13 YEARS OF AGE BUT NO OLDER THAN 16 YEARS OLD",
+        "err_message": "STATUTORY RAPE OFFENSES REQUIRE A VICTIM WHO IS AT LEAST 13 YEARS OF AGE BUT NO OLDER THAN 17 YEARS OLD",
         "err_desc": {
-            "26": "Statutory Rape Victim's Age (26) must be 12 years to 16 years."
+            "26": "Statutory Rape Victim's Age (26) must be 13 years to 17 years."
         }
     },
     "15096": {
