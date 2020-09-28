@@ -2928,9 +2928,9 @@
     },
     "90011": {
         "err_no": 90011,
-        "err_message": "MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE (14:80.1) OFFENSES ARE APPLICABLE ONLY WHEN THE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM",
+        "err_message": "WARNING - MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE (14:80.1) OFFENSES ARE APPLICABLE ONLY WHEN THE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM",
         "seq_desc": {
-            "40": "Statutory Rape is defined as consentual sexual relations between two people where the Offender is 17 or older, and the Victim is no more than 4 years younger than the Offender. In Louisiana, if the Victim is at least 2 years, but no more than 4 years younger than the Offender, then it should be reported as LRS 14:80.1. If"
+            "40": "Statutory Rape is defined as consentual sexual relations between two people where the Offender is 17 or older, and the Victim is no more than 4 years younger than the Offender. In Louisiana, if the Victim is at least 2 years, but no more than 4 years younger than the Offender, then it should be reported as LRS 14:80.1. The FBI does not have this requirement for NIBRS, however, therefore we will still accept the Incident."
         }
     },
     "90012": {
@@ -2939,9 +2939,9 @@
     },
     "90013": {
         "err_no": 90013,
-        "err_message": "STATUTORY RAPE OFFENSES REQUIRE OFFENDERS TO BE AT LEAST TWO YEARS OLDER THAN THEIR VICTIMS",
+        "err_message": "WARNING - STATUTORY RAPE OFFENSES REQUIRE OFFENDERS TO BE AT LEAST TWO YEARS OLDER THAN THEIR VICTIMS",
         "seq_desc": {
-            "40": "The Offender must be two years older than the Victim in order for the offense to qualify as Statutory Rape."
+            "40": "The Offender should be two years older than the Victim in order for the offense to qualify as Statutory Rape in Louisiana, however the FBI does not have this requirement, so the incident will still be accepted.."
         }
     },
     "90014": {
