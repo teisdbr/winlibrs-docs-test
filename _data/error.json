@@ -2920,14 +2920,11 @@
     },
     "90008": {
         "err_no": 90008,
-        "err_message": "FOR STATUTORY RAPE OFFENSES WHERE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM, THE ASSOCIATED OFFENSE IS REQUIRED TO BE REPORTED AS MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE (14:80.1).",
-        "seq_desc": {
-            "40": "A Statutory Rape (NIBRS Code 36B) MUST be classified as a MISDEMEANOR (LRS 14:80.1 Misdemeanor Carnal Knowledge of a Juvenile) if the Offender is at least two (2), but less than four (4) years older than the Victim."
-        }
+        "err_message": "DEPRECATED - FOR STATUTORY RAPE OFFENSES WHERE OFFENDER IS AT LEAST TWO YEARS BUT LESS THAN FOUR YEARS OLDER THAN THE VICTIM, THE ASSOCIATED OFFENSE IS REQUIRED TO BE REPORTED AS MISDEMEANOR CARNAL KNOWLEDGE OF A JUVENILE (14:80.1).",
     },
     "90010": {
         "err_no": 90010,
-        "err_message": "FOR 36B, AGE OF OFFENDER MUST BE '18' OR GREATER"
+        "err_message": "DEPRECATED - FOR 36B, AGE OF OFFENDER MUST BE '18' OR GREATER"
     },
     "90011": {
         "err_no": 90011,
