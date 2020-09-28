@@ -37,6 +37,9 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-09-28
+* Logic that would throw Errors 90008 and 90010 has been deprecated. These errors will not be thrown again. Any logic in your RMS that throws these errors should be removed. 
+
 #### 2020-09-03
 * Changed up the error message for 22100 because it was wrong. It now reads that for Juvenile Offenses the offender age must be between (and including) 1 and 17.
 * Added more context for Error 14060.
