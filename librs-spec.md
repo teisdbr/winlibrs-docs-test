@@ -402,8 +402,6 @@ More information and common questions and errors can be found on the LIBRS FAQ f
 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
-{% assign error = site.data.error["90008"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["40"]}}
 {% assign error = site.data.error["90011"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["40"]}}
 {% assign error = site.data.error["90013"] -%}
