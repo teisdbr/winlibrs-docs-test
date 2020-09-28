@@ -4521,13 +4521,13 @@ ___
 ## Number of Segments Transferred (C7)
 ___
 
-**Data Characteristics:** 6 Character Numeric
+**Data Characteristics:** 6 Character Numeric, Front-Padded with zeros (EG 525 should be 000525)
 
 **Requirements:**
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = data.data.error["20001"] -%}
+{% assign error = site.data.error["20001"] -%}
 1 | {{error.seq_desc["c7"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20030"] -%}
 2 | {{error.seq_desc["c7"]}} | {{error.err_no}} | {{ error.err_message }} 
