@@ -32,6 +32,15 @@ $(".accordion-toggle").click(function () {
 });
 });</script>
 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".accordion-toggle").click(function () {
+    $(this).children().children().toggleClass("down");
+});
+});</script>
+
 <table>
 <thead style="font-size: 14px;">
 	<tr>
