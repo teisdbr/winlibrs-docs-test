@@ -7,6 +7,23 @@
         margin-right:1mm;
     }
 }
+
+#content div table:nth-child(12) tbody tr:nth-child(even) td.hiddenRow{
+padding-top: 0%;
+padding-bottom: 0%;
+}
+
+#content div table:nth-child(12) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapse.show{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#content div table:nth-child(12) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapsing{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
 .accordian {
     min-width: 325px;
     max-width: 325px;
@@ -139,15 +156,13 @@ table.subtable, .subtable tr{
     page-break-after: always !important;
 }
 
-.rotate{
-    -moz-transition: all 1s linear;
-    -webkit-transition: all 1s linear;
-    transition: all 1s linear;
+.rotate {
+    -moz-transition: all .1s linear;
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
 }
-
-.rotate.down{
-    -ms-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+.rotate.down {
+    -moz-transform:rotate(90deg);
+    -webkit-transform:rotate(90deg);
+    transform:rotate(90deg);
 }

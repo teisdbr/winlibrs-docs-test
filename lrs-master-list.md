@@ -23,9 +23,13 @@ ____
 
 #### Last Updated August 25th, 2020
 
-<script src="https://kit.fontawesome.com/yourcode.js"></script>
-<script type="text/javascript">$(".rotate").click(function(){
-    $(this).toggleClass("down"); 
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".accordion-toggle").click(function () {
+    $(this).children().children().toggleClass("down");
+});
 });</script>
 
 <table>
@@ -41,7 +45,7 @@ ____
 {% for lrs in active_lrs %}
 {% if lrs.Expiration_Date == "3000-01-01" %}
 	<tr data-toggle="collapse" data-target="#accordion{{ lrs.LRS }}" class="accordion-toggle" style="padding-top:0px; padding-bottom:0px;">
-        <td><i class="fas fa-chevron-right"></i></td>
+        <td><i class="fas fa-chevron-right rotate"></i></td>
 		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
 		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td></tr><tr>
     <td colspan = "3" class="hiddenRow"><div class="accordion-body collapse" id ="accordion{{ lrs.LRS }}"><table><thead><tr>
