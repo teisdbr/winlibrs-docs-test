@@ -28,7 +28,7 @@ This page contains the questions and responses we've gotten from vendors and use
     * <a href="#how-to-resubmit-data-or-update-existing-incidents">How to Resbumit Data, or Update Existing Incidents</a>
 * <a href="#questions-from-vendors">Questions We've Gotten from Vendors</a>
   * <a href="#offenses-segment-20">Offenses: Segment 20</a>
-  * <a href="#properties-segments-30-31-32-and-33">Properties: Segments 30, 31, and 32</a>
+  * <a href="#properties-segments-30-31-32-and-33">Properties: Segments 30, 31, 32, and 33</a>
   * <a href="#offenders-segments-40-and-41"> Offenders: Segments 40 and 41</a>
   * <a href="#victims-segments-50-51-and-52">Victims: Segments 50, 51, and 52</a>
 * <a href="#flat-files-and-troubleshooting">Flat Files and Troublshooting</a>
@@ -188,13 +188,14 @@ In LIBRS, you don't "Resubmit" Data. Instead, you submit corrections. While we a
 
 So what do you do when you'd submitted a Month and it turns out there are a ton of errors on it? From a User's Point-of-View, they should be able to go back into the RMS and make the required changes to the Incidents that had errors. From a Vendor's Point-of-View, a LIBRS-Compliant RMS should be able to manage when corrections need to be generated and on which monthly submission they should be included on. 
 
-For Example, Agency A has not yet submitted their April, May, and June of 2020 LIBRS Files. However, through those months, their staff have made updates in June to an Incident that occurred in April. The best way to handle this is to hold off sending us the data on the April Submission, and just send it along in June. 
+For Example, Agency A has not yet submitted their April, May, and June of 2020 LIBRS Files. However their staff have made updates in June to an Incident that occurred in April. Since April has not yet been submitted yet, there are two ways the RMS can handle this:
 
-As another example, let's say Agency B has submitted April and May, but not June of 2020. They also made revisions in June to an incident that occurred in April. Therefore they should also include the Incident on their June Submission, but they should first include a Delete Segment so LIBRS doesn't complain that the incident already exists in the database. 
+1. It can send along the original information with the April Report, and then submit subsequent corrections in the June Report.
+2. The Changes to the April Incident can be overwritten, and the last update date changed so that the final version of the Incident is submitted in June.
 
+Let's say, though, that April and May have already been submitted, and the staff makes a change to the April Incident in June. In this case you have only one option: Resubmit the incident in June, but with a Delete included for the incident (A Delete is a Segment 10 Administrative Sement with a 'D' Action Type instead of an 'I', otherwise it's the exact same as if you were submitting the incident).
 
-
-An easy way to keep track of this would be to implement a "Last LIBRS-Significant Update" date along with a "Submitted" boolean in your database. The "Last LIBRS-Significant Update" field should be updated to the current date when a LIBRS-Relevant update is made to the Incident (EG: A LIBRS Data Element's value has changed). From there you can easily extrapolate if you need to :
+An easy way to keep track of this would be to implement a "Last LIBRS-Significant Update" date along with a "Submitted" boolean in your database. The "Last LIBRS-Significant Update" field should be updated to the current date when a LIBRS-Relevant update is made to the Incident (EG: A LIBRS Data Element's value has changed). From there you can easily extrapolate if you need to:
 
 1. Perform an initial submission of the Incident. 
 2. Don't need to do anything because the Incident was already submitted and there have been no changes made to it. 

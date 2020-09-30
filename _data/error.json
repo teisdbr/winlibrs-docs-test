@@ -80,7 +80,7 @@
         "err_no": 10055,
         "err_message": "CANNOT HAVE AN INITIAL INCIDENT RECORD WITHOUT STARTING WITH RECORD SEGMENT 10",
         "seq_desc": {
-            "10": "First segment, after the Submission Header, in a data submission MUST be an Administrative Segment (10)."
+            "10": "First segment, after the Submission Header, in a data submission must be an Administrative Segment (10)."
         }
     },
     "10056": {
@@ -144,23 +144,27 @@
     },
     "10074": {
         "err_no": 10074,
-        "err_message": "PROPERTY RECORD(SEGMENT 30 & 31) MUST EXIST WITH THIS OFFENSE",
+        "err_message": "PROPERTY RECORD (SEGMENT 30 & 31) MUST EXIST WITH THIS OFFENSE",
         "seq_desc": {
-            "30": "Property Segments (30 and 31) must exist when an Incident Report (Action Type = 'I') is submitted with an Offense Segment (20) whose LRS is a 'Crime Against Property'.  Kidnaping (100), Gambling (39A thru 39D), or Drug/Narcotic (35A thru 35B) Offenses also have this same Property Segment requirement."
+            "30": "When DE C5 (Action Type) is 'I', Property Segments 30 and 31 must exist submitted with an Offense Segment (20) whose NIBRS is a 'Crime Against Property': {::nomarkdown}<ul><li>120</li><li>200, 210, 220, 240, 250, 270, 280, 290</li><li>26A, 26B, 26C, 26D, 26E</li><li>23A, 23B, 23C, 23D, 23E, 23F, 23G, 23H</li><li>510</li><li>90A, 90Z (If Applicable)</li></ul>{:/} Additionally, the following Offenses are included in this requirement: {::nomarkdown}<ul><li>Kidnaping (100)</li><li>Gambling (39A thru 39D)</li><li>Drug/Narcotic (35A and 35B)</li></ul>{:/}"
         }
     },
     "10075": {
         "err_no": 10075,
         "err_message": "MISSING A MANDATORY RECORD SEGMENT FOR A COMPLETE INCIDENT",
         "seq_desc": {
-            "10": "When an Action Type of Incident Report ('I') is submitted, the following segments MUST be included: {::nomarkdown}<ul><li>10 - Administrative Segment</li><li>20 - Offense Segment</li><li>40 - Offender Segment</li><li>41 - Offender Using Segment/Gaming Motivation</li><li>50 - Victim Segment</li></ul>{:/} One or more of these segments was missing."
+            "10": "When an Action Type of Incident Report ('I') is submitted, this segment must be included.",
+            "20": "When an Action Type of Incident Report ('I') is submitted, this segment must be included.",
+            "40": "When an Action Type of Incident Report ('I') is submitted, this segment must be included.",
+            "41": "When an Action Type of Incident Report ('I') is submitted, this segment must be included.",
+            "50": "When an Action Type of Incident Report ('I') is submitted, this segment must be included."
         }
     },
     "10076": {
         "err_no": 10076,
-        "err_message": "PROPERTY RECORD(SEGMT 30 & 31) CANNOT EXIT WITH OFFENSES SUBMITTED",
+        "err_message": "PROPERTY RECORD (SEGMENT 30 & 31) CANNOT EXIT WITH OFFENSES SUBMITTED",
         "seq_desc": {
-            "30": "Only offenses that are 'Crimes Against Property', Kidnaping (100), Gambling (39A thru 39D), or Drug/Narcotic (35A thru 35B) can be submitted with Property Segments."
+            "30": " Segments 30 and 31 should not be included when the Incident is comprised of only the following Offense Codes: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>370</li><li>40A, 40B</li><li>520</li><li>90B, 90C, 90D, 90E, 90F, 90G, 90H, 90I, 90J, 90Z (If Applicable)</li></ul>{:/}"
         }
     },
     "10077": {
@@ -413,7 +417,7 @@
         "err_no": 11060,
         "err_message": "INCIDENT NOT ON FILE",
         "seq_desc": {
-            "11": "Administrative Segment (10 and 11) submitted with an Action Type of 'M' (MODIFY) must already be on file with ORI Number (Data Element No. 1) and Incident Number (Data Element No. 2)."
+            "11": "DEPRECATED - In order to use Action Type = 'M - Modify', Administrative Segments (10 and 11) must already be on file for the given ORI Number (DE 1) and Incident Number (DE 2)."
         }
     },
     "11061": {
@@ -464,7 +468,7 @@
     },
     "11069": {
         "err_no": 11069,
-        "err_message": "TIME WINDOW SEGMENT BEING MODIFIED MUST HAVE LOUISIANA REVISED STATUTE NUMBER",
+        "err_message": "DEPRECATED - TIME WINDOW SEGMENT BEING MODIFIED MUST HAVE LOUISIANA REVISED STATUTE NUMBER",
         "seq_desc": {
             "11": "Segment 11 does not have an LRS Number associated with it."
         }
@@ -789,7 +793,7 @@
     },
     "13043": {
         "err_no": 13043,
-        "err_message": "WARNING - '280' OFFENSE HAS 'RECOVERED' VEHICLE BUT '240' DOESN'T SHOW 'STOLEN'",
+        "err_message": "DEPRECATED - WARNING - '280' OFFENSE HAS 'RECOVERED' VEHICLE BUT '240' DOESN'T SHOW 'STOLEN'",
         "seq_desc": {
             "31": "When the same property is Stolen (Type of Property Loss = ‘7’) and Recovered (Type of Property Loss = ‘5’) within the same incident, then the two Property Description Segments (31) that are submitted must use the same property sequence number (P1)."
         }
@@ -909,7 +913,7 @@
     },
     "13071": {
         "err_no": 13071,
-        "err_message": "GAMBLING, KIDNAPPING, AND CRIMES AGAINST PROPERTY ARE THE ONLY VALID OFFENSE",
+        "err_message": "DEPRECATED - GAMBLING, KIDNAPPING, AND CRIMES AGAINST PROPERTY ARE THE ONLY VALID OFFENSE",
         "seq_desc": {
             "32": "A Time-Window submission (Action Type of 'W') or Modify submission (Action Type = 'M') was submitted for 'Recovered Property' on a Property Modification Segment (32). <br> When submitted, all LRS codes must be Crimes Against Property, Kidnaping (100), or Gambling (39A thru 39D).  In this instance offense codes other than those mentioned were submitted."
         }
@@ -934,7 +938,7 @@
     },
     "13077": {
         "err_no": 13077,
-        "err_message": "PROPERTY SEGMENT A - O - F ADDED ON [MMDDYYYY] RECOVERY DATE = [MMDDYYYY]",
+        "err_message": "DEPRECATED - PROPERTY SEGMENT A - O - F ADDED ON [MMDDYYYY] RECOVERY DATE = [MMDDYYYY]",
         "seq_desc": {
             "32": "Property Segment A-O-F (already on file) added on (MMDDYYYY) Recovery Date = (MMDDYYYY)"
         }
@@ -1186,7 +1190,10 @@
     },
     "15003": {
         "err_no": 15003,
-        "err_message": "MISSING VICTIM INJURY SEGMENT(SEGMENT 51)"
+        "err_message": "MISSING VICTIM INJURY SEGMENT(SEGMENT 51)",
+        "seq_desc": {
+            "51": "Segment 51 must be present if Victim Type is 'I' (Individual) or 'L' (Law Enforcement Officer) and if offense is applicable."
+        }
     },
     "15004": {
         "err_no": 15004,
@@ -1208,7 +1215,10 @@
     },
     "15005": {
         "err_no": 15005,
-        "err_message": "MISSING VICTIM / OFFENDER SEGMENT(SEGMENT 52)"
+        "err_message": "MISSING VICTIM / OFFENDER SEGMENT (SEGMENT 52)",
+        "seq_desc": {
+            "52": "Segment 52 must be present if Victim Type is 'I' (Individual) or 'L' (Law Enforcement Officer) and if offense is applicable."
+        }
     },
     "15006": {
         "err_no": 15006,
@@ -1677,7 +1687,7 @@
         "err_no": 16060,
         "err_message": "INCIDENT REPORT NOT ON FILE",
         "seq_desc": {
-            "62": "The Incident Number associated with the current submission was not found in LIBRS database. <br>The Arrestee Segment submitted with an Action Type of 'A' (Add an Arrest) was rejected because the incident is not on the LIBRS database."
+            "60": "The Arrestee Segment submitted with an Action Type of 'A' (Add an Arrest) was rejected because the incident is not on the LIBRS database."
         }
     },
     "16061": {
@@ -1737,11 +1747,17 @@
     },
     "16080": {
         "err_no": 16080,
-        "err_message": "SEGMENT 61 MISSING--MUST HAVE ONE PER ARRESTEE SEGMENT"
+        "err_message": "SEGMENT 61 MISSING--MUST HAVE ONE PER ARRESTEE SEGMENT",
+        "seq_desc": {
+            "61": "A Segment 61 is required for each Segment 60 that is present in the LIBRS Incident Report."
+        }
     },
     "16081": {
         "err_no": 16081,
-        "err_message": "SEGMENT 62 MISSING--MUST HAVE AT LEAST ONE PER ARRESTEE SEGMENT"
+        "err_message": "SEGMENT 62 MISSING--MUST HAVE AT LEAST ONE PER ARRESTEE SEGMENT",
+        "seq_desc": {
+            "62": "A Segment 62 is required for each Segment 60 that is present in the LIBRS Incident Report."
+        }
     },
     "16099": {
         "err_no": 16099,
@@ -1960,24 +1976,18 @@
     },
     "22075": {
         "err_no": 22075,
-        "err_message": "MUST SUBMIT AN OFFENSE SEGMENT(SEGMENT 20) FOR EACH VICTIM",
+        "err_message": "MUST SUBMIT AN OFFENSE SEGMENT (SEGMENT 20) FOR EACH VICTIM",
         "seq_desc": {
-            "20": "Each victim must be tied to an offense."
+            "20": "Each Victim that has a Segment 50 - Victim Segment associated with it needs to be tied to at least one Offense."
         }
     },
     "22080": {
         "err_no": 22080,
-        "err_message": "SEGMENT 51 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'",
-        "seq_desc": {
-            "51": "Segment 51 must be present if Victim Type is 'I' (Individual) or 'L' (Law Enforcement Officer) and if offense is applicable."
-        }
+        "err_message": "DEPRECATED - SEGMENT 51 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'",
     },
     "22081": {
         "err_no": 22081,
-        "err_message": "SEGMENT 52 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'",
-        "seq_desc": {
-            "52": "Segment 52 must be present if Victim Type is 'I' (Individual) or 'L' (Law Enforcement Officer) and if offense is applicable."
-        }
+        "err_message": "DEPRECATED - SEGMENT 52 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'"
     },
     "22085": {
         "err_no": 22085,
@@ -2964,7 +2974,7 @@
         "err_no": 90018,
         "err_message": "PROPERTY MUST HAVE A VALID RELATIONSHIP TO AT LEAST ONE OFFENSE",
         "seq_desc": {
-            "31": "All properties submitted within an incident MUST be related to at least one Offense."
+            "31": "All properties submitted within an incident must be related to at least one Offense. Please ensure that all Properties are linked to an Offense through a Segment 33."
         }
     },
     "90019": {
@@ -3001,7 +3011,7 @@
         "err_no": 90023,
         "err_message": "DUPLICATE - A PRIOR PROPERTY OFFENSE SEGMENT ALREADY EXISTS WITH THE SAME SEQUENCE NUMBERS",
         "seq_desc": {
-            "33": "Each Property/Offense segment submitted MUST have UNIQUE COMBINATIONS of Property Sequence Number References (P1R) to Offense Sequence Number References (L6R). <br><br>  Offenses are allowed to be related to many properties and properties are allowed to be related to many offenses. <br><br> However, Property/Offense segments CANNOT be submitted relating a single Property to a Single Offense multiple times, that is NO duplicate combinations of Sequence Numbers."
+            "33": "Each Property/Offense segment submitted must have unique combinations of Property Sequence Number References (DE P1R) to Offense Sequence Number References (DE L6R). <br><br>Both Properties and Offenses can both be related to multiples of each other (EG One Property to Multiple Offenses), however, Property/Offense segments cannot relate a single Property to a Single Offense multiple times."
         }
     },
     "90024": {
