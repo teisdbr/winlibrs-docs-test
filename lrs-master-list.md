@@ -37,7 +37,7 @@ $(".accordion-toggle").click(function () {
 <script type="text/javascript">
 $(document).ready(function(){
 $(".accordion-toggle").click(function () {
-    $(this).children().children().toggleClass("down");
+    $(this).toggleClass("down");
 });
 });</script>
 

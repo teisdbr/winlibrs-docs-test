@@ -8,17 +8,17 @@
     }
 }
 
-#content div table:nth-child(12) tbody tr:nth-child(even) td.hiddenRow{
+#content div table:nth-child(17) tbody tr:nth-child(even) td.hiddenRow{
 padding-top: 0%;
 padding-bottom: 0%;
 }
 
-#content div table:nth-child(12) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapse.show{
+#content div table:nth-child(17) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapse.show{
     padding-top: 5px;
     padding-bottom: 5px;
 }
 
-#content div table:nth-child(12) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapsing{
+#content div table:nth-child(17) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapsing{
     padding-top: 5px;
     padding-bottom: 5px;
 }
