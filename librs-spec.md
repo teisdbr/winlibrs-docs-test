@@ -930,7 +930,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes: 
-* `This is the 9-character NCIC Originating Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. For state or local agency submissions, the last two positions must be "00".`
+* This is the 9-character NCIC Originating Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. For state or local agency submissions, the last two positions must be "00".
 
 <br>
 
@@ -966,7 +966,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes: 
-* `Incident Number is the reporting agency's UNIQUE, in-house assigned case number. It is used to link subsequent update submissions to the original submission. This number will be encrypted prior to any dissemination of data to ensure that the recipient cannot identify the actual case. `
+* Incident Number is the reporting agency's UNIQUE, in-house assigned case number. It is used to link subsequent update submissions to the original submission. This number will be encrypted prior to any dissemination of data to ensure that the recipient cannot identify the actual case.
 
 ### Definitions:
 
@@ -1038,12 +1038,12 @@ ___
 
 ### Notes:
 
-* `This data element is to be used to enter the month, day, year and hours when the incident occurred or started, or the beginning of the time period in which it occurred. "Military" twenty-four (24) hour time is to be used.`
-* `If the incident occurred on or between midnight and 0059, enter "00" for the hour; if on or between 0100 and 0159, enter "01" for the hour if on or between 2300 and 2359, enter "23" for the hour, etc.`
-* `If the incident occurred at exactly midnight, it is considered to have occurred at the beginning of the next day.  Therefore "00" should be entered for the hour, along with the next day's date.`
-* `If the incident date is unknown, enter the date of the report with the indicator "R" = Report.  Otherwise leave the report column nine (9) blank.`
-* `If the incident hour is unknown, leave the hour blank.`
-* `When LIBRS requires a Blank (G), it must be a Blank (G), NOT A ZERO.`
+* This data element is to be used to enter the month, day, year and hours when the incident occurred or started, or the beginning of the time period in which it occurred. "Military" twenty-four (24) hour time is to be used.
+* If the incident occurred on or between midnight and 0059, enter "00" for the hour; if on or between 0100 and 0159, enter "01" for the hour if on or between 2300 and 2359, enter "23" for the hour, etc.
+* If the incident occurred at exactly midnight, it is considered to have occurred at the beginning of the next day.  Therefore "00" should be entered for the hour, along with the next day's date.
+* If the incident date is unknown, enter the date of the report with the indicator "R" = Report.  Otherwise leave the report column nine (9) blank.
+* If the incident hour is unknown, leave the hour blank.
+* When LIBRS requires a Blank (G), it must be a Blank (G), NOT A ZERO.
 
 ### Examples:
 ___
@@ -1090,14 +1090,14 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `The Cleared Exceptionally data element indicates if the incident has been cleared by an exceptional event such as the death of the offender, and if so, the reason for the clearance.  In multiple offense incidents, the exceptional clearance of one offense clears the entire incident.  An incident CANNOT BE CLEARED EXCEPTIONALLY if it was previously, or at the same time, cleared by an arrest, (that is, if an Arrestee Segment was or is being submitted).`
-* `In order to clear an offense by exceptional means, ALL of the following four conditions must be met:`
-	* `The investigation must have clearly and definitely established the identity of at least one offender.`
-	* `Sufficient probable cause must have been developed to support the arrest, charging, and prosecution of the offender.`
-	* `The exact location of the offender must be known so that an arrest could be made.`
-	* `There must be a reason outside the control of law enforcement that prevents arresting, charging, and prosecuting the offender.`
-* `DO NOT report exceptional clearance information for justifiable homicide, as no crimes have occurred, in reality.`
-* `The closing of a case or the clearing of it by an agency's policy does not permit exceptionally clearing an offense unless all four conditions are met.`
+* The Cleared Exceptionally data element indicates if the incident has been cleared by an exceptional event such as the death of the offender, and if so, the reason for the clearance. In multiple offense incidents, the exceptional clearance of one offense clears the entire incident. An incident CANNOT BE CLEARED EXCEPTIONALLY if it was previously, or at the same time, cleared by an arrest, (that is, if an Arrestee Segment was or is being submitted).
+* In order to clear an offense by exceptional means, ALL of the following four conditions must be met:
+	* The investigation must have clearly and definitely established the identity of at least one offender.
+	* Sufficient probable cause must have been developed to support the arrest, charging, and prosecution of the offender.
+	* The exact location of the offender must be known so that an arrest could be made.
+	* There must be a reason outside the control of law enforcement that prevents arresting, charging, and prosecuting the offender.
+* DO NOT report exceptional clearance information for justifiable homicide, as no crimes have occurred, in reality.
+* The closing of a case or the clearing of it by an agency's policy does not permit exceptionally clearing an offense unless all four conditions are met.
 
 ### Allowed Entries
 ___
@@ -1178,7 +1178,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If an incident was cleared by exceptional means, then the month, day and year when the incident was cleared is to be entered into this data element.`
+* If an incident was cleared by exceptional means, then the month, day and year when the incident was cleared is to be entered into this data element.
 
 ### Examples:
 ___
@@ -1213,7 +1213,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Each offense in an incident must be assigned a unique sequence number from "001" to "999".`
+* Each offense in an incident must be assigned a unique sequence number from "001" to "999".
 
 ___
 
@@ -1238,7 +1238,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `There is no UNIQUE constraint for the Offense Sequence Number Reference (L6R). This allows for an Offense to relate to many properties if multiple Property/Offense segments are submitted within a single incident.`
+* There is no UNIQUE constraint for the Offense Sequence Number Reference (L6R). This allows for an Offense to relate to many properties if multiple Property/Offense segments are submitted within a single incident.
 
 <br>
 
@@ -1266,11 +1266,14 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["12001"] -%}
-1 | {{error.err_desc["l6r"]}} | {{error.err_no}}| {{ error.err_message }} 
+1 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["90022"] -%}
-2 | {{error.err_desc["l6r"]}} | {{error.err_no}} | {{ error.err_message }} 
+2 | {{error.err_desc["6"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
+
+### Qualifiers and Subparts
+Qualifiers and Subparts are additional information that is added to the tail-end of an LRS Code to give more definition about it whenever a statute contains multiple cases that could be reported as different NIBRS Codes. For instance, LRS 14:67 is generally used for Theft, however the item that is being stolen can cause the NIBRS Code that should be used to change (EG: A 14:67 with a 240 NIBRS Code is for if a vehicle is stolen, while a 14:67 with a 23H)
 
 ### Examples:
 ___
@@ -1280,13 +1283,8 @@ Example Number | Description
 1 | When 14:42 is submitted as a Louisiana Revised Statute LRS (6), LIBRS will need Qualifiers to determine if the offense should be classified as a forcible rape or as a forcible sodomy. If the offense is submitted as a **14:42/V**, this would translate to a forcible rape offense, whereas if this offense is submitted as a **14:42/A** this would translate to a forcible sodomy offense.<br><br>Without any Qualifiers, LIBRS has no way to determine which offense this LRS should be reported as, and the entire incident would be rejected. The agency will receive the following error message: 'This LRS Code must be submitted with a Qualifier to define offense applicable.'
 2 | If an incident involved a robbery (14:64) and a forcible rape (**14:42.1/V**), two LRS offenses should be submitted. The 14:64 does not require any Qualifier, but the 14:42.1 does require a Qualifier.
 3 | If two females were raped in an incident, two LRS offenses should be submitted for rape: One LRS should be reported for each victim -- in this case, both LRS codes should be submitted as 14:42.1/V for Victim 001 and **14:42.1/V** for Victim 002)
-4 | 14:59/A1  --  In this example, “A1" refers to Subpart A, Paragraph 1 of the LRS, and would be reported to the FBI as being in the category of All Other Offenses (NIBRS 90Z).
-5 | 14:59/A9  --  In this example, “A9" refers to the Subpart A, Paragraph 9 and would be reported to the FBI as being in the category of Weapon Law Violation (NIBRS 520).
-6 | 14:228/A6  --  In this example, "A6" refers to the Subpart A, Paragraph 6 of the LRS, and with no Qualifier would be reported to the FBI as All Other Larceny (NIBRS 23H). 
-7 | 14:228/A6Y  --  In this examle"A6" refers to the Subpart A, Paragraph 6 of the LRS, and with a Qualifier of "Y", would be reported to the FBI as Destruction/Damage/Vandalism of Property (NIBRS 290)
-8 | 14:90/G  --  “G” refers to a Qualifier (see Qualifier List) and would be reported to the FBI as the offense of Betting/Wagering (NIBRS 39A).
-9 | 14:51/U  --  “U” refers to a Qualifier (see Qualifier List) and would be reported to the FBI as the offense of Arson (NIBRS 200).
-10 | If the LRS offense is Aggravated Assault (14:87.2/F) and the Offender or the Arrestee was responsible for Accessory After the Fact then the agency would submit the following: 14:87.2/F-A. This will be reported to the FBI as an Aggravated Assault, Accessory After the Fact as the offense and for LIBRS reporting this will be considered as All Other Offenses (NIBRS 90Z).
+4 | 14:90/G  --  “G” refers to a Qualifier (see Qualifier List) and would be reported to the FBI as the offense of Betting/Wagering (NIBRS 39A).
+5 | If the LRS offense is Aggravated Assault (14:87.2/F) and the Offender or the Arrestee was responsible for Accessory After the Fact then the agency would submit the following: 14:87.2/F-A. This will be reported to the FBI as an Aggravated Assault, Accessory After the Fact as the offense and for LIBRS reporting this will be considered as All Other Offenses (NIBRS 90Z).
 
 
 <br>
@@ -1334,13 +1332,12 @@ ___
 
 LRS Code | Description | Warning Number | Warning Message
 :-------:|:------------|:--------------:|:----------------
-14:67 | When submitted with no Qualifier will be reported to the FBI as All Other Larceny-Theft (NIBRS 23H)
 {% assign error = site.data.error["22055"] -%}
-14:67 | When submitted with no Qualifier AND Property Description (DE 15) is other than: '03', '04', '05', '24', '28', '37' or '38'  | {{error.err_no}}| {{ error.err_message }} 
+14:67 | When submitted with no Qualifier will be reported to the FBI as All Other Larceny-Theft (NIBRS 23H) | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["22060"] -%}
 14:67 | When LRS 14:67 is submitted with no Qualifier AND Property Description (DE 15) is "38", the offense will be reported to the FBI as Theft of Motor Vehicle Parts (NIBRS 23G) | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["22065"] -%}
-14:67 | When LRS 14:67 is submitted with no Qualifier AND Property Description (DE 15) is "03", "05", "24", "28", or "37", the offense will be reported to the FBI as Motor Vehicle Theft (240) | {{error.err_no}}| {{ error.err_message }} 
+14:67 | When submitted with no Qualifier AND Property Description (DE 15) is other than: '03', '04', '05', '24', '28', '37' or '38', the Offense will be reported as Motor Vehicle Theft (NIBRS 240) | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["22070"] -%}
 14:67 | When LRS 14:67 is submitted with no Qualifier AND Property Description (DE 15) is "04", the offense will be reported as Theft of a Bicycle | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["22071"] -%}
@@ -1396,7 +1393,7 @@ R | Operating/Assisting Gambling - To unlawfully operate, promote, or assist in 
 S | Shoplifting - The theft, by someone other than an employee of the victim, of goods or merchandise exposed for sale |Shoplifting | 23C | Property
 T | Threat of Force Used Against the Victim - No weapons and no physical attack used in this threat |Intimidation | 13C | Person
 U | Uninhabited Dwelling - Structures uninhabited or abandoned or not normally in use. Arson reporting |Arson | 200 | Property
-V | Vaginal penetration - With force or without force where the victim is incapable of giving consent because of youth or because of temporary or permanent mental incapacity  |Forcible Rape | 11A | Person
+V | Vaginal Penetration - With force or without force where the victim is incapable of giving consent because of youth or because of temporary or permanent mental incapacity  |Forcible Rape | 11A | Person
 W | Fetal Death - Human embryo or fetus in utero |All Other Offenses | 90Z | Society 
 X | Falsified Records by Forgery or Counterfeiting - Altering, copying, or imitation of something, without authority or right, with the intent to deceive or defraud by passing the copy or thing altered or imitated as that which is original or genuine.  Or, the selling, buying, or possession of an altered, copied, or imitated thing with the intent to deceive or defraud |Counterfeiting/Forgery | 250 | Property
 Y | Destroyed Records or Property | Destruction/Damage/Vandalism of Property | 290 | Property

@@ -3004,7 +3004,8 @@
         "err_no": 90022,
         "err_message": "OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL",
         "err_desc": {
-            "l6r": "MUST be numeric entry (001 through 999) with zero left-fill."
+            "l6r": "MUST be numeric entry (001 through 999) with zero left-fill.",
+            "6": "MUST be numeric entry (001 through 999) with zero left-fill."
         }
     },
     "90023": {
