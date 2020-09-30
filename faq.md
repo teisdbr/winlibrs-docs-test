@@ -8,7 +8,35 @@ permalink: /faq
 
 This page contains the questions and responses we've gotten from vendors and users over the years about LIBRS. This is an ever-growing list, so if you don't see an answer you need feel free to reach out. 
 
-<br>
+
+# Quick Links
+
+* <a href="#what-is-librs">What is LIBRS?</a>
+  * <a href="#benefits-of-using-librs">Benefits of Using LIBRS</a>
+  * <a href="#can-i-buy-a-librs-certified-rms">Can I Buy a LIBRS Certified RMS?</a>
+* <a href="#librs-certification">LIBRS Certification</a>
+  * <a href="#certification-requirements"> Certification Requirements</a>
+  * <a href="#certification-process">Certification Process</a>
+* <a href="#how-to-use-librs">How to Use LIBRS</a>
+  * <a href="#getting-started">Getting Started</a>
+  * <a href="#reports">Reports</a>
+  * <a href="#how-dates-work">How Dates Work</a>
+    * <a href="#reporting-periods-and-out-of-sequence">Reporting Periods and Out of Sequence</a>
+     * <a href="#incident-dates-making-modifications-and-on-which-submission-they-appear">Incident Dates, Making Modifications, and on Which Submission They Appear</a>
+  * <a href="#how-to-submit-data">How to Submit Data</a>
+    * <a href="#ftp-file-structure">FTP File Structure</a>
+    * <a href="#how-to-resubmit-data-or-update-existing-incidents">How to Resbumit Data, or Update Existing Incidents</a>
+* <a href="#questions-from-vendors">Questions We've Gotten from Vendors</a>
+  * <a href="#offenses-segment-20">Offenses: Segment 20</a>
+  * <a href="#properties-segments-30-31-32-and-33">Properties: Segments 30, 31, and 32</a>
+  * <a href="#offenders-segments-40-and-41"> Offenders: Segments 40 and 41</a>
+  * <a href="#victims-segments-50-51-and-52">Victims: Segments 50, 51, and 52</a>
+* <a href="#flat-files-and-troubleshooting">Flat Files and Troublshooting</a>
+  * <a href="#general-flat-file-formatting-requirements">General Flat File Formatting Requirements</a>
+   * <a href="#how-to-solve-errors-on-flat-files">How to Solve Errors with Flat Files</a>
+  * <a href="#whats-wrong-with-my-flat-file">What's Wrong with My Flat File?</a>
+* <a href="#flat-file-example-errors">Flat File Example Errors</a>
+  * <a href="#example-1">Example 1</a>
 
 ## What is LIBRS?
 
