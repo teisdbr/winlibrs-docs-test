@@ -29,6 +29,7 @@ Whenever you are submitting a file with data, however, the following segments sh
 * 99 - Submission Trailer
 
 Whenever you want to submit a Deletion to us (used to either permanently remove an Incident from being reported, or simply to delete and re-add because there are changes that have been made to the Incident that need to be reflected) you need to ensure the following is included:
+
 * 00 - Submission Header
 * 10 - Administrative Segment (With DE C5 - Action Type = 'D')
 * 99 - Submission Trailer
@@ -46,7 +47,7 @@ N              | Numeric
 A              | Alphabetic     
 A/N            | Alpha/Numeric  
 D              | Date           
-G (Space)      | Blank Spaces   
+G (Space)      | Blank Space   
 
 <br>
 <br>
@@ -871,11 +872,11 @@ Segment 01 is an optional Segment that can be included to denote an empty Flat F
 
 You may include this Segment if you wish, though it is not required. If you do include it, the Flat File would look like this (Excluding Padding after the Segment Footers):
 
-```
+``
 -Header Segment-
 01000000000000ZZ
 99000003ZZ
-```
+``
 
 ### Segment Layout
 
@@ -904,7 +905,7 @@ ___
 # LIBRS Data Element Definitions
 ____
 
-#### This page contains information about the specific requirements that go into each of the LIBRS Data Elements. For the short list of available values for each Data Element, go [here](./data-element-values).
+This portion of the document contains information about the specific requirements that go into each of the LIBRS Data Elements. For the short list of available values for each Data Element, go [here](./data-element-values).
 
 <br>
 
@@ -1402,7 +1403,7 @@ Z | Theft from a Motor Vehicle - Theft of articles from motor vehicle whether lo
 ___
 
 ### Notes:
-* `An LRS Code appended with "-H" indicates the offense is a Hate Crime, and the penalty will be enhanced by 14:107.2. Offenses with an Inchoate appended will be reported based on the base LRS (usually shown in the first ten digits of Louisiana Revised Statute (6) or Louisiana Revised Statute of Arrest (45).`
+* An LRS Code appended with "-H" indicates the offense is a Hate Crime, and the penalty will be enhanced by 14:107.2. Offenses with an Inchoate appended will be reported based on the base LRS (usually shown in the first ten digits of Louisiana Revised Statute (6) or Louisiana Revised Statute of Arrest (45).
 
 <br>
 
@@ -1454,7 +1455,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This element is used to indicate whether each offense in the incident was completed or merely attempted.`
+* This element is used to indicate whether each offense in the incident was completed or merely attempted.
 
 ### Allowed Entries
 
@@ -1530,7 +1531,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Offender Suspected of Using/Gaming Motivation (8) indicates that an Offender is suspected of consuming alcohol, or using drugs/ narcotics during, or shortly before, the incident; or, of using a computer, computer terminal, or other computer equipment to perpetrate the crime. Can also indicate if an Offender's gaming activity was a motive in the commission of a crime.`
+* Offender Suspected of Using/Gaming Motivation (8) indicates that an Offender is suspected of consuming alcohol, or using drugs/narcotics during, or shortly before, the incident; or, of using a computer, computer terminal, or other computer equipment to perpetrate the crime. Can also indicate if an Offender's gaming activity was a motive in the commission of a crime.
 
 ### Allowed Entries
 ___
@@ -1600,8 +1601,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes: 
-* `Bias Motivation/Bias Crime Type (8) indicates an Offender’s motivation to commit an offense because of their bias against a Victim’s race, religion, ethnicity, national origin, sexual orientation, disability group, or other bias.`
-* `Because of the difficulty in ascertaining the Offender's subjective motivation, bias is to be reported only when an investigation reveals sufficient objective facts to lead a reasonable and prudent person to conclude that the Offender's actions were motivated, in whole or in part, by bias.`
+* Bias Motivation/Bias Crime Type (8) indicates an Offender’s motivation to commit an offense because of their bias against a Victim’s race, religion, ethnicity, national origin, sexual orientation, disability group, or other bias.
+* Because of the difficulty in ascertaining the Offender's subjective motivation, bias is to be reported only when an investigation reveals sufficient objective facts to lead a reasonable and prudent person to conclude that the Offender's actions were motivated, in whole or in part, by bias.
 
 ___
 
@@ -1671,7 +1672,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This data element is to be used to report the type of location/ premises where each offense took place.  Only one (1) location can be entered for each offense.`
+* This data element is to be used to report the type of location/ premises where each offense took place.  Only one (1) location can be entered for each offense.
 
 ___
 
@@ -1747,9 +1748,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This data element is used only if the offense is burglary and the "Hotel Rule" is applicable.  In such cases, the number of structures (premises) entered is to be reported.  If the LRS offense (6) is not reportable as a Burglary (NIBRS 220), then this data element MUST be left blank.`
-* `In the Summary UCR Reporting System, the "Hotel Rule" is only applied to temporary lodging.  It states: If a number of dwelling units under a single manager are burglarized, then the offenses are most likely to be reported to the police by the manager rather than the individual tenants. The burglary should be reported as a single offense.  The total number of individual rooms, units, storage compartments, etc. entered is to be reported into this data element.`
-* `In LIBRS the "Hotel Rule" has been expanded to include rental storage facilities, i.e., "mini-storage" and "self storage" buildings.`
+* This data element is used only if the offense is burglary and the "Hotel Rule" is applicable.  In such cases, the number of structures (premises) entered is to be reported.  If the LRS offense (6) is not reportable as a Burglary (NIBRS 220), then this data element MUST be left blank.
+* In the Summary UCR Reporting System, the "Hotel Rule" is only applied to temporary lodging.  It states: If a number of dwelling units under a single manager are burglarized, then the offenses are most likely to be reported to the police by the manager rather than the individual tenants. The burglary should be reported as a single offense.  The total number of individual rooms, units, storage compartments, etc. entered is to be reported into this data element.
+* In LIBRS the "Hotel Rule" has been expanded to include rental storage facilities, i.e., "mini-storage" and "self storage" buildings.
 
 ### Examples:
 
@@ -1786,10 +1787,10 @@ Requirment   | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This data element is to report whether force or no force was used by the burglar(s) to enter the structure.`
-* `A forced entry is where force of any degree, or a mechanical contrivance of any kind (including a passkey or skeleton key), was used to unlawfully enter a building or other structure. `
-* `An unforced entry is one where the unlawful entry was achieved without force through an unlocked door or window.`
-* `If both forced and unforced entries were involved in the crime, the entry should be reported as having been accomplished through "Force".`
+* This data element is to report whether force or no force was used by the burglar(s) to enter the structure.
+* A forced entry is where force of any degree, or a mechanical contrivance of any kind (including a passkey or skeleton key), was used to unlawfully enter a building or other structure. 
+* An unforced entry is one where the unlawful entry was achieved without force through an unlocked door or window.
+* If both forced and unforced entries were involved in the crime, the entry should be reported as having been accomplished through "Force".
 
 ### Allowed Entries:
 ___
@@ -1878,7 +1879,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes: 
-* `(Criminal Activity):  Use this data element to provide additional information on the criminal activity of Offender(s) in the incident.`
+* (Criminal Activity):  Use this data element to provide additional information on the criminal activity of Offender(s) in the incident.
 
 ___
 
@@ -1956,11 +1957,11 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `(Gang Information):  This data element is used to provide Gang Information on Offender(s).`
-* `Definition of a Gang:  A gang must meet the following criteria in order to be considered a gang:`
-	* `Be an ongoing organization, association, or group of three or more persons`
-	* `Have a common interest and/or activity characterized by the commission of or involvement in a pattern of criminal or delinquent conduct.`
-* `If a value of None/Unknown (“N”) is entered, codes "J" and "G" cannot to be entered.`
+* (Gang Information): This data element is used to provide Gang Information on Offender(s).
+* Definition of a Gang: A gang must meet the following criteria in order to be considered a gang:
+	* Be an ongoing organization, association, or group of three or more persons
+	* Have a common interest and/or activity characterized by the commission of or involvement in a pattern of criminal or delinquent conduct.
+* If a value of 'N - None/Unknown' is entered, codes "J" and "G" cannot to be entered.
 
 
 ### Allowed Values
@@ -2047,9 +2048,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This data element is used to enter the Type of Weapon/Force Used (13) by an Offender.`
-* `Append an "A" if the weapon is automatic.`
-  * `Any firearm that can fire more than one shot by a single pull of the trigger without manual reloading is classified as an Automatic Firearm.`
+* This data element is used to enter the Type of Weapon/Force Used (13) by an Offender.
+* Append an "A" if the weapon is automatic.
+  * Any firearm that can fire more than one shot by a single pull of the trigger without manual reloading is classified as an Automatic Firearm.
 
 ___
 
@@ -2124,7 +2125,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-`Each property in an incident must be assigned a unique sequence number from "001" to "999".`
+Each property in an incident must be assigned a unique sequence number from "001" to "999".
 
 ___
 
@@ -2151,7 +2152,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.`
+* There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.
 
 <br>
 
@@ -2194,8 +2195,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 ____
 
 ### Notes:
-* `Type of Property Loss (14) describes the various type(s) of property loss that can occur during an incident, such as Recovery, Seizure, etc.`
-* `Every different type of property loss that occurs during an incident must be submitted in a separate Property Description Segment (31), when the incident involved one or more of the Offenses listed above.`
+* Type of Property Loss (14) describes the various type(s) of property loss that can occur during an incident, such as Recovery, Seizure, etc.
+* Every different type of property loss that occurs during an incident must be submitted in a separate Property Description Segment (31), when the incident involved one or more of the Offenses listed above.
 
 ### Allowed Entries:
 ___
@@ -2260,7 +2261,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Property Description (DE 15) is to be used to enter descriptions of the property that was burned, counterfeited, destroyed/damaged/ vandalized, etc., during, or as a result of, the incident.`
+* Property Description (DE 15) is to be used to enter descriptions of the property that was burned, counterfeited, destroyed/damaged/ vandalized, etc., during, or as a result of, the incident.
 
 ### Allowed Entries: 
 ___
@@ -2326,9 +2327,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Value of Property (16) is to be used to enter the total dollar value of property that was burned (includes damage caused in fighting the fire), counterfeited, destroyed/damaged/ vandalized, recovered, seized, stolen, etc., as a result of the incident.`
-* `DO NOT INCLUDE partial dollar amounts (cents).  Round values to the nearest whole dollar amounts.  If the value is unknown, enter one dollar ($1.00), that is, "000000001".`
-* `If value is known and it is between $1.00 and $2.00 the reporting agency should enter $2.00, that is, "000000002".  This is the minimum dollar value that can be entered in Value of Property (16), as "1" (or “000000001”) is used for Unknown.`
+* Value of Property (16) is to be used to enter the total dollar value of property that was burned (includes damage caused in fighting the fire), counterfeited, destroyed/damaged/ vandalized, recovered, seized, stolen, etc., as a result of the incident.
+* DO NOT INCLUDE partial dollar amounts (cents).  Round values to the nearest whole dollar amounts.  If the value is unknown, enter one dollar ($1.00), that is, "000000001".
+* If value is known and it is between $1.00 and $2.00 the reporting agency should enter $2.00, that is, "000000002".  This is the minimum dollar value that can be entered in Value of Property (16), as "1" (or “000000001”) is used for Unknown.
 
 ### Examples:
 ___
@@ -2366,9 +2367,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If previously stolen property is recovered, the month, day, and year (MMDDYYYY) of its recovery should be entered into this data element.`
-* `If there is more than one Date Recovered (DE 17) for the same Property Description (DE 15), enter the earliest date.`
-* `If the Date Recovered is unknown, enter the date of the report.`
+* If previously stolen property is recovered, the month, day, and year (MMDDYYYY) of its recovery should be entered into this data element.
+* If there is more than one Date Recovered (DE 17) for the same Property Description (DE 15), enter the earliest date.
+* If the Date Recovered is unknown, enter the date of the report.
 
 ____
 
@@ -2406,7 +2407,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Number of Stolen Vehicles (18) indicates how many motor vehicles were stolen in an incident reported as a Motor Vehicle Theft.`
+* Number of Stolen Vehicles (18) indicates how many motor vehicles were stolen in an incident reported as a Motor Vehicle Theft.
 
 ____
 
@@ -2442,7 +2443,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Number of Recovered Motor Vehicles (19) indicates how many motor vehicles were recovered in an incident that reported Motor Vehicle Thefts.`
+* Number of Recovered Motor Vehicles (19) indicates how many motor vehicles were recovered in an incident that reported Motor Vehicle Thefts.
 
 ___
 
@@ -2476,9 +2477,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Suspected Drug Type (20) identifies the type of drugs or narcotics Seized in a drug case.`
-* `If the Suspected Drug Type (20)is a Counterfeit, append an "X" to the drug code, otherwise leave the second character Blank (G).`
-* `Suspected Drug Type (20) is not to be used when drugs or narcotics were Burned, Stolen, etc., in connection with other offenses, such as Arson, Larceny/Theft, etc.`
+* Suspected Drug Type (20) identifies the type of drugs or narcotics Seized in a drug case.
+* If the Suspected Drug Type (20)is a Counterfeit, append an "X" to the drug code, otherwise leave the second character Blank (G).
+* Suspected Drug Type (20) is not to be used when drugs or narcotics were Burned, Stolen, etc., in connection with other offenses, such as Arson, Larceny/Theft, etc.
 
 ___
 
@@ -2545,10 +2546,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Estimated Drug Quantity (21) indicates the quantity of drugs or narcotics seized in a drug case, it is not to be used when drugs or narcotics were Burned, Stolen, etc. in connection with other Offenses, such as Arson, Burglary, Breaking and Entering, Larceny, Theft, etc.`
-* `Nine (9) characters are available to enter the number of WHOLE pounds, ounces, grams, etc., and three (3) more characters are available to enter the DECIMAL amount. A DECIMAL POINT must be entered to separate the whole and decimal amounts. Zero ('0') or space fill (G) should be added to the right or left of the value **to preserve the decimal's position as the tenth character in the field.**`
-* `When Estimated Drug Quantity (21) is Unknown enter '000000001.000', a value of '1', to signify that the value is not known or not reported. Also, Type Drug Measurement (22) MUST be entered as Not Reported/Unknown ('XX') and Value of Property (16) MUST be entered as Unknown (000000001).`
-* `If LRS Offense (6) is not reportable as a drug violation (35A), this data element MUST BE LEFT BLANK (G).`
+* Estimated Drug Quantity (21) indicates the quantity of drugs or narcotics seized in a drug case, it is not to be used when drugs or narcotics were Burned, Stolen, etc. in connection with other Offenses, such as Arson, Burglary, Breaking and Entering, Larceny, Theft, etc.
+* Nine (9) characters are available to enter the number of WHOLE pounds, ounces, grams, etc., and three (3) more characters are available to enter the DECIMAL amount. A DECIMAL POINT must be entered to separate the whole and decimal amounts. Zero ('0') or space fill (G) should be added to the right or left of the value **to preserve the decimal's position as the tenth character in the field.**
+* When Estimated Drug Quantity (21) is Unknown enter '000000001.000', a value of '1', to signify that the value is not known or not reported. Also, Type Drug Measurement (22) MUST be entered as Not Reported/Unknown ('XX') and Value of Property (16) MUST be entered as Unknown (000000001).
+* If LRS Offense (6) is not reportable as a drug violation (35A), this data element MUST BE LEFT BLANK (G).
 
 ___
 
@@ -2580,7 +2581,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Type Drug Measurement (22) indicates how Seized drugs and narcotics are quantified in a drug case.`
+* Type Drug Measurement (22) indicates how Seized drugs and narcotics are quantified in a drug case.
 
 ___
 
@@ -2644,7 +2645,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ____
 
 ### Notes:
-* `Each victim in an incident MUST be assigned a unique Victim Sequence Number (23) from '001' to '999'.`
+* Each victim in an incident MUST be assigned a unique Victim Sequence Number (23) from '001' to '999'.
 
 ___
 
@@ -2682,8 +2683,8 @@ ___
 
 ### Notes:
 
-* `This data element is to be used to link each offense to each victim. That is, the offense which was perpetrated against the victim during the incident.`
-* `If this data element does not match one of the values submitted in Data Element # 23 (Victim Segment Number), the submission will be returned with errors.`
+* This data element is to be used to link each offense to each victim. That is, the offense which was perpetrated against the victim during the incident.
+* If this data element does not match one of the values submitted in Data Element # 23 (Victim Segment Number), the submission will be returned with errors.
 
 ___
 
@@ -2791,11 +2792,11 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 Notes:
-* `NO ERROR NUMBER For Human Trafficking Offenses (NIBRS Codes 64A, 64B and 40C), the data value for Type of Victim (25) must be Individual ('I').`
-* `One Type of Victim (25) code MUST be entered for each victim.`
-* `Definition of Law Enforcement Officer/Peace Officer: Deputy sheriffs, municipal police officers, probation and enforcement parole officers, wildlife enforcement agents, city marshals and deputies would be considered a Law Enforcement Officer if a Victim and should have a Type of Victim (25) code of "L".`
-* `The Officer should be "In-the-Line-of-Duty" when victimized in order to report Type of Victim (25) as Law Enforcement Officer ("L"). The same rules that apply to the LEOKA form in UCR Summary also apply to this Type of Victim (25).`
-* `This Type of Victim (25) can ONLY be used for simple assaults, aggravated assaults, negligent manslaughter, murders and non-negligent homicide offenses to a Law Enforcement Officer, that took place when the Officer was On Duty as a Law Enforcement Officer.`
+* NO ERROR NUMBER For Human Trafficking Offenses (NIBRS Codes 64A, 64B and 40C), the data value for Type of Victim (25) must be Individual ('I').
+* One Type of Victim (25) code MUST be entered for each victim.
+* Definition of Law Enforcement Officer/Peace Officer: Deputy sheriffs, municipal police officers, probation and enforcement parole officers, wildlife enforcement agents, city marshals and deputies would be considered a Law Enforcement Officer if a Victim and should have a Type of Victim (25) code of "L".
+* The Officer should be "In-the-Line-of-Duty" when victimized in order to report Type of Victim (25) as Law Enforcement Officer ("L"). The same rules that apply to the LEOKA form in UCR Summary also apply to this Type of Victim (25).
+* This Type of Victim (25) can ONLY be used for simple assaults, aggravated assaults, negligent manslaughter, murders and non-negligent homicide offenses to a Law Enforcement Officer, that took place when the Officer was On Duty as a Law Enforcement Officer.
 
 ___
 
@@ -2997,7 +2998,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This is the 9-character NCIC Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. This ORI is used to record the ORI of a victim who is an officer involved in a multijurisdictional incident.`
+* This is the 9-character NCIC Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. This ORI is used to record the ORI of a victim who is an officer involved in a multijurisdictional incident.
 
 ___
 
@@ -3045,9 +3046,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If the Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), his/her age is to be entered into Age of Victim (26) either as an Exact Age, an Estimated Age, or as Unknown.`
-* `If the Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), then Age of Victim (26) is required to be entered. If Type of Victim (25) is not a person, then Age of Victim (26) MUST be left Blank (G).`
-* `If the Victim's Exact Age is not known, estimate the victim's age. Use one of the codes in the above table, and append an 'E',for Estimated. If it is impossible to determine even an Estimated Age of the victim, then enter Unknown ('00').`
+* If the Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), his/her age is to be entered into Age of Victim (26) either as an Exact Age, an Estimated Age, or as Unknown.
+* If the Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), then Age of Victim (26) is required to be entered. If Type of Victim (25) is not a person, then Age of Victim (26) MUST be left Blank (G).
+* If the Victim's Exact Age is not known, estimate the victim's age. Use one of the codes in the above table, and append an 'E',for Estimated. If it is impossible to determine even an Estimated Age of the victim, then enter Unknown ('00').
 
 ___
 
@@ -3125,7 +3126,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her date of birth, if available, is to be indicated in Date of Birth of Victim (L26).`
+* If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her date of birth, if available, is to be indicated in Date of Birth of Victim (L26).
 
 ___
 
@@ -3155,7 +3156,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her sex is to be indicated in Sex of Victim (27).`
+* If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her sex is to be indicated in Sex of Victim (27).
 
 ___
 
@@ -3223,7 +3224,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then, his/her race is to be indicated in Race of Victim (28).`
+* If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then, his/her race is to be indicated in Race of Victim (28).
 
 ___
 
@@ -3285,7 +3286,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If Victim is a person (that is, Individual ('I') or Law Enforcement Officer ('L') is entered into Type of Victim (25), then his/her ethnic origin is to be indicated in Ethnicity of Victim (29).`
+* If Victim is a person (that is, Individual ('I') or Law Enforcement Officer ('L') is entered into Type of Victim (25), then his/her ethnic origin is to be indicated in Ethnicity of Victim (29).
 
 <br>
 
@@ -3347,8 +3348,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes: 
-* `If Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L'), then, whether he/she was a resident or nonresident, the Resident Status of Victim (30) is to be entered.)`
-* `A 'Resident' is a person who maintains his/her permanent home for legal purposes in the locality (i.e., town, city, or community) where the crime took place.`
+* If Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L'), then, whether he/she was a resident or nonresident, the Resident Status of Victim (30) is to be entered.)
+* A 'Resident' is a person who maintains his/her permanent home for legal purposes in the locality (i.e., town, city, or community) where the crime took place.
 
 ___
 
@@ -3469,14 +3470,14 @@ ___
 <br>
 
 ### Notes:
-* `DEFINITION: A Justifiable Homicide is the killing of a perpetrator of a serious criminal offense by a peace officer in the line of duty; or the killing, during the commission of a serious criminal offense, of the perpetrator by a private individual.`
-* `At MOST, TWO Assault Circumstances (31) are allowed. Beginning with LIBRS 2.5 Specifications, the third Assault Circumstance is ignored. *New Warning Message in LIBRS 2.5*`
-* `Aggravated Assault/Homicide Circumstances and Law Enforcement Officers Killed/Assaulted (InLine of Duty (31) describes the circumstances of either an Aggravated Assault or Homicide.`
-* `Assault on Law Enforcement Officer is a new Aggravated Assault and Non-Negligent Manslaughter Circumstance,beginning with LIBRS Spec 2.5.`
-* `The crime being committed when the Justifiable Homicide took place MUST BE REPORTED AS A SEPARATE INCIDENT. These instructions are based on the definition of an "incident". Therefore, Justifiable Homicide cases involve two incidents rather than one.`
-  * `For the Justifiable Homicide incident, code the police officer or the civilian who killed the criminal as the "Offender" and the criminal who was killed as the "Victim".`
-    * `The Justifiable Homicide incident IS NOT CLEARED EXCEPTIONALLY, as no crime has occurred in reality.`
-    * `In the second incident, report the Offense(s) that were being committed when the Justifiable Homicide occurred.`
+* DEFINITION: A Justifiable Homicide is the killing of a perpetrator of a serious criminal offense by a peace officer in the line of duty; or the killing, during the commission of a serious criminal offense, of the perpetrator by a private individual.
+* At MOST, TWO Assault Circumstances (31) are allowed. Beginning with LIBRS 2.5 Specifications, the third Assault Circumstance is ignored. *New Warning Message in LIBRS 2.5*
+* Aggravated Assault/Homicide Circumstances and Law Enforcement Officers Killed/Assaulted (InLine of Duty (31) describes the circumstances of either an Aggravated Assault or Homicide.
+* Assault on Law Enforcement Officer is a new Aggravated Assault and Non-Negligent Manslaughter Circumstance,beginning with LIBRS Spec 2.5.
+* The crime being committed when the Justifiable Homicide took place MUST BE REPORTED AS A SEPARATE INCIDENT. These instructions are based on the definition of an "incident". Therefore, Justifiable Homicide cases involve two incidents rather than one.
+  * For the Justifiable Homicide incident, code the police officer or the civilian who killed the criminal as the "Offender" and the criminal who was killed as the "Victim".
+    * The Justifiable Homicide incident IS NOT CLEARED EXCEPTIONALLY, as no crime has occurred in reality.
+    * In the second incident, report the Offense(s) that were being committed when the Justifiable Homicide occurred.
 
 ### Allowed Entries:
 
@@ -3626,9 +3627,9 @@ Requirment   | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Notes: This Data Element (32) describes the type(s) of bodily injury suffered by a person.`
-* `Minor injury is described as an injury not requiring immediate medical attention.`
-* `Major injury is described as an injury requiring immediate medical attention.`
+* Notes: This Data Element (32) describes the type(s) of bodily injury suffered by a person.
+* Minor injury is described as an injury not requiring immediate medical attention.
+* Major injury is described as an injury requiring immediate medical attention.
 
 ___
 
@@ -3701,11 +3702,11 @@ Requirment   | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B and 40C) are *known*, then data value for Offender Number to be Related (Data Element 34) MUST be supplied as well.`
-* `If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B and 40C) are *unknown*, then data value for Offender Number to be Related (Data Element 34) MUST be '000' (UNKNOWN)`
-* `Notes: Offender Number to be Related (34) along with Relationship of Victim to Offender (35) describe the relationship of each Victim to each Offender who has perpetrated a Crime Against Person or a Robbery against the Victim. If the Victim is related to the offender in more than one way, use the closest relationship.`
-* `Enter Offender Sequence Number (36) of the Offenders for whom Victim-to-Offender relationships are going to be reported in Relationship of Victim to Offender (35).`
-* `The Reporting Agency MUST report each Victim's relationship to EVERY Offender when the Offense is a Crime Against Person or a Robbery against the Victim.`
+* If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B and 40C) are *known*, then data value for Offender Number to be Related (Data Element 34) MUST be supplied as well.
+* If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B and 40C) are *unknown*, then data value for Offender Number to be Related (Data Element 34) MUST be '000' (UNKNOWN)
+* Notes: Offender Number to be Related (34) along with Relationship of Victim to Offender (35) describe the relationship of each Victim to each Offender who has perpetrated a Crime Against Person or a Robbery against the Victim. If the Victim is related to the offender in more than one way, use the closest relationship.
+* Enter Offender Sequence Number (36) of the Offenders for whom Victim-to-Offender relationships are going to be reported in Relationship of Victim to Offender (35).
+* The Reporting Agency MUST report each Victim's relationship to EVERY Offender when the Offense is a Crime Against Person or a Robbery against the Victim.
 
 ___
 
@@ -3767,10 +3768,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Notes: If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B and 40C) are *known*, then data value for Relationship of Victim to Offender (Data Element 34) MUST be supplied as well.`
-* `Relationship of Victim to Offender (35) is used ONLY with Offender Number to be Related (34), to report the relationship of a 	Victim to Offenders who have perpetrated a Crime Against Person, or a Robbery against the Victim.`
-* `Relationship of Victim to Offender (35) indicates the Victim's relationship with each Offender involved in the incident.`
-* `Relationship of Victim to Offender (35) is NOT required if Type of Victim (25) is equal to Society/Public ('S').`
+* Notes: If Offenders of Human Trafficking offenses (NIBRS Codes 64A, 64B and 40C) are *known*, then data value for Relationship of Victim to Offender (Data Element 34) MUST be supplied as well.
+* Relationship of Victim to Offender (35) is used ONLY with Offender Number to be Related (34), to report the relationship of a 	Victim to Offenders who have perpetrated a Crime Against Person, or a Robbery against the Victim.
+* Relationship of Victim to Offender (35) indicates the Victim's relationship with each Offender involved in the incident.
+* Relationship of Victim to Offender (35) is NOT required if Type of Victim (25) is equal to Society/Public ('S').
 ___
 
 ### List of Allowed Entries for DE 35 is on the following page:
@@ -3861,8 +3862,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Notes: Each Offender in an incident is assigned a UNIQUE Offender Sequence Number (36) from '001' to '999'.`
-* `If nothing is known about the Offender(s), enter '000' into this data element and LEAVE DATA ELEMENTS 37 THROUGH 39 BLANK (G). Also, Offender Suspected of Using (8) MUST be Not Applicable ('N') and Bias Motivation/Bias Crime Type (8A) MUST be None ('88').`
+* Notes: Each Offender in an incident is assigned a UNIQUE Offender Sequence Number (36) from '001' to '999'.
+* If nothing is known about the Offender(s), enter '000' into this data element and LEAVE DATA ELEMENTS 37 THROUGH 39 BLANK (G). Also, Offender Suspected of Using (8) MUST be Not Applicable ('N') and Bias Motivation/Bias Crime Type (8A) MUST be None ('88').
 
 
 ### Examples: 
@@ -3913,10 +3914,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Age of the Offender (37) is entered either as an exact number of years, an estimated age or as unknown.`
-* `If the Offender's Age is NOT KNOWN, estimate the Offender's Age and append an 'E' (Estimated).`
-* `If a range is given for the Offender's Age, enter the median (average) age of the range (rounded down).`
-* `If it is impossible to determine even an Estimated Age of the Offender, then enter Unknown ('00').`
+* Age of the Offender (37) is entered either as an exact number of years, an estimated age or as unknown.
+* If the Offender's Age is NOT KNOWN, estimate the Offender's Age and append an 'E' (Estimated).
+* If a range is given for the Offender's Age, enter the median (average) age of the range (rounded down).
+* If it is impossible to determine even an Estimated Age of the Offender, then enter Unknown ('00').
 
 ### Allowed Entries
 
@@ -3991,7 +3992,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If the Date of Birth of the Offender is known, it is to be indicated in this data element.`
+* If the Date of Birth of the Offender is known, it is to be indicated in this data element.
 
 ___
 
@@ -4024,7 +4025,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This Data Element (38) indicates Sex of the Offender.`
+* This Data Element (38) indicates Sex of the Offender.
 
 ___
 
@@ -4104,7 +4105,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 ### Notes:
-* `Race of an Offender is indicated in this Data Element (39).`
+* Race of an Offender is indicated in this Data Element (39).
 
 ___
 
@@ -4164,7 +4165,7 @@ ___
 
 ### Notes:
 
-* `This Data Element indicates the ethnic origin of the Arrestee.`
+* This Data Element indicates the ethnic origin of the Arrestee.
 
 ___
 
@@ -4229,7 +4230,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Each Arrestee reported is assigned a UNIQUE Sequence Number from '001' to '999'.`
+* Each Arrestee reported is assigned a UNIQUE Sequence Number from '001' to '999'.
 
 ___
 
@@ -4268,7 +4269,7 @@ None
 ___
 
 ### Notes:
-* `If Arrestee’s full name will not fit in the field, then enter as much as possible. DO NOT put periods behind suffix abbreviations or middle initial.`
+* If Arrestee’s full name will not fit in the field, then enter as much as possible. DO NOT put periods behind suffix abbreviations or middle initial.
 
 ___
 
@@ -4300,7 +4301,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This Data Element (41) is a UNIQUE, IDENTIFYING number assigned by an agency to an Arrest Report. It may be the Incident Number of a reported incident relating to the Arrest, or it may be a separate Booking Number.`
+* This Data Element (41) is a UNIQUE, IDENTIFYING number assigned by an agency to an Arrest Report. It may be the Incident Number of a reported incident relating to the Arrest, or it may be a separate Booking Number.
 
 ___
 
@@ -4334,7 +4335,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Arrest Date (42) is used to enter the month, day and year when the actual arrest took place.`
+* Arrest Date (42) is used to enter the month, day and year when the actual arrest took place.
 
 ___
 
@@ -4361,7 +4362,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Type of Arrest (43) indicates the type of apprehension.`
+* Type of Arrest (43) indicates the type of apprehension.
 
 ___
 
@@ -4424,10 +4425,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Multiple Arrestee Segment Indicator (44) ensures that an Arrestee is counted (scored) only once when the Arrestee's apprehension causes the Arresting Agency to submit two or more Arrestee Segments (60) concerning separate Incident Reports. That is, the Arrestee was involved in more than one crime incident and his/her arrest data are duplicated in each Incident Report.` 
-  * `In such a situation, Count Arrestee (“C”) is to be entered into one of the Arrestee Segments (60), and Multiple (M) is to be entered into all of the remaining Arrestee Segments (60). `
-  * `If the Arrestee's apprehension DOES NOT cause the Arresting Agency to submit multiple Arrestee Segments (60), enter Not Applicable (“N”).`
-* `Count Arrestee (“C”) and Multiple ("M") codes are to be used in this Data Element (44) ONLYwhen the same agency submits two or more Arrestee Segments (for different incidents) relating to the same Arrestee.`
+* Multiple Arrestee Segment Indicator (44) ensures that an Arrestee is counted (scored) only once when the Arrestee's apprehension causes the Arresting Agency to submit two or more Arrestee Segments (60) concerning separate Incident Reports. That is, the Arrestee was involved in more than one crime incident and his/her arrest data are duplicated in each Incident Report.` 
+  * In such a situation, Count Arrestee (“C”) is to be entered into one of the Arrestee Segments (60), and Multiple (M) is to be entered into all of the remaining Arrestee Segments (60). 
+  * If the Arrestee's apprehension DOES NOT cause the Arresting Agency to submit multiple Arrestee Segments (60), enter Not Applicable (“N”).
+* Count Arrestee (“C”) and Multiple ("M") codes are to be used in this Data Element (44) ONLYwhen the same agency submits two or more Arrestee Segments (for different incidents) relating to the same Arrestee.
 
 ### Allowed Entries:
 ___
@@ -4513,16 +4514,16 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This Data Element records the Louisiana Revised Statute that the Arrestee was charged with.`
-* `The structure of a Louisiana Revised Statute (LRS) is: Title (TT), followed by a colon, then a Section Number (SSSS.S), followed by optional Subparts, Qualifiers and Modifiers. Section and Subpart/Subpart with Qualifier/Qualifier/Juvenile Qualifier/Inchoate Modifier, should NOT be preceded by spaces or zeroes.`
-  * `If there are no places after the decimal, then both the place after the decimal and the decimal point should be omitted.`
-    * `For example, the LRS for Murder is 14:30 – two spaces for the Title (14), a colon, two spaces for the Section (30) before the decimal, not four spaces - 14:GG30 - and dropping the space after the decimal. `
-    * `The field should be LEFT JUSTIFIED WITH NO INCLUDED SPACES. Spaces are interpreted as the End-of-Data in this data element.`
-* `Subparts, Qualifiers, etc. are sometimes included for more specificity regarding those LRS codes requiring these identifiers. These parts of the field can be expanded or contracted as necessary to fill in the data.`
-* `All local ordinances must be reported with the appropriate state statute as the base offense, with any Subparts, Qualifiers, etc. added when applicable.`
-  * `When a parish statute does not correspond to a state LRS, the parish statute must be reported with a "P:" for the title and the parish statute following the colon.`
-  * `If a city ordinance does not correspond to a state LRS, it must be reported by the police department with a "C:" substituted for the title portion of the data field, and the city ordinance following the colon. `
-    * `When it is a Sheriff's Office, or any other law enforcement agency who has jurisdiction in more than one city, reporting the city ordinance, it should be reported with a "C#:" substituted for the title portion of the data field, and the city ordinance following the colon, where the "#" is replaced with a unique number for each city as decided by the agency and agreed upon by the state.`
+* This Data Element records the Louisiana Revised Statute that the Arrestee was charged with.
+* The structure of a Louisiana Revised Statute (LRS) is: Title (TT), followed by a colon, then a Section Number (SSSS.S), followed by optional Subparts, Qualifiers and Modifiers. Section and Subpart/Subpart with Qualifier/Qualifier/Juvenile Qualifier/Inchoate Modifier, should NOT be preceded by spaces or zeroes.
+  * If there are no places after the decimal, then both the place after the decimal and the decimal point should be omitted.
+    * For example, the LRS for Murder is 14:30 – two spaces for the Title (14), a colon, two spaces for the Section (30) before the decimal, not four spaces - 14:GG30 - and dropping the space after the decimal. 
+    * The field should be LEFT JUSTIFIED WITH NO INCLUDED SPACES. Spaces are interpreted as the End-of-Data in this data element.
+* Subparts, Qualifiers, etc. are sometimes included for more specificity regarding those LRS codes requiring these identifiers. These parts of the field can be expanded or contracted as necessary to fill in the data.
+* All local ordinances must be reported with the appropriate state statute as the base offense, with any Subparts, Qualifiers, etc. added when applicable.
+  * When a parish statute does not correspond to a state LRS, the parish statute must be reported with a "P:" for the title and the parish statute following the colon.
+  * If a city ordinance does not correspond to a state LRS, it must be reported by the police department with a "C:" substituted for the title portion of the data field, and the city ordinance following the colon. 
+    * When it is a Sheriff's Office, or any other law enforcement agency who has jurisdiction in more than one city, reporting the city ordinance, it should be reported with a "C#:" substituted for the title portion of the data field, and the city ordinance following the colon, where the "#" is replaced with a unique number for each city as decided by the agency and agreed upon by the state.
 
 ___
 
@@ -4564,14 +4565,14 @@ ___
 ___
 
 ### Notes:
-* `Arrest Connection to Offense (L45) is OPTIONAL at this time.` 
-* `Arrest Connection to Offense (L45) relates an Arrest with the Offense giving rise to the Arrest. Indirectly, it also relates an Offender to his Victim. All Offenses should be included if a charge was added for the particular Offense, even those from different previous incidents. `
-  * `The first three characters are the Offense Sequence Number (L6) of the Offense (6).`
-  * `The next twelve characters are the Incident Number (2) of the Offense.`
-  * `If Multiple Arrestee Segment Indicator (44) is anything except Not Applicable ("N") then this field will be connecting an Arrest to Offenses in two or more separate incidents.`
-  * `The Incident Number (2) is appended to distinguish between Offense 001 in this incident and Offense 001 in a different incident.`
-    * `The combined Offense Sequence Number (L6) and the Incident Number (2) add together to give a unique identifier (15 characters) indicating which Offense gave rise to the Arrest.`
-  * `The Incident Number (2) can be omitted if Multiple Arrestee Segment Indicator (44) is Not Applicable ("N"), because all Offenses will be in the same incident. And therefore, the Incident Number (2) can be assumed to be that of the incident with which the Arrestee Segment (60) was submitted.`
+* Arrest Connection to Offense (L45) is OPTIONAL at this time.` 
+* Arrest Connection to Offense (L45) relates an Arrest with the Offense giving rise to the Arrest. Indirectly, it also relates an Offender to his Victim. All Offenses should be included if a charge was added for the particular Offense, even those from different previous incidents. 
+  * The first three characters are the Offense Sequence Number (L6) of the Offense (6).
+  * The next twelve characters are the Incident Number (2) of the Offense.
+  * If Multiple Arrestee Segment Indicator (44) is anything except Not Applicable ("N") then this field will be connecting an Arrest to Offenses in two or more separate incidents.
+  * The Incident Number (2) is appended to distinguish between Offense 001 in this incident and Offense 001 in a different incident.
+    * The combined Offense Sequence Number (L6) and the Incident Number (2) add together to give a unique identifier (15 characters) indicating which Offense gave rise to the Arrest.
+  * The Incident Number (2) can be omitted if Multiple Arrestee Segment Indicator (44) is Not Applicable ("N"), because all Offenses will be in the same incident. And therefore, the Incident Number (2) can be assumed to be that of the incident with which the Arrestee Segment (60) was submitted.
 
 ___
 
@@ -4607,10 +4608,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If the Arrestee was in possession of a toy or play weapon this would be reported as being Unarmed ("01").`
-* `Arrestee was Armed With (46) indicates if the Arrestee was armed with a commonly known weapon at the time of his/her apprehension.`
-* `If the weapon was an "automatic" firearm, an Automatic ('A') designation is added as a suffix code, (for example, Rifle Automatic ('13A').`
-  * `An "Automatic Firearm" is defined as any firearm that shoots, or is designed to shoot, more than one shot at a time by a single pull of the trigger without manual reloading.`
+* If the Arrestee was in possession of a toy or play weapon this would be reported as being Unarmed ("01").
+* Arrestee was Armed With (46) indicates if the Arrestee was armed with a commonly known weapon at the time of his/her apprehension.
+* If the weapon was an "automatic" firearm, an Automatic ('A') designation is added as a suffix code, (for example, Rifle Automatic ('13A').
+  * An "Automatic Firearm" is defined as any firearm that shoots, or is designed to shoot, more than one shot at a time by a single pull of the trigger without manual reloading.
 
 
 ### Allowed Entries:
@@ -4701,10 +4702,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Age of the Arrestee (47) can be entered either as an exact number of years, an estimated age, or as unknown.`
-* `Note: Age at time of Arrest.`
-* `Note: (00) Unknown CANNOT have 'E' with this data value`
-* `Note: When Arrestee's Age is not known, estimate the Arrestee's Age and append an 'E' (Estimated).`
+* Age of the Arrestee (47) can be entered either as an exact number of years, an estimated age, or as unknown.
+* Note: Age at time of Arrest.
+* Note: (00) Unknown CANNOT have 'E' with this data value
+* Note: When Arrestee's Age is not known, estimate the Arrestee's Age and append an 'E' (Estimated).
 
 ### Allowed Entries
 
@@ -4776,7 +4777,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `If Date of Birth of the Arrestee is Known, it should be entered into this Data Element.`
+* If Date of Birth of the Arrestee is Known, it should be entered into this Data Element.
 
 ___
 
@@ -4804,7 +4805,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This Data Element (48) indicates the sex of the Arrestee.`
+* This Data Element (48) indicates the sex of the Arrestee.
 
 ___
 
@@ -4866,7 +4867,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Notes: Race of Arrestee (49) is indicated by this Data Element.`
+* Notes: Race of Arrestee (49) is indicated by this Data Element.
 
 ___
 
@@ -4928,7 +4929,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This Data Element indicates the ethnic origin of the Arrestee.`
+* This Data Element indicates the ethnic origin of the Arrestee.
 
 ___
 
@@ -4986,8 +4987,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `The Arrestee’s Residency Status, whether Resident ('R') or Nonresident ('N'), is entered into this Data Element.`
-* `A 'Resident' is a person who maintains his/her permanent home for legal purposes in the locality (i.e., town, city, or community) where the crime took place.`
+* The Arrestee’s Residency Status, whether Resident ('R') or Nonresident ('N'), is entered into this Data Element.
+* A 'Resident' is a person who maintains his/her permanent home for legal purposes in the locality (i.e., town, city, or community) where the crime took place.
 
 ___
 
@@ -5055,8 +5056,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Disposition of Arrestee Under 17 (52) is to be used ONLY if the Arrestee was 16 years of age or younger at the time of arrest.`
-* `This will change to Arrestee under 18 on 01/01/2020`
+* Disposition of Arrestee Under 17 (52) is to be used ONLY if the Arrestee was 16 years of age or younger at the time of arrest.
+* This will change to Arrestee under 18 on 01/01/2020
 
 ___
 
@@ -5149,8 +5150,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Location of Incident (52) reports the geographical location of the incident. This field is not required and should be left blank if the agency does not track incidents with the use of geographical coordinates.`
-* `Optional: This field is not validated nor submitted to the FBI.`
+* Location of Incident (52) reports the geographical location of the incident. This field is not required and should be left blank if the agency does not track incidents with the use of geographical coordinates.
+* Optional: This field is not validated nor submitted to the FBI.
 
 ___
 
@@ -5178,7 +5179,7 @@ None
 ___
 
 ### Notes:
-* `This field is optional and is for the reporting agency's use in locating incidents.`
+* This field is optional and is for the reporting agency's use in locating incidents.
 
 ___
 
@@ -5197,13 +5198,13 @@ MUST be present if fingerprints are submitted to the Bureau of Identification of
 ___
 
 ### Notes:
-* `Arrest Transaction Number (L55) is generated by the live scan when fingerprinting an Arrestee or is a pre-assigned number generated and assigned at the time of the fingerprinting. This ATN number is defined as:`
-   * `Characters 1-4 4th, 5th, 6th, and 7th characters of the ORI number of the agency that made the arrest, or where the live scan device is housed.`
-   * `Character 5 live scan device number assigned to the device being used to generate this Arrestee's fingerprints.`
-   * `Characters 6-7 indicates the year this Arrestee's fingerprints are being scanned into this device.`
-   * `Characters 8-12 Arrest Sequence Number for this arrest event. This is a number counter that sequentially assigns a number to each arrest event`
-   * `Characters 13-15 indicates the number of charges being assigned to this Arrestee at the time these fingerprints are being scanned. For instance, if an Arrestee is being charged with five counts of Aggravated Battery for this arrest, the numbers generated would be "001" through "005."`
-   * `The Arrest Transaction Number (L55) is used to facilitate crime analysis. Arrest Transaction Number (L55) is the number assigned when an Arrestee is fingerprinted on the Automatic Finger Print Information System (AFIS). This data element can be sent on every Arrestee, but is only mandated if the Louisiana Revised Statute is a felony arrest or charges required fingerprints.`
+* Arrest Transaction Number (L55) is generated by the live scan when fingerprinting an Arrestee or is a pre-assigned number generated and assigned at the time of the fingerprinting. This ATN number is defined as:
+   * Characters 1-4 4th, 5th, 6th, and 7th characters of the ORI number of the agency that made the arrest, or where the live scan device is housed.
+   * Character 5 live scan device number assigned to the device being used to generate this Arrestee's fingerprints.
+   * Characters 6-7 indicates the year this Arrestee's fingerprints are being scanned into this device.
+   * Characters 8-12 Arrest Sequence Number for this arrest event. This is a number counter that sequentially assigns a number to each arrest event
+   * Characters 13-15 indicates the number of charges being assigned to this Arrestee at the time these fingerprints are being scanned. For instance, if an Arrestee is being charged with five counts of Aggravated Battery for this arrest, the numbers generated would be "001" through "005."
+   * The Arrest Transaction Number (L55) is used to facilitate crime analysis. Arrest Transaction Number (L55) is the number assigned when an Arrestee is fingerprinted on the Automatic Finger Print Information System (AFIS). This data element can be sent on every Arrestee, but is only mandated if the Louisiana Revised Statute is a felony arrest or charges required fingerprints.
 
  <br> 
 
@@ -5233,7 +5234,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 3 | {{error.seq_desc["c1"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ### Notes:
-* `This two-digit identifier is used by LIBRS to determine the type of segment being processed.`
+* This two-digit identifier is used by LIBRS to determine the type of segment being processed.
 
 ___
 
@@ -5271,7 +5272,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `The name of the Submitting Agency is spelled out, and often abbreviated.  This data field is found in the Header Segment, which is the first segment in all data submission files.`
+* The name of the Submitting Agency is spelled out, and often abbreviated.  This data field is found in the Header Segment, which is the first segment in all data submission files.
 
 ___
 
@@ -5300,7 +5301,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This data element provides LIBRS with the date that this data submission file was generated for submission.`
+* This data element provides LIBRS with the date that this data submission file was generated for submission.
 
 ___
 
@@ -5329,7 +5330,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Reporting Period identifies the month and year that the Incident-Based data in a data submission file is being reported. All data in the data submission does not have to correspond to this date (i.e., Modifications and Time-Window Submissions will be from preceding months).`
+* Reporting Period identifies the month and year that the Incident-Based data in a data submission file is being reported. All data in the data submission does not have to correspond to this date (i.e., Modifications and Time-Window Submissions will be from preceding months).
 
 ____
 
@@ -5353,7 +5354,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Action Type (C5) informs LIBRS of the type of action that LIBRS and NIBRS are required to take with incident data contained by the segment.`
+* Action Type (C5) informs LIBRS of the type of action that LIBRS and NIBRS are required to take with incident data contained by the segment.
 
 <br>
 
@@ -5394,7 +5395,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `Clearance Indicator (C6) is used in the Arrestee Segment (60) to indicate whether this arrest produced a clearance, or is an additional arrest on a previously cleared incident that is outside the agency's base date.`
+* Clearance Indicator (C6) is used in the Arrestee Segment (60) to indicate whether this arrest produced a clearance, or is an additional arrest on a previously cleared incident that is outside the agency's base date.
 
 <br>
 
@@ -5428,7 +5429,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* `This field provides LIBRS with a count of segments submitted by the agency within the data submission file, including the header and trailer segments.  This number is used as part of the data submission validation process.`
+* This field provides LIBRS with a count of segments submitted by the agency within the data submission file, including the header and trailer segments.  This number is used as part of the data submission validation process.
 
 <br>
 
@@ -5454,7 +5455,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20029"] -%}
 2 | {{error.seq_desc["c8"]}} | {{error.err_no}} | {{ error.err_message }} 
 
-`Note: This field is used to provide LIBRS with a way to determine where an end of record occurs. In the event of an error in record length this will allow the LIBRS system to find the start of the next record and possibly recover from the error. The "End of Segment" marker is the same for all segments, two capitol Z's.`
+`Note: This field is used to provide LIBRS with a way to determine where an end of record occurs. In the event of an error in record length this will allow the LIBRS system to find the start of the next record and possibly recover from the error. The "End of Segment" marker is the same for all segments, two capitol Z's.
 
 <br>
 
@@ -5481,7 +5482,7 @@ Requirement  | Requirement Description |
 ___
 
 ### Notes:
-* `This field is used to pad unused fields for systems that are unable to write variable length records. This padding will lengthen all segments to 150 characters. Padding can be replaced with a newline character for those systems that can write variable length records. The newline character will mark the true End-of-Record. Variable length records are preferred by LIBRS because of the space savings they allow.`
+* This field is used to pad unused fields for systems that are unable to write variable length records. This padding will lengthen all segments to 150 characters. Padding can be replaced with a newline character for those systems that can write variable length records. The newline character will mark the true End-of-Record. Variable length records are preferred by LIBRS because of the space savings they allow.
 
 <br>
 
