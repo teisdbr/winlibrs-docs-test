@@ -7,9 +7,9 @@ permalink: /
 # LIBRS Validation and Processing Documentation
 ____
 
-#### This page contains information on how LIBRS Flat Files should be processed and generated for use in submitting data to the State of Louisiana, and subsequently the FBI via NIBRS. 
+This page contains information on how LIBRS Flat Files should be processed and generated for use in submitting data to the State of Louisiana, and subsequently the FBI via NIBRS. Use the links below, or the side menu to get started. This site contains the following information.
 
-#### Use the links below, or the side menu to get started. This site contains the following information:
+We are actively working on making this documentation easier to use and more complete. Please bear with us if things change places on you, and feel free to let us know if we've made a mistake somewhere along the way.
 
 ___
   
@@ -18,8 +18,6 @@ ___
 
 - ### <a href="./librs-spec">Technical Specification Documentation</a>
   - #### Information about the specifications of each of the LIBRS Segments, how they're constructed, error messages associated with them, examples, and other requirements.
-  
-- ### <a href="./data-element-definitions">Data Element Definitions</a>
   - #### In depth information about each of the LIBRS Data Elements, as well as error messages, examples, and other requirements that are associated with them.
   
 - ### <a href="./data-element-values">Data Element Available Values</a>
