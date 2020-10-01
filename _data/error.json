@@ -243,7 +243,7 @@
         "err_no": 10081,
         "err_message": "THIS PROPERTY LOSS CODE CANNOT EXIST WITH THE OFFENSES SUBMITTED",
         "err_desc": {
-            "14": "The Type of Property Loss Code (DE 14) must be applicable to Offense(s) submitted. Refer to Mandatories for the correct values to use for each of the offenses."
+            "14": "The Type of Property Loss Code (DE 14) must be applicable to Offense(s) submitted. Refer to the [List of Available Values](./data-element-values#allowable-property-loss-types-de-14-by-nibrs-and-attempedcompleted) for the correct values to use for each of the offenses."
         }
     },
     "10084": {

@@ -2243,6 +2243,9 @@ Enter only one (1) code for each Property Description Segment. However, as many 
 </table>
 ___
 
+### Available Property Loss Types by NIBRS Code
+To see a list of which Property Loss Types are available for each NIBRS Code based on their Attempted/Completed Status, you can find it here: [List of Available DE 14 NIBRS Values](./data-element-values#allowable-property-loss-types-de-14-by-nibrs-and-attempedcompleted)
+
 <br>
 
 <div class="newpage"></div>

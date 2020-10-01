@@ -3,354 +3,374 @@
         {
             "nibrs": "100",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                1,
-                5,
-                7,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."},
+                {"lossType": 8, "description": "Unknown"}
             ]
         },
         {
             "nibrs": "120",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "200",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                2
+                {"lossType": 2, "description": "Burned"}
             ]
         },
         {
             "nibrs": "210",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "220",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                1,
-                5,
-                7,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."},
+                {"lossType": 8, "description": "Unknown"}
             ]
         },
         {
             "nibrs": "240",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "250",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                3,
-                5,
-                6
+                {"lossType": 3, "description": "Counterfeited or Forged"},
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 6, "description": "Seized"}
             ]
         },
         {
             "nibrs": "270",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "280",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                1,
-                5
+                {"lossType": 1, "description": "None"},
+                {"lossType": 5, "description": "Recovered"}
             ]
         },
         {
             "nibrs": "290",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                4
-            ]
-        },
-        {
-            "nibrs": "510",
-            "attempted": [
-                1,
-                8
-            ],
-            "completed": [
-                1,
-                5,
-                7,
-                8
+                {"lossType": 4, "description": "Destroyed, Damaged, or Vandalized"}
             ]
         },
         {
             "nibrs": "23A",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "23B",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "23C",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "23D",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "23E",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "23F",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "23G",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "23H",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "26A",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "26B",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "26C",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "26D",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "26E",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "26F",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "26G",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                5,
-                7
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."}
             ]
         },
         {
             "nibrs": "35A",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                1,
-                6
+                {"lossType": 1, "description": "None"},
+                {"lossType": 6, "description": "Seized"}
             ]
         },
         {
             "nibrs": "35B",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                1,
-                6
+                {"lossType": 1, "description": "None"},
+                {"lossType": 6, "description": "Seized"}
             ]
         },
         {
             "nibrs": "39A",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                6
+                {"lossType": 6, "description": "Seized"}
             ]
         },
         {
             "nibrs": "39B",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                6
+                {"lossType": 6, "description": "Seized"}
             ]
         },
         {
             "nibrs": "39C",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                6
+                {"lossType": 6, "description": "Seized"}
             ]
         },
         {
             "nibrs": "39D",
             "attempted": [
-                1,
-                8
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                6
+                {"lossType": 6, "description": "Seized"}
+            ]
+        },
+        {
+            "nibrs": "510",
+            "attempted": [
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
+            ],
+            "completed": [
+                {"lossType": 1, "description": "None"},
+                {"lossType": 5, "description": "Recovered"},
+                {"lossType": 7, "description": "Stolen, Etc."},
+                {"lossType": 8, "description": "Unknown"}
+            ]
+        },
+        {
+            "nibrs": "90A",
+            "attempted": [
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
+            ],
+            "completed": [
+                {"lossType": 6, "description": "Seized"}
+            ]
+        },
+        {
+            "nibrs": "90Z",
+            "attempted": [
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
+            ],
+            "completed": [
+                {"lossType": 6, "description": "Seized"}
             ]
         }
     ]

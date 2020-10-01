@@ -45,3 +45,38 @@ ____
 {% endfor %}
 </tbody>
 </table>
+
+<br><br>
+
+# Allowable Property Loss Types (DE 14) By NIBRS and Attemped/Completed
+
+___
+
+The following table outlines the values that are allowed to be used for data Element 14, Property Loss Type, when an Offense of a particular NIBRS Code is either Attempted or Completed. 
+
+<table>
+<thead>
+	<tr>
+		<th style="text-align: center;">NIBRS Code</th>
+		<th>When Attempted...</th>
+		<th>When Completed...</th>
+	</tr>
+    </thead>
+    <tbody>
+{% for de in site.data.loss-types-by-nibrs-code.applicablePropertyLossTypes %}
+	<tr>
+		<td style="text-align: center;">{{de.nibrs}}</td>
+		<td>
+		{% for att in de.attempted %}
+		{{att.lossType}} - {{att.description}}{% if forloop.last == false %}<br>{% endif %}
+		{% endfor %}
+		</td>
+		<td>
+		{% for com in de.completed %}
+		{{com.lossType}} - {{com.description}}{% if forloop.last == false %}<br>{% endif %}
+		{% endfor %}
+		</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
