@@ -1,0 +1,357 @@
+{
+    "applicablePropertyLossTypes": [
+        {
+            "nibrs": "100",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                1,
+                5,
+                7,
+                8
+            ]
+        },
+        {
+            "nibrs": "120",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "200",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                2
+            ]
+        },
+        {
+            "nibrs": "210",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "220",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                1,
+                5,
+                7,
+                8
+            ]
+        },
+        {
+            "nibrs": "240",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "250",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                3,
+                5,
+                6
+            ]
+        },
+        {
+            "nibrs": "270",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "280",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                1,
+                5
+            ]
+        },
+        {
+            "nibrs": "290",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                4
+            ]
+        },
+        {
+            "nibrs": "510",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                1,
+                5,
+                7,
+                8
+            ]
+        },
+        {
+            "nibrs": "23A",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "23B",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "23C",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "23D",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "23E",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "23F",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "23G",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "23H",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "26A",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "26B",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "26C",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "26D",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "26E",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "26F",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "26G",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                5,
+                7
+            ]
+        },
+        {
+            "nibrs": "35A",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                1,
+                6
+            ]
+        },
+        {
+            "nibrs": "35B",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                1,
+                6
+            ]
+        },
+        {
+            "nibrs": "39A",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                6
+            ]
+        },
+        {
+            "nibrs": "39B",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                6
+            ]
+        },
+        {
+            "nibrs": "39C",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                6
+            ]
+        },
+        {
+            "nibrs": "39D",
+            "attempted": [
+                1,
+                8
+            ],
+            "completed": [
+                6
+            ]
+        }
+    ]
+}
