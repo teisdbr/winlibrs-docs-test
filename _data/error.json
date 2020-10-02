@@ -393,8 +393,9 @@
         "err_no": 11005,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
         "err_desc": {
-            "3": "The date supplied for the Incident Date is not valid. Please ensure that the supplied date is in the MMDDYYYY Format, and is not a date later than the current date.",
-            "5": "The date supplied for the Exceptional Clearance Date is not valid. Please ensure that the supplied date is in the MMDDYYY Format, and is not a date later than the reporting date. Additionally this value cannot be all zeros, it must be a real date."
+            "3": "The date supplied for the Incident Date (DE 3) is not valid. Please ensure that the supplied date is in the MMDDYYYY Format, and is not a date later than the current date.",
+            "5": "The date supplied for the Exceptional Clearance Date (DE 5) is not valid. Please ensure that the supplied date is in the MMDDYYY Format, and is not a date later than the reporting date. Additionally this value cannot be all zeros, it must be a real date.",
+            "17": "The date supplied for Date Recovered (DE 17) is not valid. Please ensure that the supplied date is in the MMDDYYY Format."
         }
     },
     "11015": {
@@ -578,7 +579,7 @@
         "err_no": 11070,
         "err_message": "INCIDENT DATE CANNOT BE AFTER YEAR [YYYY] AND MONTH [MM] OF TAPE",
         "err_desc": {
-            "3": "Incident Date/Hour CANNOT be later than the year and month the data submission file represents. (EG: A June 2019 data submission CANNOT contain incidents occurring after June)."
+            "3": "Incident Date/Hour cannot be later than the year and month the data submission file represents. (EG: A June 2019 data submission cannot contain incidents occurring after June)."
         }
     },
     "11071": {
@@ -610,7 +611,7 @@
         "err_no": 11074,
         "err_message": "EXCEPTIONAL CLEARANCE DATE PREDATES DATE ORI WENT IBR",
         "err_desc": {
-            "5": "Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) or 'M' (Modify) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the date the ORI was certified for LIBRS submission."
+            "5": "Administrative Segments (10) submitted ith an Action Type of 'W' (Time-Window Submission) or 'M' (Modify) cannot have an Exceptional Clearance Date (DE 5) earlier than the date the ORI was certified for LIBRS submission."
         }
     },
     "11075": {
@@ -624,25 +625,37 @@
     "11076": {
         "active": "true",
         "err_no": 11076,
-        "err_message": "INCIDENT DATE FOR WINDOW RECORDS CANNOT BE WITHIN BOUNDARIES OF INCIDENT",
+        "err_message": "INCIDENT DATE FOR WINDOW RECORDS CANNOT BE AFTER AGENCY'S BASE DATE",
         "err_desc": {
-            "3": "The **Submission Date (C3), in positions 23-30,** and the Incident Date MUST be valid entries.<br>LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as 'Time Window' submissions."
+            "3": "Time Window Submissions are not allowed for Incidents Dates that are later than the Agency's Base Date (Date they began submitting Incident-Based data)."
+        }
+    },
+    "11077": {
+        "active": "true",
+        "err_no": 11077,
+        "err_message": "INCIDENT DATE (DE 3) CANNOT BE GREATER THAN THE SUBMISSION DATE (DE C3)",
+        "err_desc": {
+            "3": "The Incident Date supplied in Segment 10 cannot be after the Submission Date in Segment 00."
         }
     },
     "11097": {
         "active": "true",
         "err_no": 11097,
-        "err_message": "SEGMENT 11 MISSING(LIBRS ONLY)"
+        "err_message": "SEGMENT 11 AND/OR 63 MISSING",
+        "seq_desc": {
+            "11": "Segment 11 was either missing, or did not have a matching Action Type (DE C5) compared to the Incident's Administrative Segment (Segment 10).",
+            "63": "Segment 63 was either missing, or did not have a matching Action Type (DE C5) compared to the Incident's Arrestee Segment (Segment 60)."
+        }
     },
     "12001": {
         "active": "true",
         "err_no": 12001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
         "err_desc": {
-            "l6": "Must be present -- CANNOT be Blank (G).",
-            "6": "Must be present -- CANNOT be Blank (G).",
-            "7": "Must be present -- CANNOT be Blank (G).",
-            "9": "Must be present -- CANNOT be Blank (G)."
+            "6": "LRS Code (DE 6) is missing. This is a required Data Element.",
+            "7": "Attempted/Completed (DE 7) is missing. This is a required Data Element.",
+            "9": "Location Type (DE 9) is missing. This is a required Data Element.",
+            "12": "Type of Criminal Activity/Gang Information (DE 12) is missing. This is a required Data Element for the NIBRS Code specified."
         }
     },
     "12002": {
@@ -650,7 +663,7 @@
         "err_no": 12002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
         "err_desc": {
-            "10": "MUST be numeric entry of 01-99 if entered."
+            "10": "Must be numeric entry of 01-99, if entered."
         }
     },
     "12004": {
@@ -658,35 +671,38 @@
         "err_no": 12004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "err_desc": {
-            "6": "MUST be a valid code on Master LIBRS/LRS Code Table.",
-            "9": "MUST be a valid code on Master LIBRS/LRS Code Table.",
-            "11": "MUST be a valid code.",
-            "12": "MUST be a valid code.",
-            "13": "MUST be a valid code."
+            "6": "Must be a valid code on Master LIBRS/LRS Code Table.",
+            "8": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "9": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "11": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "12": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "13": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "23": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values)."
         }
     },
     "12005": {
-        "active": "true",
+        "active": "false",
         "err_no": 12005,
         "err_message": "INVALID LRS--NOT IN LIBRS REVISED STATUTES TABLE"
     },
     "12006": {
         "active": "true",
         "err_no": 12006,
-        "err_message": "ERROR - DUPLICATE VALUE = (VALUE)",
+        "err_message": "ERROR - DUPLICATE VALUE",
         "err_desc": {
-            "8": "If more than one code entered, CANNOT be a duplicate.",
-            "12": "If more than one code entered, CANNOT be a duplicate.",
-            "13": "If more than one code entered, CANNOT be a duplicate."
+            "8": "When more than one value is present, the same value is not allowed to be repeated.",
+            "12": "When more than one value is present, the same value is not allowed to be repeated.",
+            "13": "When more than one value is present, the same value is not allowed to be repeated."
         }
     },
     "12007": {
         "active": "true",
         "err_no": 12007,
-        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]",
+        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUES USED",
         "err_desc": {
-            "8": "Value 'N' = Not Applicable is mutually exclusive of any other value entered, i.e., 'N' is to be entered only if no other code applies.",
-            "13": "Value '99' (None) is mutually exclusive with any other value, i.e. '99' to be entered only if no other code applies."
+            "8": "Value 'N - Not Applicable' is mutually exclusive with any other value. No other values should be included if 'N' is used.",
+            "12A": "Value 'N - None or Unkonwn' is mutually exclusive with any other value. No other values should be included if 'N' is used.",
+            "13": "Value '99 - None' is mutually exclusive with any other value. No other values should be included if '99' is used."
         }
     },
     "12015": {
@@ -712,9 +728,9 @@
         "err_no": 12019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
         "err_desc": {
-            "12": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Property': {::nomarkdown}<ul><li><b>250, 280</li><li>35A, 35B</li><li>370</li><li>39C</li><li>520</li><li>720 (Limited to A, I, F, or S)</li><li>90A, 90Z</b></li></ul>{:/}",
-            "13": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes: {::nomarkdown}<ul><li><b>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 210</li><li>520</b></li></ul>{:/}",
-            "12A": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes: {::nomarkdown}<ul><li><b>09A, 09B</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li></b></li></ul>{:/}"
+            "12": "Based on the Offense Code supplied, Type of Criminal Activity (DE 12) should not have a value, however one was found. This Data Element should only contain a value if it is associated with an Offense with one of the following NIBRS Codes: {::nomarkdown}<ul><li>250, 280</li><li>35A, 35B</li><li>370</li><li>39C</li><li>520</li><li>720 (Available Values limited to A, I, F, or S)</li><li>90A, 90Z (If Crime Againt Property)</li></ul>{:/}",
+            "13": "Based on the Offense Code supplied, Type of Weapon/Force Involved (DE 13) should not have a value, however one was found. This Data Element should only contain a value if it is associated with an Offense with one of the following NIBRS Codes: {::nomarkdown}<ul><li><b>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 210</li><li>520</b></li></ul>{:/}",
+            "12A": "Based on the Offense Code supplied, Type of Gang Information (DE 12) should not have a value, however one was found. This Data Element should only contain a value if it is associated with an Offense with one of the following NIBRS Codes: {::nomarkdown}<ul><li><b>09A, 09B</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li></b></li></ul>{:/}"
         }
     },
     "12020": {
@@ -722,7 +738,7 @@
         "err_no": 12020,
         "err_message": "DATA ELEMENT 12 MUST BE ENTERED FOR ASSAULT, HOMICIDE (EXCEPT 09C), KIDNAPPING/ABDUCTION, ROBBERY, AND FORCIBLE SEX OFFENSES",
         "err_desc": {
-            "12": "MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes, AND Louisiana Revised Statute (DE 6) is a 'Crime Against Person': {::nomarkdown}<ul><li><b>09A, 09B</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</b></li></ul>{:/} OR Is one of the following NIBRS Offense code AND is an LRS of type 'Crime Against Property': {::nomarkdown}<ul><li><b>120</b></li></ul>{:/}"
+            "12": "Type of Criminal Activity/Gang Information (DE 12) must be entered if Louisiana Revised Statute (DE 6) has one of the following 'Crime Against Person' Offense Codes : {::nomarkdown}<ul><li><b>09A, 09B</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</b></li></ul>{:/} OR Is one of the following 'Crime Against Property' Offense Codes: {::nomarkdown}<ul><li><b>120</b></li></ul>{:/}"
         }
     },
     "12051": {
@@ -730,7 +746,7 @@
         "err_no": 12051,
         "err_message": "INVALID CODE",
         "err_desc": {
-            "7": "MUST be a valid code of 'A' (Attempted) or 'C' (Completed)."
+            "7": "Supplied value was not recognized. The only valid codes that can be used are 'A' (Attempted) or 'C' (Completed)."
         }
     },
     "12052": {
@@ -738,23 +754,20 @@
         "err_no": 12052,
         "err_message": "OFFENSE CODE MUST BE BURGLARY WITH LOCATION TYPE OF 14, 19 FOR DATA TO BE ENTERED",
         "err_desc": {
-            "10": "When entered, Location Type 9 (9) must be Hotel/Motel/Etc. ('14') or Rental Storage Facility ('19'), and LRS (DE 6) has a related NIBRS offense code of <b>220</b> as defined on the Master LIBRS/LRS Code Table"
+            "10": "In order for Number of Premises Entered (DE 10) to have a value, Location Type (DE 9) must either be Hotel/Motel/Etc. ('14') or Rental Storage Facility ('19'), and must be related to an Offense Code of <b>220</b>."
         }
     },
     "12053": {
-        "active": "true",
+        "active": "false",
         "err_no": 12053,
-        "err_message": "MUST BE PRESENT WHEN OFFENSE CODE IS 220(BURGLARY)",
-        "err_desc": {
-            "11": "MUST be entered if Louisiana Revised Statue (6) has a NIBRS offense code of 220 (Burglary) as defined on Master LIBRS/LRS Code Table."
-        }
+        "err_message": "MUST BE PRESENT WHEN OFFENSE CODE IS 220 (BURGLARY)"
     },
     "12054": {
         "active": "true",
         "err_no": 12054,
-        "err_message": "MUST BE BLANK WHEN OFFENSE IS OTHER THAN(BURGLARY)",
+        "err_message": "MUST BE BLANK WHEN OFFENSE IS OTHER THAN (BURGLARY)",
         "err_desc": {
-            "11": "MUST be blank when offense code is not Burglary (NIBRS 220)."
+            "11": "If Offense is not a NIBRS <b>220</b> Offense, then Method of Entry (DE 11) should not have a value."
         }
     },
     "12055": {
@@ -762,7 +775,7 @@
         "err_no": 12055,
         "err_message": "AUTOMATIC INDICATOR MUST BE BLANK OR 'A'",
         "err_desc": {
-            "13": "The third character of Type of Weapon/Force Involved (DE 13) must be Automatic (A) or Blank (G)."
+            "13": "The third character of Type of Weapon/Force Involved (DE 13) can only either be 'A - Automatic' or ' ' (Blank Space)."
         }
     },
     "12056": {
@@ -774,7 +787,7 @@
         }
     },
     "12057": {
-        "active": "true",
+        "active": "false",
         "err_no": 12057,
         "err_message": "MUST BE PRESENT WITH AN OFFENSE CODE OF 220 AND A LOCATION TYPE OF 14 OR 19",
         "err_desc": {
@@ -786,23 +799,23 @@
         "err_no": 12058,
         "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR",
         "err_desc": {
-            "13": "If the firearm is one of the following types of automatic weapons, add 'A' as the third character:{::nomarkdown}<ul><li>11 Firearm (Type not Stated)</li><li>12 Handgun</li><li>13 Rifle</li><li>14 Shotgun</li><li>15 Other Firearm.</li></ul>{:/}"
+            "13": "Only the following values are allowed to use the 'A - Automatic Weapon' indicator in Type of Weapon/Force Involved (DE 13):{::nomarkdown}<ul><li>11 Firearm (Type not Stated)</li><li>12 Handgun</li><li>13 Rifle</li><li>14 Shotgun</li><li>15 Other Firearm.</li></ul>{:/}"
         }
     },
     "12065": {
         "active": "true",
         "err_no": 12065,
-        "err_message": "INVALID WEAPON WITH AN OFFENSE OF SIMPLE ASSAULT(13 B);ACCEPTED WEAPON CODES ARE 40, 90, 95.",
+        "err_message": "INVALID WEAPON WITH AN OFFENSE OF SIMPLE ASSAULT (13B); ACCEPTED WEAPON CODES ARE 40, 90, 95",
         "err_desc": {
-            "13": "When an Offense Segment (20) is submitted for one of the following Louisiana Revised Statutes (DE 6), the Offense will be reported to the FBI as a Simple Assault (13B) and must have Personal Weapons (40), Other (90), or Unknown (95) entered in Type of Weapon/Forced Involved."
+            "13": "When an Offense is a Simple Assault (NIBRS 13B), Type of Weapon/Force Involved (DE 13) may only be Personal Weapons (40), Other (90), or Unknown (95)."
         }
     },
     "12066": {
         "active": "true",
         "err_no": 12066,
-        "err_message": "NO OTHER OFFENSE CAN BE SUBMITTED WITH AN 09 C(JUSTIFIABLE HOMICIDE) OFFENSE",
+        "err_message": "NO OTHER OFFENSE CAN BE SUBMITTED WITH AN 09C (JUSTIFIABLE HOMICIDE) OFFENSE",
         "err_desc": {
-            "31": "When Justifiable Homicide (NIBRS Code **09C**) is reported, no other offense may be reported in the Incident Report."
+            "31": "When Justifiable Homicide (NIBRS 09C) is reported, no other offense may be reported in the Incident Report."
         }
     },
     "12067": {
@@ -810,7 +823,7 @@
         "err_no": 12067,
         "err_message": "INVALID WEAPON WITH AN OFFENSE",
         "err_desc": {
-            "13": "When a Homicide Offense (NIBRS 09A, 09B, or 09C) is submitted, Type of Weapon/Force Involved (DE 13) CANNOT have None (99) entered. Some Type of Weapon/Force Involved other than None (99) must be used in a Homicide Offense. "
+            "13": "For Homicide Offenses (NIBRS 09A, 09B, or 09C), Type of Weapon/Force Involved (DE 13) cannot be None (99). Some Type of Weapon/Force Involved other than None (99) must be used in a Homicide Offense."
         }
     },
     "12069": {
@@ -818,20 +831,23 @@
         "err_no": 12069,
         "err_message": "POSSIBLE CLASSIFICATION ERROR OF AGGRAVATED ASSAULT '13A' CODED AS SIMPLE '13B'",
         "err_desc": {
-            "13": "If the Louisiana Revised Statute (DE 6) is a simple assault (NIBRS 13B), but the weapon involved is: {::nomarkdown}<ul><li>11/11A Firearm or Automatic Firearm</li><li>12/12A Handgun or Automatic Handgun</li><li>13/13A Rifle or Automatic Rifle</li><li>14/14A Shotgun or Automatic Shotgun</li><li>15/15A Other Firearm or Other Automatic Firearm</li></ul>{:/}This Offense should be reported as an Aggravated Assault (NIBRS 13A)."
+            "13": "Simple Assault Offenses (NIBRS 13B) can only use Type of Weapon/Force Involved (DE 13) Values of: {::nomarkdown}<ul><li>Personal Weapons (40)</li><li>Other (90)</li><li>Unknown (95)</li></ul>{:/}If the offense included one of the following Weapon Types, it should be reported as an Aggravated Assault (13A): {::nomarkdown}<ul><li>11/11A Firearm or Automatic Firearm</li><li>12/12A Handgun or Automatic Handgun</li><li>13/13A Rifle or Automatic Rifle</li><li>14/14A Shotgun or Automatic Shotgun</li><li>15/15A Other Firearm or Other Automatic Firearm</li></ul>{:/}"
         }
     },
     "12090": {
         "active": "true",
         "err_no": 12090,
-        "err_message": "OFFENSE CONNECTED TO A NON - EXISTENT VICTIM"
+        "err_message": "OFFENSE CONNECTED TO A NON-EXISTENT VICTIM",
+        "err_desc":{
+            "24": "Offense Connected to Victim Sequence Number (DE 24) contains a value that does not match up with the Victim Sequence Numbers (DE 23) present in the Victim Segments (Segment 50) of the Incident."
+        }
     },
     "13001": {
         "active": "true",
         "err_no": 13001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
+        "err_message": "RECOVERY DATE MUST EXIST WHEN SEGMENT 50 CONTAINS A PROPERTY LOSS TYPE (DE 14) OF '5 - SEIZED'",
         "err_desc": {
-            "14": "MUST be present -- CANNOT be blank."
+            "17": "If there are any Property Description Segments (Segment 31) that indicated that a property has been recovered, then Date Recovered (DE 17) must have a value."
         }
     },
     "13002": {
@@ -839,10 +855,10 @@
         "err_no": 13002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
         "err_desc": {
-            "16": "MUST be numeric entry with zero or blank left-fill if entered.",
-            "18": "MUST be numeric entry with zero left-fill, if entered.",
-            "21": "MUST be numeric entry with Zero ('0') or Blank (G) left-fill and right-fill. The **decimal fractional quantity must be expressed in thousandths as three digits**, and **a decimal point must separate the whole part of the number from the fractional part.** The decimal point must be the tenth character of the field.",
-            "19": "MUST be a numeric entry with zero left-fill if entered."
+            "16": "Must be numeric entry with zero or blank left-fill if entered.",
+            "18": "Must be numeric entry with zero left-fill, if entered.",
+            "21": "Must be numeric entry with Zero ('0') or Blank (G) left-fill and right-fill. The decimal fractional quantity must be expressed in thousandths as three digits, and a decimal point must separate the whole part of the number from the fractional part. The decimal point must be the tenth character of the field.",
+            "19": "Must be a numeric entry with zero left-fill if entered."
         }
     },
     "13004": {
@@ -850,14 +866,14 @@
         "err_no": 13004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "err_desc": {
-            "14": "MUST be a valid code.",
-            "15": "MUST be a valid code.",
-            "22": "MUST be a valid code, if entered.",
-            "20": "MUST be a valid code."
+            "14": "Property Loss Type (DE 14) must be a numeric value between 1 and 8. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
+            "15": "Property Description (DE 15) must be a two-digit, numeric value greater than or equal to 1. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
+            "22": "The reported Drug Measurement Type (DE 22) was not recognized. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
+            "20": "The reported Suspected Drug Type (DE 20) was not recognized. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions"
         }
     },
     "13005": {
-        "active": "true",
+        "active": "false",
         "err_no": 13005,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
         "err_desc": {
@@ -876,9 +892,9 @@
     "13007": {
         "active": "true",
         "err_no": 13007,
-        "err_message": "CANNOT BE EARLIER THAN INCIDENT DATE / HOUR.",
+        "err_message": "CANNOT BE EARLIER THAN INCIDENT DATE/HOUR.",
         "err_desc": {
-            "17": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must include the century (i.e., 19xx, 20xx)</li><li>Days cannot exceed maximum for the month (e.g., June CANNOT have 31 days)</li></ul>{:/}The date CANNOT be greater than that entered within the 'Month of Submission' and 'Year of Submission' fields on the data record. For example, if 'Month of Submission' and 'Year of Submission' are '06/1995,' the recovered date CANNOT contain any date 07/01/1995 or greater."
+            "17": "The Date Recovered (DE 17) cannot be a date and time that is earlier than when the incident occurred."
         }
     },
     "13008": {
@@ -906,7 +922,7 @@
         "err_no": 13019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
         "err_desc": {
-            "14": "Type of Property Loss (DE 14) MUST be entered if Louisiana Revised Statute (DE 6) has one of the following NIBRS Offense codes and is a 'Crime Against Property': {::nomarkdown}<b><ul><li>100, 120</li><li>200, 210, 220, 240, 250, 270, 280, 290</li><li>23A, 23B, 23C, 23D, 23E, 23F, 23G, 23H</li><li>26A, 26B, 26C, 26D, 26E</li><li>35A, 35B</li><li>39A, 39B, 39C, 39D</li><li>510</li><li>90A, 90Z</li></ul></b>{:/}"
+            "14": "Type of Property Loss (DE 14) should only be entered for Offenses with a NIBRS Code that is a 'Crime Against Property', or one of the following: {::nomarkdown}<b><ul><li>100, 120</li><li>200, 210, 220, 240, 250, 270, 280, 290</li><li>23A, 23B, 23C, 23D, 23E, 23F, 23G, 23H</li><li>26A, 26B, 26C, 26D, 26E</li><li>35A, 35B</li><li>39A, 39B, 39C, 39D</li><li>510</li><li>90A, 90Z</li></ul></b>{:/}"
         }
     },
     "13020": {
@@ -930,7 +946,7 @@
     "13042": {
         "active": "true",
         "err_no": 13042,
-        "err_message": "WARNING - PROPERTY DESCRIPTION (DATA ELEMENT 15) HAD A VALUE(DATA ELEMENT 16) THAT EXCEEDED THRESHOLD OF [$ VALUE]",
+        "err_message": "WARNING - PROPERTY DESCRIPTION (DATA ELEMENT 15) HAD A VALUE (DATA ELEMENT 16) THAT EXCEEDED THRESHOLD OF [$ VALUE]",
         "err_desc": {
             "16": "When Value of Property (DE 16) contains a value that exceeds a LIBRS assigned threshold amount, a 'Warning' message is created. The agency is asked to check if the value entered was a data entry error, or if it was an intended entry.<br><br>Also, a Warning message is always produced when the value is $1,000,000 or greater. For example, if the value of a property was $12,000.99 but was inadvertently entered as $1,200,099 in LIBRS submission file, a 'Warning' message will be generated. In this case, the cents were entered as whole dollars."
         }
@@ -948,7 +964,7 @@
         "err_no": 13051,
         "err_message": "PROPERTY VALUE OF ZERO IS NOT ALLOWED",
         "err_desc": {
-            "16": "If Value of Property (DE 16) is unknown, must enter a value of Unknown (‘1’, representing $1.00)."
+            "16": "A value of '000000000' for Property Value (DE 15) is not permitted. To designate that the value is unknown, use '000000001' for $1, instead."
         }
     },
     "13052": {
@@ -956,7 +972,7 @@
         "err_no": 13052,
         "err_message": "DATA ELEMENTS 15 - 22 MUST BE BLANK WHEN PROPERTY LOSS CODE = 1 OR 8",
         "err_desc": {
-            "14": "When Type of Property Loss (DE 14) is None (1) or Unknown (8), then Data Elements 15 through 22 must be Blank () for all Offenses, except when Louisiana Revised Statute (DE 6) has a Drug Violation Offense (NIBRS 35A) reported. <br><br>If Type of Property Loss (14) has a value of None ('1') entered when the above case is satisfied, then Suspected Drug Type (20) must have a valid entry."
+            "14": "When Type of Property Loss (DE 14) is None (1) or Unknown (8), then Data Elements 15 through 22 must be left blank for all Offenses <b>except</b> for NIBRS 35A. <br><br> When the associated NIBRS Offense Code is <b>35A</b>, and the Property Loss Type (DE 14) is '1 - None', then Suspected Drug Type (DE 20) must have a valid entry."
         }
     },
     "13053": {
@@ -978,25 +994,25 @@
     "13055": {
         "active": "true",
         "err_no": 13055,
-        "err_message": "PROPERTY LOSS CODE(14) MUST = 5(RECOVERED) FOR DATA TO BE ENTERED",
+        "err_message": "PROPERTY LOSS CODE (14) MUST = 5 (RECOVERED) FOR DATA TO BE ENTERED",
         "err_desc": {
-            "17": "If entered, Type of Property Loss (DE 14) must be Recovered ('5')"
+            "17": "Unless Property Loss Type (DE 14) is '5 - Recovered', then Date Recovered (DE 17) must not be entered. "
         }
     },
     "13056": {
         "active": "true",
         "err_no": 13056,
-        "err_message": "PROPERTY DESCRIPTION(15) AND VALUE(16) MUST BOTH EXIST IF DATA IS PRESENT",
+        "err_message": "PROPERTY DESCRIPTION (15) AND VALUE (16) MUST BOTH EXIST IF DATA IS PRESENT",
         "err_desc": {
-            "17": "If entered, then both Property Description (DE 15) and Value of Property (DE 16) must be entered."
+            "17": "If Date Recovered (DE 17) has a value, then both Property Description (DE 15) and Value of Property (DE 16) must be entered."
         }
     },
     "13057": {
         "active": "true",
         "err_no": 13057,
-        "err_message": "PROPERTY LOSS(14) MUST BE 7 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24,28, OR  37 ' FOR DATA TO BE ENTERED",
+        "err_message": "PROPERTY LOSS (14) MUST BE 7 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14:67 OR 14:68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24' ,'28' , OR  '37' FOR DATA TO BE ENTERED",
         "err_desc": {
-            "18": "MUST be entered if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (DE 6) has a NIBRS Offense Code of <b>240</b></li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/} OR if the following four conditions are true:{::nomarkdown}<ul><li>Property Description (DE 15) has Motor Vehicle codes</li><li>Type of Property Loss/Etc. (DE 14) is Stolen (7),</li><li>The Louisiana Revised Statute Number is one of the following<ul><li>14:67</li><li>14:68</li><li>14:68.4</li></ul><li>Offense Attempted/ Completed (DE 7) must also be Completed ('C')</li></ul>{:/}"
+            "18": "In order for Number of Stolen Vehicles (DE 18) to contain a value other than '0' (Zero), the following conditions must be true: {::nomarkdown}<ul><li>The Incident contains an Offense with a NIBRS Offense Code of <b>240</b></li><li>Offense Attempted/Completed (DE 7) is Completed ('C')</li></ul>{:/} Further, when these conditions are met, it is also required that Property Loss Type (DE 14) is '7 - Stolen', and the Property Description for the stolen property is either: {::nomarkdown}<ul><li>03 - Automobiles</li><li>05 - Buses</li><li>24 - Other Motor Vehicles</li><li>28 - Recreational Vehicles</li><li>37 - Trucks</li></ul>{:/}"
         }
     },
     "13058": {
@@ -2685,7 +2701,11 @@
     "84004": {
         "active": "true",
         "err_no": 84004,
-        "err_message": "WHEN LRS = 220 AND DE 9 = '14' OR '19', THEN DE 10 AND 11 MUST HAVE A VAL ID CODE.",
+        "err_message": "WHEN LRS = 220 AND DE 9 = '14' OR '19', THEN DE 10 AND 11 MUST HAVE A VALID CODE.",
+        "err_desc": {
+            "10": "If Location Type (DE 9) is either be Hotel/Motel/Etc. ('14') or Rental Storage Facility ('19'), and the related Offense Code is <b>220</b>, then Number of Premises (DE 10) must have a value.",
+            "11": "If Location Type (DE 9) is either be Hotel/Motel/Etc. ('14') or Rental Storage Facility ('19'), and the related Offense Code is <b>220</b>, then Method of Entry (DE 11) must have a value."
+        },
         "mandatory": {
             "4s4": "When an Incident contains an offense of BURGLARY/BREAKING AND ENTERING (NIBRS Code 220), and Location Type (9) contains a value of Hotel/Motel ('14') or Rental Storage Facility ('19'), then Number of Premises Entered (10) and Method of Entry (11) MUST contain valid values."
         }
@@ -2782,7 +2802,7 @@
         "err_no": 84015,
         "err_message": "WHEN LRS = 370, DE 12 MUST HAVE A VALID CODE AND DE 25 MUST EQUAL 'S'.",
         "err_desc": {
-            "12": "When NIBRS Offense Code is <b>370</b> the following MUST be true::{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}"
+            "12": "When NIBRS Offense Code is <b>370</b> the following MUST be true: {::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12) MUST have a valid code.</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}"
         },
         "mandatory": {
             "4s15": "When an Incident contains PORNOGRAPHY/OBSCENE MATERIAL OFFENSES (NIBRS Code 370), Type of Criminal Activity/Gang Information (12) MUST contain a valid value and Type of Victim (25) MUST be Society ('S')."
@@ -2808,6 +2828,11 @@
         "active": "true",
         "err_no": 84018,
         "err_message": "WHEN LRS = 11 A - 11 D OR 64 A OR 64 B, DE 13 MUST HAVE A VALID CODE, DE 25 MUST HAVE A 'I' OR 'L', AND DE 33 MUST HAVE A VALID CODE.",
+        "err_desc":{
+            "13":"When NIBRS Offense Code is <b>11A, 11B, 11C, or 11D</b>, then: {::nomarkdown}<ul><li>Type of Weapon/Force Involved (DE 13) must have a value</li><li>Victim Type (DE 25) must be either 'I - Individual' or 'L - Law Enforcement</li><li>Injury Type (DE 33) must have a value</li></ul>{:/}",
+            "25":"When NIBRS Offense Code is <b>11A, 11B, 11C, or 11D</b>, then: {::nomarkdown}<ul><li>Type of Weapon/Force Involved (DE 13) must have a value</li><li>Victim Type (DE 25) must be either 'I - Individual' or 'L - Law Enforcement</li><li>Injury Type (DE 33) must have a value</li></ul>{:/}",
+            "33":"When NIBRS Offense Code is <b>11A, 11B, 11C, or 11D</b>, then: {::nomarkdown}<ul><li>Type of Weapon/Force Involved (DE 13) must have a value</li><li>Victim Type (DE 25) must be either 'I - Individual' or 'L - Law Enforcement</li><li>Injury Type (DE 33) must have a value</li></ul>{:/}"
+        },
         "mandatory": {
             "4s18": "When an Incident contains SEX OFFENSES – FORCIBLE (NIBRS Code 11A-D), then Type of Weapon/Force Involved (13) MUST contain a valid value, Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L'), and Type of Injury (33) MUST contain a valid value."
         }
@@ -2836,7 +2861,10 @@
         "err_no": 84021,
         "err_message": "WHEN LRS = 520, DE 12 & DE 13 MUST HAVE A VALID CODE AND DE 25 MUST BE EQUAL TO 'S'.",
         "err_desc": {
-            "12": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}"
+            "12": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}",
+            "12A": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}",
+            "13": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}",
+            "25": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}"
         },
         "mandatory": {
             "4s21": "When an Incident is submitted with WEAPONS LAW VIOLATIONS (Crimes Against Society) (NIBRS Code 520) then Type of Criminal Activity/Gang Information (12) and Type of Weapon/Force Involved (13) MUST contain valid values and Type of Victim (25) MUST be Society ('S')."
