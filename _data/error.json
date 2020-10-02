@@ -113,11 +113,11 @@
         }
     },
     "10056": {
-        "active": "false",
+        "active": "true",
         "err_no": 10056,
         "err_message": "INCIDENT ALREADY ON FILE--PREVIOUSLY ADDED TO FILE ON [MM/DD/YYYY]",
         "err_desc": {
-            "2": "This field MUST be unique for each incident reported by the agency. <br>This means that no two incidents can have the same Incident Number. <br>Some agencies ensure uniqueness by prefixing every incident number with a two-digit year followed by a number starting with 1, while others simply increment the Incident Number by one for each new incident."
+            "2": "This field must be unique for each incident reported by the agency.<br>This means that no two incidents can have the same Incident Number. <br>Some agencies ensure uniqueness by prefixing every incident number with a two-digit year followed by a number starting with 1, while others simply increment the Incident Number by one for each new incident."
         }
     },
     "10057": {
@@ -163,7 +163,7 @@
         "active": "true",
         "err_no": 10071,
         "err_message": "CANNOT HAVE ARRESTS IF CLEARED EXCEPTIONALLY",
-        "err_desc":{
+        "err_desc": {
             "4": "If an Incident has been Cleared Exceptionally, then by definition it cannot have been cleared by an arrest. The Incident should either not be Cleared Exeptionally, or not include an Arrest."
         }
     },
@@ -251,7 +251,7 @@
         "err_no": 10084,
         "err_message": "RECOVERED PROPERTY VALUE CANNOT BE GREATER THAN THE VALUE WHEN STOLEN",
         "err_desc": {
-            "16": "For Property Description Segments (DE 31) having Type of Property Loss (DE 14) entries for both Stolen/Etc. ('7') and Recovered ('5'), the Recovered 'Property' CANNOT have Value of Property (DE 16) value(s) greater than corresponding Stolen 'Property' Value of Property (DE 16) value(s). "
+            "16": "When a Property has been Recovered, the Property Value (DE 16) in the Property Description Segment (Segment 31) that notes it as recovered cannot have a greater value than the Property Value in the Property Description Segment that lists it as stolen. In short: A recovered property cannot be more valuable than when it was stolen."
         }
     },
     "10085": {
@@ -319,7 +319,7 @@
         }
     },
     "10100": {
-        "active": "true",
+        "active": "false",
         "err_no": 10100,
         "err_message": "!!!!WARNING!!!!INVALID DATA VALUE--ORDINANCE NOT CURRENTLY CLASSIFIED BY LIBRS."
     },
@@ -376,8 +376,8 @@
         "err_no": 11001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
         "err_desc": {
-            "3": "Must be present -- CANNOT be Blank (G).",
-            "4": "Must be present -- CANNOT be Blank (G)."
+            "4": "Must be present, cannot be Blank (G).",
+            "5": "Must be present, cannot be Blank (G)."
         }
     },
     "11004": {
@@ -385,7 +385,7 @@
         "err_no": 11004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "err_desc": {
-            "4": "MUST be a valid code."
+            "4": "Supplied value was not a known value. Must be a code that is found on the list of Available Values. "
         }
     },
     "11005": {
@@ -393,8 +393,8 @@
         "err_no": 11005,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
         "err_desc": {
-            "3": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Four-Digit Year</li><li>Days CANNOT exceed maximum for the month (EG June CANNOT have 31 days)</li><li>Incident Date CANNOT exceed the current date.</li></ul>{:/}",
-            "5": "Each component of the date must be valid: Months must be 0-12, days must be 01-31, and year must include the century (19xx, 20xx). In addition, days CANNOT exceed maximum for the month (EG June CANNOT have 31 days).<br><br>The Exceptional Clearance Date CANNOT be greater than that entered within the Reporting Period (DE C4).<br><br>For example, if the Reporting Period is 062019 (June 2019), then the Exceptional Clearance Date CANNOT contain any date 07/01/2019 or greater."
+            "3": "The date supplied for the Incident Date is not valid. Please ensure that the supplied date is in the MMDDYYYY Format, and is not a date later than the current date.",
+            "5": "The date supplied for the Exceptional Clearance Date is not valid. Please ensure that the supplied date is in the MMDDYYY Format, and is not a date later than the reporting date. Additionally this value cannot be all zeros, it must be a real date."
         }
     },
     "11015": {
@@ -410,9 +410,10 @@
     "11017": {
         "active": "true",
         "err_no": 11017,
-        "err_message": "CANNOT HAVE CHARACTERS OTHER THAN A-Z, 0-9, HYPHEN, AND/OR BLANKS",
-        "err_desc": {
-            "2": "Valid character combinations can include A-Z, 0-9, hyphens, and/or blanks."
+        "err_message": "INCIDENT NUMBERS IN SEGMENTS 11 AND 63 MUST MATCH THE INCIDENT NUMBERS IN SEGMENTS 10 AND 60 RESPECTIVELY",
+        "seq_desc": {
+            "11": "When using Segment 11, the Incident Number that is included must match the one provided in Segment 10.",
+            "63": "When using Segment 63, the Incident Number that is included must match the one provided in Segment 60."
         }
     },
     "11018": {
@@ -449,7 +450,7 @@
         "err_no": 11052,
         "err_message": "INVALID HOUR ENTRY",
         "err_desc": {
-            "3": "If HOUR is entered it must be 00 through 23. Note: If the Incident Date occurred at exactly midnight, enter the Incident Date as if the time was 1 minute past midnight. EG: If the incident occurred at exactly midnight on Thursday, enter Friday's date and 00 for the hour."
+            "3": "If entered, the 'HH' Value of the Incident Date to denote the hour the Incident Occurred in must be between 00 and 23. Remember that midnight is the start of a new day, so Incidents that occur in the '00' hour should be reported as occurring on the correct day. EG: Thursday at 11:59PM, or Friday at 12:00AM."
         }
     },
     "11053": {
@@ -457,7 +458,7 @@
         "err_no": 11053,
         "err_message": "VALUE ENTERED CONFLICTS WITH PRESENCE OF AN ENTRY IN EXCEPTIONAL CLEARANCE DATE",
         "err_desc": {
-            "4": "CANNOT be 'N' (Not Applicable) if Exceptional Clearance Date is entered."
+            "4": "If an Exceptional Clearance Date (DE 5) is not entered, then Cleared Exceptionally (DE 4) should either have a Value of 'N' or ' ' (Blank Space)"
         }
     },
     "11054": {
@@ -465,23 +466,29 @@
         "err_no": 11054,
         "err_message": "CLEARED EXCEPTIONALLY CANNOT CONTAIN 'N' WITH SEGMENT ACTION TYPE 'W'",
         "err_desc": {
-            "4": "Administrative Segment (10) submitted with an Action Type of 'W' (Time Window Submission) CANNOT contain an 'N' (Not Applicable) in Cleared Exceptionally (DE 4)."
+            "4": "Administrative Segment (10) submitted with an Action Type of 'W' (Time Window Submission) cannot contain an 'N' (Not Applicable) in Cleared Exceptionally (DE 4)."
         }
     },
     "11055": {
         "active": "true",
         "err_no": 11055,
-        "err_message": "CLEARANCE DATE [MMDDYYYY] PREDATES INCIDENT DATE [MMDDYYYY]",
+        "err_message": "EXCEPTIONAL CLEARANCE DATE PREDATES INCIDENT DATE",
         "err_desc": {
-            "5": "The clearance date CANNOT be earlier than the incident date."
+            "5": "The Exceptional Clearance Date (DE 5) cannot be earlier than the Incident Date (DE 3)."
         }
     },
     "11056": {
         "active": "true",
         "err_no": 11056,
-        "err_message": "AN ENTRY MUST BE MADE WHEN CLEARED EXCEPTIONALLY HAS ENTRIES OF A - E",
+        "err_message": "AN ENTRY MUST BE MADE WHEN CLEARED EXCEPTIONALLY HAS ENTRIES OF A-E",
         "err_desc": {
-            "5": "MUST be present if incident was cleared exceptionally with a data value of 'A', 'B', 'C', 'D', 'E', or 'O' in Cleared Exceptionally (DE 4)."
+            "6": "When Cleared Exceptionally (DE 4) has a value other than 'N' or ' ' (Blank), LRS Code (DE 6) must have a value.",
+            "7": "When Cleared Exceptionally (DE 4) has a value other than 'N' or ' ' (Blank), Attempted/Completed (DE 7) must have a value.",
+            "8": "When Cleared Exceptionally (DE 4) has a value other than 'N' or ' ' (Blank), Offender Suspected of Using/Gaming Motivation  (DE 8) must have a value.",
+            "8a": "When Cleared Exceptionally (DE 4) has a value other than 'N' or ' ' (Blank), Bias Motivation/Bias Crime Type(DE 8A) must have a value.",
+            "9": "When Cleared Exceptionally (DE 4) has a value other than 'N' or ' ' (Blank), Location Type (DE 9) must have a value.",
+            "23": "When Cleared Exceptionally (DE 4) has a value other than 'N' or ' ' (Blank), Victim Sequence Number (DE 23) must have a value, and it must not be '000'.",
+            "25": "When Cleared Exceptionally (DE 4) has a value other than 'N' or ' ' (Blank), Victim Type (DE 25) must have a value."
         }
     },
     "11057": {
@@ -524,7 +531,7 @@
     "11063": {
         "active": "false",
         "err_no": 11063,
-        "err_message": "CANNOT MDIFY AN INCIDENT HOUR THIS WAY--ON FILE IS [MMDDYYYYRHH]",
+        "err_message": "CANNOT MODIFY AN INCIDENT HOUR THIS WAY--ON FILE IS [MMDDYYYYRHH]",
         "err_desc": {
             "3": "Administrative Segments (Segment 10) submitted with an Action Type of 'M' (Modify) CANNOT change the hour part of 'Incident Date/Hour' (DE 3) of incidents previously submitted with in the original Incident Report (Action Type of 'I')."
         }
@@ -3593,6 +3600,16 @@
         "err_message": "TYPE PROPERTY LOSS CODE IS NOT VALID WITH THE OFFENSES SUBMITTED",
         "err_desc": {
             "31": "A Property Loss Type of '1 - None' is invalid for the following NIBRS Codes: {::nomarkdown}<ul><li>100</li><li>220, 280</li><li>35A, 35B</li><li>510</li><li>90A, 90Z</li></ul>{:/}A Property Loss Type of '8 - Unkonwn' is invalid for the following NIBRS Codes: {::nomarkdown}<ul><li>100</li><li>220</li><li>510</li><li>90A, 90Z</li></ul>{:/}"
+        }
+    },
+    "90042": {
+        "active": "true",
+        "err_no": 90042,
+        "err_message": "VALUE MUST MATCH THE VALUE SUPPLIED IN ADMINISTRATIVE SEGMENT (SEGMENT 10)",
+        "err_desc": {
+            "c5": "The Action Type Specified in Segments 20, 40, 41, and 50 need to match the Action Type in Segment 10.",
+            "1": "The ORI Number Specified in Segments 20, 40, 41, and 50 need to match the ORI Number in Segment 10.",
+            "2": "The Incident Number Specified in Segments 20, 40, 41, and 50 need to match the Incident Number in Segment 10."
         }
     }
 }
