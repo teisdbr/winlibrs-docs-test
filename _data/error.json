@@ -1008,7 +1008,7 @@
         }
     },
     "13057": {
-        "active": "true",
+        "active": "false",
         "err_no": 13057,
         "err_message": "PROPERTY LOSS (14) MUST BE 7 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14:67 OR 14:68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24' ,'28' , OR  '37' FOR DATA TO BE ENTERED",
         "err_desc": {
@@ -1018,7 +1018,10 @@
     "13058": {
         "active": "true",
         "err_no": 13058,
-        "err_message": "DATA MUST EXIST WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28', OR '37' AND A PROPERTY LOSS OF 7"
+        "err_message": "DATA MUST EXIST WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14:67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28', OR '37' AND A PROPERTY LOSS OF 7",
+        "err_desc": {
+            "18": "When Number of Stolen Vehicles (DE 18) is a non-zero value, then there must be Property Description Segment(s) (Segment 31) that list a Property with a Property Loss Type (DE 14) of '7 - Stolen' and one of the following Property Descriptions (DE 15) as :{::nomarkdown}<ul><li>03 - Automobiles</li><li>05 - Buses</li><li>24 - Other Motor Vehicles</li><li>28 - Recreational Vehicles</li><li>37 - Trucks</li></ul>{:/}"
+        }
     },
     "13059": {
         "active": "true",
