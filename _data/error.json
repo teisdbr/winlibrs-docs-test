@@ -1028,8 +1028,8 @@
         "err_no": 13059,
         "err_message": "ALL NON VEHICULAR PROPERTY DESCRIPTIONS WERE ENTERED",
         "err_desc": {
-            "18": "Property Description (DE 15) MUST contain at least one of the following vehicle codes:{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}",
-            "19": "When '01' to '99' is entered into Number of Recovered Motor Vehicles (19), then Property Description (15) must contain at least one of the following vehicle codes: {::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks</li></ul>{:/}"
+            "18": "When Number of Stolen Vehicles (DE 18) is a non-zero value, there must be Property Description Segment(s) (Segment 31) that have a Property Loss Type (DE 14) of '7 - Stolen' for one of the following Property Descriptions (DE 15) as :{::nomarkdown}<ul><li>03 - Automobiles</li><li>05 - Buses</li><li>24 - Other Motor Vehicles</li><li>28 - Recreational Vehicles</li><li>37 - Trucks</li></ul>{:/}",
+            "19": "When Number of Recovered Vehicles (DE 19) is a non-zero value, there must be Property Description Segment(s) (Segment 31) that have a Property Loss Type (DE 14) of '5 - Recovered' for one of the following Property Descriptions (DE 15) as :{::nomarkdown}<ul><li>03 - Automobiles</li><li>05 - Buses</li><li>24 - Other Motor Vehicles</li><li>28 - Recreational Vehicles</li><li>37 - Trucks</li></ul>{:/}"
         }
     },
     "13060": {
@@ -1043,46 +1043,52 @@
     "13061": {
         "active": "true",
         "err_no": 13061,
-        "err_message": "DATA MUST EXIST WITH A MOTOR VECHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28' OR '37' AND A PROPERTY LOSS OF 5",
+        "err_message": "DATA MUST EXIST WITH A MOTOR VECHICLE THEFT OFFENSE CODE OR LRS = 14:67 OR 14:68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28' OR '37' AND A PROPERTY LOSS OF 5",
         "err_desc": {
-            "19": "Entry must be made when Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of 240 **or** hard-coded edit based on Property Description (15) containing Motor Vehicle codes indicating Recovered property **and** Type of Property Loss (14) is Recovered ('5'), **and** Property Description (15) contains a vehicle code."
+            "19": "When Number of Recovered Vehicles (DE 19) is a non-zero value, there must be Property Description Segment(s) (Segment 31) that have a Property Loss Type (DE 14) of '5 - Recovered' for one of the following Property Descriptions (DE 15) as :{::nomarkdown}<ul><li>03 - Automobiles</li><li>05 - Buses</li><li>24 - Other Motor Vehicles</li><li>28 - Recreational Vehicles</li><li>37 - Trucks</li></ul>{:/}"
         }
     },
     "13064": {
         "active": "true",
         "err_no": 13064,
-        "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE(20), QUANTITY(21) AND MEASUREMENT(22) MUST BE PRESENT",
+        "err_message": "UNLESS PROPERTY LOSS TYPE (DE 14) IS 1 OR 6, AND NIBRS IS 35A, SUSPECTED DRUG TYPE (DE 20), DRUG QUANTITY (DE 21) AND DRUG MEASUREMENT TYPE (DE 22) CANNOT HAVE A VALUE",
         "err_desc": {
-            "20": "When the following conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code of <b>35A</b></li><li> Type Property Loss (14) is Seized ('10') </li><li> Property Description (15) is Drugs/Narcotics ('10') </li><li> Suspected Drug Type (20) is entered</li></ul>{:/} Estimated Quantity (21), Type Drug Measurement (22), and Value of Property (16) must be entered."
+            "20": "You should not include values for Suspected Drug Type (DE 20) unless the offense is a Completed NIBRS 35A Offense, and the Property Loss Type is '1 - None' or '6 - Seized'.",
+            "21": "You should not include values for Drug Quantity (DE 21) unless the offense is a Completed NIBRS 35A Offense, and the Property Loss Type is '1 - None' or '6 - Seized'.",
+            "22": "You should not include values for Suspected Drug Type (DE 22) unless the offense is a Completed NIBRS 35A Offense, and the Property Loss Type is '1 - None' or '6 - Seized'."
         }
     },
     "13065": {
         "active": "true",
         "err_no": 13065,
-        "err_message": "OFFENSE = DRUG OFFENSE & PROP LOSS = 6 AND DESCRIPTION = 10 MUST EXIST",
+        "err_message": "DATA ELEMENT MUST EXIST WHEN OFFENSE = DRUG OFFENSE & PROP LOSS = 6 AND DESCRIPTION = 10",
         "err_desc": {
-            "22": "Type Drug Measurement (22) is used if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code <b>35A</b></li><li>Type of Property Loss (14) is Seized ('6')</li><li> Property Description ('15') is Drugs Narcotics ('10')</li></ul>{:/}",
-            "21": "Estimated Drug Quantity (21) is valid only if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of <b>35A</b></li><li> Type of Property Loss (14) is Seized ('6')</li><li>Property Description (15)is Drugs/Narcotics ('10')</li></ul>{:/}",
-            "20": "Suspected Drug Type (20) MUST be entered if the following three conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statutes (DE 6) has a NIBRS offense code of <b>35A</b></li><li>Type of Property Loss (DE 14) has a value of Seized ('6')</li><li>Property Description (15) has a value of Drugs/Narcotics ('10')</li></ul>{:/} If there are multiple LRS Offenses (6) listed and Drugs/Narcotics ('10') was split between the different types of LRS Offenses (6), only enter the Suspected Drug Types (20) applicable to the Offenses listed above."
+            "22": "If the following conditions are met, then you should include Type Drug Measurement (22): {::nomarkdown}<ul><li>NIBRS Offense Code of <b>35A</b></li><li>Attempted/Completed (DE 7) of 'C - Completed</li><li>Type of Property Loss (DE 14) is Seized ('6')</li><li> Property Description (DE 15) is Drugs Narcotics ('10')</li></ul>{:/} If there are multiple 35A Offenses, only include Suspected Drug Type (DE 20) for those who satisfy the listed conditions above.",
+            "21": "If the following conditions are met, then you should include Estimated Drug Quantity (21): {::nomarkdown}<ul><li>NIBRS Offense Code of <b>35A</b></li><li>Attempted/Completed (DE 7) of 'C - Completed</li><li> Type of Property Loss (DE 14) is Seized ('6')</li><li>Property Description (DE 15) is Drugs/Narcotics ('10')</li></ul>{:/} If there are multiple 35A Offenses, only include Suspected Drug Type (DE 20) for those who satisfy the listed conditions above.",
+            "20": "If the following conditions are met, then you should include Suspected Drug Type (20): {::nomarkdown}<ul><li>NIBRS Offense Code of <b>35A</b></li><li>Attempted/Completed (DE 7) of 'C - Completed</li><li>Type of Property Loss (DE 14) is Seized ('6')</li><li>Property Description (DE 15) is Drugs/Narcotics ('10')</li></ul>{:/} If there are multiple 35A Offenses, only include Suspected Drug Type (DE 20) for those who satisfy the listed conditions above."
         }
     },
     "13066": {
         "active": "true",
         "err_no": 13066,
-        "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE(20) AND MEASUREMENT(22) MUST BE PRESENT",
+        "err_message": "WITH DATA ENTERED, SUSPECTED DRUG TYPE (DE 20) AND MEASUREMENT (DE 22) MUST BE PRESENT",
         "err_desc": {
-            "21": "When Estimated Drug Quantity (21) is entered, Suspected Drug Type (20), Type Drug Measurement (22) and Value of Property (16) must also be entered."
+            "20": "When Estimated Drug Quantity (21) is entered, Suspected Drug Type (20) must also be entered.",
+            "22": "When Estimated Drug Quantity (21) is entered, Type Drug Measurement (22) must also be entered."
         }
     },
     "13067": {
         "active": "true",
         "err_no": 13067,
-        "err_message": "DRUG TYPE MUST BE 'E', 'G', OR 'K' FOR A VALUE OF 'NP'"
+        "err_message": "DRUG TYPE MUST BE 'E', 'G', OR 'K' FOR A VALUE OF 'NP'",
+        "err_desc":{
+            "22": "In order to use a Drug Measurement Type (DE 22) Value of 'NP', Suspected Drug Type (DE 20) must have a value of either 'E', 'G', or 'K'."
+        }
     },
     "13068": {
-        "active": "true",
+        "active": "false",
         "err_no": 13068,
-        "err_message": "WITH DATA ENTERED DRUG TYPE(DATA ELEMENT 20), QUANTITY(DATA ELEMENT 21), AND VALUE(DATA ELEMENT 16) MUST BE PRESENT",
+        "err_message": "WITH DATA ENTERED DRUG TYPE (DATA ELEMENT 20) AND QUANTITY (DATA ELEMENT 21) MUST BE PRESENT",
         "err_desc": {
             "22": "When Type Drug Measurement is entered, then Suspected Drug Type (20), Estimated Drug Quantity (21), and Value of Property (16) must also be completed."
         }
@@ -1103,9 +1109,17 @@
     "13072": {
         "active": "true",
         "err_no": 13072,
-        "err_message": "DATA ELEMENTS 15 - 22 WERE ALL BLANK WITH THIS PROPERTY LOSS CODE",
+        "err_message": "MISSING PROPERTY DESCRIPTION (DE 15)",
         "err_desc": {
-            "14": "When the Type of Property Loss is...{::nomarkdown}<ul><li>2 Burned</li><li>3 Counterfeited/Forged</li><li>4 Destroyed /Damaged/Vandalized</li><li>5 Recovered</li><li>6 Seized</li><li>7 Stolen/Etc.</li></ul>{:/}Then the following data elements in the Property Description Segment (DE 31) must have applicable entries:{::nomarkdown}<ul><li>Property Description (15)</li><li>Value of Property (16)</li><li>Date Recovered (17)</li><li>Number of Stolen Motor Vehicles (18)</li><li>Number of Recovered Motor Vehicles (19)</li><li>Suspected Drug Type (20)</li><li>Estimated Drug Quantity (21)</li><li>Type of Drug Measurement (22)</li></ul>{:/}"
+            "15": "Property Description is a required Data Element for all Property Description Segments (Segment 31)."
+        }
+    },
+    "13073": {
+        "active": "true",
+        "err_no": 13073,
+        "err_message": "PROPERTY VALUE (DE 16) IS REQUIRED",
+        "err_desc": {
+            "16": "When Property Loss Type (DE 14) is neither '1' (None) or '8' (Unknown), Property Value (DE 16) is a required Data Element for any Property Description that is not '10 - Drugs/Narcotics'"
         }
     },
     "13075": {
@@ -1157,7 +1171,7 @@
         "err_no": 13084,
         "err_message": "WITH A MEASUREMENT OF 'XX'(NOT REPORTED) DRUG QTY MUST = 00000001.000",
         "err_desc": {
-            "22": "Estimated Drug Quantity (21) must have a value of '000000001.000' when Type Drug Measurement (22) is Not Reported ('XX') and Value of Property (16) is Unknown ('1'). Submission of a Not Reported('XX') for Type Drug Measurement (22) requires that a value of '000000001.000' also be submitted for Estimated Drug Quantity (21) as a quality assurance check. Once the Type Drug Measurement (22) has been determined, the Incident will need to be **resubmitted** reflecting the completed data."
+            "22": "Estimated Drug Quantity (DE 21) must have a value of '000000001.000' when Drug Measurement Type (DE 22) is Not Reported ('XX'). Note that the Incident will need to be resubmitted with the correct Drug Measurement Type (DE 22) and Drug Quantity (DE 20) at a later date."
         }
     },
     "13087": {
@@ -1187,22 +1201,25 @@
     "13090": {
         "active": "true",
         "err_no": 13090,
-        "err_message": "ILLOGICAL PROPERTY DESCRIPTION FOR THE OFFENSE(S) SUBMITTED"
+        "err_message": "ILLOGICAL PROPERTY DESCRIPTION FOR THE OFFENSE(S) SUBMITTED",
+        "err_desc": {
+            "15": "Based on the Offenses that are present in the Incident, there has been an illogical assignment of one or more Property Descriptions to one or more Offenses. Please check that your Segment 33 (Propery/Offense Relationship) Segment is both present and properly linking the Properties to the appropriate Offenses."
+        }
     },
     "13091": {
         "active": "true",
         "err_no": 13091,
-        "err_message": "PROPERTY VALUE MUST BE ZERO FOR DESCRIPTION [PROP DESCRIPTION CODE]",
+        "err_message": "PROPERTY VALUE MUST BE ZERO FOR SELECTED PROPERTY DESCRIPTION",
         "err_desc": {
-            "16": "A value of zero ('0') is allowed only when Property Description (DE 15) codes are the following:<br><br>ZERO ('0') value is required for the following:{::nomarkdown}<ul><li>09 Credit/Debit Cards</li><li>22 Nonnegotiable Instruments</li><li>48 Documents/Personal or Business</li><li>65 Identity Documents</li><li>66 Identity-Intangible</li></ul>{:/} ZERO ('0') value is optional for the following:{::nomarkdown}<ul><li>77 Other</li><li>99 Special Category.</li></ul>{:/}"
+            "16": "When one of the following Property Descriptions (DE 15) are used, the Property Value (DE 16) must be None ('000000000' or 9 Blank Spaces):{::nomarkdown}<ul><li>09 Credit/Debit Cards</li><li>22 Nonnegotiable Instruments</li><li>48 Documents/Personal or Business</li><li>65 Identity Documents</li><li>66 Identity-Intangible</li></ul>{:/} ZERO ('0') value is optional for the following:{::nomarkdown}<ul><li>77 Other</li><li>99 Special Category.</li></ul>{:/}"
         }
     },
     "13092": {
         "active": "true",
         "err_no": 13092,
-        "err_message": "35 A OFFENSE ENTERED AND '1=NONE' ENTERED;MISSING SUSPECTED DRUG TYPE(20)",
+        "err_message": "35A OFFENSE ENTERED AND '1=NONE' ENTERED;MISSING SUSPECTED DRUG TYPE (DE 20)",
         "err_desc": {
-            "20": "When the following conditions are true: {::nomarkdown}<ul><li>Louisiana Revised Statute (6) has a NIBRS Offense code of <b>35A</b></li><li>Type Property Loss (14) is None ('1')</li></ul>{:/} Suspected Drug Type (20) is required. **However**, if Type Property Loss (14) of Seized ('6') is also reported, this edit is bypassed."
+            "20": "When the only Offense(s) that is/are reported are NIBRS 35A, and any of them have a Property Loss Type (DE 14) of '1 - None', then Suspected Drug Type (DE 20) should be entered."
         }
     },
     "13100": {
