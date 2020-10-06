@@ -845,7 +845,7 @@
     "13001": {
         "active": "true",
         "err_no": 13001,
-        "err_message": "RECOVERY DATE MUST EXIST WHEN SEGMENT 50 CONTAINS A PROPERTY LOSS TYPE (DE 14) OF '5 - SEIZED'",
+        "err_message": "RECOVERY DATE MUST EXIST WHEN SEGMENT 50 CONTAINS A PROPERTY LOSS TYPE (DE 14) OF '5 - RECOVERED'",
         "err_desc": {
             "17": "If there are any Property Description Segments (Segment 31) that indicated that a property has been recovered, then Date Recovered (DE 17) must have a value."
         }
@@ -1008,9 +1008,9 @@
         }
     },
     "13057": {
-        "active": "false",
+        "active": "true",
         "err_no": 13057,
-        "err_message": "PROPERTY LOSS (14) MUST BE 7 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14:67 OR 14:68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24' ,'28' , OR  '37' FOR DATA TO BE ENTERED",
+        "err_message": "PROPERTY LOSS (14) MUST BE 7 WITH A MOTOR VEHICLE THEFT OFFENSE CODE WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24' ,'28' , OR  '37' FOR DATA TO BE ENTERED",
         "err_desc": {
             "18": "In order for Number of Stolen Vehicles (DE 18) to contain a value other than '0' (Zero), the following conditions must be true: {::nomarkdown}<ul><li>The Incident contains an Offense with a NIBRS Offense Code of <b>240</b></li><li>Offense Attempted/Completed (DE 7) is Completed ('C')</li></ul>{:/} Further, when these conditions are met, it is also required that Property Loss Type (DE 14) is '7 - Stolen', and the Property Description for the stolen property is either: {::nomarkdown}<ul><li>03 - Automobiles</li><li>05 - Buses</li><li>24 - Other Motor Vehicles</li><li>28 - Recreational Vehicles</li><li>37 - Trucks</li></ul>{:/}"
         }
@@ -1018,7 +1018,7 @@
     "13058": {
         "active": "true",
         "err_no": 13058,
-        "err_message": "DATA MUST EXIST WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14:67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28', OR '37' AND A PROPERTY LOSS OF 7",
+        "err_message": "DATA MUST EXIST WITH A MOTOR VEHICLE THEFT OFFENSE WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28', OR '37' AND A PROPERTY LOSS OF 7",
         "err_desc": {
             "18": "When Number of Stolen Vehicles (DE 18) is a non-zero value, then there must be Property Description Segment(s) (Segment 31) that list a Property with a Property Loss Type (DE 14) of '7 - Stolen' and one of the following Property Descriptions (DE 15) as :{::nomarkdown}<ul><li>03 - Automobiles</li><li>05 - Buses</li><li>24 - Other Motor Vehicles</li><li>28 - Recreational Vehicles</li><li>37 - Trucks</li></ul>{:/}"
         }
@@ -1035,7 +1035,7 @@
     "13060": {
         "active": "false",
         "err_no": 13060,
-        "err_message": "PROPERTY LOSS(14) MUST BE 5 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24, 28, O R ' 37 ' FOR DATA TO BE ENTERED",
+        "err_message": "PROPERTY LOSS (14) MUST BE 5 WITH A MOTOR VEHICLE THEFT OFFENSE CODE OR LRS = 14: 67 OR 14: 68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24, 28, O R ' 37 ' FOR DATA TO BE ENTERED",
         "err_desc": {
             "19": "MUST be entered if Louisiana Revised Statute (6) has a NIBRS Offense code [as defined on Master LIBRS/LRS Code Table] of **240** or has a hard-coded edit based on Property Description (15) containing a Motor Vehicle code indicating Recovered Property **and** Type of Property Loss (14) is Recovered ('5')."
         }
@@ -1043,7 +1043,7 @@
     "13061": {
         "active": "true",
         "err_no": 13061,
-        "err_message": "DATA MUST EXIST WITH A MOTOR VECHICLE THEFT OFFENSE CODE OR LRS = 14:67 OR 14:68 WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28' OR '37' AND A PROPERTY LOSS OF 5",
+        "err_message": "DATA MUST EXIST WITH A MOTOR VECHICLE THEFT OFFENSE WITH PROPERTY DESCRIPTION CODES OF '03', '05', '24', '28' OR '37' AND A PROPERTY LOSS OF 5",
         "err_desc": {
             "19": "When Number of Recovered Vehicles (DE 19) is a non-zero value, there must be Property Description Segment(s) (Segment 31) that have a Property Loss Type (DE 14) of '5 - Recovered' for one of the following Property Descriptions (DE 15) as :{::nomarkdown}<ul><li>03 - Automobiles</li><li>05 - Buses</li><li>24 - Other Motor Vehicles</li><li>28 - Recreational Vehicles</li><li>37 - Trucks</li></ul>{:/}"
         }
@@ -1117,15 +1117,15 @@
     "13073": {
         "active": "true",
         "err_no": 13073,
-        "err_message": "PROPERTY VALUE (DE 16) IS REQUIRED",
+        "err_message": "PROPERTY VALUE (DE 16) IS REQUIRED FOR THIS PROPERTY LOSS TYPE",
         "err_desc": {
             "16": "When Property Loss Type (DE 14) is neither '1' (None) or '8' (Unknown), Property Value (DE 16) is a required Data Element for any Property Description that is not '10 - Drugs/Narcotics'"
         }
     },
     "13075": {
-        "active": "false",
+        "active": "true",
         "err_no": 13075,
-        "err_message": "MANDATORY FIELD WITH THE PROPERTY LOSS CODE ENTERED",
+        "err_message": "PROPERTY DESCRIPTION (DE 15) IS REQUIRED FOR THIS PROPERTY LOSS TYPE",
         "err_desc": {
             "15": "A Property Description (DE 15) code must be entered when the value entered in Type of Property Loss/Etc. (DE 14) contains the following:{::nomarkdown}<ul><li>2 Burned</li><li>3 Counterfeited or Forged</li><li>4 Destroyed, Damaged or Vandalized</li><li>5 Recovered</li><li>6 Seized</li><li>7 Stolen/Etc.</li></ul>{:/}"
         }
@@ -1217,7 +1217,7 @@
     "13092": {
         "active": "true",
         "err_no": 13092,
-        "err_message": "35A OFFENSE ENTERED AND '1=NONE' ENTERED;MISSING SUSPECTED DRUG TYPE (DE 20)",
+        "err_message": "35A OFFENSE ENTERED AND '1 - NONE' ENTERED; MISSING SUSPECTED DRUG TYPE (DE 20)",
         "err_desc": {
             "20": "When the only Offense(s) that is/are reported are NIBRS 35A, and any of them have a Property Loss Type (DE 14) of '1 - None', then Suspected Drug Type (DE 20) should be entered."
         }
@@ -1225,19 +1225,31 @@
     "13100": {
         "active": "true",
         "err_no": 13100,
-        "err_message": "MANDATORY DATA ELEMENT REQUIREMENT NOT MET"
+        "err_message": "NIBRS 13A OFFENSE REQUIRES TYPE OF WEAPON/FORCE (DE 13)",
+        "err_desc":{
+            "13": "A NIBRS 13A Offense must have at least one Type of Weapon/Force Used (DE 13) entered with it."
+        }
+    },
+    "13101": {
+        "active": "true",
+        "err_no": 13101,
+        "err_message": "OFFENSE MUST BE NIBRS 240 IF PROPERTY LOSS TYPE IS '7 - STOLEN' AND PROPERTY DESCRIPTION (DE 15) IS 03, 05, 24, 28, OR 37",
+        "err_desc":
+        {
+            "15": "In the past the FBI allowed NIBRS 26A and 23H to have vehicles associated with them as stolen properties, however this is no longer the case, and for any Property Description (DE 15) that represents a vehicle to have a Property Loss Type (DE 14), the associated Offense must be a NIBRS 240."
+        }
     },
     "14001": {
         "active": "true",
         "err_no": 14001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
         "err_desc": {
-            "8": "Must be present -- CANNOT be Blank (G).",
-            "8a": "Must be present -- CANNOT be Blank (G).",
-            "39": "MUST be present when Offender Sequence Number (36) is other than Unknown ('000').",
-            "38": "MUST be present when Offender Sequence Number (36) is other than Unknown ('000').",
-            "37": "MUST be present when Offender Sequence Number (36) is other than Unknown ('000').",
-            "36": "MUST be present -- CANNOT be blank."
+            "8": "Offender Suspected of Using/Gaming Motivation (DE 8) cannot be blank.",
+            "8a": "Bias/Motivation Type (DE 8A) cannot be blank.",
+            "39": "If Offender Sequence Number (36) is other than Unknown ('000'), Race of Offender (DE 39) cannot be blank.",
+            "38": "If Offender Sequence Number (36) is other than Unknown ('000'), Sex of Offender (DE 38) cannot be blank.",
+            "37": "If Offender Sequence Number (36) is other than Unknown ('000'), Age of Offender (DE 37) cannot be blank.",
+            "36": "Offender Sequence Number (DE 36) cannot be blank."
         }
     },
     "14002": {
@@ -1556,7 +1568,8 @@
         "err_desc": {
             "28": "MUST be present if Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L').",
             "27": "MUST be present if Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L').",
-            "26": "MUST be present when Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L')."
+            "26": "MUST be present if Type of Victim (25) is Individual ('I') or Law Enforcement Officer ('L').",
+            "33": "Victim Injury Type (DE 33) is required for the associated Offense Code."
         }
     },
     "15055": {
@@ -2325,7 +2338,7 @@
     "22072": {
         "active": "false",
         "err_no": 22072,
-        "err_message": "WARNING - THIS LRS SUBMITTED AND DE #15 = '03', '05', '24', '28', OR '37' WI LL BE REPORTED AS MOTOR VEHICLE THEFT(240).IF THIS IS NOT THE CORRECT PRO PERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE.",
+        "err_message": "WARNING - THIS LRS SUBMITTED AND DE #15 = '03', '05', '24', '28', OR '37' WI LL BE REPORTED AS MOTOR VEHICLE THEFT(240).IF THIS IS NOT THE CORRECT PROPERTY DESCRIPTION CODE, RESUBMIT WITH CORRECT CODE.",
         "err_desc": {
             "18": "If Louisiana Revised Statute code (DE 6) of '14:68' is submitted and if Property Description (DE 15) is{::nomarkdown}<ul><li>03 Automobiles</li><li>05 Buses</li><li>24 Other Motor Vehicles</li><li>28 Recreational Vehicles</li><li>37 Trucks.</li></ul>{:/}Then the agency will receive Warning 22072."
         }

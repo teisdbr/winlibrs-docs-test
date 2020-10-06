@@ -2055,6 +2055,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["84021"] -%}
 12 | {{error.err_desc["13"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84018"] -%}
+13 | {{error.err_desc["13"]}} | {{error.err_no}} | {{ error.err_message }}
+{% assign error = site.data.error["13100"] -%}
 13 | {{error.err_desc["13"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
@@ -2267,6 +2269,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 6 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13090"] -%}
 6 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13075"] -%}
+6 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13101"] -%}
+6 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -2335,6 +2341,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 6 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13073"] -%}
 7 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
+
 
 ___
 
@@ -2412,6 +2419,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["22072"] -%}
 7 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["23220"] -%}
+8 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13057"] -%}
 8 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
@@ -3635,6 +3644,10 @@ Requirment   | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["90029"] -%}
 6 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["84018"] -%}
+7 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["84408"] -%}
+7 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15053"] -%}
 7 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
 
 
