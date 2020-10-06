@@ -184,22 +184,30 @@ It should also be noted that you can upload as many files as you like at once, s
 
 #### How to Resubmit Data or Update Existing Incidents
 
-In LIBRS, you don't "Resubmit" Data. Instead, you submit corrections. While we accept A and M (Arrest Addition and Modification) Action Types, by far the easiest way to handle making updates is to submit a Delete, and then just send us back the whole Incident again. Deletes are just a single line, and they're exactly the same as Segment 10 (Administrative Segment) except for the fact that you have a "D" instead of an "I" in the Action type. While we *can* do A's and M's, for the sake of consistency in submitting we highly recommend the aforementioned method. 
+In LIBRS, you don't "Resubmit" Data. Instead, you submit corrections and changes in a later Reporting Period. 
 
-So what do you do when you'd submitted a Month and it turns out there are a ton of errors on it? From a User's Point-of-View, they should be able to go back into the RMS and make the required changes to the Incidents that had errors. From a Vendor's Point-of-View, a LIBRS-Compliant RMS should be able to manage when corrections need to be generated and on which monthly submission they should be included on. 
+While we accept A and M (Arrest Addition and Modification) Action Types, by far the easiest way to handle making updates is to submit a Delete, and then just send us back the whole Incident again. Deletes are just a single line, and they're exactly the same as Segment 10 (Administrative Segment) except for the fact that you have a "D" instead of an "I" in the Action type. While we *can* do A's and M's, for the sake of consistency in submitting we highly recommend the aforementioned method. 
 
-For Example, Agency A has not yet submitted their April, May, and June of 2020 LIBRS Files. However their staff have made updates in June to an Incident that occurred in April. Since April has not yet been submitted yet, there are two ways the RMS can handle this:
+Doing it this way also takes care of any confusion Developers might have about what to *add* to an existing Incident Report. Rather than holding onto the Existing Flat File data and modifying it whenever the Incident changes, you can just regenerate the entire Incident as though it has never been submitted before, and slap a Delete (Administrative Segment 10 with Action Type 'D - Delete') to the front of it. 
 
-1. It can send along the original information with the April Report, and then submit subsequent corrections in the June Report.
-2. The Changes to the April Incident can be overwritten, and the last update date changed so that the final version of the Incident is submitted in June.
+##### Making Updates to Incidents
 
-Let's say, though, that April and May have already been submitted, and the staff makes a change to the April Incident in June. In this case you have only one option: Resubmit the incident in June, but with a Delete included for the incident (A Delete is a Segment 10 Administrative Sement with a 'D' Action Type instead of an 'I', otherwise it's the exact same as if you were submitting the incident).
-
-An easy way to keep track of this would be to implement a "Last LIBRS-Significant Update" date along with a "Submitted" boolean in your database. The "Last LIBRS-Significant Update" field should be updated to the current date when a LIBRS-Relevant update is made to the Incident (EG: A LIBRS Data Element's value has changed). From there you can easily extrapolate if you need to:
+When users make changes to an Incident, the RMS should be able to determine if there was a "LIBRS-Reportable Change" that was made (IE: A Change to a LIBRS Data Element that would cause the Incident to have different data if the Flat File was generated again). This date would tell you how you need to submit the data to us:
 
 1. Perform an initial submission of the Incident. 
 2. Don't need to do anything because the Incident was already submitted and there have been no changes made to it. 
 3. Need to generate a Delete and resubmit the Incident because changes were made to it after it as initially submitted. 
+
+###### If the Incident Hasn't Been Reported Yet
+
+If the Incident hasn't yet been reported to us, we would recommend that whatever is reported is done so with the latest "state" of an Incident. For example, Agency A has not yet submitted their April, May, and June of 2020 LIBRS Files. However their staff have made updates in June to an Incident that occurred in April. Since April has not yet been submitted yet, this data can be reported two ways
+
+1. (Not Recommended) When April is ready for submission, the RMS can generate the Original Incident as it was entered and submit it. Then later when the June Submission is made, whatever changes were made to it since April can be generated and submitted, ultimately reporting the final "state" of the Incident.
+2. (Recommended) Changes that were made in June to the data from April overwrite it, and the Incident doesn't appear in the April Submission whenever it is made. Rather, it is simply submitted in June as a new Incident to LIBRS. 
+
+###### If the Incident Has Been Reported Already
+
+If the Incident has already been reported to us, then really the only option is to submit a Delete Segment for it and resubmit the entire Incident to us again. While you *can* use Action Types A and M, they're not available for all of the kinds of changes that might be made to an Incident, and there was a whole schpiel at the top of this section about why it's better to send a Delete and resubmit the whole Incident as an Insertion.
 
 As a reminder, to submit a Month in LIBRS, that month needs to be over. So the easiest way to keep track of what needs to be resubmitted and when would be to keep track of when it was last updated. It doesn't matter if you send us the same incident on each Month, so long as you're sending the Delete Segment to accompany them we'll process it all the same. 
 
