@@ -32,10 +32,25 @@
         "err_no": 10001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
         "err_desc": {
-            "1": "Must be present -- CANNOT be Blank (G).",
-            "2": "Must be present -- CANNOT be Blank (G).",
+            "1": "This is a required Data Element, and it cannot be left blank.",
+            "2": "This is a required Data Element, and it cannot be left blank.",
+            "4": "This is a required Data Element, and it cannot be left blank.",
+            "5": "This is a required Data Element, and it cannot be left blank.",
+            "6": "LRS Code (DE 6) is missing. This is a required Data Element.",
+            "7": "Attempted/Completed (DE 7) is missing. This is a required Data Element.",
+            "9": "Location Type (DE 9) is missing. This is a required Data Element.",
+            "8": "Offender Suspected of Using/Gaming Motivation (DE 8) cannot be blank.",
+            "8a": "Bias/Motivation Type (DE 8A) cannot be blank.",
+            "39": "If Offender Sequence Number (36) is other than Unknown ('000'), Race of Offender (DE 39) cannot be blank.",
+            "38": "If Offender Sequence Number (36) is other than Unknown ('000'), Sex of Offender (DE 38) cannot be blank.",
+            "37": "If Offender Sequence Number (36) is other than Unknown ('000'), Age of Offender (DE 37) cannot be blank.",
+            "36": "Offender Sequence Number (DE 36) cannot be blank, and must be front-padded with zeros to make a 3-digit number. (EG '001', '002', '011', etc...)",
+            "12": "Type of Criminal Activity/Gang Information (DE 12) is missing. This is a required Data Element for the NIBRS Code specified.",
             "25a": "When Type of Victim (25) is Law Enforcement Officer ('L'), then Type of Officer Activity/Circumstance (25A) cannot be blank.",
-            "25b": "When Type of Victim (25) is Law Enforcement Officer ('L'), then Officer Assignment Type (25B) cannot be blank."
+            "25b": "When Type of Victim (25) is Law Enforcement Officer ('L'), then Officer Assignment Type (25B) cannot be blank.",
+            "25": "Type of Victim (DE 25) is a required Data Element, and cannot be left blank.",
+            "24": "Offense Connected to Victim Sequence Number (DE 24) is a required Data Element and cannot be left blank. Without a Victim to connect to an Offense, no crime has actually occurred.",
+            "l6": "Offense Sequence Number (DE L6) is a required Data Element and cannot be left blank."
         }
     },
     "06002": {
@@ -372,20 +387,53 @@
         }
     },
     "11001": {
-        "active": "true",
+        "active": "false",
         "err_no": 11001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
-        "err_desc": {
-            "4": "Must be present, cannot be Blank (G).",
-            "5": "Must be present, cannot be Blank (G)."
-        }
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
     },
     "11004": {
         "active": "true",
         "err_no": 11004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "err_desc": {
-            "4": "Supplied value was not a known value. Must be a code that is found on the list of Available Values. "
+            "4": "Supplied value was not a known value. Must be a code that is found on the list of Available Values.",
+            "6": "Must be a valid code on Master LIBRS/LRS Code Table.",
+            "8": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "9": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "11": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "12": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "13": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "23": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "14": "Property Loss Type (DE 14) must be a numeric value between 1 and 8. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
+            "15": "Property Description (DE 15) must be a two-digit, numeric value greater than or equal to 1. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
+            "22": "The reported Drug Measurement Type (DE 22) was not recognized. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
+            "20": "The reported Suspected Drug Type (DE 20) was not recognized. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
+            "8a": "Must be a valid code that is found on the List of [Available Data Element Values](./data-element-values).",
+            "39": "Must be a valid code that is found on the List of [Available Data Element Values](./data-element-values).",
+            "38": "Must be a valid code that is found on the List of [Available Data Element Values](./data-element-values).",
+            "35": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "33": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "32": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "31": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "30": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "29": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "28": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "27": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "26": "If Age is not a numeric value, then it must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "25a": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "25b": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "25": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "24": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "39A": "If entered, must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "45": "MUST be a valid code on Master LIBRS/LRS Code Table. This code does not have to match one of the code(s) entered for Louisiana Revised Statute (6) within Offense Segments (6) submitted in an Incident Report.",
+            "44": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "43": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "46": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "49": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "50": "If entered, must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "51": "If entered, must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "52": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "l55": "Arrest Transaction Number (DE L55) may only contain [A - Z], [0 - 9], '-', and ' ' (Spaces)."
         }
     },
     "11005": {
@@ -648,15 +696,9 @@
         }
     },
     "12001": {
-        "active": "true",
+        "active": "false",
         "err_no": 12001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
-        "err_desc": {
-            "6": "LRS Code (DE 6) is missing. This is a required Data Element.",
-            "7": "Attempted/Completed (DE 7) is missing. This is a required Data Element.",
-            "9": "Location Type (DE 9) is missing. This is a required Data Element.",
-            "12": "Type of Criminal Activity/Gang Information (DE 12) is missing. This is a required Data Element for the NIBRS Code specified."
-        }
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
     },
     "12002": {
         "active": "true",
@@ -667,18 +709,9 @@
         }
     },
     "12004": {
-        "active": "true",
+        "active": "false",
         "err_no": 12004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
-        "err_desc": {
-            "6": "Must be a valid code on Master LIBRS/LRS Code Table.",
-            "8": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
-            "9": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
-            "11": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
-            "12": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
-            "13": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
-            "23": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values)."
-        }
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
     },
     "12005": {
         "active": "false",
@@ -692,7 +725,8 @@
         "err_desc": {
             "8": "When more than one value is present, the same value is not allowed to be repeated.",
             "12": "When more than one value is present, the same value is not allowed to be repeated.",
-            "13": "When more than one value is present, the same value is not allowed to be repeated."
+            "13": "When more than one value is present, the same value is not allowed to be repeated.",
+            "31": "When more than one code is entered within Aggravated Assault/Murder category, the same value is not allowed to be repeated."
         }
     },
     "12007": {
@@ -701,7 +735,7 @@
         "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUES USED",
         "err_desc": {
             "8": "Value 'N - Not Applicable' is mutually exclusive with any other value. No other values should be included if 'N' is used.",
-            "12A": "Value 'N - None or Unkonwn' is mutually exclusive with any other value. No other values should be included if 'N' is used.",
+            "12A": "Value 'N - None or Unknown' is mutually exclusive with any other value. No other values should be included if 'N' is used.",
             "13": "Value '99 - None' is mutually exclusive with any other value. No other values should be included if '99' is used."
         }
     },
@@ -728,17 +762,17 @@
         "err_no": 12019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
         "err_desc": {
-            "12": "Based on the Offense Code supplied, Type of Criminal Activity (DE 12) should not have a value, however one was found. This Data Element should only contain a value if it is associated with an Offense with one of the following NIBRS Codes: {::nomarkdown}<ul><li>250, 280</li><li>35A, 35B</li><li>370</li><li>39C</li><li>520</li><li>720 (Available Values limited to A, I, F, or S)</li><li>90A, 90Z (If Crime Againt Property)</li></ul>{:/}",
-            "13": "Based on the Offense Code supplied, Type of Weapon/Force Involved (DE 13) should not have a value, however one was found. This Data Element should only contain a value if it is associated with an Offense with one of the following NIBRS Codes: {::nomarkdown}<ul><li><b>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 210</li><li>520</b></li></ul>{:/}",
-            "12A": "Based on the Offense Code supplied, Type of Gang Information (DE 12) should not have a value, however one was found. This Data Element should only contain a value if it is associated with an Offense with one of the following NIBRS Codes: {::nomarkdown}<ul><li><b>09A, 09B</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li></b></li></ul>{:/}"
+            "12": "This Data Element must and can only contain a value if it is associated with an Offense with one of the following NIBRS Codes: {::nomarkdown}<script>document.write(window.derequiresnibrs.de12)</script>{:/}",
+            "13": "This Data Element must and can only contain a value if it is associated with an Offense with one of the following NIBRS Codes: {::nomarkdown}<script>document.write(window.derequiresnibrs.de13)</script>{:/}",
+            "12A": "This Data Element must and can only contain a value if it is associated with an Offense with one of the following NIBRS Codes: {::nomarkdown}<script>document.write(window.derequiresnibrs.de12a)</script>{:/}"
         }
     },
     "12020": {
-        "active": "true",
+        "active": "false",
         "err_no": 12020,
         "err_message": "DATA ELEMENT 12 MUST BE ENTERED FOR ASSAULT, HOMICIDE (EXCEPT 09C), KIDNAPPING/ABDUCTION, ROBBERY, AND FORCIBLE SEX OFFENSES",
         "err_desc": {
-            "12": "Type of Criminal Activity/Gang Information (DE 12) must be entered if Louisiana Revised Statute (DE 6) has one of the following 'Crime Against Person' Offense Codes : {::nomarkdown}<ul><li><b>09A, 09B</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</b></li></ul>{:/} OR Is one of the following 'Crime Against Property' Offense Codes: {::nomarkdown}<ul><li><b>120</b></li></ul>{:/}"
+            "12": "Type of Criminal Activity/Gang Information (DE 12) must be entered if Louisiana Revised Statute (DE 6) has one of the following 'Crime Against Person' Offense Codes: {::nomarkdown}<script>document.write(window.nibrs.person);</script>{:/} OR Is one of the following 'Crime Against Property' Offense Codes: {::nomarkdown}<ul><li><b>120</b></li></ul>{:/}"
         }
     },
     "12051": {
@@ -799,7 +833,7 @@
         "err_no": 12058,
         "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR",
         "err_desc": {
-            "13": "Only the following values are allowed to use the 'A - Automatic Weapon' indicator in Type of Weapon/Force Involved (DE 13):{::nomarkdown}<ul><li>11 Firearm (Type not Stated)</li><li>12 Handgun</li><li>13 Rifle</li><li>14 Shotgun</li><li>15 Other Firearm.</li></ul>{:/}"
+            "13": "Only the following values are allowed to use the 'A - Automatic Weapon' indicator in Type of Weapon/Force Involved (DE 13):{::nomarkdown}<script>document.write(window.weapons.firearms)</script>{:/}"
         }
     },
     "12065": {
@@ -831,14 +865,14 @@
         "err_no": 12069,
         "err_message": "POSSIBLE CLASSIFICATION ERROR OF AGGRAVATED ASSAULT '13A' CODED AS SIMPLE '13B'",
         "err_desc": {
-            "13": "Simple Assault Offenses (NIBRS 13B) can only use Type of Weapon/Force Involved (DE 13) Values of: {::nomarkdown}<ul><li>Personal Weapons (40)</li><li>Other (90)</li><li>Unknown (95)</li></ul>{:/}If the offense included one of the following Weapon Types, it should be reported as an Aggravated Assault (13A): {::nomarkdown}<ul><li>11/11A Firearm or Automatic Firearm</li><li>12/12A Handgun or Automatic Handgun</li><li>13/13A Rifle or Automatic Rifle</li><li>14/14A Shotgun or Automatic Shotgun</li><li>15/15A Other Firearm or Other Automatic Firearm</li></ul>{:/}"
+            "13": "Simple Assault Offenses (NIBRS 13B) can only use Type of Weapon/Force Involved (DE 13) Values of: {::nomarkdown}<script>document.write(window.weapons.simAssault)</script>{:/}If the offense included one of the following Weapon Types, it should be reported as an Aggravated Assault (13A): {::nomarkdown}<script>document.write(window.weapons.aggAssault)</script>{:/}"
         }
     },
     "12090": {
         "active": "true",
         "err_no": 12090,
         "err_message": "OFFENSE CONNECTED TO A NON-EXISTENT VICTIM",
-        "err_desc":{
+        "err_desc": {
             "24": "Offense Connected to Victim Sequence Number (DE 24) contains a value that does not match up with the Victim Sequence Numbers (DE 23) present in the Victim Segments (Segment 50) of the Incident."
         }
     },
@@ -862,15 +896,9 @@
         }
     },
     "13004": {
-        "active": "true",
+        "active": "false",
         "err_no": 13004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
-        "err_desc": {
-            "14": "Property Loss Type (DE 14) must be a numeric value between 1 and 8. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
-            "15": "Property Description (DE 15) must be a two-digit, numeric value greater than or equal to 1. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
-            "22": "The reported Drug Measurement Type (DE 22) was not recognized. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
-            "20": "The reported Suspected Drug Type (DE 20) was not recognized. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions"
-        }
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
     },
     "13005": {
         "active": "false",
@@ -922,7 +950,7 @@
         "err_no": 13019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
         "err_desc": {
-            "14": "Type of Property Loss (DE 14) should only be entered for Offenses with a NIBRS Code that is a 'Crime Against Property', or one of the following: {::nomarkdown}<b><ul><li>100, 120</li><li>200, 210, 220, 240, 250, 270, 280, 290</li><li>23A, 23B, 23C, 23D, 23E, 23F, 23G, 23H</li><li>26A, 26B, 26C, 26D, 26E</li><li>35A, 35B</li><li>39A, 39B, 39C, 39D</li><li>510</li><li>90A, 90Z</li></ul></b>{:/}"
+            "14": "Type of Property Loss (DE 14) should only be entered for Offenses with a NIBRS Code that is one of the following: {::nomarkdown}<script>document.write(window.derequiresnibrs.de14)</script>{:/}"
         }
     },
     "13020": {
@@ -1081,7 +1109,7 @@
         "active": "true",
         "err_no": 13067,
         "err_message": "DRUG TYPE MUST BE 'E', 'G', OR 'K' FOR A VALUE OF 'NP'",
-        "err_desc":{
+        "err_desc": {
             "22": "In order to use a Drug Measurement Type (DE 22) Value of 'NP', Suspected Drug Type (DE 20) must have a value of either 'E', 'G', or 'K'."
         }
     },
@@ -1226,7 +1254,7 @@
         "active": "true",
         "err_no": 13100,
         "err_message": "NIBRS 13A OFFENSE REQUIRES TYPE OF WEAPON/FORCE (DE 13)",
-        "err_desc":{
+        "err_desc": {
             "13": "A NIBRS 13A Offense must have at least one Type of Weapon/Force Used (DE 13) entered with it."
         }
     },
@@ -1234,26 +1262,17 @@
         "active": "true",
         "err_no": 13101,
         "err_message": "OFFENSE MUST BE NIBRS 240 IF PROPERTY LOSS TYPE IS '7 - STOLEN' AND PROPERTY DESCRIPTION (DE 15) IS 03, 05, 24, 28, OR 37",
-        "err_desc":
-        {
+        "err_desc": {
             "15": "In the past the FBI allowed NIBRS 26A and 23H to have vehicles associated with them as stolen properties, however this is no longer the case, and for any Property Description (DE 15) that represents a vehicle to have a Property Loss Type (DE 14), the associated Offense must be a NIBRS 240."
         }
     },
     "14001": {
-        "active": "true",
+        "active": "false",
         "err_no": 14001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
-        "err_desc": {
-            "8": "Offender Suspected of Using/Gaming Motivation (DE 8) cannot be blank.",
-            "8a": "Bias/Motivation Type (DE 8A) cannot be blank.",
-            "39": "If Offender Sequence Number (36) is other than Unknown ('000'), Race of Offender (DE 39) cannot be blank.",
-            "38": "If Offender Sequence Number (36) is other than Unknown ('000'), Sex of Offender (DE 38) cannot be blank.",
-            "37": "If Offender Sequence Number (36) is other than Unknown ('000'), Age of Offender (DE 37) cannot be blank.",
-            "36": "Offender Sequence Number (DE 36) cannot be blank."
-        }
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
     },
     "14002": {
-        "active": "true",
+        "active": "false",
         "err_no": 14002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
         "err_desc": {
@@ -1261,22 +1280,16 @@
         }
     },
     "14004": {
-        "active": "true",
+        "active": "false",
         "err_no": 14004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
-        "err_desc": {
-            "8": "MUST be a valid code on Master LIBRS/LRS Code Table.",
-            "8a": "MUST be a valid code on Master LIBRS/LRS Code Table.",
-            "39": "MUST be a valid code.",
-            "38": "MUST be a valid code."
-        }
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
     },
     "14008": {
         "active": "true",
         "err_no": 14008,
         "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS",
         "err_desc": {
-            "37": "Exact Age: A single, two-character Age MUST be in first two positions of the field. The third position must be Blank (G)."
+            "37": "The first two characters in Age of Offender (DE 37) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is being specified (IE: Not an estimated Age), then the third character should be 'G' (Blank Space)."
         }
     },
     "14009": {
@@ -1284,7 +1297,7 @@
         "err_no": 14009,
         "err_message": "ESTIMATED AGE MUST BE 2 NUMERIC DIGITS, AND HAVE A TRAILING 'E'",
         "err_desc": {
-            "37": "Estimated Age: MUST be 2 numeric digits, and have a trailing 'E'."
+            "37": "The first two characters in Age of Offender (DE 37) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is unknown and is, instead, being estimated, then the third character should be 'E' to represent that."
         }
     },
     "14015": {
@@ -1307,7 +1320,8 @@
         "err_no": 14022,
         "err_message": "ESTIMATED AGE CANNOT BE '00' UNKNOWN AND HAVE A TRAILING 'E'",
         "err_desc": {
-            "37": "Estimated Age: Estimated Age CANNOT be Unknown ('00') **and have a trailing 'E'**."
+            "37": "Age of Offender (DE 37) is only to use the Estimated Age Modifier 'E' if the Age is actually being Estimated. '00' for an Unknown Age is not an estimate, and therefore not a valid input.",
+            "26": "Age of Victim (DE 26) is only to use the Estimated Age Modifier 'E' if the Age is actually being Estimated. '00' for an Unknown Age is not an estimate, and therefore not a valid input."
         }
     },
     "14050": {
@@ -1315,8 +1329,7 @@
         "err_no": 14050,
         "err_message": "OFFENDER IS SPOUSE, BUT AGE IS LESS THAN 10",
         "err_desc": {
-            "37": "If Relationship of Victim to Offender (35) contains a relationship of Spouse (**'SE'**), then the Offender CANNOT be less than 10 years old.",
-            "35": "Husbands and wives (that is, spouses) must be at least 10 years of age."
+            "35": "The Victim/Offender Relationship of 'SE - Spouse' was used, however the age of either the Victim or the Offender was less than 10. This is not a valid age based on the relationship between the two."
         }
     },
     "14051": {
@@ -1332,9 +1345,9 @@
         "err_no": 14052,
         "err_message": "CANNOT BE PRESENT WHEN OFFENDER NUMBER IS '000' UNKNOWN",
         "err_desc": {
-            "39": "CANNOT be entered when Offender Sequence Number (36) is Unknown ('000').",
-            "38": "CANNOT be entered when Offender Sequence Number (36) is Unknown ('000').",
-            "37": "CANNOT be entered when Offender Sequence Number (36) is Unknown ('000')."
+            "39": "When Offender Sequence Number (DE 36) is '000' to denote an Unkonwn Offender, then Race of Offender (DE 39) cannot have a known value. In order for a value to be reported for this Data Element, the Offender Sequence Number (DE 36) should be something other than '000'",
+            "38": "When Offender Sequence Number (DE 36) is '000' to denote an Unkonwn Offender, then Sex of Offender (DE 38) cannot have a known value. In order for a value to be reported for this Data Element, the Offender Sequence Number (DE 36) should be something other than '000'",
+            "37": "When Offender Sequence Number (DE 36) is '000' to denote an Unkonwn Offender, then Age of Offender (DE 37) cannot have a known value. In order for a value to be reported for this Data Element, the Offender Sequence Number (DE 36) should be something other than '000'"
         }
     },
     "14053": {
@@ -1342,7 +1355,7 @@
         "err_no": 14053,
         "err_message": "SEX OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP",
         "err_desc": {
-            "35": "If DE 35 is 'VO' (Victim was Offender), then DE 27 (Sex of Victim) and DE 38 (Sex of Offender) MUST match."
+            "35": "If Victim/Offender Relationship (DE 35) is 'VO - Victim was Offender', then Sex of Victim (DE 27) and Sex of Offender (DE 38) should match."
         }
     },
     "14054": {
@@ -1350,7 +1363,7 @@
         "err_no": 14054,
         "err_message": "AGE OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP",
         "err_desc": {
-            "35": "The Age of Victim and Age of Offender MUST reflect the implied relationship. <br><br>The following Implied Age Difference Between Victims and Offenders where victim Must be **Younger**: {::nomarkdown}<ul><li>CH - Victim was Child</li><li>GC - Victim was Grandchild</li><li>BE - Victim was Babysitee (the Baby)</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim Must be **Older**:{::nomarkdown}<ul><li>PA - Victim was Parent</li><li>GP - Victim was Grandparent</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim Must be **Same Age**:{::nomarkdown}<ul><li>VO - Victim was Offender</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim Must be **At Least 10 Yrs Old**:{::nomarkdown}<ul><li>SE - Victim was Spouse</li><li>ES - Victim was Estranged Spouse</li><li>CS - Victim was Common-Law Spouse</li><li>XS - Victim was Ex-Spouse</li><li>NM - Victim was Non-Married Live-In</li></ul>{:/}"
+            "35": "The Age of Victim and Age of Offender must reflect the implied relationship. The following relationships imply that the Age of Victim (DE 26) that is <b>younger</b> than the Age of Offender (DE 37): {::nomarkdown}<ul><li>CH - Victim was Child</li><li>GC - Victim was Grandchild</li><li>BE - Victim was Babysitee (the Baby)</li></ul>{:/} The following relationships imply that the Age of Victim (DE 26) that is <b>older</b> than the Age of Offender (DE 37):{::nomarkdown}<ul><li>PA - Victim was Parent</li><li>GP - Victim was Grandparent</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim Must be **Same Age**:{::nomarkdown}<ul><li>VO - Victim was Offender</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim Must be **At Least 10 Yrs Old**:{::nomarkdown}<ul><li>SE - Victim was Spouse</li><li>ES - Victim was Estranged Spouse</li><li>CS - Victim was Common-Law Spouse</li><li>XS - Victim was Ex-Spouse</li><li>NM - Victim was Non-Married Live-In</li></ul>{:/}"
         }
     },
     "14055": {
@@ -1358,11 +1371,11 @@
         "err_no": 14055,
         "err_message": "OFFENDER '000' EXISTS--CANNOT SUBMIT MORE OFFENDERS",
         "err_desc": {
-            "36": "If the number is Unknown ('000'), no other Offender Segments (40) can be submitted."
+            "36": "Using Offender Sequence Number (DE 36) '000' implies that nothing is known about the Offender(s), and therefore only one Offender Segment can be used whenever this value is present."
         }
     },
     "14056": {
-        "active": "true",
+        "active": "false",
         "err_no": 14056,
         "err_message": "OFFENDER EXACT AGE MUST BE 2 NUMERIC DIGITS",
         "err_desc": {
@@ -1372,19 +1385,17 @@
     "14057": {
         "active": "true",
         "err_no": 14057,
-        "err_message": "OFFENDER SEQUENCE NUMBER CANNOT BE UNKNOWN IF INCIDENT CLEARED EXCEPTIONALL",
+        "err_message": "OFFENDER SEQUENCE NUMBER CANNOT BE UNKNOWN IF INCIDENT CLEARED EXCEPTIONALLY",
         "err_desc": {
-            "36": "If an incident is Exceptionally Cleared (4), then Unknown ('000') CANNOT be entered.<br><br>Unknown ('000') indicates that nothing is known about the Offender(s) regarding number and any identifying information. One of the criteria for Exceptionally Clearing (4) an incident is that at least one of the Offenders be known."
+            "36": "If an incident is Exceptionally Cleared (DE 4), then Offender Sequence Number (DE 36) cannot be Unknown '000'.<br><br>Unknown ('000') indicates that nothing is known about the Offender(s) regarding number and any identifying information. One of the criteria for Exceptionally Clearing (DE 4) an incident is that at least one of the Offenders be known."
         }
     },
     "14058": {
         "active": "true",
         "err_no": 14058,
-        "err_message": "AT LEAST ONE OFFENDER MUST HAVE KNOWN VALUES",
+        "err_message": "AT LEAST ONE OFFENDER MUST HAVE VALUES",
         "err_desc": {
-            "39": "When an incident is Cleared Exceptionally (4), at least one of the Offenders MUST have *known* values in Age, Sex and Race.",
-            "38": "When an incident is Cleared Exceptionally (4), at least one of the Offenders MUST have *known* values in Age, Sex and Race.",
-            "37": "When an incident is Cleared Exceptionally (4), at least one of the Offenders MUST have *known* values in Age, Sex and Race."
+            "c1": "Each Incident must have at least one Offender listed. If no specific details about the Offender are known, use '000' for the Offender Sequence Number (DE 36) to denote 'Unkonwn Offender' (NIBRS 09C is exempt from this, and must contain a known Offender). Additionally, the number of Offender and Offender Using (Segments 40 and 41) should match."
         }
     },
     "14059": {
@@ -1392,10 +1403,7 @@
         "err_no": 14059,
         "err_message": "OFFENDER DATA MUST BE PRESENT IF OFFENSE CODE IS JUSTIFIABLE HOMICIDE/09C",
         "err_desc": {
-            "39": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
-            "38": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
-            "37": "For a Justifiable Homicide (NIBRS 09C) at least one of the Offenders MUST have *known* information for Age, Sex and Race.",
-            "36": "For a Justifiable Homicide (NIBRS 09C), at least one of the Offenders must have 'known' information for Age, Sex, and Race. Consequently, Unknown ('000') is not valid as an Offender Sequence Number (36)."
+            "36": "For NIBRS <b>09C</b> Offenses (Justifiable Homicide) at least one of the Offenders must have known information for Age, Sex, and Race. Unknown ('000') is not valid as an Offender Sequence Number (DE 36) for these Offenses."
         }
     },
     "14060": {
@@ -1418,70 +1426,52 @@
         "err_message": "BIAS MOTIVATION = 99 REQUIRES THAT AN OFFENDER AGE BE ENTERED.AT LEAST ONE OFFENDER MUST BE COMPLETELY KNOWN."
     },
     "15001": {
-        "active": "true",
+        "active": "false",
         "err_no": 15001,
-        "err_message": "MUST BE PRESENT--MANDATORY FIELD",
-        "err_desc": {
-            "25": "MUST be present -- CANNOT be blank.",
-            "24": "MUST be present -- CANNOT be blank.",
-            "23": "MUST be present -- CANNOT be blank."
-        }
+        "err_message": "MUST BE PRESENT--MANDATORY FIELD"
     },
     "15002": {
         "active": "true",
         "err_no": 15002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
         "err_desc": {
-            "l6": "MUST be numeric entry (001 through 999) with zero left-fill. Offense Sequence Number (DE L6) distinguishes one offense from another.",
-            "34": "MUST be numeric entry with zero left-fill, if entered.",
-            "31": "MUST contain numeric entry with ZERO left-fill.",
-            "23": "MUST be numeric entry (001 through 999) with zero left-fill. The purpose of Victim Sequence Number is to distinguish one victim from another."
+            "l6": "Offense Sequence Number (DE L6) should be a numeric entry, front-padded with zeros to make a three-digit number. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10.",
+            "40": "Arrest Sequence Number (DE 40) should be a numeric entry, front-padded with zeros to make a three-digit number. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10.",
+            "23": "Victim Sequence Number (DE 23) should be a numeric entry, front-padded with zeros to make a three-digit number. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10.",
+            "24": "Offense Connected to Victim Sequence Number (DE 24) should be a numeric entry, front-padded with zeros to make a three-digit number. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10."
         }
     },
     "15003": {
         "active": "true",
         "err_no": 15003,
-        "err_message": "MISSING VICTIM INJURY SEGMENT(SEGMENT 51)",
+        "err_message": "MISSING VICTIM INJURY SEGMENT OR TYPE (SEGMENT 51 OR DE 33)",
         "seq_desc": {
-            "51": "Segment 51 must be present if Victim Type is 'I' (Individual) or 'L' (Law Enforcement Officer) and if offense is applicable."
+            "51": "Segment 51 must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement'."
+        },
+        "err_desc": {
+            "33": "Type of Victim Injury (DE 33) must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement'."
         }
     },
     "15004": {
-        "active": "true",
+        "active": "false",
         "err_no": 15004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
-        "err_desc": {
-            "35": "MUST be a valid code.",
-            "33": "MUST be a valid code.",
-            "32": "MUST be a valid code.",
-            "31": "MUST be a valid code.",
-            "30": "MUST be a valid code.",
-            "29": "MUST be a valid code.",
-            "28": "MUST be a valid code.",
-            "27": "MUST be a valid code.",
-            "26": "**Exact Age:** MUST be a valid code if alpha characters, i.e., NN, NB, or BB.",
-            "25a": "MUST contain a valid data value when entered.",
-            "25": "MUST be a valid code.",
-            "24": "MUST be a valid code."
-        }
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
     },
     "15005": {
         "active": "true",
         "err_no": 15005,
-        "err_message": "MISSING VICTIM / OFFENDER SEGMENT (SEGMENT 52)",
+        "err_message": "MISSING VICTIM/OFFENDER SEGMENT OR RELATIONSHIP (SEGMENT 52 OR DE L6)",
         "seq_desc": {
-            "52": "Segment 52 must be present if Victim Type is 'I' (Individual) or 'L' (Law Enforcement Officer) and if offense is applicable."
+            "52": "Victim/Offender Relationship (Segment 52) must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement'."
+        },
+        "err_desc": {
+            "35": "Victim/Offender Relationship (DE 34) must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement'."
         }
     },
     "15006": {
-        "active": "true",
+        "active": "false",
         "err_no": 15006,
-        "err_message": "ERROR - DUPLICATE VALUE = [value]",
-        "err_desc": {
-            "34": "If more than one number entered, then this Data Element (34) CANNOT be a duplicate.",
-            "33": "If more than one code entered, CANNOT be a duplicate.",
-            "31": "When more than one code is entered within Aggravated Assault/ Murder category, there can be NO duplicates."
-        }
+        "err_message": "ERROR - DUPLICATE VALUE = [value]"
     },
     "15007": {
         "active": "false",
@@ -1527,14 +1517,19 @@
         "err_no": 15019,
         "err_message": "DATA CAN ONLY BE ENTERED FOR SPECIFIC OFFENSES",
         "err_desc": {
-            "33": "CAN ONLY be entered if Louisiana Revised Statute (6) is a *Crime Against Person* and has a NIBRS Offense code of: {::nomarkdown}<ul><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>210</li><li>13A, 13B</li><li>90Z</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses.",
-            "31": "CAN ONLY be entered if Louisiana Revised Statute (6) has a NIBRS Offense code of : {::nomarkdown}<ul><li>13A</li><li>09A, 09B or 09C</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
+            "33": "Victim Injury Type (DE 33) is only allowed to be present if the associated Victim Type (DE 25) is 'I - Individual' or 'L - Law Enforcement', and Offense Connected to Victim Sequence Number (DE 24) relates to one of the follwing Offense Codes: {::nomarkdown}<script>document.write(window.derequiresnibrs.de33)</script>{:/}",
+            "31": "Aggravated Assault/Homicide Circumstance (DE 31) is only allowed to be present if Offense Connected to Victim Sequence Number (DE 24) relates to one of the follwing Offense Codes: {::nomarkdown}<script>document.write(window.derequiresnibrs.de31)</script>{:/}"
         }
     },
     "15020": {
         "active": "true",
         "err_no": 15020,
-        "err_message": "DATA MUST BE ENTERED FOR SPECIFIC OFFENSES"
+        "err_message": "DATA MUST BE ENTERED FOR SPECIFIC OFFENSES",
+        "err_desc": {
+            "33": "Victim Injury Type (DE 33) must be present if the associated Victim Type (DE 25) is 'I - Individual' or 'L - Law Enforcement', and Offense Connected to Victim Sequence Number (DE 24) relates to one of the follwing Offense Codes: {::nomarkdown}<script>document.write(window.derequiresnibrs.de33)</script>{:/}",
+            "31": "Aggravated Assault/Homicide Circumstance (DE 31) must be present if Offense Connected to Victim Sequence Number (DE 24) relates to one of the follwing Offense Codes: {::nomarkdown}<script>document.write(window.derequiresnibrs.de31)</script>{:/}",
+            "35": "Victim/Offender Relationship (DE 34) must be present for any Victim of a Crime Against Person {::nomarkdown}<script>document.write(window.nibrs.person);</script>{:/}"
+        }
     },
     "15022": {
         "active": "false",
@@ -1558,11 +1553,11 @@
         "err_no": 15051,
         "err_message": "VICTIM NUMBER ALREADY EXISTS",
         "err_desc": {
-            "23": "MUST be unique -- can NOT have duplicates."
+            "23": "Victim Sequence Number (DE 23) must be a unique value for all Victims in the Incident."
         }
     },
     "15053": {
-        "active": "true",
+        "active": "false",
         "err_no": 15053,
         "err_message": "MUST BE PRESENT WHEN VICTIM TYPE(25) = 'I' OR 'L'",
         "err_desc": {
@@ -1577,10 +1572,10 @@
         "err_no": 15055,
         "err_message": "ADDITIONAL JUSTIFIABLE HOMICIDE IS MANDATORY WITH A '20' OR '21' ENTERED",
         "err_desc": {
-            "31": "When Criminal Killed by Private Citizen ('20') or Criminal Killed by Police Officer ('21') is entered, then Additional Justifiable Homicide Circumstances (32) MUST be entered."
+            "32": "For any 09C Offense, Additional Justifiable Homicide Circumstance (DE 32) is required to be either '20 - Criminal Killed by Private Citizen', or '21 - Criminal Killed by Police Officer"
         }
     },
-    "15056a": {
+    "15056": {
         "active": "true",
         "err_no": 15056,
         "err_message": "ONLY ONE VALUE GREATER OR EQUAL TO '10' CAN BE ENTERED",
@@ -1609,13 +1604,12 @@
         "err_no": 15058,
         "err_message": "VICTIM TYPE(25) MUST BE 'I' OR 'L' FOR DATA TO BE ENTERED",
         "err_desc": {
-            "34": "Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L') for data to be entered.",
-            "30": "Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L') for data to be entered.",
-            "29": "Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L') in order for data to be entered into Ethnicity of Victim (29).",
-            "28": "Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L') for data to be entered.",
-            "27": "Type of Victim (25) must be Individual ('I') or Law Enforcement Officer ('L') for data to be entered in Sex of Victim (27).",
-            "l26": "Type of Victim (25) must be Individual ('I') **or Law Enforcement Officer** ('L') for data to be entered.",
-            "26": "Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L') for data to be entered."
+            "34": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered.",
+            "30": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered.",
+            "29": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered.",
+            "28": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered.",
+            "27": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered.",
+            "26": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered."
         }
     },
     "15059": {
@@ -1623,16 +1617,15 @@
         "err_no": 15059,
         "err_message": "NEED A CRIME AGAINST PERSON OR ROBBERY FOR DATA TO BE ENTERED",
         "err_desc": {
-            "35": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a NIBRS Offense code of: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/} Relationship of Victim to Offender (35) MUST be Blank (G) when '000' is entered into Offender Number to be Related (34).",
-            "34": "MUST be entered if Louisiana Revised Statute (6) is a *Crime Against Person*, and has a NIBRS Offense code of: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>90Z</li></ul>{:/} Offense Connected to Victim Sequence Number (24) MUST relate to one of the above offenses."
+            "34": "In order for Offender Number to be Related to have a value, the offense must either be a Robbery (NIBRS 120), or a Crime Against Person: {::nomarkdown}<script>document.write(window.derequiresnibrs.de34)</script>{:/}"
         }
     },
     "15060": {
         "active": "true",
         "err_no": 15060,
-        "err_message": "RELATIONSHIP MUST BE ENTERED WHEN AN OFFENDER NUMBER(34) EXISTS",
+        "err_message": "RELATIONSHIP MUST BE ENTERED WHEN AN OFFENDER NUMBER (34) EXISTS",
         "err_desc": {
-            "35": "Every Offender indicated in Offender Number to be Related (34) requires an entry in Relationship of Victim to Offender (35), except when the Offender Sequence Number (36) is Unknown ('000'). This field MUST be Blank (G) in instances where '000' is entered."
+            "35": "If Victim/Offender Relationship (DE 35) is one of the following, then Offender Number to be Related (DE 34) cannot be Unknown ('000'). This field must be Blank (G) in instances where '000' is entered. {::nomarkdown}<ul><li>OF - Victim Was Other Family Member</li><li>CS - Victim Was Common-Law Spouse</li><li>SB - Victim Was Sibling</li><li>SP - Victim Was Stepparent</li><li>SC - Victim Was Stepchild</li><li>SS - Victim Was Step-Sibling </li><li>IL - Victim Was In-Law</li><li>CF - Victim Was Child of Boyfriend or Girlfriend</li><li>NE - Victim Was Neighbor</li><li>FR - Victim Was Friend</li><li>AQ - Victim Was Acquaintance</li><li>EE - Victim Was Employee</li><li>ER - Victim Was Employer</li><li>OK - Victim Was Otherwise Known</li><li>RU - Relationship Unknown</li><li>ST - Victim Was Stranger</li></ul>{:/}"
         }
     },
     "15061": {
@@ -1821,20 +1814,9 @@
         }
     },
     "16004": {
-        "active": "true",
+        "active": "false",
         "err_no": 16004,
-        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
-        "err_desc": {
-            "39A": "If entered, MUST be a valid code.",
-            "45": "MUST be a valid code on Master LIBRS/LRS Code Table. This code does not have to match one of the code(s) entered for Louisiana Revised Statute (6) within Offense Segments (6) submitted in an Incident Report.",
-            "44": "MUST be a valid code.",
-            "43": "MUST be a valid code.",
-            "46": "MUST be a valid code.",
-            "49": "MUST be a valid code.",
-            "50": "If entered, MUST be a valid code.",
-            "51": "If entered, MUST be a valid code.",
-            "52": "MUST be a valid code."
-        }
+        "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
     },
     "16005": {
         "active": "true",
@@ -2861,10 +2843,10 @@
         "active": "true",
         "err_no": 84018,
         "err_message": "WHEN LRS = 11 A - 11 D OR 64 A OR 64 B, DE 13 MUST HAVE A VALID CODE, DE 25 MUST HAVE A 'I' OR 'L', AND DE 33 MUST HAVE A VALID CODE.",
-        "err_desc":{
-            "13":"When NIBRS Offense Code is <b>11A, 11B, 11C, or 11D</b>, then: {::nomarkdown}<ul><li>Type of Weapon/Force Involved (DE 13) must have a value</li><li>Victim Type (DE 25) must be either 'I - Individual' or 'L - Law Enforcement</li><li>Injury Type (DE 33) must have a value</li></ul>{:/}",
-            "25":"When NIBRS Offense Code is <b>11A, 11B, 11C, or 11D</b>, then: {::nomarkdown}<ul><li>Type of Weapon/Force Involved (DE 13) must have a value</li><li>Victim Type (DE 25) must be either 'I - Individual' or 'L - Law Enforcement</li><li>Injury Type (DE 33) must have a value</li></ul>{:/}",
-            "33":"When NIBRS Offense Code is <b>11A, 11B, 11C, or 11D</b>, then: {::nomarkdown}<ul><li>Type of Weapon/Force Involved (DE 13) must have a value</li><li>Victim Type (DE 25) must be either 'I - Individual' or 'L - Law Enforcement</li><li>Injury Type (DE 33) must have a value</li></ul>{:/}"
+        "err_desc": {
+            "13": "When NIBRS Offense Code is <b>11A, 11B, 11C, or 11D</b>, then: {::nomarkdown}<ul><li>Type of Weapon/Force Involved (DE 13) must have a value</li><li>Victim Type (DE 25) must be either 'I - Individual' or 'L - Law Enforcement</li><li>Injury Type (DE 33) must have a value</li></ul>{:/}",
+            "25": "When NIBRS Offense Code is <b>11A, 11B, 11C, or 11D</b>, then: {::nomarkdown}<ul><li>Type of Weapon/Force Involved (DE 13) must have a value</li><li>Victim Type (DE 25) must be either 'I - Individual' or 'L - Law Enforcement</li><li>Injury Type (DE 33) must have a value</li></ul>{:/}",
+            "33": "When NIBRS Offense Code is <b>11A, 11B, 11C, or 11D</b>, then: {::nomarkdown}<ul><li>Type of Weapon/Force Involved (DE 13) must have a value</li><li>Victim Type (DE 25) must be either 'I - Individual' or 'L - Law Enforcement</li><li>Injury Type (DE 33) must have a value</li></ul>{:/}"
         },
         "mandatory": {
             "4s18": "When an Incident contains SEX OFFENSES – FORCIBLE (NIBRS Code 11A-D), then Type of Weapon/Force Involved (13) MUST contain a valid value, Type of Victim (25) MUST be Individual ('I') or Law Enforcement Officer ('L'), and Type of Injury (33) MUST contain a valid value."

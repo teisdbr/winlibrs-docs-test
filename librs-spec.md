@@ -4,6 +4,9 @@ layout: default
 permalink: /librs-spec
 ---
 
+<script type="text/javascript" src="nibrslists.js"></script>
+
+
 # LIBRS Specifications Documentation
 This document contains information about the Segments, Data Elements, Requirements, Errors, and Warnings that LIBRS uses in the validation of Incident Data.
 
@@ -902,11 +905,7 @@ You may include this Segment if you wish, though it is not required. If you do i
 <br>
 
 ### Segment 01 Errors and Explanations
-
-Error Number  | Error Message | Explaination of Error
-------------------|-------------------|--------------------------
-{% assign error = site.data.error["10092"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["01"]}}
+None
 
 ___
 
@@ -965,8 +964,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["10092"] -%}
-2 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["10016"] -%}
 3 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["90042"] -%}
@@ -1079,7 +1076,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["11001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["4"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["4"]}} | {{error.err_no}} | {{ error.err_message }} 
@@ -1161,7 +1158,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["11001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["5"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11055"] -%}
 2 | {{error.err_desc["5"]}} | {{error.err_no}}| {{ error.err_message }} 
@@ -1198,6 +1195,8 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["10001"] -%}
+2 | {{error.err_desc["l6"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["15002"] -%}
 2 | {{error.err_desc["l6"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["25001"] -%}
@@ -1259,13 +1258,13 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["12001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["90022"] -%}
 2 | {{error.err_desc["6"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["11056"] -%}
 3 | {{error.err_desc["6"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["12004"] -%}
+{% assign error = site.data.error["11004"] -%}
 4 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
@@ -1438,7 +1437,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["12001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["7"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["12051"] -%}
 2 | {{error.err_desc["7"]}} | {{error.err_no}} | {{ error.err_message }} 
@@ -1514,17 +1513,15 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["14001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["8"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["14004"] -%}
-2 | {{error.err_desc["8"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12006"] -%}
 3 | {{error.err_desc["8"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12007"] -%}
 4 | {{error.err_desc["8"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["11056"] -%}
 5 | {{error.err_desc["8"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["12004"] -%}
+{% assign error = site.data.error["11004"] -%}
 6 | {{error.err_desc["8"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
@@ -1592,9 +1589,9 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["14001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["8a"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["14004"] -%}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["8a"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["11056"] -%}
 3 | {{error.err_desc["8a"]}} | {{error.err_no}} | {{ error.err_message }} 
@@ -1666,9 +1663,9 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["12001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["9"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["12004"] -%}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["9"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["11056"] -%}
 3 | {{error.err_desc["9"]}} | {{error.err_no}} | {{ error.err_message }} 
@@ -1781,7 +1778,7 @@ ___
 
 Requirment   | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["12004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["11"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["12054"] -%}
 2 | {{error.err_desc["11"]}} | {{error.err_no}}| {{ error.err_message }} 
@@ -1844,7 +1841,7 @@ ___
 
 <div class="newpage"></div>
 
-## Type of Criminal Activity/Gang Information Nos. 1, 2 and 3 (12)
+## Type of Criminal Activity Nos. 1, 2 and 3 (12)
 
 This section is split into two parts. The first part details the requirements when DE 12 is used as a Type of Criminal Activity descriptor, and the second when used as a Gang Activity descriptor. 
 
@@ -1857,7 +1854,7 @@ The following requirements are for **Type of Criminal Activity Only**:
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|-------------|
-{% assign error = site.data.error["12004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12006"] -%}
 2 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
@@ -1877,15 +1874,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 3F | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["90031"] -%}
 3G | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["12020"] -%}
-4 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["12001"] -%}
-5 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
-
-___
-
-### Notes: 
-* (Criminal Activity):  Use this data element to provide additional information on the criminal activity of Offender(s) in the incident.
 
 ___
 
@@ -1896,7 +1884,7 @@ ___
 ### Allowed Entries (Criminal Activity)
 ___
 
-Up to three (3) of the following **Type of Criminal Activity** Codes can be entered for offenses. These offenses can only be of NIBRS type **250, 35B, 520, 280, 39C, 90A, 35A, 370 and 90Z**. 
+Up to three (3) of the following **Type of Criminal Activity** Codes can be entered for applicable Offenses. 
 
 <table>
 <thead>
@@ -1944,7 +1932,7 @@ ___
 
 <div class="newpage"></div>
 
-## Type of Criminal Activity/Gang Information Nos. 1, 2 and 3 (12)
+## Gang Information Nos. 1, 2 and 3 (12)
 
 ___
 
@@ -1959,8 +1947,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["12A"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["12007"] -%}
 2 | {{error.err_desc["12A"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["84021"] -%}
-3 | {{error.err_desc["12A"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -1973,6 +1959,8 @@ ___
 
 
 ### Allowed Values
+
+Up to three (3) of the following **Gang Activity* Codes can be entered for applicable Offenses. 
 ___
 
 <table>
@@ -2030,7 +2018,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["12004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["12006"] -%}
 2 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
@@ -2184,7 +2172,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["13004"] -%}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13052"] -%}
 3 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
@@ -2259,7 +2247,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["13004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13053"] -%}
 3 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
@@ -2482,7 +2470,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13066"] -%}
 2 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13004"] -%}
+{% assign error = site.data.error["11004"] -%}
 3 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13064"] -%}
 4 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
@@ -2584,7 +2572,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["13004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13065"] -%}
 2 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
@@ -2656,7 +2644,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["23"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15002"] -%}
 2 | {{error.err_desc["23"]}} | {{error.err_no}}| {{ error.err_message }}
@@ -2664,7 +2652,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 3 | {{error.err_desc["23"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["11056"] -%}
 4 | {{error.err_desc["23"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["12004"] -%}
+{% assign error = site.data.error["11004"] -%}
 6 | {{error.err_desc["23"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ____
@@ -2686,12 +2674,10 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15064"] -%}
-3 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15065"] -%}
 4 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15066"] -%}
@@ -2798,12 +2784,10 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15064"] -%}
-3 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15065"] -%}
 4 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15067"] -%}
@@ -2899,7 +2883,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["25a"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["10001"] -%}
 2 | {{error.err_desc["25a"]}} | {{error.err_no}}| {{ error.err_message }}
@@ -2962,6 +2946,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["25b"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["11004"] -%}
+2 | {{error.err_desc["25b"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -3044,24 +3030,16 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15053"] -%}
-1 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15058"] -%}
 2 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15050"] -%}
-3 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 4A | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15008"] -%}
-4B | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15009"] -%}
-5A | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["25010"] -%}
 5B | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15022"] -%}
-5C | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15081"] -%}
 6 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14022"] -%}
+5B | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -3140,8 +3118,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["l26"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["25010"] -%}
 3 | {{error.err_desc["l26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15058"] -%}
-4 | {{error.err_desc["l26"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -3164,13 +3140,13 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15053"] -%}
-2 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15058"] -%}
 3 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15069"] -%}
+4 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14060"] -%}
 4 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
@@ -3234,10 +3210,8 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["28"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15053"] -%}
-2 | {{error.err_desc["28"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15058"] -%}
 3 | {{error.err_desc["28"]}} | {{error.err_no}}| {{ error.err_message }}
 
@@ -3298,7 +3272,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["29"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15058"] -%}
 2 | {{error.err_desc["29"]}} | {{error.err_no}}| {{ error.err_message }}
@@ -3360,7 +3334,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["30"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15058"] -%}
 2 | {{error.err_desc["30"]}} | {{error.err_no}}| {{ error.err_message }}
@@ -3429,21 +3403,17 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15002"] -%}
-1 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15006"] -%}
+{% assign error = site.data.error["12006"] -%}
 3 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15019"] -%}
 4 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15056a"] -%}
+{% assign error = site.data.error["15056"] -%}
 5 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15056b"] -%}
-6 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15080"] -%}
 7 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15062"] -%}
+{% assign error = site.data.error["15020"] -%}
 8 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
@@ -3480,8 +3450,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["31010"] -%}
 12 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15055"] -%}
-13 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["12066"] -%}
 14 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 
@@ -3560,8 +3528,10 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["32"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15055"] -%}
+2 | {{error.err_desc["32"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15057"] -%}
 2 | {{error.err_desc["32"]}} | {{error.err_no}}| {{ error.err_message }}
 
@@ -3631,12 +3601,10 @@ ___
 
 Requirment   | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["15003"] -%}
 1 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["15006"] -%}
-2 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["15007"] -%}
-3 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11004"] -%}
+1 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["15019"] -%}
 4 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["15079"] -%}
@@ -3647,7 +3615,7 @@ Requirment   | Requirement Description | Error Number | Error Message
 7 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["84408"] -%}
 7 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15053"] -%}
+{% assign error = site.data.error["15020"] -%}
 7 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
 
 
@@ -3717,12 +3685,11 @@ Requirment   | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["15058"] -%}
 3 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["15006"] -%}
-4 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["15068"] -%}
 5 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["10070"] -%}
 6 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }}
+
 
 ___
 
@@ -3763,10 +3730,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["15060"] -%}
 1 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["15004"] -%}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["15050"] -%}
-3 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14050"] -%}
 4 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14053"] -%}
@@ -3787,8 +3752,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 12 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15076"] -%}
 13 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15059"] -%}
-14 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15005"] -%}
+6 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15020"] -%}
+6 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -3869,10 +3836,8 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["14001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["36"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["14002"] -%}
-2 | {{error.err_desc["36"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14057"] -%}
 3 | {{error.err_desc["36"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14059"] -%}
@@ -3915,18 +3880,10 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["14001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14052"] -%}
 2 | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["14058"] -%}
-3 | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["14059"] -%}
-4 | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["14050"] -%}
-5 | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["14056"] -%}
-6A | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["14008"] -%}
 6B | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["14009"] -%}
@@ -4036,16 +3993,15 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["14001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["38"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["14004"] -%}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["38"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14052"] -%}
 3 | {{error.err_desc["38"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["14058"] -%}
-4 | {{error.err_desc["38"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["14059"] -%}
-5 | {{error.err_desc["38"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["14060"] -%}
+3 | {{error.err_desc["38"]}} | {{error.err_no}}| {{ error.err_message }}
+
 
 ___
 
@@ -4117,16 +4073,13 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["14001"] -%}
+{% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["39"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["14004"] -%}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["39"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14052"] -%}
 3 | {{error.err_desc["39"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["14058"] -%}
-4 | {{error.err_desc["39"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["14059"] -%}
-5 | {{error.err_desc["39"]}} | {{error.err_no}}| {{ error.err_message }} 
+
 
 ___
 ### Notes:
@@ -5220,6 +5173,12 @@ ___
 
 MUST be present if fingerprints are submitted to the Bureau of Identification of the Louisiana State Police.
 
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["11004"] -%}
+1 | {{error.err_desc["l55"]}} | {{error.err_no}}| {{ error.err_message }}
+
+
 ___
 
 ### Notes:
@@ -5258,6 +5217,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["20002"] -%}
 3 | {{error.seq_desc["c1"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20015"] -%}
+4 | {{error.seq_desc["c1"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["14058"] -%}
 4 | {{error.seq_desc["c1"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ### Notes:
