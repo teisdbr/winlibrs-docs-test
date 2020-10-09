@@ -50,7 +50,11 @@
             "25b": "When Type of Victim (25) is Law Enforcement Officer ('L'), then Officer Assignment Type (25B) cannot be blank.",
             "25": "Type of Victim (DE 25) is a required Data Element, and cannot be left blank.",
             "24": "Offense Connected to Victim Sequence Number (DE 24) is a required Data Element and cannot be left blank. Without a Victim to connect to an Offense, no crime has actually occurred.",
-            "l6": "Offense Sequence Number (DE L6) is a required Data Element and cannot be left blank."
+            "l6": "Offense Sequence Number (DE L6) is a required Data Element and cannot be left blank.",
+            "l45": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field.",
+            "44": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field.",
+            "46": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field.",
+            "47": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field.",
         }
     },
     "06002": {
@@ -429,6 +433,7 @@
             "44": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "43": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "46": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
+            "48": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "49": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "50": "If entered, must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "51": "If entered, must conform to a value on the List of [Available Data Element Values](./data-element-values).",
@@ -443,7 +448,9 @@
         "err_desc": {
             "3": "The date supplied for the Incident Date (DE 3) is not valid. Please ensure that the supplied date is in the MMDDYYYY Format, and is not a date later than the current date.",
             "5": "The date supplied for the Exceptional Clearance Date (DE 5) is not valid. Please ensure that the supplied date is in the MMDDYYY Format, and is not a date later than the reporting date. Additionally this value cannot be all zeros, it must be a real date.",
-            "17": "The date supplied for Date Recovered (DE 17) is not valid. Please ensure that the supplied date is in the MMDDYYY Format."
+            "17": "The date supplied for Date Recovered (DE 17) is not valid. Please ensure that the supplied date is in the MMDDYYY Format.",
+            "42": "The date supplied for Arrest Date (DE 42) is not valid. Please ensure that the supplied date is in the MMDDYYY Format. Additionally this value cannot be all zeros, it must be a real date.",
+            "l47": "The date supplied for Date of Birth of Arrestaee (DE L47) is not valid. Please ensure that the supplied date is in the MMDDYYY Format. Additionally this value cannot be all zeros, it must be a real date."
         }
     },
     "11015": {
@@ -726,7 +733,9 @@
             "8": "When more than one value is present, the same value is not allowed to be repeated.",
             "12": "When more than one value is present, the same value is not allowed to be repeated.",
             "13": "When more than one value is present, the same value is not allowed to be repeated.",
-            "31": "When more than one code is entered within Aggravated Assault/Murder category, the same value is not allowed to be repeated."
+            "31": "When more than one code is entered within Aggravated Assault/Murder category, the same value is not allowed to be repeated.",
+            "41": "When more than one value is present, the same value is not allowed to be repeated.",
+            "46": "When more than one value is present, the same value is not allowed to be repeated."
         }
     },
     "12007": {
@@ -736,7 +745,8 @@
         "err_desc": {
             "8": "Value 'N - Not Applicable' is mutually exclusive with any other value. No other values should be included if 'N' is used.",
             "12A": "Value 'N - None or Unknown' is mutually exclusive with any other value. No other values should be included if 'N' is used.",
-            "13": "Value '99 - None' is mutually exclusive with any other value. No other values should be included if '99' is used."
+            "13": "Value '99 - None' is mutually exclusive with any other value. No other values should be included if '99' is used.",
+            "46": "Value '01 - Unarmed' is mutually exclusive with any other value. It is to be used when no other code applies."
         }
     },
     "12015": {
@@ -833,7 +843,8 @@
         "err_no": 12058,
         "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR",
         "err_desc": {
-            "13": "Only the following values are allowed to use the 'A - Automatic Weapon' indicator in Type of Weapon/Force Involved (DE 13):{::nomarkdown}<script>document.write(window.weapons.firearms)</script>{:/}"
+            "13": "Only the following values are allowed to use the 'A - Automatic Weapon' indicator in Type of Weapon/Force Involved (DE 13):{::nomarkdown}<script>document.write(window.weapons.firearms)</script>{:/}",
+            "46": "Only the following values are allowed to use the 'A - Automatic Weapon' indicator in Type of Weapon/Force Involved (DE 13):{::nomarkdown}<script>document.write(window.weapons.firearms)</script>{:/}"
         }
     },
     "12065": {
@@ -1289,7 +1300,8 @@
         "err_no": 14008,
         "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS",
         "err_desc": {
-            "37": "The first two characters in Age of Offender (DE 37) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is being specified (IE: Not an estimated Age), then the third character should be 'G' (Blank Space)."
+            "37": "The first two characters in Age of Offender (DE 37) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is being specified (IE: Not an estimated Age), then the third character should be 'G' (Blank Space).",
+            "47": "The first two characters in Age of Arrestee (DE 47) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is being specified (IE: Not an estimated Age), then the third character should be 'G' (Blank Space)."
         }
     },
     "14009": {
@@ -1297,7 +1309,8 @@
         "err_no": 14009,
         "err_message": "ESTIMATED AGE MUST BE 2 NUMERIC DIGITS, AND HAVE A TRAILING 'E'",
         "err_desc": {
-            "37": "The first two characters in Age of Offender (DE 37) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is unknown and is, instead, being estimated, then the third character should be 'E' to represent that."
+            "37": "The first two characters in Age of Offender (DE 37) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is unknown and is, instead, being estimated, then the third character should be 'E' to represent that.",
+            "47": "The first two characters in Age of Arrestee (DE 47) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is unknown and is, instead, being estimated, then the third character should be 'E' to represent that."
         }
     },
     "14015": {
@@ -1321,7 +1334,8 @@
         "err_message": "ESTIMATED AGE CANNOT BE '00' UNKNOWN AND HAVE A TRAILING 'E'",
         "err_desc": {
             "37": "Age of Offender (DE 37) is only to use the Estimated Age Modifier 'E' if the Age is actually being Estimated. '00' for an Unknown Age is not an estimate, and therefore not a valid input.",
-            "26": "Age of Victim (DE 26) is only to use the Estimated Age Modifier 'E' if the Age is actually being Estimated. '00' for an Unknown Age is not an estimate, and therefore not a valid input."
+            "26": "Age of Victim (DE 26) is only to use the Estimated Age Modifier 'E' if the Age is actually being Estimated. '00' for an Unknown Age is not an estimate, and therefore not a valid input.",
+            "47": "Age of Arrest (DE 47) is only to use the Estimated Age Modifier 'E' if the Age is actually being Estimated. '00' for an Unknown Age is not an estimate, and therefore not a valid input."
         }
     },
     "14050": {
@@ -1660,8 +1674,7 @@
         "err_no": 15065,
         "err_message": "ENTRY FOR TYPE OF VICTIM MUST BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM",
         "err_desc": {
-            "25": "When Offense is a *Crime Against Society*, and the Offense is connected to a Victim, then Type of Victim (25) must be Society ('S').",
-            "24": "If the Offense is a *Crime Against Society*, and the Offense is **connected to a Victim,** then Type of Victim (25) **must** be Society ('S')."
+            "25": "When Offense is a *Crime Against Society*, and the Offense is connected to a Victim, then Type of Victim (25) must be Society ('S')."
         }
     },
     "15066": {
@@ -1677,7 +1690,7 @@
         "err_no": 15067,
         "err_message": "ENTRY FOR TYPE OF VICTIM CANNOT BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM",
         "err_desc": {
-            "25": "When Offense is a *Crime Against Property*, and the Offense is connected to a Victim, then Type of Victim (25) CANNOT be Society ('S'). Type of Victim (25) can only be: {::nomarkdown}<ul><li>I - Individual</li><li>B - Business</li><li>F - Financial Institution</li><li>G - Government</li><li>R  -Religious Organization</li><li>O - Other</li><li>U - Unknown</li></ul>{:/}"
+            "25": "For Offenses that are Crimes Against Property, the associated Victim cannot have a Type of Victim (DE 25) of 'S - Society'. Type of Victim (DE 25) can only be: {::nomarkdown}<ul><li>I - Individual</li><li>B - Business</li><li>F - Financial Institution</li><li>G - Government</li><li>R  -Religious Organization</li><li>O - Other</li><li>U - Unknown</li></ul>{:/}"
         }
     },
     "15068": {
@@ -1685,8 +1698,7 @@
         "err_no": 15068,
         "err_message": "RELATIONSHIP CANNOT BE ENTERED WHEN RELATED TO OFFENDER NUMBER '000'",
         "err_desc": {
-            "35": "Relationship CANNOT be entered when Offender Number to be Related (34) is Unknown ('000').",
-            "34": "'000' may only be entered when there is only one Offender Segment (40) submitted and nothing was known about identity and number of offender(s)."
+            "35": "If Offender Number to be Related (DE 34) is '000 - Unknown', then Victim/Offender Relationship cannot have a value, and should be blank spaces."
         }
     },
     "15069": {
@@ -1700,9 +1712,9 @@
     "15070": {
         "active": "true",
         "err_no": 15070,
-        "err_message": "WHEN 'VO' RELATIONSHIP IS PRESENT, MUST HAVE TWO OR MORE VICTIMS AND OFFEND",
+        "err_message": "WHEN 'VO' RELATIONSHIP IS PRESENT, MUST HAVE TWO OR MORE VICTIMS AND OFFENDERS",
         "err_desc": {
-            "35": "When Victim was Offender ('VO') is entered, a minimum of **two** Victims Segments (50) and **two** Offender Segments (40) MUST be submitted.<br><br>'VO' indicates situations such as brawls and domestic disputes where all of the participants in the incident were Victims and Offenders of the same Offense.{::nomarkdown}<ul><li>EG: Assaults or double murders where two people kill each other.</li></ul>{:/}In most cases, each Victim is also the Offender; therefore, every Victim Segment (50) will contain a 'VO' code. However, there may be some situations where only one of the Victims is also the Offender, but where the other Victim(s) are not also the Offender(s) {::nomarkdown}<ul><li>EG: A victim who is not an Offender could be an innocent bystander in a barroom brawl, or a child who is victimized as a result of the parents domestic dispute</li></ul>{:/}"
+            "35": "When Victim was Offender ('VO') is entered, a minimum of *two* Victims Segments (50) and *two* Offender Segments (40) must be submitted.<br><br>'VO' indicates situations such as brawls and domestic disputes where all of the participants in the incident were Victims and Offenders of the same Offense.{::nomarkdown}<ul><li>EG: Assaults or double murders where two people kill each other.</li></ul>{:/}In most cases, each Victim is also the Offender; therefore, every Victim Segment (50) will contain a 'VO' code. However, there may be some situations where only one of the Victims is also the Offender, but where the other Victim(s) are not also the Offender(s) {::nomarkdown}<ul><li>EG: A victim who is not an Offender could be an innocent bystander in a barroom brawl, or a child who is victimized as a result of the parents domestic dispute</li></ul>{:/}"
         }
     },
     "15071": {
@@ -1718,7 +1730,7 @@
         "err_no": 15072,
         "err_message": "WHEN OFFENDER AGE / SEX / RACE ARE UNKNOWN, RELATIONSHIP MUST BE 'RU' = UNKNOWN",
         "err_desc": {
-            "35": "When the related Offender has 'Unknown' values entered for Age, Sex and Race, the relationship must be Relationship Unknown ('RU'). This edit ensures a logical relationship. For example, if Brother ('SB') was entered fro Relationship of Victim to Offender (25), then Age, Sex and Race would NOT be Unknown values."
+            "35": "When the attributes of an Offender (Age, Sex, and Race - DE's 37, 38, and 39) are all Unknown, then the Victim/Offender Relationship (DE 35) has to be 'RU - Relationship Unknown'."
         }
     },
     "15074": {
@@ -1734,7 +1746,7 @@
         "err_no": 15075,
         "err_message": "ONLY ONE 'SE' RELATIONSHP PER VICTIM",
         "err_desc": {
-            "35": "In a multiple Offender incident, a Victim CANNOT have a relationship of Spouse ('SE') to more than one Offender."
+            "35": "A Victim cannot have multiple Victim/Offender Relationships (DE 35) of 'SE - Spouse' with more than one Offender."
         }
     },
     "15076": {
@@ -1755,24 +1767,23 @@
         "err_no": 15078,
         "err_message": "VICTIM CONNECTED TO AN INVALID COMBINATION OF OFFENSES",
         "err_desc": {
-            "24": "Victim CANNOT be connected to **Mutually Exclusive** or **Lesser Included** Offenses. {::nomarkdown}<ul><li>Offenses are **Mutually Exclusive** when they CANNOT occur to the same victim in an incident by NIBRS definitions.</li><li>Offenses are **Lesser Included** when, in the same incident, one Offense is an element of a second Offense, and should not both be reported as having happened to the Victim.</li></ul>{:/}"
+            "24": "Victim cannot be connected to **Mutually Exclusive** or **Lesser Included** Offenses. {::nomarkdown}<ul><li>Offenses are <b>Mutually Exclusive</b> when they cannot occur to the same victim in an incident by NIBRS definitions. (Refer to the 'Offenses That Cannot Occur to the Same Victim' Table below)</li><li>Offenses are <b>Lesser Included</b> when, in the same incident, one Offense is an element of a second Offense, and should not both be reported as having happened to the Victim.</li></ul>{:/}"
         }
     },
     "15079": {
         "active": "true",
         "err_no": 15079,
-        "err_message": "SIMPLE ASSAULT(13 B) CANNOT HAVE 'MAJOR INJURIES'",
+        "err_message": "SIMPLE ASSAULT (13B) CANNOT HAVE 'MAJOR INJURIES'",
         "err_desc": {
-            "33": "When Offense Connected to Victim Sequence Number (24) relates to the Offense of Simple Assault (NIBRS '13B'), there CANNOT be *major* injury codes which would indicate an Aggravated Assault. Permissible codes are Apparent Minor Injury ('M') and None ('N').",
-            "24": "When Offense Connected to Victim Sequence Number (24) relates to the Offense of Simple Assault (NIBRS '13B'), there **CANNOT be 'major' injury codes** indicating an Aggravated Assault. The permissible codes are Apparent Minor Injury ('M') and None ('N')."
-        }
+            "33": "When Offense Connected to Victim Sequence Number (DE 24) relates to the Offense of Simple Assault (NIBRS '13B'), the permissible codes for Type of Injury (DE 33) are 'M - Apparent Minor Injury' and 'N - None'. Any other Injury type would constitute a Major Injury, which would mean NIBRS 13A (Aggravated Assault) should be used, instead of 13B."
+         }
     },
     "15080": {
         "active": "true",
         "err_no": 15080,
-        "err_message": "WHEN HOMICIDE / ASSAULT(DATA ELEMENT 31) IS '08,' INCIDENT MUST HAVE 2 OR MORE OFFENSES",
+        "err_message": "WHEN HOMICIDE/ASSAULT CIRCUMSTANCE (DE 31) IS '08', INCIDENT MUST HAVE 2 OR MORE OFFENSES",
         "err_desc": {
-            "31": "When Assault/Homicide Circumstances (31) is Other Felony Involved ('08'), then the incident must have **two or more** Offenses."
+            "31": "When Assault/Homicide Circumstances (DE 31) is '08 - Other Felony Involved', then the Incident must contain two or more Offenses."
         }
     },
     "15081": {
@@ -1780,29 +1791,23 @@
         "err_no": 15081,
         "err_message": "STATUTORY RAPE OFFENSES REQUIRE A VICTIM WHO IS AT LEAST 13 YEARS OF AGE BUT NO OLDER THAN 17 YEARS OLD",
         "err_desc": {
-            "26": "Statutory Rape Victim's Age (26) must be 13 years to 17 years."
+            "26": "Statutory Rape Victim's Age (DE 26) must be >= 13 and <= 17."
         }
     },
     "15096": {
         "active": "true",
         "err_no": 15096,
-        "err_message": "EACH VICTIM SEQUENCE NUMBER ENTERED MUST HAVE A CORRESPONDING VICTIM SEGMENT"
+        "err_message": "EACH VICTIM SEQUENCE NUMBER ENTERED MUST HAVE A CORRESPONDING VICTIM SEGMENT",
+        "err_desc": {
+            "24": "Each Offense Related to Victim Sequence Number (DE 24) must correspond to an Victim Segment (Segment 50) that has that Victim Sequence Number."
+        }
     },
     "16001": {
         "active": "true",
         "err_no": 16001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
         "err_desc": {
-            "45": "Must be present -- CANNOT be Blank (G).",
-            "44": "Must be present -- CANNOT be Blank (G).",
-            "43": "Must be present -- CANNOT be Blank (G).",
-            "42": "Must be present -- CANNOT be Blank (G).",
-            "41": "Must be present -- CANNOT be Blank (G).",
-            "46": "Must be present -- CANNOT be Blank (G).",
-            "47": "Must be present -- CANNOT be Blank (G).",
-            "48": "Must be present -- CANNOT be Blank (G).",
-            "49": "Must be present -- CANNOT be Blank (G).",
-            "40": "Must be present -- CANNOT be Blank (G)."
+
         }
     },
     "16002": {
@@ -1819,7 +1824,7 @@
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE"
     },
     "16005": {
-        "active": "true",
+        "active": "false",
         "err_no": 16005,
         "err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
         "err_desc": {
@@ -1827,44 +1832,31 @@
         }
     },
     "16006": {
-        "active": "true",
+        "active": "false",
         "err_no": 16006,
-        "err_message": "ERROR - DUPLICATE VALUE =",
-        "err_desc": {
-            "41": "If more than one code entered, CANNOT BE A DUPLICATE.",
-            "46": "If more than one code entered, CANNOT BE A DUPLICATE."
-        }
+        "err_message": "ERROR - DUPLICATE VALUE ="
     },
     "16007": {
-        "active": "true",
+        "active": "false",
         "err_no": 16007,
-        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]",
-        "err_desc": {
-            "46": "Unarmed ('01') is mutually exclusive with any other value. That is, it is to be used ONLY when no other code applies."
-        }
+        "err_message": "ERROR - MUTUALLY EXCLUSIVE VALUE = [value]"
     },
     "16008": {
-        "active": "true",
+        "active": "false",
         "err_no": 16008,
-        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS",
-        "err_desc": {
-            "47": "EXACT AGE: A single, two-character Age MUST be in first two positions of the field. The third position must be Blank (G)."
-        }
+        "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS"
     },
     "16009": {
-        "active": "true",
+        "active": "false",
         "err_no": 16009,
-        "err_message": "ESTIMATED AGE MUST HAVE 'E' IN LAST POSITION",
-        "err_desc": {
-            "47": "ESTIMATED AGE: MUST be 2 numeric digits, and have a trailing 'E'."
-        }
+        "err_message": "ESTIMATED AGE MUST HAVE 'E' IN LAST POSITION"
     },
     "16015": {
         "active": "true",
         "err_no": 16015,
         "err_message": "CANNOT HAVE EMBEDDED 'BLANKS' BETWEEN FIRST AND LAST NON - BLANK CHARACTERS",
         "err_desc": {
-            "41": "MUST be blank right-fill *if* under 12 characters in length. CANNOT have embedded Blanks (G) between the first and last character entered."
+            "41": "Arrest Number/Local Booking Number for Arrest (DE 41) should not contain any blank spaces between the first and last characters that aren't spaces. EG: '123456789 10' is not allowed, but '12345678910 ' is fine."
         }
     },
     "16016": {
@@ -1897,7 +1889,7 @@
         "err_message": "JUSTIFIABLE HOMICIDE IS NOT A VALID WINDOW OFFENSE CODE"
     },
     "16022": {
-        "active": "true",
+        "active": "false",
         "err_no": 16022,
         "err_message": "ESTIMATED AGE CANNOT HAVE 'OO' = UNKNOWN",
         "err_desc": {
@@ -1925,8 +1917,7 @@
         "err_no": 16052,
         "err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS 17 AND YOUNGER",
         "err_desc": {
-            "47": "If age is under 18, then Data Element #52 (Disposition of Arrestee Under 18) must be entered.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles.",
-            "52": "MUST be entered if Arrestee Age is Under 18.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
+            "52": "If Age of Arrestee (DE 47) is under 18 (17 and younger), then Disposition of Arrestee Under 17 (DE 52) must be entered.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles. Previously it was individuals under the age of 17 (16 and younger), hence the name 'Disposition of Arrestee Under 17'"
         }
     },
     "16053": {
@@ -1934,7 +1925,7 @@
         "err_no": 16053,
         "err_message": "FOR AGE 18 AND OLDER DISPOSITION SHOULD NOT BE ENTERED",
         "err_desc": {
-            "52": "CANNOT be entered if Arrestee Age is 18 or Over."
+            "52": "If Age of Arrestee (DE 47) is 18 or older, then Disposition of Arrestee Under 17 (DE 52) should not be entered."
         }
     },
     "16054": {
@@ -1946,7 +1937,7 @@
         }
     },
     "16055": {
-        "active": "true",
+        "active": "false",
         "err_no": 16055,
         "err_message": "WEAPON TYPE MUST = 11, 12, 13, 14, OR 15 FOR AN 'A' IN THE AUTO INDICATOR",
         "err_desc": {
@@ -1956,9 +1947,10 @@
     "16056": {
         "active": "true",
         "err_no": 16056,
-        "err_message": "THIS ARRESTEE EXCEEDED THE NUMBER OF OFFENDERS (nn) ON THE INCIDENT",
-        "err_desc": {
-            "40": "Number of Arrestees (40) CANNOT be greater than number of Offenders."
+        "err_message": "THIS ARRESTEE EXCEEDED THE NUMBER OF OFFENDERS ON THE INCIDENT",
+        "seq_desc": {
+            "40": "Number of Arrestee Segments (Segment 60) cannot exceed the number of Offender Segments (Segment 40)",
+            "60": "Number of Arrestee Segments (Segment 60) cannot exceed the number of Offender Segments (Segment 40)"
         }
     },
     "16057": {
@@ -1970,8 +1962,7 @@
         "active": "true",
         "err_no": 16058,
         "err_message": "MUST BE BLANK WHEN ACTION TYPE IS NOT 'W' (WINDOW)",
-        "seq_desc": {
-            "60": "Clearance Indicator (DE C6) must be Blank (G) when Action Type is not 'W' (Time-Window).",
+        "err_desc": {
             "c6": "Clearance Indicator (DE C6) must be Blank (G) when Action Type is not 'W' (Time-Window)."
         }
     },
@@ -1994,7 +1985,10 @@
     "16061": {
         "active": "true",
         "err_no": 16061,
-        "err_message": "DUPLICATE ARRESTEE SEGMENT ON FILE--ADDED ON[MMDDYYYY]"
+        "err_message": "DUPLICATE ARRESTEE SEGMENT",
+        "err_desc": {
+            "40": "The Arrestee Sequence Number (DE 40) needs to be unique across the Incident."
+        }
     },
     "16062": {
         "active": "false",
@@ -2011,7 +2005,7 @@
         "err_no": 16064,
         "err_message": "ARRESTEE AGE MUST BE NUMERIC DIGITS",
         "err_desc": {
-            "47": "EXACT AGE: Must contain numeric entry of 00-99."
+            "47": "When Age of Arrestee (DE 47) is an exact value (IE Not Estimated), then it must contain numeric entry of 00-99."
         }
     },
     "16065": {
@@ -2019,16 +2013,19 @@
         "err_no": 16065,
         "err_message": "ARREST DATE CANNOT BE BEFORE THE INCIDENT START DATE",
         "err_desc": {
-            "42": "CANNOT be earlier than Incident Date/Hour (3)."
+            "42": "When Date of Arrest (DE 42) is present, it cannot be earlier than the Incident Date/Hour (DE 3)."
         }
     },
     "16066": {
         "active": "true",
         "err_no": 16066,
-        "err_message": "ARREST DATE CANNOT BE AFTER TAPE SUBMIT DATE MONTH AND YEAR"
+        "err_message": "ARREST DATE CANNOT BE AFTER TAPE SUBMIT DATE MONTH AND YEAR",
+        "err_desc": {
+            "42": "When Date of Arrest (DE 42) is present, it cannot be later than the Submission Date (DE C3) present in the Header Segment (Segment 00) of the LIBRS Flat File."
+        }
     },
     "16067": {
-        "active": "true",
+        "active": "false",
         "err_no": 16067,
         "err_message": "INVALID ARRESTEE SEX VALUE",
         "err_desc": {
@@ -2045,7 +2042,7 @@
         "err_no": 16069,
         "err_message": "NO ARRESTEE RECORDS ALLOWED FOR A JUSTIFIABLE HOMICIDE",
         "err_desc": {
-            "45": "An incident CANNOT have arrests when Louisiana Revised Statute (6) is Justifiable Homicide (LRS 14:20, or NIBRS (09C). <br>A Justifiable Homicide never involves an arrest of the Offender (the person who committed the Justifiable Homicide)."
+            "45": "An Incident cannot have any Arrests when there is only one Offense Segment (Segment 20) present, and it has an Offense Code of 09C (Justifiable Homicide). A Justifiable Homicide never involves an arrest of the Offender (The person who committed the Justifiable Homicide)."
         }
     },
     "16070": {
@@ -2061,7 +2058,7 @@
         "err_no": 16080,
         "err_message": "SEGMENT 61 MISSING--MUST HAVE ONE PER ARRESTEE SEGMENT",
         "seq_desc": {
-            "61": "A Segment 61 is required for each Segment 60 that is present in the LIBRS Incident Report."
+            "61": "An Arrestee Armed Segment (Segment 61) is required for each Arrestee Segment (Segment 60) that is present in the LIBRS Incident Report."
         }
     },
     "16081": {
@@ -2069,18 +2066,25 @@
         "err_no": 16081,
         "err_message": "SEGMENT 62 MISSING--MUST HAVE AT LEAST ONE PER ARRESTEE SEGMENT",
         "seq_desc": {
-            "62": "A Segment 62 is required for each Segment 60 that is present in the LIBRS Incident Report."
+            "62": "An Arrestee Statute Segment (Segment 62) is required for each Arrestee Segment (Segment 60) that is present in the LIBRS Incident Report."
         }
     },
     "16099": {
         "active": "true",
         "err_no": 16099,
-        "err_message": "SEGMENT 61 IS A REQUIRED SEGMENT WHEN SEGMENT 60 EXISTS"
+        "err_message": "SEGMENTS 61 and 62 CAN ONLY BE PRESENT WHEN SEGMENT 60 EXISTS",
+        "seq_desc":{
+            "61": "An Arrestee Armed Segment (Segment 61) is not to be included unless there is an Arrestee Segment (Segment 60) present in the LIBRS Incident Report.",
+            "62": "An Arrestee Statute Segment (Segment 62) is not to be included unless there is an Arrestee Segment (Segment 60) present in the LIBRS Incident Report."
+        }
     },
     "16161": {
         "active": "true",
         "err_no": 16161,
-        "err_message": "CANNOT HAVE CLEARANCE INDICATOR = 'Y' FOR MORE THAN ONE ARRESTEE.SUBSEQUENT ARRESTEES CANNOT HAVE CLEARANCE INDICATOR = 'Y'."
+        "err_message": "ARRESTEE SEQUENCE NUMBER (DE 40) CANNOT REPEAT FOR THE SAME INCIDENT NUMBER (DE 2) THE FLAT FILE UNLESS THERE IS AN ACTION TYPE OF DELETE",
+        "err_desc": {
+            "C5": "If a LIBRS Flat File contains the duplicate Arrestee Sequence Numbers (DE 40) for the same Incident Number (DE 2), the at least one of the Action Types of the the Arrestee Segments associated with the Sequence Number must have an Action Type (DE C5) or 'D - Delete'."
+        }
     },
     "17001": {
         "active": "false",
@@ -2097,7 +2101,7 @@
         "err_no": 19901,
         "err_message": "LAST LINE OR SEGEMENT NOT 99 SEGMENT TYPE",
         "seq_desc": {
-            "99": "Last line in data submission NOT Segment Type 99 (Submission Trailer)."
+            "99": "Last line in data submission is not Segment 99 (Submission Trailer)."
         }
     },
     "19902": {
