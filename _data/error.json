@@ -2123,20 +2123,22 @@
     "20000": {
         "active": "true",
         "err_no": 20000,
-        "err_message": "MISSING SEGMENT 20(OFFENSE)"
+        "err_message": "MISSING SEGMENT 20 (OFFENSE)",
+        "seq_desc":{
+            "20": "Each Incident must have at least one Offense Segment present."        }
     },
     "20001": {
         "active": "true",
         "err_no": 20001,
         "err_message": "MUST BE PRESENT--MANDATORY FIELD",
         "seq_desc": {
-            "c1": "DE C1 must be present -- CANNOT be blank.",
-            "c3": "DE C3 must be present -- CANNOT be blank.",
-            "c4": "DE C4 must be present -- CANNOT be blank.",
-            "c5": "DE C5 must be present -- CANNOT be blank.",
-            "c6": "If Action Type (C5) is 'W' (Time-Window) DE C6 must be present -- CANNOT be blank.",
-            "c7": "DE C7 must be present -- CANNOT be blank.",
-            "c8": "DE C8 must be present -- CANNOT be blank."
+            "c1": "Segment Descriptor (DE C1) is a mandatory Data Element, and cannot be left blank. It should be included in every segment of the Flat File to denote the context of the data present in that line.",
+            "c3": "Submission Date (DE C3) is a mandatory Data Element, and cannot be left blank.",
+            "c4": "Reporting Period (DE C4) is a mandatory Data Element, and cannot be left blank.",
+            "c5": "Action Type (DE C5) is a mandatory Data Element, and cannot be left blank. It should be included in every Segment of the Flat File aside from the Header Segment (Segment 00) and Footer Segment (Segment 99)",
+            "c6": "If Action Type (DE C5) is 'W' (Time-Window), then Clearance Indicator (DE C6) cannot be left blank.",
+            "c7": "Number of Segments Transferred (DE C7) is a mandatory Data Element, and cannot be left blank. It should appear one time in the Footer Segment (Segment 99)",
+            "c8": "End of Segment Marker (DE C8) is a mandatory Data Element, and cannot be left blank. It should be used in every segment of the LIBRS Flat File to denote the end of the line.<br><br>Note: All lines should still be 150 characters long. Any different in length between the position of the End of Segment Marker (DE C8) and 150 characters should be filled with Blank Spaces (G)."
         }
     },
     "20002": {

@@ -234,6 +234,8 @@ Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["10075"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["20"]}}
+{% assign error = site.data.error["20000"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["20"]}}
 {% assign error = site.data.error["22075"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["20"]}}
 
