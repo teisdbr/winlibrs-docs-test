@@ -35,7 +35,6 @@
             "1": "This is a required Data Element, and it cannot be left blank.",
             "2": "This is a required Data Element, and it cannot be left blank.",
             "4": "This is a required Data Element, and it cannot be left blank.",
-            "5": "This is a required Data Element, and it cannot be left blank.",
             "6": "LRS Code (DE 6) is missing. This is a required Data Element.",
             "7": "Attempted/Completed (DE 7) is missing. This is a required Data Element.",
             "9": "Location Type (DE 9) is missing. This is a required Data Element.",
@@ -209,8 +208,8 @@
         "err_no": 10074,
         "err_message": "PROPERTY RECORD (SEGMENT 30 & 31) MUST EXIST WITH THIS OFFENSE",
         "seq_desc": {
-            "30": "When DE C5 (Action Type) is 'I', Property Segments 30 and 31 must exist submitted with an Offense Segment (20) whose NIBRS is a 'Crime Against Property': {::nomarkdown}<ul><li>120</li><li>200, 210, 220, 240, 250, 270, 280, 290</li><li>26A, 26B, 26C, 26D, 26E</li><li>23A, 23B, 23C, 23D, 23E, 23F, 23G, 23H</li><li>510</li><li>90A, 90Z (If Applicable)</li></ul>{:/} Additionally, the following Offenses are included in this requirement: {::nomarkdown}<ul><li>Kidnaping (100)</li><li>Gambling (39A thru 39D)</li><li>Drug/Narcotic (35A and 35B)</li></ul>{:/}",
-            "31": "When DE C5 (Action Type) is 'I', Property Segments 30 and 31 must exist submitted with an Offense Segment (20) whose NIBRS is a 'Crime Against Property': {::nomarkdown}<ul><li>120</li><li>200, 210, 220, 240, 250, 270, 280, 290</li><li>26A, 26B, 26C, 26D, 26E</li><li>23A, 23B, 23C, 23D, 23E, 23F, 23G, 23H</li><li>510</li><li>90A, 90Z (If Applicable)</li></ul>{:/} Additionally, the following Offenses are included in this requirement: {::nomarkdown}<ul><li>Kidnaping (100)</li><li>Gambling (39A thru 39D)</li><li>Drug/Narcotic (35A and 35B)</li></ul>{:/}"
+            "30": "When DE C5 (Action Type) is 'I', Property Segments 30 and 31 must exist submitted with an Offense Segment (20) whose NIBRS is a 'Crime Against Property': {::nomarkdown}<script>document.write(window.nibrs.property)</script>{:/} Additionally, the following Offenses are included in this requirement: {::nomarkdown}<ul><li>Kidnaping (<b>100</b>)</li><li>Gambling (<b>39A, 39B, 39C, and 39D</b>)</li><li>Drug/Narcotic (<b>35A and 35B</b>)</li></ul>{:/}",
+            "31": "When DE C5 (Action Type) is 'I', Property Segments 30 and 31 must exist submitted with an Offense Segment (20) whose NIBRS is a 'Crime Against Property': {::nomarkdown}<script>document.write(window.nibrs.property)</script>{:/} Additionally, the following Offenses are included in this requirement: {::nomarkdown}<ul><li>Kidnaping (<b>100</b>)</li><li>Gambling (<b>39A, 39B, 39C, and 39D</b>)</li><li>Drug/Narcotic (<b>35A and 35B</b>)</li></ul>{:/}"
         }
     },
     "10075": {
@@ -230,8 +229,8 @@
         "err_no": 10076,
         "err_message": "PROPERTY RECORD (SEGMENT 30 & 31) CANNOT EXIT WITH OFFENSES SUBMITTED",
         "seq_desc": {
-            "30": " Segments 30 and 31 should not be included when the Incident is comprised of only the following Offense Codes: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>370</li><li>40A, 40B</li><li>520</li><li>90B, 90C, 90D, 90E, 90F, 90G, 90H, 90I, 90J, 90Z (If Applicable)</li></ul>{:/}",
-            "31": " Segments 30 and 31 should not be included when the Incident is comprised of only the following Offense Codes: {::nomarkdown}<ul><li>09A, 09B, 09C</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>370</li><li>40A, 40B</li><li>520</li><li>90B, 90C, 90D, 90E, 90F, 90G, 90H, 90I, 90J, 90Z (If Applicable)</li></ul>{:/}"
+            "30": "Segments 30 and 31 should not be included when the Incident is comprised of only the following Offense Codes: {::nomarkdown}<script>document.write(window.nibrs.noproperty)</script>{:/}",
+            "31": "Segments 30 and 31 should not be included when the Incident is comprised of only the following Offense Codes: {::nomarkdown}<script>document.write(window.nibrs.noproperty)</script>{:/}"
         }
     },
     "10077": {
@@ -401,7 +400,7 @@
         "err_no": 11004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "err_desc": {
-            "4": "Supplied value was not a known value. Must be a code that is found on the list of Available Values.",
+            "4": "Supplied value was not a known value. Must be a code that is found on the List of [Available Data Element Values](./data-element-values)",
             "6": "Must be a valid code on Master LIBRS/LRS Code Table.",
             "8": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "9": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
@@ -518,7 +517,7 @@
         "err_no": 11053,
         "err_message": "VALUE ENTERED CONFLICTS WITH PRESENCE OF AN ENTRY IN EXCEPTIONAL CLEARANCE DATE",
         "err_desc": {
-            "4": "If an Exceptional Clearance Date (DE 5) is not entered, then Cleared Exceptionally (DE 4) should either have a Value of 'N' or ' ' (Blank Space)"
+            "4": "If an Exceptional Clearance Date (DE 5) is not entered, then Cleared Exceptionally (DE 4) should have a Value of 'N'"
         }
     },
     "11054": {
@@ -654,7 +653,7 @@
         "err_no": 11072,
         "err_message": "INCIDENT DATE/HOUR FOR 'I' RECORDS CANNOT PREDATE 01/01/1991",
         "err_desc": {
-            "3": "The Incident Date CANNOT be earlier than 01/01/1991 for Inciden Report ('I') submissions.<br>This edit will preclude dates that are obviously incorrect since the FBI began accepting data on this date."
+            "3": "The Incident Date CANNOT be earlier than 01/01/1991 for Incident Report ('I') submissions.<br>This edit will preclude dates that are obviously incorrect since the FBI began accepting data on this date."
         }
     },
     "11073": {
@@ -2114,7 +2113,7 @@
         "err_no": 19902,
         "err_message": "NUMBER OF SEGMEMTS FIELD IN 99 SEGMENT IS NOT A VALID NUMERIC FIELD",
         "seq_desc": {
-            "99": "Number of Segments Transferred field (Data Element C7) in Submission Trailer is NOT a valid numeric field."
+            "99": "Number of Segments Transferred field (Data Element C7) in Submission Trailer is not a valid numeric field. The Number of Segments Transferred should be a number with front-padded zeros (0) to make up a six-digit number. EG If there are 25 lines in the Flat File (including the Footer Segment), then The Number of Segments Transferred should be '000025'."
         }
     },
     "19903": {
@@ -2122,7 +2121,7 @@
         "err_no": 19903,
         "err_message": "NUMBER OF SEGMENTS ON SUBMISSION TRAILER DOES NOT MATCH RECORD COUNT",
         "seq_desc": {
-            "99": "Number of Segments Transferred (Data Element C7) in Submission Trailer Segment does not match Record Count for data submission."
+            "99": "Number of Segments Transferred (Data Element C7) in Submission Trailer Segment does not match Record Count for data submission. The number of lines in the Flat File, including the Header and Footer Segments, is the number that should be used in the Number of Segments Transferred (front-padded with zeros to make a six-digit number)."
         }
     },
     "20000": {
@@ -3364,8 +3363,8 @@
         "err_no": 90001,
         "err_message": "DE 31 (AGGRAVATED ASSAULT CIRCUMSTANCE) MUST BE '02 - ASSAULT ON LAW ENFORCEMENT OFFICER(S)' IF DE 25 (VICTIM TYPE) IS 'L'. SIMILARLY, IF DE 25 (VICTIM TYPE) IS 'L' FOR LAW ENFORCEMENT OFFICER, DE 31 MUST BE '02'.",
         "err_desc": {
-            "31": "If DE 25 (Victim Type) is 'L' for Law Enforcement Officer, DE 31 (Aggravated Assault Circumstance) MUST be '02 - Assault on Law Enforcement Officer(s).",
-            "25": "If DE 31 (Aggravated Assault Circumstance) is '02 - Assault on Law Enforcement Officer(s), DE 25 (Victim Type) MUST be 'L' for Law Enforcement Officer."
+            "31": "If Victim Type (DE 25) is 'L - Law Enforcement Officer', then Aggravated Assault Circumstance (DE 31) must be '02 - Assault on Law Enforcement Officer(s).",
+            "25": "If Victim Type (DE 25) is 'L - Law Enforcement Officer', then Aggravated Assault Circumstance (DE 31) must be '02 - Assault on Law Enforcement Officer(s)."
         }
     },
     "90002": {
@@ -3437,12 +3436,18 @@
     "90016": {
         "active": "true",
         "err_no": 90016,
-        "err_message": "YOU MUST SUBMIT A VALID NIBRS CODE FOR THIS OFFENSE."
+        "err_message": "YOU MUST SUBMIT A VALID NIBRS CODE FOR THIS OFFENSE.",
+        "err_desc":{
+            "n45": "The NIBRS Code that's assigned to this Arrestee is invalid."
+        }
     },
     "90017": {
         "active": "true",
         "err_no": 90017,
-        "err_message": "WHEN OFFENSE NIBRS CODE IS SUBMITTED, THE LRS - TO - NIBRS PAIR SUBMITTED MUST HAVE A VALID MAPPING."
+        "err_message": "LRS-TO-NIBRS PAIR MUST HAVE A VALID MAPPING",
+        "err_desc":{
+            "n45": "The LRS Code that you have submitted doesn't have a mapping to a NIBRS Code in our system. Please use a valid NIBRS Mapping for this LRS Code, and if you think the LRS Code you submitted should be valid let us know and we'll see if we can add it in."
+        }
     },
     "84713": {
         "active": "false",
@@ -3584,7 +3589,7 @@
         "err_no": 90038,
         "err_message": "INVALID LIBRS SPEC",
         "seq_desc": {
-            "00": "A Segment 00 with a Reporting Period year later than “2019” MUST have spec indicator “2.5” in the positions 52-54."
+            "00": "A Segment 00 with a Reporting Period year later than 2019 must have spec indicator '2.5' in the positions 52-54. We no longer accept LIBRS 2.2 Spec and older."
         }
     },
     "90039": {

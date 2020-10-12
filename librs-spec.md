@@ -177,7 +177,7 @@ Segment 11, Administrative Modification, is only used when performing an update 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["11017"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["63"]}}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["11"]}}
 {% assign error = site.data.error["11097"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["11"]}}
 
@@ -489,10 +489,6 @@ Error Number  | Error Message | Explaination of Error
 {% assign error = site.data.error["10075"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["40"]}}
 {% assign error = site.data.error["16056"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["40"]}}
-{% assign error = site.data.error["90011"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["40"]}}
-{% assign error = site.data.error["90013"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["40"]}}
 
 ___
@@ -891,11 +887,11 @@ Segment 01 is an optional Segment that can be included to denote an empty Flat F
 
 You may include this Segment if you wish, though it is not required. If you do include it, the Flat File would look like this (Excluding Padding after the Segment Footers):
 
-``
--Header Segment-
-01000000000000ZZ
-99000003ZZ
-``
+
+* -Header Segment-
+* 01000000000000ZZ
+* 99000003ZZ
+
 
 ### Segment Layout
 
@@ -927,7 +923,7 @@ This portion of the document contains information about the specific requirement
 ## ORI Number (1)
 ____
 
-**Description:** NCIC originating agency identifier number.
+**Description:** NCIC originating agency identifier number. This field should follow the format of 'LAXXXXXXX', where XXXXXXX is the 7-digit code for the Agency's ORI Number. 
 
 **Data Characteristics:** 9 Character Numeric/Alpha
 
@@ -968,12 +964,14 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["10056"] -%}
+2 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["10016"] -%}
 3 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["90042"] -%}
 4 | {{error.err_desc["1"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["10056"] -%}
-5 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
 ___
 
 ### Notes: 
@@ -1007,7 +1005,7 @@ ___
 **Format:** MMDDYYYYXHH, Where 'X' is either:
 
 * 'R' to denote that the Incident Date is not known, and the Report Date is being substituted for it
-* Or ' ' (G - Blank) to denote that the supplied value is the actual Incident Date. 
+* Or ' ' (G - Blank Space) to denote that the supplied value is the actual Incident Date. 
 
 ### Important Note:
 * In the process to certify an agency as LIBRS-compliant, when an agency reaches the Certification and Production stages, please note the following: 
@@ -1023,22 +1021,20 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["11005"] -%}
 1 | {{error.err_desc["3"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["11072"] -%}
+{% assign error = site.data.error["11051"] -%}
 2 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["11073"] -%}
+{% assign error = site.data.error["11052"] -%}
 3 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11070"] -%}
 4 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["10018"] -%}
-6 | Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) CANNOT have a date in 'Incident Date/Hour' (DE 3) that would be a valid date for an Incident occurring since the agency's Base Date. This is also true for any Administrative Segments (10) subsequently submitted with. 
-{% assign error = site.data.error["11052"] -%}
-7 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["11051"] -%}
-8 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11072"] -%}
+5 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11073"] -%}
+6 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11077"] -%}
-9 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
+7 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11076"] -%}
-10 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
+8 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
 
@@ -1071,7 +1067,7 @@ ___
 ## Cleared Exceptionally (4)
 ___
 
-**Description:** Indicates whether the incident was cleared exceptionally. Clearance of one offense clears the entire incident. 
+**Description:** Indicates whether the incident was cleared exceptionally. Note that Clearance of a single OFfense will clear the entire Incident, as this data element is present in Segment 10 (Administrative Segment), of which there is only one for each Incident.
 
 **Data Characteristics:** 1 Character Alpha
 
@@ -1086,9 +1082,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["4"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["11053"] -%}
 3 | {{error.err_desc["4"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["10071"] -%}
-4 | {{error.err_desc["4"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11054"] -%}
+4 | {{error.err_desc["4"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["10071"] -%}
 5 | {{error.err_desc["4"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
@@ -1153,7 +1149,9 @@ ___
 
 ## Exceptional Cleared Date (5)
 
-**Data Characteristics**: 8 Character Date
+**Description**: The Excpetional Clearance Date is the date that the Agency was made aware that an Incident has been cleared by exceptional measures (EG: If cleared by Death of Offender, it is not the Offenders date of Death, but rather when the Agency was made aware that the case was no longer active because of it). If The Incident is not Cleared by Exceptional Means, then this Data Element should remain blank. Do not fill it with all Zero's or any placeholder characters other than Blank Spaces.
+
+**Data Characteristics**: 8 Character Date in the MMDDYYYY Format. 
 
 **Format:** MMDDYYYY
 
@@ -1162,19 +1160,12 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["10001"] -%}
+{% assign error = site.data.error["11005"] -%}
 1 | {{error.err_desc["5"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11055"] -%}
 2 | {{error.err_desc["5"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["11005"] -%}
-3 | {{error.err_desc["5"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11074"] -%}
-4 | {{error.err_desc["5"]}} | {{error.err_no}}| {{ error.err_message }} 
-
-___
-
-### Notes:
-* If an incident was cleared by exceptional means, then the month, day and year when the incident was cleared is to be entered into this data element.
+3 | {{error.err_desc["5"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ### Examples:
 ___
@@ -1193,6 +1184,8 @@ ___
 ## Offense Sequence Number (L6)
 ___
 
+**Description**: The Offense Sequence Number is a Uniquely Identifying Value between 001 and 999 that is used throughout the LIBRS Data Segments to identify which particular Offense is being referenced for validation purposes. Each Offense Segment (Segment 20) in an Incident should contain a unique Sequence Number.
+
 **Data Characteristics:** 3 Character Numeric
 
 ### Requirements:
@@ -1200,17 +1193,11 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
-2 | {{error.err_desc["l6"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["15002"] -%}
-2 | {{error.err_desc["l6"]}} | {{error.err_no}} | {{ error.err_message }} 
+1 | {{error.err_desc["l6"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12006"] -%}
-3 | {{error.err_desc["l6"]}} | {{error.err_no}}| {{ error.err_message }} 
-
-
-___
-
-### Notes:
-* Each offense in an incident must be assigned a unique sequence number from "001" to "999".
+2 | {{error.err_desc["l6"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15002"] -%}
+3 | {{error.err_desc["l6"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -2788,6 +2775,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 11 | {{error.err_desc["25"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84018"] -%}
 12 | {{error.err_desc["25"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["90001"] -%}
+12 | {{error.err_desc["25"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -3390,6 +3379,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["15080"] -%}
 7 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15020"] -%}
+8 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90001"] -%}
 8 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
@@ -4451,6 +4442,10 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["90011"] -%}
+1 | {{error.err_desc["n45"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["90017"] -%}
+1 | {{error.err_desc["n45"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 
 ___

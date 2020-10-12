@@ -1,8 +1,9 @@
 var nibrs = {
     person: "<ul><li><b>09A, 09B</li><li>100</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</b></li></ul>",
     assault: "<ul><li><b>13A, 13B, 13C</b></li></ul>",
-    homicide: "<ul><li><b>09A, 09C, 09C</b></li></ul>"
-
+    homicide: "<ul><li><b>09A, 09C, 09C</b></li></ul>",
+    property: "<ul><li><b>120</li><li>200, 210, 220, 240, 250, 270, 280, 290</li><li>26A, 26B, 26C, 26D, 26E</li><li>23A, 23B, 23C, 23D, 23E, 23F, 23G, 23H</li><li>510</li><li>90A, 90Z</b> (If Applicable)</li></ul>",
+    noproperty: "<ul><li><b>09A, 09B, 09C</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li><li>36A, 36B</li><li>370</li><li>40A, 40B</li><li>520</li><li>90B through 90Z</b> (If Applicable)</li></ul>"
 };
 
 var weapons = {
