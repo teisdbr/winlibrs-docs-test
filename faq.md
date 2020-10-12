@@ -66,7 +66,13 @@ We do not maintain a list of Vendors or Softwares that can be purchased by an Ag
 ### Certification Requirements
 In order to have your data sent to the FBI through LIBRS, we require that Agencies meet a set of requirements in order to first become Certified. Certification implies that your Agency has been properly trained and thoroughly understands LIBRS/NIBRS Requirements, and how the Agency's data should be entered and stored in the RMS. 
 
-We are currently reviewing the requirements in order for an Agency to become LIBRS Certified. We will update this section when decisions have been made.
+1. The Agency must make the 96% or better testing threshold to enter certification. Some agencies accomplish this very quickly, others take quite a long time. Largely it depends on the quality of the software edits to control data entry and the level of training of the agency personnel. 
+2. Once that threshold is met, then those Agency data submissions are reprocessed into the PROD (Non-Reporting PRoduction Environment - Doesn't go to the FBI) mode to see that the files work together logically. This is to check that incidents aren't being resubmitted incorrectly in multiple months, that delete and add arrest functions work correctly, that more arrestees aren't being added than the number of offenders that were originally reported in the incident, etc 
+3. Assuming that percentages stay the same in PROD and no logical errors are discovered, the next step is an incident number comparison between LIBRS submitted data and agency submitted summary UCR data from the UCR Online website. If the number of incidents reported through both systems is very similar then things will proceed further. if the LIBRS reported incident count is significantly lower or higher, then we will work with the agency and their vendor to determine what is being left out or what is being included that should not be.
+4. The next step is a comparison of distribution of offense codes in reporting. This is where business practices problems or training issues often emerge. We often find issues of misreporting here regarding Intimidation (13C) vs Assault/Battery (13A or 13B), Aggravated Assault (13A) vs Simple Assault (13B), Theft (23A-H) vs Motor Vehicle Theft (240), etc... This can be the most time consuming phase.
+
+This is just a brief summary overview of the certification process. Once we start receiving data from you then we can get some idea of where your agency stands, and work with you to continue to correct errors. 
+
 
 ### Certification Process
 
