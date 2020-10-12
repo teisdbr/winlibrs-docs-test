@@ -236,8 +236,6 @@ Error Number  | Error Message | Explaination of Error
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["20"]}}
 {% assign error = site.data.error["20000"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["20"]}}
-{% assign error = site.data.error["22075"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["20"]}}
 
 
 ___
@@ -1205,7 +1203,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["l6"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["15002"] -%}
 2 | {{error.err_desc["l6"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["25001"] -%}
+{% assign error = site.data.error["12006"] -%}
 3 | {{error.err_desc["l6"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 
@@ -1272,7 +1270,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 3 | {{error.err_desc["6"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["11004"] -%}
 4 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["22086"] -%}
+4 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
 
+ 
 ___
 
 ### Qualifiers and Subparts
@@ -1456,6 +1457,7 @@ ___
 
 ### Notes:
 * This element is used to indicate whether each offense in the incident was completed or merely attempted.
+
 
 ### Allowed Entries
 
@@ -1749,8 +1751,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["10"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12052"] -%}
 3 | {{error.err_desc["10"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["84004"] -%}
-4 | {{error.err_desc["10"]}} | {{error.err_no}} | {{ error.err_message }} 
+
 
 ___
 
@@ -1788,8 +1789,7 @@ Requirment   | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["11"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["12054"] -%}
 2 | {{error.err_desc["11"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["84004"] -%}
-3 | {{error.err_desc["11"]}} | {{error.err_no}}| {{ error.err_message }} 
+
 
 ___
 
@@ -1866,18 +1866,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12019"] -%}
 3 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["84005"] -%}
-3A | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["84007"] -%}
-3B | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["84015"] -%}
-3C | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["84020"] -%}
-3D | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["84021"] -%}
-3E | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["84210"] -%}
-3F | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["90031"] -%}
 3G | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 
@@ -2127,7 +2115,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["90020"] -%}
 2 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["25001"] -%}
+{% assign error = site.data.error["12006"] -%}
 3 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
 
 
@@ -2182,8 +2170,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13052"] -%}
 3 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["84001"] -%}
-3A | {{error.err_desc["14"]}} | {{error.err_no}} | {{ error.err_message }}
 {% assign error = site.data.error["13019"] -%}
 4 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["10072"] -%}
@@ -2376,6 +2362,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 3 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13055"] -%}
 4 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["23235"] -%}
+4 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -2448,8 +2436,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 4 | {{error.err_desc["19"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13059"] -%}
 5 | {{error.err_desc["19"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["23230"] -%}
-7 | {{error.err_desc["19"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -2582,8 +2568,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13065"] -%}
 2 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["20003"] -%}
-3 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13084"] -%}
 5 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13064"] -%}
@@ -2798,10 +2782,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 6 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["22110"] -%}
 7 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["22251"] -%}
-8 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["22252"] -%}
-9 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["11056"] -%}
 10 | {{error.err_desc["25"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84021"] -%}
@@ -3036,11 +3016,11 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["11004"] -%}
 4A | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["25010"] -%}
-5B | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15081"] -%}
 6 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["14022"] -%}
+5B | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10001"] -%}
 5B | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
@@ -3114,12 +3094,8 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["25030"] -%}
+{% assign error = site.data.error["11005"] -%}
 1 | {{error.err_desc["l26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["25031"] -%}
-2 | {{error.err_desc["l26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["25010"] -%}
-3 | {{error.err_desc["l26"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -3424,8 +3400,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["31008"] -%}
-9 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
+
 
 ___
 
@@ -3435,8 +3410,6 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["31009"] -%}
-10 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["22120"] -%}
 11 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 
@@ -3448,8 +3421,6 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["31010"] -%}
-12 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["12066"] -%}
 14 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 
@@ -3836,7 +3807,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 5 | {{error.err_desc["36"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14051"] -%}
 6 | {{error.err_desc["36"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["81400"] -%}
+{% assign error = site.data.error["12006"] -%}
 7 | {{error.err_desc["36"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
@@ -3878,8 +3849,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 6B | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["14009"] -%}
 7A | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["24010"] -%}
-7B | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["14022"] -%}
 7C | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
 
@@ -3954,13 +3923,8 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["24030"] -%}
+{% assign error = site.data.error["11005"] -%}
 1 | {{error.err_desc["l37"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["24031"] -%}
-2 | {{error.err_desc["l37"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["24010"] -%}
-3 | {{error.err_desc["l37"]}} | {{error.err_no}}| {{ error.err_message }} 
-
 ___
 
 ### Notes:
@@ -4187,8 +4151,6 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["16061"] -%}
-3 | {{error.err_desc["40"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["26001"] -%}
 3 | {{error.err_desc["40"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
@@ -4489,10 +4451,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["45001"] -%}
-1 | {{error.err_desc["n45"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["45002"] -%}
-2 | {{error.err_desc["n45"]}} | {{error.err_no}} | {{ error.err_message }}
+
 
 ___
 
@@ -4641,8 +4600,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 4 | {{error.err_desc["47"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["14009"] -%}
 6 | {{error.err_desc["47"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["26010"] -%}
-7 | {{error.err_desc["47"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["14022"] -%}
 8 | {{error.err_desc["47"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["22100"] -%}
@@ -4718,8 +4675,6 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["26010"] -%}
-1 | {{error.err_desc["l47"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["22105"] -%}
 2 | {{error.err_desc["l47"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["11005"] -%}
@@ -5088,8 +5043,7 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["20200"] -%}
-1 | {{error.err_desc["l53"]}} | {{error.err_no}}| {{ error.err_message }}
+
 
 ___
 
@@ -5162,6 +5116,25 @@ ___
 
 <div class="newpage"></div>
 
+# Inchoates (70)
+
+___
+
+**Description:** The Inchoate Modifier is to be added to the end of the LRS Code (DE 6) present in Offense and Arrestee Offense Segments (Segments 20 and 41). It's used to add context to the charges laid against an Offender. EG: Hiring a person to commit a murder should be charged with Attempted Murder, however the Addition of the Inchoate Modifier of '-I' for 'Inciting a Felony' gives us extra context about exactly what happened.
+
+**Data Characteristics:** 2 Character Alpha, Fist Character is "-"
+
+### Requirements: 
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["22085"] -%}
+1 | {{error.err_desc["70"]}} | {{error.err_no}}| {{ error.err_message }}
+
+___
+
+<div class="newpage"></div>
+
 # Control Data Elements
 ___
 
@@ -5180,10 +5153,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["c1"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20001"] -%}
 2 | {{error.seq_desc["c1"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["20002"] -%}
-3 | {{error.seq_desc["c1"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["20015"] -%}
-4 | {{error.seq_desc["c1"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["14058"] -%}
 4 | {{error.seq_desc["c1"]}} | {{error.err_no}} | {{ error.err_message }} 
 
@@ -5247,7 +5216,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["20001"] -%}
 1 | {{error.seq_desc["c3"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["20025"] -%}
+{% assign error = site.data.error["11005"] -%}
 2 | {{error.seq_desc["c3"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20026"] -%}
 3 | {{error.seq_desc["c3"]}} | {{error.err_no}} | {{ error.err_message }} 
@@ -5278,8 +5247,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.seq_desc["c4"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20026"] -%}
 3 | {{error.seq_desc["c4"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["20060"] -%}
-4 | {{error.seq_desc["c4"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -5345,7 +5312,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["20001"] -%}
 1 | {{error.seq_desc["c6"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["20002"] -%}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.seq_desc["c6"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["16058"] -%}
 3 | {{error.err_desc["c6"]}} | {{error.err_no}} | {{ error.err_message }} 
@@ -5379,8 +5346,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["20001"] -%}
 1 | {{error.seq_desc["c7"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["20030"] -%}
-2 | {{error.seq_desc["c7"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["20031"] -%}
 3 | {{error.seq_desc["c7"]}} | {{error.err_no}} | {{ error.err_message }} 
 
@@ -5499,3 +5464,752 @@ Requirement  | Requirement Description |
 1 | Indicates the LIBRS Spec is to be used by WinLIBRS when validating a data submission
 
 ___
+
+
+# LIBRS/NIBRS Mandatories
+____
+
+# Error Messages
+____
+
+## Structure for Numbering of Mandatory Error Messages
+
+|               1st Character         |     2nd Character    |             3rd Character          |                    4th and 5th Characters                    |
+|:-----------------------------------:|:--------------------:|:----------------------------------:|:------------------------------------------------------------:|
+|8                                    |1                     |0                                   |00: Overall Data Element Edits all Sections (Except Section 4)|
+|**Denotes Mandatory Error Message**  |Section with Mandatory| Error Message Number within Section|   01 - 21<br>Data Elemeber Specific Edits Within Section 4   |
+
+___
+
+## Section (1) Error Message for: Initial Incident Reports
+
+Each incident MUST have the following data elements, or the ENTIRE incident will be REJECTED:
+
+____
+
+#### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign errorNumbers = "81000,81100,81200a,81200b,81400" | split: ',' -%}
+{% for errorNumber in errorNumbers -%}
+{% assign error = site.data.error[errorNumber] -%}
+{{ forloop.index0 }} | {{error.mandatory["1"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% endfor %}
+
+___
+
+#### Notes:
+
+**For Error Message 81000:** 
+* This edit should identify the missing data element, so the agency can determine which exact data element is missing.  This edit applies to the following Data Elements:<br>  
+    * ORI Number (1)
+    * Incident Number (2)
+    * Incident Date/Hour (3)
+    * Cleared Exceptionally (4)
+    * Offense Sequence Number (L6)
+    * Louisiana Revised Statute (6)
+    * Agency Supplied NIBRS Code (N6)*
+    * Offense Attempted/Completed (7)
+    * Offender Suspected of Using/Gaming Motivation (8)
+    * Bias Motivation/Bias Crime Type (8A)
+    * Location Type (9)
+    * Victim Sequence Number (23)
+    * Offense Connected to Victim Sequence Number (24)
+    * Type of Victim (25).
+    * *** New data element not in previous LIBRS Specifications.**
+
+**For Error Message 81200a:**
+* This edit should identify the missing data elements(s), in order for the agency to determine the exact data element that is missing.  Applies to the following Data Elements:<br>
+    * Age of Victim [At Time Incident Occurred] (26)
+    * Sex of Victim (27)
+    * Race of Victim (28)
+    * Ethnicity of Victim (29)
+    * Resident Status of Victim (30)
+    * Offender Sequence Number (36)
+
+**For Error Message 81200b:**
+* This edit should identify the missing data elements(s), in order for the agency to determine the exact data element that is missing.  Applies to Data Elements:<br> 
+    * Age of Offender [At Time Incident Occurred] (37)
+    * Sex of Offender (38)
+    * Race of Offender (39)
+
+
+<br>
+
+## Section (2) Error Message for: Initial Incident Reports Containing Arrestee Segments
+
+____
+
+#### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["82000"] -%}
+0 | {{error.mandatory["2"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["82100"] -%}
+1 | {{error.mandatory["2"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+___
+
+#### Notes:
+
+**For Error Message 82000:** 
+* This edit should identify the missing data element(s), in order for the agency to determine which exact data element is missing. This edit applies to the following Data Elements:  
+    * Arrestee Sequence Number (40)
+    * Arrest Number/Local Booking Number for Arrest (41)
+    * Arrest Date (42)
+    * Type of Arrest (43)
+    * Multiple Arrestee Segment Indicator (44)
+    * Louisiana Revised Statute of Arrest (45)
+    * Arrestee Armed With [At Time of Arrest] (46)
+    * Age of Arrestee [At Time of Arrest] (47)
+    * Sex of Arrestee (48)
+    * Race of Arrestee (49)
+    * Ethnicity of Arrestee (50)
+    * Resident Status of Arrestee (51)
+
+<br>
+
+## Section (3) Error Message for: Subsequent Updates (ADD ARRESTs, MODIFYs, and DELETEs) to Previously Submitted Incidents
+
+____
+
+#### Requirements:
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["83100"] -%}
+0 | {{error.mandatory["3"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["83200"] -%}
+1 | {{error.mandatory["3"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["83000"] -%}
+2 | {{error.mandatory["3"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+___
+
+#### Notes:
+
+**For Error Message 83100 and 83200:**
+*  Are for Updates (ADD ARREST/MODIFY/DELETE) of Arrestee Segments to the Initial Submission of Incident Data.
+
+**For Error Message 83100:** 
+* This edit should identify the missing data element(s), in order for the agency to determine which exact data element is missing.  This edit applies to the following Data Elements:  
+    * Arrestee Sequence Number (40)
+    * Arrest Number/Local Booking Number for Arrest (41)
+    * Arrest Date (42)
+    * Type of Arrest (43)
+    * Multiple Arrestee Segment Indicator (44)
+    * Louisiana Revised Statute of Arrest (45)
+    * Arrestee Armed With [At Time of Arrest] (46)
+    * Age of Arrestee [At Time of Arrest] (47)
+    * Sex of Arrestee (48)
+    * Race of Arrestee (49)
+    * Ethnicity of Arrestee (50)
+    * Resident Status of Arrestee (51)
+
+<br>
+
+___
+
+<div class="newpage"></div>
+
+<br>
+
+# NIBRS Mandatories
+
+___
+
+### Subsection 01:  ARSON (200)
+
+___
+
+#### Requirements:
+
+Incidents submitted with an ARSON (Crime Against Property) offense (NIBRS Code “200”) should receive **one** of the following two error messages, as appropriate.
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84001"] -%}
+0 | {{error.mandatory["4s1"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84101"] -%}
+1 | {{error.mandatory["4s1"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+___
+
+<br>
+
+___
+
+### Subsection 02: AGGRAVATED ASSAULT, SIMPLE ASSAULT OR INTIMIDATION (13A, 13B and 13C)
+
+___
+
+#### Requirements:
+
+Incidents submitted with an AGGRAVATED ASSAULT, SIMPLE ASSAULT OR INTIMIDATION (Crime Against Person) offense (NIBRS Code 13A, 13B or 13C) should receive one of the following **six** error messages, as appropriate.
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84002"] -%}
+0 | {{error.mandatory["4s2"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84102"] -%}
+1 | {{error.mandatory["4s2"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84202"] -%}
+2 | {{error.mandatory["4s2"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84302"] -%}
+3 | {{error.mandatory["4s2"]}} | {{error.err_no}} | {{ error.err_message }}
+{% assign error = site.data.error["84402"] -%}
+4 | {{error.mandatory["4s2"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84502"] -%}
+5 | {{error.mandatory["4s2"]}} | {{error.err_no}} | {{ error.err_message }}
+
+<br>
+
+___
+
+<div class="newpage"></div>
+
+### Subsection 03:  BRIBERY (510)
+
+___
+
+#### Requirements:
+
+Incidents submitted with an offense of BRIBERY (Crime Against Property) offense (NIBRS Code “510”) should receive the following **five** error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84003"] -%}
+0 | {{error.mandatory["4s3"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84103"] -%}
+1 | {{error.mandatory["4s3"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84203"] -%}
+2 | {{error.mandatory["4s3"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84303"] -%}
+3 | {{error.mandatory["4s3"]}} | {{error.err_no}} | {{ error.err_message }}
+{% assign error = site.data.error["84403"] -%}
+4 | {{error.mandatory["4s3"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+
+### Subsection 04:  BURGLARY/BREAKING AND ENTERING (220)
+
+___
+
+#### Requirements:
+
+Incidents submitted with a BURGLARY/BREAKING AND ENTERING (Crime Against Property) offense (NIBRS Code 220) should receive the following **six** error messages:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84004"] -%}
+0 | {{error.mandatory["4s4"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84104"] -%}
+1 | {{error.mandatory["4s4"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84204"] -%}
+2 | {{error.mandatory["4s4"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84304"] -%}
+3 | {{error.mandatory["4s4"]}} | {{error.err_no}} | {{ error.err_message }}
+{% assign error = site.data.error["84404"] -%}
+4 | {{error.mandatory["4s4"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84504"] -%}
+5 | {{error.mandatory["4s4"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+<div class="newpage"></div>
+
+### Subsection 05:  COUNTERFEITING/FORGERY (250)
+
+___
+
+#### Requirements:
+
+Incidents submitted with a COUNTERFEITING/FORGERY (Crime Against Property) offense (NIBRS Code 250) should receive the following **four** error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84005"] -%}
+0 | {{error.mandatory["4s5"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84105"] -%}
+1 | {{error.mandatory["4s5"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84205"] -%}
+2 | {{error.mandatory["4s5"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84305"] -%}
+3 | {{error.mandatory["4s5"]}} | {{error.err_no}} | {{ error.err_message }}
+
+<br>
+
+___
+
+
+### Subsection 06:  DESTRUCTION/DAMAGE/VANDALISM (290)
+
+___
+
+#### Requirements:
+
+Incidents submitted with a DESTRUCTION/DAMAGE/VANDALISM (Crime Against Property) offense (NIBRS Code 290) should receive one of the following **two** error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84006"] -%}
+0 | {{error.mandatory["4s6"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84106"] -%}
+1 | {{error.mandatory["4s6"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+<br>
+
+___
+
+<div class="newpage"></div>
+
+### Subsection 07:  DRUG/NARCOTIC VIOLATION (35A) or DRUG EQUIPMENT VIOLATION (35B)
+
+___
+
+#### Requirements:
+
+Incidents submitted with a DRUG/NARCOTIC VIOLATION (Crime Against Society) offense (NIBRS Code 35A) or DRUG EQUIPMENT VIOLATION (Crime Against Society) offense (NIBRS Code 35B) should receive one of the following **four** error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84007"] -%}
+0 | {{error.mandatory["4s7"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84107"] -%}
+1 | {{error.mandatory["4s7"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84207"] -%}
+2 | {{error.mandatory["4s7"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84307"] -%}
+3 | {{error.mandatory["4s7"]}} | {{error.err_no}} | {{ error.err_message }}
+
+___
+
+Incidents submitted with a DRUG/NARCOTIC VIOLATION (Crime Against Society) offense (NIBRS Code 35A) should receive the following **three** error messages:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84407"] -%}
+0 | {{error.mandatory["4s7"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84507"] -%}
+1 | {{error.mandatory["4s7"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84607"] -%}
+2 | {{error.mandatory["4s7"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84707"] -%}
+3 | {{error.mandatory["4s7"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+<br>
+
+___
+
+<div class="newpage"></div>
+
+### Subsection 08:  EXTORTION/BLACKMAIL (210)
+
+___
+
+#### Requirements:
+
+Incidents submitted with a EXTORTION/BLACKMAIL (Crime Against Property) offense (NIBRS Code 210) should receive the following **five** error messages:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84008"] -%}
+0 | {{error.mandatory["4s8"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84108"] -%}
+1 | {{error.mandatory["4s8"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84208"] -%}
+2 | {{error.mandatory["4s8"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84308"] -%}
+3 | {{error.mandatory["4s8"]}} | {{error.err_no}} | {{ error.err_message }}
+{% assign error = site.data.error["84408"] -%}
+4 | {{error.mandatory["4s8"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+### Subsection 09: FRAUD OFFENSES (26A-E)
+
+___
+
+#### Requirements:
+
+Incidents submitted with FRAUD OFFENSES (Crimes Against Property) (NIBRS Codes 26A-E) should receive the following **three** error messages:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84009"] -%}
+0 | {{error.mandatory["4s9"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84109"] -%}
+1 | {{error.mandatory["4s9"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84209"] -%}
+2 | {{error.mandatory["4s9"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+<div class="newpage"></div>
+
+### Subsection 10:  GAMBLING OFFENSES (39A-D)
+
+___
+
+#### Requirements:
+
+Incidents submitted with GAMBLING OFFENSES (Crimes Against Society) (NIBRS Codes 39A-D) should receive one of the following two error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84010"] -%}
+0 | {{error.mandatory["4s10"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84110"] -%}
+1 | {{error.mandatory["4s10"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84210"] -%}
+2 | {{error.mandatory["4s10"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+<br>
+
+___
+
+
+### Subsection 11:  HOMICIDE OFFENSES (09A, 09B or 09C)
+
+___
+
+#### Requirements:
+
+Incidents submitted with HOMICIDE OFFENSES (Crimes Against Persons) (NIBRS Codes 09A, 09B and 09C) should receive one of the following **five** error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84011"] -%}
+0 | {{error.mandatory["4s11"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84111"] -%}
+1 | {{error.mandatory["4s11"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84211"] -%}
+2 | {{error.mandatory["4s11"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84311"] -%}
+3 | {{error.mandatory["4s11"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84411"] -%}
+4 | {{error.mandatory["4s11"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+<div class="newpage"></div>
+
+### Subsection 12:  KIDNAPPING/ABDUCTION (100)
+
+___
+
+#### Requirements:
+
+Incidents submitted with KIDNAPPING/ABDUCTION (Crimes Against Person) (NIBRS Code 100) should receive one of the following **eight** error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84012"] -%}
+0 | {{error.mandatory["4s12"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84112"] -%}
+1 | {{error.mandatory["4s12"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84212"] -%}
+2 | {{error.mandatory["4s12"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84312"] -%}
+3 | {{error.mandatory["4s12"]}} | {{error.err_no}} | {{ error.err_message }}
+{% assign error = site.data.error["84412"] -%}
+4 | {{error.mandatory["4s12"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84512"] -%}
+5 | {{error.mandatory["4s12"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84612"] -%}
+6 | {{error.mandatory["4s12"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84712"] -%}
+7 | {{error.mandatory["4s12"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+
+### Subsection 13:  LARCENY/THEFT OFFENSES (23A-H)
+
+___
+
+#### Requirements:
+
+Incidents submitted with LARCENY/THEFT OFFENSES (NIBRS Codes 23A-H) or EMBEZZLEMENT (NIBRS Code 270) offenses (both Crimes Against Property) should receive the following **three** error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84013"] -%}
+0 | {{error.mandatory["4s13"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84113"] -%}
+1 | {{error.mandatory["4s13"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84213"] -%}
+2 | {{error.mandatory["4s13"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+<div class="newpage"></div>
+
+### Subsection 14:  MOTOR VEHICLE THEFT (240)
+
+___
+
+#### Requirements:
+
+Incidents submitted with MOTOR VEHICLE THEFT (Crimes Against Property) (NIBRS Code 240) should receive one of the following **five** error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84014"] -%}
+0 | {{error.mandatory["4s14"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84114"] -%}
+1 | {{error.mandatory["4s14"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84214"] -%}
+2 | {{error.mandatory["4s14"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84314"] -%}
+3 | {{error.mandatory["4s14"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84414"] -%}
+4 | {{error.mandatory["4s14"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+<br>
+
+___
+
+### Subsection 15:  PORNOGRAPHY/OBSCENE MATERIAL OFFENSES (370)
+
+___
+
+#### Requirements:
+
+Incidents submitted with PORNOGRAPHY/OBSCENE MATERIAL OFFENSES (Crimes Against Society) (NIBRS Code 370) should receive the following error message, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84015"] -%}
+0 | {{error.mandatory["4s15"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+### Subsection 16:  PROSTITUTION OFFENSES (40A, 40B)
+
+___
+
+#### Requirements:
+
+Incidents submitted with PROSTITUTION OFFENSES (Crimes Against Society) (NIBRS Codes 40A and 40B) should receive the following error message, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84016"] -%}
+0 | {{error.mandatory["4s16"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+<div class="newpage"></div>
+
+### Subsection 17:  ROBBERY OFFENSES (120)
+
+___
+
+#### Requirements:
+
+Incidents submitted with ROBBERY OFFENSES (Crimes Against Property) (NIBRS Code 120) should receive one of the following **six** error messages:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84017"] -%}
+0 | {{error.mandatory["4s17"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84117"] -%}
+1 | {{error.mandatory["4s17"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84217"] -%}
+2 | {{error.mandatory["4s17"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84317"] -%}
+3 | {{error.mandatory["4s17"]}} | {{error.err_no}} | {{ error.err_message }}
+{% assign error = site.data.error["84417"] -%}
+4 | {{error.mandatory["4s17"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84517"] -%}
+5 | {{error.mandatory["4s17"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+<br>
+
+___
+
+
+### Subsection 18:  SEX OFFENSES – FORCIBLE (11A-D)
+
+___
+
+#### Requirements:
+
+Incidents submitted with SEX OFFENSES - FORCIBLE (Crimes Against Persons) (NIBRS Codes 11A-D) should receive the following **two** error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84018"] -%}
+0 | {{error.mandatory["4s18"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84118"] -%}
+1 | {{error.mandatory["4s18"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+
+### Subsection 19:  SEX OFFENSES – NON-FORCIBLE (36A-36B)
+
+___
+
+#### Requirements:
+
+Incidents submitted with SEX OFFENSES – NON-FORCIBLE (Crimes Against Persons) (NIBRS Codes 36A or 36B) should receive the following two error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84019"] -%}
+0 | {{error.mandatory["4s19"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84119"] -%}
+1 | {{error.mandatory["4s19"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+<div class="newpage"></div>
+
+### Subsection 20:  STOLEN PROPERTY OFFENSES (280)
+
+___
+
+#### Requirements:
+
+Incidents submitted with STOLEN PROPERTY OFFENSES (Crimes Against Property) (NIBRS Code 280) should receive one of the **four** following error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84020"] -%}
+0 | {{error.mandatory["4s20"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84120"] -%}
+1 | {{error.mandatory["4s20"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84220"] -%}
+2 | {{error.mandatory["4s20"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84320"] -%}
+3 | {{error.mandatory["4s20"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+<br>
+
+___
+
+
+### Subsection 21:  WEAPONS LAW VIOLATIONS (520)
+
+___
+
+#### Requirements:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84021"] -%}
+0 | {{error.mandatory["4s21"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+
+<br>
+
+___
+
+
+### Subsection 22:  ANIMAL CRUELTY OFFENSES (720)
+
+___
+
+#### Requirements:
+
+When Incidents submitted with ANIMAL CRUELTY OFFENSES (720) (Crimes Against Society) should receive one of the following **two** error messages, as appropriate:
+
+___
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["84010"] -%}
+0 | {{error.mandatory["4s22"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["84110"] -%}
+1 | {{error.mandatory["4s22"]}} | {{error.err_no}} | {{ error.err_message }} 
+
+<br>
+
+___
+

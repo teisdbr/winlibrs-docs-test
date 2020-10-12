@@ -2386,5 +2386,37 @@
 		"length": "15",
 		"format": "N",
 		"comment": "Based on characters as assigned by AFIS. Required on all Offenses reported to the Bureau of Identification of the Louisiana State Police."
+	},
+	{
+		"de_num": "70",
+		"name": "INCHOATE",
+		"deifition": "the Inchoate value is designed to give extra context to the nature of the offense.",
+		"length": "2",
+		"format": "-A ('-' plus an Alpha Character)",
+		"comment" : "Optional",
+		"subsection": [{
+			"title": "",
+			"values": [{
+					"code": "-A",
+					"desc": "Accessory After the Fact"
+				},
+				{
+					"code": "-C",
+					"desc": "Conspiracy"
+				},
+				{
+					"code": "-I",
+					"desc": "Inciting a Felony"
+				},
+				{
+					"code":"-S",
+					"desc": "Solicitation"
+				},
+				{
+					"code": "-H",
+					"desc": "Hate Crime Penalty Enhancer"
+				}
+			]
+		}]
 	}
 ]
