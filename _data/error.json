@@ -35,6 +35,7 @@
             "1": "This is a required Data Element, and it cannot be left blank.",
             "2": "This is a required Data Element, and it cannot be left blank.",
             "4": "This is a required Data Element, and it cannot be left blank.",
+            "23": "This is a required Data Element, and it cannot be left blank.",
             "6": "LRS Code (DE 6) is missing. This is a required Data Element.",
             "7": "Attempted/Completed (DE 7) is missing. This is a required Data Element.",
             "9": "Location Type (DE 9) is missing. This is a required Data Element.",
@@ -136,7 +137,7 @@
         "err_no": 10056,
         "err_message": "INCIDENT ALREADY ON FILE--PREVIOUSLY ADDED TO FILE ON [MM/DD/YYYY]",
         "err_desc": {
-            "2": "This field must be unique for each incident reported by the agency.<br>This means that no two incidents can have the same Incident Number. <br>Some agencies ensure uniqueness by prefixing every incident number with a two-digit year followed by a number starting with 1, while others simply increment the Incident Number by one for each new incident."
+            "2": "This field must be unique for each incident reported by the agency; no two incidents can have the same Incident Number. Some agencies ensure uniqueness by prefixing every incident number with a two-digit year followed by a number starting with 1, while others simply increment the Incident Number by one for each new incident."
         }
     },
     "10057": {
@@ -191,8 +192,7 @@
         "err_no": 10072,
         "err_message": "RECOVERED PROPERTY MUST ALSO BE SUBMITTED AS STOLEN",
         "err_desc": {
-            "14": "For every Property Description code (DE 15) entered into a Property Description Segment (31) having a Type of Property Loss (DE 14) of Recovered ('5'), there MUST also be a corresponding Property Description Segment (DE 31) with a matching Property Description (DE 15) code and a Type of Property Loss (DE 14) of Stolen/Etc. ('7').<br><br>This applies to both initial submissions and resubmissions for Incident Reports (Action Type of 'I'). This rule does not apply to:{::nomarkdown}<ul><li>NIBRS Offense codes of <b>280 and 250</b>.</li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, and individual parts within a vehicle were not reported as Stolen.</li></ul>{:/} ",
-            "15": "For every Property Description code (DE 15) entered into a Property Description Segment (31) having a Type of Property Loss (DE 14) of Recovered ('5'), there MUST also be a corresponding Property Description Segment (DE 31) with a matching Property Description (DE 15) code and a Type of Property Loss (DE 14) of Stolen/Etc. ('7').<br><br>This applies to both initial submissions and resubmissions for Incident Reports (Action Type of 'I'). This rule does not apply to:{::nomarkdown}<ul><li>NIBRS Offense codes of <b>280 and 250</b></li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, and individual parts within a vehicle were not reported as Stolen.</li></ul>{:/}"
+            "14": "For every Property Description Segment (Segment 31) having a Type of Property Loss (DE 14) of '5 - Recovered', there must also be a corresponding Segment 31 having the same Property Description (DE 15) code and a Type of Property Loss of 7 - Stolen/Etc'.<br><br>This rule does not apply to:{::nomarkdown}<ul><li>NIBRS Offense codes of <b>280 and 250</b>.</li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, so long as the individual parts within a vehicle were not reported as Stolen.</li></ul>{:/} "
         }
     },
     "10073": {
@@ -238,7 +238,7 @@
         "err_no": 10077,
         "err_message": "NEED A PROPERTY LOSS CODE OF '1' OR '8' WHEN THIS OFFENSE IS ATTEMPTED",
         "err_desc": {
-            "7": "When and Offense is Attempted ('A') and is a Crime Against Property, Gambling (NIBRS 39A or NIBRS 39B), Kidnaping (NIBRS 100) or a Drugs/Narcotics Offense (NIBRS 35A or 35B), then Type of Property Loss (DE 14) can only be None (1) or Unknown (8)."
+            "14": "When one of the following NIBRS Codes is used and the Offense is 'A - Attempted', then the Property Loss Type (DE 14) can only be '1 - None' or '8 - Unknown':{::nomarkdown}<script>document.write(window.derequiresnibrs.de14)</script>{:/}"
         }
     },
     "10078": {
@@ -400,16 +400,17 @@
         "err_no": 11004,
         "err_message": "INVALID DATA VALUE--NOT ON LIBRS VALIDATION TABLE",
         "err_desc": {
+            "n6" : "Supplied value was not recognized. Please ensure that the supplied NIBRS Code is valid.",
             "4": "Supplied value was not a known value. Must be a code that is found on the List of [Available Data Element Values](./data-element-values)",
-            "6": "Must be a valid code on Master LIBRS/LRS Code Table.",
+            "6": "Must be a valid code on Master LIBRS/LRS Code Table. Check the [Master LRS List](./lrs-master-list) for available codes to use.",
             "8": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "9": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "11": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "12": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "13": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "23": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
-            "14": "Property Loss Type (DE 14) must be a numeric value between 1 and 8. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
-            "15": "Property Description (DE 15) must be a two-digit, numeric value greater than or equal to 1. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
+            "14": "Property Loss Type (DE 14) is a mandatory Data Element that must be a numeric value between 1 and 8. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
+            "15": "Property Description (DE 15) must be a two-digit, numeric value greater than or equal to 01. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
             "22": "The reported Drug Measurement Type (DE 22) was not recognized. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
             "20": "The reported Suspected Drug Type (DE 20) was not recognized. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
             "8a": "Must be a valid code that is found on the List of [Available Data Element Values](./data-element-values).",
@@ -537,7 +538,7 @@
         }
     },
     "11056": {
-        "active": "true",
+        "active": "false",
         "err_no": 11056,
         "err_message": "AN ENTRY MUST BE MADE WHEN CLEARED EXCEPTIONALLY HAS ENTRIES OF A-E",
         "err_desc": {
@@ -739,9 +740,9 @@
             "31": "When more than one code is entered within Aggravated Assault/Murder category, the same value is not allowed to be repeated.",
             "41": "When more than one value is present, the same value is not allowed to be repeated.",
             "46": "When more than one value is present, the same value is not allowed to be repeated.",
-            "l6": "Offense Sequence Number (DE L6) cannot be repeated for multiple Segment 40's (Offender Segment) in an Incident).",
-            "p1": "Property Sequence Number (DE P1) cannot be repeated for multiple Segment 40's (Offender Segment) in an Incident).",
-            "36": "Offender Sequence Number (DE 36) cannot be repeated for multiple Segment 40's (Offender Segment) in an Incident)."
+            "l6": "Offense Sequence Number (DE L6) cannot be repeated for multiple Segment 20's (Offense Segment) in an Incident.",
+            "p1": "Property Sequence Number (DE P1) cannot be repeated across multiple Segment 31's (Property Description Segment) in an Incident.",
+            "36": "Offender Sequence Number (DE 36) cannot be repeated across multiple Segment 40's (Offender Segment) in an Incident."
         }
     },
     "12007": {
@@ -906,7 +907,7 @@
         "err_no": 13002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
         "err_desc": {
-            "16": "Must be numeric entry with zero or blank left-fill if entered.",
+            "16": "Must be numeric entry with zero left-fill. if entered.",
             "18": "Must be numeric entry with zero left-fill, if entered.",
             "21": "Must be numeric entry with Zero ('0') or Blank (G) left-fill and right-fill. The decimal fractional quantity must be expressed in thousandths as three digits, and a decimal point must separate the whole part of the number from the fractional part. The decimal point must be the tenth character of the field.",
             "19": "Must be a numeric entry with zero left-fill if entered."
@@ -1009,7 +1010,7 @@
         "err_no": 13051,
         "err_message": "PROPERTY VALUE OF ZERO IS NOT ALLOWED",
         "err_desc": {
-            "16": "A value of '000000000' for Property Value (DE 15) is not permitted. To designate that the value is unknown, use '000000001' for $1, instead."
+            "16": "A value of '000000000' for Property Value (DE 15) is not permitted for this Property Description (DE 15). To designate that the value is unknown, use '000000001' for $1, instead."
         }
     },
     "13052": {
@@ -1017,7 +1018,7 @@
         "err_no": 13052,
         "err_message": "DATA ELEMENTS 15 - 22 MUST BE BLANK WHEN PROPERTY LOSS CODE = 1 OR 8",
         "err_desc": {
-            "14": "When Type of Property Loss (DE 14) is None (1) or Unknown (8), then Data Elements 15 through 22 must be left blank for all Offenses <b>except</b> for NIBRS 35A. <br><br> When the associated NIBRS Offense Code is <b>35A</b>, and the Property Loss Type (DE 14) is '1 - None', then Suspected Drug Type (DE 20) must have a valid entry."
+            "14": "When Type of Property Loss (DE 14) is None (1) or Unknown (8), then Data Elements 15 through 22 must be left blank for all Offenses <b>except for NIBRS 35A</b> . <br><br> When the associated NIBRS Offense Code is <b>35A</b>, and the Property Loss Type (DE 14) is '1 - None', then Suspected Drug Type (DE 20) must have a valid entry."
         }
     },
     "13053": {
@@ -1025,7 +1026,7 @@
         "err_no": 13053,
         "err_message": "PENDING INVENTORY MUST HAVE PROPERTY VALUE OF '1'",
         "err_desc": {
-            "15": " When Pending Inventory ('88') is entered, then Value of Property (16) must be Unknown ('1', representing $1.00). One dollar is used as a quality assurance edit check that instructs LIBRS to accept the Pending Inventory ('88') entry."
+            "16": " When Pending Inventory ('88') is entered, then Value of Property (DE 16) must be Unknown ('1', representing $1.00). One dollar is used as a quality assurance edit check that instructs LIBRS to accept the Pending Inventory ('88') entry."
         }
     },
     "13054": {
@@ -1164,7 +1165,7 @@
         "err_no": 13073,
         "err_message": "PROPERTY VALUE (DE 16) IS REQUIRED FOR THIS PROPERTY LOSS TYPE",
         "err_desc": {
-            "16": "When Property Loss Type (DE 14) is neither '1' (None) or '8' (Unknown), Property Value (DE 16) is a required Data Element for any Property Description that is not '10 - Drugs/Narcotics'"
+            "16": "Property Value (DE 16) is a required Data Element for any Property Description (DE 15) that is not '10 - Drugs/Narcotics'"
         }
     },
     "13075": {
@@ -1172,7 +1173,7 @@
         "err_no": 13075,
         "err_message": "PROPERTY DESCRIPTION (DE 15) IS REQUIRED FOR THIS PROPERTY LOSS TYPE",
         "err_desc": {
-            "15": "A Property Description (DE 15) code must be entered when the value entered in Type of Property Loss/Etc. (DE 14) contains the following:{::nomarkdown}<ul><li>2 Burned</li><li>3 Counterfeited or Forged</li><li>4 Destroyed, Damaged or Vandalized</li><li>5 Recovered</li><li>6 Seized</li><li>7 Stolen/Etc.</li></ul>{:/}"
+            "15": "A Property Description (DE 15) code must be entered when the value entered in Type of Property Loss/Etc. (DE 14) contains the following:{::nomarkdown}<ul><li>2 - Burned</li><li>3 - Counterfeited or Forged</li><li>4 - Destroyed, Damaged or Vandalized</li><li>5 - Recovered</li><li>6 - Seized</li><li>7 - Stolen/Etc.</li></ul>{:/}"
         }
     },
     "13076": {
@@ -1224,7 +1225,7 @@
         "err_no": 13087,
         "err_message": "WITH PROPERTY LOSS = 6 & ONLY DRUG OFFENSE, CANNOT HAVE A DESCRIPTION 11;OR PROPERTY LOSS = 6 & ONLY DRUG EQUIP OFNSE CANNOT HAVE DESCRIPTION 10",
         "err_desc": {
-            "14": "To ensure that Drug/Narcotic Offenses (NIBRS 35A and 35B) are properly reported, Property Description (DE 15) CANNOT have a value of Drug/Narcotic Equipment ('11') for a Drug/Narcotic Violation of NIBRS 35A. Similarly, Drug/Narcotics ('10') CANNOT be entered for a Drug Equipment Violation of (35B). This is enforced by software when there is a single 'Crime Against Property' Offense.<br><br>However, when an incident contains multiple 'Crimes Against Property' Offenses, where, for example, one Offense is a Drug/Narcotic Violation (NIBRS 35A), and the other is a Robbery (NIBRS 120), that involves Drug/Narcotic Equipment ('11'), it can be entered. In this case, the above edit rule should be bypassed. Similarly, Drugs/Narcotics ('10') can be entered along with a Drug Equipment Violation (35B), as long as that property is involved in the Robbery (NIBRS 120)."
+            "15": "For NIBRS 35A Offenses (Drug/Narcotic Violations), Property Description (DE 15) can only have a value of '10 - Drugs or Narcotics'. Similarly for NIBRS 35B Offenses (Drug Equipment Violations), Property Description (DE 15) can only have a value of '11 - Drug Narcotic Equipment. This rule is, however, bypassed if the property is involved in another Crime Against Property."
         }
     },
     "13088": {
@@ -1455,10 +1456,10 @@
         "err_no": 15002,
         "err_message": "CONTAINS NON NUMERIC ENTRY",
         "err_desc": {
-            "l6": "Offense Sequence Number (DE L6) should be a numeric entry, front-padded with zeros to make a three-digit number. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10.",
-            "40": "Arrest Sequence Number (DE 40) should be a numeric entry, front-padded with zeros to make a three-digit number. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10.",
-            "23": "Victim Sequence Number (DE 23) should be a numeric entry, front-padded with zeros to make a three-digit number. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10.",
-            "24": "Offense Connected to Victim Sequence Number (DE 24) should be a numeric entry, front-padded with zeros to make a three-digit number. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10."
+            "l6": "Offense Sequence Number (DE L6) should be a numeric entry, front-padded with zeros to make a three-digit number between 001 and 999. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10.",
+            "40": "Arrest Sequence Number (DE 40) should be a numeric entry, front-padded with zeros to make a three-digit number between 001 and 999. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10.",
+            "23": "Victim Sequence Number (DE 23) should be a numeric entry, front-padded with zeros to make a three-digit number between 001 and 999. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10.",
+            "24": "Offense Connected to Victim Sequence Number (DE 24) should be a numeric entry, front-padded with zeros to make a three-digit number between 001 and 999. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10."
         }
     },
     "15003": {
@@ -3459,7 +3460,7 @@
         "err_no": 90018,
         "err_message": "PROPERTY MUST HAVE A VALID RELATIONSHIP TO AT LEAST ONE OFFENSE",
         "seq_desc": {
-            "31": "All properties submitted within an incident must be related to at least one Offense. Please ensure that all Properties are linked to an Offense through a Segment 33."
+            "33": "All properties submitted within an incident must be related to at least one Offense. Please ensure that all Properties are linked to an Offense through a Segment 33."
         }
     },
     "90019": {
@@ -3467,8 +3468,8 @@
         "err_no": 90019,
         "err_message": "PROPERTY SEQUENCE NUMBER MUST BE PRESENT--CANNOT BE BLANK",
         "err_desc": {
-            "p1": "MUST be present -- CANNOT be blank.",
-            "p1r": "MUST be present -- CANNOT be blank."
+            "p1": "Property Sequence Number (DE P1) is a required field for each Segment 31 (Property Description Segment) present in the Incident.",
+            "p1r": "Property Sequence Number Reference (DE P1R) is a required field for each Segment 33 (Property/Offense Relationship Segment) present in the Incident."
         }
     },
     "90020": {
@@ -3476,8 +3477,8 @@
         "err_no": 90020,
         "err_message": "PROPERTY SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL",
         "err_desc": {
-            "p1": "MUST be numeric entry (001 through 999) with zero left-fill. Property Sequence Number (P1) distinguishes one property from another.",
-            "p1r": "MUST be numeric entry (001 through 999) with zero left-fill."
+            "p1": "Property Sequence Number (DE P1) should be a three-digit numeric value between 001 and 999, front-padded with Zero's. EG: A Sequence Number of 1 would be 001.",
+            "p1r": "Property Sequence Number Reference (DE P1R) should be a three-digit numeric value between 001 and 999, front-padded with Zero's. EG: A Sequence Number of 1 would be 001."
         }
     },
     "90021": {
@@ -3485,7 +3486,7 @@
         "err_no": 90021,
         "err_message": "OFFENSE SEQUENCE NUMBER MUST BE PRESENT--CANNOT BE BLANK",
         "err_desc": {
-            "l6r": "Must be present -- CANNOT be Blank (G)."
+            "l6r": "Offense Sequence Number Reference (DE L6R) is required for each Property/Offense Relationship Segment (Segment 33) present in the Incident; It cannot be blank."
         }
     },
     "90022": {
@@ -3493,8 +3494,7 @@
         "err_no": 90022,
         "err_message": "OFFENSE SEQUENCE NUMBER MUST BE NUMBER ENTRY WITH ZERO LEFT - FILL",
         "err_desc": {
-            "l6r": "MUST be numeric entry (001 through 999) with zero left-fill.",
-            "6": "MUST be numeric entry (001 through 999) with zero left-fill."
+            "l6r": "Offense Sequence Number Reference (DE L6R) should be a numeric entry, front-padded with zeros to make a three-digit number. EG: 001, 002, 010 for Sequence Numbers 1, 2, and 10."
         }
     },
     "90023": {
@@ -3510,8 +3510,8 @@
         "err_no": 90024,
         "err_message": "PROPERTY SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED PROPERTIES' SEQUENCE NUMBERS",
         "err_desc": {
-            "l6r": "MUST match the Offense Sequence Number (DE L6) of one of the Offense segments submitted in the corresponding incident.",
-            "p1r": "MUST match the Property Sequence Number of one of the Property Description segments submitted in corresponding incident."
+            "l6r": "Offense Sequence Number Reference (DE L6R) must match the Offense Sequence Number (DE L6) of one of the Offense Segments (Segment 20) submitted in the incident.",
+            "p1r": "Property Sequence Number Reference (DE P1R) must match the Property Sequence Number (DE P1) of one of the Property Description Segments (Segment 31) submitted in the incident."
         }
     },
     "90025": {
@@ -3542,7 +3542,7 @@
         "err_no": 90034,
         "err_message": "MUST PROVIDE A NIBRS CODE",
         "err_desc": {
-            "N6": "All Offenses must have a valid NIBRS Code submitted with them. In the past, LIBRS would make an assumption based on a 'Default' NIBRS Code associated with each LRS Code. This is not longer in practice, and therefore each Offense must now contain an Agency Submitted NIBRS Code."
+            "n6": "All Offenses must have a valid NIBRS Code submitted with them. In the past, LIBRS would make an assumption based on a 'Default' NIBRS Code associated with each LRS Code. This is not longer in practice, and therefore each Offense must now contain an Agency Submitted NIBRS Code."
         }
     },
     "90029": {
@@ -3581,7 +3581,7 @@
         "err_no": 90036,
         "err_message": "INVALID TYPE OF WEAPON / FORCE INVOLVED WITH AN OFFENSE OF NIBRS = 13 A;WEAPON / FORCE INVOLVED CANNOT BE NONE WITH THE INJURY TYPE OTHER THAN NONE",
         "err_desc": {
-            "13": "If the Louisiana Revised Statute (DE 6) is an Aggravated Assault (NIBRS 13A), Weapon/Force involved (DE 13) cannot be None (99) with the Type of Injury (DE 33) other than None (N)"
+            "13": "If the Offense is a NIBRS 13A (Aggravated Assault), Type of Weapon/Force Involved (DE 13) cannot be None (99), and the Type of Injury (DE 33) must be something other than None (N)"
         }
     },
     "90038": {

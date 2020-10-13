@@ -322,8 +322,6 @@ Error Number  | Error Message | Explaination of Error
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["31"]}}
 {% assign error = site.data.error["10076"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["31"]}}
-{% assign error = site.data.error["90018"] -%}
-{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["31"]}}
 
 ___
 
@@ -408,6 +406,8 @@ An incident is submitted with a NIBRS 23H 'Crime Against Property' Offense, as w
 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
+{% assign error = site.data.error["90018"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["33"]}}
 {% assign error = site.data.error["90023"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["33"]}}
 
@@ -515,8 +515,8 @@ More information and common questions and errors can be found on the LIBRS FAQ f
    [1](./librs-spec#ori-number-1)                                     | ORI Number                                            | 4-12          | 9        | A
    [2](./librs-spec#incident-number-2)                                | Incident Number                                       | 13-24         | 12       | A
    [36](./librs-spec#offender-sequence-number-36)                     | Offender Sequence Number                              | 25-27         | 3        | N
-   [8](./librs-spec#offender-suspected-of-usinggaming-motivation-8)   | Offender Suspected of Using / Gaming Motivation       | 28            | 1        | A
-   \*\*                                                               | Future Expansion Buffer                               | 29-48         | 20       | G (Space)
+   [8](./librs-spec#offender-suspected-of-usinggaming-motivation-8)   | Offender Suspected of Using / Gaming Motivation       | 28            | 4 (4x 1 Char)    | A
+   \*\*                                                               | Future Expansion Buffer                               | 32-48         | 20       | G (Space)
    [C8](./librs-spec#end-of-segment-marker-c8)                        | End of Segment Marker                                 | 49-50         | 2        | A
    [C9](./librs-spec#padding-c9)                                      | Padding                                               | 51-150        | \*\*     | G (Space)
 
@@ -925,7 +925,7 @@ ____
 
 **Description:** NCIC originating agency identifier number. This field should follow the format of 'LAXXXXXXX', where XXXXXXX is the 7-digit code for the Agency's ORI Number. 
 
-**Data Characteristics:** 9 Character Numeric/Alpha
+**Data Characteristics:** 9 Character Numeric/Alpha. Cannot be blank, and must start with 'LA'.
 
 ### Requirements:
 ___
@@ -953,10 +953,9 @@ ___
 ## Incident Number (2)
 ___
 
-**Description:** Agency unique, in-house assigned case number. The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years. 
+**Description:** Agency unique, in-house assigned case number. It is used to link subsequent update submissions to the original submission. This number will be encrypted prior to any dissemination of data to ensure that the recipient cannot identify the actual case. The Incident Number should contain the current year as part of it when possible to prevent duplication/reuse of incident numbers across different years. EG 20-000001 for the first incident of 2020. 
 
-**Data Characteristics:** 12 Character Alpha
-
+**Data Characteristics:** 12 Character Alpha. Cannot be Blank, and must be unique for each Agency (IE Agency A and B can both have an Incident Number 20-00001, but Agency A cannot have two Incidents with Incident Number 20-00001).
 ### Requirements:
 ___
 
@@ -964,18 +963,15 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["10056"] -%}
-2 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["10016"] -%}
+2 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["10056"] -%}
 3 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["90042"] -%}
-4 | {{error.err_desc["1"]}} | {{error.err_no}} | {{ error.err_message }} 
+4 | {{error.err_desc["2"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
 ___
-
-### Notes: 
-* Incident Number is the reporting agency's UNIQUE, in-house assigned case number. It is used to link subsequent update submissions to the original submission. This number will be encrypted prior to any dissemination of data to ensure that the recipient cannot identify the actual case.
 
 ### Definitions:
 
@@ -998,9 +994,10 @@ ___
 ## Incident Date/Hour (3)
 ___
 
-**Description:** Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown. If an incident occurred before the agency’s “Base Date” but was NOT reported to LIBRS until after the “Base Date” has been implemented, THIS INCIDENT WILL BE REJECTED. These type of incidents (that is, NOT reported until after your Agency’s “Base Date” was implemented) may require your agency to submit an adjusted UCR Summary form to capture these offenses. 
+**Description:** Date and Time when the incident occurred or started, or at the beginning of the time period in which it occurred, or date of report if unknown. If an incident occurred before the agency’s Base Date (The Date in which the Agency began reporting LIBRS) it should not be reported to LIBRS; it will be rejected if it is. These type of incidents (Incidents occurring before the Agency's Base Date) may require your agency to submit an adjusted UCR Summary form to capture these offenses. 
 
-**Data Characteristics:** 11 Character Alpha
+**Data Characteristics:** 11 Character Alpha. If Unknown, Enter the Reporting Date (MMDDYYYY) followed by an 'R' to indicate the date is not the actual Incident Date, but rather the Reporting Date. Leave the Time blank in this case (Not 0's, but Blank Spaces)
+
 
 **Format:** MMDDYYYYXHH, Where 'X' is either:
 
@@ -1009,10 +1006,10 @@ ___
 
 ### Important Note:
 * In the process to certify an agency as LIBRS-compliant, when an agency reaches the Certification and Production stages, please note the following: 
-  * The “Base Date” for an agency is the date that agency starts sending actual, live “production” data that is kept on both LIBRS (state) and NIBRS (FBI) databases.
-  * If an incident occurred before the agency’s “Base Date”, but was not reported to LIBRS until after your “Base Date” has been implemented; or this incident was already reported in the UCR summary reports, this incident will be REJECTED **(Error 11073)**.
+  * The "Base Date" for an agency is the date that agency starts sending actual, live "production" data that is kept on both LIBRS (state) and NIBRS (FBI) databases.
+  * If an incident occurred before the agency’s "Base Date", but was not reported to LIBRS until after your "Base Date" has been implemented; or this incident was already reported in the UCR summary reports, this incident will be REJECTED **(Error 11073)**.
   * If this happens, contact a member of the LIBRS staff at the Louisiana Commission on Law Enforcement.
-  * If this incident was not reported until after your “Base Date” was implemented, your agency may have to submit an adjusted UCR summary form to capture these offenses.
+  * If this incident was not reported until after your "Base Date" was implemented, your agency may have to submit an adjusted UCR summary form to capture these offenses.
 
 ### Requirements:
 ___
@@ -1031,20 +1028,20 @@ Requirement  | Requirement Description | Error Number | Error Message
 5 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11073"] -%}
 6 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["11077"] -%}
-7 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11076"] -%}
-8 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
+7 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11077"] -%}
+6 | {{error.err_desc["3"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
 
 ### Notes:
 
-* This data element is to be used to enter the month, day, year and hours when the incident occurred or started, or the beginning of the time period in which it occurred. "Military" twenty-four (24) hour time is to be used.
-* If the incident occurred on or between midnight and 0059, enter "00" for the hour; if on or between 0100 and 0159, enter "01" for the hour if on or between 2300 and 2359, enter "23" for the hour, etc.
-* If the incident occurred at exactly midnight, it is considered to have occurred at the beginning of the next day.  Therefore "00" should be entered for the hour, along with the next day's date.
-* If the incident date is unknown, enter the date of the report with the indicator "R" = Report.  Otherwise leave the report column nine (9) blank.
-* If the incident hour is unknown, leave the hour blank.
+* This data element is to be used to enter the month, day, year and hours when the Incident occurred or started, or the beginning of the time period in which it occurred. "Military" twenty-four (24) hour time is to be used.
+* If the Incident occurred on or between midnight and 0059, enter "00" for the hour; if on or between 0100 and 0159, enter "01" for the hour if on or between 2300 and 2359, enter "23" for the hour, etc.
+* If the Incident occurred at exactly midnight, it is considered to have occurred at the beginning of the next day. Therefore "00" should be entered for the hour, along with the next day's date.
+* If the Incident Date is unknown, enter the date of the report with the indicator "R" = Report after the MMDDYYYY of the Report Date. 
+* If the Incident hour is unknown, leave the hour blank.
 * When LIBRS requires a Blank (G), it must be a Blank (G), NOT A ZERO.
 
 ### Examples:
@@ -1067,9 +1064,9 @@ ___
 ## Cleared Exceptionally (4)
 ___
 
-**Description:** Indicates whether the incident was cleared exceptionally. Note that Clearance of a single OFfense will clear the entire Incident, as this data element is present in Segment 10 (Administrative Segment), of which there is only one for each Incident.
+**Description:** Indicates whether the incident was cleared exceptionally. Note that Clearance of a single Offense will clear the entire Incident, as this data element is present in Segment 10 (Administrative Segment), of which there is only one for each Incident.
 
-**Data Characteristics:** 1 Character Alpha
+**Data Characteristics:** 1 Character Alpha. Cannot be blank, if the Incident is not Cleared Exceptionally then you should use 'N'.
 
 ### Requirements:
 ___
@@ -1149,9 +1146,9 @@ ___
 
 ## Exceptional Cleared Date (5)
 
-**Description**: The Excpetional Clearance Date is the date that the Agency was made aware that an Incident has been cleared by exceptional measures (EG: If cleared by Death of Offender, it is not the Offenders date of Death, but rather when the Agency was made aware that the case was no longer active because of it). If The Incident is not Cleared by Exceptional Means, then this Data Element should remain blank. Do not fill it with all Zero's or any placeholder characters other than Blank Spaces.
+**Description:**: The Exceptional Clearance Date is the date that the Agency was made aware that an Incident has been cleared by exceptional measures (EG: If cleared by Death of Offender, it is not the Offenders date of Death, but rather when the Agency was made aware that the case was no longer active because of it). If The Incident is not Cleared by Exceptional Means, then this Data Element should remain blank. Do not fill it with all Zero's or any placeholder characters other than Blank Spaces.
 
-**Data Characteristics**: 8 Character Date in the MMDDYYYY Format. 
+**Data Characteristics**: 8 Character Date in the MMDDYYYY Format. If the Incident is not Cleared Exceptionally, then this Data Element should be Blank Spaces, otherwise this Data Element should be present.
 
 **Format:** MMDDYYYY
 
@@ -1184,9 +1181,9 @@ ___
 ## Offense Sequence Number (L6)
 ___
 
-**Description**: The Offense Sequence Number is a Uniquely Identifying Value between 001 and 999 that is used throughout the LIBRS Data Segments to identify which particular Offense is being referenced for validation purposes. Each Offense Segment (Segment 20) in an Incident should contain a unique Sequence Number.
+**Description:**: The Offense Sequence Number is a Uniquely Identifying Value between 001 and 999 that is used throughout the LIBRS Data Segments to identify which particular Offense is being referenced for validation purposes. Each Offense Segment (Segment 20) in an Incident should contain a unique Sequence Number.
 
-**Data Characteristics:** 3 Character Numeric
+**Data Characteristics:** 3 Character Numeric. Cannot be blank and should always be a three-digit number, front-padded with zeros as needed (EG Offense Sequence Number 1 of the Incident would be 001)
 
 ### Requirements:
 
@@ -1206,7 +1203,9 @@ ___
 ## Offense Sequence Number Reference (L6R)
 ___
 
-**Data Characteristics:** 3 Character Numeric
+**Description:** Offense Sequence Number Reference is used in Segment 33 to relate Properties and Offenses together. It has to match one of the Offense Sequence Numbers (DE L6) that are present in the Segment 20(s) of the Incident, and since it's used to relate Properties to Offenses, the same L6R can be used in Multiple Segment 33's to relate multiple Properties to the Offense.
+
+**Data Characteristics:** 3 Character Numeric, front-padded with Zeros to make a three-digit number (EG Sequence Number 1 would be 001). Must be included in each Segment 33 of the Incident and cannot be left blank or all zeros (000).
 
 ### Requirements:
 
@@ -1232,7 +1231,11 @@ ___
 ## Louisiana Revised Statute (6)
 ___
 
-**Data Characteristics**: 12 Character Alpha
+**Description:** The Louisiana Revised Statute (LRS) Code is the State Statute that and Offender is being charged and/or Arrested for. The [Master LRS List](./lrs-master-list) contains the list of all available LRS Codes that LIBRS is able to have reported to it. Each of these LRS Codes have NIBRS Code(s) associated with them. This allows Officers to report the crime how they intended to the FBI. EG: LRS 14:59/A9 is used to denote that someone shot a firearm at a train. Depending on the circumstances, the Officer may want to report this crime as a Weapons Violation (520) or as a Descrution of Property/Vandalism (290). 
+
+LRS Codes also have Subparts and Qualifiers that can be associated with them. These, similarly to the NIBRS Code, allow the Officer to more descriptively report what happened for Statutes that have a broad stroke of ways that it could be violated. More information on Subparts and Qualifiers is below.
+
+**Data Characteristics**: 12 Character Alpha. Cannot be left blank and can only contain one (1) Hyphen (-).
 
 **Format**: TT:SSSS.S/P-I
 
@@ -1251,14 +1254,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["90022"] -%}
-2 | {{error.err_desc["6"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["11056"] -%}
-3 | {{error.err_desc["6"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["11004"] -%}
-4 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
+2 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["22086"] -%}
-4 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
+3 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
 
  
 ___
@@ -1274,7 +1273,7 @@ Example Number | Description
 1 | When 14:42 is submitted as a Louisiana Revised Statute LRS (6), LIBRS will need Qualifiers to determine if the offense should be classified as a forcible rape or as a forcible sodomy. If the offense is submitted as a **14:42/V**, this would translate to a forcible rape offense, whereas if this offense is submitted as a **14:42/A** this would translate to a forcible sodomy offense.<br><br>Without any Qualifiers, LIBRS has no way to determine which offense this LRS should be reported as, and the entire incident would be rejected. The agency will receive the following error message: 'This LRS Code must be submitted with a Qualifier to define offense applicable.'
 2 | If an incident involved a robbery (14:64) and a forcible rape (**14:42.1/V**), two LRS offenses should be submitted. The 14:64 does not require any Qualifier, but the 14:42.1 does require a Qualifier.
 3 | If two females were raped in an incident, two LRS offenses should be submitted for rape: One LRS should be reported for each victim -- in this case, both LRS codes should be submitted as 14:42.1/V for Victim 001 and **14:42.1/V** for Victim 002)
-4 | 14:90/G  --  “G” refers to a Qualifier (see Qualifier List) and would be reported to the FBI as the offense of Betting/Wagering (NIBRS 39A).
+4 | 14:90/G  --  "G" refers to a Qualifier (see Qualifier List) and would be reported to the FBI as the offense of Betting/Wagering (NIBRS 39A).
 5 | If the LRS offense is Aggravated Assault (14:87.2/F) and the Offender or the Arrestee was responsible for Accessory After the Fact then the agency would submit the following: 14:87.2/F-A. This will be reported to the FBI as an Aggravated Assault, Accessory After the Fact as the offense and for LIBRS reporting this will be considered as All Other Offenses (NIBRS 90Z).
 
 
@@ -1334,7 +1333,7 @@ LRS Code | Description | Warning Number | Warning Message
 {% assign error = site.data.error["22071"] -%}
 14:68 | LRS 14:68 will be reported to the FBI as All Other Larceny-Theft (NIBRS 23H) | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["22072"] -%}
-14:68 | When LRS 14:68 is submitted AND Property Description (DE 15) is “03", “05", “24", “28" or “37", Motor Vehicle Theft (NIBRS 240) | {{error.err_no}}| {{ error.err_message }} 
+14:68 | When LRS 14:68 is submitted AND Property Description (DE 15) is "03", "05", "24", "28" or "37", Motor Vehicle Theft (NIBRS 240) | {{error.err_no}}| {{ error.err_message }} 
 
 ____
 
@@ -1401,14 +1400,18 @@ ___
 
 ___
 
-**Data Characteristics:** 3 Character AlphaNumeric
+**Description:** The NIBRS Code that the Agency Supplies is what drives LIBRS Validation. The LRS Code is important to us for analytics purposes, however we use the NIBRS Code to effectively categroize LRS Codes into kinds of offenses, and then perform validation based on which category the LRS Code falls into. 
+
+The NIBRS Code also allows Officers to report Offenses in a more specific manner without having to go through the trouble of Subparts and Qualifiers. 
+
+**Data Characteristics:** 3 Character AlphaNumeric. Check [here](https://www.fbi.gov/file-repository/ucr/ucr-2019-1-nibrs-technical-specification.pdf) for a list of the current NIBRS Codes.
 
 ### Requirements:
 ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["06002"] -%}
+{% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["n6"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["90034"] -%}
 2 | {{error.err_desc["n6"]}} | {{error.err_no}} | {{ error.err_message }} 
@@ -1424,7 +1427,14 @@ ___
 
 ___
 
-**Data Characteristics:** 1 Character Alpha
+**Description:** Attempted/Completed is how to designate whether or not an Offense occurred to completion, or was merely attempted by the Offender. For instance, an Offender tries to steal a car, but is caught in the act by the police. Since the Offender didn't succeed in stealing the car, this offense would be Attempted. 
+
+The only thing to note about this is that Attempted Murder should be reported as a Completed Aggravated Assault (NIBRS 13A). NIBRS 09A, B, and C don't allow for an Attempted value, so instead it needs to be a Completed Aggravated Assault. Everything else works how you would expect.
+
+**Data Characteristics:** 1 Character Alpha. Cannot be left blank, and must have a value of either:
+
+* A - Attempted
+* C - Completed
 
 ### Requirements:
 ___
@@ -1435,10 +1445,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["7"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["12051"] -%}
 2 | {{error.err_desc["7"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["10077"] -%}
-3 | {{error.err_desc["7"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["11056"] -%}
-5 | {{error.err_desc["7"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -1501,7 +1507,9 @@ ___
 
 ___
 
-**Data Characteristics:** 1 Character Alpha
+**Description:**: Offender Suspected of Using/Gaming Motivation gives more context to the Offenses that are being reported. It tells us if an Offender is suspected of being on Drugs/Narcotics or has consumed Alcohol either during or shortly before the Incident Occurred. It also gives context of whether Computer Equipment was used to perpetrate the Crime, and if a Gaming/Gambling activity was a motivating factor in committing the crime.
+
+**Data Characteristics:** Up to 4x, 1 Character Alpha. If you use 'N', then you cannot use any other values, and values cannot repeat (EG: AAGG and CGN are both invalid combinations). At least one value is required to be present, but the other three slots are optional and can be left blank if nothing else applies. If another value does apply, then the mutual exclusivity and duplicate rules need to be followed.
 
 ### Requirements:
 ___
@@ -1510,14 +1518,12 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["8"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["11004"] -%}
+2 | {{error.err_desc["8"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["12006"] -%}
 3 | {{error.err_desc["8"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12007"] -%}
 4 | {{error.err_desc["8"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["11056"] -%}
-5 | {{error.err_desc["8"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["11004"] -%}
-6 | {{error.err_desc["8"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
 
@@ -1577,7 +1583,9 @@ _____
 ## Bias Motivation/Bias Crime Type (8A)
 ___
 
-**Data Characteristics:** 2 Character Alpha
+**Description:**: Bias Motivation/Crime Type gives insight into the motivation behind an Offender committing a crime. For instance, if the Offender committed the crime because of the Race or Religion of the Victim, that should be noted here. 
+
+**Data Characteristics:** 2 Character Alpha. Must be present and can't be blank. If there is no reason to suspect the Offender had a Bias Type against the Victim use '88' for None, but if not enough information is known about the Offender to determine whether or not a Bias Type was a factor in them committing the crime, use '99' for Unknown.
 
 ### Requirements:
 ___
@@ -1588,8 +1596,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["8a"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["8a"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["11056"] -%}
-3 | {{error.err_desc["8a"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
 ___
@@ -1597,6 +1603,8 @@ ___
 ### Notes: 
 * Bias Motivation/Bias Crime Type (8) indicates an Offender’s motivation to commit an offense because of their bias against a Victim’s race, religion, ethnicity, national origin, sexual orientation, disability group, or other bias.
 * Because of the difficulty in ascertaining the Offender's subjective motivation, bias is to be reported only when an investigation reveals sufficient objective facts to lead a reasonable and prudent person to conclude that the Offender's actions were motivated, in whole or in part, by bias.
+* In LIBRS, incidents not having facts that indicate biased motivation on the part of the Offender are to be coded as None (88), while incidents involving ambiguous facts (that is, where some facts are present, but not conclusive) are to be coded Unknown (99).
+* If any Bias Motivation/Bias Crime Type codes are used, other than None (88) or Unknown (99), then the incident will be considered a hate crime, and the Louisiana Revised Statute (DE 6) probably should be appended with the Hate Crime Penalty Enhancer (-H) to represent enhanced penalties related to hate crimes in LRS 14:107.2.
 
 ___
 
@@ -1640,9 +1648,6 @@ Enter only one code for each Offender Segment (40):
 
 <br>
 
-In LIBRS, incidents not having facts that indicate biased motivation on the part of the Offender are to be coded as None (88), while incidents involving ambiguous facts (that is, where some facts are present, but not conclusive) are to be coded Unknown (99).
-
-If any Bias Motivation/Bias Crime Type codes are used, other than None (88) or Unknown (99), then the incident will be considered a hate crime, and the Louisiana Revised Statute (DE 6) probably should be appended with the Hate Crime Penalty Enhancer (-H) to represent enhanced penalties related to hate crimes in LRS 14:107.2.
 
 ___
 
@@ -1651,7 +1656,9 @@ ___
 ## Location Type (9)
 ___
 
-**Data Characteristics:** 2 Character Alpha
+**Description:**: Location Type is used as a broad-strokes description of the Location in which an Incident Occurred. It's not meant to give particular location information about the location that an Incident occurred (EG: the Exact Address), but rather a short code that can be used for analytics purposes.
+
+**Data Characteristics:** 2 Character Alpha. Must be included and can't be blank.
 
 ### Requirements:
 ___
@@ -1662,8 +1669,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["9"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["9"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["11056"] -%}
-3 | {{error.err_desc["9"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -1727,7 +1732,11 @@ ___
 ## Number of Premises Entered (10)
 ___
 
-**Data Characteristics:** 2 Character **Alpha/Numeric**
+**Description:**: Number of Premises Entered is only to be used if the Incident contains a NIBRS 220 (Burglary) Offense, and the Location Type (DE 9) is 14 or 19. It is the number of individual/separate dwellings or units that were stolen from in the 220 Offense. For instance, a single Hotel may have been burgled, but a dozen units in that hotel were stolen from. Rather than 12 Offenses with the same location, you should use one Offense with a 12 in this Data Element.
+
+This Data Element should be left blank if the 220 Offense did not happen in a Hotel/Motel or Storage Facility, because these are the only two Location Types that can contain multiple, separate dwellings/units at the same address (Apartments each have an Apartment Number that you can send mail to, and therefore can be considered to be different places for the Time and Place consideration).
+
+**Data Characteristics:** 2 Character Numeric. If the described conditions don't apply, then this value should be left as Blank Spaces (G). Otherwise it should include a two digit number, using 01, 02, 03, etc... for single-digit numbers.
 
 ### Requirements:
 ___
@@ -1735,9 +1744,9 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["12002"] -%}
-2 | {{error.err_desc["10"]}} | {{error.err_no}} | {{ error.err_message }} 
+1 | {{error.err_desc["10"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["12052"] -%}
-3 | {{error.err_desc["10"]}} | {{error.err_no}} | {{ error.err_message }} 
+2 | {{error.err_desc["10"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
 ___
@@ -1765,7 +1774,9 @@ ___
 
 ___
 
-**Data Characteristics:** 1 Character Alpha
+**Description:**: Method of Entry should only be used when there is an Offense Type of NIBRS 220. Unlike Number of Premises Entered (DE 10), there is no restriction on if it can only be used with certain Location Types. Any location Type that is valid for use in a Burglary should include this Data Element. The available values are 'F' for Forced Entry (breaking of a window or door to gain access) and 'N' for Non-Forced Entry (picking a lock or going through an open window to gain access).
+
+**Data Characteristics:** 1 Character Alpha. Should be left blank unless the NIBRS Code is a 220 (Burglary) Offense.
 
 ### Requirements:
 ___
@@ -1834,11 +1845,17 @@ ___
 
 <div class="newpage"></div>
 
+## Type of Criminal Activity/Gang Information (12)
+
+Type of Criminal Activity and Gang Information are combined into a single Data Element. This portion is split into two sections to outline the requirements for each. Which aspect of the Data Element should be used is dependent on the NIBRS Code of the Offense. 
+
 ## Type of Criminal Activity Nos. 1, 2 and 3 (12)
 
-This section is split into two parts. The first part details the requirements when DE 12 is used as a Type of Criminal Activity descriptor, and the second when used as a Gang Activity descriptor. 
+___
 
-**Data Characteristics**: 1 Character Alpha
+**Description:** Type of Criminal Activity is used to add context to Offenses for when they're passed on to the FBI. For instance, a 35A Offense could just as easily be a single person with some Marijuana on them, or a major drug bust with millions of Dollars of narcotics involved. Adding a value here gives the FBI that context when it comes to Offenses that can be open-ended like that.
+
+**Data Characteristics**: Up to 3x, 1 Character Alpha. If none apply, then leave this Data Element blank. If more than one apply, then make sure that there aren't any duplicate values being reported (EG: BBB).
 
 ### Requirements (Criminal Activity):
 ___
@@ -1854,7 +1871,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["12019"] -%}
 3 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["90031"] -%}
-3G | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
+4 | {{error.err_desc["12"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
@@ -1914,8 +1931,12 @@ ___
 <div class="newpage"></div>
 
 ## Gang Information Nos. 1, 2 and 3 (12)
-
 ___
+
+**Description:** Gang Information is used to add context to Offenses for when they're passed on to the FBI, and is used with violent and more serious crimes (Rape, Murder, Robbery, Kidnapping, etc...). 
+
+**Data Characteristics**: Up to 3x, 1 Character Alpha. If none apply, then use 'N' for None/Unknown. If more than one apply, then make sure that there aren't any duplicate values being reported (EG: JGJ). If 'N' for None or Unkonwn is used, then no other codes can be entered with it and the remaining two spaces for data must remain as Blank Spaces.
+
 
 ### Requirements (Gang Activity):
 ___
@@ -1992,7 +2013,11 @@ ___
 
 ## Type of Weapon/Force Involved Nos. 1, 2 and 3 (13)
 
-**Data Characteristics:** 3 Character Alpha
+___
+
+**Description:** Type of Weapon/Force Involved allows Officers to report what kind of weapons were used by an Offender to commit an Offense. It is restricted for use with Certain NIBRS Codes (listed in Requirement 4 below). If one of these NIBRS Codes is present, then this Data Element has to have a value, otherwise it cannot have a value and should be all blanks. 
+
+**Data Characteristics:** Up to 3x, 3 Character Alpha/Numeric. First two characters should be a number that corresponds to the List of [Available Data Element Values](./data-element-values), and the third character is used as the Automatic Weapon Designator, which is and can only be used to designate if a Firearm was an Automatic Weapon or not. If 'N' for None is used, then no other Values can be included in the other slots for the Data Element.
 
 ### Requirements :
 ___
@@ -2007,9 +2032,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 3 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["12019"] -%}
 4 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["12058"] -%}
-5 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["12055"] -%}
+5 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["12058"] -%}
 6 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["12065"] -%}
 7 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
@@ -2017,16 +2042,11 @@ Requirement  | Requirement Description | Error Number | Error Message
 8 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["12069"] -%}
 9 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error[""] -%}
-10 | For Human Trafficking Offenses (NIBRS Codes 64A, 64B and 40C), a data value for Type of Weapon/Force Involved (13) MUST be specified.||
+{% assign error = site.data.error["13100"] -%}
+10 | {{error.err_desc["13"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["90036"] -%}
 11 | {{error.err_desc["13"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["84021"] -%}
-12 | {{error.err_desc["13"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["84018"] -%}
-13 | {{error.err_desc["13"]}} | {{error.err_no}} | {{ error.err_message }}
-{% assign error = site.data.error["13100"] -%}
-13 | {{error.err_desc["13"]}} | {{error.err_no}} | {{ error.err_message }} 
+
 
 ___
 
@@ -2034,6 +2054,7 @@ ___
 * This data element is used to enter the Type of Weapon/Force Used (13) by an Offender.
 * Append an "A" if the weapon is automatic.
   * Any firearm that can fire more than one shot by a single pull of the trigger without manual reloading is classified as an Automatic Firearm.
+* Something like a Bump Stock, which is designed to simulate Automatic Fire, should not be considered Automatic because it does not meet the requirement of a single trigger pull firing more than one round. Instead it is multiple trigger pulls that are in quick succession. 
 
 ___
 
@@ -2091,25 +2112,29 @@ ___
 
 ## Property Sequence Number (P1)
 
-**Data Characteristics:** 3 Character Numeric
+___
+
+**Description:** Property Sequence Number is a uniquely identifying number for each Property that's included in the Incident. It is used to link Properties to Offenses in Segment 33's. The same Property Sequence Number can be used Multiple Times across Segment 33's in an Incident, because it's possible for a Property to be involved in more than one Offense.
+
+**Data Characteristics:** 3 Character Numeric. Must be front-padded with zeros to make a three-digit number (EG: 1 would be 001). Must be unique for each Segment 31.
 
 ### Requirements :
 ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["90019"] -%}
-1 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["90020"] -%}
-2 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["12006"] -%}
+1 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90019"] -%}
+2 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90020"] -%}
 3 | {{error.err_desc["p1"]}} | {{error.err_no}}| {{ error.err_message }}
 
 
 ___
 
 ### Notes:
-Each property in an incident must be assigned a unique sequence number from "001" to "999".
+* Each property in an incident must be assigned a unique sequence number from "001" to "999".
 
 ___
 
@@ -2117,9 +2142,9 @@ ___
 
 ## Property Sequence Number Reference (P1R)
 
-**\*\*\* New Data Element in LIBRS 2.5 \*\*\***
+**Description:** Property Sequence Number Reference is only used in Segment 33 to link Properties to Offenses. It should be present in each Segment 33 in the Incident, and should refernce the value of one of the Property Seqence Numbers (DE P1) in the Property Description Segments (Segment 31). 
 
-**Data Characteristics:** 3 Character Numeric
+**Data Characteristics:** 3 Character Numeric. Must be front-padded with zeros to make a three-digit number (EG: 1 would be 001). May repeat across multiple Segment 33's, as a single property can be involved in more than one Offense.
 
 ### Requirements :
 ___
@@ -2146,35 +2171,36 @@ ___
 
 ## Type of Property Loss (14)
 
-**Data Characteristics**: 1 Character Numeric
+**Description:** Type of Property Loss is used to describe the condition of a Property that's associated with in an Offense. The usage of values for Property Loss Type is limited to the NIBRS Code of the Offense that the Property is associated with, as well as whether or not the Offense was Attempted or Completed. You can see the full list of what Loss Types you can use with which NIBRS Codes on the [Allowable Property Loss Types By NIBRS](./data-element-values#allowable-property-loss-types-de-14-by-nibrs-and-attempedcompleted) Table.
+
+**Data Characteristics**: 1 Character Numeric. Mandatory for each Segment 31 (Property Description Segment) that is included in the Incident.
 
 ### Requirements :
 ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["11004"] -%}
-2 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13052"] -%}
-3 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13019"] -%}
-4 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["10072"] -%}
-5 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["84203"] -%}
-8 | {{error.err_desc["14"]}} | {{error.err_no}}, 84304, 84312 | {{ error.err_message }}
-{% assign error = site.data.error["13087"] -%}
-9 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
+1 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["10077"] -%}
+2 | {{error.err_desc["14"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["10081"] -%}
-10 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
+3 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["11004"] -%}
+4 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13019"] -%}
+5 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13052"] -%}
+6 | {{error.err_desc["14"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ____
 
 ### Notes:
 * Type of Property Loss (14) describes the various type(s) of property loss that can occur during an incident, such as Recovery, Seizure, etc.
-* Every different type of property loss that occurs during an incident must be submitted in a separate Property Description Segment (31), when the incident involved one or more of the Offenses listed above.
+* Every different type of property loss that occurs during an incident must be submitted in a separate Property Description Segment (31), when the incident involved one or more of the Offenses listed above. For instance if a Property is stolen and then recovered, there should be two Property Description Segments (Segment 31) that have a Property Loss Type of 7 for Stolen and 5 for Recovered.
 
 ### Allowed Entries:
+
 ___
 
 Enter only one (1) code for each Property Description Segment. However, as many property segments as applicable can be submitted per incident:
@@ -2219,7 +2245,9 @@ To see a list of which Property Loss Types are available for each NIBRS Code bas
 ## Property Description (15)
 ___
 
-**Data Characteristics:** 2 Character **Alpha/**Numeric
+**Description:** Property Description is a value that corresponds to a list of the kinds of Properties that can be reported to the State and FBI. 
+
+**Data Characteristics:** 2 Character Numeric between 01 and 99 that corresponds to a value of the List of [Available Data Element Values](./data-element-values). Required field when Property Loss Type is not 1 or 8.
 
 ### Requirements :
 ___
@@ -2228,23 +2256,22 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13053"] -%}
-3 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["10072"] -%}
-5 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13072"] -%}
-6 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13090"] -%}
-6 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
+2 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13075"] -%}
-6 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
+3 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13087"] -%}
+4 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13090"] -%}
+5 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13101"] -%}
 6 | {{error.err_desc["15"]}} | {{error.err_no}}| {{ error.err_message }}
+
 
 ___
 
 ### Notes:
-* Property Description (DE 15) is to be used to enter descriptions of the property that was burned, counterfeited, destroyed/damaged/ vandalized, etc., during, or as a result of, the incident.
+* Property Description (DE 15) is to be used to enter descriptions of the property that was burned, counterfeited, destroyed/damaged/vandalized, etc., during, or as a result of, the incident.
 
 ### Allowed Entries: 
 ___
@@ -2287,27 +2314,36 @@ Enter one Property Description (DE 15) code per Property Description (31) Segmen
 
 ## Value of Property (16)
 
-**Data Characteristics:** 9 Character Numeric
+**Description:** Value of Property is the a 9-digit number that references the whole-dollar value of the Property that is described in Segment 31. For example, a property with a value of $1000 would have a Property Value of '000001000'.
+
+**Data Characteristics:** 9 Character Numeric. Must be front-padded with Zero's (0) to make a nine-digit number. Cannot contain any blank spaces or periods (.) to act as Decimals. All Property Values should be rounded up to the nearest whole dollar value.
 
 ### Requirements :
 ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["13002"] -%}
-1 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13051"] -%}
-2 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13091"] -%}
-3 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13054"] -%}
-4 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["10084"] -%}
-5 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
+1 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13002"] -%}
+2 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13042"] -%}
+3 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13051"] -%}
+4 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13053"] -%}
+5 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13054"] -%}
 6 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13073"] -%}
 7 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13091"] -%}
+8 | {{error.err_desc["16"]}} | {{error.err_no}}| {{ error.err_message }}
+
+
+
+
+
 
 
 ___
@@ -2315,7 +2351,7 @@ ___
 ### Notes:
 * Value of Property (16) is to be used to enter the total dollar value of property that was burned (includes damage caused in fighting the fire), counterfeited, destroyed/damaged/ vandalized, recovered, seized, stolen, etc., as a result of the incident.
 * DO NOT INCLUDE partial dollar amounts (cents).  Round values to the nearest whole dollar amounts.  If the value is unknown, enter one dollar ($1.00), that is, "000000001".
-* If value is known and it is between $1.00 and $2.00 the reporting agency should enter $2.00, that is, "000000002".  This is the minimum dollar value that can be entered in Value of Property (16), as "1" (or “000000001”) is used for Unknown.
+* If value is known and it is between $1.00 and $2.00 the reporting agency should enter $2.00, that is, "000000002".  This is the minimum dollar value that can be entered in Value of Property (16), as "1" (or "000000001") is used for Unknown.
 
 ### Examples:
 ___
@@ -2627,8 +2663,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["23"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15051"] -%}
 3 | {{error.err_desc["23"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["11056"] -%}
-4 | {{error.err_desc["23"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["11004"] -%}
 6 | {{error.err_desc["23"]}} | {{error.err_no}}| {{ error.err_message }} 
 
@@ -2769,8 +2803,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 6 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["22110"] -%}
 7 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["11056"] -%}
-10 | {{error.err_desc["25"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84021"] -%}
 11 | {{error.err_desc["25"]}} | {{error.err_no}} | {{ error.err_message }} 
 {% assign error = site.data.error["84018"] -%}
@@ -4333,9 +4365,9 @@ ___
 
 ### Notes:
 * Multiple Arrestee Segment Indicator (44) ensures that an Arrestee is counted (scored) only once when the Arrestee's apprehension causes the Arresting Agency to submit two or more Arrestee Segments (60) concerning separate Incident Reports. That is, the Arrestee was involved in more than one crime incident and his/her arrest data are duplicated in each Incident Report.` 
-  * In such a situation, Count Arrestee (“C”) is to be entered into one of the Arrestee Segments (60), and Multiple (M) is to be entered into all of the remaining Arrestee Segments (60). 
-  * If the Arrestee's apprehension DOES NOT cause the Arresting Agency to submit multiple Arrestee Segments (60), enter Not Applicable (“N”).
-* Count Arrestee (“C”) and Multiple ("M") codes are to be used in this Data Element (44) ONLYwhen the same agency submits two or more Arrestee Segments (for different incidents) relating to the same Arrestee.
+  * In such a situation, Count Arrestee ("C") is to be entered into one of the Arrestee Segments (60), and Multiple (M) is to be entered into all of the remaining Arrestee Segments (60). 
+  * If the Arrestee's apprehension DOES NOT cause the Arresting Agency to submit multiple Arrestee Segments (60), enter Not Applicable ("N").
+* Count Arrestee ("C") and Multiple ("M") codes are to be used in this Data Element (44) ONLYwhen the same agency submits two or more Arrestee Segments (for different incidents) relating to the same Arrestee.
 
 ### Allowed Entries:
 ___
@@ -5624,7 +5656,7 @@ ___
 
 #### Requirements:
 
-Incidents submitted with an ARSON (Crime Against Property) offense (NIBRS Code “200”) should receive **one** of the following two error messages, as appropriate.
+Incidents submitted with an ARSON (Crime Against Property) offense (NIBRS Code "200") should receive **one** of the following two error messages, as appropriate.
 
 ___
 
@@ -5679,7 +5711,7 @@ ___
 
 #### Requirements:
 
-Incidents submitted with an offense of BRIBERY (Crime Against Property) offense (NIBRS Code “510”) should receive the following **five** error messages, as appropriate:
+Incidents submitted with an offense of BRIBERY (Crime Against Property) offense (NIBRS Code "510") should receive the following **five** error messages, as appropriate:
 
 ___
 
