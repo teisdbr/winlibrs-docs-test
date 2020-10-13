@@ -2367,7 +2367,9 @@ Example Number | Description
 ## Date Recovered (17)
 ___
 
-**Data Characteristics:** 8 Character Date
+**Description:** Date Recovered is the date in with a Property that was previously stolen was recovered. Any Segment 31 that has a Property Loss Type os '5 - Recovered' needs to have a Date Recovered. Otherwise, the Data Element should be Blank Spaces.
+
+**Data Characteristics:** 8 Character Date in MMDDYYYY Format. Required if Property is recovered, Blank Spaces if not.
 
 **Format:** MMDDYYYY
 
@@ -2375,18 +2377,18 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["13001"] -%}
-1 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13007"] -%}
-1 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["11005"] -%}
+1 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13001"] -%}
 2 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13056"] -%}
+{% assign error = site.data.error["13007"] -%}
 3 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13055"] -%}
 4 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13056"] -%}
+5 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["23235"] -%}
-4 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
+6 | {{error.err_desc["17"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -2403,7 +2405,9 @@ ____
 
 ___
 
-**Data Characteristics:** 2 Character **Alpha/Numeric**
+**Description:** Number of Stolen Vehicles is the sum of the Segment 31's that have a Property Description containing a Vehicle and a Property Loss Type of '7 - Stolen'. For it to appear in Segment 30 with any value other than Zero (0), there must be Segment 31's present in the Incident that meet those conditions. 
+
+**Data Characteristics:** 2 Characters Numeric. If less than 10 a Zero (0) should be in the first character (EG: 01, 02, 03, etc...)
 
 ### Requirements:
 
@@ -2417,14 +2421,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13059"] -%}
 3 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["22065"] -%}
-5 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["22071"] -%}
-6 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["22072"] -%}
-7 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["23220"] -%}
-8 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13057"] -%}
 8 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
 
