@@ -2407,7 +2407,7 @@ ___
 
 **Description:** Number of Stolen Vehicles is the sum of the Segment 31's that have a Property Description containing a Vehicle and a Property Loss Type of '7 - Stolen'. For it to appear in Segment 30 with any value other than Zero (0), there must be Segment 31's present in the Incident that meet those conditions. 
 
-**Data Characteristics:** 2 Characters Numeric. If less than 10 a Zero (0) should be in the first character (EG: 01, 02, 03, etc...)
+**Data Characteristics:** 2 Characters Numeric. If less than 10, a Zero (0) should be in the first character (EG: 01, 02, 03, etc...). Should always have a value when Segment 30 is present, using '00' if no Motor Vehicle Thefts (NIBRS 240) are present.
 
 ### Requirements:
 
@@ -2417,12 +2417,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["13002"] -%}
 1 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13058"] -%}
-2 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13059"] -%}
-3 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13057"] -%}
-8 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
+2 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13058"] -%}
+3 | {{error.err_desc["18"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -2437,7 +2435,9 @@ ____
 
 ## Number of Recovered Motor Vehicles (19)
 
-**Data Characteristics:** 2 Character **Alpha/Numeric**
+**Description:** The Number of Recovered Motor Vehicles, similar to DE 18, is the number of Property Description Segments (Segment 31) that have a Property Description (DE 15) that contains a Vehicle, and a Property Loss Type (DE 14) of '5 - Recovered'.
+
+**Data Characteristics:** 2 Characters Numeric. If less than 10, a Zero (0) should be in the first character (EG: 01, 02, 03, etc...). Should always have a value when Segment 30 is present, using '00' if no vehicle recoveries are present in the Incident.
 
 ### Requirements:
 
@@ -2445,16 +2445,15 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["13002"] -%}
-1 | {{error.err_desc["19"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13060"] -%}
-2 | {{error.err_desc["19"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["10073"] -%}
-3 | {{error.err_desc["19"]}} | {{error.err_no}}| {{ error.err_message }}
+1 | {{error.err_desc["19"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13002"] -%}
+2 | {{error.err_desc["19"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13061"] -%}
 4 | {{error.err_desc["19"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13059"] -%}
-5 | {{error.err_desc["19"]}} | {{error.err_no}}| {{ error.err_message }}
+
+
+
 
 ___
 
@@ -2469,7 +2468,9 @@ ___
 
 ## Suspected Drug Type (20)
 
-**Data Characteristics:** 2 Character Alpha
+**Description:** Suspected Drug Type is a short code that is used to identify the type of Drug(s) that were found for NIBRS 35A Offenses. Should only be included when there's a 35A Offense Involved that is Completed, and has a Property Loss Type of '1 - None' or '6 - Seized'. Otherwise it should remain Blank Spaces.
+
+**Data Characteristics:** 2 Character Alpha. Should be left as Blank Spaces (G) if the conditions for usage listed in the requirements is not met.
 
 ### Requirements:
 
@@ -2477,18 +2478,16 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["13065"] -%}
-1 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13066"] -%}
-2 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["11004"] -%}
-3 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
+1 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13064"] -%}
-4 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
+2 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13065"] -%}
+3 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13092"] -%}
-5 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
+4 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["23201"] -%}
-6 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
+5 | {{error.err_desc["20"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -2542,7 +2541,9 @@ ___
 
 ## Estimated Drug Quantity (21)
 
-**Data Characteristics:** 13 Character **Alpha/Numeric**
+**Description:** Estimated Drug Quantity is the amount of a Drug or Narcotic that was involved in a Completed, NIBRS 35A Offense that has a Property Loss Type of '1 - None' or '6 - Seized'. Note that there is a decimal in the Format. This decimal should only be included if the Data Element is supposed to be included (EG: You're not supposed to enter 'GGGGGGGGG.GGG' (Where G is a Blank Space) if this Data Element shouldn't have a value; instead enter all blanks).
+
+**Data Characteristics:** 13 Character Alpha/Numeric. The only Alpha Character is supposed to be the Decimal that occurrs in position 10 of the Data Element. Otherwise everything is expected to be Numeric. Should also be front-padded with zeros as needed. Significant Figures don't matter here, and you should always include the decimals after the whole number. (EG: Even though 100.000 and 100 are the same thing, you should still include the decimal places and submit '000000100.000')
 
 **Format:** #########.###
 
@@ -2554,9 +2555,11 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["13002"] -%}
 1 | {{error.err_desc["21"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13064"] -%}
+2 | {{error.err_desc["21"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13065"] -%}
 3 | {{error.err_desc["21"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13064"] -%}
+{% assign error = site.data.error["13066"] -%}
 4 | {{error.err_desc["21"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
@@ -2575,7 +2578,9 @@ ___
 
 ## Type Drug Measurement (22)
 
-**Data Characteristics:** 2 Character Alpha
+**Description:** Drug Type Measurement is a shortcode that indicates the units for the Estimated Drug Quantity (DE 21). Not all units can be used with all Suspected Drug Types (DE 20). For instance 'NP - Number of Plants' shouldn't be used with something liek Amphetamines. However for the most part drugs these days come in many forms, so use whichever Measurement Type makes the most sense (Volume for Liquids, Weight for loose Solids, Units for Pills, etc...)
+
+**Data Characteristics:** 2 Character Alpha. Must be included if Estimated Drug Quantity (DE 21) has a value.
 
 ### Requirements:
 
@@ -2585,16 +2590,14 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13065"] -%}
-2 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13084"] -%}
-5 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13064"] -%}
-4 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["13066"] -%}
-4 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
+2 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13065"] -%}
+3 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["13067"] -%}
 4 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["13084"] -%}
+5 | {{error.err_desc["22"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 

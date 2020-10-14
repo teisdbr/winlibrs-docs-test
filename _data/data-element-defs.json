@@ -1224,7 +1224,7 @@
 				]
 			},
 			{
-				"title": "Capacity Category",
+				"title": "Volume Category",
 				"values": [{
 						"code": "ML",
 						"desc": "Milliliter"
