@@ -1339,58 +1339,47 @@
 			"title": "",
 			"values": [{
 					"code": "01",
-					"desc": "Responding to 'Disturbance Calls' (LIBRS Only)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Responding to Disturbance Calls"
 				},
 				{
 					"code": "02",
-					"desc": "Burglaries in Progress or Pursuing Burglary Suspects (LIBRS Only)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Burglaries in Progress or Pursuing Burglary Suspects"
 				},
 				{
 					"code": "03",
-					"desc": "Robberies in Progress or Pursuing Robbery Suspects (LIBRS Only)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Robberies in Progress or Pursuing Robbery Suspects"
 				},
 				{
 					"code": "04",
-					"desc": "Attempting Other Arrests (LIBRS Only)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Attempting Other Arrests"
 				},
 				{
 					"code": "05",
-					"desc": "Civil Disorder (LIBRS Only)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Civil Disorder"
 				},
 				{
 					"code": "06",
-					"desc": "Handling, Transporting, Custody of Prisoners (LIBRS Only)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Handling, Transporting, Custody of Prisoners"
 				},
 				{
 					"code": "07",
-					"desc": "Investigating Suspicious Persons or Circumstance",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Investigating Suspicious Persons or Circumstance"
 				},
 				{
 					"code": "08",
-					"desc": "Ambush - No Warning (LIBRS Only)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Ambush - No Warning"
 				},
 				{
 					"code": "09",
-					"desc": "Mentally Deranged Assailant (LIBRS Only)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Handling Persons with Mental Illness"
 				},
 				{
 					"code": "10",
-					"desc": "Traffic Pursuits and Stops (LIBRS Only)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Traffic Pursuits and Stops"
 				},
 				{
 					"code": "11",
-					"desc": "All Other (LIBRS Only)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "All Other"
 				}
 			]
 		}]
@@ -1406,38 +1395,31 @@
 			"title": "",
 			"values": [{
 					"code": "F",
-					"desc": "Two-Officer Vehicle",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Two-Officer Vehicle"
 				},
 				{
 					"code": "G",
-					"desc": "One-Officer Vehicle (Alone)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "One-Officer Vehicle (Alone)"
 				},
 				{
 					"code": "H",
-					"desc": "One-Officer Vehicle (Assisted)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "One-Officer Vehicle (Assisted)"
 				},
 				{
 					"code": "I",
-					"desc": "Detective or Special Assignment (Alone)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Detective or Special Assignment (Alone)"
 				},
 				{
 					"code": "J",
-					"desc": "Detective or Special Assignment (Assisted)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Detective or Special Assignment (Assisted)"
 				},
 				{
 					"code": "K",
-					"desc": "Other (Alone)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Other (Alone)"
 				},
 				{
 					"code": "L",
-					"desc": "Other (Assisted)",
-					"comment": "09A, 13A, 13B, 13C"
+					"desc": "Other (Assisted)"
 				}
 			]
 		}]

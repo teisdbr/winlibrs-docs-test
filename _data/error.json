@@ -176,7 +176,7 @@
         "err_no": 10070,
         "err_message": "THE CORRESPONDING OFFENDER RECORD MUST BE PRESENT",
         "err_desc": {
-            "34": "A corresponding Offender Segment (40) must be present for each Victim."
+            "34": "Offender Number to be Related (DE 34) must match one of the Offender Sequence Numbers (DE 36) present in the Offender Segment(s) (Segment 40)."
         }
     },
     "10071": {
@@ -1381,7 +1381,7 @@
         "err_no": 14054,
         "err_message": "AGE OF VICTIM AND OFFENDER DOES NOT REFLECT THE RELATIONSHIP",
         "err_desc": {
-            "35": "The Age of Victim and Age of Offender must reflect the implied relationship. The following relationships imply that the Age of Victim (DE 26) that is <b>younger</b> than the Age of Offender (DE 37): {::nomarkdown}<ul><li>CH - Victim was Child</li><li>GC - Victim was Grandchild</li><li>BE - Victim was Babysitee (the Baby)</li></ul>{:/} The following relationships imply that the Age of Victim (DE 26) that is <b>older</b> than the Age of Offender (DE 37):{::nomarkdown}<ul><li>PA - Victim was Parent</li><li>GP - Victim was Grandparent</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim Must be **Same Age**:{::nomarkdown}<ul><li>VO - Victim was Offender</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim Must be **At Least 10 Yrs Old**:{::nomarkdown}<ul><li>SE - Victim was Spouse</li><li>ES - Victim was Estranged Spouse</li><li>CS - Victim was Common-Law Spouse</li><li>XS - Victim was Ex-Spouse</li><li>NM - Victim was Non-Married Live-In</li></ul>{:/}"
+            "35": "The Age of Victim and Age of Offender must reflect the implied relationship. The following relationships imply that the Age of Victim (DE 26) that is <b>Younger</b> than the Age of Offender (DE 37): {::nomarkdown}<ul><li>CH - Victim was Child</li><li>GC - Victim was Grandchild</li><li>BE - Victim was Babysitee (the Baby)</li></ul>{:/} The following relationships imply that the Age of Victim (DE 26) that is <b>Older</b> than the Age of Offender (DE 37):{::nomarkdown}<ul><li>PA - Victim was Parent</li><li>GP - Victim was Grandparent</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim must be **Same Age**:{::nomarkdown}<ul><li>VO - Victim was Offender</li></ul>{:/}The following Implied Age Difference Between Victims and Offenders where victim must be **At Least 10 Yrs Old**:{::nomarkdown}<ul><li>SE - Victim was Spouse</li><li>ES - Victim was Estranged Spouse</li><li>CS - Victim was Common-Law Spouse</li><li>XS - Victim was Ex-Spouse</li><li>NM - Victim was Non-Married Live-In</li></ul>{:/}"
         }
     },
     "14055": {
@@ -1612,7 +1612,7 @@
     "15057": {
         "active": "false",
         "err_no": 15057,
-        "err_message": "WHEN DATA ELEMENT 32 IS ENTERED, DATA ELEMENT 31 MUST EQUAL '20' OR '21' UN LESS TYPE OF VICTIM IS EQUAL TO 'L' = LAW ENFORCEMENT OFFICER",
+        "err_message": "WHEN DATA ELEMENT 32 IS ENTERED, DATA ELEMENT 31 MUST EQUAL '20' OR '21'",
         "err_desc": {
             "32": "When this Data Element (32) is entered and Type of Victim (25) is Individual ('I'), Aggravated Assault/Homicide Circumstance (31) MUST show one of the following Justifiable Homicide (<b>09C</b>) Circumstances: {::nomarkdown}<ul><li>20 Criminal Killed by Private Citizen</li><li>21 Criminal Killed by Police Officer</li></ul>{:/}"
         }
@@ -1620,14 +1620,14 @@
     "15058": {
         "active": "true",
         "err_no": 15058,
-        "err_message": "VICTIM TYPE(25) MUST BE 'I' OR 'L' FOR DATA TO BE ENTERED",
+        "err_message": "VICTIM TYPE (25) MUST BE 'I' OR 'L' FOR DATA TO BE ENTERED",
         "err_desc": {
-            "34": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered.",
-            "30": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered.",
-            "29": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered.",
-            "28": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered.",
-            "27": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered.",
-            "26": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered."
+            "34": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered, and should not be entered if the Victim Type (DE 25) is not.",
+            "30": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered, and should not be entered if the Victim Type (DE 25) is not.",
+            "29": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered, and should not be entered if the Victim Type (DE 25) is not.",
+            "28": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered, and should not be entered if the Victim Type (DE 25) is not.",
+            "27": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered, and should not be entered if the Victim Type (DE 25) is not.",
+            "26": "Type of Victim (DE 25) must be 'I - Individual' or 'L - Law Enforcement' in order for data to be entered, and should not be entered if the Victim Type (DE 25) is not."
         }
     },
     "15059": {
@@ -1635,7 +1635,7 @@
         "err_no": 15059,
         "err_message": "NEED A CRIME AGAINST PERSON OR ROBBERY FOR DATA TO BE ENTERED",
         "err_desc": {
-            "34": "In order for Offender Number to be Related to have a value, the offense must either be a Robbery (NIBRS 120), or a Crime Against Person: {::nomarkdown}<script>document.write(window.derequiresnibrs.de34)</script>{:/}"
+            "34": "In order for Offender Number to be Related to have a value, the offense must either be a Robbery (NIBRS 120), or a Crime Against Person: {::nomarkdown}<script>document.write(window.derequiresnibrs.de34)</script>{:/} Additionally this value should be supplied when the NIBRS Code Associated with it is a **64A, 64B,** or **40C**."
         }
     },
     "15060": {
@@ -1779,7 +1779,7 @@
         "err_no": 15079,
         "err_message": "SIMPLE ASSAULT (13B) CANNOT HAVE 'MAJOR INJURIES'",
         "err_desc": {
-            "33": "When Offense Connected to Victim Sequence Number (DE 24) relates to the Offense of Simple Assault (NIBRS '13B'), the permissible codes for Type of Injury (DE 33) are 'M - Apparent Minor Injury' and 'N - None'. Any other Injury type would constitute a Major Injury, which would mean NIBRS 13A (Aggravated Assault) should be used, instead of 13B."
+            "33": "When Offense Connected to Victim Sequence Number (DE 24) relates to a NIBRS 13B Offense (Simple Assault), any Injury Types other than 'M - Apparent Minor Injury' and 'N - None' are not permitted. Use NIBRS 13A (Aggravated Assault) if Injury Type is more severe."
         }
     },
     "15080": {
@@ -2387,7 +2387,7 @@
         "err_no": 22120,
         "err_message": "AGE DOES NOT INDICATE CHILD IS THE VICTIM CONNECTED TO THIS OFFENSE",
         "err_desc": {
-            "31": "If Non-Negligent Circumstances (DE 31) is Child Abuse ('40'), then the Victim that is Connected to this Offense must have an age that equals {::nomarkdown}<ul><li>NN, NB, BB</li><li>01-16, or 01-16 with a trailing 'E'</li></ul>{:/}."
+            "31": "If Non-Negligent Circumstances (DE 31) is Child Abuse ('40'), then the Victim that is Connected to this Offense must have an age that equals {::nomarkdown}<ul><li>NN, NB, BB</li><li>01-16, or 01-16 with a trailing 'E'</li></ul>{:/}"
         }
     },
     "22125": {
@@ -3371,19 +3371,25 @@
         "err_message": "LRS = 13 B IS APPLICABLE WHEN VICTIM TYPE IS 'L'."
     },
     "90003": {
-        "active": "true",
+        "active": "false",
         "err_no": 90003,
-        "err_message": "ONLY TWO CODES ARE ALLOWED IN DE 31."
+        "err_message": "ONLY TWO CODES ARE ALLOWED IN DE 31"
     },
     "90004": {
         "active": "true",
         "err_no": 90004,
-        "err_message": "ONLY ONE CODE ARE ALLOWED IN DE 31."
+        "err_message": "ONLY ONE CODE ARE ALLOWED IN DE 31",
+        "err_desc":{
+            "31": "For 09B and 09C Offenses, only one Aggravated Assault/Homicide Circumstance can be used."
+        }
     },
     "90005": {
         "active": "true",
         "err_no": 90005,
-        "err_message": "INVALID DE 31 CODE FOR THIS OFFENSE."
+        "err_message": "INVALID DE 31 CODE FOR THIS OFFENSE.",
+        "err_desc":{
+            "31": "The chosen Aggravated Assault/Homicide Circumstance that was used for this Offense is not valid for the NIBRS Code. Please refer to the List of [Available Data Element Values](./data-element-values) to find an appropriate selection to use."
+        }
     },
     "90006": {
         "active": "false",
@@ -3427,9 +3433,12 @@
         }
     },
     "90014": {
-        "active": "false",
+        "active": "true",
         "err_no": 90014,
-        "err_message": "WARNING: FOR DE 31, AT MOST TWO ASSAULT CIRCUMSTANCE ARE ALLOWED. THE 3RD ASSAULT CIRCUMSTANCE WILL BE IGNORED."
+        "err_message": "WARNING: FOR DE 31, AT MOST TWO ASSAULT CIRCUMSTANCE ARE ALLOWED. THE 3RD ASSAULT CIRCUMSTANCE WILL BE IGNORED.",
+        "err_desc":{
+            "31": "The third Aggravated Assault/Homicide Circumstance has been deprecated and will not be included in your submission."
+        }
     },
     "90016": {
         "active": "true",
@@ -3545,9 +3554,9 @@
     "90029": {
         "active": "true",
         "err_no": 90029,
-        "err_message": "INVALID TYPE OF WEAPON / FORCE INVOLVED(DATA ELEMENT 13) OR INJURY TYPE(DATA ELEMENT 33) WITH AN OFFENSE OF NIBRS = 13 A;INJURY TYPE(DATA ELEMENT 33) CANNOT BE 'M' or 'N' WITH THE GIVEN TYPE OF WEAPON / FORCE = 'PERSONAL WEAPON'",
+        "err_message": "INVALID TYPE OF INJURY (DE 33) WITH SELECTED TYPE OF WEAPON/FORCE INVOLVED (DE 13)",
         "err_desc": {
-            "33": "When the Offense Connected to Victim Sequence Number (24) relates to the Offense of Aggravated Assault (NIBRS '13A'), then Type of the Injury **cannot be** 'M' or 'N' with the Type of Weapon/Force Involved = 'Personal Weapon (40)'."
+            "33": "Type of the Injury cannot be 'M - Apparent Minor Injury' or 'N - None' When: {::nomarkdown}<ul><li>The Offense Connected to Victim Sequence Number (DE 24) is a NIBRS 13A</li><li>The Type of Weapon/Force Involved = '40 - Personal Weapon'</li></ul>{:/}"
         }
     },
     "90031": {

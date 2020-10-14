@@ -561,7 +561,7 @@ More information and common questions and errors can be found on the LIBRS FAQ f
    [29](./librs-spec#ethnicity-of-victim-29)                          | Ethnicity                                                 | 42          | 1       | A
    [30](./librs-spec#resident-status-of-victim-30)                    | Resident Status                                           | 43          | 1       | A
    [31](./librs-spec#nos.-1-and-2-31)                                 | Aggravated Assault / Homicide Circumstance Nos. 1 and 2   | 44-47       | 2 (2x)  | N
-   \*\*                                                               | Deprecated Data Element                                   | 49-49       | 2       | G (Space)
+   \*\*                                                               | Deprecated Data Element                                   | 48-49       | 2       | G (Space)
    [32](./librs-spec#additional-justifiable-homicide-circumstance-32) | Additional Justifiable Homicide Circumstance              | 50          | 1       | A
    [25A](./librs-spec#type-of-officer-activitycircumstance-25a)       | Type of Officer Activity/Circumstance                     | 51-52       | 2       | N
    [25B](./librs-spec#officer-assignment-type-25b)                    | Officer Assignment Type                                   | 53          | 1       | A
@@ -2874,9 +2874,9 @@ ___
 
 ___
 
-***New Data Element in LIBRS 2.5***
+**Description:** Type of Officer Activity/Circumstance is used in LEOKA Circumstances only, and it indicates the activity in which the Law Enforcement Officer was engaged at the time the officer was either killed or assaulted in the line of duty. 
 
-**Data Characteristics:** 2 Character Alpha
+**Data Characteristics:** 2 Character Alpha. Should only be used if Victim Type is 'L - Law Enforcement' and Offense is an 09A, 13A, 13B, or 13C.
 
 ### Requirements:
 
@@ -2884,9 +2884,9 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["11004"] -%}
-1 | {{error.err_desc["25a"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["10001"] -%}
+1 | {{error.err_desc["25a"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["25a"]}} | {{error.err_no}}| {{ error.err_message }}
 
 
@@ -2914,7 +2914,6 @@ Enter only one (1) code for each Victim Segment:
             			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
 						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
             		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
-						<td> {{values.comment}} </td>
             		</tr>
 					{% endfor %}
 				</table>
@@ -2937,9 +2936,9 @@ ___
 
 ___
 
-*** New Data Element in LIBRS 2.5 ***
+**Description:** Officer Assignment Type is used to report the victim Officer’s Type of Assignment when a LEOKA Offense occurred of which they were the Victim.
 
-**Data Characteristics:** 1 Character Alpha
+**Data Characteristics:** 1 Character Alpha. Should only be used if Victim Type is 'L - Law Enforcement' and Offense is an 09A, 13A, 13B, or 13C.
 
 ### Requirements:
 
@@ -2976,7 +2975,6 @@ Enter only one (1) code for each Victim Segment:
             			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
 						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
             		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
-						<td> {{values.comment}} </td>
             		</tr>
 					{% endfor %}
 				</table>
@@ -2995,12 +2993,12 @@ ___
 
 ___
 
-*** New Data Element in LIBRS 2.5 ***
+**Description:** Officer ORI, Other Jurisdiction is used to report the ORI Number of a Law Enforcement Officer's Agency when an officer from another jurisdiction is killed or assaulted in the line of duty in the reporting Agency’s jurisdiction. No entry is required for LEOKA Offenses that occur in the Officer's own Agency jurisdiction.
 
 **Data Characteristics:** 9 Character Alpha
 
 ### Requirements:
-None
+Should be a Nine-Digit, valid ORI Number, or Blank Spaces (G) if Not requried
 
 ___
 
@@ -3025,22 +3023,28 @@ ___
 
 ## Age of Victim [At Time Incident Occurred] (26)
 
-**Data Characteristics:** 3 Character Alpha
+___
+
+**Description:** For Offenses in which a Person (I - Individual or L - Law Enforcement) are the Victim Type (DE 25), Age of Victim should be the two-digit age of the Victim when the Incident Occurred. Ages can be appended with an 'E' to represent an Estimated Age of the Victim if that actual Age is not known, otherwise the third character should remain a Blank Space. For ages that are less that one year, check the List of Available Values below. 
+
+**Data Characteristics:** 3 Character Alpha. 
 
 ### Requirements:
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15058"] -%}
-2 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["11004"] -%}
-4A | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15081"] -%}
-6 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["14022"] -%}
-5B | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["10001"] -%}
-5B | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
+1 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["11004"] -%}
+2 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14022"] -%}
+3 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15058"] -%}
+4 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15081"] -%}
+5 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
+
+
 
 ___
 
@@ -3103,7 +3107,9 @@ ___
 
 ___
 
-**Data Characteristics:** 8 Character Date
+**Description:** DOB of Victim is not a required field, but if the Date of Birth is known then it can be entered here in the MMDDYYYY Format. You might think that if DOB of Victim is known, then Age of Victim must have a value, but this is not the case as Age of Victim is their Age at the time of the Incident, which may or may not line up with their current age. Therefore this Data Element is purely optional, though if provided should be a valid date. 
+
+**Data Characteristics:** 8 Character Date. Optional, if not entered should be all Blank Spaces (Not Zeros)
 
 **Format:** MMDDYYYY
 
@@ -3119,7 +3125,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then his/her date of birth, if available, is to be indicated in Date of Birth of Victim (L26).
+* If Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), then his/her date of birth, if available, is to be indicated in Date of Birth of Victim (L26).
 
 ___
 
@@ -3129,7 +3135,10 @@ ___
 
 ___
 
-**Data Characteristics:** 1 Character Alpha
+**Description:** Sex of Victim is used to indicate the sex of an Victim that is a Person (I - Individual or L - Law Enforcement).
+
+**Data Characteristics:** 1 Character Alpha. Must be entered for Victim Types I and L. Use U if Unknown, don't leave the field blank.
+
 
 ### Requirements:
 
@@ -3139,10 +3148,11 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["14060"] -%}
+2 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15058"] -%}
 3 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["14060"] -%}
-4 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
+
 
 ___
 
@@ -3197,7 +3207,10 @@ ___
 
 ___
 
-**Data Characteristics:** 1 Character Alpha
+**Description:** Race of Victim is used to indicate the race of an Victim that is a Person (I - Individual or L - Law Enforcement). Race is defined as persons that share similar *physical* characteristics. Ethinicity is defined as persons that share similar *cultural* characteristics. 
+
+**Data Characteristics:** 1 Character Alpha. Must be entered for Victim Types I and L. Use U if Unknown, don't leave the field blank.
+
 
 ### Requirements:
 
@@ -3208,12 +3221,12 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["28"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15058"] -%}
-3 | {{error.err_desc["28"]}} | {{error.err_no}}| {{ error.err_message }}
+2 | {{error.err_desc["28"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
 ### Notes:
-* If Type of Victim (25) is a person [(that is, Individual ('I') or Law Enforcement Officer ('L'), then, his/her race is to be indicated in Race of Victim (28).
+* If Type of Victim (25) is a person (that is, Individual ('I') or Law Enforcement Officer ('L')), then, his/her race is to be indicated in Race of Victim (28).
 
 ___
 
@@ -3261,7 +3274,9 @@ ___
 
 ___
 
-**Data Characteristics:** 1 Character Alpha
+**Description:** Ethnicity of Victim is used to indicate the ethnicity of an Victim that is a Person (I - Individual or L - Law Enforcement). Race is defined as persons that share similar *physical* characteristics. Ethinicity is defined as persons that share similar *cultural* characteristics. 
+
+**Data Characteristics:** 1 Character Alpha. Must be entered for Victim Types I and L. Use U if Unknown, don't leave the field blank.
 
 ### Requirements:
 
@@ -3275,7 +3290,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Notes:
-* If Victim is a person (that is, Individual ('I') or Law Enforcement Officer ('L') is entered into Type of Victim (25), then his/her ethnic origin is to be indicated in Ethnicity of Victim (29).
+* If Victim is a person (that is, Individual ('I') or Law Enforcement Officer ('L')) is entered into Type of Victim (25), then his/her ethnic origin is to be indicated in Ethnicity of Victim (29).
 
 <br>
 
@@ -3323,7 +3338,9 @@ ___
 
 ## Resident Status of Victim (30)
 
-**Data Characteristics:** 1 Character Alpha
+**Description:** Resident Status of Victim is used to indicate if the victim was a resident in the reporting agency’s jurisdiction at the time of the incident. It is NOT an indicator of whether or not the Victim is a US Citizen.
+
+**Data Characteristics:** 1 Character Alpha. Must be entered for Victim Types I and L. Use U if Unknown, don't leave the field blank.
 
 ### Requirements:
 
@@ -3388,9 +3405,9 @@ ___
 
 ___
 
-**Assault on Law Enforcement Officer (Shaded Brown) is a new Aggravated Assault and Non-Negligent Manslaughter Circumstance,beginning with LIBRS Spec 2.5.**
+**Description:** Aggravated Assault/Homicide Circumstances is used to describe the circumstances of either an aggravated assault or a homicide. It's must be used with NIBRS 09A, 09B, 09C, and 13A, and should not be used with any other Offense (left Blank). Additionally the availablility of the codes DE 31 uses is subject the Victim Type (DE 25) and NIBRS Code of the Offense; not all codes are available for all conditions.
 
-**Data Characteristics:** 2 Character Numeric
+**Data Characteristics:** Up to 2x, 2 Character Numeric. You may enter 2 Codes for Victims associated with NIBRS 13A and 09A Offenses, and one code for Victims associated with NIBRS 09B and 09C Offenses. Exceeding this limit for Victims associated with 09B and 09C Offenses will throw an error, rather than ignoring the value.
 
 ### Requirements:
 
@@ -3399,18 +3416,20 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["11004"] -%}
-2 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
+1 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["12006"] -%}
-3 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
+2 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15019"] -%}
+3 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15020"] -%}
 4 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15056"] -%}
 5 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15080"] -%}
-7 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15020"] -%}
-8 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
+6 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["90001"] -%}
+7 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90004"] -%}
 8 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
@@ -3421,7 +3440,10 @@ ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-
+{% assign error = site.data.error["90005"] -%}
+9 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90014"] -%}
+10 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -3443,7 +3465,7 @@ ___
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["12066"] -%}
-14 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
+12 | {{error.err_desc["31"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -3512,6 +3534,8 @@ ___
 
 ___
 
+**Description:** Additional Justifiable Homicide Circumstances is used to describe the circumstances of a NIBRS 09C Offenses (Justifiable Homicide) only. It is not to be used with Victims of any Offense Code other than 09C. When more than one data value applies, enter the one that is most descriptive.
+
 **Data Characteristics:** 1 Character Alpha
 
 ### Requirements:
@@ -3525,7 +3549,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["15055"] -%}
 2 | {{error.err_desc["32"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15057"] -%}
-2 | {{error.err_desc["32"]}} | {{error.err_no}}| {{ error.err_message }}
+3 | {{error.err_desc["32"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -3585,7 +3609,9 @@ ___
 
 ___
 
-**Data Characteristics:** 1 Character Alpha
+**Description:** Type of Injury is used to describe the condition of a Victims of a Crime Against Person after the Offense has been committed. Certain Injury Types are not applicable for certain NIBRS Codes. 
+
+**Data Characteristics:** 1 Character Alpha. Must be included for each Victim Injury Segment (Segment 51) that is present in the Incident, and cannot be left Blank.
 
 ### Requirements:
 
@@ -3593,22 +3619,19 @@ ___
 
 Requirment   | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15003"] -%}
-1 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15003"] -%}
+2 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["15019"] -%}
-4 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
+3 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15020"] -%}
+4 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15079"] -%}
 5 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["90029"] -%}
 6 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["84018"] -%}
-7 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["84408"] -%}
-7 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15020"] -%}
-7 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
+
 
 
 ___
@@ -3664,21 +3687,22 @@ ___
 
 ___
 
-**Data Characteristics:** 3 Character Numeric
+**Description:** Offender Number to Be Related is only used in Segment 52, Victim/Offender Relationship, which should only be present with the Victim is associated with a Crime Against Person, or a Robbery.
+
+**Data Characteristics:** 3 Character Numeric. Should always be supplied in Segment 52 (when that segment is present). Value should be front-padded with Zeros (0) to make a three-digit number. EG: 1 would be 001.
 
 ### Requirements:
 ___
 
 Requirment   | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15059"] -%}
-1 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["15002"] -%}
-2 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["15058"] -%}
-3 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["10070"] -%}
-6 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }}
+1 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15058"] -%}
+2 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15059"] -%}
+3 | {{error.err_desc["34"]}} | {{error.err_no}}| {{ error.err_message }} 
+
 
 
 ___
@@ -3711,33 +3735,35 @@ ___
 
 ___
 
-**Data Characteristics:** 2 Character Alpha
+**Description** Victim/Offender Relationship describes hwo the Victim and the Offender of an Offense are associated with one another, if at all. It is common for this Data Element to be used for statistics for Offenses like Domestic Violence. If should only be used when the Victim is associated with a Crime Against a Person.
+
+**Data Characteristics:** 2 Character Alpha Should only have a value if the Victim is associated with a Crime Against a Person. 
 
 ### Requirements:
 ___
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["15060"] -%}
-1 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["11004"] -%}
-2 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
+1 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14050"] -%}
-4 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
+2 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14053"] -%}
-5 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
+3 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14054"] -%}
-6 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15068"] -%}
-7 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["15072"] -%}
-11 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["15075"] -%}
-12 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
+4 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15060"] -%}
+5 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["15005"] -%}
 6 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15020"] -%}
-6 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
+7 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15068"] -%}
+8 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15072"] -%}
+9 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["15075"] -%}
+10 | {{error.err_desc["35"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
