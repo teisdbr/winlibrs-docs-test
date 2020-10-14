@@ -2648,7 +2648,11 @@ ___
 
 ## Victim Sequence Number (23)
 
-**Data Characteristics:** 3 Character Numeric
+___
+
+**Description:** Victim Sequence Number is the uniquely identifying ID for each Victim in an Incident. This number cannot repeat in the same incident, and must be unique for each Segment 50 that is present. This data Element can never be ommitted and must always have a value between 001 and 999.
+
+**Data Characteristics:** 3 Character Numeric. Should be front-padded with Zero's (0) to make a three digit number. (EG: 1 would be 001).
 
 ### Requirements:
 
@@ -2662,10 +2666,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["23"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15051"] -%}
 3 | {{error.err_desc["23"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["11004"] -%}
-6 | {{error.err_desc["23"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ____
+
 
 ### Notes:
 * Each victim in an incident MUST be assigned a unique Victim Sequence Number (23) from '001' to '999'.
@@ -2678,7 +2681,11 @@ ___
 
 ## Offense Connected to Victim Sequence Number (24)
 
-**Data Characteristics:** 3 Character Numeric
+___
+
+**Description:** Offense Connected to Victim Sequence Number is only used in Offense Segments Segmetn 20). Each Offense can only be related to a single Victim, so if there are multiple Victims of the same Offense, or Multiple Offenses for the same Victim, you'll need multiple Segment 20's to reference that. This Data Element is important because it's what's used to link the Offenders to their Offenses. 
+
+**Data Characteristics:** 3 Character Numeric. Should be front-padded with Zero's (0) to make a three digit number. (EG: 1 would be 001). Needs to match a Victim Sequence Number (DE 23) that's present in a Segment 50 of the Incident.
 
 ### Requirements:
 
@@ -2686,18 +2693,10 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["11004"] -%}
+{% assign error = site.data.error["12090"] -%}
 2 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["15065"] -%}
-4 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["10065"] -%}
-7 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15078"] -%}
-8 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["12090"] -%}
-9 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["12090"] -%}
-9 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
+3 | {{error.err_desc["24"]}} | {{error.err_no}}| {{ error.err_message }}
 
 
 ___
@@ -2786,7 +2785,9 @@ ___
 
 ## Type of Victim (25)
 
-**Data Characteristics:** 1 Character Alpha
+**Description:** Type of Victim dicates the classification of the Victim of an Offense. The descriptors that are available for selection are based on the NIBRS Code of the Offense. All Victim Types except for 'S - Society' are applicable to Crimes Against Property, while only Victim Types of 'I - Individual' and 'L - Law Enforcement' are applicable to Crimes Against Persons. On the contrary, Crimes Against Society can only have a Victim Type of 'S - Society'.
+
+**Data Characteristics:** 1 Character Alpha. Must always be present and cannot be left blank. 
 
 ### Requirements:
 
@@ -2794,20 +2795,18 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
 1 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["11004"] -%}
+{% assign error = site.data.error["10080"] -%}
 2 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["11004"] -%}
+3 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15065"] -%}
+4 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15067"] -%}
 5 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["10080"] -%}
-6 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["22110"] -%}
-7 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["84021"] -%}
-11 | {{error.err_desc["25"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["84018"] -%}
-12 | {{error.err_desc["25"]}} | {{error.err_no}} | {{ error.err_message }} 
+6 | {{error.err_desc["25"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["90001"] -%}
-12 | {{error.err_desc["25"]}} | {{error.err_no}} | {{ error.err_message }} 
+7 | {{error.err_desc["25"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 

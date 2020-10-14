@@ -254,7 +254,7 @@
         "err_no": 10080,
         "err_message": "CRIMES AGAINST SOCIETY CAN ONLY HAVE ONE VICTIM",
         "err_desc": {
-            "25": "*No matter the number of Crimes Against Society that are present in an Incident, there should only be a single Victim of Victim Type 'S - Society'. All Crimes Against Society present in the incident should point to this single victim."
+            "25": "No matter the number of Crimes Against Society that are present in an Incident, there should only be a single Victim of Victim Type 'S - Society'. All Crimes Against Society present in the incident should point to this single victim."
         }
     },
     "10081": {
@@ -408,7 +408,6 @@
             "11": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "12": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "13": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
-            "23": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "14": "Property Loss Type (DE 14) is a mandatory Data Element that must be a numeric value between 1 and 8. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
             "15": "Property Description (DE 15) must be a two-digit, numeric value greater than or equal to 01. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
             "22": "The reported Drug Measurement Type (DE 22) was not recognized. Check the List of [Available Data Element Values](./data-element-values) for the available values and their definitions",
@@ -1695,7 +1694,7 @@
         "err_no": 15067,
         "err_message": "ENTRY FOR TYPE OF VICTIM CANNOT BE 'S' WHEN THIS OFFENSE CODE IS CONNECTED TO THIS VICTIM",
         "err_desc": {
-            "25": "For Offenses that are Crimes Against Property, the associated Victim cannot have a Type of Victim (DE 25) of 'S - Society'. Type of Victim (DE 25) can only be: {::nomarkdown}<ul><li>I - Individual</li><li>B - Business</li><li>F - Financial Institution</li><li>G - Government</li><li>R  -Religious Organization</li><li>O - Other</li><li>U - Unknown</li></ul>{:/}"
+            "25": "For Offenses that are Crimes Against Property, the associated Victim cannot have a Type of Victim (DE 25) of 'S - Society'. Type of Victim (DE 25) can only be: {::nomarkdown}<ul><li>I - Individual</li><li>B - Business</li><li>F - Financial Institution</li><li>G - Government</li><li>R - Religious Organization</li><li>O - Other</li><li>U - Unknown</li></ul>{:/}"
         }
     },
     "15068": {
@@ -2850,7 +2849,7 @@
     "84021": {
         "active": "true",
         "err_no": 84021,
-        "err_message": "WHEN LRS = 520, DE 12 & DE 13 MUST HAVE A VALID CODE AND DE 25 MUST BE EQUAL TO 'S'.",
+        "err_message": "WHEN LRS = 520, DE 12 & DE 13 MUST HAVE A VALID CODE AND DE 25 MUST BE EQUAL TO 'S'",
         "mandatory": {
             "4s21": "When NIBRS Offense Code is <b>520</b> the following MUST be true:{::nomarkdown}<ul><li>Type of Criminal Activity/Gang Information (DE 12)</li><li>Type of Weapon/Force Involved (DE 13) MUST have a valid code</li><li>Type of Victim (DE 25) MUST be Society ('S').</li></ul>{:/}"
         }
@@ -3362,8 +3361,8 @@
         "err_no": 90001,
         "err_message": "DE 31 (AGGRAVATED ASSAULT CIRCUMSTANCE) MUST BE '02 - ASSAULT ON LAW ENFORCEMENT OFFICER(S)' IF DE 25 (VICTIM TYPE) IS 'L'. SIMILARLY, IF DE 25 (VICTIM TYPE) IS 'L' FOR LAW ENFORCEMENT OFFICER, DE 31 MUST BE '02'.",
         "err_desc": {
-            "31": "If Victim Type (DE 25) is 'L - Law Enforcement Officer', then Aggravated Assault Circumstance (DE 31) must be '02 - Assault on Law Enforcement Officer(s).",
-            "25": "If Victim Type (DE 25) is 'L - Law Enforcement Officer', then Aggravated Assault Circumstance (DE 31) must be '02 - Assault on Law Enforcement Officer(s)."
+            "31": "If Victim Type (DE 25) is 'L - Law Enforcement Officer', then Aggravated Assault Circumstance (DE 31) must be '02 - Assault on Law Enforcement Officer(s)'.",
+            "25": "If Victim Type (DE 25) is 'L - Law Enforcement Officer', then Aggravated Assault Circumstance (DE 31) must be '02 - Assault on Law Enforcement Officer(s)'."
         }
     },
     "90002": {
