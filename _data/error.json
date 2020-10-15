@@ -429,7 +429,7 @@
             "25": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "24": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "39A": "If entered, must conform to a value on the List of [Available Data Element Values](./data-element-values).",
-            "45": "MUST be a valid code on Master LIBRS/LRS Code Table. This code does not have to match one of the code(s) entered for Louisiana Revised Statute (6) within Offense Segments (6) submitted in an Incident Report.",
+            "45": "Must be a valid code on Master LIBRS/LRS Code Table. Check the [Master LRS List](./lrs-master-list) for available codes to use.",
             "44": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "43": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "46": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
@@ -1304,8 +1304,8 @@
         "err_no": 14008,
         "err_message": "EXACT AGE MUST BE IN FIRST TWO POSITIONS",
         "err_desc": {
-            "37": "The first two characters in Age of Offender (DE 37) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is being specified (IE: Not an estimated Age), then the third character should be 'G' (Blank Space).",
-            "47": "The first two characters in Age of Arrestee (DE 47) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is being specified (IE: Not an estimated Age), then the third character should be 'G' (Blank Space)."
+            "37": "For Exact Ages the first two characters in Age of Offender (DE 37) need to be a two digit number (front-padded with a zero if less than 10 - EG: 07, 09), with the third character as a Blank Space (G).",
+            "47": "For Exact Ages the first two characters in Age of Arrestee (DE 47) need to be a two digit number (front-padded with a zero if less than 10 - EG: 07, 09), with the third character as a Blank Space (G)."
         }
     },
     "14009": {
@@ -1313,8 +1313,8 @@
         "err_no": 14009,
         "err_message": "ESTIMATED AGE MUST BE 2 NUMERIC DIGITS, AND HAVE A TRAILING 'E'",
         "err_desc": {
-            "37": "The first two characters in Age of Offender (DE 37) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is unknown and is, instead, being estimated, then the third character should be 'E' to represent that.",
-            "47": "The first two characters in Age of Arrestee (DE 47) need to ne a two digit number (front-padded with a zero if less than 10 - EG: 07, 09). If the exact Age is unknown and is, instead, being estimated, then the third character should be 'E' to represent that."
+            "37": "For Estimated Ages the first two characters in Age of Offender (DE 37) need to be a two digit number (front-padded with a zero if less than 10 - EG: 07, 09), with the third character as an 'E' to represent the estimation.",
+            "47": "For Estimated Ages the first two characters in Age of Arrestee (DE 47) need to be a two digit number (front-padded with a zero if less than 10 - EG: 07, 09), with the third character as an 'E' to represent the estimation."
         }
     },
     "14015": {
@@ -1355,7 +1355,7 @@
         "err_no": 14051,
         "err_message": "DUPLICATE OFFENDER SEGMENT ON TAPE",
         "err_desc": {
-            "36": "MUST be UNIQUE - CANNOT be duplicated."
+            "36": "Offender Sequence Number (DE 36) must be unique for each Offender Segment (Segment 40) in the Incident."
         }
     },
     "14052": {
@@ -1363,9 +1363,9 @@
         "err_no": 14052,
         "err_message": "CANNOT BE PRESENT WHEN OFFENDER NUMBER IS '000' UNKNOWN",
         "err_desc": {
-            "39": "When Offender Sequence Number (DE 36) is '000' to denote an Unkonwn Offender, then Race of Offender (DE 39) cannot have a known value. In order for a value to be reported for this Data Element, the Offender Sequence Number (DE 36) should be something other than '000'",
-            "38": "When Offender Sequence Number (DE 36) is '000' to denote an Unkonwn Offender, then Sex of Offender (DE 38) cannot have a known value. In order for a value to be reported for this Data Element, the Offender Sequence Number (DE 36) should be something other than '000'",
-            "37": "When Offender Sequence Number (DE 36) is '000' to denote an Unkonwn Offender, then Age of Offender (DE 37) cannot have a known value. In order for a value to be reported for this Data Element, the Offender Sequence Number (DE 36) should be something other than '000'"
+            "39": "When Offender Sequence Number (DE 36) is '000' to denote an Unknown Offender, then Race of Offender (DE 39) cannot have a known value. In order for a value to be reported for this Data Element, the Offender Sequence Number (DE 36) should be something other than '000'",
+            "38": "When Offender Sequence Number (DE 36) is '000' to denote an Unknown Offender, then Sex of Offender (DE 38) cannot have a known value. In order for a value to be reported for this Data Element, the Offender Sequence Number (DE 36) should be something other than '000'",
+            "37": "When Offender Sequence Number (DE 36) is '000' to denote an Unknown Offender, then Age of Offender (DE 37) cannot have a known value. In order for a value to be reported for this Data Element, the Offender Sequence Number (DE 36) should be something other than '000'"
         }
     },
     "14053": {
@@ -1413,7 +1413,7 @@
         "err_no": 14058,
         "err_message": "AT LEAST ONE OFFENDER MUST HAVE VALUES",
         "err_desc": {
-            "c1": "Each Incident must have at least one Offender listed. If no specific details about the Offender are known, use '000' for the Offender Sequence Number (DE 36) to denote 'Unkonwn Offender' (NIBRS 09C is exempt from this, and must contain a known Offender). Additionally, the number of Offender and Offender Using (Segments 40 and 41) should match."
+            "c1": "Each Incident must have at least one Offender listed. If no specific details about the Offender are known, use '000' for the Offender Sequence Number (DE 36) to denote 'Unknown Offender' (NIBRS 09C is exempt from this, and must contain a known Offender). Additionally, the number of Offender and Offender Using (Segments 40 and 41) should match."
         }
     },
     "14059": {
@@ -3453,7 +3453,7 @@
         "err_no": 90017,
         "err_message": "LRS-TO-NIBRS PAIR MUST HAVE A VALID MAPPING",
         "err_desc":{
-            "n45": "The LRS Code that you have submitted doesn't have a mapping to a NIBRS Code in our system. Please use a valid NIBRS Mapping for this LRS Code, and if you think the LRS Code you submitted should be valid let us know and we'll see if we can add it in."
+            "n45": "he LRS Code that you have submitted doesn't have a mapping to a NIBRS Code in our system. Please use a valid NIBRS Mapping for this LRS Code, and if you think the LRS Code you submitted should be valid let us know and we'll see if we can add it in.<br><br>This Error also triggers when Louisiana Revised Statute Number of Arrest (DE 45) is left blank."
         }
     },
     "84713": {
@@ -3516,14 +3516,16 @@
         "err_no": 90024,
         "err_message": "PROPERTY SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED PROPERTIES' SEQUENCE NUMBERS",
         "err_desc": {
-            "l6r": "Offense Sequence Number Reference (DE L6R) must match the Offense Sequence Number (DE L6) of one of the Offense Segments (Segment 20) submitted in the incident.",
             "p1r": "Property Sequence Number Reference (DE P1R) must match the Property Sequence Number (DE P1) of one of the Property Description Segments (Segment 31) submitted in the incident."
         }
     },
     "90025": {
         "active": "true",
         "err_no": 90025,
-        "err_message": "OFFENSE SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED OFFENSES' SEQUENCE NUMBERS"
+        "err_message": "OFFENSE SEQUENCE NUMBER DOES NOT MATCH ANY PROVIDED OFFENSES' SEQUENCE NUMBERS",
+        "err_desc":{
+            "l6r": "Offense Sequence Number Reference (DE L6R) must match the Offense Sequence Number (DE L6) of one of the Offense Segments (Segment 20) submitted in the incident."
+        }
     },
     "90026": {
         "active": "false",
@@ -3619,7 +3621,7 @@
         "err_no": 90041,
         "err_message": "TYPE PROPERTY LOSS CODE IS NOT VALID WITH THE OFFENSES SUBMITTED",
         "err_desc": {
-            "31": "A Property Loss Type of '1 - None' is invalid for the following NIBRS Codes: {::nomarkdown}<ul><li>100</li><li>220, 280</li><li>35A, 35B</li><li>510</li><li>90A, 90Z</li></ul>{:/}A Property Loss Type of '8 - Unkonwn' is invalid for the following NIBRS Codes: {::nomarkdown}<ul><li>100</li><li>220</li><li>510</li><li>90A, 90Z</li></ul>{:/}"
+            "31": "A Property Loss Type of '1 - None' is invalid for the following NIBRS Codes: {::nomarkdown}<ul><li>100</li><li>220, 280</li><li>35A, 35B</li><li>510</li><li>90A, 90Z</li></ul>{:/}A Property Loss Type of '8 - Unknown' is invalid for the following NIBRS Codes: {::nomarkdown}<ul><li>100</li><li>220</li><li>510</li><li>90A, 90Z</li></ul>{:/}"
         }
     },
     "90042": {
