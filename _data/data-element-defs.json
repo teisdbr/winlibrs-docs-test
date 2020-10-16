@@ -2372,7 +2372,7 @@
 	{
 		"de_num": "70",
 		"name": "INCHOATE",
-		"deifition": "the Inchoate value is designed to give extra context to the nature of the offense.",
+		"definition": "The Inchoate value is designed to give extra context to the nature of the offense.",
 		"length": "2",
 		"format": "-A ('-' plus an Alpha Character)",
 		"comment" : "Optional",

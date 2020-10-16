@@ -7,9 +7,10 @@ permalink: /
 # LIBRS Validation and Processing Documentation
 ____
 
-#### This page contains information on how LIBRS Flat Files should be processed and generated for use in submitting data to the State of Louisiana, and subsequently the FBI via NIBRS. Use the links below, or the side menu to get started. This site contains the following information.
+### We've recently revamped the entire documentation. If your RMS contains its own Error Validation, then it's probable that the Error Codes and on which Segments/Data Elements the Errors get thrown have changed. 
+____
 
-#### We are actively working on making this documentation easier to use and more complete. Please bear with us if things change places on you, and feel free to let us know if we've made a mistake somewhere along the way.
+#### This page contains information on how LIBRS Flat Files should be processed and generated for use in submitting data to the State of Louisiana, and subsequently the FBI via NIBRS. Use the links below, or the side menu to get started. This site contains the following information.
 
 ___
   
@@ -34,6 +35,20 @@ ___
 
 ## Recent Changes
 ___
+
+#### 2020-10-16
+* Boatload of changes and enhancements to the Documentation:
+  -	Went through all of the Errors in LIBRS and determined if they were getting hit or not. 
+  -	Went through the Documentation, removing errors that don’t trigger and adding missing ones that do. 
+  -	Refined all context for Errors for Segments, Data Elements, and Mandatories.
+  -	For each active error, verified the logic that causes it to be thrown, and where an error appears multiple times in the code verified that similar logical conditions caused it to throw.
+  -	Consolidated Error Codes where possible to eliminate things like having 12 errors that all say "Can’t be Blank – Mandatory Data Element".
+  -	Created a few new Error Codes in places where existing ones didn't cut it:
+  -	Update Error Messages to get rid of Misspellings, bad formatting, and out of date information (EG: 'WHEN LRS = 240' now will say something like 'WHEN NIBRS = 240') both in LIBRS and the Documentation.
+  -	Consolidated the Segment, Data Element, and NIBRS Mandatory Documentation into a single page so you can find errors with a single CTRL + F. 
+  -	Added a list of the available Property Loss Types by Attempted/Completed and NIBRS Code to the Available Data Elements Page. 
+  -	Added descriptions and context to each Data Element, giving information about whether it’s required or not, when it should be left blank, how it should be formatted, etc… 
+  -	Add Documentation for Inchoates
 
 #### 2020-09-28
 * Logic that would throw Errors 90008 and 90010 has been deprecated. These errors will not be thrown again. Any logic in your RMS that throws these errors should be removed. 
