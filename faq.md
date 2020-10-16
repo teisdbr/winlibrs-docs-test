@@ -246,6 +246,11 @@ ____
       * If 'G' is the only Motivation Type supplied, then it will be converted to 'N - Not Applicable' when the data is sent to the FBI. 
 * NIBRS Reports allow for up to five (5) Bias/Motivation Types. Are we supposed to submit multiple Segment 40's to submit multiple Bias/Motivation Types?
   * Unfortunately LIBRS only allows one Segment 40 (Offender) to be submitted for each Offender Sequence Number, and therefore we can only allow the submission of a Single DE 84 - Bias/Motivation type for each Offender. 
+* Is it possible to list all Drugs in an Incident as a single Property?
+  * No, only one Suspected Drug Type is allowed for each Property Description Segment (Segment 31), and Property Sequence Numbers (DE P1) are never allowed to repeat unless it’s a Stolen/Recovered Loss Type. So each Seized Drug needs to have its own Segment 31 with a unique Property Sequence Number.
+* What's up with Segment 33? Is it optional, or should I include it?
+  * Segment 33 should be number two on your list after brushing your teeth twice a day. 
+  * We made it Optional to support older RMS systems while they began implementing it, but it should be considered as required. At some time in the future it will likely become mandatory, so if you are in the earlier stages of your RMS development it'd be best to include it now.
 
 ____
 
