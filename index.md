@@ -13,7 +13,7 @@ ____
 #### This page contains information on how LIBRS Flat Files should be processed and generated for use in submitting data to the State of Louisiana, and subsequently the FBI via NIBRS. Use the links below, or the side menu to get started. This site contains the following information.
 
 ___
-  
+
 - ### <a href="./faq">Frequently Asked Questions</a>
   - #### Questions we've gotten from Vendors and Users about LIBRS that might be helpful to others. A great place to get started learning about LIBRS!
 
@@ -48,6 +48,8 @@ ___
   -	Consolidated the Segment, Data Element, and NIBRS Mandatory Documentation into a single page so you can find errors with a single CTRL + F. 
   -	Added a list of the available Property Loss Types by Attempted/Completed and NIBRS Code to the Available Data Elements Page. 
   -	Added descriptions and context to each Data Element, giving information about whether it’s required or not, when it should be left blank, how it should be formatted, etc… 
+  -	Added logic to stop processing an Offense if the LIBRS to NIBRS Mapping doesn't exist. 
+    -	Requirements are heavily NIBRS Code dependent, so it doesn't make sense to process Incidents that don't have a valid mapping.
   -	Add Documentation for Inchoates
 
 #### 2020-09-28
