@@ -55,7 +55,9 @@
             "l45": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field.",
             "44": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field.",
             "46": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field.",
-            "47": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field."
+            "47": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field.",
+            "48": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field.",
+            "49": "When Arrestee Segments (Segments 60, 61, and 62) are present, this Data Element is a mandatory field."
         }
     },
     "06002": {
@@ -438,7 +440,8 @@
             "50": "If entered, must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "51": "If entered, must conform to a value on the List of [Available Data Element Values](./data-element-values).",
             "52": "Supplied Value not recognized. Must conform to a value on the List of [Available Data Element Values](./data-element-values).",
-            "l55": "Arrest Transaction Number (DE L55) may only contain [A - Z], [0 - 9], '-', and ' ' (Spaces)."
+            "l55": "Arrest Transaction Number (DE L55) may only contain [A - Z], [0 - 9], '-', and ' ' (Spaces).",
+            "c6": "Supplied Value not recognized. Must be either 'Y' or 'N' for Yes or No."
         }
     },
     "11005": {
@@ -1412,8 +1415,8 @@
         "active": "true",
         "err_no": 14058,
         "err_message": "AT LEAST ONE OFFENDER MUST HAVE VALUES",
-        "err_desc": {
-            "c1": "Each Incident must have at least one Offender listed. If no specific details about the Offender are known, use '000' for the Offender Sequence Number (DE 36) to denote 'Unknown Offender' (NIBRS 09C is exempt from this, and must contain a known Offender). Additionally, the number of Offender and Offender Using (Segments 40 and 41) should match."
+        "seq_desc": {
+            "20": "Each Incident must have at least one Offender listed. If no specific details about the Offender are known, use '000' for the Offender Sequence Number (DE 36) to denote 'Unknown Offender' (NIBRS 09C is exempt from this, and must contain a known Offender). Additionally, the number of Offender and Offender Using (Segments 40 and 41) should match."
         }
     },
     "14059": {
@@ -2085,7 +2088,7 @@
         "err_no": 16161,
         "err_message": "ARRESTEE SEQUENCE NUMBER (DE 40) CANNOT REPEAT FOR THE SAME INCIDENT NUMBER (DE 2) THE FLAT FILE UNLESS THERE IS AN ACTION TYPE OF DELETE",
         "err_desc": {
-            "C5": "If a LIBRS Flat File contains the duplicate Arrestee Sequence Numbers (DE 40) for the same Incident Number (DE 2), the at least one of the Action Types of the the Arrestee Segments associated with the Sequence Number must have an Action Type (DE C5) or 'D - Delete'."
+            "c5": "If a LIBRS Flat File contains the duplicate Arrestee Sequence Numbers (DE 40) for the same Incident Number (DE 2), the at least one of the Action Types of the the Arrestee Segments associated with the Sequence Number must have an Action Type (DE C5) or 'D - Delete'."
         }
     },
     "17001": {
@@ -2190,7 +2193,7 @@
         "active": "true",
         "err_no": 20026,
         "err_message": "REPORTING PERIOD CANNOT EXCEED THE DATE OF SUBMISSION",
-        "seq_desc": {
+        "err_desc": {
             "c4": "Reporting Period (DE C4) cannot be In or After the Date of Submission (DE C3). EG: If today's date is 06/01/2020, then you cannot report and Reporting Periods of 062020 or later because those months have not occured or completed yet."
         }
     },
@@ -2358,7 +2361,7 @@
         "err_no": 22100,
         "err_message": "AGE MUST BE '01' - '17' FOR JUVENILE OFFENSES",
         "err_desc": {
-            "47": "When Juvenile Qualifiers are used, Age of Arrestee (DE 47) must be '01' thru '17' (this includes 17) for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
+            "47": "When Juvenile Qualifiers are used, Age of Arrestee (DE 47) must be '01' thru '17' (this includes 17) for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
         }
     },
     "22105": {
