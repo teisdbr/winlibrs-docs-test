@@ -1,7 +1,7 @@
 ---
 title: Master LRS List
 layout: default
-permalink: /lrs-master-list
+permalink: /lrs-master-list-wip
 ---
 
 # LIBRS LRS Master List
@@ -15,55 +15,84 @@ ____
 
 <br>
 
-#### Please note that LRS Codes need to be submitted exactly as written on this page. The only available NIBRS Codes you can submit with are listed in the "NIBRS" field. Please contact us if you'd like to get an LRS Code or NIBRS Mapping added. 
-
-<br>
-
 ## Current and Active Master LRS Code List
 
-#### Last Updated August 25th, 2020
+#### Last Updated October 20th, 2020
 
-We're currently working on another version of this page that is able to split out the different Scores, Ranks, and Indices between the different available NIBRS Codes for each LRS Code. If you would like to see that work in progress page, you can go [here](./lrs-master-list-wip). Please note that this is currently in development, and will likely not offer any additional information to you at this time. 
+___
+
+As of October 2020, we've made some revisions to this page for how the data is displayed. In order to make things a little more clear, we've made it so that when you click on an LRS Code, it expands to show you the relevent NIBRS and reporting information about it. This way we can display the actual information that goes along with each Multiple Mapping for an LRS Code.
+
+As a result the JSON File used to generate this portion of the documentation has changed slightly. However in an effort to help eliminate confusion for Vendors, we'll still be providing the file [here](https://github.com/teisdbr/winlibrs-docs/blob/master/_data/lrs-codes-old.json). Note that duplicates will be present due to the changes made to how NIBRS information is stored in our database. But the format is the same, so your Classes should all still work.
+
+
+___
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".accordion-toggle").click(function () {
+    $(this).children().children().toggleClass("down");
+});
+});</script>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".accordion-toggle").click(function () {
+    $(this).toggleClass("down");
+});
+});</script>
 
 <table>
 <thead style="font-size: 14px;">
 	<tr>
+        <th style="padding-left: 12px; padding-right:3px;">Details</th>
 		<th style="padding-left: 8px; padding-right:3px;">LRS #</th>
 		<th style="padding-left: 0px; padding-right:3px;">LRS Description</th>
-		<th style="text-align: center;">LRank</th>
-		<th style="text-align: center;">UCR</th>
+	</tr>
+</thead>
+{% assign active_lrs = site.data.lrs-codes | sort:"LRS" %}
+<tbody>
+{% for lrs in active_lrs %}
+{% if lrs.Info.first.Expiration_Date == "3000-01-01"  %}
+	<tr data-toggle="collapse" data-target="#accordion{{ lrs.LRS }}" class="accordion-toggle" style="padding-top:0px; padding-bottom:0px;">
+        <td><i class="fas fa-chevron-right rotate"></i></td>
+		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
+		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td></tr><tr>
+        <td colspan = "3" class="hiddenRow"  style="border-bottom: none;"><div class="accordion-body collapse" id ="accordion{{ lrs.LRS }}"><table><thead><tr>
+        <th style="text-align: center;">NIBRS Description</th>
 		<th style="text-align: center;">NIBRS</th>
 		<th style="text-align: center;">Group</th>
 		<th style="text-align: center;">Part</th>
         <th style="text-align: center; white-space: nowrap">1A Index</th>
         <th style="text-align: center; white-space: nowrap">Index Class</th>
         <th style="text-align: center; white-space: nowrap">UCR Index</th>
-        <th style="text-align: center; white-space: nowrap">LIBRS Index</th>
-	</tr>
-    </thead>
-    <tbody style="font-size: 13px;">
-{% assign active_lrs = site.data.lrs-codes | sort:"LRS" %}
-{% for lrs in active_lrs %}
-{% if lrs.Expiration_Date == "3000-01-01" %}
-	<tr>
-		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
-		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td>
-		<td style="text-align: center;">{{ lrs.Lrank }}</td>
-		<td style="text-align: center;">{{ lrs.UCR }}</td>         
-        <td style="text-align: center; min-width: 120px;">{% for values in lrs.Available_NIBRS %}
-		        {{values}}{% if forloop.rindex0 > 0%}, {% endif %}
-            {% endfor %}</td>
-        <td style="text-align: center;">{{ lrs.GP }}</td>
-        <td style="text-align: center;">{{ lrs.PT }}</td>
-        <td style="text-align: center;">{{ lrs.OneA_Index }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.Index_Class }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.UCR_Index }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.LIBRS_Index }}</td>
-    </tr>
+        <th style="text-align: center; white-space: nowrap">LIBRS Index</th></tr></thead><tbody style="font-size: 13px;">
+        {% for values in lrs.Info %}
+        <tr>      
+        <td style="text-align: center; min-width: 120px;"> {{ values.NIBRS_DESCRIPTION }}</td>
+        <td style="text-align: center; min-width: 120px;"> {{ values.NIBRS }}</td>
+        <td style="text-align: center;">{{ values.GP }}</td>
+        <td style="text-align: center;">{{ values.PT }}</td>
+        <td style="text-align: center;">{{ values.OneA_Index }}</td>
+        <td style="text-align: center; white-space: nowrap">{{ values.Index_Class }}</td>
+        <td style="text-align: center; white-space: nowrap">{{ values.UCR_Index }}</td>
+        <td style="text-align: center; white-space: nowrap">{{ values.LIBRS_Index }}</td></tr>{% endfor %}
+    </tbody>
+    </table>
+    </div>
+    </td>
+    </tr> 
     {% endif %}
+    
 {% endfor %}
-</tbody>
+</tbody>  
 </table>
+
 
 ___
 
@@ -79,47 +108,52 @@ ____
 
 <br>
 
-
 <table>
-<thead  style="font-size: 14px;">
+<thead style="font-size: 14px;">
 	<tr>
+        <th style="padding-left: 12px; padding-right:3px;">Details</th>
 		<th style="padding-left: 8px; padding-right:3px;">LRS #</th>
 		<th style="padding-left: 0px; padding-right:3px;">LRS Description</th>
-		<th style="text-align: center;">LRank</th>
-		<th style="text-align: center;">UCR</th>
+        <th style="padding-left: 0px; padding-right:3px;">Expiration Date</th>
+	</tr>
+</thead>
+{% assign active_lrs = site.data.lrs-codes | sort:"LRS" %}
+<tbody>
+{% for lrs in active_lrs %}
+{% if lrs.Info.first.Expiration_Date != "3000-01-01"  %}
+	<tr data-toggle="collapse" data-target="#accordion{{ lrs.LRS }}" class="accordion-toggle" style="padding-top:0px; padding-bottom:0px;">
+        <td><i class="fas fa-chevron-right rotate"></i></td>
+		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
+		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td>
+        <td style="padding-left: 0px; padding-right:3px;">{{ lrs.Info.first.Expiration_Date }}</td></tr><tr>
+        <td colspan = "4" class="hiddenRow"><div class="accordion-body collapse" id ="accordion{{ lrs.LRS }}"><table><thead><tr>
+        <th style="text-align: center;">NIBRS Description</th>
 		<th style="text-align: center;">NIBRS</th>
 		<th style="text-align: center;">Group</th>
 		<th style="text-align: center;">Part</th>
         <th style="text-align: center; white-space: nowrap">1A Index</th>
         <th style="text-align: center; white-space: nowrap">Index Class</th>
         <th style="text-align: center; white-space: nowrap">UCR Index</th>
-        <th style="text-align: center; white-space: nowrap">LIBRS Index</th>
-        <th>Date Expired</th>
-	</tr>
-    </thead>
-    <tbody style="font-size: 13px;">
-{% assign active_lrs = site.data.lrs-codes | sort:"Expiration_Date" %}
-{% for lrs in active_lrs %}
-{% if lrs.Expiration_Date != "3000-01-01" %}
-	<tr>
-		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
-		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td>
-		<td style="text-align: center;">{{ lrs.Lrank }}</td>
-		<td style="text-align: center;">{{ lrs.UCR }}</td>         
-        <td style="text-align: center; min-width: 120px;">{% for values in lrs.Available_NIBRS %}
-		        {{values}}{% if forloop.rindex0 > 0%}, {% endif %}
-            {% endfor %}</td>
-        <td style="text-align: center;">{{ lrs.GP }}</td>
-        <td style="text-align: center;">{{ lrs.PT }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.OneA_Index }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.Index_Class }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.UCR_Index }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ lrs.LIBRS_Index }}</td>
-        <td>{{ lrs.Expiration_Date }}</td>
-    </tr>
+        <th style="text-align: center; white-space: nowrap">LIBRS Index</th></tr></thead><tbody style="font-size: 13px;">
+        {% for values in lrs.Info %}
+        <tr>      
+        <td style="text-align: center; min-width: 120px;"> {{ values.NIBRS_DESCRIPTION }}</td>
+        <td style="text-align: center; min-width: 120px;"> {{ values.NIBRS }}</td>
+        <td style="text-align: center;">{{ values.GP }}</td>
+        <td style="text-align: center;">{{ values.PT }}</td>
+        <td style="text-align: center;">{{ values.OneA_Index }}</td>
+        <td style="text-align: center; white-space: nowrap">{{ values.Index_Class }}</td>
+        <td style="text-align: center; white-space: nowrap">{{ values.UCR_Index }}</td>
+        <td style="text-align: center; white-space: nowrap">{{ values.LIBRS_Index }}</td></tr>{% endfor %}
+    </tbody>
+    </table>
+    </div>
+    </td>
+    </tr> 
     {% endif %}
+    
 {% endfor %}
-</tbody>
+</tbody>  
 </table>
 
 ____
