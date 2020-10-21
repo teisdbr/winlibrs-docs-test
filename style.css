@@ -8,6 +8,42 @@
     }
 }
 
+#content div table:nth-child(19) tbody tr:nth-child(even) td.hiddenRow{
+padding-top: 0%;
+padding-bottom: 0%;
+}
+
+#content div table:nth-child(19) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapse.show, #content div table:nth-child(19) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapsing{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#content div table:nth-child(19) tbody tr:nth-child(4n+1){
+    background-color: #E0E0E0;
+}
+
+#content div table:nth-child(19) tbody tr:nth-child(4n+2), #content div table:nth-child(19) tbody tr:nth-child(4n){
+    background-color: #F9F9F9;
+}
+
+#content div table:nth-child(27) tbody tr:nth-child(even) td.hiddenRow{
+    padding-top: 0%;
+    padding-bottom: 0%;
+    }
+    
+#content div table:nth-child(27) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapse.show, #content div table:nth-child(27) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapsing{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#content div table:nth-child(27) tbody tr:nth-child(4n+1){
+    background-color: #E0E0E0;
+}
+
+#content div table:nth-child(27) tbody tr:nth-child(4n+2), #content div table:nth-child(27) tbody tr:nth-child(4n){
+    background-color: #F9F9F9;
+}
+
 #content div table:nth-child(17) tbody tr:nth-child(even) td.hiddenRow{
 padding-top: 0%;
 padding-bottom: 0%;
