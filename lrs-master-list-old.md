@@ -1,7 +1,7 @@
 ---
 title: Master LRS List
 layout: default
-permalink: /lrs-master-list
+permalink: /lrs-master-list-old
 ---
 
 # LIBRS LRS Master List

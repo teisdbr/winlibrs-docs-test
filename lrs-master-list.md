@@ -1,7 +1,7 @@
 ---
 title: Master LRS List
 layout: default
-permalink: /lrs-master-list-wip
+permalink: /lrs-master-list
 ---
 
 # LIBRS LRS Master List
@@ -88,7 +88,7 @@ $(".accordion-toggle").click(function () {
     </td>
     </tr> 
     {% endif %}
-    
+
 {% endfor %}
 </tbody>  
 </table>
@@ -151,7 +151,7 @@ ____
     </td>
     </tr> 
     {% endif %}
-    
+
 {% endfor %}
 </tbody>  
 </table>
