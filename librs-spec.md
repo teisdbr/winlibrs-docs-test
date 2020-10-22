@@ -1268,7 +1268,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["22086"] -%}
 3 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
 
- 
+
 ___
 
 ### Qualifiers and Subparts
@@ -4581,7 +4581,9 @@ The format is simply the Offense Sequence Number (DE ) followed by the Incident 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["10001"] -%}
-1 | {{error.err_desc["46"]}} | {{error.err_no}}| {{ error.err_message }} 
+1 | {{error.err_desc["l45"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["90043"] -%}
+2 | {{error.err_desc["l45"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 ___
 

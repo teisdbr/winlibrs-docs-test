@@ -36,7 +36,16 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-10-22
+
+* Fixed a bug where DE L45 - Arrest Connection to Offense was only being checked for an Offense Sequence Number between 001 and 999. 
+  * DE L45 should be 15 characters long, and combine a valid Offense Sequence Number and Incident Number together. 
+    * EG: If an Offender is Arrested for Offense Sequence Number 001 from Incident Number 20-000001-01, the DE L45 should be '00120-000001-01'.
+  * This is important because an Arrest should be reported with a Multiple Arrestee Indicator of 'M' for Multiple when that arrest clears another Incident by arrest, as well. In order words, the arrest that you have listed in an Incident's Segment 62 might not be related to one of the Offenses in that Incident; it could be from another Incident. 
+  * Added Error 90043 - 'DE L45 IS REQUIRED AND SHOULD BE A 15 CHARACTER STRING THAT COMBINES A VALID OFFENSE SEQUENCE NUMBER AND INCIDENT NUMBER' to support this fix.
+
 #### 2020-10-16
+
 * Boatload of changes and enhancements to the Documentation:
   -	Went through all of the Errors in LIBRS and determined if they were getting hit or not. 
   -	Went through the Documentation, removing errors that don’t trigger and adding missing ones that do. 

@@ -3636,5 +3636,13 @@
             "1": "The ORI Number Specified in Segments 20, 40, 41, and 50 need to match the ORI Number in Segment 10.",
             "2": "The Incident Number Specified in Segments 20, 40, 41, and 50 need to match the Incident Number in Segment 10."
         }
+    },
+    "90043": {
+        "active": "true",
+        "err_no": 90043,
+        "err_message": "DE L45 IS REQUIRED AND SHOULD BE A 15 CHARACTER STRING THAT COMBINES A VALID OFFENSE SEQUENCE NUMBER AND INCIDENT NUMBER",
+        "err_desc": {
+            "l45": "Arrest Connection to Offense (DE L45) should be 15 characters long, and combine a valid Offense Sequence Number and Incident Number together. EG: If an Offender is Arrested for Offense Sequence Number 001 from Incident Number 20-000001-01, the DE L45 should be '00120-000001-01'."
+        }
     }
 }
