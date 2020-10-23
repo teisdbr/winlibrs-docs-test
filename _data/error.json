@@ -3037,7 +3037,7 @@
     "84207": {
         "active": "true",
         "err_no": 84207,
-        "err_message": "WHEN LRS = 35 A OR 35 B AND DE 7 = 'C', THEN DE 14 MUST HAVE A CODE OF '1' OR '6'.",
+        "err_message": "WHEN NIBRS = 35A OR 35B AND DE 7 = 'C', THEN OFFENSE MUST RELATE TO SEGMENT 31'S WHOSE DE 14 HAS A CODE OF '1' OR '6'.",
         "mandatory": {
             "4s7": "When an Incident contains an offense of DRUG/NARCOTIC VIOLATION (NIBRS Code 35A) or DRUG EQUIPMENT VIOLATION (NIBRS Code 35B) and Offense Attempted/Completed (DE 7) is Completed ('C'), then Type of Property Loss (DE 14) MUST have a value of None '1' or Seized '6'."
         }
