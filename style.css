@@ -24,7 +24,6 @@
 }
 
 #content div table:nth-child(19) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapse.show, #content div table:nth-child(19) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapsing, #content div table:nth-child(27) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapse.show, #content div table:nth-child(27) tbody tr:nth-child(even) td.hiddenRow div.accordion-body.collapsing{
-    padding-top: 5px;
     padding-bottom: 5px;
 }
 
