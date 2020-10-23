@@ -36,6 +36,21 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-10-23
+* A helpful DBA alerted us that that we had some LRS Codes that, while their Descriptions exist in the law, the LRS Code didn't actuall exist. We've expired those bad codes and added new ones to replace them (Thanks for the tip!). They've retained the same details like their Descriptions and NIBRS Mappings, just updated the LRS to be the correct one:
+
+    | Old Code | New Code |
+    |:--------:|:--------:|
+    | 15:11.30 | 14:71.3  |
+    | 15:13.80 | 14:73.8  |
+    | 15:29.60 | 14:89.6  |
+    | 15:31.30 | 14:91.3  |
+    | 15:31.40 | 14:91.4  |
+    | 15:38.3  | 14:98.2  |
+    | 15:38.30 | 14:98.8  |
+
+     
+
 #### 2020-10-22
 
 * Fixed a bug where DE L45 - Arrest Connection to Offense was only being checked for an Offense Sequence Number between 001 and 999. 
