@@ -28,8 +28,6 @@ ___
   - #### The master list of all Louisiana Revisec Statute (LRS) Codes that the LIBRS Program currently accepts, as well as information about expired LRS Codes. 
   - #### Links are available for vendors and agencies to download a JSON list of the current Master LIBRS LRS List for ingestion into their RMS.
   
-- ### <a href="./mandatories">LIBRS/NIBRS Mandatories</a>
-  - #### Groupings of multiple LIBRS Data Elements and their required values when certain Data Elements are present with particular NIBRS Submissions. 
 
 ___
 

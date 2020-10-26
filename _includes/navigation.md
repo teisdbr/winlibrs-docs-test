@@ -43,7 +43,6 @@
         </li>
         <li><div><a href="./data-element-values"><span style="font-size: large; font-weight: bold;">Data Element Available Values</span></a></div></li>
         <li><div><a href="./lrs-master-list"><span style="font-size: large; font-weight: bold;">Master LRS List</span></a></div></li>
-        <li><div><a href="./mandatories"><span style="font-size: large; font-weight: bold;">LIBRS/NIBRS Mandatories</span></a></div></li>
         <li><div><a href="./faq"><span style="font-size: large; font-weight: bold;">LIBRS FAQ</span></a></div></li>
     </ul>
 </div>
