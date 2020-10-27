@@ -57,11 +57,16 @@ ___
     |  Added   |   14:128.1/A3     | Terrorism - Kidnapping of a Human Being                                                                                         |  100                    |
     |  Added   |   14:128.1/A4     | Terrorism - Aggravated Arson upon any Stricture, Watercraft, or Movable                                                         |  200                    |
     |  Added   |   14:128.1/A5     | Terrorism - Intentional Aggravated Criminal Damage to Property                                                                  |  290                    |
+    |  Added   |   14:94           | Illegal use of weapons or dangerous instrumentalities                                                                           |  13A, 520               |
     |  Updated |   14:41/V         | First Degree Rape, Vaginal                                                                                                      |  11A                    |
     |  Updated |   14:41/O         | First Degree Rape, Foreign Object                                                                                               |  11B                    |
     |  Updated |   14:41/A         | First Degree Rape, Anal                                                                                                         |  11B                    |
+    |  Updated |   14:30.1         | Second Degree Murder                                                                                                            |  13A, 09A               |
+    |  Updated |   14:31           | Manslaughter                                                                                                                    |  13A, 09A, 09B          |
     |  Expired |   14:6717         | Theft of Motor Vehicle Fuel                                                                                                     |  No longer accepted     |
     |  Expired |   40:1238.2       | Prescription Requirements; Penalties.                                                                                           |  No longer accepted     |
+    |  Expired |   14:94/E         | Illegal use of weapons or dangerous instrumentalities                                                                           |  No longer accepted     |
+    |  Expired |   14:94/F         | Illegal use of weapons or dangerous instrumentalities                                                                           |  No longer accepted     |
 
 
 
