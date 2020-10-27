@@ -34,6 +34,37 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-10-27
+* We noticed that we actually weren't validating if all Property Sequence Numbers (DE P1) were Unique. We had a requirement for it, but no code to back that up. Added Error 12006 as as error when that happens. 
+* Made a number of LRS Code Updates. Here are the new Codes, Descriptions, and Mappings:
+  * Note that the 14:41-Series of Offenses had improper NIBRS Codes Associated with them. We were allowing 11A and 11B for all of them, but have reduced it to only those listed here.
+
+    |  Action  |   Statute Number  |                                                    Description                                                                  |  Available NIBRS Codes  |
+    |:--------:|:-----------------:|:--------------------------------------------------------------------------------------------------------------------------------|:-----------------------:|
+    |  Added   |   14:102.2        | Seizure and Disposition of Animals Cruelly Treated                                                                              |  720                    |
+    |  Added   |   14:12           | Criminal Negligence                                                                                                             |  90Z                    |
+    |  Added   |   14:24           | Principal                                                                                                                       |  90Z                    |
+    |  Added   |   14:32           | Prohibited Usage of Tracking Device(s)                                                                                          |  13C                    |
+    |  Added   |   14:329          | Interference with a Law Enforcement Investigation                                                                               |  90Z                    |
+    |  Added   |   14:338          | Interfering with Emergency Communication                                                                                        |  13B, 13C, 290, 90Z     |
+    |  Added   |   14:36           | Assault - Attempt to Commit Battery                                                                                             |  13A, 13B               |
+    |  Added   |   14:40.7         | Cyberbullying                                                                                                                   |  13C, 64A               |
+    |  Added   |   14:95.1.3       | Fraudulent Firearm and Ammunition Purchase                                                                                      |  520                    |
+    |  Added   |   17:221          | School Attendance                                                                                                               |  90F                    |
+    |  Added   |   27:30.1         | Unlawful use of State-Issued Identification to Gain Access to a Gaming Establishment or in Conjunction with Gaming Activities   |  39A                    |
+    |  Added   |   14:128.1/A1     | Terrorism - Intentional Killing of a Human Being                                                                                |  09A                    |
+    |  Added   |   14:128.1/A2     | Terrorism - Intentional Infliction of Serious Bodily Injury Upon a Human Being                                                  |  13A                    |
+    |  Added   |   14:128.1/A3     | Terrorism - Kidnapping of a Human Being                                                                                         |  100                    |
+    |  Added   |   14:128.1/A4     | Terrorism - Aggravated Arson upon any Stricture, Watercraft, or Movable                                                         |  200                    |
+    |  Added   |   14:128.1/A5     | Terrorism - Intentional Aggravated Criminal Damage to Property                                                                  |  290                    |
+    |  Updated |   14:41/V         | First Degree Rape, Vaginal                                                                                                      |  11A                    |
+    |  Updated |   14:41/O         | First Degree Rape, Foreign Object                                                                                               |  11B                    |
+    |  Updated |   14:41/A         | First Degree Rape, Anal                                                                                                         |  11B                    |
+    |  Expired |   14:6717         | Theft of Motor Vehicle Fuel                                                                                                     |  No longer accepted     |
+    |  Expired |   40:1238.2       | Prescription Requirements; Penalties.                                                                                           |  No longer accepted     |
+
+
+
 #### 2020-10-23
 * A helpful DBA alerted us that that we had some LRS Codes that, while their Descriptions exist in the law, the LRS Code didn't actuall exist. We've expired those bad codes and added new ones to replace them (Thanks for the tip!). They've retained the same details like their Descriptions and NIBRS Mappings, just updated the LRS to be the correct one:
 
