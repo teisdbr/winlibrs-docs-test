@@ -37,16 +37,32 @@ $(".accordion-toggle").click(function () {
     $(this).children().children().toggleClass("down");
 });
 });</script>
-
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>var expanded = false</script>
 <script type="text/javascript">
 $(document).ready(function(){
-$(".accordion-toggle").click(function () {
-    $(this).toggleClass("down");
+$(".showhide").click(function () {
+    if(expanded == false){
+        expanded = true
+    }
+    else{
+        expanded = false
+    }
+    var selection = document.getElementsByClassName("accordion-body");
+    for (var i = 0; i < selection.length; i++) {
+        var dummy = $(selection.item(i).classList)
+        if (expanded == false) {
+        $(selection.item(i).classList.remove("show"));
+        }
+        else {
+        $(selection.item(i).classList.add("show"));
+        }
+}
 });
 });</script>
 
+<button class="showhide">Show/Hide All</button>
+<!-- <button class="showhide" data-toggle="collapse" data-target="$selector">Show/Hide All</button> -->
+<div id="activecodes">
 <table>
 <thead style="font-size: 14px;">
 	<tr>
@@ -92,7 +108,7 @@ $(".accordion-toggle").click(function () {
 {% endfor %}
 </tbody>  
 </table>
-
+</div>
 
 ___
 
@@ -107,7 +123,7 @@ Be sure to check the list here and make sure that your RMS is up to date with th
 ____
 
 <br>
-
+<div id="expiredcodes">
 <table>
 <thead style="font-size: 14px;">
 	<tr>
@@ -126,7 +142,7 @@ ____
 		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
 		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td>
         <td style="padding-left: 0px; padding-right:3px;">{{ lrs.Info.first.Expiration_Date }}</td></tr><tr>
-        <td colspan = "4" class="hiddenRow"><div class="accordion-body collapse" id ="accordion{{ lrs.LRS }}"><table><thead><tr>
+        <td colspan = "4" class="hiddenRow" style="border-bottom: none;"><div class="accordion-body collapse" id ="accordion{{ lrs.LRS }}"><table><thead><tr>
         <th style="text-align: center;">NIBRS Description</th>
 		<th style="text-align: center;">NIBRS</th>
 		<th style="text-align: center;">Group</th>
@@ -155,7 +171,7 @@ ____
 {% endfor %}
 </tbody>  
 </table>
-
+</div>
 ____
 
 <br>
