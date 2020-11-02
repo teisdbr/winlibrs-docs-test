@@ -234,6 +234,7 @@ ____
 
 * Since there is not a limit to how many Segment 31's that can be entered, can there be duplicate property description types allowed for same incident? Example, if in the same incident three (3) TV's were damaged, Would there be 3 Segment 31's with same Property Description Type and Property Loss Type?
   * Yes, since they are three distinct properties you will need to include three distinct Segment 31's (Property Description). You can handle that in your RMS however you want, so long as LIBRS gets sent the three segments (EG: If your RMS wants to store the property once and list it three times in the Incident, so long as we get those three segments to say that there are three TV's then it doesn't matter to us if you use the same property in the RMS or make three different ones.)
+  * It should be noted that NIBRS wants properties to be aggregated together, however LIBRS wants them to be split out individually. Upon NIBRS Extraction, LIBRS will combine and aggregate all properties with matching Property Descriptions and their values for submission to the FBI. However, the State will use the more granular data for analysis purposes, so it shouldn't be aggregated when you send it to us.
 
 ____
 
@@ -261,11 +262,13 @@ ____
     * For example, the two of the valid Injury Types for NIBRS 13A are 'O - Other Major Injury', and 'U - Unconsciousness', while 'M - Apparent Minor Injury' is not. 
       * If you were to send us two Segment 51's for the same Victim Sequence number where the Injury Types are 'O' and 'U', we **would not reject the incident**. 
       * However, if one of those Segment 51's were to have an Injury Type of 'M', instead, then we would reject it because that's not a valid Injury Type for the NIBRS 13A, even though the other Injury Type is valid.  
+* What do I do if there is a Victim of a 13A and 13B? When I put 'N' or 'M' for None or Minor Injury, I get an error that 13A can't use that, and when I use a Major Injury with the Victim, I get an error saying that I can't use that with 13B. 
+  * Unfortunately 13A and 13B (and 13C for that matter) are all mutually exclusive Offenses, and there cannot be a Victim that is associated with Both in the same Incident. 
+  * Since Victim Injury is tied to the Victim via the Victim Sequence Number, and since the Offenses are also tied to the Victim via the Victim Sequence Number, there's no way to delineate which Injury Type goes with which Offense. 
+  * In cases like this, you should make a separate Incident for the 13A and 13B Offenses. 
 
 * If there are multiple Victim/Offender Relationships, will there be multiple Segment 52's for each Segment 50?
-
   * Yes, You'll need to add a Segment 52 for each Victim/Offender Relationship. 
-
     * For example, if there are two Victims, and three Offenders, you would have the following Segment 52's:
 
       ```

@@ -94,6 +94,7 @@ The Submission Header contains the information related to the Agency that is sub
 <br>
 
 
+
 ### Segment 00 Errors and Explanations
 
 Error Number  | Error Message | Explaination of Error
@@ -131,7 +132,7 @@ The Administrative Segment contains basic information about the Incident that is
 |[C5](./librs-spec#action-type-c5)                           |Action Type                                     |    3      |  1   |  A      |
 |[1](./librs-spec#ori-number-1)                              |ORI Number                                      |   4-12    |  9   |  A      |
 |[2](./librs-spec#incident-number-2)                         |Incident Number                                 |  13-24    |  12  |  A      |
-|[L53](./librs-spec#location-of-incident-l53)                |Location of Incident (Geographical Coordinates) |  25-36    |  12  |  A/N    |
+|[L53](./librs-spec#location-of-incident-geographical-coordinates-l53)                |Location of Incident (Geographical Coordinates) |  25-36    |  12  |  A/N    |
 |[L54](./librs-spec#stationdivisionprecinct-identifier-l54)  |Station/Division/Precinct Identifier            |  37-42    |  6   |  A      |
 |[3](./librs-spec#incident-datehour-3)                       |Incident Date/Hour                              |  43-53    |  11  |  A      |
 |[4](./librs-spec#cleared-exceptionally-4)                   |Cleared Exceptionally                           |    54     |  1   |  A      |
@@ -214,12 +215,12 @@ We get a lot of questions about this Segment, and have included more information
    [L6](./librs-spec#offense-sequence-number-l6)                                 | Offense Sequence Number                                     | 25-27    | 3        | N
    [6](./librs-spec#louisiana-revised-statute-6)                                 | Louisiana Revised Statute Number                            | 28-39    | 12       | A
    [7](./librs-spec#offense-attemptedcompleted-7)                                | Offense Attempted/Completed                                 | 40       | 1        | A
-   [24](./librs-spec#victim-sequence-number-24)                                  | Offense Connected to Victim Sequence Number                 | 41-43    | 3        | N
+   [24](./librs-spec#offense-connected-to-victim-sequence-number-24)                                  | Offense Connected to Victim Sequence Number                 | 41-43    | 3        | N
    [9](./librs-spec#location-type-9)                                             | Location Type                                               | 44-45    | 2        | N
    [10](./librs-spec#number-of-premises-entered-10)                              | Number of Premises Entered                                  | 46-47    | 2        | A/N
    [11](./librs-spec#method-of-entry-11)                                         | Method of Entry                                             | 48       | 1        | A
-   [12](./librs-spec#type-of-criminal-activitygang-information-nos.-1-2-and-3-12)| Type of Criminal Activity/Gang Information Nos. 1, 2 and 3  | 49-51    | 1 (3x)   | A
-   [13](./librs-spec#type-of-weaponforce-involved-nos.-1-2-and-3-13)             | Type of Weapon/Force Involved Nos. 1, 2, and 3              | 52-60    | 3 (3x)   | A
+   [12](./librs-spec#type-of-criminal-activitygang-information-12)| Type of Criminal Activity/Gang Information Nos. 1, 2 and 3  | 49-51    | 1 (3x)   | A
+   [13](./librs-spec#type-of-weaponforce-involved-nos-1-2-and-3-13)             | Type of Weapon/Force Involved Nos. 1, 2, and 3              | 52-60    | 3 (3x)   | A
    [N6](./librs-spec#agency-supplied-nibrs-code-n6)                              | Agency Supplied NIBRS Code                                  | 61-63    | 3        | A
    [70](./librs-spec#incohates-70)                                               | Inchoate Modifier                                           | 64       | 1        | A
    \*\*                                                                          | Future Expansion Buffer                                     | 65-80    | 16       | G (Space)
@@ -231,7 +232,7 @@ We get a lot of questions about this Segment, and have included more information
 ### Important Notes
 * Only one Victim can be related to an Offense Segment. If you have multiple Victims of the same offense, you need to include multiple Offense Segments that link to those Victims.
 * Please note that DE's 12 and 13 are actually three Data Elements Combined into one. Each instance of the Data Element is either 1 or 3 characters long and can include up to 3 instances, so long as mutually exclusive values are not used.
-   * See [Type of Criminal Activity/Gang Information Nos. 1, 2 and 3](./librs-spec#type-of-criminal-activitygang-information-nos.-1-2-and-3-12) and [Type of Weapon/Force Involved Nos. 1, 2, and 3 ](./librs-spec#type-of-weaponforce-involved-nos.-1-2-and-3-13) for more details.
+   * See [Type of Criminal Activity/Gang Information Nos. 1, 2 and 3](./librs-spec#type-of-criminal-activitygang-information-12) and [Type of Weapon/Force Involved Nos. 1, 2, and 3 ](./librs-spec#type-of-weaponforce-involved-nos-1-2-and-3-13) for more details.
 
 <br>
 
@@ -2285,7 +2286,9 @@ ___
 ### Allowed Entries: 
 ___
 
-Enter one Property Description (DE 15) code per Property Description (31) Segment, but can enter multiple Property Description (31) Segments. Do NOT enter duplicate Property Description (DE 15) codes within an Incident, unless a different Type of Property Loss (DE 14) code is used. An exception would be if there is more than one Drug that was Seized in the Incident. However, rules found in the Mandatory Data Element Requirements must still be followed.
+Enter one Property Description (DE 15) code per Property Description (31) Segment, but can enter multiple Property Description (31) Segments. Do NOT enter duplicate Property Sequence Numbers (DE P1) within an incident unless a different Type of Property Loss (DE 14) is used. An exception would be if there is more than one Drug that was Seized in the Incident. However, rules found in the Mandatory Data Element Requirements must still be followed.
+
+LIBRS will aggregate the counts of Property Descriptions and the Total Values associated with them for NIBRS Extraction. Therefore the FBI will not receieve this granular of data, however the State of Louisiana Will.
 
 
 <table>
@@ -3642,6 +3645,10 @@ Requirment   | Requirement Description | Error Number | Error Message
 6 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
 
 
+### Important Note:
+13A, 13B, and 13C Offenses are all Mutually Exclusive to the same Victim in the same Incident. Meaning, LIBRS (and NIBRS, for that matter) will not allow you to submit a Victim who received Major Injuries from one Offender committing a 13A - Aggravated Assault Offenses, and Minor Injuries from another Offender committing a 13B - Simple Assault Offense. 
+
+If you have a case where a Victim applies to Mutually Exclusive Offenses, then you will need to submit those Offenses in Separate Incidents. You can see the chart here for (which Offenses are Mutually Exclusive)[./offenses-that-cannot-occur-to-the-same-victim].
 
 ___
 
