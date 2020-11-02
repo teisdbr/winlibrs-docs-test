@@ -235,6 +235,9 @@ ____
 * Since there is not a limit to how many Segment 31's that can be entered, can there be duplicate property description types allowed for same incident? Example, if in the same incident three (3) TV's were damaged, Would there be 3 Segment 31's with same Property Description Type and Property Loss Type?
   * Yes, since they are three distinct properties you will need to include three distinct Segment 31's (Property Description). You can handle that in your RMS however you want, so long as LIBRS gets sent the three segments (EG: If your RMS wants to store the property once and list it three times in the Incident, so long as we get those three segments to say that there are three TV's then it doesn't matter to us if you use the same property in the RMS or make three different ones.)
   * It should be noted that NIBRS wants properties to be aggregated together, however LIBRS wants them to be split out individually. Upon NIBRS Extraction, LIBRS will combine and aggregate all properties with matching Property Descriptions and their values for submission to the FBI. However, the State will use the more granular data for analysis purposes, so it shouldn't be aggregated when you send it to us.
+* What's up with Segment 33? Is it optional, or should I include it?
+  * Segment 33 should be number two on your list after brushing your teeth twice a day. 
+  * We made it Optional to support older RMS systems while they began implementing it, but it should be considered as required. At some time in the future it will likely become mandatory, so if you are in the earlier stages of your RMS development it'd be best to include it now.
 
 ____
 
@@ -249,9 +252,7 @@ ____
   * Unfortunately LIBRS only allows one Segment 40 (Offender) to be submitted for each Offender Sequence Number, and therefore we can only allow the submission of a Single DE 84 - Bias/Motivation type for each Offender. 
 * Is it possible to list all Drugs in an Incident as a single Property?
   * No, only one Suspected Drug Type is allowed for each Property Description Segment (Segment 31), and Property Sequence Numbers (DE P1) are never allowed to repeat unless it’s a Stolen/Recovered Loss Type. So each Seized Drug needs to have its own Segment 31 with a unique Property Sequence Number.
-* What's up with Segment 33? Is it optional, or should I include it?
-  * Segment 33 should be number two on your list after brushing your teeth twice a day. 
-  * We made it Optional to support older RMS systems while they began implementing it, but it should be considered as required. At some time in the future it will likely become mandatory, so if you are in the earlier stages of your RMS development it'd be best to include it now.
+
 
 ____
 
