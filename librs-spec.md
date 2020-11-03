@@ -2290,7 +2290,7 @@ ___
 	* This also applies to multiples of Property Descriptions. You should submit a Segment 31 for each Property Involved in the Incident, even if it is the same as another Property. 
 		* EG: Three TV's are stolen from Best Buy. Being the same Make and Model, they all will have the same Description and Value, however you should submit three Property Description Segments to LIBRS.
 * Do NOT enter duplicate Property Sequence Numbers (DE P1) within an incident unless a different Type of Property Loss (DE 14) is used. 
-	* An exception would be if there is more than one Drug that was Seized in the Incident. However, rules found in the Mandatory Data Element Requirements must still be followed.
+	* EG: Just because those three TV's in the previous example are all the same make, model, and value, doesn't mean they should have the same Property Sequence Number.
 * LIBRS will aggregate the counts of Property Descriptions and the Total Values associated with them for NIBRS Extraction. Therefore the FBI will not receieve this granular of data, however the State of Louisiana Will.
 
 
