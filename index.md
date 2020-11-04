@@ -34,6 +34,10 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-11-04
+* Added logic that will throw an error when LEOKA-related fields are included with non-Leoka Victims. 
+  * New Error Code: 15082 - "VICTIM TYPE MUST BE 'L - LAW ENFORCEMENT' FOR DATA TO BE ENTERED"
+
 #### 2020-10-27
 * We noticed that we actually weren't validating if all Property Sequence Numbers (DE P1) were Unique. We had a requirement for it, but no code to back that up. Added Error 12006 as as error when that happens. 
 * Made a number of LRS Code Updates. Here are the new Codes, Descriptions, and Mappings:
