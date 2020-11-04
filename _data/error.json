@@ -3346,6 +3346,22 @@
             "4s12": "When an Incident contains KIDNAPPING/ABDUCTION (NIBRS Code 100) and Offender Sequence Number (DE 36) IS NOT EQUAL to '000', then Offender Number to be Related (DE 34) and Relationship of Victim to Offender (DE 35) MUST contain valid values."
         }
     },
+    "86753": {
+        "active": "true",
+        "err_no": 86753,
+        "err_message": "CHOSEN LRS CODE IS EXPIRED AS OF INCIDENT DATE",
+        "err_desc": {
+            "6": "The LRS Code that you've selected was marked as Expired before the Incident Date of this Incident. Please select a Different LRS Code."
+        }
+    },
+    "86754": {
+        "active": "true",
+        "err_no": 86754,
+        "err_message": "CHOSEN NIBRS MAPPING IS EXPIRED AS OF INCIDENT DATE",
+        "err_desc": {
+            "n6": "The NIBRS Code that you've selected for this LRS Code was marked as Expired before the Incident Date of this Incident. Please select a Different NIBRS Code."
+        }
+    },
     "23220": {
         "active": "false",
         "err_no": 23220,
