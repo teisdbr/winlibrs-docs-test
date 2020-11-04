@@ -1268,6 +1268,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["22086"] -%}
 3 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
+{% assign error = site.data.error["286753"] -%}
+4 | {{error.err_desc["6"]}} | {{error.err_no}}| {{ error.err_message }} 
 
 
 ___
@@ -1425,6 +1427,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["n6"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["90034"] -%}
 2 | {{error.err_desc["n6"]}} | {{error.err_no}} | {{ error.err_message }} 
+{% assign error = site.data.error["86754"] -%}
+23| {{error.err_desc["n6"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 ___
 
