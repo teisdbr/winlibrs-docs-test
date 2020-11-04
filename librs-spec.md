@@ -2907,6 +2907,9 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["25a"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["25a"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15082"] -%}
+3 | {{error.err_desc["25a"]}} | {{error.err_no}}| {{ error.err_message }}
+
 
 
 <br>
@@ -2967,6 +2970,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.err_desc["25b"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["25b"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["15082"] -%}
+3 | {{error.err_desc["25b"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -3018,6 +3023,11 @@ ___
 
 ### Requirements:
 Should be a Nine-Digit, valid ORI Number, or Blank Spaces (G) if Not requried
+
+Requirement  | Requirement Description | Error Number | Error Message
+:-----------:|-------------------------|:------------:|----------
+{% assign error = site.data.error["15082"] -%}
+1 | {{error.err_desc["25c"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
