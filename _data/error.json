@@ -3670,5 +3670,13 @@
         "err_desc": {
             "l45": "Arrest Connection to Offense (DE L45) should be 15 characters long, and combine a valid Offense Sequence Number and Incident Number together. EG: If an Offender is Arrested for Offense Sequence Number 001 from Incident Number 20-000001-01, the DE L45 should be '00120-000001-01'."
         }
+    },
+    "90044": {
+        "active": "true",
+        "err_no": 90044,
+        "err_message": "VICTIM MUST BE ASSOCIATED WITH AT LEAST TWO OFFENDERS WHEN MULTIPLE SEGMENT 40'S EXIST AND CRIME IS AGAINST PERSON OR PROPERTY",
+        "seq_desc": {
+            "50": "According to NIBRS, when there is more than one Offender in an Incident, and a Victim is tied to a Crime Against Person or Property, then the Victim must be associated with at least two Offenders. "
+        }
     }
 }
