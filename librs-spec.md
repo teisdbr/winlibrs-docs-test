@@ -609,7 +609,10 @@ ____
 ### Description
 Segment 51, Victim Injury, includes information about the sustained Injuries of a Victim of an Offense. 
 
-The main thing to note about it is that it required to be included when a Segment 50 (Victim Segment) is present with a Victim Type of 'I - Individual' or 'L - Law Enforcement', and it should NOT if there are no victims of those two types present in the Incident.
+The main thing to note about it is that it required to be included when a Segment 50 (Victim Segment) is present with a Victim Type of 'I - Individual' or 'L - Law Enforcement', and the Offense is of one of the following NIBRS Codes:
+{::nomarkdown}<script>document.write(window.derequiresnibrs.de33)</script>{:/}
+
+Otherwise, it should NOT be included. Additionally, you should not supply a Segment 51 without an Injury Type (DE 33).
 
 More information and common questions and errors can be found on the LIBRS FAQ for this Segment [here](./faq#victims-segments-50-51-and-52).
 
