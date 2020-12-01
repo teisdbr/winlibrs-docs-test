@@ -34,6 +34,11 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-12-01
+* Refined the logic that was looking at Segments 60, 61, and 62, and whether they should be included or not. 
+  * Segment 60 is always allowable for I, W, A, and M Action Types, however the code we had was just counting the number of Segment 61's and 62's that were in the file. So you could have 50 arrests in the file, but only one Segment 61 and 62 and it would still validate properly. 
+  * New code makes it that you'll get errors if you have a Segment 60 and that Arrestee Sequence Number doesn't also link up with a Segment 61 and 62. 
+
 #### 2020-11-04
 * Added logic that will throw an error when LEOKA-related fields are included with non-Leoka Victims. 
   * New Error Code: 15082 - "VICTIM TYPE MUST BE 'L - LAW ENFORCEMENT' FOR DATA TO BE ENTERED"
