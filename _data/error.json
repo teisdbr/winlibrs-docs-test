@@ -1483,10 +1483,10 @@
         "err_no": 15005,
         "err_message": "MISSING VICTIM/OFFENDER SEGMENT OR RELATIONSHIP (SEGMENT 52 OR DE L6)",
         "seq_desc": {
-            "52": "Victim/Offender Relationship (Segment 52) must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement'."
+            "52": "Victim/Offender Relationship (Segment 52) must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement' that is a victim of a Crime Against Person or a Robbery."
         },
         "err_desc": {
-            "35": "Victim/Offender Relationship (DE 34) must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement'."
+            "35": "Victim/Offender Relationship (DE 34) must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement' that is a victim of a Crime Against Person or a Robbery."
         }
     },
     "15006": {
