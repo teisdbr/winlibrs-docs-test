@@ -652,7 +652,7 @@ ___
 ### Description
 Segment 52, Victim/Offender Relationship, is what links the Victims to the Offenders, and thereby links the Offenders to the Offenses. 
 
-If a Victim of Type 'I - Individual' or 'L - Law Enforcement' is present in the Incident, then this Segment needs to be included. Otherwise it should NOT be included. 
+If a Victim of Type 'I - Individual' or 'L - Law Enforcement' is present in the Incident, and the Offense is a Crime Against Person or a Robbery, then this Segment needs to be included. Otherwise it should NOT be included. 
 
 More information and common questions and errors can be found on the LIBRS FAQ for this Segment [here](./faq#victims-segments-50-51-and-52).
 
