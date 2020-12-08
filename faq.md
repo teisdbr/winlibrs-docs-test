@@ -19,6 +19,7 @@ This page contains the questions and responses we've gotten from vendors and use
   * <a href="#certification-process">Certification Process</a>
 * <a href="#how-to-use-librs">How to Use LIBRS</a>
   * <a href="#getting-started">Getting Started</a>
+  * <a href="#submitting-a-file">Submitting a File</a>
   * <a href="#reports">Reports</a>
   * <a href="#how-dates-work">How Dates Work</a>
     * <a href="#reporting-periods-and-out-of-sequence">Reporting Periods and Out of Sequence</a>
@@ -90,30 +91,45 @@ Your agency will remain in "P" while LCLE Staff review your previous submissions
 
 ## How to Use LIBRS
 
+### Submitting a File
+Once you're ready to start sending us Flat Files, follow these instructions:
+1. Navigate to <a href="https://ftp.lsa.org">https://ftp.lsa.org</a>, and login with the Username and Password provided to you by the LIBRS Administrator
+  * If you don't have a login, please contact Danny Jackson at <a href="mailto:danny@lsa.org">danny@lsa.org</a>
+2. Using the onscreen Folder Navigation, select the "Data" Folder. 
+3. Click "Browse", and located the LIBRS Flat File on your computer. Then click "Open". 
+4. There should now be a file listed on the screen. Click "Upload This" to upload it to LIBRS for Processing. 
+
 ### Reports
 
-Submitting through LIBRS means that for each submission period there will be a number of reports that get generated for your use automatically:
+Submitting through LIBRS means that for each submission period there will be a number of reports that get generated for your use automatically. These reports are found in the "Reports" Folder on the LIBRS FTP Server. To access them:
+
+1. Navigate to <a href="https://ftp.lsa.org">https://ftp.lsa.org</a>, and login with the Username and Password provided to you by the LIBRS Administrator
+2. Using the onscreen Folder Navigation, select the "Reports" Folder. 
 
 1. Error Summary - This is a broad-strokes look at the accuracy of your submission. It shows you the errors and warnings present, and gives you an overall total of how well the submission did by outlining the Accepted and Rejected Incidents. 
 2. Error Detail Report - This is a very narrow look at the errors that occurred in the submission. This shows you all of the inputs that went into the incidents that were rejected so that you can see the full context for what might have been throwing the error. 
-3. Scorecard - This is a table that gets updated every time you make a submission. It references the ***INCIDENT DATES*** on your submissions, and updates the score for each submission period every time you submit a new file. 
+
+
+#### Scorecard
+
+The Scorecard is a table that gets updated every time you make a submission. It references the ***INCIDENT DATES*** on your submissions, and updates the score for each submission period every time you submit a new file. 
    * EG: In January your agency had 90 Accepted Incidents, and 10 Rejected Incidents, providing an Average of 90%. Next month, you go back and correct those errors, so now when those incidents get reprocessed, they'll be accepted this time. This will cause the Scorecard to update, and now show that you have 100 Accepted Incidents and 0 Rejected in January. Good work!
+   
+This report basically tracks how well an Agency has done with this submissions over the year, and calculates an overall score based on accepted and rejected I, D, M, and A Action Types. 
 
+To find the Scorecard:
 
+1. Navigate to <a href="https://ftp.lsa.org">https://ftp.lsa.org</a>, and login with the Username and Password provided to you by the LIBRS Administrator
+2. Using the onscreen Folder Navigation, select the "Scorecard" Folder. 
 
 ### How Dates Work
 
 Dates in LIBRS can get a little convoluted. In LIBRS there are four important Dates:
 
 1. Incident Date - The date on which the Incident being submitted occurred. 
-
 2. Incident Update Date - The most recent date on which the Incident that is being submitted was modified. 
-
 3. Reporting Period - The reporting month and year that is being submitted. 
-
 4. Reporting Date - The date on which the submission is being made. 
-
-   
 
 #### Reporting Periods and Out of Sequence
 
