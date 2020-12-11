@@ -162,7 +162,7 @@ ___
 ___
 
 ### Description
-Segment 11, Administrative Modification, is only used when performing an update to a Time Window Submission Incident (DE C5, Action Type = 'M') In General, we discourage the use of Time-Window Submissions since they're used to modify old data and will not be reflected in future Crime Reporting, anyways. 
+Segment 11, Administrative Modification, is only used when performing an update to a Time Window Submission Incident (DE C5, Action Type = ‘M’). Agencies should be aware that information submitted via time windows is stored separately by the FBI and is not combined back in with normal submissions and may or may not be reported in some publications  nor counted towards overall totals.
 
 ### Segment Layout
 
