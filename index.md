@@ -34,6 +34,11 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-12-11
+* Revised wording on Segment 11 Description to be more accurate. 
+* Modified NIBRS Mappings for LRS 14:110.2 from 90Z to 290.
+* Fixed an incorrect Error Code for when a Victim Injury was included but shouldn't (Was throwing a 15020, should have been 15019). 
+
 #### 2020-12-01
 * Refined the logic that was looking at Segments 60, 61, and 62, and whether they should be included or not. 
   * Segment 60 is always allowable for I, W, A, and M Action Types, however the code we had was just counting the number of Segment 61's and 62's that were in the file. So you could have 50 arrests in the file, but only one Segment 61 and 62 and it would still validate properly. 
