@@ -636,7 +636,7 @@ More information and common questions and errors can be found on the LIBRS FAQ f
 
 Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
-{% assign error = site.data.error["15003"] -%}
+{% assign error = site.data.error["15020"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["51"]}}
 
 ___
@@ -3657,16 +3657,14 @@ Requirment   | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
-{% assign error = site.data.error["15003"] -%}
-2 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["15019"] -%}
-3 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
+2 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["15020"] -%}
-4 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
+3 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15079"] -%}
-5 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
+4 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["90029"] -%}
-6 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
+5 | {{error.err_desc["33"]}} | {{error.err_no}}| {{ error.err_message }}
 
 
 ### Important Note:

@@ -34,6 +34,19 @@ ___
 ## Recent Changes
 ___
 
+#### 2020-112-14
+* Updated the requirements for DE 33 - Injury Type. Error 15003 was previously deprecated and rolled into Error 15020, however the Error Number was not updated properly, and thus it remained in the documentaiton. 
+  * Minor change in requirement numbers:
+
+  |  Old Req. No. | New Req. No. |
+  |---------------|--------------|
+  |       1       |      1       |
+  |       3       |      2       |
+  |       4       |      3       |
+  |       5       |      4       |
+  |       6       |      5       |
+
+
 #### 2020-12-11
 * Revised wording on Segment 11 Description to be more accurate. 
 * Modified NIBRS Mappings for LRS 14:110.2 from 90Z to 290.

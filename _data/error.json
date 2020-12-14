@@ -1463,15 +1463,9 @@
         }
     },
     "15003": {
-        "active": "true",
+        "active": "false",
         "err_no": 15003,
-        "err_message": "MISSING VICTIM INJURY SEGMENT OR TYPE (SEGMENT 51 OR DE 33)",
-        "seq_desc": {
-            "51": "Segment 51 must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement'."
-        },
-        "err_desc": {
-            "33": "Type of Victim Injury (DE 33) must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement'."
-        }
+        "err_message": "MISSING VICTIM INJURY SEGMENT OR TYPE (SEGMENT 51 OR DE 33)"
     },
     "15004": {
         "active": "false",
@@ -1546,6 +1540,9 @@
         "active": "true",
         "err_no": 15020,
         "err_message": "DATA MUST BE ENTERED FOR SPECIFIC OFFENSES",
+        "seq_desc": {
+            "51": "Segment 51 must be present for each Victim Sequence Number (DE 23) that has a Victim Type (DE 25) of 'I - Individual' or 'L - Law Enforcement'."
+        },
         "err_desc": {
             "33": "Victim Injury Type (DE 33) must be present if the associated Victim Type (DE 25) is 'I - Individual' or 'L - Law Enforcement', and Offense Connected to Victim Sequence Number (DE 24) relates to one of the follwing Offense Codes: {::nomarkdown}<script>document.write(window.derequiresnibrs.de33)</script>{:/}",
             "31": "Aggravated Assault/Homicide Circumstance (DE 31) must be present if Offense Connected to Victim Sequence Number (DE 24) relates to one of the follwing Offense Codes: {::nomarkdown}<script>document.write(window.derequiresnibrs.de31)</script>{:/}",
