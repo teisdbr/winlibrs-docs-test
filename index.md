@@ -37,8 +37,8 @@ ___
 #### 2020-112-14
 * Updated the requirements for DE 33 - Injury Type. Error 15003 was previously deprecated and rolled into Error 15020, however the Error Number was not updated properly, and thus it remained in the documentaiton. 
   * Minor change in requirement numbers:
-
-  |  Old Req. No. | New Req. No. |
+</br>
+  |: Old Req. No.:|:New Req. No.:|
   |---------------|--------------|
   |       1       |      1       |
   |       3       |      2       |
