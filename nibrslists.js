@@ -12,6 +12,7 @@ var weapons = {
     firearms: "<ul><li>11 Firearm (Type not Stated)</li><li>12 Handgun</li><li>13 Rifle</li><li>14 Shotgun</li><li>15 Other Firearm</li></ul>"
 }
 
+
 var derequiresnibrs = {
     de12: "<b><ul><li>250, 280</li><li>35A, 35B</li><li>370, 520, 720</b> (720 is limited to A, I, F, or S)</li><li><b>39C</li><li>90A, 90Z</b> (If 90Z is a Crime Against Property)</li></ul>",
     de12a: "<b><ul><li>09A, 09B</li><li>100, 120</li><li>11A, 11B, 11C, 11D</li><li>13A, 13B, 13C</li></b></li></ul>",
