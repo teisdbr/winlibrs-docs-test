@@ -360,7 +360,8 @@
                 {"lossType": 8, "description": "Unknown"}
             ],
             "completed": [
-                {"lossType": 6, "description": "Seized"}
+                {"lossType": 1, "description": "None"},
+                {"lossType": 8, "description": "Unknown"}
             ]
         },
         {

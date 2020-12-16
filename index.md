@@ -34,7 +34,12 @@ ___
 ## Recent Changes
 ___
 
-#### 2020-112-14
+#### 2020-12-16
+* Consolidated the requirements for Data Element 14 (Property Loss Type). We had several Error Codes that weren't listed in the documentation that effectively just said "You can't use that Property Loss Type with this Offense Code". 
+  * Error 10081 will be thrown when that error occurs now, rather than 90028, 90039, or 90041. 
+  * You can check the for the full [List of Available Values](./data-element-values#allowable-property-loss-types-de-14-by-nibrs-and-attempedcompleted) of Property Loss Types that are allowed for each Offense Code. If an Offense Code is not present on the list, then a Property isn't to be submitted with it. 
+
+#### 2020-12-14
 * Updated the requirements for DE 33 - Injury Type. Error 15003 was previously deprecated and rolled into Error 15020, however the Error Number was not updated properly, and thus it remained in the documentaiton. 
   * Minor change in requirement numbers:
 </br>

@@ -3567,7 +3567,7 @@
         "err_message": "ARRESTEES CANNOT BE SENT WITH AN UNKNOWN OFFENDER"
     },
     "90028": {
-        "active": "true",
+        "active": "false",
         "err_no": 90028,
         "err_message": "PROPERTY LOSS TYPE 6 - SEIZED IS ONLY ACCEPTABLE FOR OFFENSES WITH NIBRS CODES OF 250, 35 A, 35 B, OR 39 A - 39 D"
     },
@@ -3627,12 +3627,9 @@
         }
     },
     "90039": {
-        "active": "true",
+        "active": "false",
         "err_no": 90039,
         "err_message": "WHEN THE OFFENSE WITH NIBRS = 90A; THE PORPERTY LOSS TYPE (14) MUST BE NONE OR UNKNOWN",
-        "err_desc": {
-            "14": "WHEN THE OFFENSE WITH NIBRS = 90A; THE PORPERTY LOSS TYPE (14) MUST BE NONE (1) OR UNKNOWN (8)"
-        }
     },
     "90040": {
         "active": "false",
@@ -3643,12 +3640,9 @@
         }
     },
     "90041": {
-        "active": "true",
+        "active": "false",
         "err_no": 90041,
         "err_message": "TYPE PROPERTY LOSS CODE IS NOT VALID WITH THE OFFENSES SUBMITTED",
-        "err_desc": {
-            "14": "A Property Loss Type of '1 - None' is invalid for the following NIBRS Codes: {::nomarkdown}<ul><li>100</li><li>220, 280</li><li>35A, 35B</li><li>510</li><li>90A, 90Z</li></ul>{:/}A Property Loss Type of '8 - Unknown' is invalid for the following NIBRS Codes: {::nomarkdown}<ul><li>100</li><li>220</li><li>510</li><li>90A, 90Z</li></ul>{:/}"
-        }
     },
     "90042": {
         "active": "true",
