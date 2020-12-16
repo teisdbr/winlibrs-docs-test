@@ -3630,7 +3630,7 @@
         "active": "true",
         "err_no": 90039,
         "err_message": "WHEN THE OFFENSE WITH NIBRS = 90A; THE PORPERTY LOSS TYPE (14) MUST BE NONE OR UNKNOWN",
-        "seq_desc": {
+        "err_desc": {
             "14": "WHEN THE OFFENSE WITH NIBRS = 90A; THE PORPERTY LOSS TYPE (14) MUST BE NONE (1) OR UNKNOWN (8)"
         }
     },
