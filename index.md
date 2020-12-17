@@ -38,6 +38,9 @@ ___
 * Consolidated the requirements for Data Element 14 (Property Loss Type). We had several Error Codes that weren't listed in the documentation that effectively just said "You can't use that Property Loss Type with this Offense Code". 
   * Error 10081 will be thrown when that error occurs now, rather than 90028, 90039, or 90041. 
   * You can check the for the full [List of Available Values](./data-element-values#allowable-property-loss-types-de-14-by-nibrs-and-attempedcompleted) of Property Loss Types that are allowed for each Offense Code. If an Offense Code is not present on the list, then a Property isn't to be submitted with it. 
+* Found that we were not validating Arrest Dates against the Reporting Period, and added Error 16082 to catch that. 
+  * EG: If an Incident Occured 7/1/2020, and the Arrest was made on 8/1/2020, the Arrest should not be included with the 07/2020 Submission File. Rather it should be included in the 08/2020 file (Or later if other edits are made).
+    * An Arrest should only be reported if the Arrest Date occurs in or before the Reporting Period's month. So an Arrest Date of 7/15/2020 would be fine for the case above to report on the 07/2020 file, just nothing after 07/2020 should be included. Realistically, just don't send the entire incident until the first applicable month that it can be submitted without date errors.  
 
 #### 2020-12-14
 * Updated the requirements for DE 33 - Injury Type. Error 15003 was previously deprecated and rolled into Error 15020, however the Error Number was not updated properly, and thus it remained in the documentaiton. 

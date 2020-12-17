@@ -2080,6 +2080,13 @@
         "seq_desc": {
             "62": "An Arrestee Statute Segment (Segment 62) is required for each Arrestee Segment (Segment 60) that is present in the LIBRS Incident Report."
         }
+    },"16082": {
+        "active": "true",
+        "err_no": 16082,
+        "err_message": "ARREST DATE CANNOT BE AFTER THE REPORTING PERIOD THE SUBMISSION DOCUMENT REPRESENTS",
+        "err_desc": {
+            "42": "All reported Arrests need to occur either during or before the period that is being reported. EG: You cannot report an arrest that occurred on 11/15/2020 on the 10/2020 Flat File."
+        }
     },
     "16099": {
         "active": "true",
