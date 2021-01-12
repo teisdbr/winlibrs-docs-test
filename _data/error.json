@@ -1929,7 +1929,7 @@
 		"err_no": 16052,
 		"err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS 17 AND YOUNGER",
 		"err_desc": {
-			"52": "If Age of Arrestee (DE 47) is under 18 (17 and younger), then Disposition of Arrestee Under 18 (DE 52) must be entered.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles. Previously it was individuals under the age of 17 (16 and younger), hence the name 'Disposition of Arrestee Under 18'"
+			"52": "If Age of Arrestee (DE 47) is under 18 (17 and younger), then Disposition of Arrestee Under 18 (DE 52) must be entered.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
 		}
 	},
 	"16053": {
@@ -2674,7 +2674,7 @@
 	"82100": {
 		"active": "false",
 		"err_no": 82100,
-		"err_message": "WHEN DE 47 IS LESS THAN 17 ', MUST HAVE A VALID CODE IN DE 52.'",
+		"err_message": "WHEN DE 47 IS LESS THAN 17, MUST HAVE A VALID CODE IN DE 52.'",
 		"mandatory": {
 			"2": "When Age of Arrestee (47) is LESS THAN ‘17’, then MUST have a valid code in Disposition of Arrestee Under 18 (52)."
 		}
