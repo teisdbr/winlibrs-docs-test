@@ -717,7 +717,7 @@ You should include an Arrestee Segment for each Offender that has been arrested 
    [49](./librs-spec#race-of-arrestee-49)                      | Race                                                               | 97            | 1        | A
    [50](./librs-spec#ethnicity-of-arrestee-50)                 | Ethnicity                                                          | 98            | 1        | A
    [51](./librs-spec#resident-status-of-arrestee-51)           | Resident Status                                                    | 99            | 1        | A
-   [52](./librs-spec#disposition-of-arrestee-under-17-52)      | Disposition of Arrestee Under 17                                   | 100           | 1        | A
+   [52](./librs-spec#disposition-of-arrestee-under-18-52)      | Disposition of Arrestee Under 18                                   | 100           | 1        | A
    [C6](./librs-spec#clearance-indicator-c6)                   | Clearance Indicator (to be used for Time Window Submission only)   | 101           | 1        | A
    \*\*                                                        | Future Expansion Buffer                                            | 102-118       | 17       | G (Space)
    [C8](./librs-spec#end-of-segment-marker-c8)                 | End of Segment Marker                                              | 119-120       | 2        | A
@@ -726,7 +726,7 @@ You should include an Arrestee Segment for each Offender that has been arrested 
 <br>
 
 ### Important Notes
-* [Data Element 52 - Disposition of Arrestee Under 17](./librs-spec#disposition-of-arrestee-under-17-52) must be included for any arrestee that is ***17 or younger***. 
+* [Data Element 52 - Disposition of Arrestee Under 18](./librs-spec#disposition-of-arrestee-under-18-52) must be included for any arrestee that is ***17 or younger***. 
   * Previously, Louisiana Law stated that 17 Year Olds were Adults rather than Juveniles, however this changed in 2020, which has led to a bit of confusion about this Data Element.
 * [Data Element 44 - Multiple Arrestee Indicator](./librs-spec#multiple-arrestee-segment-indicator-44) should be used when an Offender is Arrested and associated with more than one Incident. The arrest of the Individual will clear all Incidents that they are a part of, however it should not be counted that two arrests were made. The Multiple Arrestee Indicator allows you to specify that an individual was arrested for another Incident, which has cleared this Incident by arrest, but to not count this arrest for Crime Statistics.
 
@@ -5095,13 +5095,13 @@ ___
 
 <div class="newpage"></div>
 
-## Disposition of Arrestee Under 17 (52)
+## Disposition of Arrestee Under 18 (52)
 
 ___
 
-**Description:** Disposition of Arrestee Under 17 denotes how Juvenile Arrestees are handled. It is a mandatory field for ANY Arrestee that is 17 AND Younger.
+**Description:** Disposition of Arrestee Under 18 denotes how Juvenile Arrestees are handled. It is a mandatory field for ANY Arrestee that is 17 AND Younger.
 
-Disposition of Arrestee Under 17 has a slightly misleading name. Originally when it was created, all Offenders/Arrestees 17 and Older were considered Adults. However as of 2020, that age has changed to 18 and Older. So while the Data Element is called "Disposition of Arrestee Under 17", it's actually for 17 and Younger.
+Disposition of Arrestee Under 18 has a slightly misleading name. Originally when it was created, all Offenders/Arrestees 17 and Older were considered Adults. However as of 2020, that age has changed to 18 and Older. So while the Data Element is called "Disposition of Arrestee Under 18", it's actually for 17 and Younger.
 
 **Data Characteristics:** 1 Character Alpha. Required for Arrestees 17 and Younger. Should be left Blank for Arrestees that are not.
 
@@ -5121,7 +5121,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Details:
-* Disposition of Arrestee Under 17 (52) is to be used ONLY if the Arrestee was 16 years of age or younger at the time of arrest.
+* Disposition of Arrestee Under 18 (52) is to be used ONLY if the Arrestee was 16 years of age or younger at the time of arrest.
 * This will change to Arrestee under 18 on 01/01/2020
 
 ___
@@ -5135,7 +5135,7 @@ Enter only (1) code per Arrest Segment (60) for Juveniles only:
 <table>
 <thead>
 	<tr>
-		<th colspan = "1" style="align-text:center;">Disposition of Arrestee Under 17</th>
+		<th colspan = "1" style="align-text:center;">Disposition of Arrestee Under 18</th>
 	</tr>
     </thead>
     <tbody>

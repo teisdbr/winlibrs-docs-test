@@ -2318,11 +2318,11 @@
 		}]
 	}, {
 		"de_num": "52",
-		"name": "DISPOSITION OF ARRESTEE UNDER 17",
+		"name": "DISPOSITION OF ARRESTEE UNDER 18",
 		"definition": "Used only if the arrestee was 16 years of age or younger at the time of arrest.",
 		"length": "1",
 		"format": "A",
-		"comment": "This will change to Arrestee under 18 on 01/01/2020",
+		"comment": "",
 		"subsection": [{
 			"title": "",
 			"values": [{
