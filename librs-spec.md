@@ -5099,9 +5099,7 @@ ___
 
 ___
 
-**Description:** Disposition of Arrestee Under 18 denotes how Juvenile Arrestees are handled. It is a mandatory field for ANY Arrestee that is 17 AND Younger.
-
-Disposition of Arrestee Under 18 has a slightly misleading name. Originally when it was created, all Offenders/Arrestees 17 and Older were considered Adults. However as of 2020, that age has changed to 18 and Older. So while the Data Element is called "Disposition of Arrestee Under 18", it's actually for 17 and Younger.
+**Description:** Disposition of Arrestee Under 18 denotes how Juvenile Arrestees are handled. It is a mandatory field for ANY Arrestee that is 17 AND Younger (Under 18, not including 18).
 
 **Data Characteristics:** 1 Character Alpha. Required for Arrestees 17 and Younger. Should be left Blank for Arrestees that are not.
 
