@@ -34,6 +34,16 @@ ___
 ## Recent Changes
 ___
 
+#### 2021-01-13
+* Happy New Year to you all!
+* There's a lot confusion around a new error we've recently added: LIBRS Error 90044 (Based on NIBRS Error 085). 
+  * In the [IEPD XML Documentation](https://www.fbi.gov/file-repository/ucr/ucr-2019-1-nibrs-xml-developers-guide.pdf), on Page 104 it states that DE 34 (Subject/Victim Association) must be included if it's a Crime Against Person or Property (first bullet point). 
+  * Further down, Error 085 talks about how if more than one Offender is in an Incident, and the Victim is related to a Crime Against Person or a Robbery, then at least two Offenders should be related to that Victim. 
+  * When we got to thinking about it, there was confusion of if this meant we now needed to include V/O Data on Crimes Against Property, as well. Assuming that the full text requirements of the Data Element were correct, we went with that and added Error 90044 to LIBRS, using the wording for NIBRS Error 085, but substituting Robbery for Crimes Against Property. 
+  * However, we failed to consider the confusion it would cause due to it now implying that all Crimes Against Property should have Victim/Offender Relationship data. That wording led to some Vendors making it so that V/O Data was included in all Crimes Against Property, which gave them a number of 15059 Errors stating that they shouldn't be including that. 
+
+So to sum all that up, we got confused and as a result wrote a confusing Error Message, which then went on lead to more confusion down the line. We (I) want to apologize for that, and let you know that we've updated it so it only applies to Persons and Robberies, and is in line with the existing requirements for Error 15059. 
+
 #### 2020-12-16
 * Consolidated the requirements for Data Element 14 (Property Loss Type). We had several Error Codes that weren't listed in the documentation that effectively just said "You can't use that Property Loss Type with this Offense Code". 
   * Error 10081 will be thrown when that error occurs now, rather than 90028, 90039, or 90041. 
