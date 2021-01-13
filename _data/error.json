@@ -3675,7 +3675,7 @@
 		"err_no": 90044,
 		"err_message": "VICTIMS OF 'I' OR 'L' MUST BE ASSOCIATED WITH AT LEAST TWO OFFENDERS WHEN MULTIPLE SEGMENT 40'S EXIST AND CRIME IS AGAINST PERSON OR ROBBERY",
 		"seq_desc": {
-			"50": "According to the NIBRS IEPD Requirements (Error 085), when there is more than one Offender in an Incident, and a Victim is tied to a Crime Against Person or Property and is also a Victim Type of 'I - Individual' or 'L - Law Enforcement', then the Victim must be associated with at least two Offenders. "
+			"50": "According to the NIBRS IEPD Requirements (Error 085), when there is more than one Offender in an Incident, and a Victim is tied to a Crime Against Person or a Robbery and is also a Victim Type of 'I - Individual' or 'L - Law Enforcement', then the Victim must be associated with at least two Offenders. "
 		}
 	}
 }
