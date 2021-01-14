@@ -359,6 +359,33 @@ Here's a couple of tips on things to check before you reach out for help:
 
 Note: To save space on the page we've removed the padding after the Segment Trailer "ZZ", and in order to not call anyone out we've removed the Header, too. In both of these cases, not having those present will throw an error, so we won't put any examples of files that have those issues. 
 
+### Sample Scenarios
+
+#### Scenario 1: Stolen and Copied Check Used to Withdraw Funds
+
+In this scenario, a Suspect has stolen a checkbook and written checks to themself with it, using those checks to withdraw money from the account by visiting a bank. The bank gives the Suscpect the cash, and later in the day receives a call from the owner of the checkbook that their checkbook has been stolen, and to void any checks that have been cashed since it was reported. The bank finds that it did, indeed, cash a check that the owner claims to be fraudulent. The bank calls local Law Enforcement, who collects the cashed check as evidence. Law Enforcement Officers are later able to apprehend the Suspect, and in their possession is the stolen checkbook. The cash, however, was not recovered. 
+
+In this case, the following would apply:
+* 23H - All Other Larceny
+  * This Offense is needed to report the initial theft of the Checkbook. 
+    * Since the checkbook was actually stolen, there should be a Property associated with this Offense that has a Property Description of 21 - Non-Negotiable Instruments with a Property Loss Type of 7 - Stolen. Since later on the checkbook was recovered, there should be another Property Loss Type of 5 - Recovered associated with this Property. 
+    * The Property Value, however, would be Zero; the value of a check that isn't filled out is the same as the value of the paper it's printed on, which is nothing.
+  * The Victim in this case would be the Individual that the checkbook was stolen from. 
+
+* 250 - Counterfeiting/Forgery
+  * Since the actual owner of the checkbook did not authorize the check, it is considered a Forgery. 
+    * Now that the check has information written on it, it has a Property Description of 20 - Negotiable Instruments. Previously it did not have a value, either, but now it has a value of the cash-equivalent written on the check. 
+    * Additionally the Property Loss Type for this Property would be 3 - Counterfeited/Forged. Since the check was used to complete a crime, the Property is not to be reported as 6 - Seized; if the suspect had been caught with the forged check, then it would have a Loss Type of 6 - Seized. 
+  * For this Offense, the Victim would be the Individual that the checkbook was stolen from, as the Suspect is forging their identity in this Offense.
+
+* 26A - False Pretense/Swindle/Confidence Game
+  * 26A would describe the act of committing fraud when the suspect withdrew funds at the bank. 
+    * Here the Property associated with the Offense would be the actual cash that was withdrawn from the bank, so 20 - Money, and it would of course have a value equivalent to its own. 
+    * In this Offenses the Property Loss Type should be reported as 7 - Stolen, because 5 - Recovered and 7 - Stolen are the only Valid Property Loss Types for 26A Offenses. 
+  * Our Victim in this case would once again be the Individual. The bank only serves as an intermediary between the outside world and the victim's money, so it didn't actually lose any cash itself. If this check had been used to purchase tangible goods, however, then the Victim would be the Business that accepted the check. 
+
+
+
 ### Flat File Example Errors
 
 #### Example 1: 
