@@ -1257,7 +1257,7 @@
 		"err_no": 13091,
 		"err_message": "PROPERTY VALUE MUST BE ZERO FOR SELECTED PROPERTY DESCRIPTION",
 		"err_desc": {
-			"16": "When one of the following Property Descriptions (DE 15) are used, the Property Value (DE 16) must be None ('000000000' or 9 Blank Spaces):{::nomarkdown}<ul><li>09 Credit/Debit Cards</li><li>22 Nonnegotiable Instruments</li><li>48 Documents/Personal or Business</li><li>65 Identity Documents</li><li>66 Identity-Intangible</li></ul>{:/} ZERO ('0') value is optional for the following:{::nomarkdown}<ul><li>77 Other</li><li>99 Special Category.</li></ul>{:/}"
+			"16": "When one of the following Property Descriptions (DE 15) are used, the Property Value (DE 16) must be None ('000000000' or 9 Blank Spaces):{::nomarkdown}<ul><li>09 Credit/Debit Cards</li><li>22 Nonnegotiable Instruments</li><li>48 Documents/Personal or Business</li><li>65 Identity Documents</li><li>66 Identity-Intangible</li></ul>{:/}"
 		}
 	},
 	"13092": {
