@@ -34,6 +34,11 @@ ___
 ## Recent Changes
 ___
 
+
+#### 2021-01-15
+* Updated the Description and Logic for Error 13091. In a recent code update we started rejecting Property Descriptions of 77 - Other with $0 Values. This was not correct and has been reversed. 
+* Added Sample Scenarios to the FAQ. We'll be building this list up as the year goes on. 
+
 #### 2021-01-13
 * Happy New Year to you all!
 * There's a lot confusion around a new error we've recently added: LIBRS Error 90044 (Based on NIBRS Error 085). 
