@@ -37,8 +37,11 @@ This page contains the questions and responses we've gotten from vendors and use
   * <a href="#general-flat-file-formatting-requirements">General Flat File Formatting Requirements</a>
    * <a href="#how-to-solve-errors-on-flat-files">How to Solve Errors with Flat Files</a>
   * <a href="#whats-wrong-with-my-flat-file">What's Wrong with My Flat File?</a>
+* <a href="#sample-scenarios">Sample Scenarios</a>
+  * <a href="#scenario-1-stolen-check-used-to-withdraw-funds">Scenario 1: Stolen Check Used to Withdraw Funds</a>
 * <a href="#flat-file-example-errors">Flat File Example Errors</a>
   * <a href="#example-1">Example 1</a>
+
 
 ## What is LIBRS?
 
@@ -361,7 +364,7 @@ Note: To save space on the page we've removed the padding after the Segment Trai
 
 ### Sample Scenarios
 
-#### Scenario 1: Stolen and Copied Check Used to Withdraw Funds
+#### Scenario 1: Stolen Check Used to Withdraw Funds
 
 In this scenario, a Suspect has stolen a checkbook and written checks to themself with it, using those checks to withdraw money from the account by visiting a bank. The bank gives the Suscpect the cash, and later in the day receives a call from the owner of the checkbook that their checkbook has been stolen, and to void any checks that have been cashed since it was reported. The bank finds that it did, indeed, cash a check that the owner claims to be fraudulent. The bank calls local Law Enforcement, who collects the cashed check as evidence. Law Enforcement Officers are later able to apprehend the Suspect, and in their possession is the stolen checkbook. The cash, however, was not recovered. 
 
