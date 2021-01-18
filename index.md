@@ -33,7 +33,10 @@ ___
 
 ## Recent Changes
 ___
-
+#### 2021-01-18
+* Back in November we found that some Agencies were sending us LEOKA data for Victims that weren't of Type 'L - Law Enforcement', which was causing issues with our IEPD XML Submissions. At the time, there were only a few Incidents across a few Agencies that had this happening, so it was thought to be a User issue. Not wanting those Agencies to focus on a minor data entry issue rather than serious data quality issues that were present, we decided to set up an Error that would only start being checked after the New Year had begun. 
+  * Unfortunately, it turned out this was not just an isolated, User-Input issue, and there were some RMS's that were sending LEOKA data on every single Incident. When the date we had set in November flipped (Jan 15th, 2021), these Vendors/Agencies started getting thousands of errors. That was not our intention. 
+  * To resolve this, we made Error 15082 just a warning, and have it so that the data will be NULLed out before being imported into the database. This way you will be notified that there's something to fix, but it's not going to break anything on either the LIBRS or NIBRS sides of things. 
 
 #### 2021-01-15
 * Updated the Description and Logic for Error 13091. In a recent code update we started rejecting Property Descriptions of 77 - Other with $0 Values. This was not correct and has been reversed. 
