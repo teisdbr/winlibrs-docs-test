@@ -1801,7 +1801,7 @@
 	"15082": {
 		"active": "true",
 		"err_no": 15082,
-		"err_message": "VICTIM TYPE MUST BE 'L - LAW ENFORCEMENT' FOR DATA TO BE ENTERED",
+		"err_message": "WARNING - VICTIM TYPE MUST BE 'L - LAW ENFORCEMENT' FOR DATA TO BE ENTERED",
 		"err_desc": {
 			"25a": "Type of Officer Activity/Circumnstance (DE 25A) can only have a value if the Victim Type (DE 25) is 'L - Law Enforcement'",
 			"25b": "Officer Assignment Type (DE 25B) can only have a value if the Victim Type (DE 25) is 'L - Law Enforcement'",
