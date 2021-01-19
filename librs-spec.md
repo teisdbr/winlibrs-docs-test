@@ -6392,24 +6392,4 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 
-### Subsection 22:  ANIMAL CRUELTY OFFENSES (720)
-
-___
-
-#### Requirements:
-
-When Incidents submitted with ANIMAL CRUELTY OFFENSES (720) (Crimes Against Society) should receive one of the following **two** error messages, as appropriate:
-
-___
-
-Requirement  | Requirement Description | Error Number | Error Message
-:-----------:|-------------------------|:------------:|----------
-{% assign error = site.data.error["84010"] -%}
-0 | {{error.mandatory["4s22"]}} | {{error.err_no}} | {{ error.err_message }} 
-{% assign error = site.data.error["84110"] -%}
-1 | {{error.mandatory["4s22"]}} | {{error.err_no}} | {{ error.err_message }} 
-
-<br>
-
-___
 
