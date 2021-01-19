@@ -1408,9 +1408,6 @@ Z | Theft from a Motor Vehicle - Theft of articles from motor vehicle whether lo
 
 ___
 
-### Details:
-* An LRS Code appended with "-H" indicates the offense is a Hate Crime, and the penalty will be enhanced by 14:107.2. Offenses with an Inchoate appended will be reported based on the base LRS (usually shown in the first ten digits of Louisiana Revised Statute (6) or Louisiana Revised Statute of Arrest (45).
-
 <br>
 
 ## Agency Supplied NIBRS Code (N6)
