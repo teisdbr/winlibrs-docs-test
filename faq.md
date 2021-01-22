@@ -39,7 +39,7 @@ This page contains the questions and responses we've gotten from vendors and use
     * <a href="#properties-segments-30-31-32-and-33">Properties: Segments 30, 31, 32, and 33</a>
     * <a href="#offenders-segments-40-and-41"> Offenders: Segments 40 and 41</a>
     * <a href="#victims-segments-50-51-and-52">Victims: Segments 50, 51, and 52</a>
-* <a href="#just-what-the-heck-is-victim-was-offender">Just What the Hecks is "Victim was Offender"?</a>
+* <a href="#just-what-the-heck-is-victim-was-offender">Just What the Heck is "Victim was Offender"?</a>
 
 ## Everything Flat File
 * <a href="#flat-files-and-troubleshooting">Flat Files and Troublshooting</a>
@@ -324,7 +324,7 @@ ____
 ____
 
 
-## Just What the Hecks is "Victim Was Offender"?
+## Just What the Heck is "Victim Was Offender"?
 The Relationship of "VO - Victim Was Offender" can be very confusing at first, but it's actually very simple. This relationship is used in Segment 52 to describe that the Victim and the Offender are the same person. This relationship *is not* intended to denote that the Victim was a Victim of an Offense they themselves committed - Although it could in cases where the a person commits an Offense that they are the Victim of (Like committing arson on their own property for Insurance Money). In reality, it more or less is an equals sign. 
 
 Let's take the example of a Bar Fight. Two guys who don't know each other break out into a fight after drinking. Both men have committed a 13A - Aggravated Assault, and as such, we need to denote that the Victims and the Offenders we have in the Incident are the same people. At this point, many people don't think they should assign VO as the relationship, because how can one be the Victim of their own Aggravated Assault? 
