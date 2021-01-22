@@ -337,16 +337,16 @@ If you're one of those people, there's two things to remember at this point:
 
 With that said, let's look at the Segments of this Incident:
 
-20 - First 13A Offense  - Relates to Victim 1
-20 - Second 13A Offense - Relates to Victim 2
-40 - Offender 1's Details
-40 - Offender 2's Details
-50 - Victim 1's Details
-50 - Victim 2's Details
-52 - 001001VO
-52 - 002002VO
-52 - 001002ST
-52 - 002001ST
+        20 - First 13A Offense  - Relates to Victim 1
+        20 - Second 13A Offense - Relates to Victim 2
+        40 - Offender 1's Details
+        40 - Offender 2's Details
+        50 - Victim 1's Details
+        50 - Victim 2's Details
+        52 - 001001VO
+        52 - 002002VO
+        52 - 001002ST
+        52 - 002001ST
 
 Using the four Segment 52's allows us to fully define everyone's involvement in this Incident. The first two are the VO's, and they point Victim 1 to Offender 1, and Victim 2 to Offender 2. With the relationship of VO, that tells us that these are actually the same people. The second two are ST's, and they point Victim 1 to Offender 2 and vise versa. This tells us that they didn't know each other. 
 
