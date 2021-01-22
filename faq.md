@@ -8,8 +8,7 @@ permalink: /faq
 
 This page contains the questions and responses we've gotten from vendors and users over the years about LIBRS. This is an ever-growing list, so if you don't see an answer you need feel free to reach out. 
 
-
-# Quick Links
+___
 
 ## LIBRS Overview
 * <a href="#what-is-librs">What is LIBRS?</a>
@@ -53,6 +52,9 @@ This page contains the questions and responses we've gotten from vendors and use
 * <a href="#flat-file-example-errors">Flat File Example Errors</a>
   * <a href="#example-1">Example 1</a>
 
+<br>
+
+___
 
 ## What is LIBRS?
 
