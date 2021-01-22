@@ -11,6 +11,7 @@ This page contains the questions and responses we've gotten from vendors and use
 
 # Quick Links
 
+## LIBRS Overview
 * <a href="#what-is-librs">What is LIBRS?</a>
   * <a href="#benefits-of-using-librs">Benefits of Using LIBRS</a>
   * <a href="#can-i-buy-a-librs-certified-rms">Can I Buy a LIBRS Certified RMS?</a>
@@ -21,22 +22,32 @@ This page contains the questions and responses we've gotten from vendors and use
   * <a href="#getting-started">Getting Started</a>
   * <a href="#submitting-a-file">Submitting a File</a>
   * <a href="#reports">Reports</a>
-  * <a href="#how-dates-work">How Dates Work</a>
-    * <a href="#reporting-periods-and-out-of-sequence">Reporting Periods and Out of Sequence</a>
-     * <a href="#incident-dates-making-modifications-and-on-which-submission-they-appear">Incident Dates, Making Modifications, and on Which Submission They Appear</a>
-  * <a href="#how-to-submit-data">How to Submit Data</a>
-    * <a href="#ftp-file-structure">FTP File Structure</a>
-    * <a href="#how-to-resubmit-data-or-update-existing-incidents">How to Resbumit Data, or Update Existing Incidents</a>
+
+## Administrative Nitty Gritty
+* <a href="#how-dates-work">How Dates Work</a>
+  * <a href="#reporting-periods-and-out-of-sequence">Reporting Periods and Out of Sequence</a>
+  * <a href="#incident-dates-making-modifications-and-on-which-submission-they-appear">Incident Dates, Making Modifications, and on Which Submission They Appear</a>
+* <a href="#how-to-submit-data">How to Submit Data</a>
+  * <a href="#ftp-file-structure">FTP File Structure</a>
+  * <a href="#how-to-resubmit-data-or-update-existing-incidents">How to Resbumit Data, or Update Existing Incidents</a>
+
+## Questions and Answers
 * <a href="#questions-from-vendors">Questions We've Gotten from Vendors</a>
-  * <a href="#which-incidents-to-send">Which Incidents to Send</a>
-  * <a href="#offenses-segment-20">Offenses: Segment 20</a>
-  * <a href="#properties-segments-30-31-32-and-33">Properties: Segments 30, 31, 32, and 33</a>
-  * <a href="#offenders-segments-40-and-41"> Offenders: Segments 40 and 41</a>
-  * <a href="#victims-segments-50-51-and-52">Victims: Segments 50, 51, and 52</a>
+  * <a href="#which-incidents-to-send">What Incidents should I send you?</a>
+  * <a href="#segment-questions">Segment Questions</a>
+    * <a href="#offenses-segment-20">Offenses: Segment 20</a>
+    * <a href="#properties-segments-30-31-32-and-33">Properties: Segments 30, 31, 32, and 33</a>
+    * <a href="#offenders-segments-40-and-41"> Offenders: Segments 40 and 41</a>
+    * <a href="#victims-segments-50-51-and-52">Victims: Segments 50, 51, and 52</a>
+* <a href="#just-what-the-heck-is-victim-was-offender">Just What the Hecks is "Victim was Offender"?</a>
+
+## Everything Flat File
 * <a href="#flat-files-and-troubleshooting">Flat Files and Troublshooting</a>
   * <a href="#general-flat-file-formatting-requirements">General Flat File Formatting Requirements</a>
-   * <a href="#how-to-solve-errors-on-flat-files">How to Solve Errors with Flat Files</a>
+    * <a href="#how-to-solve-errors-on-flat-files">How to Solve Errors with Flat Files</a>
   * <a href="#whats-wrong-with-my-flat-file">What's Wrong with My Flat File?</a>
+
+## Examples
 * <a href="#sample-scenarios">Sample Scenarios</a>
   * <a href="#scenario-1-stolen-check-used-to-withdraw-funds">Scenario 1: Stolen Check Used to Withdraw Funds</a>
 * <a href="#flat-file-example-errors">Flat File Example Errors</a>
@@ -237,8 +248,11 @@ In general, an Incident needs to have the following information to be reported:
 
 Again, please note that we want your 90-Series Offenses, even if there is no arrest associated with them. We won't send it to the FBI until an arrest comes through, but it's valuable information for the State. 
 
+### Segment Questions
 
-### Offenses (Segment 20)
+<br>
+
+#### Offenses (Segment 20)
 
 * For Segment 20 (Offense), there is a Victim Sequence Number. Does that mean there can be multiple Segment 20's per incident and that each victim (Segment 50) needs to have a Segment 20 associated with them?
   * Yes, because each Offender (Segment 40) can be implicated in multiple Offenses and can be related to multiple Victims, each Offense (Segment 20) must be tied to one (1) Victim Sequence Number. This means if you have three (3) Victims of the same offense in your RMS, you will require three Offense Segments. (Segment 20)
@@ -251,7 +265,7 @@ Again, please note that we want your 90-Series Offenses, even if there is no arr
 
 ____
 
-### Properties (Segments 30, 31, 32, and 33)
+#### Properties (Segments 30, 31, 32, and 33)
 
 * Since there is not a limit to how many Segment 31's that can be entered, can there be duplicate property description types allowed for same incident? Example, if in the same incident three (3) TV's were damaged, Would there be 3 Segment 31's with same Property Description Type and Property Loss Type?
   * Yes, since they are three distinct properties you will need to include three distinct Segment 31's (Property Description). You can handle that in your RMS however you want, so long as LIBRS gets sent the three segments (EG: If your RMS wants to store the property once and list it three times in the Incident, so long as we get those three segments to say that there are three TV's then it doesn't matter to us if you use the same property in the RMS or make three different ones.)
@@ -262,7 +276,7 @@ ____
 
 ____
 
-### Offenders (Segments 40 and 41)
+#### Offenders (Segments 40 and 41)
 
 * Can there be up to four (4) Segment 41's for each Segment 40?
   * Correct, you can include as many Segment 41's (up to four) as are relevant with each offense. 
@@ -277,7 +291,7 @@ ____
 
 ____
 
-### Victims (Segments 50, 51, and 52)
+#### Victims (Segments 50, 51, and 52)
 
 * If there are multiple injuries, does that mean there will be multiple Segment 51's for each Segment 50?
   * Yes, you can include up to five (5) Segment 51's (Victim Injury) as needed. However, the selected Injury types will need to be valid for the NIBRS Offense Code. 
@@ -308,6 +322,39 @@ ____
   * No, but to help prevent us from making an incorrect assumption we would encourage you to follow the NIBRS Requirements on that one. They limit it to 10, so to prevent us from interpreting that incorrectly it might be best for you to send us exactly what you would want to be passed to the FBI should you exceed that number. 
   
 ____
+
+
+## Just What the Hecks is "Victim Was Offender"?
+The Relationship of "VO - Victim Was Offender" can be very confusing at first, but it's actually very simple. This relationship is used in Segment 52 to describe that the Victim and the Offender are the same person. This relationship *is not* intended to denote that the Victim was a Victim of an Offense they themselves committed - Although it could in cases where the a person commits an Offense that they are the Victim of (Like committing arson on their own property for Insurance Money). In reality, it more or less is an equals sign. 
+
+Let's take the example of a Bar Fight. Two guys who don't know each other break out into a fight after drinking. Both men have committed a 13A - Aggravated Assault, and as such, we need to denote that the Victims and the Offenders we have in the Incident are the same people. At this point, many people don't think they should assign VO as the relationship, because how can one be the Victim of their own Aggravated Assault? 
+
+If you're one of those people, there's two things to remember at this point:
+1. You can have multiple Segment 52's per Victim
+2. VO effectively means 'Self'. 
+
+With that said, let's look at the Segments of this Incident:
+
+20 - First 13A Offense  - Relates to Victim 1
+20 - Second 13A Offense - Relates to Victim 2
+40 - Offender 1's Details
+40 - Offender 2's Details
+50 - Victim 1's Details
+50 - Victim 2's Details
+52 - 001001VO
+52 - 002002VO
+52 - 001002ST
+52 - 002001ST
+
+Using the four Segment 52's allows us to fully define everyone's involvement in this Incident. The first two are the VO's, and they point Victim 1 to Offender 1, and Victim 2 to Offender 2. With the relationship of VO, that tells us that these are actually the same people. The second two are ST's, and they point Victim 1 to Offender 2 and vise versa. This tells us that they didn't know each other. 
+
+Now, normally, all Offenses that apply to a Victim apply to all Offenders that relate to that Victim. However VO is different, and will not apply our first Segment 20 to our Victime/Offender Number 1. Same goes for the second. 
+
+So with those four segments we're able to infer that we've got two people that beat the snot out of each other. Our first Victim IS ALSO our first Offender, and the second the second. This is how Victim Was Offender should be used - to link a Victim Sequence Number to an Offender Sequence Number in order to denote that they are the same person, not that the Victim committed an Offense that they were the Victim of. 
+
+
+
+___
 
 ## Flat Files and Troubleshooting
 
@@ -361,6 +408,7 @@ Here's a couple of tips on things to check before you reach out for help:
 
 
 Note: To save space on the page we've removed the padding after the Segment Trailer "ZZ", and in order to not call anyone out we've removed the Header, too. In both of these cases, not having those present will throw an error, so we won't put any examples of files that have those issues. 
+
 
 ### Sample Scenarios
 
