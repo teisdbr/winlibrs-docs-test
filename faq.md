@@ -107,6 +107,25 @@ Your agency will remain in "P" while LCLE Staff review your previous submissions
 
 ## How to Use LIBRS
 
+### Getting Started 
+
+The best way to get started with LIBRS is to start generating LIBRS Flat Files and testing them out at https://validator.librs.org. That is an free tool that mirrors the Production LIBRS Environment, and will check and return any and all errors that your file has in it. It's a great way to test both individual incidents, and large batches of incidents for errors. Users can simply drag and drop their Flat Files into the interface and it will return a LIBRS Error Summary. 
+
+Using the Validator Tool does not constitute participation in the LIBRS Program. Running files through the validator site **does not** mean that you qualify as testing. The Validator Tool is meant as a means of getting immediate feedback on errors before submitting Flat Files to LIBRS. The Validator Tool does not save any data, other than a log of the IP Addresses that hit it. We do not consider this log when determining if an agency has been actively testing in LIBRS. The only way to participate in LIBRS is to submit files through the FTP Server (details below). 
+
+The tool is open to everyone, and is also accessible as an API at https://api.librs.org. Here's endpoints that you can use and their definitions:
+
+| Endpoint              | Method | Body                                                         | Returns                                                      |
+| --------------------- | ------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| /api/validate/rtf     | POST   | JSON Formatted LIBRS Object<br /><br />{"LibrsFlatFileName": null, "LibrsFlatFileContents": %File Contents%} | JSON File that contains the Error Summary formatted as an RTF File. |
+| /api/validate/txt     | POST   | JSON Formatted LIBRS Object<br /><br />{"LibrsFlatFileName": null, "LibrsFlatFileContents": %File Contents%} | Unformatted Plain Text Error Summary                         |
+| /api/lrs/version      | GET    | Empty                                                        | Date and Time on which the last update to the validator's LRS and validation definitions were made. |
+| /api/lrs/definitions  | GET    | Empty                                                        | XML File containing the LIBRS Table of LRS Codes. <br /><br />Note that the NIBRS Code listed here is the deprecated "Default NIBRS" Code. The full list of NIBRS Codes available for each Statute should be found using the LRS Master List |
+| /api/lrs/requirements | GET    | Empty                                                        | XML File containing the validations that are present on the LIBRS validation table. These are what LIBRS uses as definitions for how it should validate certain offenses. |
+
+Please note that we cannot guarantee the availability of the validation tool in the future; implement its usage into your program at your own risk. Additionally for the /api/validate endpoints, "LibrsFlatFileContents" should be formatted as a single line with /r/n line endings, and include all of the trailing spaces.
+
+
 ### Submitting a File
 Once you're ready to start sending us Flat Files, follow these instructions:
 1. Navigate to <a href="https://ftp.lsa.org">https://ftp.lsa.org</a>, and login with the Username and Password provided to you by the LIBRS Administrator
