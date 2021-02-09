@@ -348,13 +348,7 @@ ____
 ## Just What the Heck is "Victim Was Offender"?
 The Relationship of "VO - Victim Was Offender" can be very confusing at first, but it's actually very simple. This relationship is used in Segment 52 to describe that the Victim and the Offender are the same person. This relationship *is not* intended to denote that the Victim was a Victim of an Offense they themselves committed - Although it could in cases where the a person commits an Offense that they are the Victim of (Like committing arson on their own property for Insurance Money). In reality, it more or less is an equals sign. 
 
-Let's take the example of a Bar Fight. Two guys who don't know each other break out into a fight after drinking. Both men have committed a 13A - Aggravated Assault, and as such, we need to denote that the Victims and the Offenders we have in the Incident are the same people. At this point, many people don't think they should assign VO as the relationship, because how can one be the Victim of their own Aggravated Assault? 
-
-If you're one of those people, there's two things to remember at this point:
-1. You can have multiple Segment 52's per Victim
-2. VO effectively means 'Self'. 
-
-With that said, let's look at the Segments of this Incident:
+Let's take the example of a Bar Fight. Two guys who don't know each other break out into a fight after drinking. Both men have committed a 13A - Aggravated Assault, and as such, we need to denote that the Victims and the Offenders we have in the Incident are the same people. Therefore we will require four (4) Segment 52's:
 
         * 20 - First 13A Offense  - Relates to Victim 1
         * 20 - Second 13A Offense - Relates to Victim 2
