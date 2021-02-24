@@ -2524,7 +2524,7 @@ ___
 <div class="newpage"></div>
 
 ### Allowed Entries: 
-Enter as many as apply, but do not duplicate codes.
+Enter one per Segment 31 that has a Property Description of '10 - Drugs/Narcotics'. There are no restrictions on multiple Segment 31's having the same Suspected Drug type (EG: You can report 1 lb of Marijuana, as well as 10 Marijuana Plants as two different Segment 31's, or if two people are found in possession of the same drug type on their person, you can report both of those containers as separate properties).
 
 <table>
 <thead>
