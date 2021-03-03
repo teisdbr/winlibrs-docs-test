@@ -50,7 +50,7 @@ ___
     | Unexpired |   14:94/E        | Illegal use of weapons or dangerous instrumentalities                                                                           |  13A                    |
     | Unexpired |   14:94/F        | Illegal use of weapons or dangerous instrumentalities                                                                           |  520                    |
 
-* Please note that the changes to 14:94/E and 14:94/F to not effect the base 14:94 - You can still report 14:94 as a 520 or 13A. 
+* Please note that the changes to 14:94/E and 14:94/F do not effect the base 14:94 - You can still report 14:94 as a 520 or 13A. 
 
 #### 2021-01-18
 * Back in November we found that some Agencies were sending us LEOKA data for Victims that weren't of Type 'L - Law Enforcement', which was causing issues with our IEPD XML Submissions. At the time, there were only a few Incidents across a few Agencies that had this happening, so it was thought to be a User issue. Not wanting those Agencies to focus on a minor data entry issue rather than serious data quality issues that were present, we decided to set up an Error that would only start being checked after the New Year had begun. 
