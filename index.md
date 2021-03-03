@@ -41,6 +41,7 @@ ___
 
 #### 2021-02-12
 * Made the following changes to the Master LRS List:
+
     |  Action  |   Statute Number  |                                                    Description                                                                  |  Available NIBRS Codes  |
     |:--------:|:-----------------:|:--------------------------------------------------------------------------------------------------------------------------------|:-----------------------:|
     |   Added   |   14:95.10       | Possession of a Firearm or Carrying of a Concealed Weapon by a Person Convicted of Domestic Abuse Battery                       |  520                    |
