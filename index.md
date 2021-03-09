@@ -35,7 +35,7 @@ ___
 ___
 
 #### 2021-02-24
-* Minor change to the wording on Suspected Drug Type in the documentation. 
+* Minor change to the wording on Suspected Drug Type in the documentation and FAQ. 
 	* The existing wording made it sound as though you should enter in multiple Suspected Drug Types on the same Segment 31, and that they could not repeat across different Segment 31's. That's flatly not the case. 
 		* You can report as many of the same Suspected Drug Type Properties as you see fit. For instance, 1lb of Prepared Marijuana with 10 Plants of Marijuana on two different Segment 31's, or if two persons are found in possession of their own stash of Cocaine, both containers can be reported as separate Semgent 31's. 
 

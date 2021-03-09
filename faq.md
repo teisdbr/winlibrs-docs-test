@@ -294,6 +294,10 @@ ____
 * What's up with Segment 33? Is it optional, or should I include it?
   * Segment 33 should be number two on your list after brushing your teeth twice a day. 
   * We made it Optional to support older RMS systems while they began implementing it, but it should be considered as required. At some time in the future it will likely become mandatory, so if you are in the earlier stages of your RMS development it'd be best to include it now.
+* NIBRS requires that we submit multiple Suspected Drug Types in the same Segment, but LIBRS only allows one. Can I only report a single Drug in LIBRS?
+  * No, while you can only have one per Segment in LIBRS, we allow you to have an many Segment 31's as you like! S
+  * So, for instance, you can report 1 lb of Marijuana as well as 10 Marijuana Plants as two different Segment 31's, or if two people are found in possession of the same drug type on their person, you can report both of those containers as separate properties with the same Suspected Drug Type, Quantity, and Measurement Type.
+  * In short, give us what you got. We will aggregate as required when sending it to NIBRS. 
 
 ____
 
