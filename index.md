@@ -34,6 +34,17 @@ ___
 ## Recent Changes
 ___
 
+#### 2021-03-09
+* We have redesignated some LRS Codes in order to keep them in line with changes to the Statute Documentation on LA Legis. Effectively we've had a shift in some of the modifiers that are used. Here's a table that shows the old and new LRS Codes:
+
+  |-Old LRS Code-|-New LRS Code-|-------Status------|
+  |   14:34.9L2  |   14:34.9M1  | Active 2021-03-09 |
+  |   14:34.9L1  |   14:34.9M2  | Active 2021-03-09 |
+  |   14:34.9K   |   14:34.9L   | Active 2021-03-09 |
+  |   14:34.9J   |   14:34.9K   | Active 2021-03-09 |
+
+* Please Note that this means 14:34.9J is no longer reportable as it was changed to 14:34.9K, and instead should be reported as 14:34.9.
+
 #### 2021-02-24
 * Minor change to the wording on Suspected Drug Type in the documentation and FAQ. 
 	* The existing wording made it sound as though you should enter in multiple Suspected Drug Types on the same Segment 31, and that they could not repeat across different Segment 31's. That's flatly not the case. 

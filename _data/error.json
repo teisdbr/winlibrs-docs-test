@@ -1279,9 +1279,9 @@
 	"13101": {
 		"active": "true",
 		"err_no": 13101,
-		"err_message": "OFFENSE MUST BE NIBRS 240 IF PROPERTY LOSS TYPE IS '7 - STOLEN' AND PROPERTY DESCRIPTION (DE 15) IS 03, 05, 24, 28, OR 37",
+		"err_message": "DE 18 MUST BE BLANK (NOT 00) UNLESS INCIDENT CONTAINS A NIBRS 240 OFFENSE WITH PROPERTY THAT HAS A LOSS TYPE OF '7 - STOLEN' AND DESCRIPTION OF 03, 05, 24, 28, OR 37",
 		"err_desc": {
-			"15": "In the past the FBI allowed NIBRS 26A and 23H to have vehicles associated with them as stolen properties, however this is no longer the case, and for any Property Description (DE 15) that represents a vehicle to have a Property Loss Type (DE 14), the associated Offense must be a NIBRS 240."
+			"15": "While you can submit a Property that has a Loss Type of '7 - Stolen' and a Description of a Vehicle with NIBRS 120 and 26A Offenses, you should not include them in the count of Stolen Vehicles (DE 18); it should be left blank (Not 00, but two blank spaces)."
 		}
 	},
 	"14001": {
