@@ -215,15 +215,15 @@ We get a lot of questions about this Segment, and have included more information
    [L6](./librs-spec#offense-sequence-number-l6)                                 | Offense Sequence Number                                     | 25-27    | 3        | N
    [6](./librs-spec#louisiana-revised-statute-6)                                 | Louisiana Revised Statute Number                            | 28-39    | 12       | A
    [7](./librs-spec#offense-attemptedcompleted-7)                                | Offense Attempted/Completed                                 | 40       | 1        | A
-   [24](./librs-spec#offense-connected-to-victim-sequence-number-24)                                  | Offense Connected to Victim Sequence Number                 | 41-43    | 3        | N
+   [24](./librs-spec#offense-connected-to-victim-sequence-number-24)             | Offense Connected to Victim Sequence Number                 | 41-43    | 3        | N
    [9](./librs-spec#location-type-9)                                             | Location Type                                               | 44-45    | 2        | N
    [10](./librs-spec#number-of-premises-entered-10)                              | Number of Premises Entered                                  | 46-47    | 2        | A/N
    [11](./librs-spec#method-of-entry-11)                                         | Method of Entry                                             | 48       | 1        | A
-   [12](./librs-spec#type-of-criminal-activitygang-information-12)| Type of Criminal Activity/Gang Information Nos. 1, 2 and 3  | 49-51    | 1 (3x)   | A
-   [13](./librs-spec#type-of-weaponforce-involved-nos-1-2-and-3-13)             | Type of Weapon/Force Involved Nos. 1, 2, and 3              | 52-60    | 3 (3x)   | A
+   [12](./librs-spec#type-of-criminal-activitygang-information-12)               | Type of Criminal Activity/Gang Information Nos. 1, 2 and 3  | 49-51    | 1 (3x)   | A
+   [13](./librs-spec#type-of-weaponforce-involved-nos-1-2-and-3-13)              | Type of Weapon/Force Involved Nos. 1, 2, and 3              | 52-60    | 3 (3x)   | A
    [N6](./librs-spec#agency-supplied-nibrs-code-n6)                              | Agency Supplied NIBRS Code                                  | 61-63    | 3        | A
-   [70](./librs-spec#incohates-70)                                               | Inchoate Modifier                                           | 64       | 1        | A
-   \*\*                                                                          | Future Expansion Buffer                                     | 65-80    | 16       | G (Space)
+   [70](./librs-spec#inchoates-70)                                               | Inchoate Modifier                                           | 64-65    | 2        | A
+   \*\*                                                                          | Future Expansion Buffer                                     | 66-80    | 14       | G (Space)
    [C8](./librs-spec#end-of-segment-marker-c8)                                   | End of Segment Marker                                       | 81-82    | 2        | A
    [C9](./librs-spec#padding-c9)                                                 | Padding                                                     | 83-150   | \*\*     | G (Space)
 
@@ -800,7 +800,8 @@ Segmetn 62, Arrestee Statute, is what's used to say what Statute an Arrestee was
    [45](./librs-spec#of-arrest-45)                        | Louisiana Revised Statute Number of Arrest       | 28-39         | 12       | A
    [L45](./librs-spec#arrest-connection-to-offense-l45)   | Arrest Connection to Offense                     | 40-54         | 15       | A
    [N45](./librs-spec#for-arrest-n45)                     | Agency Supplied NIBRS Code                       | 55-57         | 3        | A
-   \*\*                                                   | Future Expansion Buffer                          | 58-74         | 17       | G (Space)
+   [70](./librs-spec#inchoates-70)                        | Agency Supplied NIBRS Code                       | 58-59         | 2        | A
+   \*\*                                                   | Future Expansion Buffer                          | 60-74         | 15       | G (Space)
    [C8](./librs-spec#end-of-segment-marker-c8)            | End of Segment Marker                            | 75-76         | 2        | A
    [C9](./librs-spec#padding-c9)                          | Padding                                          | 77-150        | \*\*     | G (Space)
 
@@ -5282,6 +5283,8 @@ ___
 ___
 
 **Description:** The Inchoate Modifier is to be added to the end of the LRS Code (DE 6) present in Offense and Arrestee Offense Segments (Segments 20 and 41). It's used to add context to the charges laid against an Offender. EG: Hiring a person to commit a murder should be charged with Attempted Murder, however the Addition of the Inchoate Modifier of '-I' for 'Inciting a Felony' gives us extra context about exactly what happened.
+
+If you don't have an Inchoate Modifier to add, leave this Data Element Blank. If present, the Inchoate Modifier should appear in either/both the Offense and Arrestee Statute Segments (as appropriate).
 
 **Data Characteristics:** 2 Character Alpha, Fist Character is "-"
 
