@@ -800,7 +800,7 @@ Segmetn 62, Arrestee Statute, is what's used to say what Statute an Arrestee was
    [45](./librs-spec#of-arrest-45)                        | Louisiana Revised Statute Number of Arrest       | 28-39         | 12       | A
    [L45](./librs-spec#arrest-connection-to-offense-l45)   | Arrest Connection to Offense                     | 40-54         | 15       | A
    [N45](./librs-spec#for-arrest-n45)                     | Agency Supplied NIBRS Code                       | 55-57         | 3        | A
-   [70](./librs-spec#inchoates-70)                        | Agency Supplied NIBRS Code                       | 58-59         | 2        | A
+   [70](./librs-spec#inchoates-70)                        | Inchoates Modifier                               | 58-59         | 2        | A
    \*\*                                                   | Future Expansion Buffer                          | 60-74         | 15       | G (Space)
    [C8](./librs-spec#end-of-segment-marker-c8)            | End of Segment Marker                            | 75-76         | 2        | A
    [C9](./librs-spec#padding-c9)                          | Padding                                          | 77-150        | \*\*     | G (Space)
