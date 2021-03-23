@@ -1446,7 +1446,7 @@ ___
 
 **Description:** Attempted/Completed is how to designate whether or not an Offense occurred to completion, or was merely attempted by the Offender. For instance, an Offender tries to steal a car, but is caught in the act by the police. Since the Offender didn't succeed in stealing the car, this offense would be Attempted. 
 
-The only thing to note about this is that Attempted Murder should be reported as a Completed Aggravated Assault (NIBRS 13A). NIBRS 09A, B, and C don't allow for an Attempted value, so instead it needs to be a Completed Aggravated Assault. Everything else works how you would expect.
+The only thing to note about this is that Attempted Murder (Attempted 09A) should be reported as a Completed Aggravated Assault (Completed 13A). NIBRS does not allow for 09A Offenses to be Attempted, so instead it should be reported as a Completed Aggravated Assault -- Otherwise, the Offense is reported in the standard fashion.
 
 **Data Characteristics:** 1 Character Alpha. Cannot be left blank, and must have a value of either:
 
