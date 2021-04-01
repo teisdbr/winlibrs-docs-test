@@ -1157,7 +1157,7 @@
 		"err_no": 13072,
 		"err_message": "MISSING PROPERTY DESCRIPTION (DE 15)",
 		"err_desc": {
-			"15": "Property Description is a required Data Element for all Property Description Segments (Segment 31)."
+			"15": "Property Description is a required Data Element for all Property Description Segments (Segment 31) that do not contain a Property Loss Type (DE 14) of 1 or 8."
 		}
 	},
 	"13073": {
