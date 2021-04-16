@@ -40,6 +40,7 @@ ___
     * <a href="#victims-segments-50-51-and-52">Victims: Segments 50, 51, and 52</a>
 * <a href="#what-is-victim-was-offender-and-when-do-i-use-it">What is "Victim Was Offender" and When do I Use It?</a>
 * <a href="#what-is-an-unknown-offender">What is an Unknown Offender? When is it supposed to be used?</a>
+* <a href="#when-is-a-person-working-at-a-business-a-victim-and-when-is-the-business-a-victim">When is a Person who Works at a Business the Victim, and when is the Business Itself the Victim?</a>
 
 ## Everything Flat File
 * <a href="#flat-files-and-troubleshooting">Flat Files and Troublshooting</a>
@@ -388,7 +389,11 @@ So effectively if you know *anything* about an Offender, even the quantity Offen
 
 
 ___
+## When is a Person Working at a Business a Victim, and When is the Business a Victim?
+This one is simpler than it sounds. If the victim of the Offense is a specific person, then it's the employee that is the victim. Otherwise it's the business. 
 
+Example 1: An employee's cell phone is stolen. In that case, the employee is the Victim because their personal belongings were taken from them. 
+Example 2: An employee's company issued cell phone is stolen. In that case, the business is the Victim because the business is the actual owner of the stolen item. 
 
 ___
 
