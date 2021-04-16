@@ -22,7 +22,7 @@ ___
   * <a href="#submitting-a-file">Submitting a File</a>
   * <a href="#reports">Reports</a>
 
-## Administrative Nitty Gritty
+## Administrative Details
 * <a href="#how-dates-work">How Dates Work</a>
   * <a href="#reporting-periods-and-out-of-sequence">Reporting Periods and Out of Sequence</a>
   * <a href="#incident-dates-making-modifications-and-on-which-submission-they-appear">Incident Dates, Making Modifications, and on Which Submission They Appear</a>
@@ -39,6 +39,7 @@ ___
     * <a href="#offenders-segments-40-and-41"> Offenders: Segments 40 and 41</a>
     * <a href="#victims-segments-50-51-and-52">Victims: Segments 50, 51, and 52</a>
 * <a href="#what-is-victim-was-offender-and-when-do-i-use-it">What is "Victim Was Offender" and When do I Use It?</a>
+* <a href="#what-is-an-unknown-offender">What is an Unknown Offender? When is it supposed to be used?</a>
 
 ## Everything Flat File
 * <a href="#flat-files-and-troubleshooting">Flat Files and Troublshooting</a>
@@ -371,6 +372,22 @@ Now, normally, all Offenses that apply to a Victim apply to all Offenders that r
 
 So with those four segments we're able to infer that we've got two people that beat the snot out of each other. Our first Victim IS ALSO our first Offender, and the second the second. This is how Victim Was Offender should be used - to link a Victim Sequence Number to an Offender Sequence Number in order to denote that they are the same person, not that the Victim committed an Offense that they were the Victim of. 
 
+
+## What is an Unknown Offender?
+In LIBRS there are two definitions to an Unknown:
+1. The information is impossible to classify
+2. The information is literally not known
+
+The first definition is used in cases where an Officer is unable to definitively classify the attributes of a known quantity of Offenders. Contrary to that, the second definition is used when an Officer does not have enough information to even say how many Offenders were involved.  
+
+Take a case of a Burglary caught on security camera. Upon reviewing the footage, we can see that there are three people that have burgled the store. However, the Suspects are all wearing dark, baggy clothes with masks, and the camera quality is too poor to determine any sort of features about them. In this case, you would have three Offenders that have all of their Attributes (Race, Sex, etc...) listed as Unknown. 
+
+In the same case, if the Security Camera wasn't working, then you wouldn't even know how many Suspects were involved in the burglary. Therefore in that case, you would have one Unknown Offender. 
+
+So effectively if you know *anything* about an Offender, even the quantity Offenders involved, it should be listed as an Offender that has all Attributes listed as Unknown. Conversely, if you don't know anything at all about who committed the crime, then it should be listed as a single Unknown Offender with a Sequence Number of '000'.
+
+
+___
 
 
 ___
