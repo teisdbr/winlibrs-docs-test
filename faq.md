@@ -33,6 +33,7 @@ ___
 ## Questions and Answers
 * <a href="#questions-from-vendors">Questions We've Gotten from Vendors</a>
   * <a href="#which-incidents-to-send">What Incidents should I send you?</a>
+  * <a href="#should-i-send-duplicate-nibrs-codes">Should I send Multiple Offenses if they're the sane NIBRS Code?</a>
   * <a href="#segment-questions">Segment Questions</a>
     * <a href="#offenses-segment-20">Offenses: Segment 20</a>
     * <a href="#properties-segments-30-31-32-and-33">Properties: Segments 30, 31, 32, and 33</a>
@@ -270,6 +271,23 @@ In general, an Incident needs to have the following information to be reported:
 * (For Crime Against Property Only) One or More Properties (Segments 30, 31, and 33's)
 
 Again, please note that we want your 90-Series Offenses, even if there is no arrest associated with them. We won't send it to the FBI until an arrest comes through, but it's valuable information for the State. 
+
+
+
+___
+
+
+### Should I Send Duplicate NIBRS Codes?
+
+This question pertains to incidents where, say, there are multiple types of drugs that are found, which all have different Schedules. In Louisiana, three drugs of three different schedules are considered three different LRS Codes, and therefore three different Offenses. NIBRS, however, doesn't have this distinction. They only care if a Drug Offense involved actual drugs, paraphenalia, or both. As such, they don't want to have multiple 35A (Drug Possession) Offenses listed on the same NIBRS Report for the same Offender. 
+
+LIBRS, however, doesn't care. Since LIBRS is based on Louisiana Statutes, we would like to know that there were three different Drug Schedule Offenses that occurred in the Incident. This holds true for all Offenses, so long as the Mutual Exclusivity rules are not broken (There are a number of Offense Codes that cannot be applied to the same Victim in the Same Incident. You can see that list here: <a href="../librs-spec/#offenses-that-cannot-occur-to-the-same-victim">Offenses That Cannot Occur to the Same Victim</a>. These Offenses, however, are all Crimes Against Persons or Property, so for Crimes Against Society (like Drug Offenses) it's safe to say you should report them all). 
+
+Once LIBRS accepts your Incident, it will automatically perform the consolidation and aggregation required to put it into the format that the FBI wants for NIBRS. From your point of view, you should just tell us what happened; if that means multiple Offenses of the same NIBRS Code (again - not violating Mututal Exclusivity), then tell us that. From there, LIBRS will get it to the FBI in the format they want it in. 
+
+
+___
+
 
 ### Segment Questions
 
