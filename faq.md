@@ -42,6 +42,7 @@ ___
 * <a href="#what-is-victim-was-offender-and-when-do-i-use-it">What is "Victim Was Offender" and When do I Use It?</a>
 * <a href="#what-is-an-unknown-offender">What is an Unknown Offender? When is it supposed to be used?</a>
 * <a href="#when-is-a-person-working-at-a-business-a-victim-and-when-is-the-business-a-victim">When is a Person who Works at a Business the Victim, and when is the Business Itself the Victim?</a>
+* <a href="why-does-kidnapping-involve-a-property">Why Does Kidnapping Involve a Property?</a>
 
 ## Everything Flat File
 * <a href="#flat-files-and-troubleshooting">Flat Files and Troublshooting</a>
@@ -406,12 +407,18 @@ In the same case, if the Security Camera wasn't working, then you wouldn't even 
 So effectively if you know *anything* about an Offender, even the quantity Offenders involved, it should be listed as an Offender that has all Attributes listed as Unknown. Conversely, if you don't know anything at all about who committed the crime, then it should be listed as a single Unknown Offender with a Sequence Number of '000'.
 
 
-___
+
 ## When is a Person Working at a Business a Victim, and When is the Business a Victim?
 This one is simpler than it sounds. If the victim of the Offense is a specific person, then it's the employee that is the victim. Otherwise it's the business. 
 
 Example 1: An employee's cell phone is stolen. In that case, the employee is the Victim because their personal belongings were taken from them. 
 Example 2: An employee's company issued cell phone is stolen. In that case, the business is the Victim because the business is the actual owner of the stolen item. 
+
+
+## Why Does Kidnapping Involve a Property?
+Kidnapping is a Crime Against Person that also requires a Property because the Property represents a ransom that may be involved in the Incident. This is true even for cases where a ransom is not involved, such as parental abduction situations where a parent takes, keeps, or otherwise holds a child while defying the rights of the child's custodial parent or legal guardian. In these cases, the property loss type would likely be 1 - None, since the abductor is not attempting to solicit money from the child's guardian.
+
+So any time there is a Kidnapping Offense, there also needs to be a Property associated with it that represents a ransom amount, even though one may not actually exist.
 
 ___
 
