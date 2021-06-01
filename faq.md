@@ -43,6 +43,8 @@ ___
 * <a href="#what-is-an-unknown-offender">What is an Unknown Offender? When is it supposed to be used?</a>
 * <a href="#when-is-a-person-working-at-a-business-a-victim-and-when-is-the-business-a-victim">When is a Person who Works at a Business the Victim, and when is the Business Itself the Victim?</a>
 * <a href="why-does-kidnapping-involve-a-property">Why Does Kidnapping Involve a Property?</a>
+* <a href="how-case-statuses-change-when-arrests-are-made">If a case has two or more Suspects and only one of them is arrested as of yet, would the case status need to stay “Pending Investigation” or “Cleared by Arrest.” How will this be reported to the State?</a>
+* <a href="what-data-is-pulled-from-our-supplemental-reports">What Information do you pull from Supplemental Reports?</a>
 
 ## Everything Flat File
 * <a href="#flat-files-and-troubleshooting">Flat Files and Troublshooting</a>
@@ -419,6 +421,20 @@ Example 2: An employee's company issued cell phone is stolen. In that case, the 
 Kidnapping is a Crime Against Person that also requires a Property because the Property represents a ransom that may be involved in the Incident. This is true even for cases where a ransom is not involved, such as parental abduction situations where a parent takes, keeps, or otherwise holds a child while defying the rights of the child's custodial parent or legal guardian. In these cases, the property loss type would likely be 1 - None, since the abductor is not attempting to solicit money from the child's guardian.
 
 So any time there is a Kidnapping Offense, there also needs to be a Property associated with it that represents a ransom amount, even though one may not actually exist.
+
+## How Do Case Statuses Change when Arests are Made?
+We don't explicitly collect anything along the lines of case status as such, so these statuses of “Pending Investigation” or “Cleared by Arrest” would never be submitted to us. All incidents are considered open / uncleared unless you submit an arrest or an exceptional clearance for it. From the FBI / NIBRS perspective cases are cleared by any (single) arrest regardless of number of offenders, so if you send us an incident where you have 5 offenders and 1 arrestee then the FBI will count that is cleared for your open / cleared totals. That doesn't mean that it is 'closed' and cannot be updated. On the contrary, we would expect you to submit the additional arrestees in the future when / if you catch them.  
+
+LIBRS DOES NOT want the minimal NIBRS requirement. We want all individuals arrested to be reported so LCLE can see how many of the original offenders were arrested and so that we can conduct arrest trend analysis here at the state level. Submitting only one arrestee per incident potentially dramatically under-reports you actual custodial arrest totals.  
+
+
+## What Data is Pulled from our Supplemental Reports?
+
+Not a thing - we don't see anything in supplemental nor narratives. If they don't put the information in the respective property/victim/offender/etc screens then we never see it. Some Agencies have run into issues in the past by entering in the initial information from an Incident, and then locking it for changes after it's been approved by a Supervisor. This forces Officers to add later information to the Supplemental Reports, which is something we will never see. So additional Arrests, Properties, Offenses, and Victims that are added at a later date never make their way to being reported.
+
+So... Don't do that. If it's not in a Segment, we don't see it. 
+
+
 
 ___
 
