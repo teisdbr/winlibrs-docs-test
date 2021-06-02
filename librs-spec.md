@@ -3666,7 +3666,7 @@ Requirment   | Requirement Description | Error Number | Error Message
 ### Important Note:
 13A, 13B, and 13C Offenses are all Mutually Exclusive to the same Victim in the same Incident. Meaning, LIBRS (and NIBRS, for that matter) will not allow you to submit a Victim who received Major Injuries from one Offender committing a 13A - Aggravated Assault Offenses, and Minor Injuries from another Offender committing a 13B - Simple Assault Offense. 
 
-If you have a case where a Victim applies to Mutually Exclusive Offenses, then you will need to submit those Offenses in Separate Incidents. You can see the chart here for [which Offenses are Mutually Exclusive](./offenses-that-cannot-occur-to-the-same-victim).
+If you have a case where a Victim applies to Mutually Exclusive Offenses, then you will need to submit those Offenses in Separate Incidents. You can see the chart here for [which Offenses are Mutually Exclusive](#offenses-that-cannot-occur-to-the-same-victim).
 
 ___
 
