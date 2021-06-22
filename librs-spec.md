@@ -81,8 +81,8 @@ The Submission Header contains the information related to the Agency that is sub
   Data Element Number                 |         Description of Data Element       |    Position(s)    |    Length    |  Format  
   :----------------------------------:|-------------------------------------------|:-----------------:|:------------:|:--------:
   [C1](./librs-spec#segment-descriptor-c1)        |   Segment Descriptor - **00**             |    1-2            |   2          |    N     
-  [C3](./librs-spec#submission-date-c3)           |   Submission Date                         |    23-30          |   8          |    D     
   [C2](./librs-spec#submitting-agency-c2)         |   Submitting Agency                       |    3-22           |   20         |    A     
+  [C3](./librs-spec#submission-date-c3)           |   Submission Date                         |    23-30          |   8          |    D     
   [C4](./librs-spec#reporting-period-c4)          |   Reporting Period                        |    31-36          |   6          |    D     
   [C10](./librs-spec#software-id-c10)             |   Software ID                             |    37-41          |   5          |   A/N    
   [C11](./librs-spec#software-version-c11)        |   Software Version                        |    42-51          |   10         |   A/N    
