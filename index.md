@@ -34,6 +34,11 @@ ___
 ## Recent Changes
 ___
 
+#### 2021-06-22
+* Added Error 13050, which is thrown when you supply values for Number of Stolen or Number of Recovered Vehicles, and there are no Offenses that meet the required criteria to supply them. 
+  * In order to supply Number of Stolen Vehicles, there must be at least one ***Completed 240*** (MV Theft) Offense, and is associated with a Property Description Segment (Segment 31 linked via Segment 33) that contains a Property Description of a ***Vechicle***, and a Loss Type of ***7 - Stolen***.
+  * In order to supply Number of Recovered Vehicles, you must meet the above criteria for the Number of Stolen Vehicles and include a value for it, as well as include a ***Completed 280*** (Possession of Stolen Property) Offense which relates to a Property Description Segment (Segment 31 linked via Segment 33) with the same information as the Stolen Property in the above case, but with a Loss Type of ***5 - Recovered***.
+
 #### 2021-03-09
 * We have redesignated some LRS Codes in order to keep them in line with changes to the Statute Documentation on LA Legis. Effectively we've had a shift in some of the modifiers that are used. Here's a table that shows the old and new LRS Codes:
 

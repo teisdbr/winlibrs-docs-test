@@ -1007,6 +1007,14 @@
 			"31": "When the same property is Stolen (Type of Property Loss = ‘7’) and Recovered (Type of Property Loss = ‘5’) within the same incident, then the two Property Description Segments (31) that are submitted must use the same property sequence number (P1)."
 		}
 	},
+	"13050": {
+		"active": "true",
+		"err_no": 13050,
+		"err_message": "NUMBER OF STOLEN AND NUMBER OF RECOVERED VEHICLES MUST BE LEFT BLANK BASED ON THE OFFENSES AND PROPERTIES SUPPLIED",
+		"err_desc": {
+			"18": "In order to supply a value for Number of Stolen Vehicles or Number of Recovered Vehicles, the Incident must contain at least one 240 (MV Theft) Offense that is completed, and a Segment 31 that contains a Property Description of Vehicle, and a Loss Type of 7 - Stolen."
+		}
+	},
 	"13051": {
 		"active": "true",
 		"err_no": 13051,
