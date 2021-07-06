@@ -2429,7 +2429,7 @@ ___
 
 **Description:** Number of Stolen Vehicles is the sum of the Segment 31's that have a Property Description containing a Vehicle and a Property Loss Type of '7 - Stolen'. For it to appear in Segment 30 with any value other than Zero (0), there must be Segment 31's present in the Incident that meet those conditions. 
 
-**Data Characteristics:** 2 Characters Numeric. If less than 10, a Zero (0) should be in the first character (EG: 01, 02, 03, etc...). Should always have a value when Segment 30 is present, using '00' if no Motor Vehicle Thefts (NIBRS 240) are present.
+**Data Characteristics:** 2 Characters Numeric. If less than 10, a Zero (0) should be in the first character (EG: 01, 02, 03, etc...). ~~Should always have a value when Segment 30 is present, using '00' if no stolen vehicle are present in the Incident.~~ Update 07/2021 - This should only have a value if there is a Completed 240 - MV Theft Offense in the Incident. 00 does not represent 0 stolen vehicles, rather 'Unknown'.
 
 ### Requirements:
 
@@ -2461,7 +2461,7 @@ ____
 
 **Description:** The Number of Recovered Motor Vehicles, similar to DE 18, is the number of Property Description Segments (Segment 31) that have a Property Description (DE 15) that contains a Vehicle, and a Property Loss Type (DE 14) of '5 - Recovered'.
 
-**Data Characteristics:** 2 Characters Numeric. If less than 10, a Zero (0) should be in the first character (EG: 01, 02, 03, etc...). Should always have a value when Segment 30 is present, using '00' if no vehicle recoveries are present in the Incident.
+**Data Characteristics:** 2 Characters Numeric. If less than 10, a Zero (0) should be in the first character (EG: 01, 02, 03, etc...). ~~Should always have a value when Segment 30 is present, using '00' if no recovered vehicle are present in the Incident.~~ Update 07/2021 - This should only have a value if there is a Completed 280 - Illegal Property Offense in the Incident. 00 does not represent 0 recovered vehicles, rather 'Unknown'.
 
 ### Requirements:
 
