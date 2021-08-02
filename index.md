@@ -11,7 +11,7 @@ ____
 ____
 
 
-{::nomarkdown}<img src="images/JSON.png" alt="Json is coming" width="800"/>{:/}
+<img src="images/JSON.png" alt="Json is coming" width="800"/>
 
 
 
