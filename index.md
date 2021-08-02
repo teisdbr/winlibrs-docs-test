@@ -10,13 +10,12 @@ ____
 ### We've recently revamped the entire documentation. If your RMS contains its own Error Validation, then it's probable that the Error Codes and on which Segments/Data Elements the Errors get thrown have changed. 
 ____
 
-```html
-<img src="images/JSON.png" alt="Json is coming" width="800"/>
-```
 
-#### ![JSON](images/JSON.png)
+{::nomarkdown}<img src="images/JSON.png" alt="Json is coming" width="800"/>{:/}
 
-And it will blow Season 8 out of the water... I think, I'm not really sure, I've never seen it. I stopped at 7. 
+
+
+#### And it will blow Season 8 out of the water... I think, I'm not really sure, I've never seen it. I stopped at 7. 
 
 No, but really, we're working on a revised JSON Data Model for submitting LIBRS Data. Aside from the Flat File format being older than the developers that are working to maintain it... This will help us be more agile when it comes to implementing changes that the FBI and State Legislature want to see. It'll also be great for new vendors that are coming online with LIBRS so they don't have to deconstruct their existing objects and assemble the Flat File; the existing objects that are used in your RMSes will probably already contain all of the information we're asking for. The end-users also benefit because it gives them a file that's actually legible to a human. So rather than seeking and searching for what's wrong in a segment, they can just read it. Win win win... Win. 
 
