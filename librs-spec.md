@@ -895,7 +895,7 @@ ___
 
 <div class="newpage"></div>
 
-### Zero Record (01)
+## Zero Record (01)
 ___
 
 ### Description
@@ -907,6 +907,12 @@ You may include this Segment if you wish, though it is not required. If you do i
 * -Header Segment-
 * 01000000000000ZZ
 * 99000003ZZ
+
+If you don't want to include it, then ensure your file has three lines in it:
+
+* -Header Segment-
+* 99000003ZZ
+* (blank - don't actually write blank, this is just here for reference. Leave the last line blank.)
 
 
 ### Segment Layout
