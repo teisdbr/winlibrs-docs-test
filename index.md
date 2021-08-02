@@ -10,6 +10,18 @@ ____
 ### We've recently revamped the entire documentation. If your RMS contains its own Error Validation, then it's probable that the Error Codes and on which Segments/Data Elements the Errors get thrown have changed. 
 ____
 
+#### ![JSON](images/JSON.png)
+
+And it will blow Season 8 out of the water... I think, I'm not really sure, I've never seen it. I stopped at 7. 
+
+No, but really, we're working on a revised JSON Data Model for submitting LIBRS Data. Aside from the Flat File format being older than the developers that are working to maintain it... This will help us be more agile when it comes to implementing changes that the FBI and State Legislature want to see. It'll also be great for new vendors that are coming online with LIBRS so they don't have to deconstruct their existing objects and assemble the Flat File; the existing objects that are used in your RMSes will probably already contain all of the information we're asking for. The end-users also benefit because it gives them a file that's actually legible to a human. So rather than seeking and searching for what's wrong in a segment, they can just read it. Win win win... Win. 
+
+We'll be posting updates and links as we near release - we'll be starting small and working closely with a couple of vendors to start before opening it up publicly - we absolutely wouldn't want anyone spinning their wheels for something that turns out to be a serialization issue on our end, you know?
+
+Also, I lied, I've never seen Game of Thrones, I just like the meme. 
+
+------
+
 #### This page contains information on how LIBRS Flat Files should be processed and generated for use in submitting data to the State of Louisiana, and subsequently the FBI via NIBRS. Use the links below, or the side menu to get started. This site contains the following information.
 
 ___
@@ -99,7 +111,7 @@ So to sum all that up, we got confused and as a result wrote a confusing Error M
 #### 2020-12-14
 * Updated the requirements for DE 33 - Injury Type. Error 15003 was previously deprecated and rolled into Error 15020, however the Error Number was not updated properly, and thus it remained in the documentaiton. 
   * Minor change in requirement numbers:
-</br>
+  </br>
   |: Old Req. No.:|:New Req. No.:|
   |---------------|--------------|
   |       1       |      1       |
