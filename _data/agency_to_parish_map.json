@@ -1,1166 +1,390 @@
 {
-  "LA0010000": [
-    "Acadia"
-  ],
-  "LA0010300": [
-    "Acadia"
-  ],
-  "LA0010100": [
-    "Acadia"
-  ],
-  "LA0010500": [
-    "Acadia"
-  ],
-  "LA0010400": [
-    "Acadia"
-  ],
-  "LA0010600": [
-    "Acadia"
-  ],
-  "LA0010700": [
-    "Acadia"
-  ],
-  "LA0012000": [
-    "Acadia"
-  ],
-  "LA0010200": [
-    "Acadia"
-  ],
-  "LA0020000": [
-    "Allen"
-  ],
-  "LA020400 ": [
-    "Allen"
-  ],
-  "LA0020100": [
-    "Allen"
-  ],
-  "LA0020200": [
-    "Allen"
-  ],
-  "LA0020300": [
-    "Allen"
-  ],
-  "LA0020500": [
-    "Allen"
-  ],
-  "LA0030000": [
-    "Ascension"
-  ],
-  "LA0030100": [
-    "Ascension"
-  ],
-  "LA0030200": [
-    "Ascension"
-  ],
-  "LA0030300": [
-    "Ascension"
-  ],
-  "LA0040000": [
-    "Assumption"
-  ],
-  "LA0040100": [
-    "Assumption"
-  ],
-  "LA0050000": [
-    "Avoyelles"
-  ],
-  "LA0050100": [
-    "Avoyelles"
-  ],
-  "LA0050400": [
-    "Avoyelles"
-  ],
-  "LA0050800": [
-    "Avoyelles"
-  ],
-  "LA0050700": [
-    "Avoyelles"
-  ],
-  "LA0050500": [
-    "Avoyelles"
-  ],
-  "LA0050200": [
-    "Avoyelles"
-  ],
-  "LA0050600": [
-    "Avoyelles"
-  ],
-  "LA0050900": [
-    "Avoyelles"
-  ],
-  "LA0050300": [
-    "Avoyelles"
-  ],
-  "LA0060000": [
-    "Beauregard"
-  ],
-  "LA6666666": [
-    "Beauregard"
-  ],
-  "LA0060100": [
-    "Beauregard"
-  ],
-  "LA0060200": [
-    "Beauregard"
-  ],
-  "LA0070100": [
-    "Bienville"
-  ],
-  "LA0070800": [
-    "Bienville"
-  ],
-  "LA0070000": [
-    "Bienville"
-  ],
-  "LA0070700": [
-    "Bienville"
-  ],
-  "LA0070400": [
-    "Bienville"
-  ],
-  "LA0070200": [
-    "Bienville"
-  ],
-  "LA0070500": [
-    "Bienville"
-  ],
-  "LA0070600": [
-    "Bienville"
-  ],
-  "LA0070900": [
-    "Bienville"
-  ],
-  "LA0070300": [
-    "Bienville"
-  ],
-  "LA0080200": [
-    "Bossier"
-  ],
-  "LA0080100": [
-    "Bossier"
-  ],
-  "LA0080000": [
-    "Bossier"
-  ],
-  "LA0080400": [
-    "Bossier"
-  ],
-  "LA0080500": [
-    "Bossier"
-  ],
-  "LA0080600": [
-    "Bossier"
-  ],
-  "LA0080300": [
-    "Bossier"
-  ],
-  "LA0080700": [
-    "Bossier"
-  ],
-  "LA0090500": [
-    "Caddo"
-  ],
-  "LA0090400": [
-    "Caddo"
-  ],
-  "LA0090000": [
-    "Caddo"
-  ],
-  "LA0091100": [
-    "Caddo"
-  ],
-  "LA0091000": [
-    "Caddo"
-  ],
-  "LA0090700": [
-    "Caddo"
-  ],
-  "LA0090800": [
-    "Caddo"
-  ],
-  "LA0090600": [
-    "Caddo"
-  ],
-  "LA0090300": [
-    "Caddo"
-  ],
-  "LA0090900": [
-    "Caddo"
-  ],
-  "LA0090100": [
-    "Caddo"
-  ],
-  "LA0090200": [
-    "Caddo"
-  ],
-  "LA0100000": [
-    "Calcasieu"
-  ],
-  "LA0100100": [
-    "Calcasieu"
-  ],
-  "LA0100700": [
-    "Calcasieu"
-  ],
-  "LA0100200": [
-    "Calcasieu"
-  ],
-  "LA0100600": [
-    "Calcasieu"
-  ],
-  "LA0100800": [
-    "Calcasieu"
-  ],
-  "LA0100300": [
-    "Calcasieu"
-  ],
-  "LA0100400": [
-    "Calcasieu"
-  ],
-  "LA0100500": [
-    "Calcasieu"
-  ],
-  "LA0110000": [
-    "Caldwell"
-  ],
-  "LA0110200": [
-    "Caldwell"
-  ],
-  "LA0110100": [
-    "Caldwell"
-  ],
-  "LA0110300": [
-    "Caldwell"
-  ],
-  "LA0120000": [
-    "Cameron"
-  ],
-  "LA0130000": [
-    "Catahoula"
-  ],
-  "LA0130300": [
-    "Catahoula"
-  ],
-  "LA0130100": [
-    "Catahoula"
-  ],
-  "LA0130200": [
-    "Catahoula"
-  ],
-  "LA0140300": [
-    "Claiborne"
-  ],
-  "LA0140000": [
-    "Claiborne"
-  ],
-  "LA0140100": [
-    "Claiborne"
-  ],
-  "LA0140200": [
-    "Claiborne"
-  ],
-  "LA0140400": [
-    "Claiborne"
-  ],
-  "LA0150300": [
-    "Concordia"
-  ],
-  "LA0150000": [
-    "Concordia"
-  ],
-  "LA0150100": [
-    "Concordia"
-  ],
-  "LA0150400": [
-    "Concordia"
-  ],
-  "LA0150200": [
-    "Concordia"
-  ],
-  "LA0160000": [
-    "DeSoto"
-  ],
-  "LA0160300": [
-    "DeSoto"
-  ],
-  "LA0160500": [
-    "DeSoto"
-  ],
-  "LA0160200": [
-    "DeSoto"
-  ],
-  "LA0160600": [
-    "DeSoto"
-  ],
-  "LA0160100": [
-    "DeSoto"
-  ],
-  "LA0160400": [
-    "DeSoto"
-  ],
-  "LA0160700": [
-    "DeSoto"
-  ],
-  "LA0160800": [
-    "DeSoto"
-  ],
-  "LA0170100": [
-    "East Baton Rouge"
-  ],
-  "LA0170200": [
-    "East Baton Rouge"
-  ],
-  "LA0170000": [
-    "East Baton Rouge"
-  ],
-  "LA0170400": [
-    "East Baton Rouge"
-  ],
-  "LA0170600": [
-    "East Baton Rouge"
-  ],
-  "LA0170300": [
-    "East Baton Rouge"
-  ],
-  "LA0180000": [
-    "East Carroll"
-  ],
-  "LA0180100": [
-    "East Carroll"
-  ],
-  "LA0190100": [
-    "East Feliciana"
-  ],
-  "LA0190000": [
-    "East Feliciana"
-  ],
-  "LA0190200": [
-    "East Feliciana"
-  ],
-  "LA0190500": [
-    "East Feliciana"
-  ],
-  "LA0190400": [
-    "East Feliciana"
-  ],
-  "LA0190300": [
-    "East Feliciana"
-  ],
-  "LA0200100": [
-    "Evangeline"
-  ],
-  "LA0200600": [
-    "Evangeline"
-  ],
-  "LA0200000": [
-    "Evangeline"
-  ],
-  "LA0200200": [
-    "Evangeline"
-  ],
-  "LA0200400": [
-    "Evangeline"
-  ],
-  "LA0200500": [
-    "Evangeline"
-  ],
-  "LA0200300": [
-    "Evangeline"
-  ],
-  "LA0210400": [
-    "Franklin"
-  ],
-  "LA0210000": [
-    "Franklin"
-  ],
-  "LA0210300": [
-    "Franklin"
-  ],
-  "LA0210100": [
-    "Franklin"
-  ],
-  "LA0210200": [
-    "Franklin"
-  ],
-  "LA0220100": [
-    "Grant"
-  ],
-  "LA0220300": [
-    "Grant"
-  ],
-  "LA0220400": [
-    "Grant"
-  ],
-  "LA0220000": [
-    "Grant"
-  ],
-  "LA0220200": [
-    "Grant"
-  ],
-  "LA0220500": [
-    "Grant"
-  ],
-  "LA0230000": [
-    "Iberia"
-  ],
-  "LA0230200": [
-    "Iberia"
-  ],
-  "LA0230400": [
-    "Iberia"
-  ],
-  "LA0230300": [
-    "Iberia"
-  ],
-  "LA0240400": [
-    "Iberville"
-  ],
-  "LA0240000": [
-    "Iberville"
-  ],
-  "LA0240100": [
-    "Iberville"
-  ],
-  "LA0240200": [
-    "Iberville"
-  ],
-  "LA0240500": [
-    "Iberville"
-  ],
-  "LA0240300": [
-    "Iberville"
-  ],
-  "LA0250200": [
-    "Jackson"
-  ],
-  "LA0250500": [
-    "Jackson"
-  ],
-  "LA0250700": [
-    "Jackson"
-  ],
-  "LA0250300": [
-    "Jackson"
-  ],
-  "LA0250400": [
-    "Jackson"
-  ],
-  "LA0250000": [
-    "Jackson"
-  ],
-  "LA0250100": [
-    "Jackson"
-  ],
-  "LA0250600": [
-    "Jackson"
-  ],
-  "LA0260500": [
-    "Jefferson"
-  ],
-  "LA0260100": [
-    "Jefferson"
-  ],
-  "LA0260200": [
-    "Jefferson"
-  ],
-  "LA0260000": [
-    "Jefferson"
-  ],
-  "LA0260300": [
-    "Jefferson"
-  ],
-  "LA0260600": [
-    "Jefferson"
-  ],
-  "LA0260400": [
-    "Jefferson"
-  ],
-  "LA0270100": [
-    "Jefferson Davis"
-  ],
-  "LA0270500": [
-    "Jefferson Davis"
-  ],
-  "LA0270000": [
-    "Jefferson Davis"
-  ],
-  "LA0270200": [
-    "Jefferson Davis"
-  ],
-  "LA0270300": [
-    "Jefferson Davis"
-  ],
-  "LA0270400": [
-    "Jefferson Davis"
-  ],
-  "LA0300100": [
-    "La Salle"
-  ],
-  "LA0300000": [
-    "La Salle"
-  ],
-  "LA0300200": [
-    "La Salle"
-  ],
-  "LA0300300": [
-    "La Salle"
-  ],
-  "LA0300400": [
-    "La Salle"
-  ],
-  "LA0280100": [
-    "Lafayette"
-  ],
-  "LA0280200": [
-    "Lafayette"
-  ],
-  "LA0280400": [
-    "Lafayette"
-  ],
-  "LA0280300": [
-    "Lafayette"
-  ],
-  "LA0280000": [
-    "Lafayette"
-  ],
-  "LA0280600": [
-    "Lafayette"
-  ],
-  "LA0280700": [
-    "Lafayette"
-  ],
-  "LA0280500": [
-    "Lafayette"
-  ],
-  "LA0290100": [
-    "Lafourche"
-  ],
-  "LA0290000": [
-    "Lafourche"
-  ],
-  "LA0290300": [
-    "Lafourche"
-  ],
-  "LA0290600": [
-    "Lafourche"
-  ],
-  "LA0290500": [
-    "Lafourche"
-  ],
-  "LA0310400": [
-    "Lincoln"
-  ],
-  "LA0310100": [
-    "Lincoln"
-  ],
-  "LA0310300": [
-    "Lincoln"
-  ],
-  "LA0310600": [
-    "Lincoln"
-  ],
-  "LA0310700": [
-    "Lincoln"
-  ],
-  "LA0310000": [
-    "Lincoln"
-  ],
-  "LA0310200": [
-    "Lincoln"
-  ],
-  "LA0310500": [
-    "Lincoln"
-  ],
-  "LA0320400": [
-    "Livingston"
-  ],
-  "LA0320100": [
-    "Livingston"
-  ],
-  "LA0320700": [
-    "Livingston"
-  ],
-  "LA0320800": [
-    "Livingston"
-  ],
-  "LA0320200": [
-    "Livingston"
-  ],
-  "LA0320000": [
-    "Livingston"
-  ],
-  "LA0320600": [
-    "Livingston"
-  ],
-  "LA0320500": [
-    "Livingston"
-  ],
-  "LA0320300": [
-    "Livingston"
-  ],
-  "LA0330200": [
-    "Madison"
-  ],
-  "LA0330000": [
-    "Madison"
-  ],
-  "LA0330300": [
-    "Madison"
-  ],
-  "LA0330400": [
-    "Madison"
-  ],
-  "LA0330100": [
-    "Madison"
-  ],
-  "LA0340100": [
-    "Morehouse"
-  ],
-  "LA0340300": [
-    "Morehouse"
-  ],
-  "LA0340400": [
-    "Morehouse"
-  ],
-  "LA0340200": [
-    "Morehouse"
-  ],
-  "LA0340000": [
-    "Morehouse"
-  ],
-  "LA0340500": [
-    "Morehouse"
-  ],
-  "LA0350700": [
-    "Natchitoches"
-  ],
-  "LA0350200": [
-    "Natchitoches"
-  ],
-  "LA0350400": [
-    "Natchitoches"
-  ],
-  "LA0350500": [
-    "Natchitoches"
-  ],
-  "LA0350900": [
-    "Natchitoches"
-  ],
-  "LA0350100": [
-    "Natchitoches"
-  ],
-  "LA0350000": [
-    "Natchitoches"
-  ],
-  "LA0351000": [
-    "Natchitoches"
-  ],
-  "LA0350800": [
-    "Natchitoches"
-  ],
-  "LA0350300": [
-    "Natchitoches"
-  ],
-  "LA0350600": [
-    "Natchitoches"
-  ],
-  "LA0370100": [
-    "Ouachita"
-  ],
-  "LA0370400": [
-    "Ouachita"
-  ],
-  "LA0370000": [
-    "Ouachita"
-  ],
-  "LA0370500": [
-    "Ouachita"
-  ],
-  "LA0370300": [
-    "Ouachita"
-  ],
-  "LA0370200": [
-    "Ouachita"
-  ],
-  "LA0370900": [
-    "Ouachita"
-  ],
-  "LA0360200": [
-    "Orleans"
-  ],
-  "LA036219E": [
-    "Orleans"
-  ],
-  "LA0170500": [
-    "Orleans"
-  ],
-  "LA0361300": [
-    "Orleans"
-  ],
-  "LANPD0000": [
-    "Orleans"
-  ],
-  "LA0361400": [
-    "Orleans"
-  ],
-  "LA0360000": [
-    "Orleans"
-  ],
-  "LA0361200": [
-    "Orleans"
-  ],
-  "LA0360300": [
-    "Orleans"
-  ],
-  "LA0362000": [
-    "Orleans"
-  ],
-  "LA0380000": [
-    "Plaquemines"
-  ],
-  "LA0390400": [
-    "Pointe Coupee"
-  ],
-  "LA0390300": [
-    "Pointe Coupee"
-  ],
-  "LA0390200": [
-    "Pointe Coupee"
-  ],
-  "LA0390100": [
-    "Pointe Coupee"
-  ],
-  "LA0390000": [
-    "Pointe Coupee"
-  ],
-  "LA0400100": [
-    "Rapides"
-  ],
-  "LA0401000": [
-    "Rapides"
-  ],
-  "LA0400300": [
-    "Rapides"
-  ],
-  "LA0400500": [
-    "Rapides"
-  ],
-  "LA0400800": [
-    "Rapides"
-  ],
-  "LA0400600": [
-    "Rapides"
-  ],
-  "LA0400400": [
-    "Rapides"
-  ],
-  "LA0401400": [
-    "Rapides"
-  ],
-  "LA0400900": [
-    "Rapides"
-  ],
-  "LA0400200": [
-    "Rapides"
-  ],
-  "LA0400000": [
-    "Rapides"
-  ],
-  "LA0400700": [
-    "Rapides"
-  ],
-  "LA0410100": [
-    "Red River"
-  ],
-  "LA0410200": [
-    "Red River"
-  ],
-  "LA0410300": [
-    "Red River"
-  ],
-  "LA0410400": [
-    "Red River"
-  ],
-  "LA0410000": [
-    "Red River"
-  ],
-  "LA0420100": [
-    "Richland"
-  ],
-  "LA0420300": [
-    "Richland"
-  ],
-  "LA0420200": [
-    "Richland"
-  ],
-  "LA0420000": [
-    "Richland"
-  ],
-  "LA0430300": [
-    "Sabine"
-  ],
-  "LA0430700": [
-    "Sabine"
-  ],
-  "LA0430500": [
-    "Sabine"
-  ],
-  "LA0430100": [
-    "Sabine"
-  ],
-  "LA0430600": [
-    "Sabine"
-  ],
-  "LA0430400": [
-    "Sabine"
-  ],
-  "LA0430000": [
-    "Sabine"
-  ],
-  "LA0430200": [
-    "Sabine"
-  ],
-  "LA0440000": [
-    "St Bernard"
-  ],
-  "LA0450000": [
-    "St Charles"
-  ],
-  "LA0460100": [
-    "St Helena"
-  ],
-  "LA0460200": [
-    "St Helena"
-  ],
-  "LA0460000": [
-    "St Helena"
-  ],
-  "LA0470200": [
-    "St James"
-  ],
-  "LA0470100": [
-    "St James"
-  ],
-  "LA0470000": [
-    "St James"
-  ],
-  "LA0480000": [
-    "St John the Baptist"
-  ],
-  "LA0490300": [
-    "St Landry"
-  ],
-  "LA0491200": [
-    "St Landry"
-  ],
-  "LA0490100": [
-    "St Landry"
-  ],
-  "LA0490900": [
-    "St Landry"
-  ],
-  "LA0490800": [
-    "St Landry"
-  ],
-  "LA0491000": [
-    "St Landry"
-  ],
-  "LA0491300": [
-    "St Landry"
-  ],
-  "LA0490700": [
-    "St Landry"
-  ],
-  "LA0490200": [
-    "St Landry"
-  ],
-  "LA0491100": [
-    "St Landry"
-  ],
-  "LA0490600": [
-    "St Landry"
-  ],
-  "LA0490000": [
-    "St Landry"
-  ],
-  "LA0490400": [
-    "St Landry"
-  ],
-  "LA0490500": [
-    "St Landry"
-  ],
-  "LA0500100": [
-    "St Martin"
-  ],
-  "LA0500400": [
-    "St Martin"
-  ],
-  "LA0500300": [
-    "St Martin"
-  ],
-  "LA0500000": [
-    "St Martin"
-  ],
-  "LA0500200": [
-    "St Martin"
-  ],
-  "LA0510500": [
-    "St Mary"
-  ],
-  "LA0510100": [
-    "St Mary"
-  ],
-  "LA0510200": [
-    "St Mary"
-  ],
-  "LA0510300": [
-    "St Mary"
-  ],
-  "LA0510400": [
-    "St Mary"
-  ],
-  "LA0510000": [
-    "St Mary"
-  ],
-  "LA0520600": [
-    "St Tammany"
-  ],
-  "LA0520100": [
-    "St Tammany"
-  ],
-  "LA0520700": [
-    "St Tammany"
-  ],
-  "LA0520800": [
-    "St Tammany"
-  ],
-  "LA0520300": [
-    "St Tammany"
-  ],
-  "LA0520500": [
-    "St Tammany"
-  ],
-  "LA0520200": [
-    "St Tammany"
-  ],
-  "LA0520000": [
-    "St Tammany"
-  ],
-  "LA0520400": [
-    "St Tammany"
-  ],
-  "LA0530400": [
-    "Tangipahoa"
-  ],
-  "LA0530100": [
-    "Tangipahoa"
-  ],
-  "LA0530500": [
-    "Tangipahoa"
-  ],
-  "LA0530200": [
-    "Tangipahoa"
-  ],
-  "LA0530300": [
-    "Tangipahoa"
-  ],
-  "LA0530600": [
-    "Tangipahoa"
-  ],
-  "LA0530900": [
-    "Tangipahoa"
-  ],
-  "LA0530700": [
-    "Tangipahoa"
-  ],
-  "LA0530000": [
-    "Tangipahoa"
-  ],
-  "LA0530800": [
-    "Tangipahoa"
-  ],
-  "LA0540100": [
-    "Tensas"
-  ],
-  "LA0540300": [
-    "Tensas"
-  ],
-  "LA0540000": [
-    "Tensas"
-  ],
-  "LA0540200": [
-    "Tensas"
-  ],
-  "LA0550100": [
-    "Terrebonne"
-  ],
-  "LA0550000": [
-    "Terrebonne"
-  ],
-  "LA0560200": [
-    "Union"
-  ],
-  "LA0560800": [
-    "Union"
-  ],
-  "LA0560100": [
-    "Union"
-  ],
-  "LA0560500": [
-    "Union"
-  ],
-  "LA0560700": [
-    "Union"
-  ],
-  "LA0560400": [
-    "Union"
-  ],
-  "LA0560600": [
-    "Union"
-  ],
-  "LA0560000": [
-    "Union"
-  ],
-  "LA0570100": [
-    "Vermilion"
-  ],
-  "LA0570300": [
-    "Vermilion"
-  ],
-  "LA0570400": [
-    "Vermilion"
-  ],
-  "LA0570500": [
-    "Vermilion"
-  ],
-  "LA0570200": [
-    "Vermilion"
-  ],
-  "LA0570600": [
-    "Vermilion"
-  ],
-  "LA0570000": [
-    "Vermilion"
-  ],
-  "LA0580400": [
-    "Vernon"
-  ],
-  "LA0580100": [
-    "Vernon"
-  ],
-  "LA0580200": [
-    "Vernon"
-  ],
-  "LA0580300": [
-    "Vernon"
-  ],
-  "LA0580500": [
-    "Vernon"
-  ],
-  "LA0580000": [
-    "Vernon"
-  ],
-  "LA0590400": [
-    "Washington"
-  ],
-  "LA0590100": [
-    "Washington"
-  ],
-  "LA0590200": [
-    "Washington"
-  ],
-  "LA0590300": [
-    "Washington"
-  ],
-  "LA0590000": [
-    "Washington"
-  ],
-  "LA0600300": [
-    "Webster"
-  ],
-  "LA0600400": [
-    "Webster"
-  ],
-  "LA0600800": [
-    "Webster"
-  ],
-  "LA0600500": [
-    "Webster"
-  ],
-  "LA0601000": [
-    "Webster"
-  ],
-  "LA0600900": [
-    "Webster"
-  ],
-  "LA0600100": [
-    "Webster"
-  ],
-  "LA0600600": [
-    "Webster"
-  ],
-  "LA0601100": [
-    "Webster"
-  ],
-  "LA0600700": [
-    "Webster"
-  ],
-  "LA0600200": [
-    "Webster"
-  ],
-  "LA0600000": [
-    "Webster"
-  ],
-  "LA0610300": [
-    "West Baton Rouge"
-  ],
-  "LA0610200": [
-    "West Baton Rouge"
-  ],
-  "LA0610100": [
-    "West Baton Rouge"
-  ],
-  "LA0610000": [
-    "West Baton Rouge"
-  ],
-  "LA0620200": [
-    "West Carroll"
-  ],
-  "LA0620400": [
-    "West Carroll"
-  ],
-  "LA0620300": [
-    "West Carroll"
-  ],
-  "LA0620100": [
-    "West Carroll"
-  ],
-  "LA0620500": [
-    "West Carroll"
-  ],
-  "LA0620000": [
-    "West Carroll"
-  ],
-  "LA0630100": [
-    "West Feliciana"
-  ],
-  "LA0630000": [
-    "West Feliciana"
-  ],
-  "LA0640300": [
-    "Winn"
-  ],
-  "LA0640200": [
-    "Winn"
-  ],
-  "LA0640400": [
-    "Winn"
-  ],
-  "LA0640000": [
-    "Winn"
-  ],
-  "LA0640100": [
-    "Winn"
-  ]
+  "LA0010000": "Acadia",
+  "LA0010300": "Acadia",
+  "LA0010100": "Acadia",
+  "LA0010500": "Acadia",
+  "LA0010400": "Acadia",
+  "LA0010600": "Acadia",
+  "LA0010700": "Acadia",
+  "LA0012000": "Acadia",
+  "LA0010200": "Acadia",
+  "LA0020000": "Allen",
+  "LA020400 ": "Allen",
+  "LA0020100": "Allen",
+  "LA0020200": "Allen",
+  "LA0020300": "Allen",
+  "LA0020500": "Allen",
+  "LA0030000": "Ascension",
+  "LA0030100": "Ascension",
+  "LA0030200": "Ascension",
+  "LA0030300": "Ascension",
+  "LA0040000": "Assumption",
+  "LA0040100": "Assumption",
+  "LA0050000": "Avoyelles",
+  "LA0050100": "Avoyelles",
+  "LA0050400": "Avoyelles",
+  "LA0050800": "Avoyelles",
+  "LA0050700": "Avoyelles",
+  "LA0050500": "Avoyelles",
+  "LA0050200": "Avoyelles",
+  "LA0050600": "Avoyelles",
+  "LA0050900": "Avoyelles",
+  "LA0050300": "Avoyelles",
+  "LA0060000": "Beauregard",
+  "LA6666666": "Beauregard",
+  "LA0060100": "Beauregard",
+  "LA0060200": "Beauregard",
+  "LA0070100": "Bienville",
+  "LA0070800": "Bienville",
+  "LA0070000": "Bienville",
+  "LA0070700": "Bienville",
+  "LA0070400": "Bienville",
+  "LA0070200": "Bienville",
+  "LA0070500": "Bienville",
+  "LA0070600": "Bienville",
+  "LA0070900": "Bienville",
+  "LA0070300": "Bienville",
+  "LA0080200": "Bossier",
+  "LA0080100": "Bossier",
+  "LA0080000": "Bossier",
+  "LA0080400": "Bossier",
+  "LA0080500": "Bossier",
+  "LA0080600": "Bossier",
+  "LA0080300": "Bossier",
+  "LA0080700": "Bossier",
+  "LA0090500": "Caddo",
+  "LA0090400": "Caddo",
+  "LA0090000": "Caddo",
+  "LA0091100": "Caddo",
+  "LA0091000": "Caddo",
+  "LA0090700": "Caddo",
+  "LA0090800": "Caddo",
+  "LA0090600": "Caddo",
+  "LA0090300": "Caddo",
+  "LA0090900": "Caddo",
+  "LA0090100": "Caddo",
+  "LA0090200": "Caddo",
+  "LA0100000": "Calcasieu",
+  "LA0100100": "Calcasieu",
+  "LA0100700": "Calcasieu",
+  "LA0100200": "Calcasieu",
+  "LA0100600": "Calcasieu",
+  "LA0100800": "Calcasieu",
+  "LA0100300": "Calcasieu",
+  "LA0100400": "Calcasieu",
+  "LA0100500": "Calcasieu",
+  "LA0110000": "Caldwell",
+  "LA0110200": "Caldwell",
+  "LA0110100": "Caldwell",
+  "LA0110300": "Caldwell",
+  "LA0120000": "Cameron",
+  "LA0130000": "Catahoula",
+  "LA0130300": "Catahoula",
+  "LA0130100": "Catahoula",
+  "LA0130200": "Catahoula",
+  "LA0140300": "Claiborne",
+  "LA0140000": "Claiborne",
+  "LA0140100": "Claiborne",
+  "LA0140200": "Claiborne",
+  "LA0140400": "Claiborne",
+  "LA0150300": "Concordia",
+  "LA0150000": "Concordia",
+  "LA0150100": "Concordia",
+  "LA0150400": "Concordia",
+  "LA0150200": "Concordia",
+  "LA0160000": "DeSoto",
+  "LA0160300": "DeSoto",
+  "LA0160500": "DeSoto",
+  "LA0160200": "DeSoto",
+  "LA0160600": "DeSoto",
+  "LA0160100": "DeSoto",
+  "LA0160400": "DeSoto",
+  "LA0160700": "DeSoto",
+  "LA0160800": "DeSoto",
+  "LA0170100": "East Baton Rouge",
+  "LA0170200": "East Baton Rouge",
+  "LA0170000": "East Baton Rouge",
+  "LA0170400": "East Baton Rouge",
+  "LA0170600": "East Baton Rouge",
+  "LA0170300": "East Baton Rouge",
+  "LA0180000": "East Carroll",
+  "LA0180100": "East Carroll",
+  "LA0190100": "East Feliciana",
+  "LA0190000": "East Feliciana",
+  "LA0190200": "East Feliciana",
+  "LA0190500": "East Feliciana",
+  "LA0190400": "East Feliciana",
+  "LA0190300": "East Feliciana",
+  "LA0200100": "Evangeline",
+  "LA0200600": "Evangeline",
+  "LA0200000": "Evangeline",
+  "LA0200200": "Evangeline",
+  "LA0200400": "Evangeline",
+  "LA0200500": "Evangeline",
+  "LA0200300": "Evangeline",
+  "LA0210400": "Franklin",
+  "LA0210000": "Franklin",
+  "LA0210300": "Franklin",
+  "LA0210100": "Franklin",
+  "LA0210200": "Franklin",
+  "LA0220100": "Grant",
+  "LA0220300": "Grant",
+  "LA0220400": "Grant",
+  "LA0220000": "Grant",
+  "LA0220200": "Grant",
+  "LA0220500": "Grant",
+  "LA0230000": "Iberia",
+  "LA0230200": "Iberia",
+  "LA0230400": "Iberia",
+  "LA0230300": "Iberia",
+  "LA0240400": "Iberville",
+  "LA0240000": "Iberville",
+  "LA0240100": "Iberville",
+  "LA0240200": "Iberville",
+  "LA0240500": "Iberville",
+  "LA0240300": "Iberville",
+  "LA0250200": "Jackson",
+  "LA0250500": "Jackson",
+  "LA0250700": "Jackson",
+  "LA0250300": "Jackson",
+  "LA0250400": "Jackson",
+  "LA0250000": "Jackson",
+  "LA0250100": "Jackson",
+  "LA0250600": "Jackson",
+  "LA0260500": "Jefferson",
+  "LA0260100": "Jefferson",
+  "LA0260200": "Jefferson",
+  "LA0260000": "Jefferson",
+  "LA0260300": "Jefferson",
+  "LA0260600": "Jefferson",
+  "LA0260400": "Jefferson",
+  "LA0270100": "Jefferson Davis",
+  "LA0270500": "Jefferson Davis",
+  "LA0270000": "Jefferson Davis",
+  "LA0270200": "Jefferson Davis",
+  "LA0270300": "Jefferson Davis",
+  "LA0270400": "Jefferson Davis",
+  "LA0300100": "La Salle",
+  "LA0300000": "La Salle",
+  "LA0300200": "La Salle",
+  "LA0300300": "La Salle",
+  "LA0300400": "La Salle",
+  "LA0280100": "Lafayette",
+  "LA0280200": "Lafayette",
+  "LA0280400": "Lafayette",
+  "LA0280300": "Lafayette",
+  "LA0280000": "Lafayette",
+  "LA0280600": "Lafayette",
+  "LA0280700": "Lafayette",
+  "LA0280500": "Lafayette",
+  "LA0290100": "Lafourche",
+  "LA0290000": "Lafourche",
+  "LA0290300": "Lafourche",
+  "LA0290600": "Lafourche",
+  "LA0290500": "Lafourche",
+  "LA0310400": "Lincoln",
+  "LA0310100": "Lincoln",
+  "LA0310300": "Lincoln",
+  "LA0310600": "Lincoln",
+  "LA0310700": "Lincoln",
+  "LA0310000": "Lincoln",
+  "LA0310200": "Lincoln",
+  "LA0310500": "Lincoln",
+  "LA0320400": "Livingston",
+  "LA0320100": "Livingston",
+  "LA0320700": "Livingston",
+  "LA0320800": "Livingston",
+  "LA0320200": "Livingston",
+  "LA0320000": "Livingston",
+  "LA0320600": "Livingston",
+  "LA0320500": "Livingston",
+  "LA0320300": "Livingston",
+  "LA0330200": "Madison",
+  "LA0330000": "Madison",
+  "LA0330300": "Madison",
+  "LA0330400": "Madison",
+  "LA0330100": "Madison",
+  "LA0340100": "Morehouse",
+  "LA0340300": "Morehouse",
+  "LA0340400": "Morehouse",
+  "LA0340200": "Morehouse",
+  "LA0340000": "Morehouse",
+  "LA0340500": "Morehouse",
+  "LA0350700": "Natchitoches",
+  "LA0350200": "Natchitoches",
+  "LA0350400": "Natchitoches",
+  "LA0350500": "Natchitoches",
+  "LA0350900": "Natchitoches",
+  "LA0350100": "Natchitoches",
+  "LA0350000": "Natchitoches",
+  "LA0351000": "Natchitoches",
+  "LA0350800": "Natchitoches",
+  "LA0350300": "Natchitoches",
+  "LA0350600": "Natchitoches",
+  "LA0370100": "Ouachita",
+  "LA0370400": "Ouachita",
+  "LA0370000": "Ouachita",
+  "LA0370500": "Ouachita",
+  "LA0370300": "Ouachita",
+  "LA0370200": "Ouachita",
+  "LA0370900": "Ouachita",
+  "LA0360200": "Orleans",
+  "LA036219E": "Orleans",
+  "LA0170500": "Orleans",
+  "LA0361300": "Orleans",
+  "LANPD0000": "Orleans",
+  "LA0361400": "Orleans",
+  "LA0360000": "Orleans",
+  "LA0361200": "Orleans",
+  "LA0360300": "Orleans",
+  "LA0362000": "Orleans",
+  "LA0380000": "Plaquemines",
+  "LA0390400": "Pointe Coupee",
+  "LA0390300": "Pointe Coupee",
+  "LA0390200": "Pointe Coupee",
+  "LA0390100": "Pointe Coupee",
+  "LA0390000": "Pointe Coupee",
+  "LA0400100": "Rapides",
+  "LA0401000": "Rapides",
+  "LA0400300": "Rapides",
+  "LA0400500": "Rapides",
+  "LA0400800": "Rapides",
+  "LA0400600": "Rapides",
+  "LA0400400": "Rapides",
+  "LA0401400": "Rapides",
+  "LA0400900": "Rapides",
+  "LA0400200": "Rapides",
+  "LA0400000": "Rapides",
+  "LA0400700": "Rapides",
+  "LA0410100": "Red River",
+  "LA0410200": "Red River",
+  "LA0410300": "Red River",
+  "LA0410400": "Red River",
+  "LA0410000": "Red River",
+  "LA0420100": "Richland",
+  "LA0420300": "Richland",
+  "LA0420200": "Richland",
+  "LA0420000": "Richland",
+  "LA0430300": "Sabine",
+  "LA0430700": "Sabine",
+  "LA0430500": "Sabine",
+  "LA0430100": "Sabine",
+  "LA0430600": "Sabine",
+  "LA0430400": "Sabine",
+  "LA0430000": "Sabine",
+  "LA0430200": "Sabine",
+  "LA0440000": "St Bernard",
+  "LA0450000": "St Charles",
+  "LA0460100": "St Helena",
+  "LA0460200": "St Helena",
+  "LA0460000": "St Helena",
+  "LA0470200": "St James",
+  "LA0470100": "St James",
+  "LA0470000": "St James",
+  "LA0480000": "St John the Baptist",
+  "LA0490300": "St Landry",
+  "LA0491200": "St Landry",
+  "LA0490100": "St Landry",
+  "LA0490900": "St Landry",
+  "LA0490800": "St Landry",
+  "LA0491000": "St Landry",
+  "LA0491300": "St Landry",
+  "LA0490700": "St Landry",
+  "LA0490200": "St Landry",
+  "LA0491100": "St Landry",
+  "LA0490600": "St Landry",
+  "LA0490000": "St Landry",
+  "LA0490400": "St Landry",
+  "LA0490500": "St Landry",
+  "LA0500100": "St Martin",
+  "LA0500400": "St Martin",
+  "LA0500300": "St Martin",
+  "LA0500000": "St Martin",
+  "LA0500200": "St Martin",
+  "LA0510500": "St Mary",
+  "LA0510100": "St Mary",
+  "LA0510200": "St Mary",
+  "LA0510300": "St Mary",
+  "LA0510400": "St Mary",
+  "LA0510000": "St Mary",
+  "LA0520600": "St Tammany",
+  "LA0520100": "St Tammany",
+  "LA0520700": "St Tammany",
+  "LA0520800": "St Tammany",
+  "LA0520300": "St Tammany",
+  "LA0520500": "St Tammany",
+  "LA0520200": "St Tammany",
+  "LA0520000": "St Tammany",
+  "LA0520400": "St Tammany",
+  "LA0530400": "Tangipahoa",
+  "LA0530100": "Tangipahoa",
+  "LA0530500": "Tangipahoa",
+  "LA0530200": "Tangipahoa",
+  "LA0530300": "Tangipahoa",
+  "LA0530600": "Tangipahoa",
+  "LA0530900": "Tangipahoa",
+  "LA0530700": "Tangipahoa",
+  "LA0530000": "Tangipahoa",
+  "LA0530800": "Tangipahoa",
+  "LA0540100": "Tensas",
+  "LA0540300": "Tensas",
+  "LA0540000": "Tensas",
+  "LA0540200": "Tensas",
+  "LA0550100": "Terrebonne",
+  "LA0550000": "Terrebonne",
+  "LA0560200": "Union",
+  "LA0560800": "Union",
+  "LA0560100": "Union",
+  "LA0560500": "Union",
+  "LA0560700": "Union",
+  "LA0560400": "Union",
+  "LA0560600": "Union",
+  "LA0560000": "Union",
+  "LA0570100": "Vermilion",
+  "LA0570300": "Vermilion",
+  "LA0570400": "Vermilion",
+  "LA0570500": "Vermilion",
+  "LA0570200": "Vermilion",
+  "LA0570600": "Vermilion",
+  "LA0570000": "Vermilion",
+  "LA0580400": "Vernon",
+  "LA0580100": "Vernon",
+  "LA0580200": "Vernon",
+  "LA0580300": "Vernon",
+  "LA0580500": "Vernon",
+  "LA0580000": "Vernon",
+  "LA0590400": "Washington",
+  "LA0590100": "Washington",
+  "LA0590200": "Washington",
+  "LA0590300": "Washington",
+  "LA0590000": "Washington",
+  "LA0600300": "Webster",
+  "LA0600400": "Webster",
+  "LA0600800": "Webster",
+  "LA0600500": "Webster",
+  "LA0601000": "Webster",
+  "LA0600900": "Webster",
+  "LA0600100": "Webster",
+  "LA0600600": "Webster",
+  "LA0601100": "Webster",
+  "LA0600700": "Webster",
+  "LA0600200": "Webster",
+  "LA0600000": "Webster",
+  "LA0610300": "West Baton Rouge",
+  "LA0610200": "West Baton Rouge",
+  "LA0610100": "West Baton Rouge",
+  "LA0610000": "West Baton Rouge",
+  "LA0620200": "West Carroll",
+  "LA0620400": "West Carroll",
+  "LA0620300": "West Carroll",
+  "LA0620100": "West Carroll",
+  "LA0620500": "West Carroll",
+  "LA0620000": "West Carroll",
+  "LA0630100": "West Feliciana",
+  "LA0630000": "West Feliciana",
+  "LA0640300": "Winn",
+  "LA0640200": "Winn",
+  "LA0640400": "Winn",
+  "LA0640000": "Winn",
+  "LA0640100": "Winn"
 }
