@@ -72,7 +72,22 @@ This is a C# Object that represents the existing Administrative Segment (10) fro
 | ClearedExceptionally | String    | 1-Character String to represent the Exceptional Clearance Status of the Incident (DE 4) | No (Defaults to "N" for None)                             |
 | ExcpClearDate        | DateTime  | UTC Formatted Datetime of the Exceptional Clearance Date (DE 5) | If ClearedExceptionally is not N, then Yes. Otherwise No. |
 
+**Example**
+
+```json
+"admin": {
+          "location": "            ",
+          "stationID": "      ",
+          "incidentDate": "2021-05-29T05:00:00",
+          "isReportingDate": false,
+          "clearedExceptionally": "N",
+          "excpClearDate": null
+         }
+```
+
 ___
+
+
 
 ### Offense Object
 
@@ -92,7 +107,57 @@ This is a C# Object that represents the existing Offense Segment (20) from the F
 | AgencyAssignedNibrs | String          | 3-Digit String of the NIBRS Code of the Offense at hand. (DE N6) | Yes                                                          |
 | LrsNumber           | String          | Up to 12-Digits of Characters to represent the Louisiana Revised Statute (LRS) Code of the Offense at hand (DE 6) | Yes                                                          |
 
+**Example**
+
+```json
+"offense": [
+                {
+                    "offenseSeqNum": "001",
+                    "attemptedCompleted": "C",
+                    "offConnecttoVic": "001",
+                    "locationType": "20",
+                    "premises": "  ",
+                    "methodOfEntry": " ",
+                    "criminalActivity": [
+                        "N"
+                    ],
+                    "weapons": [
+                        {
+                            "weaponForce": "12",
+                            "automatic": false,
+                            "stolenFirearm": false,
+                            "dischargedFirearm": false
+                        }
+                    ],
+                    "cargoTheft": false,
+                    "agencyAssignedNibrs": "09A",
+                    "lrsNumber": "14:30.1"
+                },
+                {
+                    "offenseSeqNum": "002",
+                    "attemptedCompleted": "C",
+                    "offConnecttoVic": "002",
+                    "locationType": "20"
+                    "criminalActivity": [
+                        "N"
+                    ],
+                    "weapons": [
+                        {
+                            "weaponForce": "40",
+                            "automatic": false,
+                            "stolenFirearm": null,
+                            "dischargedFirearm": null
+                        }
+                    ],
+                    "agencyAssignedNibrs": "13B",
+                    "lrsNumber": "14:35.2"
+                }
+            ]
+```
+
 ___
+
+
 
 ### Property Object
 
@@ -105,7 +170,18 @@ This may go away in the future and be tallied based on the Property Descriptions
 | NumOfStolenVehicles    | String    | 2-Digit Number to define the number of vehicles that were stolen in an Incident. (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 18) | No       |
 | NumOfRecoveredVehicles | String    | 2-Digit Number to define the number of vehicles that were stolen in an Incident. (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 19) | No       |
 
+**Example**
+
+```json
+"propertySeg": {
+                "numOfStolenVehicles": "01",
+                "numOfRecoveredVehicles": "01"
+            }
+```
+
 ___
+
+
 
 ### Property Description Object
 
@@ -122,9 +198,62 @@ This is a C# Object that represents the existing Property Description Segment (3
 | EstimatedDrugQty    | String    | 13 Digit Decimal Number (10 leading numbers, 3 trailing the decimal) to represent the quantity of a drug based on the selected Measurement Type (Currently Left Padded with Zeros, but will probably become a Decimal in the future) (DE 21) | No (Defaults to blank spaces) |
 | TypeDrugMeas        | String    | 2-Digit String of the shortcode for the measurement type (DE 22) | No (Defaults to blank spaces) |
 
+**Example**
+
+```json
+"propDesc": [
+                {
+                    "propertySeqNum": "001",
+                    "propertyLossType": "5",
+                    "propertyDescription": "03",
+                    "propertyValue": "000010000",
+                    "dateRecovered": "2020-07-31T05:00:00",
+                    "suspectedDrugType": "  ",
+                    "estimatedDrugQty": "             ",
+                    "typeDrugMeas": "  "
+                },
+                {
+                    "propertySeqNum": "002",
+                    "propertyLossType": "6",
+                    "propertyDescription": "10",
+                    "propertyValue": "         ",
+                    "dateRecovered": null,
+                    "suspectedDrugType": "L ",
+                    "estimatedDrugQty": "000000002.000",
+                    "typeDrugMeas": "GM"
+                }
+    ]
+```
+
 ___
 
 
+
+### Property Offense Object
+
+This is a C# Object that represents the existing Property Offense Relationship Segment (33) from the Flat File. You can include as many as you like as an array of this object. It's just a simple pair of Property Sequence Numbers and Offense Numbers so we can accurately link together the Properties to their associated Offense(s).
+
+| Property Name          | Data Type | Description                                                  | Required |
+| ---------------------- | --------- | ------------------------------------------------------------ | -------- |
+| PropertySequenceNumber | String    | 3-Digit Number to identify the Property we want to relate to an Offense (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE P1R) | Yes      |
+| OffenseSequenceNumber  | String    | 3-Digit Number to uniquely identify the Offense that the Property goes with (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE L6R) | Yes      |
+
+**Example**
+
+```json
+"propertyOffense": [
+                {
+                    "propertySequenceNumber": "001",
+                    "offenseSequenceNumber": "002"
+                },
+                {
+                    "propertySequenceNumber": "002",
+                    "offenseSequenceNumber": "001"
+                }
+            ]
+```
+
+___
 
 
 
