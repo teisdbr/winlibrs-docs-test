@@ -72,6 +72,8 @@ This is a C# Object that represents the existing Administrative Segment (10) fro
 | ClearedExceptionally | String    | 1-Character String to represent the Exceptional Clearance Status of the Incident (DE 4) | No (Defaults to "N" for None)                             |
 | ExcpClearDate        | DateTime  | UTC Formatted Datetime of the Exceptional Clearance Date (DE 5) | If ClearedExceptionally is not N, then Yes. Otherwise No. |
 
+
+
 **Example**
 
 ```json
@@ -106,6 +108,8 @@ This is a C# Object that represents the existing Offense Segment (20) from the F
 | CargoTheft          | Boolean         | Boolean value to indicate whether or not an Offense involved cargo theft. If any are true, the Incident-Level DE for the NIBRS Report will also reflect True, but for Louisiana we want to know about the individual Offense. | No (Defaults to False)                                       |
 | AgencyAssignedNibrs | String          | 3-Digit String of the NIBRS Code of the Offense at hand. (DE N6) | Yes                                                          |
 | LrsNumber           | String          | Up to 12-Digits of Characters to represent the Louisiana Revised Statute (LRS) Code of the Offense at hand (DE 6) | Yes                                                          |
+
+
 
 **Example**
 
@@ -170,6 +174,8 @@ This may go away in the future and be tallied based on the Property Descriptions
 | NumOfStolenVehicles    | String    | 2-Digit Number to define the number of vehicles that were stolen in an Incident. (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 18) | No       |
 | NumOfRecoveredVehicles | String    | 2-Digit Number to define the number of vehicles that were stolen in an Incident. (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 19) | No       |
 
+
+
 **Example**
 
 ```json
@@ -194,9 +200,11 @@ This is a C# Object that represents the existing Property Description Segment (3
 | PropertyDescription | String    | 2-Digit Number that's used to describe what the actual property is (Currently Left Padded with Zeros, but will probably become an Integer in the future) (DE 15) | Yes                           |
 | PropertyValue       | String    | 9-Digit, Left Padded Number that's used to identify the value of the Property that's being described (Will probably become an Integer in the future) (DE 16) | Yes                           |
 | DateRecovered       | Datetime  | **UTC** Datetime of when the Property was Recovered (DE 17)  | No                            |
-| SuspectedDrugType   | String    | 2-Digit Number that is used to Identify the kind of drug the Property is if its Description is "Drug" (Currently Left Padded with Zeros, but will probably become an Integer in the future) (DE 20) | No (Defaults to blank spaces) |
+| SuspectedDrugType   | String    | 2-Digit String that is used to Identify the kind of drug the Property is if its Description is "Drug" (DE 20) | No (Defaults to blank spaces) |
 | EstimatedDrugQty    | String    | 13 Digit Decimal Number (10 leading numbers, 3 trailing the decimal) to represent the quantity of a drug based on the selected Measurement Type (Currently Left Padded with Zeros, but will probably become a Decimal in the future) (DE 21) | No (Defaults to blank spaces) |
 | TypeDrugMeas        | String    | 2-Digit String of the shortcode for the measurement type (DE 22) | No (Defaults to blank spaces) |
+
+
 
 **Example**
 
@@ -238,6 +246,8 @@ This is a C# Object that represents the existing Property Offense Relationship S
 | PropertySequenceNumber | String    | 3-Digit Number to identify the Property we want to relate to an Offense (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE P1R) | Yes      |
 | OffenseSequenceNumber  | String    | 3-Digit Number to uniquely identify the Offense that the Property goes with (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE L6R) | Yes      |
 
+
+
 **Example**
 
 ```json
@@ -257,7 +267,111 @@ ___
 
 
 
+### Offender Object
 
+This is a C# Object that represents the existing Offender Segment (40) from the Flat File. You can include as many as you like as an array of this object. It also wraps the Offender Using Segment (41) into it, so that Segment/Object doesn't exist. 
+
+| Property Name  | Data Type       | Description                                                  | Required |
+| -------------- | --------------- | ------------------------------------------------------------ | -------- |
+| OffenderSeqNum | String          | 3-Digit Number to uniquely identify the Offender that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes      |
+| Age            | String          | 3-Digit String to represent the Offender's Age. First two characters are a 2-Digit Representation of the Age and the third is either a blank or "E" | Yes      |
+| Dob            | DateTime        | **UTC** Datetime of the Offender's Birthdate                 | No       |
+| Sex            | String          | 1-Digit Character to represent the biological sex of the Offender M, F, or U | Yes      |
+| Race           | String          | 1-Digit Character to represent the race of the Offender      | Yes      |
+| Gender         | String          | 3-Digit Character String to represent the Gender Identity of the Offender. Note, we don't actually have any requirements for this right now, but it is a thing. | No       |
+| BiasMotivation | String          | 2-Digit Number to represent the Bias/Motivation Type (Currently a string, but will become an integer later) | Yes      |
+| Ethnicity      | String          | 1-Digit Character to represent the Ethnicity of the Offender | Yes      |
+| UsingGaming    | List of Strings | List of 1-Digit Strings to represent the Using/Gaming Motivation Types of the Offender | Yes      |
+
+
+
+**Example**
+
+```json
+"offender": [
+                {
+                    "offenderSeqNum": "001",
+                    "age": "37 ",
+                    "dob": null,
+                    "sex": "M",
+                    "race": "B",
+                    "gender": "   ",
+                    "biasMotivation": "88",
+                    "ethnicity": "U",
+                    "usingGaming": [
+                        "N"
+                    ]
+                }
+            ]
+```
+
+
+
+___
+
+
+
+### Victim Object
+
+This is a C# Object that represents the existing Offender Segment (40) from the Flat File. You can include as many as you like as an array of this object. Please note that it also includes the Victim Injury Segment (51) and the Victim/Offender Relationship (52) in it, so those are no longer separate Segments/Objects to be reported. 
+
+
+
+| Property Name               | Data Type              | Description                                                  | Required                               |
+| --------------------------- | ---------------------- | ------------------------------------------------------------ | -------------------------------------- |
+| VictimSeqNum                | String                 | 3-Digit Number to uniquely identify the Victim that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes                                    |
+| VictimType                  | String                 | 1-Digit Character to represent the Type of Victim being described |                                        |
+| Age                         | String                 | 3-Digit String to represent the Offender's Age. First two characters are a 2-Digit Representation of the Age and the third is either a blank or "E" | Yes                                    |
+| Dob                         | DateTime               | **UTC** Datetime of the Victim's Birthdate                   | No                                     |
+| Sex                         | String                 | 1-Digit Character to represent the Biological Sex of the Victim - M, F, or U | Yes                                    |
+| Race                        | String                 | 1-Digit Character to represent the Race of the Victim        | Yes                                    |
+| Gender                      | String                 | 3-Digit Character String to represent the Gender Identity of the Victim. Note, we don't actually have any requirements for this right now, but it is a thing. | No                                     |
+| Ethnicity                   | String                 | 1-Digit Character to represent the Ethnicity of the Victim   | Yes                                    |
+| ResidentStatus              | String                 | 1-Digit Character to represent the Permanent Resident/Citizenship status of the Victim. | No                                     |
+| AggravatedAssault           | List of Strings        | List of up to two, 2-Digit Strings (Will become an int later) to describe the Aggravated Assault Circumstances, Negligent Manslaughter Circumstances, or Justifiable Homicide Circumstances (Dependent on the NIBRS Code of the Offense the Victim is associated with). | 13A, 09A, 09B, & 09C                   |
+| AdditionalHomicide          | String                 | 1-Digit Character to further describe the circumstances surrounding an 09C - Justifiable Homicide. | If Offense related to Victim is 09C    |
+| PrecipitatingOffense        | String                 | 3-Digit NIBRS Code of the Offense that the Victim was committing when an 09C - Justifiable Homicide occurred. Note that the Victim of an 09C is the Offender of another Offense. This offense may or may not be reported alongside the 09C, so this DE is intended to capture that in case it isn't. | If Offense related to Victim is 09C    |
+| OfficerActivityCircumstance | String                 | 2-Digit Number (will become an int later) to describe the actions/activities an Officer was performing when they became the Victim of an Offense. | If Victim is Type "L"                  |
+| OfficerAssignmentType       | String                 | 1-Digit Character to describe the role the Officer that was the Victim of an Offense was performing/a part of when the Offense occurred. | If Victim is Type "L"                  |
+| OfficerOri                  | String                 | 9-Digit String of the Victim Officer's ORI Number            | If Victim is Type "L"                  |
+| InjuryType                  | String                 | 1-Digit Character to represent the Injury Type of the Victim | For Crimes Against Person              |
+| RelatedOffenders            | List of VicOff Objects | Object that contains the Victim Sequence Number, Offender Sequence Number, and their relationship. This will get revised to only be the Offender Number and Relationship. | For Crimes Against Person and Property |
+
+
+
+**Example**
+
+```json
+"victim": [
+                {
+                    "officerActivity": null,
+                    "victimSeqNum": "001",
+                    "victimType": "I",
+                    "age": "33 ",
+                    "dob": null,
+                    "sex": "F",
+                    "gender": "   ",
+                    "race": "B",
+                    "ethnicity": "U",
+                    "residentStatus": "R",
+                    "aggravatedAssault": [
+                        "10"
+                    ],
+                    "additionalHomicide": " ",
+                    "precipitatingOffense": "   ",
+                    "officerActivityCircumstance": "  ",
+                    "officerAssignmentType": " ",
+                    "officerOri": "         ",
+                    "injuryType": " ",
+                    "relatedOffenders": [
+                        {
+                            "victimSeqNum": "001",
+                            "offenderNumber": "000",
+                            "relationship": "RU"
+                        }
+                    ]
+                }
+```
 
 
 
