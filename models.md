@@ -321,7 +321,7 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 | --------------------------- | ---------------------- | ------------------------------------------------------------ | -------------------------------------- |
 | VictimSeqNum                | String                 | 3-Digit Number to uniquely identify the Victim that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes                                    |
 | VictimType                  | String                 | 1-Digit Character to represent the Type of Victim being described |                                        |
-| Age                         | String                 | 3-Digit String to represent the Offender's Age. First two characters are a 2-Digit Representation of the Age and the third is either a blank or "E" | Yes                                    |
+| Age                         | String                 | 3-Digit String to represent the Victim's Age. First two characters are a 2-Digit Representation of the Age and the third is either a blank or "E" | Yes                                    |
 | Dob                         | DateTime               | **UTC** Datetime of the Victim's Birthdate                   | No                                     |
 | Sex                         | String                 | 1-Digit Character to represent the Biological Sex of the Victim - M, F, or U | Yes                                    |
 | Race                        | String                 | 1-Digit Character to represent the Race of the Victim        | Yes                                    |
@@ -372,6 +372,135 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
                     ]
                 }
 ```
+
+___
+
+
+
+### Arrestee Object
+
+This is a C# Object that represents the existing Arrestee Segment (60) from the Flat File. You can include as many as you like as an array of this object.
+
+
+
+| Property Name             | Data Type | Description                                                  | Required                     |
+| ------------------------- | --------- | ------------------------------------------------------------ | ---------------------------- |
+| ArrestSeqNum              | String    | 3-Digit Number to uniquely identify the Arrestee that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes                          |
+| ArrestNumber              | String    | 12-Digit Alpha/Numeric String of Characters that uniquely identifies the Arrest in the Agency's RMS | Yes                          |
+| ArrTransactionNumber      | String    | 15-Digit Alpha/Numeric String of Characters that uniquely Identifies the Arrestee in AFIS (DE L55) | Yes                          |
+| ArresteeName              | String    | 20-Digit Character String of the Arrestee's Name. Should be in the format of (Last)(Suffix),(First)(Middle) | No                           |
+| ArrestDate                | DateTime  | **UTC** Datetime of the Arrest                               | Yes                          |
+| ArrestType                | String    | 1-Digit Character to describe the nature of how the Arrest was Initiated - O, S, or T. | Yes                          |
+| MultipleArresteeIndicator | String    | 1-Digit Character that indicates if this Arrest should be counted towards the number of *people* arrested by an Agency. Sometimes an Offender will appear multiple times in the same Incident, or across multiple Incidents. Their arrest for one of these Offenses will subsequently "clear" the others, but since they were only physically arrested one time, the MAI should be used to denote that the Arrest record shouldn't affect the number of *people* the agency has arrested, only the number of Offenses cleared by arrest. | Yes                          |
+| Age                       | String    | 3-Digit String to represent the Arrestee's Age. First two characters are a 2-Digit Representation of the Age and the third is either a blank or "E" | Yes                          |
+| Dob                       | DateTime  | **UTC** Datetime of the Arrestee's Birthdate                 | No                           |
+| Sex                       | String    | 1-Digit Character to represent the Biological Sex of the Arrestee - M, F, or U | Yes                          |
+| Race                      | String    | 1-Digit Character to represent the Race of the Arrestee      | Yes                          |
+| Gender                    | String    | 3-Digit Character String to represent the Gender Identity of the Arrestee. Note, we don't actually have any requirements for this right now, but it is a thing. | No                           |
+| Ethnicity                 | String    | 1-Digit Character to represent the Ethnicity of the Arrestee | Yes                          |
+| ResidentStatus            | String    | 1-Digit Character to represent the Permanent Resident/Citizenship status of the Arrestee. | No                           |
+| DispositionUnder17        | String    | 1-Digit Character used to describe how an Arrestee 17 years of age or younger was handled by the Agency. | If Arrestee is 17 or younger |
+
+
+
+**Example**
+
+```json
+"arrestee": [
+                {
+                    "arrestSeqNum": "001",
+                    "arrestNumber": "     8675309",
+                    "arrTransactionNumber": "               ",
+                    "arresteeName": "DOE, JOHNATHAN Q",
+                    "arrestDate": "2020-07-01T00:00:00Z",
+                    "arrestType": "O",
+                    "multipleArresteeIndicator": "N",
+                    "age": "37 ",
+                    "dob": "1980-01-31T00:00:00Z",
+                    "sex": "M",
+                    "gender": "   ",
+                    "race": "W",
+                    "ethnicity": "U",
+                    "residentStatus": "U",
+                    "dispositionUnder17": " "
+                }
+            ]
+```
+
+___
+
+
+
+### Arrestee  Armed Object
+
+This is a C# Object that represents the existing Arrestee Armed Segment (61) from the Flat File. This will end up getting rolled into the Arrestee Object, but for now it is separate.
+
+
+
+| Property Name   | Data Type | Description                                                  | Required |
+| --------------- | --------- | ------------------------------------------------------------ | -------- |
+| ArrestSeqNum    | String    | 3-Digit Number to uniquely identify the Arrestee that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes      |
+| ArrestArmedWith | Weapon    | Weapon Object (Same as in the Offense Object)                | Yes      |
+
+
+
+**Example**
+
+```json
+"arrArm": [
+    "arrestSeqNum": "001",
+    "weapons":
+   		   [
+                {
+                    "weaponForce": "40",
+                    "automatic": false,
+                    "stolenFirearm": null,
+                    "dischargedFirearm": null
+                }
+            ]
+```
+
+___
+
+
+
+### Arrestee  Statute Object
+
+This is a C# Object that represents the existing Arrestee Statute Segment (62) from the Flat File. This will end up getting rolled into the Arrestee Object, but for now it is separate.
+
+
+
+| Property Name       | Data Type | Description                                                  | Required |
+| ------------------- | --------- | ------------------------------------------------------------ | -------- |
+| ArrestSeqNum        | String    | 3-Digit Number to uniquely identify the Arrestee that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes      |
+| ArrestConToOffense  | String    | 15-Character String that combines the Offense Sequence Number with the Incident Number EG XXXYY-YYYYYY-YY, where XXX is the Offense Sequence Number and YY-Y... is the Incident Number | Yes      |
+| AgencyAssignedNibrs | String    | 3-Digit NIBRS Code of the Offense that the Arrestee was Arrested for. | Yes      |
+| LrsNumber           | String    | 12-Digit LRS Code (Louisiana Revised Statute Code) that the Arrestee was Arrested for. |          |
+
+
+
+**Example**
+
+```json
+"arrStatute": [
+                {
+                    "arrestSeqNum": "001",
+                    "arrestConToOffense": "00120-000000-01"
+                    "agencyAssignedNibrs": "240",
+                    "lrsNumber": "14:67.26"
+                },
+                {
+                    "arrestSeqNum": "001",
+                    "arrestConToOffense": "00220-000000-01",
+                    "agencyAssignedNibrs": "35A",
+                    "lrsNumber": "40:967"
+                }
+            ]
+```
+
+___
+
+
 
 
 
