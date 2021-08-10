@@ -2178,9 +2178,9 @@
 	"20003": {
 		"active": "false",
 		"err_no": 20003,
-		"err_message": "WARNING - INVALID TYPE DRUG MEASUREMENT(DE 22) FOR THE GIVEN SUSPECTED DRUG TYPE(DE 20)",
+		"err_message": "WARNING - DRUG MEASUREMENT TYPE (DE 22) FOR THE GIVEN SUSPECTED DRUG TYPE (DE 20) DOESN'T MAKE SENSE - PLEASE DOUBLE CHECK THIS IS ACCURATE",
 		"err_desc": {
-			"22": "Each Suspected Drug Type (DE20) can only be measured using it's corresponding measurement category."
+			"22": "Each Suspected Drug Type (DE20) can only be measured using it's corresponding measurement category. The one that's been selected for this Drug Type doesn't make sense. This is only a Warning, and the Incident has not been rejected based on this."
 		}
 	},
 	"20004": {
