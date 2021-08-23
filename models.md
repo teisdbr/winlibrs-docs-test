@@ -553,7 +553,7 @@ This is an object that replaces the Type of Weapon/Force Data Element from the F
 | WeaponForce       | Integer   | Number that represents the Type of Weapon Force being described | Yes                 |
 | Automatic         | Boolean   | True/False value that describes if the Weapon was an Automatic Weapon or not (only relevant for Firearms) | No (Defaults False) |
 | StolenFirearm     | Boolean   | True/False value that describes if a Firearm was Stolen (only relevant for Firearms) | No (Defaults False) |
-| DischargedFirearm | String    | True/False value that describes if a Firearm was Discharged in the course of an Offense being committed (only relevant for Firearms) | No (Defaults False) |
+| DischargedFirearm | Boolean   | True/False value that describes if a Firearm was Discharged in the course of an Offense being committed (only relevant for Firearms) | No (Defaults False) |
 
 
 
