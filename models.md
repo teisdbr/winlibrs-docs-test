@@ -44,7 +44,7 @@ Basically, the only things that are required are what make it an Incident - Admi
 | ---------------------- | ------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
 | ActionType             | String                          | Action Type for this Incident (Insert, Delete, etc...)       | Yes                                |
 | IncidentNumber         | String                          | Incident Number of this Incident                             | Yes                                |
-| [Admin](#admin_object) | Admin Object                    | Admin Segment (10) represented as a C# Object                | Yes                                |
+| [Admin](#admin-object) | Admin Object                    | Admin Segment (10) represented as a C# Object                | Yes                                |
 | Offense                | List of Offense Objects         | List of Offense Segments (20) represented as a C# Object     | Yes                                |
 | PropertySeg            | PropertySeg Object              | Property Segment (30) represented as a C# Object             | No                                 |
 | PropDesc               | List of PropDesc Objects        | List of Property Description Segments (31) represented as a C# Object | No                                 |
@@ -57,11 +57,11 @@ Basically, the only things that are required are what make it an Incident - Admi
 | Errors                 | List of Error Objects           | List of LIBRS Errors represented as a C# Object              | No (Returned back in API Response) |
 | Warnings               | List of Warning Objects         | List of LIBRS Warnings represented as a C# Object            | No (Returned back in API Response) |
 
+<br>
 
 
 
-
-### Admin Object<a href="models/#admin_object"></a>
+### [Admin Object](#admin-object)
 
 This is a C# Object that represents the existing Administrative Segment (10) from the Flat File. Some properties have been pulled out into the Root Validation Object (RVO) and thus don't need to be repeated here or in other segments. 
 
