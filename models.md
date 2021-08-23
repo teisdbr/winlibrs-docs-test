@@ -17,22 +17,24 @@ These models are meant to be a simplification of the existing Flat File format, 
 ## Root Validation Object
 This is the primary object that is used in the JSON Validator. It contains the following properties/objects:
 
-| Property Name   | Data Type               | Description                                                  | Required                                |
-| --------------- | ----------------------- | ------------------------------------------------------------ | --------------------------------------- |
-| Spec            | String                  | LIBRS Spec version that the file follows (currently 2.5)     | Yes                                     |
-| Ori             | String                  | ORI of the Submitting Agency                                 | Yes                                     |
-| ReportYear      | Integer                 | 4-Digit Reporting Period Year                                | Yes                                     |
-| ReportMonth     | Integer                 | Reporting Period Month                                       | Yes                                     |
-| AgencyName      | String                  | Descriptive Name of the Agency                               | No (Legacy DE - Not used in validation) |
-| SoftwareID      | String                  | Name of the RMS Generating the Data                          | Yes                                     |
-| SoftwareVersion | String                  | Version of the RMS Generating the Data                       | Yes                                     |
-| ForSubmission   | Boolean                 | Boolean that tells us if you're just validating the data in the file, or if you want to actually submit it to us. | No (Assumed False if missing or NULL)   |
-| ZeroReport      | Boolean                 | Boolean that tells us there's no data for this Agency for the specified Reporting Period and Year | No (Assumed False if missing or NULL)   |
-| IncidentList    | List of Librs Incidents | The actual Incident Data in the form of a List of the LibrsIncident object. | Yes                                     |
+| Property Name                          | Data Type               | Description                                                  | Required                                |
+| -------------------------------------- | ----------------------- | ------------------------------------------------------------ | --------------------------------------- |
+| Spec                                   | String                  | LIBRS Spec version that the file follows (currently 2.5)     | Yes                                     |
+| Ori                                    | String                  | ORI of the Submitting Agency                                 | Yes                                     |
+| ReportYear                             | Integer                 | 4-Digit Reporting Period Year                                | Yes                                     |
+| ReportMonth                            | Integer                 | Reporting Period Month                                       | Yes                                     |
+| AgencyName                             | String                  | Descriptive Name of the Agency                               | No (Legacy DE - Not used in validation) |
+| SoftwareID                             | String                  | Name of the RMS Generating the Data                          | Yes                                     |
+| SoftwareVersion                        | String                  | Version of the RMS Generating the Data                       | Yes                                     |
+| ForSubmission                          | Boolean                 | Boolean that tells us if you're just validating the data in the file, or if you want to actually submit it to us. | No (Assumed False if missing or NULL)   |
+| ZeroReport                             | Boolean                 | Boolean that tells us there's no data for this Agency for the specified Reporting Period and Year | No (Assumed False if missing or NULL)   |
+| [IncidentList](#librs-incident-object) | List of Librs Incidents | The actual Incident Data in the form of a List of the LibrsIncident object. | Yes                                     |
 
 ___
 
-## Librs Incident Object
+<br>
+
+## [Librs Incident Object](#librs-incident-object)
 
 The LibrsIncident object is the object that will be populated for each Incident that is being submitted. You'll notice that not all Flat File Segments are represented by child objects. This is because we have been working on simplifying the objects where we can. For instance, Segment 41 - Offender Using/Gaming is gone, and instead represented by a property in the Offender Object. 
 
@@ -40,26 +42,26 @@ The LibrsIncident object is the object that will be populated for each Incident 
 
 Basically, the only things that are required are what make it an Incident - Admin, Offense, and a Victim. And we also need to know the Incident Number and if it's an insertion or a deletion, so Action Type and Incident Number are also needed. Everything else can be left out of the JSON Object if it's not relevant (EG: Property Segment 30 for an Aggravated Assault).
 
-| Property Name          | Data Type                       | Description                                                  | Required                           |
-| ---------------------- | ------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
-| ActionType             | String                          | Action Type for this Incident (Insert, Delete, etc...)       | Yes                                |
-| IncidentNumber         | String                          | Incident Number of this Incident                             | Yes                                |
-| [Admin](#admin-object) | Admin Object                    | Admin Segment (10) represented as a C# Object                | Yes                                |
-| Offense                | List of Offense Objects         | List of Offense Segments (20) represented as a C# Object     | Yes                                |
-| PropertySeg            | PropertySeg Object              | Property Segment (30) represented as a C# Object             | No                                 |
-| PropDesc               | List of PropDesc Objects        | List of Property Description Segments (31) represented as a C# Object | No                                 |
-| PropertyOffense        | List of PropertyOffense Objects | List of Property/Offense Relationship Segments (33) represented as a C# Object | No                                 |
-| Offender               | List of Offender Objects        | List of Offender Segments (40) represented as a C# Object    | No                                 |
-| Victim                 | List of Victim Objects          | List of Victim Segments (50) represented as a C# Object      | Yes                                |
-| Arrestee               | List of Arrestee Objects        | List of Arrestee Segments (60) represented as a C# Object    | No                                 |
-| ArrArm                 | List of ArrArm Objects          | List of Arrestee Armed With Segments (61) represented as a C# Object | No                                 |
-| ArrStatute             | List of ArrStatute Objects      | List of Arrestee Statute Segments (62) represented as a C# Object | No                                 |
-| Errors                 | List of Error Objects           | List of LIBRS Errors represented as a C# Object              | No (Returned back in API Response) |
-| Warnings               | List of Warning Objects         | List of LIBRS Warnings represented as a C# Object            | No (Returned back in API Response) |
+| Property Name                               | Data Type                       | Description                                                  | Required                           |
+| ------------------------------------------- | ------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
+| ActionType                                  | String                          | Action Type for this Incident (Insert, Delete, etc...)       | Yes                                |
+| IncidentNumber                              | String                          | Incident Number of this Incident                             | Yes                                |
+| [Admin](#admin-object)                      | Admin Object                    | Admin Segment (10) represented as a C# Object                | Yes                                |
+| [Offense](#offense-object)                  | List of Offense Objects         | List of Offense Segments (20) represented as a C# Object     | Yes                                |
+| [PropertySeg](#property-object)             | PropertySeg Object              | Property Segment (30) represented as a C# Object             | No                                 |
+| [PropDesc](#property-description-object)    | List of PropDesc Objects        | List of Property Description Segments (31) represented as a C# Object | No                                 |
+| [PropertyOffense](#property-offense-object) | List of PropertyOffense Objects | List of Property/Offense Relationship Segments (33) represented as a C# Object | No                                 |
+| [Offender](#offender-object)                | List of Offender Objects        | List of Offender Segments (40) represented as a C# Object    | No                                 |
+| [Victim](#victim-object)                    | List of Victim Objects          | List of Victim Segments (50) represented as a C# Object      | Yes                                |
+| [Arrestee](#arrestee-object)                | List of Arrestee Objects        | List of Arrestee Segments (60) represented as a C# Object    | No                                 |
+| [Errors](#errors-object)                    | List of Error Objects           | List of LIBRS Errors represented as a C# Object              | No (Returned back in API Response) |
+| [Warnings](warnings-object)                 | List of Warning Objects         | List of LIBRS Warnings represented as a C# Object            | No (Returned back in API Response) |
 
 <br>
 
+___
 
+<br>
 
 ### [Admin Object](#admin-object)
 
@@ -91,25 +93,25 @@ This is a C# Object that represents the existing Administrative Segment (10) fro
 
 ___
 
+<br>
 
-
-### Offense Object
+### [Offense Object](#offense-object)
 
 This is a C# Object that represents the existing Offense Segment (20) from the Flat File. You can include as many as required in the form of an array of these objects. 
 
-| Property Name       | Data Type       | Description                                                  | Required                                                     |
-| ------------------- | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| OffenseSequenceNum  | String          | 3-Digit Number to Uniquely Identify the Offense (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE L6) | Yes                                                          |
-| AttemptedCompleted  | String          | 1-Digit Character (A for Attempted, or C for Completed) that depicts if the offense was Attempted or fully committed (Completed) (DE 7) | Yes                                                          |
-| OffConnecttoVic     | String          | 3-Digit Number that links the Offense to a single Victim via the Victim's Sequence Number (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 24) | Yes                                                          |
-| LocationType        | String          | 2-Digit Number that describes the Location in which the Offense took place (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 9) | No (Defaults to blank spaces)                                |
-| Premises            | String          | 2-Digit Number that describes the Number of Premises an Offender Entered (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 10) | Yes if the Offense is Burglary and Location Type is 14 or 19, otherwise, no |
-| MethodOfEntry       | String          | 1-Digit Character (F for Force, or N for No Force) that describes how the Offender entered a location in case of a Burglary. (DE 11) | Yes if the Offense is Burglary, otherwise, no                |
-| CriminalActivity    | List of Strings | List (up to three) 1-Digit Characters to represent three types of Criminal Activity/Gang Information involved in an Offense (DE 12) | Yes                                                          |
-| Weapons             | List of Weapons | List of the Weapons Object, which contains a property for the weapon type, if it was an automatic firearm, if a firearm was stolen, and if a firearm was discharged in committing the offense (New DE) | No (Defaults to Empty List)                                  |
-| CargoTheft          | Boolean         | Boolean value to indicate whether or not an Offense involved cargo theft. If any are true, the Incident-Level DE for the NIBRS Report will also reflect True, but for Louisiana we want to know about the individual Offense. | No (Defaults to False)                                       |
-| AgencyAssignedNibrs | String          | 3-Digit String of the NIBRS Code of the Offense at hand. (DE N6) | Yes                                                          |
-| LrsNumber           | String          | Up to 12-Digits of Characters to represent the Louisiana Revised Statute (LRS) Code of the Offense at hand (DE 6) | Yes                                                          |
+| Property Name             | Data Type       | Description                                                  | Required                                                     |
+| ------------------------- | --------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| OffenseSequenceNum        | Integer         | Number to Uniquely Identify the Offense (DE L6)              | Yes                                                          |
+| AttemptedCompleted        | String          | 1-Digit Character (A for Attempted, or C for Completed) that depicts if the offense was Attempted or fully committed (Completed) (DE 7) | Yes                                                          |
+| OffConnecttoVic           | Integer         | Number that links the Offense to a single Victim via the Victim's Sequence Number (DE 24) | Yes                                                          |
+| LocationType              | Integer         | Number that describes the Location in which the Offense took place (DE 9) | No                                                           |
+| Premises                  | Integer         | Number that describes the Number of Premises an Offender Entered (DE 10) | Yes if the Offense is Burglary and Location Type is 14 or 19, otherwise, no |
+| MethodOfEntry             | String          | 1-Digit Character (F for Force, or N for No Force) that describes how the Offender entered a location in case of a Burglary. (DE 11) | Yes if the Offense is Burglary, otherwise, no                |
+| CriminalActivity          | List of Strings | List (up to three) 1-Digit Characters to represent three types of Criminal Activity/Gang Information involved in an Offense (DE 12) | Yes                                                          |
+| [Weapons](#weapon-object) | List of Weapons | List of the [Weapons Object](#weapon-object), which contains a property for the weapon type, if it was an automatic firearm, if a firearm was stolen, and if a firearm was discharged in committing the offense (New DE) | No (Defaults to Empty List)                                  |
+| CargoTheft                | Boolean         | Boolean value to indicate whether or not an Offense involved cargo theft. If any are true, the Incident-Level DE for the NIBRS Report will also reflect True, but for Louisiana we want to know about the individual Offense. | No (Defaults to False)                                       |
+| AgencyAssignedNibrs       | String          | 3-Digit String of the NIBRS Code of the Offense at hand. (DE N6) | Yes                                                          |
+| LrsNumber                 | String          | Up to 12-Digits of Characters to represent the Louisiana Revised Statute (LRS) Code of the Offense at hand (DE 6) | Yes                                                          |
 
 
 
@@ -118,11 +120,11 @@ This is a C# Object that represents the existing Offense Segment (20) from the F
 ```json
 "offense": [
                 {
-                    "offenseSeqNum": "001",
+                    "offenseSeqNum": 1,
                     "attemptedCompleted": "C",
-                    "offConnecttoVic": "001",
+                    "offConnecttoVic": 1,
                     "locationType": "20",
-                    "premises": "  ",
+                    "premises": null,
                     "methodOfEntry": " ",
                     "criminalActivity": [
                         "N"
@@ -163,9 +165,9 @@ This is a C# Object that represents the existing Offense Segment (20) from the F
 
 ___
 
+<br>
 
-
-### Property Object
+### [Property Object](#property-object)
 
 This is a C# Object that represents the existing Property Segment (30) from the Flat File. This Object is optional if you have no information to give us (EG: The only offense is an Aggravated Assault and has nothing to do with stolen vehicles). If you don't include it, we fill in a blank object automatically, so the number of stolen and recovered vehicles will be the same as if they were left as blank spaces in the Flat File.
 
@@ -173,8 +175,8 @@ This may go away in the future and be tallied based on the Property Descriptions
 
 | Property Name          | Data Type | Description                                                  | Required |
 | ---------------------- | --------- | ------------------------------------------------------------ | -------- |
-| NumOfStolenVehicles    | String    | 2-Digit Number to define the number of vehicles that were stolen in an Incident. (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 18) | No       |
-| NumOfRecoveredVehicles | String    | 2-Digit Number to define the number of vehicles that were stolen in an Incident. (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 19) | No       |
+| NumOfStolenVehicles    | Integer   | Number to define the number of vehicles that were stolen in an Incident. (DE 18) | No       |
+| NumOfRecoveredVehicles | Integer   | Number to define the number of vehicles that were stolen in an Incident. (DE 19) | No       |
 
 
 
@@ -182,28 +184,28 @@ This may go away in the future and be tallied based on the Property Descriptions
 
 ```json
 "propertySeg": {
-                "numOfStolenVehicles": "01",
-                "numOfRecoveredVehicles": "01"
+                "numOfStolenVehicles": 1,
+                "numOfRecoveredVehicles": 1
             }
 ```
 
 ___
 
+<br>
 
-
-### Property Description Object
+### [Property Description Object](#property-description-object)
 
 This is a C# Object that represents the existing Property Description Segment (31) from the Flat File. You can include as many as you like as an array of this object. 
 
 | Property Name       | Data Type | Description                                                  | Required                      |
 | ------------------- | --------- | ------------------------------------------------------------ | ----------------------------- |
-| PropertySeqNum      | String    | 3-Digit Number to uniquely identify the Property that's being described (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE P1) | Yes                           |
-| PropertyLossType    | String    | 1-Digit Number to describe the Loss Type of the Property that is being Described.  (Currently a String, but will probably become and Integer in the future) (DE 14) | Yes                           |
-| PropertyDescription | String    | 2-Digit Number that's used to describe what the actual property is (Currently Left Padded with Zeros, but will probably become an Integer in the future) (DE 15) | Yes                           |
-| PropertyValue       | String    | 9-Digit, Left Padded Number that's used to identify the value of the Property that's being described (Will probably become an Integer in the future) (DE 16) | Yes                           |
+| PropertySeqNum      | Integer   | Number to uniquely identify the Property that's being described (DE P1) | Yes                           |
+| PropertyLossType    | Integer   | Number to describe the Loss Type of the Property that is being Described. (DE 14) | Yes                           |
+| PropertyDescription | Integer   | Numbered Code that's used to describe what the actual property is (DE 15) | Yes                           |
+| PropertyValue       | Integer   | Number that's used to identify the value of the Property that's being described (DE 16) | No                            |
 | DateRecovered       | Datetime  | **UTC** Datetime of when the Property was Recovered (DE 17)  | No                            |
 | SuspectedDrugType   | String    | 2-Digit String that is used to Identify the kind of drug the Property is if its Description is "Drug" (DE 20) | No (Defaults to blank spaces) |
-| EstimatedDrugQty    | String    | 13 Digit Decimal Number (10 leading numbers, 3 trailing the decimal) to represent the quantity of a drug based on the selected Measurement Type (Currently Left Padded with Zeros, but will probably become a Decimal in the future) (DE 21) | No (Defaults to blank spaces) |
+| EstimatedDrugQty    | Decimal   | Decimal Number to represent the quantity of a drug based on the selected Measurement Type (DE 21) | No                            |
 | TypeDrugMeas        | String    | 2-Digit String of the shortcode for the measurement type (DE 22) | No (Defaults to blank spaces) |
 
 
@@ -213,23 +215,23 @@ This is a C# Object that represents the existing Property Description Segment (3
 ```json
 "propDesc": [
                 {
-                    "propertySeqNum": "001",
-                    "propertyLossType": "5",
-                    "propertyDescription": "03",
-                    "propertyValue": "000010000",
+                    "propertySeqNum": 1,
+                    "propertyLossType": 5,
+                    "propertyDescription": 3,
+                    "propertyValue": 10000,
                     "dateRecovered": "2020-07-31T05:00:00",
                     "suspectedDrugType": "  ",
-                    "estimatedDrugQty": "             ",
+                    "estimatedDrugQty": null,
                     "typeDrugMeas": "  "
                 },
                 {
-                    "propertySeqNum": "002",
-                    "propertyLossType": "6",
-                    "propertyDescription": "10",
-                    "propertyValue": "         ",
+                    "propertySeqNum": 2,
+                    "propertyLossType": 6,
+                    "propertyDescription": 10,
+                    "propertyValue": null,
                     "dateRecovered": null,
                     "suspectedDrugType": "L ",
-                    "estimatedDrugQty": "000000002.000",
+                    "estimatedDrugQty": 2.0,
                     "typeDrugMeas": "GM"
                 }
     ]
@@ -237,16 +239,16 @@ This is a C# Object that represents the existing Property Description Segment (3
 
 ___
 
+<br>
 
-
-### Property Offense Object
+### [Property Offense Object](#property-offense-object)
 
 This is a C# Object that represents the existing Property Offense Relationship Segment (33) from the Flat File. You can include as many as you like as an array of this object. It's just a simple pair of Property Sequence Numbers and Offense Numbers so we can accurately link together the Properties to their associated Offense(s).
 
 | Property Name          | Data Type | Description                                                  | Required |
 | ---------------------- | --------- | ------------------------------------------------------------ | -------- |
-| PropertySequenceNumber | String    | 3-Digit Number to identify the Property we want to relate to an Offense (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE P1R) | Yes      |
-| OffenseSequenceNumber  | String    | 3-Digit Number to uniquely identify the Offense that the Property goes with (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE L6R) | Yes      |
+| PropertySequenceNumber | Integer   | Number to identify the Property we want to relate to an Offense (DE P1R) | Yes      |
+| OffenseSequenceNumber  | Integer   | Number to uniquely identify the Offense that the Property goes with (DE L6R) | Yes      |
 
 
 
@@ -255,33 +257,34 @@ This is a C# Object that represents the existing Property Offense Relationship S
 ```json
 "propertyOffense": [
                 {
-                    "propertySequenceNumber": "001",
-                    "offenseSequenceNumber": "002"
+                    "propertySequenceNumber": 1,
+                    "offenseSequenceNumber": 2
                 },
                 {
-                    "propertySequenceNumber": "002",
-                    "offenseSequenceNumber": "001"
+                    "propertySequenceNumber": 2,
+                    "offenseSequenceNumber": 1
                 }
             ]
 ```
 
 ___
 
+<br>
 
-
-### Offender Object
+### [Offender Object](#offender-object)
 
 This is a C# Object that represents the existing Offender Segment (40) from the Flat File. You can include as many as you like as an array of this object. It also wraps the Offender Using Segment (41) into it, so that Segment/Object doesn't exist. 
 
 | Property Name  | Data Type       | Description                                                  | Required |
 | -------------- | --------------- | ------------------------------------------------------------ | -------- |
-| OffenderSeqNum | String          | 3-Digit Number to uniquely identify the Offender that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes      |
-| Age            | String          | 3-Digit String to represent the Offender's Age. First two characters are a 2-Digit Representation of the Age and the third is either a blank or "E" | Yes      |
+| OffenderSeqNum | String          | Number to uniquely identify the Offender that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes      |
+| Age            | Integer         | Number to represent the Offender's Age                       | Yes      |
+| EstimatedAge   | Boolean         | True/False value to tell us if the Age is an Estimate (replaces the "E" Modifier from the Flat File) | No       |
 | Dob            | DateTime        | **UTC** Datetime of the Offender's Birthdate                 | No       |
 | Sex            | String          | 1-Digit Character to represent the biological sex of the Offender M, F, or U | Yes      |
 | Race           | String          | 1-Digit Character to represent the race of the Offender      | Yes      |
 | Gender         | String          | 3-Digit Character String to represent the Gender Identity of the Offender. Note, we don't actually have any requirements for this right now, but it is a thing. | No       |
-| BiasMotivation | String          | 2-Digit Number to represent the Bias/Motivation Type (Currently a string, but will become an integer later) | Yes      |
+| BiasMotivation | Integer         | Number to represent the Bias/Motivation Type                 | Yes      |
 | Ethnicity      | String          | 1-Digit Character to represent the Ethnicity of the Offender | Yes      |
 | UsingGaming    | List of Strings | List of 1-Digit Strings to represent the Using/Gaming Motivation Types of the Offender | Yes      |
 
@@ -292,13 +295,14 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 ```json
 "offender": [
                 {
-                    "offenderSeqNum": "001",
-                    "age": "37 ",
+                    "offenderSeqNum": 1,
+                    "age": 37,
+                    "estimatedAge": false,
                     "dob": null,
                     "sex": "M",
                     "race": "B",
                     "gender": "   ",
-                    "biasMotivation": "88",
+                    "biasMotivation": 88,
                     "ethnicity": "U",
                     "usingGaming": [
                         "N"
@@ -311,9 +315,9 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 
 ___
 
+<br>
 
-
-### Victim Object
+### [Victim Object](#victim-object)
 
 This is a C# Object that represents the existing Offender Segment (40) from the Flat File. You can include as many as you like as an array of this object. Please note that it also includes the Victim Injury Segment (51) and the Victim/Offender Relationship (52) in it, so those are no longer separate Segments/Objects to be reported. 
 
@@ -321,19 +325,20 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 
 | Property Name               | Data Type              | Description                                                  | Required                               |
 | --------------------------- | ---------------------- | ------------------------------------------------------------ | -------------------------------------- |
-| VictimSeqNum                | String                 | 3-Digit Number to uniquely identify the Victim that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes                                    |
-| VictimType                  | String                 | 1-Digit Character to represent the Type of Victim being described |                                        |
-| Age                         | String                 | 3-Digit String to represent the Victim's Age. First two characters are a 2-Digit Representation of the Age and the third is either a blank or "E" | Yes                                    |
+| VictimSeqNum                | Integer                | Number to uniquely identify the Victim that's being specified (DE 36) | Yes                                    |
+| VictimType                  | String                 | 1-Digit Character to represent the Type of Victim being described | Yes                                    |
+| Age                         | Integer                | String to represent the Victim's Age                         | Yes                                    |
+| EstimatedAge                | Boolean                | True/False value to tell us if the age of the Victim is an Estimate (replaces the E Modifier from Flat File) | No                                     |
 | Dob                         | DateTime               | **UTC** Datetime of the Victim's Birthdate                   | No                                     |
 | Sex                         | String                 | 1-Digit Character to represent the Biological Sex of the Victim - M, F, or U | Yes                                    |
 | Race                        | String                 | 1-Digit Character to represent the Race of the Victim        | Yes                                    |
 | Gender                      | String                 | 3-Digit Character String to represent the Gender Identity of the Victim. Note, we don't actually have any requirements for this right now, but it is a thing. | No                                     |
 | Ethnicity                   | String                 | 1-Digit Character to represent the Ethnicity of the Victim   | Yes                                    |
 | ResidentStatus              | String                 | 1-Digit Character to represent the Permanent Resident/Citizenship status of the Victim. | No                                     |
-| AggravatedAssault           | List of Strings        | List of up to two, 2-Digit Strings (Will become an int later) to describe the Aggravated Assault Circumstances, Negligent Manslaughter Circumstances, or Justifiable Homicide Circumstances (Dependent on the NIBRS Code of the Offense the Victim is associated with). | 13A, 09A, 09B, & 09C                   |
+| AggravatedAssault           | List of Integers       | List of up to two Numbers to describe the Aggravated Assault Circumstances, Negligent Manslaughter Circumstances, or Justifiable Homicide Circumstances (Dependent on the NIBRS Code of the Offense the Victim is associated with). | 13A, 09A, 09B, & 09C                   |
 | AdditionalHomicide          | String                 | 1-Digit Character to further describe the circumstances surrounding an 09C - Justifiable Homicide. | If Offense related to Victim is 09C    |
 | PrecipitatingOffense        | String                 | 3-Digit NIBRS Code of the Offense that the Victim was committing when an 09C - Justifiable Homicide occurred. Note that the Victim of an 09C is the Offender of another Offense. This offense may or may not be reported alongside the 09C, so this DE is intended to capture that in case it isn't. | If Offense related to Victim is 09C    |
-| OfficerActivityCircumstance | String                 | 2-Digit Number (will become an int later) to describe the actions/activities an Officer was performing when they became the Victim of an Offense. | If Victim is Type "L"                  |
+| OfficerActivityCircumstance | Integer                | Number to describe the actions/activities an Officer was performing when they became the Victim of an Offense. | If Victim is Type "L"                  |
 | OfficerAssignmentType       | String                 | 1-Digit Character to describe the role the Officer that was the Victim of an Offense was performing/a part of when the Offense occurred. | If Victim is Type "L"                  |
 | OfficerOri                  | String                 | 9-Digit String of the Victim Officer's ORI Number            | If Victim is Type "L"                  |
 | InjuryType                  | String                 | 1-Digit Character to represent the Injury Type of the Victim | For Crimes Against Person              |
@@ -346,10 +351,10 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 ```json
 "victim": [
                 {
-                    "officerActivity": null,
-                    "victimSeqNum": "001",
+                    "victimSeqNum": 1,
                     "victimType": "I",
-                    "age": "33 ",
+                    "age": 33,
+                    "estimatedAge": false,
                     "dob": null,
                     "sex": "F",
                     "gender": "   ",
@@ -357,7 +362,7 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
                     "ethnicity": "U",
                     "residentStatus": "R",
                     "aggravatedAssault": [
-                        "10"
+                        10
                     ],
                     "additionalHomicide": " ",
                     "precipitatingOffense": "   ",
@@ -367,8 +372,8 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
                     "injuryType": " ",
                     "relatedOffenders": [
                         {
-                            "victimSeqNum": "001",
-                            "offenderNumber": "000",
+                            "victimSeqNum": 1,
+                            "offenderNumber": 0,
                             "relationship": "RU"
                         }
                     ]
@@ -377,31 +382,33 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 
 ___
 
+<br>
 
-
-### Arrestee Object
+### [Arrestee Object](#arrestee-object)
 
 This is a C# Object that represents the existing Arrestee Segment (60) from the Flat File. You can include as many as you like as an array of this object.
 
 
 
-| Property Name             | Data Type | Description                                                  | Required                     |
-| ------------------------- | --------- | ------------------------------------------------------------ | ---------------------------- |
-| ArrestSeqNum              | String    | 3-Digit Number to uniquely identify the Arrestee that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes                          |
-| ArrestNumber              | String    | 12-Digit Alpha/Numeric String of Characters that uniquely identifies the Arrest in the Agency's RMS | Yes                          |
-| ArrTransactionNumber      | String    | 15-Digit Alpha/Numeric String of Characters that uniquely Identifies the Arrestee in AFIS (DE L55) | Yes                          |
-| ArresteeName              | String    | 20-Digit Character String of the Arrestee's Name. Should be in the format of (Last)(Suffix),(First)(Middle) | No                           |
-| ArrestDate                | DateTime  | **UTC** Datetime of the Arrest                               | Yes                          |
-| ArrestType                | String    | 1-Digit Character to describe the nature of how the Arrest was Initiated - O, S, or T. | Yes                          |
-| MultipleArresteeIndicator | String    | 1-Digit Character that indicates if this Arrest should be counted towards the number of *people* arrested by an Agency. Sometimes an Offender will appear multiple times in the same Incident, or across multiple Incidents. Their arrest for one of these Offenses will subsequently "clear" the others, but since they were only physically arrested one time, the MAI should be used to denote that the Arrest record shouldn't affect the number of *people* the agency has arrested, only the number of Offenses cleared by arrest. | Yes                          |
-| Age                       | String    | 3-Digit String to represent the Arrestee's Age. First two characters are a 2-Digit Representation of the Age and the third is either a blank or "E" | Yes                          |
-| Dob                       | DateTime  | **UTC** Datetime of the Arrestee's Birthdate                 | No                           |
-| Sex                       | String    | 1-Digit Character to represent the Biological Sex of the Arrestee - M, F, or U | Yes                          |
-| Race                      | String    | 1-Digit Character to represent the Race of the Arrestee      | Yes                          |
-| Gender                    | String    | 3-Digit Character String to represent the Gender Identity of the Arrestee. Note, we don't actually have any requirements for this right now, but it is a thing. | No                           |
-| Ethnicity                 | String    | 1-Digit Character to represent the Ethnicity of the Arrestee | Yes                          |
-| ResidentStatus            | String    | 1-Digit Character to represent the Permanent Resident/Citizenship status of the Arrestee. | No                           |
-| DispositionUnder17        | String    | 1-Digit Character used to describe how an Arrestee 17 years of age or younger was handled by the Agency. | If Arrestee is 17 or younger |
+| Property Name             | Data Type          | Description                                                  | Required                     |
+| ------------------------- | ------------------ | ------------------------------------------------------------ | ---------------------------- |
+| ArrestSeqNum              | Integer            | Number to uniquely identify the Arrestee that's being specified (DE 36) | Yes                          |
+| ArrestNumber              | String             | 12-Digit Alpha/Numeric String of Characters that uniquely identifies the Arrest in the Agency's RMS | Yes                          |
+| ArrTransactionNumber      | String             | 15-Digit Alpha/Numeric String of Characters that uniquely Identifies the Arrestee in AFIS (DE L55) | Yes                          |
+| ArresteeName              | String             | 20-Digit Character String of the Arrestee's Name. Should be in the format of (Last)(Suffix),(First)(Middle) | No                           |
+| ArrestDate                | DateTime           | **UTC** Datetime of the Arrest                               | Yes                          |
+| ArrestType                | String             | 1-Digit Character to describe the nature of how the Arrest was Initiated - O, S, or T. | Yes                          |
+| MultipleArresteeIndicator | String             | 1-Digit Character that indicates if this Arrest should be counted towards the number of *people* arrested by an Agency. Sometimes an Offender will appear multiple times in the same Incident, or across multiple Incidents. Their arrest for one of these Offenses will subsequently "clear" the others, but since they were only physically arrested one time, the MAI should be used to denote that the Arrest record shouldn't affect the number of *people* the agency has arrested, only the number of Offenses cleared by arrest. | Yes                          |
+| Age                       | Integer            | Number to represent the Arrestee's Age.                      | Yes                          |
+| Dob                       | DateTime           | **UTC** Datetime of the Arrestee's Birthdate                 | No                           |
+| Sex                       | String             | 1-Digit Character to represent the Biological Sex of the Arrestee - M, F, or U | Yes                          |
+| Race                      | String             | 1-Digit Character to represent the Race of the Arrestee      | Yes                          |
+| Gender                    | String             | 3-Digit Character String to represent the Gender Identity of the Arrestee. Note, we don't actually have any requirements for this right now, but it is a thing. | No                           |
+| Ethnicity                 | String             | 1-Digit Character to represent the Ethnicity of the Arrestee | Yes                          |
+| ResidentStatus            | String             | 1-Digit Character to represent the Permanent Resident/Citizenship status of the Arrestee. | No                           |
+| DispositionUnder17        | String             | 1-Digit Character used to describe how an Arrestee 17 years of age or younger was handled by the Agency. | If Arrestee is 17 or younger |
+| ArrestArmed               | List of Weapon     | List of [Weapon Objects](#weapon-object) (Same as in the Offense Object) that were found on the Arrestee's person at the time of Arrest. | Yes                          |
+| ArrestStatute             | List of ArrStatute | List of the [Arrestee Statute Objects](#arrestee-statute-object) associated with the Arrestee | Yes                          |
 
 
 
@@ -410,14 +417,14 @@ This is a C# Object that represents the existing Arrestee Segment (60) from the 
 ```json
 "arrestee": [
                 {
-                    "arrestSeqNum": "001",
+                    "arrestSeqNum": 1,
                     "arrestNumber": "     8675309",
                     "arrTransactionNumber": "               ",
                     "arresteeName": "DOE, JOHNATHAN Q",
                     "arrestDate": "2020-07-01T00:00:00Z",
                     "arrestType": "O",
                     "multipleArresteeIndicator": "N",
-                    "age": "37 ",
+                    "age": 37,
                     "dob": "1980-01-31T00:00:00Z",
                     "sex": "M",
                     "gender": "   ",
@@ -425,48 +432,84 @@ This is a C# Object that represents the existing Arrestee Segment (60) from the 
                     "ethnicity": "U",
                     "residentStatus": "U",
                     "dispositionUnder17": " "
+                    "arrestArmed":
+   		   							[{
+                        "weaponForce": "40",
+                        "automatic": false,
+                        "stolenFirearm": null,
+                        "dischargedFirearm": null
+                			}],
+										"arrestStatute": 
+											[{
+                        "arrestConToOffense": "00120-000000-01"
+                        "agencyAssignedNibrs": "240",
+                        "lrsNumber": "14:67.26"
+                      },{
+                        "arrestConToOffense": "00220-000000-01",
+                        "agencyAssignedNibrs": "35A",
+                        "lrsNumber": "40:967"
+                      }]
                 }
             ]
 ```
 
 ___
 
+<br>
+
+### [Errors Object](#errors-object)
+
+The Errors Object is equivalent to the Error Details that are provided in the Flat File's Error Detail Report. We provide them back here so that the JSON Validator's API can be called within the RMS, and errors can be directly returned to the User. 
+
+This is a Read-Only object, you won't be sending this along with your data, only getting it back. 
+
+| Property Name  | Data Type | Description                                                  |
+| -------------- | --------- | ------------------------------------------------------------ |
+| ErrorCode      | Integer   | The Error Code of the Error (Typically a 5-Digit Number)     |
+| ErrorMsg       | String    | The text of the Error Code describing what's wrong           |
+| Contents       | String    | The particular data that was submitted that the validation had an issue with |
+| DataElem       | String    | The particular data elements that the validation had an issue with |
+| IncidentNumber | String    | The Incident Number that the validation had an issue with    |
+| SegmentNumber  | String    | Legacy, but the equivalent of the Segment Number as it refers to the JSON Object that the validation error came from (Will get updated to just say what the name of the object was, but for now it spits out something like 20 if it doesn't like and Offense) |
 
 
-### Arrestee  Armed Object
 
-This is a C# Object that represents the existing Arrestee Armed Segment (61) from the Flat File. This will end up getting rolled into the Arrestee Object, but for now it is separate.
+___
+
+<br>
+
+### [Warnings Object](#warnings-object)
+
+The Warnings Object is basically the same thing as the Errors Object, but just for warnings. Makes it easy to keep the actual Errors that are preventing the Incident from being accepted separate from just Warnings about it.
+
+This is a Read-Only object, you won't be sending this along with your data, only getting it back. 
+
+| Property Name | Data Type | Description                                                  |
+| ------------- | --------- | ------------------------------------------------------------ |
+| ErrorCode     | Integer   | The Warning Code of the Warning (Typically a 5-Digit Number) |
+| ErrorMsg      | String    | The text of the Warning Code describing what's wrong         |
+| Contents      | String    | The particular data that was submitted that the validation had an issue with |
+| DataElem      | String    | The particular data elements that the validation had an issue with |
 
 
-
-| Property Name   | Data Type | Description                                                  | Required |
-| --------------- | --------- | ------------------------------------------------------------ | -------- |
-| ArrestSeqNum    | String    | 3-Digit Number to uniquely identify the Arrestee that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes      |
-| ArrestArmedWith | Weapon    | Weapon Object (Same as in the Offense Object)                | Yes      |
-
-
-
-**Example**
-
-```json
-"arrArm": [
-    "arrestSeqNum": "001",
-    "weapons":
-   		   [
-                {
-                    "weaponForce": "40",
-                    "automatic": false,
-                    "stolenFirearm": null,
-                    "dischargedFirearm": null
-                }
-            ]
-```
 
 ___
 
 
 
-### Arrestee  Statute Object
+
+
+<br>
+
+## Incident Child Objects
+
+The following Objects are used within the other objects that make up an Incident. :
+
+___
+
+<br>
+
+### [Arrestee Statute Object](#arrestee-statute-object)
 
 This is a C# Object that represents the existing Arrestee Statute Segment (62) from the Flat File. This will end up getting rolled into the Arrestee Object, but for now it is separate.
 
@@ -474,7 +517,6 @@ This is a C# Object that represents the existing Arrestee Statute Segment (62) f
 
 | Property Name       | Data Type | Description                                                  | Required |
 | ------------------- | --------- | ------------------------------------------------------------ | -------- |
-| ArrestSeqNum        | String    | 3-Digit Number to uniquely identify the Arrestee that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes      |
 | ArrestConToOffense  | String    | 15-Character String that combines the Offense Sequence Number with the Incident Number EG XXXYY-YYYYYY-YY, where XXX is the Offense Sequence Number and YY-Y... is the Incident Number | Yes      |
 | AgencyAssignedNibrs | String    | 3-Digit NIBRS Code of the Offense that the Arrestee was Arrested for. | Yes      |
 | LrsNumber           | String    | 12-Digit LRS Code (Louisiana Revised Statute Code) that the Arrestee was Arrested for. |          |
@@ -486,13 +528,11 @@ This is a C# Object that represents the existing Arrestee Statute Segment (62) f
 ```json
 "arrStatute": [
                 {
-                    "arrestSeqNum": "001",
                     "arrestConToOffense": "00120-000000-01"
                     "agencyAssignedNibrs": "240",
                     "lrsNumber": "14:67.26"
                 },
                 {
-                    "arrestSeqNum": "001",
                     "arrestConToOffense": "00220-000000-01",
                     "agencyAssignedNibrs": "35A",
                     "lrsNumber": "40:967"
@@ -502,7 +542,38 @@ This is a C# Object that represents the existing Arrestee Statute Segment (62) f
 
 ___
 
+<br>
 
+### [Weapon Object](#weapon-object)
+
+This is an object that replaces the Type of Weapon/Force Data Element from the Flat File. 
+
+| Property Name     | Data Type | Description                                                  | Required            |
+| ----------------- | --------- | ------------------------------------------------------------ | ------------------- |
+| WeaponForce       | Integer   | Number that represents the Type of Weapon Force being described | Yes                 |
+| Automatic         | Boolean   | True/False value that describes if the Weapon was an Automatic Weapon or not (only relevant for Firearms) | No (Defaults False) |
+| StolenFirearm     | Boolean   | True/False value that describes if a Firearm was Stolen (only relevant for Firearms) | No (Defaults False) |
+| DischargedFirearm | String    | True/False value that describes if a Firearm was Discharged in the course of an Offense being committed (only relevant for Firearms) | No (Defaults False) |
+
+
+
+**Example:**
+
+```json
+"weapon":
+   		[{
+        "weaponForce": 40,
+        "automatic": false,
+        "stolenFirearm": null,
+        "dischargedFirearm": null
+      }]
+```
+
+
+
+___
+
+<br>
 
 
 
