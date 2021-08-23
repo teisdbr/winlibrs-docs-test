@@ -6,9 +6,9 @@ permalink: /models
 
 # Data Model Specifications
 This page contains the specifications on how to use the data models found on our github pages:
-* LIBRS Models - https://github.com/teisdbr/LibrsDataModels
+* LIBRS Models - [https://github.com/teisdbr/LibrsDataModels](https://github.com/teisdbr/LibrsDataModels)
   * Contains the models used for our JSON Validator, as well as the NIBRS-Based model, which includes a NIBRS Report plus the other things that LIBRS cares about (vendors need to create the constructors between the two).
-* NIBRS Models - https://github.com/teisdbr/NibrsDataModels
+* NIBRS Models - [https://github.com/teisdbr/NibrsDataModels](https://github.com/teisdbr/LibrsDataModels)
   * Contains the NIBRS IEPD Report as C# Objects. 
 
 # LIBRS Data Models
@@ -40,26 +40,26 @@ The LibrsIncident object is the object that will be populated for each Incident 
 
 Basically, the only things that are required are what make it an Incident - Admin, Offense, and a Victim. And we also need to know the Incident Number and if it's an insertion or a deletion, so Action Type and Incident Number are also needed. Everything else can be left out of the JSON Object if it's not relevant (EG: Property Segment 30 for an Aggravated Assault).
 
-| Property Name   | Data Type                       | Description                                                  | Required                           |
-| --------------- | ------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
-| ActionType      | String                          | Action Type for this Incident (Insert, Delete, etc...)       | Yes                                |
-| IncidentNumber  | String                          | Incident Number of this Incident                             | Yes                                |
-| Admin           | Admin Object                    | Admin Segment (10) represented as a C# Object                | Yes                                |
-| Offense         | List of Offense Objects         | List of Offense Segments (20) represented as a C# Object     | Yes                                |
-| PropertySeg     | PropertySeg Object              | Property Segment (30) represented as a C# Object             | No                                 |
-| PropDesc        | List of PropDesc Objects        | List of Property Description Segments (31) represented as a C# Object | No                                 |
-| PropertyOffense | List of PropertyOffense Objects | List of Property/Offense Relationship Segments (33) represented as a C# Object | No                                 |
-| Offender        | List of Offender Objects        | List of Offender Segments (40) represented as a C# Object    | No                                 |
-| Victim          | List of Victim Objects          | List of Victim Segments (50) represented as a C# Object      | Yes                                |
-| Arrestee        | List of Arrestee Objects        | List of Arrestee Segments (60) represented as a C# Object    | No                                 |
-| ArrArm          | List of ArrArm Objects          | List of Arrestee Armed With Segments (61) represented as a C# Object | No                                 |
-| ArrStatute      | List of ArrStatute Objects      | List of Arrestee Statute Segments (62) represented as a C# Object | No                                 |
-| Errors          | List of Error Objects           | List of LIBRS Errors represented as a C# Object              | No (Returned back in API Response) |
-| Warnings        | List of Warning Objects         | List of LIBRS Warnings represented as a C# Object            | No (Returned back in API Response) |
+| Property Name          | Data Type                       | Description                                                  | Required                           |
+| ---------------------- | ------------------------------- | ------------------------------------------------------------ | ---------------------------------- |
+| ActionType             | String                          | Action Type for this Incident (Insert, Delete, etc...)       | Yes                                |
+| IncidentNumber         | String                          | Incident Number of this Incident                             | Yes                                |
+| [Admin](#admin_object) | Admin Object                    | Admin Segment (10) represented as a C# Object                | Yes                                |
+| Offense                | List of Offense Objects         | List of Offense Segments (20) represented as a C# Object     | Yes                                |
+| PropertySeg            | PropertySeg Object              | Property Segment (30) represented as a C# Object             | No                                 |
+| PropDesc               | List of PropDesc Objects        | List of Property Description Segments (31) represented as a C# Object | No                                 |
+| PropertyOffense        | List of PropertyOffense Objects | List of Property/Offense Relationship Segments (33) represented as a C# Object | No                                 |
+| Offender               | List of Offender Objects        | List of Offender Segments (40) represented as a C# Object    | No                                 |
+| Victim                 | List of Victim Objects          | List of Victim Segments (50) represented as a C# Object      | Yes                                |
+| Arrestee               | List of Arrestee Objects        | List of Arrestee Segments (60) represented as a C# Object    | No                                 |
+| ArrArm                 | List of ArrArm Objects          | List of Arrestee Armed With Segments (61) represented as a C# Object | No                                 |
+| ArrStatute             | List of ArrStatute Objects      | List of Arrestee Statute Segments (62) represented as a C# Object | No                                 |
+| Errors                 | List of Error Objects           | List of LIBRS Errors represented as a C# Object              | No (Returned back in API Response) |
+| Warnings               | List of Warning Objects         | List of LIBRS Warnings represented as a C# Object            | No (Returned back in API Response) |
 
 
 
-### Admin Object
+### Admin Object<a href="admin_object"/>
 
 This is a C# Object that represents the existing Administrative Segment (10) from the Flat File. Some properties have been pulled out into the Root Validation Object (RVO) and thus don't need to be repeated here or in other segments. 
 
