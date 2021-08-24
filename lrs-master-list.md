@@ -87,7 +87,8 @@ $(".showhide").click(function () {
         <th style="text-align: center; white-space: nowrap">1A Index</th>
         <th style="text-align: center; white-space: nowrap">Index Class</th>
         <th style="text-align: center; white-space: nowrap">UCR Index</th>
-        <th style="text-align: center; white-space: nowrap">LIBRS Index</th></tr></thead><tbody style="font-size: 13px;">
+        <th style="text-align: center; white-space: nowrap">LIBRS Index</th>
+	<th style="text-align: center; white-space: nowrap">Effective Date</th></tr></thead><tbody style="font-size: 13px;">
         {% for values in lrs.Info %}
         <tr>      
         <td style="text-align: center; min-width: 120px;"> {{ values.NIBRS_DESCRIPTION }}</td>
@@ -131,6 +132,7 @@ ____
         <th style="padding-left: 12px; padding-right:3px;">Details</th>
 		<th style="padding-left: 8px; padding-right:3px;">LRS #</th>
 		<th style="padding-left: 0px; padding-right:3px;">LRS Description</th>
+		<th style="padding-left: 0px; padding-right:3px;">Effective Date</th>
         <th style="padding-left: 0px; padding-right:3px;">Expiration Date</th>
 	</tr>
 </thead>
