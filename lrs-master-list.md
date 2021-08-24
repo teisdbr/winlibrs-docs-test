@@ -97,7 +97,8 @@ $(".showhide").click(function () {
         <td style="text-align: center;">{{ values.OneA_Index }}</td>
         <td style="text-align: center; white-space: nowrap">{{ values.Index_Class }}</td>
         <td style="text-align: center; white-space: nowrap">{{ values.UCR_Index }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ values.LIBRS_Index }}</td></tr>{% endfor %}
+        <td style="text-align: center; white-space: nowrap">{{ values.LIBRS_Index }}</td></tr>
+	<td style="text-align: center; white-space: nowrap">{{ values.Effective_Date }}</td></tr>{% endfor %}
     </tbody>
     </table>
     </div>
@@ -141,7 +142,8 @@ ____
         <td><i class="fas fa-chevron-right rotate"></i></td>
 		<td style="padding-left: 8px; padding-right:3px;">{{ lrs.LRS }}</td>
 		<td style="padding-left: 0px; padding-right:3px;">{{ lrs.LRS_Description }}</td>
-        <td style="padding-left: 0px; padding-right:3px;">{{ lrs.Info.first.Expiration_Date }}</td></tr><tr>
+        <td style="padding-left: 0px; padding-right:3px;">{{ lrs.Info.first.Effective_Date }}</td>
+	<td style="padding-left: 0px; padding-right:3px;">{{ lrs.Info.first.Expiration_Date }}</td></tr><tr>
         <td colspan = "4" class="hiddenRow" style="border-bottom: none;"><div class="accordion-body collapse" id ="accordion{{ lrs.LRS }}"><table><thead><tr>
         <th style="text-align: center;">NIBRS Description</th>
 		<th style="text-align: center;">NIBRS</th>
