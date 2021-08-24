@@ -98,7 +98,7 @@ $(".showhide").click(function () {
         <td style="text-align: center;">{{ values.OneA_Index }}</td>
         <td style="text-align: center; white-space: nowrap">{{ values.Index_Class }}</td>
         <td style="text-align: center; white-space: nowrap">{{ values.UCR_Index }}</td>
-        <td style="text-align: center; white-space: nowrap">{{ values.LIBRS_Index }}</td></tr>
+        <td style="text-align: center; white-space: nowrap">{{ values.LIBRS_Index }}</td>
 	<td style="text-align: center; white-space: nowrap">{{ values.Effective_Date }}</td></tr>{% endfor %}
     </tbody>
     </table>
