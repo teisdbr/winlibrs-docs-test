@@ -3600,7 +3600,7 @@
 		"err_no": 90029,
 		"err_message": "INVALID TYPE OF INJURY (DE 33) WITH SELECTED TYPE OF WEAPON/FORCE INVOLVED (DE 13)",
 		"err_desc": {
-			"33": "Type of the Injury cannot be 'M - Apparent Minor Injury' or 'N - None' When: {::nomarkdown}<ul><li>The Offense Connected to Victim Sequence Number (DE 24) is a NIBRS 13A<br/><h1>AND</h1></li><li>The Type of Weapon/Force Involved = '40 - Personal Weapon'</li></ul>{:/}"
+			"33": "Type of the Injury cannot be 'M - Apparent Minor Injury' or 'N - None' When: {::nomarkdown}<ul><li>The Offense Connected to Victim Sequence Number (DE 24) is a NIBRS 13A<br/><em>AND</em></li><li>The Type of Weapon/Force Involved = '40 - Personal Weapon'</li></ul>{:/}"
 		}
 	},
 	"90031": {
