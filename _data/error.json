@@ -2417,7 +2417,7 @@
 		}
 	},
 	"22125": {
-		"active": "true",
+		"active": "false",
 		"err_no": 22125,
 		"err_message": "WARNING - THIS LRS SUBMITTED WITHOUT A QUALIFIER WILL BE REPORTED AS MURDER AND NONNEGLIGENT MANSLAUGHTER (09A)"
 	},

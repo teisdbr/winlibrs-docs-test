@@ -1319,8 +1319,6 @@ ____
 
 LRS Code | Description | Warning Number | Warning Message
 :-------:|:------------|:--------------:|:----------------
-{% assign error = site.data.error["22125"] -%}
-14:30.1 | With no Qualifier will be reported to the FBI as Murder and Non-negligent Homicide (NIBRS 09A)| {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["22025"] -%}
 14:32.1 | With no Qualifier will be reported to the FBI as Driving Under the Influence (NIBRS 90D) | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["22030"] -%}
