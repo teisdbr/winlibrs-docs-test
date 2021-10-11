@@ -42,6 +42,22 @@ ___
 
 ___
 
+#### 2021-10-11
+Kind of beenawhile since I updated this, sorry about that. 
+* Relaxed the requirement for Group A Offenses to have a matching NIBRS/LRS Pair
+  * You will now only get a warning instead of an Error if you give is a Group A Offense that we don't have a matching NIBRS Code for. 
+  * Group B's will still get an error, and anything that we have an Expired NIBRS Mapping for will also get an error (because we know that Mapping is not valid).
+* Caused a whole big thing with 14:79 Crime Against Person vs Society. We rolled that back so that Crime Against Person is has now been valid the entire year. We apologize for all of the confusion this one caused. 
+* Fixed an erroneous Error 84212 getting thrown on NIBRS 100's.
+* Broke, then fixed emails coming from LIBRS. Again, sorry about that one. 
+* Scorecard emails now point you to https://trackcrime.org, which is the new data repository for LIBRS info that's accessible to Agencies. 
+* Fixed a bug that disallowed 520's from having a Seized Property associated with them. 
+* Changed it so that if any Juveniles are present in an Incident, then it's OK to have Juvenile-only Offenses. 
+  * We were running into cases where since things like JU:RUN are a Crime Against Society, and so are things like Contributing to the Deliquency of a Minor, LIBRS was thinking that Adults should be associated with JU:RUN because both Offenders link to the same Victim. 
+* Did that whole JSON Validator thing, if you managed to not see that. 
+
+
+
 #### 2021-06-22
 * Added Error 13050, which is thrown when you supply values for Number of Stolen or Number of Recovered Vehicles, and there are no Offenses that meet the required criteria to supply them. 
   * In order to supply Number of Stolen Vehicles, there must be at least one ***Completed 240*** (MV Theft) Offense, and is associated with a Property Description Segment (Segment 31 linked via Segment 33) that contains a Property Description of a ***Vechicle***, and a Loss Type of ***7 - Stolen***.
