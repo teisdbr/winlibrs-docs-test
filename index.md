@@ -11,7 +11,7 @@ ____
 
 Our JSON Validator is now in Beta, and available to all vendors to use!
 
-Please refer to https://docs.librs.org/models for information about how to use them. At this stage in the project, the information that should be supplied with each Data Element should be the same as it is on the Flat File (EG: Drug Measurement Type Dosage Unit should be sent as "DU"). In the future, however, we'll implement a dictionary that will allow for whole word submissions to make things easier to read for everyone (EG: "Dosage Unit" instead of "DU").
+Please refer to [https://docs.librs.org/models](https://docs.librs.org/models) for information about how to use them. At this stage in the project, the information that should be supplied with each Data Element should be the same as it is on the Flat File (EG: Drug Measurement Type Dosage Unit should be sent as "DU"). In the future, however, we'll implement a dictionary that will allow for whole word submissions to make things easier to read for everyone (EG: "Dosage Unit" instead of "DU").
 
 Please don't hesitate to let us know if you have any questions or problems using the API. While it's been tested thoroughly internally we would hate to cause anyone undue frustration, so please reach out as needed. 
 
