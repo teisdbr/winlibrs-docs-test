@@ -7,7 +7,7 @@ permalink: /
 # LIBRS Validation and Processing Documentation
 ____
 
-<img src="images/JSON2.png" alt="Json is coming" width="800"/>
+<img src="images/JSON2.png" alt="Json is coming" width="650"/>
 
 Our JSON Validator is now in Beta, and available to all vendors to use!
 
