@@ -30,6 +30,8 @@ Currently the JSON Validator is hosted at https://json.librs.org:5000.
 | /api/fftojson         | A LIBRS Flat File (Whole thing, Header to Footer). Can contain as many incidents as desired. Body should be formatted as text/plain. No authentication/authorization is required for use. | This Endpoint will take an existing LIBRS Flat File, and convert it to an RVO. This is useful when first getting started so you can see how the old Flat File segments have been converted into Objects. This endpoint does not store any data, and cannot be used for monthly submissions. |
 | /api/validatefftojson | A LIBRS Flat File (Whole thing, Header to Footer). Can contain as many incidents as desired. Body should be formatted as text/plain. No authentication/authorization is required for use. | Similar to FFtoJSON, this endpoint will also validate the converted JSON File, returning both the converted RVO and validations of the Incident(s) to the User. |
 
+Note: As of 10/2021, the JSONValidate Endpoint has been set to validation-only mode. When sufficient testing with vendors has been performed, we'll enable it to also allow for data to be directly submitted through that endpoint. 
+
 <br/>
 
 ## Root Validation Object
