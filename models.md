@@ -14,6 +14,24 @@ This page contains the specifications on how to use the data models found on our
 # LIBRS Data Models
 These models are meant to be a simplification of the existing Flat File format, but still meant to be compatible with it. For instance, in some places entire segments have been removed and rolled into other ones (EG: Segment 51 - Victim Injury is gone, and instead injuryType is just a property of Victim now).
 
+<br/>
+
+## Quick Start
+
+To get down to it, the easiest way to start incorporating the LIBRS JSON models would be to convert existing Flat Files to JSON Format, and compare the inputs and outputs. You can do this with the ValidateFFtoJSON Endpoint. See below for details:
+
+### API Endpoints
+
+Currently the JSON Validator is hosted at https://json.librs.org:5000.
+
+| Endpoint              | Body Requirement                                             | Description                                                  |
+| --------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| /api/jsonvalidate     | An RVO (Root Validation Object) containing an array of LIBRS Incidents to be processed. Body should be formatted as application/json. No authentication/authorization is required for validation. | This is the API Endpoint that will take one an RVO with any number of JSON-formatted LIBRS Incidents, and return the validation plus the original object as an extended RVO. Can be used to both validate and submit data. |
+| /api/fftojson         | A LIBRS Flat File (Whole thing, Header to Footer). Can contain as many incidents as desired. Body should be formatted as text/plain. No authentication/authorization is required for use. | This Endpoint will take an existing LIBRS Flat File, and convert it to an RVO. This is useful when first getting started so you can see how the old Flat File segments have been converted into Objects. This endpoint does not store any data, and cannot be used for monthly submissions. |
+| /api/validatefftojson | A LIBRS Flat File (Whole thing, Header to Footer). Can contain as many incidents as desired. Body should be formatted as text/plain. No authentication/authorization is required for use. | Similar to FFtoJSON, this endpoint will also validate the converted JSON File, returning both the converted RVO and validations of the Incident(s) to the User. |
+
+<br/>
+
 ## Root Validation Object
 This is the primary object that is used in the JSON Validator. It contains the following properties/objects:
 
@@ -33,6 +51,116 @@ This is the primary object that is used in the JSON Validator. It contains the f
 ___
 
 <br>
+
+## Example JSON Incident
+
+Before we get too far into things, here's a quick example of the entire RVO (Root Validation Object):
+
+``` json
+{
+    "spec": "2.5",
+    "ori": "LA0320100",
+    "reportYear": 2021,
+    "reportMonth": 9,
+    "agencyName": null,
+    "softwareId": null,
+    "softwareVersion": null,
+    "forSubmission": false,
+    "zeroReport": false,
+    "incidentList": [
+        {
+            "actionType": "I",
+            "incidentNumber": "21-000002-01",
+            "admin": {
+                "location": "            ",
+                "stationID": null,
+                "incidentDate": "2021-07-01T16:00:00Z",
+                "isReportingDate": false,
+                "clearedExceptionally": "N",
+                "excpClearDate": null
+            },
+            "offense": [
+                {
+                    "offenseSeqNum": 1,
+                    "isCompleted": true,
+                    "offConnectToVic": 1,
+                    "locationType": 48,
+                    "premises": null,
+                    "methodOfEntry": null,
+                    "criminalActivity": [
+                        "D"
+                    ],
+                    "weapons": [],
+                    "cargoTheft": null,
+                    "agencyAssignedNibrs": "35A",
+                    "propertyLossTypeFlags": null,
+                    "lrsNumber": "40:1060.13"
+                }
+            ],
+            "propDesc": [
+                {
+                    "propertySeqNum": 1,
+                    "propertyLossType": 6,
+                    "propertyDescription": 10,
+                    "propertyValue": null,
+                    "dateRecovered": null,
+                    "suspectedDrugType": "G",
+                    "counterfeitDrug": false,
+                    "estimatedDrugQty": 1.0,
+                    "typeDrugMeas": "DU"
+                }
+            ],
+            "propertyOffense": [
+                {
+                    "propertySequenceNumber": 1,
+                    "offenseSequenceNumber": 1
+                }
+            ],
+            "offender": [
+                {
+                    "offenderSeqNum": 1,
+                    "age": 0,
+                    "estimatedAge": false,
+                    "dob": null,
+                    "sex": "M",
+                    "race": "U",
+                    "gender": "   ",
+                    "biasMotivation": null,
+                    "ethnicity": "N",
+                    "usingGaming": []
+                    }
+            ],
+            "victim": [
+                {
+                    "officerActivity": null,
+                    "victimSeqNum": 1,
+                    "victimType": "S",
+                    "age": null,
+                    "estimatedAge": false,
+                    "dob": null,
+                    "sex": " ",
+                    "gender": "   ",
+                    "race": " ",
+                    "ethnicity": " ",
+                    "residentStatus": " ",
+                    "aggravatedAssault": [],
+                    "additionalHomicide": " ",
+                    "precipitatingOffense": "   ",
+                    "officerAssignmentType": null,
+                    "officerOri": null,
+                    "injuryType": " ",
+                    "relatedOffenders": null
+                }
+            ],
+            "arrestee": []
+        }
+    ]
+}
+```
+
+___
+
+<br/>
 
 ## [Librs Incident Object](#librs-incident-object)
 
