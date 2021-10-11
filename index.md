@@ -7,15 +7,13 @@ permalink: /
 # LIBRS Validation and Processing Documentation
 ____
 
-<img src="images/JSON.png" alt="Json is coming" width="800"/>
+<img src="images/JSON2.png" alt="Json is coming" width="800"/>
 
-#### And it will blow Season 8 out of the water... I think, I'm not really sure, I've never seen it. I stopped at 7. 
-<br/>
-No, but really, we're working on a revised JSON Data Model for submitting LIBRS Data. Aside from the Flat File format being older than the developers that are working to maintain it... This will help us be more agile when it comes to implementing changes that the FBI and State Legislature want to see. It'll also be great for new vendors that are coming online with LIBRS so they don't have to deconstruct their existing objects and assemble the Flat File; the existing objects that are used in your RMSes will probably already contain all of the information we're asking for. The end-users also benefit because it gives them a file that's actually legible to a human. So rather than seeking and searching for what's wrong in a segment, they can just read it. Win win win... Win. 
+Our JSON Validator is now in Beta, and available to all vendors to use!
 
-We'll be posting updates and links as we near release - we'll be starting small and working closely with a couple of vendors to start before opening it up publicly - we absolutely wouldn't want anyone spinning their wheels for something that turns out to be a serialization issue on our end, you know?
+Please refer to https://docs.librs.org/models for information about how to use them. At this stage in the project, the information that should be supplied with each Data Element should be the same as it is on the Flat File (EG: Drug Measurement Type Dosage Unit should be sent as "DU"). In the future, however, we'll implement a dictionary that will allow for whole word submissions to make things easier to read for everyone (EG: "Dosage Unit" instead of "DU").
 
-Also, I lied, I've never seen Game of Thrones, I just like the meme. 
+Please don't hesitate to let us know if you have any questions or problems using the API. While it's been tested thoroughly internally we would hate to cause anyone undue frustration, so please reach out as needed. 
 
 ------
 
@@ -35,12 +33,13 @@ ___
   
 - ### <a href="./lrs-master-list">Master LIBRS LRS List</a>
   - #### The master list of all Louisiana Revisec Statute (LRS) Codes that the LIBRS Program currently accepts, as well as information about expired LRS Codes. 
+  
   - #### Links are available for vendors and agencies to download a JSON list of the current Master LIBRS LRS List for ingestion into their RMS.
   
+- <a href="./models">JSON Data Models</a>
 
-___
+  - Contains information on the JSON Data Models and how to get them implemented. 
 
-## Recent Changes
 ___
 
 #### 2021-06-22
