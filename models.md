@@ -18,7 +18,7 @@ These models are meant to be a simplification of the existing Flat File format, 
 
 ## Quick Start
 
-To get down to it, the easiest way to start incorporating the LIBRS JSON models would be to convert existing Flat Files to JSON Format, and compare the inputs and outputs. You can do this with the ValidateFFtoJSON Endpoint. See below for details. You can also view more in-depth information on the Swagger Page for the API: [https://json.librs.org:5000/swagger/index.html](https://json.librs.org:5000/swagger/index.html)
+To get down to it, the easiest way to start incorporating the LIBRS JSON models would be to convert existing Flat Files to JSON Format, and compare the inputs and outputs. You can do this with the ValidateFFtoJSON Endpoint. See below for details. You can also view more in-depth information on the Swagger Page for the API: [https://json.librs.org:5000/swagger/index.html](https://json.librs.org:5000/swagger/index.html) ***Note:*** It's been brought to our attention that Swagger will remove the New Line characters from the request, which will cause the FFToJson and ValidateFFToJson requests to fail. The recommended workaround is to use Postman. 
 
 ### API Endpoints
 
