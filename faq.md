@@ -46,6 +46,10 @@ ___
 * <a href="how-case-statuses-change-when-arrests-are-made">If a case has two or more Suspects and only one of them is arrested as of yet, would the case status need to stay “Pending Investigation” or “Cleared by Arrest.” How will this be reported to the State?</a>
 * <a href="what-data-is-pulled-from-our-supplemental-reports">What Information do you pull from Supplemental Reports?</a>
 
+## Offense-Specific Questions and Answers
+* <a href="#allowable-assault-injury-types-and-weapons">What kinds of Injury Types can I use with the different kinds of Assaults?</a>
+
+
 ## Everything Flat File
 * <a href="#flat-files-and-troubleshooting">Flat Files and Troublshooting</a>
   * <a href="#general-flat-file-formatting-requirements">General Flat File Formatting Requirements</a>
@@ -434,7 +438,46 @@ Not a thing - we don't see anything in supplemental nor narratives. If they don'
 
 So... Don't do that. If it's not in a Segment, we don't see it. 
 
+___
 
+
+## Offense-Specific Questions and Answers
+
+### Allowable Assault Injury Types and Weapons
+We get a lot of questions about which Injury Types can be used with which Assault (13A, 13B, 13C). Here's a breakdown of the law:
+
+#### 13A - Aggravated Assault
+According to the FBI, Aggravated Assault requires:
+* An attack on a person in which:
+   * The Offender uses a Dangerous Weapon ***or***
+   * The Offender displays/brandishes said dangerous weapon ***or***
+   * The Victim suffers serious/severe bodily injuries ***or***
+   * There was risk for serious/severe bodily injuries to the Victim.
+
+Based on that verbage (all of the ***or's***), any case that involves a weapon, any case where a Victim is seriously injured, or any case where the Victim ***could have been*** seriously injured is considered an Aggravated Assault. As such, a Weapon isn't entirely required to be used, nor is an Injury required, however it's not possible for both a weapon and injury to not be present.
+
+Someone pointing a gun at another person would be considered Aggravated Assault, even if the gun isn't fired and the Victim Isn't injured. Alternatively, a Victim being beaten within an inch of their life by an Offender's fists would also be considered an Aggravated Assault. 
+
+Nine times out of ten, an Aggravated Assault is going to include both a Weapon and a Victim being injured. However just because it only involves one doesn't mean it's not an Aggravated Assault.
+
+
+#### 13B - Simple Assault
+According to the FBI, Simple Assault requires:
+* An attack on a person in which:
+   * The Offender does not use or display a dangerous weapons ***nor***
+   * The Victim suffers serious/severe bodily injury. 
+
+This means that a Simple Assault cannot include a Weapon (other than hands, feet, etc...), and the Victim can only have suffered minor or no injuries. So if an Assault involved a weapon, or the person was harmed beyond minor injuries, then it's bumped to an Aggravated Assault. 
+
+If, however, the person only used personal weapons (themself) and the Victim was not injured, or only minorly injured, then you've got yourself a Simple Assault.
+
+
+#### 13C - Intimidation
+According to the FBI, Intimidation requires
+* No Dangerous Weapons
+* No physical attack of the Victim
+
+This means Intimidation is all talk, no followthrough. If a Victim is touched/harmed in any way, or the assailant has any weapons on display then it cannot be Intimidation.
 
 ___
 
