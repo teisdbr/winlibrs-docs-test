@@ -110,6 +110,32 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
+## Zero Record (01)
+___
+
+### Description
+Segment 01 is used when there are no Incidents to report; IE a Zero Report. The segment can only be used when there are no Incidents present in the Flat File; there cannot be any Segments present other than 00, 01, and 99:
+
+* -Header Segment-
+* 01000000000000ZZ
+* 99000003ZZ
+
+### Segment Layout
+
+   Data Element Number               | Description of Data Element                     | Position(s)   | Length   | Format
+  :---------------------------------:|-------------------------------------------------|:-------------:|:--------:|:---------:
+   [C1](./librs-spec#segment-descriptor-c1)      | Segment Descriptor -- **01**                    | 1-2           | 2        | N
+   [2](./librs-spec#incident-number-2)           | Incident Number - All Zeroes \"000000000000\"   | 3-14          | 12       | N
+   [C8](./librs-spec#end-of-segment-marker-c8)   | End of Segment Marker                           | 15-16         | 2        | A
+   [C9](./librs-spec#padding-c9)                 | Padding                                         | 17-150        | \*\*     | A/N
+
+<br>
+
+### Segment 01 Errors and Explanations
+None
+
+___
+
 <br>
 
 <div class="newpage"></div>
@@ -894,42 +920,6 @@ ___
 <br>
 
 <div class="newpage"></div>
-
-## Zero Record (01)
-___
-
-### Description
-Segment 01 is an optional Segment that can be included to denote an empty Flat File Submission. Previously LIBRS had no way of determining that a Flat File should be empty, and this Segment was used to identify those files. However more recent development has made this Segment obsolete. 
-
-You may include this Segment if you wish, though it is not required. If you do include it, the Flat File would look like this (Excluding Padding after the Segment Footers):
-
-
-* -Header Segment-
-* 01000000000000ZZ
-* 99000003ZZ
-
-If you don't want to include it, then ensure your file has three lines in it:
-
-* -Header Segment-
-* 99000003ZZ
-* (blank - don't actually write blank, this is just here for reference. Leave the last line blank.)
-
-
-### Segment Layout
-
-   Data Element Number               | Description of Data Element                     | Position(s)   | Length   | Format
-  :---------------------------------:|-------------------------------------------------|:-------------:|:--------:|:---------:
-   [C1](./librs-spec#segment-descriptor-c1)      | Segment Descriptor -- **01**                    | 1-2           | 2        | N
-   [2](./librs-spec#incident-number-2)           | Incident Number - All Zeroes \"000000000000\"   | 3-14          | 12       | N
-   [C8](./librs-spec#end-of-segment-marker-c8)   | End of Segment Marker                           | 15-16         | 2        | A
-   [C9](./librs-spec#padding-c9)                 | Padding                                         | 17-150        | \*\*     | A/N
-
-<br>
-
-### Segment 01 Errors and Explanations
-None
-
-___
 
 <br>
 <br>
