@@ -6,6 +6,10 @@
         "url": "./librs-spec#submission-header-00"
       },
       {
+        "subtitle ": "01 - Zero Record",
+        "url": "./librs-spec#zero-record-01"
+      },
+      {
         "subtitle": "10 - Administrative",
         "url": "./librs-spec#administrative-10"
       },
@@ -72,10 +76,6 @@
       {
         "subtitle": "99 - Submission Trailer",
         "url": "./librs-spec#submission-trailer-99"
-      },
-      {
-        "subtitle ": "01 - Zero Record",
-        "url": "./librs-spec#zero-record-01"
       }
     ]
   },
