@@ -5435,7 +5435,7 @@ ____
 ## Action Type (C5)
 ___
 
-**Description:** Action Type designates what LIBRS should do with the Line of data that it's about to read. There are Five (5) Types of Action Types, but realistically it's easiest to just use two of them: 'I - Insert' and 'D - Delete'. 
+**Description:** Action Type designates what LIBRS should do with the Line of data that it's about to read. For modern implementations we would recommend only using 'I - Insert' and 'D - Delete', however in order to maintain support for older systems, we do still allow all Five (5) Action Types to be submitted. 
 
 The Types Available are:
 * I - Insert
@@ -5446,13 +5446,13 @@ The Types Available are:
 	* The next most common Action type used.
 	* Used to tell us that we need to delete an Incident from the Database. 
 	* Is only used with Segment 10. Do delete an Incident you just send us the Segment 10 of the Incident, but change the I to a D in the third Character.
-* W - Time Window Submission
+* W - Time Window Submission *(Legacy)*
 	* Used to submit data to the FBI for Incidents that occurred before the Agency's Base Date
 	* Really uncommon to be used.
-* A - Add Arrest
+* A - Add Arrest *(Legacy)*
 	* You can use this to add an Arrest to an already reported Incident. 
 	* We would recommend just passing us a Delete and then resubmitting the whole Incident as an Insert, though. It's less code for everyone to manage. 
-* M - Arrest Modification
+* M - Arrest Modification *(Legacy)*
 	* This can be used to change details about an Arrestee that's already been submitted to LIBRS. 
 	* Again, we recommend not using this in favor of deleting the Incident and re-inserting it.
 
