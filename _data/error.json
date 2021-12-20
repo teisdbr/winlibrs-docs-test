@@ -2361,7 +2361,7 @@
 	"22081": {
 		"active": "true",
 		"err_no": 22081,
-		"err_message": "DEPRECATED - SEGMENT 52 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'",
+		"err_message": "SEGMENT 52 MISSING--MUST BE PRESENT IF VICTIM TYPE IS 'I' OR 'L'",
 		"seq_desc": {
 			"52": "This Segment must be included if the Victim is of Type I or L."
 		}
