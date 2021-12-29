@@ -268,7 +268,7 @@ ____
 
 ### Which Incidents to Send
 
-Generally we want any Incident that is able to report the minimum amount of data required by the NIBRS Code. This includes 90-Series Offenses (90A, 90Z, etc...), however if the 90-Series Offenses doesn't have an arrest associated with it we will not pass it along to NIBRS. 
+Generally we want any Incident that is able to report the minimum amount of data required by the NIBRS Code. This includes Group B / 90-Series Offenses (90A, 90Z, etc...), however if the Group B / 90-Series Offenses doesn't have an arrest associated with it we will not pass it along to NIBRS. 
 
 In general, an Incident needs to have the following information to be reported:
 
@@ -277,7 +277,7 @@ In general, an Incident needs to have the following information to be reported:
 * One or More Victims (Segment 50's)
 * (For Crime Against Property Only) One or More Properties (Segments 30, 31, and 33's)
 
-Again, please note that we want your 90-Series Offenses, even if there is no arrest associated with them. We won't send it to the FBI until an arrest comes through, but it's valuable information for the State. 
+Again, please note that we want your Group B / 90-Series Offenses, even if there is no arrest associated with them. We won't send it to the FBI until an arrest comes through, but it's valuable information for the State. 
 
 
 
