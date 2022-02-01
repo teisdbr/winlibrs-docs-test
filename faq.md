@@ -45,6 +45,7 @@ ___
 * <a href="why-does-kidnapping-involve-a-property">Why Does Kidnapping Involve a Property?</a>
 * <a href="how-case-statuses-change-when-arrests-are-made">If a case has two or more Suspects and only one of them is arrested as of yet, would the case status need to stay “Pending Investigation” or “Cleared by Arrest.” How will this be reported to the State?</a>
 * <a href="what-data-is-pulled-from-our-supplemental-reports">What Information do you pull from Supplemental Reports?</a>
+* <a href="what-do-we-define-crypto-currency-as">Is Crypto-Currency Money?</a>
 
 ## Offense-Specific Questions and Answers
 * <a href="#allowable-assault-injury-types-and-weapons">What kinds of Injury Types can I use with the different kinds of Assaults?</a>
@@ -437,6 +438,14 @@ LIBRS DOES NOT want the minimal NIBRS requirement. We want all individuals arres
 Not a thing - we don't see anything in supplemental nor narratives. If they don't put the information in the respective property/victim/offender/etc screens then we never see it. Some Agencies have run into issues in the past by entering in the initial information from an Incident, and then locking it for changes after it's been approved by a Supervisor. This forces Officers to add later information to the Supplemental Reports, which is something we will never see. So additional Arrests, Properties, Offenses, and Victims that are added at a later date never make their way to being reported.
 
 So... Don't do that. If it's not in a Segment, we don't see it. 
+
+
+## What Do We Submit Crypto-Currency As?
+There are two ways that crypto-currency can be stolen: If it's stored on a device which is stolen, or if it's stolen via hacking an account. 
+
+If a physical device is stolen which contains crypto-currency on it (a hard wallet), then the Offense should be reported as a Larceny/Theft, the wallet should be reported as 07 - Computer Hardware or Software, and the value of the crypto-currency should be reported as 77 - Other, with its value in USD ***based on the value of the currency when it was stolen***. So, for instance, if someone steals a hard wallet that contains 1 BTC on it, you would need to refer to the value of BTC at the time of the reported theft, not what it currently is. 
+
+If, however, a device is hacked into and the crypto-currency is stolen that way, it should be reported as Computer Hacking and/or Wire Fraud, with again the currency being reported as 77 - Other with the value it had at the time of the Offense. 
 
 ___
 
