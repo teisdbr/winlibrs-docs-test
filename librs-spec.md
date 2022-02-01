@@ -705,6 +705,8 @@ Error Number  | Error Message | Explaination of Error
 ------------------|-------------------|--------------------------
 {% assign error = site.data.error["15005"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["52"]}}
+{% assign error = site.data.error["22081"] -%}
+{{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["52"]}}
 
 ___
 
