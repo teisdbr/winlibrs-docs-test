@@ -7,6 +7,14 @@ permalink: /
 # LIBRS Validation and Processing Documentation
 ____
 
+## Attention! 2020 & 2021 Data Reprocessing is in Progress!
+During the week of Feb 1 we will be deleting and reprocessing data so we can ensure that we've accepted and rejected Incidents to the best of our ability before the March 14th Deadline for FBI Publication. For instance, we relaxed LRS/NIBRS Pair requirements, so many agencies that had invalid LRS Code/NIBRS Code Errors may have those Incidents get accepted because of this change. 
+
+This year we are including 2020 because when we implemented NIBRS XML Submissions at the tail-end of 2020, the FBI had rate limit issues that caused Incidents to fail to upload in an unpredictable manner. So to be sure they have the extra data that the XML Format Provides (such as LEOKA data), we're including it in this years reprocessing. 
+
+____
+
+
 <img src="images/JSON2.png" alt="Json is coming" width="600"/>
 
 Our JSON Validator is now in Beta, and available to all vendors to use!
@@ -44,10 +52,13 @@ ___
 
 ___
 
+#### 2022-02-01
+* Began the 2020 and 2021 data reprocessing. 
+
 #### 2021-10-11
 Kind of beenawhile since I updated this, sorry about that. 
 * Relaxed the requirement for Group A Offenses to have a matching NIBRS/LRS Pair
-  * You will now only get a warning instead of an Error if you give is a Group A Offense that we don't have a matching NIBRS Code for. 
+  * You will now only get a warning instead of an Error if you give us a Group A Offense that we don't have a matching NIBRS Code for. 
   * Group B's will still get an error, and anything that we have an Expired NIBRS Mapping for will also get an error (because we know that Mapping is not valid).
 * Caused a whole big thing with 14:79 Crime Against Person vs Society. We rolled that back so that Crime Against Person is has now been valid the entire year. We apologize for all of the confusion this one caused. 
 * Fixed an erroneous Error 84212 getting thrown on NIBRS 100's.
