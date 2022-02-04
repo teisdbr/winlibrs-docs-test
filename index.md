@@ -12,6 +12,8 @@ During the week of Feb 1 we will be deleting and reprocessing data so we can ens
 
 This year we are including 2020 because when we implemented NIBRS XML Submissions at the tail-end of 2020, the FBI had rate limit issues that caused Incidents to fail to upload in an unpredictable manner. So to be sure they have the extra data that the XML Format Provides (such as LEOKA data), we're including it in this years reprocessing. 
 
+Update Feb 4th: Thank you for your patience while the FTP Server was offline. All Flat Files in question have been removed from the database and requeued for processing. It's now safe to submit additional files without the chance of it being deleted in the reprocessing. All reprocessing should be done sometime Saturday or Sunday, so you should see emails come through no later than Monday. 
+
 ____
 
 
