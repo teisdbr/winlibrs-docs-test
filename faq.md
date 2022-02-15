@@ -46,6 +46,7 @@ ___
 * <a href="how-case-statuses-change-when-arrests-are-made">If a case has two or more Suspects and only one of them is arrested as of yet, would the case status need to stay “Pending Investigation” or “Cleared by Arrest.” How will this be reported to the State?</a>
 * <a href="what-data-is-pulled-from-our-supplemental-reports">What Information do you pull from Supplemental Reports?</a>
 * <a href="what-do-we-define-crypto-currency-as">Is Crypto-Currency Money?</a>
+* <a href="what-happens-if-a-more-serious-outcome-happens-after-a-case-is-closed">What happens if a more serious outcome to an Offense occurs after a case has been closed?</a>
 
 ## Offense-Specific Questions and Answers
 * <a href="#allowable-assault-injury-types-and-weapons">What kinds of Injury Types can I use with the different kinds of Assaults?</a>
@@ -446,6 +447,21 @@ There are two ways that crypto-currency can be stolen: If it's stored on a devic
 If a physical device is stolen which contains crypto-currency on it (a hard wallet), then the Offense should be reported as a Larceny/Theft, the wallet should be reported as 07 - Computer Hardware or Software, and the value of the crypto-currency should be reported as 77 - Other, with its value in USD ***based on the value of the currency when it was stolen***. So, for instance, if someone steals a hard wallet that contains 1 BTC on it, you would need to refer to the value of BTC at the time of the reported theft, not what it currently is. 
 
 If, however, a device is hacked into and the crypto-currency is stolen that way, it should be reported as Computer Hacking and/or Wire Fraud, with again the currency being reported as 77 - Other with the value it had at the time of the Offense. 
+
+
+## What Happens if a more Serious Outcome Happens After a case is Closed?
+
+This one is a really great question, so I'll just copy it directly:
+
+> In this scenario, the offense occurred in 2009. The original offense was attempted murder with the victim of the offense living for 12 years prior to expiring in 2021 from complications due to the shooting. The original report went through the system as an Attempted Murder. The victim did not die within jurisdiction, rather the victim died in another state/jurisdiction. Per the medical examination, the person’s death was a result of the original shooting in 2009.
+ 
+> Investigators/DA are not pursuing additional charges on the suspect in SPD jurisdiction as suspect was already convicted and served his sentence. How should this be counted?
+
+Great question and one that comes up often. Unfortunately I there isn't a single answer; the decision will be completely up to the investigation. If they concur with the medical examiner’s decision, they could submit a new NIBRS incident using the original assault date as the incident date but change the offense to homicide. The jurisdiction being different where they actually died doesn’t matter because the crime still occurred in the original jurisdiction where they reported the assault.
+ 
+This is one of those cases why we say that you should not classify based solely upon a coroner’s finding. If the victim lived a conscious life for 12 years following the shooting, we would not consider this a homicide unless new charges were to be filed with the intent of charging and prosecuting an offender, which is not the case in this example.
+ 
+For publication/count total considerations, there’s no way to update the SRS count to remove the assault. The system will recognize this was a pre-NIBRS incident (if they were to switch over and be reporting to NIBRS) and will not be included in current year counts nor be published.
 
 ___
 
