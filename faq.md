@@ -510,7 +510,7 @@ ___
 
 ### General Flat File Formatting Requirements
 
-Currently, LIBRS accepts data submissions in the form of a character delimited flat file. At this time we do not accept XML or JSON Format submissions. 
+Currently, the LIBRS FTP Server only accepts data submissions in the form of a character delimited flat file. At this time we do not accept XML or JSON Format submissions through this method, though we are Beta Testing JSON Submissions via API. You can see more information on that [here](./models). 
 
 Flat Files need to be sure to meet the following General Requirements:
 
