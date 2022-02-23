@@ -251,6 +251,14 @@
 			"7": "When Completed ('C') is entered and Louisiana Revised Statute (DE 6) is either a Crime Against Property, or a Gambling (NIBRS 39A or NIBRS 39B), Kidnaping (100), or Drug/Narcotic offense (NIBRS 35A or NIBRS 35B), then Property Segments 30 and 31 must be present with a valid code in Type of Property Loss (DE 14)."
 		}
 	},
+	"10079": {
+		"active": "false",
+		"err_no": 10079,
+		"err_message": "INCORRECT COUNT FOR NUMBER OF RECOVERED VEHICLES - YOU SHOULD NOT INCLUDE RECOVERED VEHICLES ASSOCIATED WITH A NIBRS 280 IN THIS COUNT",
+		"err_desc": {
+			"19": "While counterintuitive, vehicles that are associated with a NIBRS 280 Offense should not counted towards DE 19, Number of Recovered Vehicles."
+		}
+	},
 	"10080": {
 		"active": "true",
 		"err_no": 10080,

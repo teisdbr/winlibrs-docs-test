@@ -5,6 +5,14 @@ permalink: /
 ---
 
 # LIBRS Validation and Processing Documentation
+____
+
+## Attention! 2020 & 2021 Data Reprocessing is in Progress!
+During the week of Feb 1 we will be deleting and reprocessing data so we can ensure that we've accepted and rejected Incidents to the best of our ability before the March 14th Deadline for FBI Publication. For instance, we relaxed LRS/NIBRS Pair requirements, so many agencies that had invalid LRS Code/NIBRS Code Errors may have those Incidents get accepted because of this change. 
+
+This year we are including 2020 because when we implemented NIBRS XML Submissions at the tail-end of 2020, the FBI had rate limit issues that caused Incidents to fail to upload in an unpredictable manner. So to be sure they have the extra data that the XML Format Provides (such as LEOKA data), we're including it in this years reprocessing. 
+
+Update Feb 4th: Thank you for your patience while the FTP Server was offline. All Flat Files in question have been removed from the database and requeued for processing. It's now safe to submit additional files without the chance of it being deleted in the reprocessing. All reprocessing should be done sometime Saturday or Sunday, so you should see emails come through no later than Monday. 
 
 ____
 
@@ -46,8 +54,10 @@ ___
 
 ___
 
-#### 2022-02-07
-* 2020 and 2021 data reprocessing has completed. We're currently reviewing the results to ensure everything went according to plan.
+#### 2022-02-23
+* Added Error 10079, which gets thrown if you include recovered vehicle properties that are only associated with a NIBRS 280 Offense in DE 19 - Number of Recovered Vehicles. Those vehicles should not be included in that count according to NIBRS. 
+
+- Added a handful of LRS Codes: 14:89.1 - 36A, 14:542.1.2 - 90Z, 14:1752 - 520, 14:95 - 90Z
 
 #### 2022-02-01
 * Began the 2020 and 2021 data reprocessing. 
