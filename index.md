@@ -48,8 +48,8 @@ ___
 
 #### 2022-02-23
 * Added Error 10079, which gets thrown if you include recovered vehicle properties that are only associated with a NIBRS 280 Offense in DE 19 - Number of Recovered Vehicles. Those vehicles should not be included in that count according to NIBRS. 
-
-- Added a handful of LRS Codes: 14:89.1 - 36A, 14:542.1.2 - 90Z, 14:1752 - 520, 14:95 - 90Z
+* Added a handful of LRS Codes: 14:89.1 - 36A, 14:542.1.2 - 90Z, 14:1752 - 520, 14:95 - 90Z
+* Pushed all LRS Codes that had an Effective Date in 2021 (Except for 720's) up to 2020 to get rid of bad LRS Code Errors for people trying to make fixes before the FBI Deadline. 
 
 #### 2022-02-01
 * Began the 2020 and 2021 data reprocessing. 
