@@ -46,6 +46,11 @@ ___
 
 ___
 
+#### 2022-03-14
+* We've been scouring over hundreds of thousands of incidents, making corrections to our LIBRS Validation and NIBRS Extraction where required. This has primarily included Type of Criminal Activity Validation, which had a mild oopsie. I made it too restrictive and forgot to include the LIBRS Values that will get translated to "P" in NIBRS - what I get for copy/pasting. Sorry about that, we're reprocessing all of the affected data so it doesn't hurt your scores
+* Overall, things are looking really great. If you don't have your data in yet, do it now. The deadline is midnight tonight. 
+
+
 #### 2022-02-23
 * Added Error 10079, which gets thrown if you include recovered vehicle properties that are only associated with a NIBRS 280 Offense in DE 19 - Number of Recovered Vehicles. Those vehicles should not be included in that count according to NIBRS. 
 * Added a handful of LRS Codes: 14:89.1 - 36A, 14:542.1.2 - 90Z, 14:1752 - 520, 14:95 - 90Z
