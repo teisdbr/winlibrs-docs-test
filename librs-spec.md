@@ -540,7 +540,7 @@ ___
 ### Description
 Segment 41, Offender Using/Gaming, is used to denote additional aspects about the potential motive behind an Offender's behavior. 
 
-More information and common questions and errors can be found on the LIBRS FAQ for this Segment [here](./faq/offenders-segments-40-and-41).
+More information and common questions and errors can be found on the LIBRS FAQ for this Segment [here](./faq#offenders-segments-40-and-41).
 
 ### Segment Layout
 
