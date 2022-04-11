@@ -3696,5 +3696,14 @@
 		"seq_desc": {
 			"50": "According to the NIBRS IEPD Requirements (Error 085), when there is more than one Offender in an Incident, and a Victim is tied to a Crime Against Person or a Robbery and is also a Victim Type of 'I - Individual' or 'L - Law Enforcement', then the Victim must be associated with at least two Offenders. "
 		}
+	},
+	"90045": {
+		"active": "true",
+		"err_no": 90045,
+		"err_message": "FOR VO RELATIONSHIPS THE AGE OF THE OFFENDER MUST MATCH THE AGE OF THE VICTIM EXACTLY, INCLUDED WHETHER OR NOT THE AGE IS ESTIMATED",
+		"err_desc": {
+			"26": "Check that the age supplied for the matching Offender Record is the same as the age supplied for this Victim Record. This includes whether or not the age is estimated.",
+			"37": "Check that the age supplied for the matching Victim Record is the same as the age supplied for this Offender Record. This includes whether or not the age is estimated."
+		}
 	}
 }

@@ -46,6 +46,15 @@ ___
 
 ___
 
+#### 2022-04-11
+* Added Error 90045:
+  * Gets thrown if the Ages don't match for Matching Records with a VO (Victim was Offender) Relationship. 
+  * EG: If in Segment 40 the Age is 35 while the Age in Segment 50 is 45 and you tell us those are the same person by using the VO Relationship, then you will get this error.
+* Made some changes to the Scorecard:
+  * If you haven't yet submitted Months then those will be blank
+  * If you started submitting data mid-way through the year the months before it will have zeros listed (you can still back-fill data)
+  * If you send a Zero Report then you'll see all Zeros, except for in the Percentage Calculation since that's one of those "destory the universe by dividing by zero" situations. 
+
 #### 2022-03-14
 * We've been scouring over hundreds of thousands of incidents, making corrections to our LIBRS Validation and NIBRS Extraction where required. This has primarily included Type of Criminal Activity Validation, which had a mild oopsie. I made it too restrictive and forgot to include the LIBRS Values that will get translated to "P" in NIBRS - what I get for copy/pasting. Sorry about that, we're reprocessing all of the affected data so it doesn't hurt your scores
 * Overall, things are looking really great. If you don't have your data in yet, do it now. The deadline is midnight tonight. 

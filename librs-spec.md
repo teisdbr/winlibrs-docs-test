@@ -904,7 +904,7 @@ Segment 99, Submission Trailer, should be the last line in your Flat File, and s
 <br>
 
 ### Important Notes
-* [Data Element C7 - Number of Segments Transferred](./librs-spec#number-of-segments-transferred-c7) should be a six-digit long number that is front-padded with 0's that contains the number of lines in the Flat File (Including the Header and Trailer Segments). For instance, if Segment 99 appears on line number 512 in your Flat File, DE C7 should be '000512'.
+* [Data Element C7 - Number of Segments Transferred](./librs-spec#number-of-segments-transferred-c7) should be a six-digit long number that is front-padded with 0's that contains the number of lines in the Flat File (Including the Header and Trailer Segments). For instance, if Segment 99 appears on line number 512 in your Flat File, DE C7 should be '000512', and the full line would read '99000512ZZ' (plus Padding to make 150 characters).
 
 ### Segment 99 Errors and Explanations
 
@@ -3077,6 +3077,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 4 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15081"] -%}
 5 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90045"] -%}
+6 | {{error.err_desc["26"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
 
@@ -3952,6 +3954,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["14022"] -%}
 4 | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["14052"] -%}
+5 | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
+{% assign error = site.data.error["90045"] -%}
 5 | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
 
 ___
@@ -5603,7 +5607,7 @@ Requirement  | Requirement Description |
 ___
 
 ### Details:
-* This field is used to pad unused fields for systems that are unable to write variable length records. This padding will lengthen all segments to 150 characters. Padding can be replaced with a newline character for those systems that can write variable length records. The newline character will mark the true End-of-Record. Variable length records are preferred by LIBRS because of the space savings they allow.
+* This field is used to pad unused fields for systems that are unable to write variable length records. This padding will lengthen all segments to 150 characters. Previously there may have been some confusion about whether to use a New Line Character after the Segment End Marker - this is incorrect. Please Pad all Segments to 150 Characters long. 
 
 ___
 

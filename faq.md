@@ -510,20 +510,20 @@ ___
 
 ### General Flat File Formatting Requirements
 
-Currently, the LIBRS FTP Server only accepts data submissions in the form of a character delimited flat file. At this time we do not accept XML or JSON Format submissions through this method, though we are Beta Testing JSON Submissions via API. You can see more information on that [here](./models). 
+Currently, the LIBRS FTP Server only accepts data submissions in the form of a character delimited flat file. At this time we do not accept XML or JSON Format submissions through this method, though we are Beta Testing JSON Submissions via API. You can see more information on that [here](./models).
 
 Flat Files need to be sure to meet the following General Requirements:
 
-1. A single Segment 00 (Header) and 99 (Footer) need to be included at the start and end of the file; you do not need to wrap each incident with one. 
-2. There should be no blank lines present in the document, except for one blank line after the Footer Segment (Segment 99) (allowed, not required). Otherwise each line should have content on it. This includes the first line of the file being the Header Segment (Segment 00). 
-3. All lines must have an exact length of 150 characters, as specified in the Technical Specifications. The exception is the Footer Segment (Segment 99) should only be 10 characters long. 
-4. We don't have a restriction on file extensions, however we do have a restriction on file formats. We don't accept PDF, XML, JSON, HTML, RTF, etc... Each file you send us must be UTF-8 Encoded. The file extension doesn't matter, though. For instance if you'd like you could name the files *.librs if you like. Just so long as it's a UTF-8 Encoded file. 
-5. We allow CR, LF, and CRLF Line Endings. 
+1. A single Segment 00 (Header) and 99 (Footer) need to be included at the start and end of the file; you do not need to wrap each incident with one.
+2. There should be no blank lines present in the document, except for one blank line after the Footer Segment (Segment 99) (allowed, not required). Otherwise each line should have content on it. This includes the first line of the file being the Header Segment (Segment 00).
+3. All lines must have an exact length of 150 characters, as specified in the Technical Specifications.
+4. We don't have a restriction on file extensions, however we do have a restriction on file formats. We don't accept PDF, XML, JSON, HTML, RTF, etc... Each file you send us must be UTF-8 Encoded. The file extension doesn't matter, though. For instance if you'd like you could name the files *.librs if you like. Just so long as it's a UTF-8 Encoded file.
+5. We allow CR, LF, and CRLF Line Endings.
 6. The only thing that should get uploaded to the FTP Server are the Flat Files. They go into the Data Folder where they will be picked up for processing, and disseminated into one of three folders:
-   * Failed: This means that there was something drastically wrong with the formatting of the file, and LIBRS wasn't able to read the contents properly. 
-   * Out of Sequence: This means that the Reporting Period that the file represents isn't the next one in line to be submitted. We require a linear submission of Reporting Periods to ensure that Updates and Edits to existing incidents are able to be made successfully. 
-   * Processed: Everything went as expected, and the data was read properly and processed. 
-7. At this time we are unable to accept NIBRS text files. We are able to accept NIBRS Files in the IEPD Format, however. 
+   * Failed: This means that there was something drastically wrong with the formatting of the file, and LIBRS wasn't able to read the contents properly.
+   * Out of Sequence: This means that the Reporting Period that the file represents isn't the next one in line to be submitted. We require a linear submission of Reporting Periods to ensure that Updates and Edits to existing incidents are able to be made successfully.
+   * Processed: Everything went as expected, and the data was read properly and processed.
+7. At this time we do not accept NIBRS Files, either the NIBRS Flat File or IEPD XML version.
 
 ### How to Solve Errors on Flat Files
 
