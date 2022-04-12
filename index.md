@@ -46,6 +46,11 @@ ___
 
 ___
 
+#### 2022-04-12
+* Updated Error 90043:
+  * The wording was incorrect. It has to do with DE L45, Offense Connected to Arrest, which is used to define an Offense in another Incident that cleared a Separate Incident with the Multiple Arrestee Indicator (DE 44). 
+  * DE L45 is entirely optional, even if using a Multiple Arrestee Indicator Value of "M". However if you do give it to us, we require that it comes through in the correct format, is all. The Error Message and Error Description in the spec was updated to reflect this. 
+
 #### 2022-04-11
 * Added Error 90045:
   * Gets thrown if the Ages don't match for Matching Records with a VO (Victim was Offender) Relationship. 
