@@ -50,6 +50,8 @@ ___
 * Updated Error 90043:
   * The wording was incorrect. It has to do with DE L45, Offense Connected to Arrest, which is used to define an Offense in another Incident that cleared a Separate Incident with the Multiple Arrestee Indicator (DE 44). 
   * DE L45 is entirely optional, even if using a Multiple Arrestee Indicator Value of "M". However if you do give it to us, we require that it comes through in the correct format, is all. The Error Message and Error Description in the spec was updated to reflect this. 
+* Added Warning 90046:
+  * This will get thrown if you use an Age or Birthdate that indicates the Individual is 99 Years of Age or Older. It's just a warning to make sure you didn't make a mistake when entering their details.
 
 #### 2022-04-11
 * Added Error 90045:

@@ -3705,5 +3705,14 @@
 			"26": "Check that the age supplied for the matching Offender Record is the same as the age supplied for this Victim Record. This includes whether or not the age is estimated.",
 			"37": "Check that the age supplied for the matching Victim Record is the same as the age supplied for this Offender Record. This includes whether or not the age is estimated."
 		}
+	},
+	"90046": {
+		"active": "true",
+		"err_no": 90046,
+		"err_message": "WARNING - AGE OF VICTIM IS 99 OR OLDER. PLEASE VERIFY THAT THEIR AGE AND DOB IS BEING REPORTED PROPERLY",
+		"err_desc": {
+			"26": "The Age of the Victim that you've supplied is 99 or older. This is just a warning to make sure that you've entered that intentionally",
+			"L26": "The Date of Birth that you've entered for the Victim indicates that they're 99 Year or Older. This is just a warning to make sure that was intentional."
+		}
 	}
 }
