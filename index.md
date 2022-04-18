@@ -46,6 +46,11 @@ ___
 
 ___
 
+#### 2022-04-18
+* Introduced an unexpected bug with the warning Logic from last week that caused Non-Numeric Ages to fail when processing. 
+  * That's my bad, sorry. 
+  * Any files that failed over the weekend (04/13 - 04-18) have been reprocessed. Again, sorry for the confusion. 
+
 #### 2022-04-12
 * Updated Error 90043:
   * The wording was incorrect. It has to do with DE L45, Offense Connected to Arrest, which is used to define an Offense in another Incident that cleared a Separate Incident with the Multiple Arrestee Indicator (DE 44). 
