@@ -3504,9 +3504,9 @@
 	"90017": {
 		"active": "true",
 		"err_no": 90017,
-		"err_message": "LRS-TO-NIBRS PAIR MUST HAVE A VALID MAPPING",
+		"err_message": "UNKNOWN LRS-TO-NIBRS - OFFENSE WILL BE VALIDATED ON NIBRS CODE ONLY",
 		"err_desc": {
-			"n45": "he LRS Code that you have submitted doesn't have a mapping to a NIBRS Code in our system. Please use a valid NIBRS Mapping for this LRS Code, and if you think the LRS Code you submitted should be valid let us know and we'll see if we can add it in.<br><br>This Error also triggers when Louisiana Revised Statute Number of Arrest (DE 45) is left blank."
+			"n45": "The LRS Code that you have submitted doesn't have a mapping to a NIBRS Code in our system. Please use a valid NIBRS Mapping for this LRS Code, and if you think the LRS Code you submitted should be valid let us know and we'll see if we can add it in.<br><br>This Error also triggers when Louisiana Revised Statute Number of Arrest (DE 45) is left blank."
 		}
 	},
 	"84713": {
@@ -3661,7 +3661,7 @@
 	"90040": {
 		"active": "false",
 		"err_no": 90040,
-		"err_message": "WARNING: OFFENDER AGE, SEX OR RACE MUST BE KNOWN TO HAVE OFFENDER SEQUENCE NUMBER OTHER THAN '000'",
+		"err_message": "WARNING: OFFENDER WITH NON '000' SEQUENCE NUMBER WAS ENTERED BUT HAS NO KNOWN ATTRIBUTES - VERIFY THIS WAS INTENTIONAL AND SHOULDN'T BE A '000' UNKNOWN OFFENDER",
 		"seq_desc": {
 			"14": "This occurs when Age, Sex, and Race are all sent as Unknown. It's intended to warn the User that they may be missing some information they did not intend to leave out."
 		}
