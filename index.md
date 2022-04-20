@@ -50,6 +50,10 @@ ___
 * Introduced an unexpected bug with the warning Logic from last week that caused Non-Numeric Ages to fail when processing. 
   * That's my bad, sorry. 
   * Any files that failed over the weekend (04/13 - 04-18) have been reprocessed. Again, sorry for the confusion. 
+* Fixed a bug where Offenses that we didn't know the LRS/NIBRS Pairing were being marked as accepted and skewing counts.
+* Reworded a couple of Warnings to make them... Well, to make them make sense, I guess:
+  * 90017: ~~LRS-TO-NIBRS PAIR MUST HAVE A VALID MAPPING~~ UNKNOWN LRS-TO-NIBRS - OFFENSE WILL BE VALIDATED ON NIBRS CODE ONLY
+  * 90040: ~~WARNING: OFFENDER AGE, SEX OR RACE MUST BE KNOWN TO HAVE OFFENDER SEQUENCE NUMBER OTHER THAN '000'~~ WARNING: OFFENDER WITH NON '000' SEQUENCE NUMBER WAS ENTERED BUT HAS NO KNOWN ATTRIBUTES - VERIFY THIS WAS INTENTIONAL AND SHOULDN'T BE A '000' UNKNOWN OFFENDER
 
 #### 2022-04-12
 * Updated Error 90043:
