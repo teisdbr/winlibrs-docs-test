@@ -527,7 +527,7 @@
 				}
 			]
 		}],
-		"comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offender Segment.<br><br>Note: Data value School (22) was replaced by Location Codes 52 and 53 and is to be used only by agencies that have not adopted the new codes<br><br>"
+		"comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offense Segment.<br><br>Note: Data value School (22) was replaced by Location Codes 52 and 53 and is to be used only by agencies that have not adopted the new codes<br><br>"
 	},
 	{
 		"de_num": "10",
