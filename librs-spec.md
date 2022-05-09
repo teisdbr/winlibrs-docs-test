@@ -4648,6 +4648,8 @@ ___
 
 **Description:** Arrestee was Armed With is used to report what, if anything, an Arrestee had on their person that was a Weapon whenever they were brought into custody. This Data Element is not as descriptive as Weapon/Type of Force Used (DE 13), but that's because it's limited to items that the Arrestee was *in possession of*. 
 
+***Please Note:*** Only one of each weapon type is currently reportable for each Arrestee. For instance, if an Arrestee had two Handguns on them at the time of Arrest, you should only list it once. Listing it twice will cause an error for Duplicate Values to be thrown. In the future we plan to add the ability to list the quantity of weapons found on the Arrestee, but at this time we can only allow a single one of each type to be reported. 
+
 **Data Characteristics:** 3 Character Alpha. Can't be blank, must have a selection. Third Character is reserved for the 'A - Automatic' designation, which is only to be used with Firearms. Otherwise, the third character is to be a Blank Space (G). 
 
 ### Requirements:
