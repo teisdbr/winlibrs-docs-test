@@ -289,6 +289,8 @@ Segment 30, Property Segment, is used to identify that Properties are involved i
 
 We get a lot of questions about this Segment, and have included more information about it in the FAQ, which can be found [here](./faq#properties-segments-30-31-32-and-33).
 
+***Note: There should only be ONE Segment 30 per Incident***
+
 ### Segment Layout
 
    Data Element Number                            | Description of Data Element          | Position(s)   | Length   | Format
