@@ -1945,7 +1945,7 @@
 		"err_no": 16052,
 		"err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS 17 AND YOUNGER",
 		"err_desc": {
-			"52": "If Age of Arrestee (DE 47) is under 18 (17 and younger), then Disposition of Arrestee Under 18 (DE 52) must be entered.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
+			"52": "If Age of Arrestee (DE 47) is under 18 (17 and younger), then Disposition of Arrestee Under 18 (DE 52) must be entered.<br><br>The Federal UCR program considers juveniles as under 18 years of age regardless of state law. The LIBRS program will stay aligned with the FBI even though the Juvenile Age definition has changed. If the arrestee is 17 and considered an adult in Louisiana after April 19, 2024, please use A – Referred to Criminal or Adult Court."
 		}
 	},
 	"16053": {

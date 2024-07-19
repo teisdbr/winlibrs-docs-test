@@ -3,9 +3,9 @@ title: LIBRS Data Element Available Values
 layout: default
 permalink: /data-element-values
 ---
-
 # LIBRS Data Element Available Values
-____
+
+---
 
 <table>
 <thead>
@@ -32,7 +32,7 @@ ____
 					{% for values in subsection.values %}
 					<tr>
             			<td style="vertical-align: top; text-align: right; padding-left:0px; padding-right:0px; white-space: nowrap; min-width: 25px">{{values.code}}</td>
-						<td style="vertical-align: top; padding-left:0px; padding-right:0px;">&nbsp;-&nbsp;</td>
+						<td style="vertical-align: top; padding-left:0px; padding-right:0px;"> - </td>
             		    <td style="vertical-align: top; padding-left:0px;">{{values.desc}}</td>
             		</tr>
 					{% endfor %}
@@ -46,13 +46,13 @@ ____
 </tbody>
 </table>
 
-<br><br>
+`<br><br>`
 
 # Allowable Property Loss Types (DE 14) By NIBRS and Attemped/Completed
 
-___
+---
 
-The following table outlines the values that are allowed to be used for data Element 14, Property Loss Type, when an Offense of a particular NIBRS Code is either Attempted or Completed. 
+The following table outlines the values that are allowed to be used for data Element 14, Property Loss Type, when an Offense of a particular NIBRS Code is either Attempted or Completed.
 
 <table>
 <thead>
