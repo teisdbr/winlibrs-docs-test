@@ -1,0 +1,23 @@
+name: Deploy PR Previews
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types:
+      - opened
+      - synchronize
+concurrency: preview-${{ github.ref }}
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:        
+      - uses: actions/checkout@v3
+      - name: Deploy PR Preview
+        uses: teisdbr/pr-preview-action@v1.4.7
+        with:
+          token: ${{ secrets.PR-Preview-Action }}
+          preview-branch: master
+          source-dir: .
+          umbrella-dir: pr-preview
+          action: auto
