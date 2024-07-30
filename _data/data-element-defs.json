@@ -2319,7 +2319,7 @@
 	}, {
 		"de_num": "52",
 		"name": "DISPOSITION OF ARRESTEE UNDER 18",
-		"definition": "Used only if the arrestee was 16 years of age or younger at the time of arrest.",
+		"definition": "Mandatory field for ANY Arrestee that is 17 years of age or younger. The Federal UCR program considers juveniles as under 18 years of age regardless of state law. The LIBRS program will stay aligned with the FBI and collect this field for arrestees 17 and younger even though this differs from the latest state Juvenile Age Definition.\n\nIf the arrestee is 17 and considered an adult in Louisiana after April 19, 2024, please use A – Referred to Criminal or Adult Court.",
 		"length": "1",
 		"format": "A",
 		"comment": "",

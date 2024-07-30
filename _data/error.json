@@ -1945,7 +1945,7 @@
 		"err_no": 16052,
 		"err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS 17 AND YOUNGER",
 		"err_desc": {
-			"52": "If Age of Arrestee (DE 47) is under 18 (17 and younger), then Disposition of Arrestee Under 18 (DE 52) must be entered.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
+			"52": "If Age of Arrestee (DE 47) is under 18 (17 and younger), then Disposition of Arrestee Under 18 (DE 52) must be entered.<br><br>The Federal UCR program considers juveniles as under 18 years of age regardless of state law. The LIBRS program will stay aligned with the FBI even though the Juvenile Age definition has changed. If the arrestee is 17 and considered an adult in Louisiana after April 19, 2024, please use A – Referred to Criminal or Adult Court."
 		}
 	},
 	"16053": {
@@ -2393,9 +2393,10 @@
 	"22100": {
 		"active": "true",
 		"err_no": 22100,
-		"err_message": "AGE MUST BE '01' - '17' FOR JUVENILE OFFENSES",
+		"err_message": "AGE MUST BE '01' - '16' FOR JUVENILE OFFENSES",
 		"err_desc": {
-			"47": "When Juvenile Qualifiers are used, Age of Arrestee (DE 47) must be '01' thru '17' (this includes 17) for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
+			"47": "When Juvenile Qualifiers are used, Age of Arrestee (DE 47) must be '01' thru '16' (this includes 16) for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}The Louisiana Juvenile Age definition has changed over the years. LIBRS uses the age along with the incident date to validate the Juvenile Qualifiers according to the following rules:<ul><li>Prior to March 1, 2019, the Juvenile age is 16 and younger.</li><li>March 1, 2019 – April 18, 2024, the juvenile age is 17 and younger.</li><li>On or after April 19, 2024, the Juvenile age is 16 and younger.</li></ul>",
+			"37": "When Juvenile Qualifiers are used, Age of Offender [At Time of Incident] (37) must be ‘01’ thru ‘16’ (this includes 16) for the following Juvenile Qualifiers:{::nomarkdown}<ul><li>(JU:RUN) Runaway Offense (90I)</li><li>(JU:UNG) Ungovernable (90C)</li><li>(JU:CUR) Curfew (90B)</li><li>(JU:TRU) Truancy (90Z)</li></ul>{:/}The Louisiana Juvenile Age definition has changed over the years. LIBRS uses the age along with the incident date to validate the Juvenile Qualifiers according to the following rules:<ul><li>Prior to March 1, 2019, the Juvenile age is 16 and younger.</li><li>March 1, 2019 – April 18, 2024, the juvenile age is 17 and younger.</li><li>On or after April 19, 2024, the Juvenile age is 16 and younger.</li></ul>"
 		}
 	},
 	"22105": {
