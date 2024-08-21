@@ -32,10 +32,31 @@ Currently the JSON Validator is hosted at [https://json.librs.org:5000](https://
 | /api/fftojson         | A LIBRS Flat File (Whole thing, Header to Footer). Can contain as many incidents as desired. Body should be formatted as text/plain. No authentication/authorization is required for use.         | This Endpoint will take an existing LIBRS Flat File, and convert it to an RVO. This is useful when first getting started so you can see how the old Flat File segments have been converted into Objects. This endpoint does not store any data, and cannot be used for monthly submissions. |
 | /api/validatefftojson | A LIBRS Flat File (Whole thing, Header to Footer). Can contain as many incidents as desired. Body should be formatted as text/plain. No authentication/authorization is required for use.         | Similar to FFtoJSON, this endpoint will also validate the converted JSON File, returning both the converted RVO and validations of the Incident(s) to the User.                                                                                                                             |
 
-<br/>
-Note: As of 10/2021, the JSONValidate Endpoint has been set to validation-only mode. When sufficient testing with vendors has been performed, we'll enable it to also allow for data to be directly submitted through that endpoint.
 
-<br/>
+### JSON Process
+
+* Validation:
+  * The JSONValidate public endpoint is currently in "validation-only" mode, meaning it only checks the validity of the data without storing or tracking it. Agencies can use this endpoint as frequently as needed, independent of the actual submission process
+* Submission:
+  * Agencies submit JSON files to their designated LIBRS FTP data folder.
+  * Each JSON file should correspond to a specific report month. See the LIBRS Data model for the JSON format.
+* Processing:
+  * The LIBRS batch processor will handle the files once submitted.
+  * The files are processed in "submit" mode, and automated emails and files are generated and placed into the agencies' corresponding FTP folders.
+  * The JSON file is moved to “Processed” FTP folder appended with the LIBRS run number.
+* Handling Errors:
+  * Files that fail validation are moved to a “failed” FTP folder.
+  * Files submitted out of sequence or before the agency's start date are moved to an “outofsequence” FTP folder.
+  * Logs are created to document the failure for review and troubleshooting.
+* Post-Processing:
+  * Scorecard and error detail reports are available in the agencies' FTP folders.
+  * Interactive analytics are accessible via TrackCrime.
+  * If the agency is certified, accepted LIBRS data is forwarded to the FBI.
+* Security and Authorization:
+  * Agencies must use their LIBRS FTP credentials to ensure authorized submissions.
+  * Agencies that need to test submissions with a new vendor or during transitions may require a separate Agency and FTP account for the recertification period.
+
+
 
 ## Root Validation Object
 
@@ -50,7 +71,8 @@ This is the primary object that is used in the JSON Validator. It contains the f
 | AgencyName                          | String                  | Descriptive Name of the Agency                                                                                    | No (Legacy DE - Not used in validation) |
 | SoftwareID                          | String                  | Name of the RMS Generating the Data                                                                               | Yes                                     |
 | SoftwareVersion                     | String                  | Version of the RMS Generating the Data                                                                            | Yes                                     |
-| ForSubmission                       | Boolean                 | Boolean that tells us if you're just validating the data in the file, or if you want to actually submit it to us. | No (Assumed False if missing or NULL)   |
+| ForSubmission                       | Boolean                 | Set this Booleen to False for validation mode. Agencies can use the API to validate data as needed. If the JSON file is submitted via the agency’s FTP, this booleen will automatically be set to true and picked up through the LIBRS JSON batch processor. 
+ | No (Assumed False if missing or NULL)   |
 | ZeroReport                          | Boolean                 | Boolean that tells us there's no data for this Agency for the specified Reporting Period and Year                 | No (Assumed False if missing or NULL)   |
 | [IncidentList](#librs-incident-object) | List of Librs Incidents | The actual Incident Data in the form of a List of the LibrsIncident object.                                       | Yes                                     |
 
@@ -125,7 +147,7 @@ Before we get too far into things, here's a quick example of the entire RVO (Roo
             "offender": [
                 {
                     "offenderSeqNum": 1,
-                    "age": 0,
+                    "age": "0",
                     "estimatedAge": false,
                     "dob": null,
                     "sex": "M",
@@ -418,7 +440,7 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 "offender": [
                 {
                     "offenderSeqNum": 1,
-                    "age": 37,
+                    "age": "37",
                     "estimatedAge": false,
                     "dob": null,
                     "sex": "M",
@@ -469,7 +491,7 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
                 {
                     "victimSeqNum": 1,
                     "victimType": "I",
-                    "age": 33,
+                    "age": "33",
                     "estimatedAge": false,
                     "dob": null,
                     "sex": "F",
@@ -537,7 +559,7 @@ This is a C# Object that represents the existing Arrestee Segment (60) from the 
                     "arrestDate": "2020-07-01T00:00:00Z",
                     "arrestType": "O",
                     "multipleArresteeIndicator": "N",
-                    "age": 37,
+                    "age": "37",
                     "dob": "1980-01-31T00:00:00Z",
                     "sex": "M",
                     "gender": "   ",
