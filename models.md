@@ -18,7 +18,7 @@ These models are meant to be a simplification of the existing Flat File format, 
 
 <br/>
 
-## Quick Start
+## [Quick Start](#quick-start)
 
 To get down to it, the easiest way to start incorporating the LIBRS JSON models would be to convert existing Flat Files to JSON Format, and compare the inputs and outputs. You can do this with the ValidateFFtoJSON Endpoint. See below for details. You can also view more in-depth information on the Swagger Page for the API: [https://json.librs.org:5000/swagger/index.html](https://json.librs.org:5000/swagger/index.html) ***Note:*** It's been brought to our attention that Swagger will remove the New Line characters from the request, which will cause the FFToJson and ValidateFFToJson requests to fail. The recommended workaround is to use Postman.
 
@@ -32,33 +32,34 @@ Currently the JSON Validator is hosted at [https://json.librs.org:5000](https://
 | /api/fftojson         | A LIBRS Flat File (Whole thing, Header to Footer). Can contain as many incidents as desired. Body should be formatted as text/plain. No authentication/authorization is required for use.         | This Endpoint will take an existing LIBRS Flat File, and convert it to an RVO. This is useful when first getting started so you can see how the old Flat File segments have been converted into Objects. This endpoint does not store any data, and cannot be used for monthly submissions. |
 | /api/validatefftojson | A LIBRS Flat File (Whole thing, Header to Footer). Can contain as many incidents as desired. Body should be formatted as text/plain. No authentication/authorization is required for use.         | Similar to FFtoJSON, this endpoint will also validate the converted JSON File, returning both the converted RVO and validations of the Incident(s) to the User.                                                                                                                             |
 
+<br/>
 
 ### JSON Process
 
-* Validation:
-  * The JSONValidate public endpoint is currently in "validation-only" mode, meaning it only checks the validity of the data without storing or tracking it. Agencies can use this endpoint as frequently as needed, independent of the actual submission process
-* Submission:
+* **Validation**:
+  * **The JSONValidate public endpoint is currently in "validation-only" mode, meaning it only checks the validity of the data without storing or tracking it. Agencies can use this endpoint as frequently as needed, independent of the actual submission process**
+* **Submission:**
   * Agencies submit JSON files to their designated LIBRS FTP data folder.
   * Each JSON file should correspond to a specific report month. See the LIBRS Data model for the JSON format.
-* Processing:
+* **Processing:**
   * The LIBRS batch processor will handle the files once submitted.
   * The files are processed in "submit" mode, and automated emails and files are generated and placed into the agencies' corresponding FTP folders.
   * The JSON file is moved to “Processed” FTP folder appended with the LIBRS run number.
-* Handling Errors:
+* **Handling Errors:**
   * Files that fail validation are moved to a “failed” FTP folder.
   * Files submitted out of sequence or before the agency's start date are moved to an “outofsequence” FTP folder.
   * Logs are created to document the failure for review and troubleshooting.
-* Post-Processing:
+* **Post-Processing:**
   * Scorecard and error detail reports are available in the agencies' FTP folders.
   * Interactive analytics are accessible via TrackCrime.
   * If the agency is certified, accepted LIBRS data is forwarded to the FBI.
-* Security and Authorization:
+* **Security and Authorization:**
   * Agencies must use their LIBRS FTP credentials to ensure authorized submissions.
   * Agencies that need to test submissions with a new vendor or during transitions may require a separate Agency and FTP account for the recertification period.
 
+<br/>
 
-
-## Root Validation Object
+## [Root Validation Object](#root-validatior-object)
 
 This is the primary object that is used in the JSON Validator. It contains the following properties/objects:
 
@@ -710,3 +711,5 @@ Another way to look at it is this is all the stuff you had to repeat on every si
 | ExpansionBuffer   | String    | Blank Space left for future expansion                                             | No       |
 | SegmentEnd        | String    | ZZ at the end of the data                                                         | No       |
 | Padding           | String    | Blank Spaces to make the line 150 Characters long.                                | No       |
+
+<br/>

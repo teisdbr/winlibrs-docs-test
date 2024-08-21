@@ -9,9 +9,7 @@ permalink: /
 ____
 
 
-<img src="images/JSON2.png" alt="Json is coming" width="600"/>
-
-Our JSON Validator is now in Beta, and available to all vendors to use!
+## ***Our JSON Validator is now in Beta, and available to all vendors to use!***
 
 Please refer to [https://docs.librs.org/models](https://docs.librs.org/models) and [https://json.librs.org:5000/swagger/index.html](https://json.librs.org:5000/swagger/index.html) for information about how to use them. At this stage in the project, the information that should be supplied with each Data Element should be the same as it is on the Flat File (EG: Drug Measurement Type Dosage Unit should be sent as "DU"). In the future, however, we'll implement a dictionary that will allow for whole word submissions to make things easier to read for everyone (EG: "Dosage Unit" instead of "DU").
 
@@ -46,12 +44,69 @@ ___
 
 ___
 
+
+### Change Log:
+
+#### 2024-08-21
+* Updated formatting and change log
+* Updated JSON Process documentation
+
+#### 2024-08-16
+* Changed data type of Offender Age to string, to match Victim and Arrestee segments
+
+#### 2024-07-30
+* Updated documenation to reflect Louisiana SB-3. Now, people are automatically considered an adult (by Louisiana law, not federal law) if they are age 17 or older at the time of arrest.
+
+#### 2024-07-03
+* Security updates
+
+#### 2024-05-31
+* Bug fixes for WINLIBRS
+  * Fixed configuration errors
+  * Fixed bug that assigned effective date to expiration date when validating LARS codes.
+* Bug fixes for standalone XML Validator
+
+#### 2024-05-16
+* Added 40C NIBRS Code and accompanying logic
+* Fixed bug when NIBRS Code is missing or invalid
+* Added validation when both LRS and NIBRS codes are missing or invalid.
+* Fixed bug with Arrestee Segments
+
+#### 2024-05-10
+* Updated SSL certificates for FBI submissions
+
+#### 2024-05-02
+* Bug fix for Animal Cruelty (720 NIBRS code) - incorrect LCRX code value mapping for data element 12 Criminal Activity (I is changed to P and it should not be changed at all)
+
+#### 2024-04-26
+* Updated self-signed lcrx.librs.org SSL certificates for the FBI
+
+#### 2024-04-03
+* Security updates
+* Bug fixes
+
+#### 2023-06-29
+* Remove unnecessary code
+
+#### 2023-05-30
+* Bug fix for System.OutOfMemoryException
+* Updates to provide more accurate error messaging in the Web Validator.
+
+#### 2023-03-10
+*  Changed Scorecard Report to allow ORI number to have a number or letter for the last character.
+
+#### 2022-10-13
+* Update from .NET Framework 4.5.2 to .NET Framework 4.8
+
+#### 2022-04-20
+* Improved logic for whether or not the Victim Injury Segment can be ignored.
+* Fixed Unknown LRS Code/NIBRS Only Validation automatically marking Incidents as accepted.
+* Patched bug that removed Segment 51 when LRS Code wasn't known.
+
 #### 2022-04-18
 * Introduced an unexpected bug with the warning Logic from last week that caused Non-Numeric Ages to fail when processing. 
-  * That's my bad, sorry. 
-  * Any files that failed over the weekend (04/13 - 04-18) have been reprocessed. Again, sorry for the confusion. 
 * Fixed a bug where Offenses that we didn't know the LRS/NIBRS Pairing were being marked as accepted and skewing counts.
-* Reworded a couple of Warnings to make them... Well, to make them make sense, I guess:
+* Reworded a couple of Warnings:
   * 90017: ~~LRS-TO-NIBRS PAIR MUST HAVE A VALID MAPPING~~ UNKNOWN LRS-TO-NIBRS - OFFENSE WILL BE VALIDATED ON NIBRS CODE ONLY
   * 90040: ~~WARNING: OFFENDER AGE, SEX OR RACE MUST BE KNOWN TO HAVE OFFENDER SEQUENCE NUMBER OTHER THAN '000'~~ WARNING: OFFENDER WITH NON '000' SEQUENCE NUMBER WAS ENTERED BUT HAS NO KNOWN ATTRIBUTES - VERIFY THIS WAS INTENTIONAL AND SHOULDN'T BE A '000' UNKNOWN OFFENDER
 
@@ -72,9 +127,7 @@ ___
   * If you send a Zero Report then you'll see all Zeros, except for in the Percentage Calculation since that's one of those "destory the universe by dividing by zero" situations. 
 
 #### 2022-03-14
-* We've been scouring over hundreds of thousands of incidents, making corrections to our LIBRS Validation and NIBRS Extraction where required. This has primarily included Type of Criminal Activity Validation, which had a mild oopsie. I made it too restrictive and forgot to include the LIBRS Values that will get translated to "P" in NIBRS - what I get for copy/pasting. Sorry about that, we're reprocessing all of the affected data so it doesn't hurt your scores
-* Overall, things are looking really great. If you don't have your data in yet, do it now. The deadline is midnight tonight. 
-
+* We've been scouring over hundreds of thousands of incidents, making corrections to our LIBRS Validation and NIBRS Extraction where required. This has primarily included Type of Criminal Activity Validation, which had a mild oopsie. I made it too restrictive and forgot to include the LIBRS Values that will get translated to "P" in NIBRS.
 
 #### 2022-02-23
 * Added Error 10079, which gets thrown if you include recovered vehicle properties that are only associated with a NIBRS 280 Offense in DE 19 - Number of Recovered Vehicles. Those vehicles should not be included in that count according to NIBRS. 
@@ -85,20 +138,15 @@ ___
 * Began the 2020 and 2021 data reprocessing. 
 
 #### 2021-10-11
-Kind of beenawhile since I updated this, sorry about that. 
 * Relaxed the requirement for Group A Offenses to have a matching NIBRS/LRS Pair
   * You will now only get a warning instead of an Error if you give us a Group A Offense that we don't have a matching NIBRS Code for. 
   * Group B's will still get an error, and anything that we have an Expired NIBRS Mapping for will also get an error (because we know that Mapping is not valid).
-* Caused a whole big thing with 14:79 Crime Against Person vs Society. We rolled that back so that Crime Against Person is has now been valid the entire year. We apologize for all of the confusion this one caused. 
+* Caused a bug with 14:79 Crime Against Person vs Society. We rolled that back so that Crime Against Person is has now been valid the entire year. We apologize for all of the confusion this has caused. 
 * Fixed an erroneous Error 84212 getting thrown on NIBRS 100's.
-* Broke, then fixed emails coming from LIBRS. Again, sorry about that one. 
-* ~~Scorecard emails now point you to https://trackcrime.org, which is the new data repository for LIBRS info that's accessible to Agencies.~~
+* Broke, then fixed emails coming from LIBRS.
 * Fixed a bug that disallowed 520's from having a Seized Property associated with them. 
 * Changed it so that if any Juveniles are present in an Incident, then it's OK to have Juvenile-only Offenses. 
   * We were running into cases where since things like JU:RUN are a Crime Against Society, and so are things like Contributing to the Deliquency of a Minor, LIBRS was thinking that Adults should be associated with JU:RUN because both Offenders link to the same Victim. 
-* Did that whole JSON Validator thing, if you managed to not see that. 
-
-
 
 #### 2021-06-22
 * Added Error 13050, which is thrown when you supply values for Number of Stolen or Number of Recovered Vehicles, and there are no Offenses that meet the required criteria to supply them. 
@@ -145,14 +193,11 @@ Kind of beenawhile since I updated this, sorry about that.
 * Added Sample Scenarios to the FAQ. We'll be building this list up as the year goes on. 
 
 #### 2021-01-13
-* Happy New Year to you all!
 * There's a lot confusion around a new error we've recently added: LIBRS Error 90044 (Based on NIBRS Error 085). 
   * In the [IEPD XML Documentation](https://www.fbi.gov/file-repository/ucr/ucr-2019-1-nibrs-xml-developers-guide.pdf), on Page 104 it states that DE 34 (Subject/Victim Association) must be included if it's a Crime Against Person or Property (first bullet point). 
   * Further down, Error 085 talks about how if more than one Offender is in an Incident, and the Victim is related to a Crime Against Person or a Robbery, then at least two Offenders should be related to that Victim. 
   * When we got to thinking about it, there was confusion of if this meant we now needed to include V/O Data on Crimes Against Property, as well. Assuming that the full text requirements of the Data Element were correct, we went with that and added Error 90044 to LIBRS, using the wording for NIBRS Error 085, but substituting Robbery for Crimes Against Property. 
   * However, we failed to consider the confusion it would cause due to it now implying that all Crimes Against Property should have Victim/Offender Relationship data. That wording led to some Vendors making it so that V/O Data was included in all Crimes Against Property, which gave them a number of 15059 Errors stating that they shouldn't be including that. 
-
-So to sum all that up, we got confused and as a result wrote a confusing Error Message, which then went on lead to more confusion down the line. We (I) want to apologize for that, and let you know that we've updated it so it only applies to Persons and Robberies, and is in line with the existing requirements for Error 15059. 
 
 #### 2020-12-16
 * Consolidated the requirements for Data Element 14 (Property Loss Type). We had several Error Codes that weren't listed in the documentation that effectively just said "You can't use that Property Loss Type with this Offense Code". 
