@@ -6261,7 +6261,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-### Subsection 16:  PROSTITUTION OFFENSES (40A, 40B)
+### Subsection 16:  PROSTITUTION OFFENSES (40A, 40B, 40C)
 
 ___
 

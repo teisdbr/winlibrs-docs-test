@@ -2846,7 +2846,7 @@
 	"84016": {
 		"active": "true",
 		"err_no": 84016,
-		"err_message": "WHEN LRS = 40A OR 40B, DE 25 MUST EQUAL 'S'.",
+		"err_message": "WHEN LRS = 40A, 40B, OR 40C, DE 25 MUST EQUAL 'S'.",
 		"mandatory": {
 			"4s16": "When an Incident contains PROSTITUTION OFFENSES (NIBRS Code 40A AND 40B), then Type of Victim (DE 25) MUST be Society ('S')."
 		}
