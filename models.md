@@ -72,8 +72,7 @@ This is the primary object that is used in the JSON Validator. It contains the f
 | AgencyName                          | String                  | Descriptive Name of the Agency                                                                                    | No (Legacy DE - Not used in validation) |
 | SoftwareID                          | String                  | Name of the RMS Generating the Data                                                                               | Yes                                     |
 | SoftwareVersion                     | String                  | Version of the RMS Generating the Data                                                                            | Yes                                     |
-| ForSubmission                       | Boolean                 | Set this Booleen to False for validation mode. Agencies can use the API to validate data as needed. If the JSON file is submitted via the agency’s FTP, this booleen will automatically be set to true and picked up through the LIBRS JSON batch processor. 
- | No (Assumed False if missing or NULL)   |
+| ForSubmission                       | Boolean                 | Set this Booleen to False for validation mode. Agencies can use the API to validate data as needed. If the JSON file is submitted via the agency’s FTP, this booleen will automatically be set to true and picked up through the LIBRS JSON batch processor. | No (Assumed False if missing or NULL)   |
 | ZeroReport                          | Boolean                 | Boolean that tells us there's no data for this Agency for the specified Reporting Period and Year                 | No (Assumed False if missing or NULL)   |
 | [IncidentList](#librs-incident-object) | List of Librs Incidents | The actual Incident Data in the form of a List of the LibrsIncident object.                                       | Yes                                     |
 
