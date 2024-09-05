@@ -464,7 +464,7 @@
 			"l47": "The date supplied for Date of Birth of Arrestaee (DE L47) is not valid. Please ensure that the supplied date is in the MMDDYYY Format. Additionally this value cannot be all zeros, it must be a real date.",
 			"c3": "The date supplied for the Submission Date (DE C3) is not valid. Please ensure that the supplied date is in the MMDDYYY Format.",
 			"l37": "The date supplied for the Date of Birth of Offender (DE L37) is not valid. Please ensure that the supplied date is in the MMDDYYY Format.",
-			"l26": "The date supplied for the Date of Birth of Offender (DE L37) is not valid. Please ensure that the supplied date is in the MMDDYYY Format."
+			"L26": "The date supplied for the Date of Birth of Offender (DE L37) is not valid. Please ensure that the supplied date is in the MMDDYYY Format."
 		}
 	},
 	"11015": {
@@ -2539,7 +2539,7 @@
 		"err_no": 25010,
 		"err_message": "AGE CANNOT BE ESTIMATE IF DATE OF BIRTH AND INCIDENT DATE IS KNOWN",
 		"err_desc": {
-			"l26": "If entered, and Incident Date/Hour (3) contains the actual incident date, then Age of Victim (26) *at the time of the incident* must be an exact age.",
+			"L26": "If entered, and Incident Date/Hour (3) contains the actual incident date, then Age of Victim (26) *at the time of the incident* must be an exact age.",
 			"26": "**Estimated Age:** Age CANNOT be an estimate if Date of Birth of Victim (L26) is entered, and Incident Date/Hour (3) is an actual Incident Date (that is, not a Report date ('R'))."
 		}
 	},
@@ -2553,7 +2553,7 @@
 		"err_no": 25030,
 		"err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
 		"err_desc": {
-			"l26": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
+			"L26": "Each component of the date must be valid: {::nomarkdown}<ul><li>Months must be 01-12</li><li>Days must be 01-31</li><li>Year must be four digits</li><li>Days CANNOT exceed maximum for the month (e.g., June CANNOT have 31 days)</li><li>Date CANNOT be greater than that entered within the Month of Data Submission and Year of Data Submission field on the data record</li></ul>{:/}EG: Month of Data Submission and Year of Data Submission are '06/2014', the Date of Birth of Victim (L26) CANNOT contain any date 07/01/2014 or greater."
 		}
 	},
 	"25031": {
@@ -2561,7 +2561,7 @@
 		"err_no": 25031,
 		"err_message": "MUST BE ON OR BEFORE INCIDENT DATE AND HOUR",
 		"err_desc": {
-			"l26": "MUST be on or before Incident Date/Hour (3)."
+			"L26": "MUST be on or before Incident Date/Hour (3)."
 		}
 	},
 	"25202": {
