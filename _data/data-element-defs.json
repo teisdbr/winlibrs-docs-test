@@ -123,7 +123,7 @@
 	{
 		"de_num": "8",
 		"name": "OFFENDER SUSPECTED OF USING/GAMING MOTIVATION",
-		"definition": "Indicates if the Offender was suspected of consuming alcohol or using drugs/narcotics during or shortly before the incident; or of using a computer to perpetrate the crime.<br><br>Also identifies whether the Offender’s gaming activity was the motive for commission of the crime.",
+		"definition": "Indicates if the Offender was suspected of consuming alcohol or using drugs/narcotics during or shortly before the incident; or of using a computer to perpetrate the crime.<br/><br/>Also identifies whether the Offender’s gaming activity was the motive for commission of the crime.",
 		"length": "1",
 		"format": "A",
 		"subsection": [{
@@ -150,7 +150,7 @@
 				}
 			]
 		}],
-		"comment": "This Data Element is located within Offender Segment.<br><br>Can enter up to four codes per Offender. "
+		"comment": "This Data Element is located within Offender Segment.<br/><br/>Can enter up to four codes per Offender. "
 	},
 	{
 		"de_num": "8A",
@@ -331,7 +331,7 @@
 				]
 			}
 		],
-		"comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offender Segment."
+		"comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br/><br/> The data element is located within Offender Segment."
 	},
 	{
 		"de_num": "9",
@@ -527,7 +527,7 @@
 				}
 			]
 		}],
-		"comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br><br> The data element is located within Offense Segment.<br><br>Note: Data value School (22) was replaced by Location Codes 52 and 53 and is to be used only by agencies that have not adopted the new codes<br><br>"
+		"comment": "These codes are presented for Legacy Reference for old data and should no longer be used. <br/><br/> The data element is located within Offense Segment.<br/><br/>Note: Data value School (22) was replaced by Location Codes 52 and 53 and is to be used only by agencies that have not adopted the new codes<br/><br/>"
 	},
 	{
 		"de_num": "10",
@@ -563,7 +563,7 @@
 		"definition": "Provides additional information on the criminal activity and gang information of the Offender.",
 		"length": "1",
 		"format": "A",
-		"comment": "For Type of Criminal Activity, use ONLY if one of the following Offenses:<ul><li>250 - Counterfeiting/Forgery</li><li>280 - Stolen Property Offenses</li><li>35A & 35B - Drug/Narcotic Offenses</li><li>39C - Gambling Equip. Violations</li><li>370 - Pornography Materials</li><li>520 - Weapons Law Violations</li><li>90A - Bad Checks</li><li>90Z - 'Crime Against Property' Offenses</li><li>720 - Animal Cruelty</li></ul>Note: Can enter up to THREE codes of TYPE OF CRIMINAL ACTIVITY for each offense. Codes A, F, I and S may only be used for 720 Animal Cruelty Offenses.<br><br>For Gang Information, use only if the crime is one of the following offenses codes of “J”, ” G”, or ”N”: <ul><li>09A - Murder and Nonnegligent Manslaughter</li><li>09B - Negligent Homicide</li><li>100 - Kidnaping or Abduction</li><li>120 - Robbery</li><li>11A - Forcible Rape</li><li>11B - Forcible Sodomy</li><li>11C - Sexual Assault with An Object</li><li>11D - Forcible Fondling</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>Note: Can enter up to TWO codes of GANG INFORMATION for each offense.",
+		"comment": "For Type of Criminal Activity, use ONLY if one of the following Offenses:<ul><li>250 - Counterfeiting/Forgery</li><li>280 - Stolen Property Offenses</li><li>35A & 35B - Drug/Narcotic Offenses</li><li>39C - Gambling Equip. Violations</li><li>370 - Pornography Materials</li><li>520 - Weapons Law Violations</li><li>90A - Bad Checks</li><li>90Z - 'Crime Against Property' Offenses</li><li>720 - Animal Cruelty</li></ul>Note: Can enter up to THREE codes of TYPE OF CRIMINAL ACTIVITY for each offense. Codes A, F, I and S may only be used for 720 Animal Cruelty Offenses.<br/><br/>For Gang Information, use only if the crime is one of the following offenses codes of “J”, ” G”, or ”N”: <ul><li>09A - Murder and Nonnegligent Manslaughter</li><li>09B - Negligent Homicide</li><li>100 - Kidnaping or Abduction</li><li>120 - Robbery</li><li>11A - Forcible Rape</li><li>11B - Forcible Sodomy</li><li>11C - Sexual Assault with An Object</li><li>11D - Forcible Fondling</li><li>13A - Aggravated Assault</li><li>13B - Simple Assault</li><li>13C - Intimidation</li></ul>Note: Can enter up to TWO codes of GANG INFORMATION for each offense.",
 		"subsection": [{
 				"title": "Criminal Activity",
 				"values": [{
@@ -648,7 +648,7 @@
 		"definition": "The type(s) of weapon(s), or force, used by the Offender in committing the Offense.",
 		"length": "3",
 		"format": "A/N",
-		"comment": "Use this data element ONLY if crime is one of the following Offenses: {::nomarkdown}<ul><li>09A, 09B, 09C Homicide Offenses</li><li>100 Kidnaping or Abduction</li><li>11A, 11B, 11C, 11D Forcible Sex Offenses</li><li>120 Robbery</li><li>13A Assault Offenses</li><li>64A Human Trafficking and Commercial Sex Acts</li><li>64B Human Trafficking and Involuntary Servitude</li><li>210 Extortion/Blackmail</li><li>520 Weapon Law Violations</li></ul>{:/}<br><br>If weapon is an Automatic Weapon (capable of continued fire if the trigger is held down), append an 'A' to the weapon code as a third character.<br><br>",
+		"comment": "Use this data element ONLY if crime is one of the following Offenses: {::nomarkdown}<ul><li>09A, 09B, 09C Homicide Offenses</li><li>100 Kidnaping or Abduction</li><li>11A, 11B, 11C, 11D Forcible Sex Offenses</li><li>120 Robbery</li><li>13A Assault Offenses</li><li>64A Human Trafficking and Commercial Sex Acts</li><li>64B Human Trafficking and Involuntary Servitude</li><li>210 Extortion/Blackmail</li><li>520 Weapon Law Violations</li></ul>{:/}<br/><br/>If weapon is an Automatic Weapon (capable of continued fire if the trigger is held down), append an 'A' to the weapon code as a third character.<br/><br/>",
 		"subsection": [{
 			"title": "",
 			"values": [{
@@ -1202,7 +1202,7 @@
 		"definition": "Used in quantifying drugs or narcotics seized in a drug incident. The same drugs or narcotics code CANNOT be entered within the same “Type of Measurement” category, but could be reported if in different categories.",
 		"length": "2",
 		"format": "A",
-		"comment": "For example, if two one-pound bags of marijuana are seized, they CANNOT be reported as two separate property seizures of one pound each, but instead should be reported as one seizure of two pounds of marijuana. <br><br>On the other hand, if a one-pound bag and a three-ounce bag of marijuana are seized, then they should be reported separately as a one-pound bag and a three-ounce bag.<br><br> <br><br>Note: XX = should be used for any category of drug when the substance is awaiting lab analysis<br><br>",
+		"comment": "For example, if two one-pound bags of marijuana are seized, they CANNOT be reported as two separate property seizures of one pound each, but instead should be reported as one seizure of two pounds of marijuana. <br/><br/>On the other hand, if a one-pound bag and a three-ounce bag of marijuana are seized, then they should be reported separately as a one-pound bag and a three-ounce bag.<br/><br/> <br/><br/>Note: XX = should be used for any category of drug when the substance is awaiting lab analysis<br/><br/>",
 		"subsection": [{
 				"title": "Weight Category",
 				"values": [{
@@ -1278,7 +1278,7 @@
 		"definition": "Used to link each offense to each victim. That is, the offense       which was perpetrated against the victim during the incident.",
 		"length": "3",
 		"format": "N",
-		"comment": "Must have an offense segment for each victim. (e.g. 3 rape victims) Even though the same LRS was violated during the incident, this LRS code must be submitted for each victim. One offense segment of 14:42/ V must be submitted for each victim. <br><br>Note: This Data Element is in the Offense Segment.<br><br>"
+		"comment": "Must have an offense segment for each victim. (e.g. 3 rape victims) Even though the same LRS was violated during the incident, this LRS code must be submitted for each victim. One offense segment of 14:42/ V must be submitted for each victim. <br/><br/>Note: This Data Element is in the Offense Segment.<br/><br/>"
 	},
 	{
 		"de_num": "25",
@@ -1438,7 +1438,7 @@
 		"definition": "",
 		"length": "3",
 		"format": "A/N",
-		"comment": "If the victim was a person (that is, Type of Victim (Data Element 25) is Individual ('I') or Law Enforcement ('L'), then his/her age is to be entered into this data element.<br><br>If the Victim's EXACT AGE IS UNKNOWN, enter estimated age of Victim and append an 'E' into third character (for example, '49E'). If it is impossible to determine even an estimated age of the victim, then enter Unknown ('00') and leave the third character blank.<br><br>",
+		"comment": "If the victim was a person (that is, Type of Victim (Data Element 25) is Individual ('I') or Law Enforcement ('L'), then his/her age is to be entered into this data element.<br/><br/>If the Victim's EXACT AGE IS UNKNOWN, enter estimated age of Victim and append an 'E' into third character (for example, '49E'). If it is impossible to determine even an estimated age of the victim, then enter Unknown ('00') and leave the third character blank.<br/><br/>",
 		"subsection": [{
 			"title": "",
 			"values": [{
@@ -1590,7 +1590,7 @@
 		"definition": "Describes the circumstances of either an Aggravated Assault or Homicide",
 		"length": "2",
 		"format": "N",
-		"comment": "Use ONLY if Crime is: Homicide (09A, 09B or 09C), Assault Offenses (13A or 13B) only when the 13B Victim is a ‘L’ and Law Enforcement Officer. <br><br>Child Abuse (“40”) can ONLY be used when Offenses are: Murder and Nonnegligent Manslaughter (09A), Negligent Homicide (09B), Aggravated Assault (13A)<br><br>",
+		"comment": "Use ONLY if Crime is: Homicide (09A, 09B or 09C), Assault Offenses (13A or 13B) only when the 13B Victim is a ‘L’ and Law Enforcement Officer. <br/><br/>Child Abuse (“40”) can ONLY be used when Offenses are: Murder and Nonnegligent Manslaughter (09A), Negligent Homicide (09B), Aggravated Assault (13A)<br/><br/>",
 		"subsection": [{
 				"title": "Aggravated Assault and Non-Negligent Manslaughter Circumstances",
 				"values": [{
@@ -1746,7 +1746,7 @@
 		"definition": "Describes types of bodily injury suffered by a person.",
 		"length": "1",
 		"format": "A",
-		"comment": "Used only if Crime is: (100)Kidnaping/Abduction, (11A-11D)Forcible Sex Offenses, (120)Robbery, (13A,13B)Assault Offenses, (210)Extortion/Blackmail and (90Z)Crime Against Person Offenses. <br><br>Can enter as many codes as are applicable<br><br>",
+		"comment": "Used only if Crime is: (100)Kidnaping/Abduction, (11A-11D)Forcible Sex Offenses, (120)Robbery, (13A,13B)Assault Offenses, (210)Extortion/Blackmail and (90Z)Crime Against Person Offenses. <br/><br/>Can enter as many codes as are applicable<br/><br/>",
 		"subsection": [{
 			"title": "",
 			"values": [{
@@ -1944,14 +1944,14 @@
 		"definition": "Each Offender in an incident is assigned a UNIQUE sequence number",
 		"length": "3",
 		"format": "N",
-		"comment": "If '000' entered (that is, nothing is known about Offender) leave Age of Offender, Date of Birth of Offender, Sex of Offender and Race of Offender (Data Elements 37-39) Blank <br><br>000...Nothing Known About Offender. However, must submit Offender Segment (40) and Offender Using Segment (41), even if Offender is Unknown.<br><br>"
+		"comment": "If '000' entered (that is, nothing is known about Offender) leave Age of Offender, Date of Birth of Offender, Sex of Offender and Race of Offender (Data Elements 37-39) Blank <br/><br/>000...Nothing Known About Offender. However, must submit Offender Segment (40) and Offender Using Segment (41), even if Offender is Unknown.<br/><br/>"
 	}, {
 		"de_num": "37",
 		"name": "AGE OF OFFENDER [At Time of the Incident]",
 		"definition": "",
 		"length": "3",
 		"format": "N",
-		"comment": "If Offender’s exact age is Unknown, enter estimated age of Offender and append an 'E' into third character (for example: 49E). <br><br>If it is not possible to determine even an estimated age of the Offender, then enter '00' (Unknown) and leave the third character Blank<br><br>",
+		"comment": "If Offender’s exact age is Unknown, enter estimated age of Offender and append an 'E' into third character (for example: 49E). <br/><br/>If it is not possible to determine even an estimated age of the Offender, then enter '00' (Unknown) and leave the third character Blank<br/><br/>",
 		"subsection": [{
 			"title": "",
 			"values": [{
@@ -2153,7 +2153,7 @@
 		"definition": "Used to indicate whether the arrestee was armed with a commonly known weapon at the time of his/her apprehension",
 		"length": "3",
 		"format": "A/N",
-		"comment": "Append an 'A' to the Weapon code if an Automatic Weapon. (That is, place an 'A' in third character) <br><br>Can enter as many codes as are applicable.<br><br>",
+		"comment": "Append an 'A' to the Weapon code if an Automatic Weapon. (That is, place an 'A' in third character) <br/><br/>Can enter as many codes as are applicable.<br/><br/>",
 		"subsection": [{
 			"title": "",
 			"values": [{
@@ -2319,7 +2319,7 @@
 	}, {
 		"de_num": "52",
 		"name": "DISPOSITION OF ARRESTEE UNDER 18",
-		"definition": "Used only if the arrestee was 16 years of age or younger at the time of arrest.",
+		"definition": "Mandatory field for ANY Arrestee that is 17 years of age and younger. The Federal UCR program considers juveniles as under 18 years of age regardless of state law. The LIBRS program will stay aligned with the FBI and collect this field for arrestees 17 and younger even though this differs from the latest state Juvenile Age Definition.<br/><br/>If the arrestee is 17 and considered an adult in Louisiana after April 19, 2024, please use A – Referred to Criminal or Adult Court.",
 		"length": "1",
 		"format": "A",
 		"comment": "",
@@ -2353,7 +2353,7 @@
 		"definition": "This field is for reporting the Geographical Location of the incident.",
 		"length": "12",
 		"format": "N",
-		"comment": "This field is NOT REQUIRED and may be left Blank.<br><br>Optional: This field is not validated nor submitted to the FBI.<br><br>"
+		"comment": "This field is NOT REQUIRED and may be left Blank.<br/><br/>Optional: This field is not validated nor submitted to the FBI.<br/><br/>"
 	}, {
 		"de_num": "L54",
 		"name": "STATION/DIVISION/PRECINCT IDENTIFIER",

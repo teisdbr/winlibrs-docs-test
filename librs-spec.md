@@ -59,8 +59,8 @@ A/N            | Alpha/Numeric
 D              | Date           
 G (Space)      | Blank Space   
 
-<br>
-<br>
+<br/>
+<br/>
 
 ___
 
@@ -91,7 +91,7 @@ The Submission Header contains the information related to the Agency that is sub
   [C8](./librs-spec#end-of-segment-marker-c8)     |   End of Segment Marker                   |    57-58          |   2          |   A     
   [C9](./librs-spec#padding-c9)                   |   Padding                                 |    59-150         |   \*\*       |   G (Space)
 
-<br>
+<br/>
 
 
 
@@ -129,14 +129,14 @@ Segment 01 is used when there are no Incidents to report; IE a Zero Report. The 
    [C8](./librs-spec#end-of-segment-marker-c8)   | End of Segment Marker                           | 15-16         | 2        | A
    [C9](./librs-spec#padding-c9)                 | Padding                                         | 17-150        | \*\*     | A/N
 
-<br>
+<br/>
 
 ### Segment 01 Errors and Explanations
 None
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -167,7 +167,7 @@ The Administrative Segment contains basic information about the Incident that is
 |[C8](./librs-spec#end-of-segment-marker-c8)                 |End of Segment Marker                           |  83-84    |  2   |  A      |
 |[C9](./librs-spec#padding-c9)                               |Padding                                         |  85-150   | \*\* |  G (Space)   |
 
-<br>
+<br/>
 
 ### Segment 10 Errors and Explanations
 
@@ -180,7 +180,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -204,7 +204,7 @@ Segment 11, Administrative Modification, is only used when performing an update 
    [C9](./librs-spec#padding-c9)                   |Padding                           | 59-150        | \*\*     |G (Space)
 
 
-<br>
+<br/>
 
 ### Segment 11 Errors and Explanations
 
@@ -218,7 +218,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -253,14 +253,14 @@ We get a lot of questions about this Segment, and have included more information
    [C8](./librs-spec#end-of-segment-marker-c8)                                   | End of Segment Marker                                       | 81-82    | 2        | A
    [C9](./librs-spec#padding-c9)                                                 | Padding                                                     | 83-150   | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Important Notes
 * Only one Victim can be related to an Offense Segment. If you have multiple Victims of the same offense, you need to include multiple Offense Segments that link to those Victims.
 * Please note that DE's 12 and 13 are actually three Data Elements Combined into one. Each instance of the Data Element is either 1 or 3 characters long and can include up to 3 instances, so long as mutually exclusive values are not used.
    * See [Type of Criminal Activity/Gang Information Nos. 1, 2 and 3](./librs-spec#type-of-criminal-activitygang-information-12) and [Type of Weapon/Force Involved Nos. 1, 2, and 3 ](./librs-spec#type-of-weaponforce-involved-nos-1-2-and-3-13) for more details.
 
-<br>
+<br/>
 
 ### Segment 20 Errors and Explanations
 
@@ -276,7 +276,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -305,7 +305,7 @@ We get a lot of questions about this Segment, and have included more information
    [C8](./librs-spec#end-of-segment-marker-c8)                | End of Segment Marker                | 49-50         | 2        | A
    [C9](./librs-spec#padding-c9)                              | Padding                              | 51-150        | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Segment 30 Errors and Explanations
 
@@ -318,7 +318,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -350,7 +350,7 @@ We get a lot of questions about this Segment, and have included more information
    [C8](./librs-spec#end-of-segment-marker-c8)      | End of Segment Marker          | 82-83         | 2        | A
    [C9](./librs-spec#padding-c9)                    | Padding                        | 84-150        | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Segment 31 Errors and Explanations
 
@@ -363,7 +363,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -387,14 +387,14 @@ Segment 32, Property Modification, is only used when performing a Time Window Su
    [C8](./librs-spec#end-of-segment-marker-c8)     | End of Segment Marker              | 57-58         | 2        | A
    [C9](./librs-spec#padding-c9)                   | Padding                            | 59-150        | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Segment 32 Errors and Explanations
 None
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -424,7 +424,7 @@ We get a lot of questions about this Segment, and have included more information
    [C8](./librs-spec#end-of-segment-marker-c8)                | End of Segment Marker                                 | 51-52             | 2            | A
    [C9](./librs-spec#padding-c9)                              | Padding                                               | 53-150            | \*\*         | G (Space)
 
-<br>
+<br/>
 
 #### Important Notes:
 * The Property/Offense Segment is used to connect incident property (stolen, retrieved, etc.) to an offense. This connection, or relationship, is established using the Property Sequence Number (Data Element P1) and the Offense Sequence Number (Data Element L6).
@@ -438,7 +438,7 @@ An incident is submitted with a NIBRS 23H 'Crime Against Property' Offense, as w
 #### Unsuccessful Segment 33 Inference Example
 An incident is submitted with a NIBRS 23H 'Crime Against Property' Offense, as well as a NIBRS 13B 'Crime Against Person' Offense, along with one or more properties that are intended to be linked to the 23H Offense. Since 13B has some offenses that are 'Crime Against Property', if Segment 33 is missing LIBRS cannot know that it shouldn't apply the properties to the 13B Offense. As a result, LIBRS will interpret all properties to be related to all offenses, which in this case will throw validation errors. 
 
-<br>
+<br/>
 
 ### Segment 33 Errors and Explanations
 
@@ -451,7 +451,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -484,7 +484,7 @@ The table below shows invalid combinations of NIBRS Offense Codes and Property D
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -518,7 +518,7 @@ More information and common questions and errors can be found on the LIBRS FAQ f
    [C8](./librs-spec#end-of-segment-marker-c8)            | End of Segment Marker                    | 63-64         | 2        | A
    [C9](./librs-spec#padding-c9)                          | Padding                                  | 65-150        | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Segment 40 Errors and Explanations
 
@@ -531,7 +531,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -558,7 +558,7 @@ More information and common questions and errors can be found on the LIBRS FAQ f
    [C8](./librs-spec#end-of-segment-marker-c8)                        | End of Segment Marker                                 | 49-50         | 2        | A
    [C9](./librs-spec#padding-c9)                                      | Padding                                               | 51-150        | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Segment 41 Errors and Explanations
 
@@ -569,7 +569,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -608,12 +608,12 @@ More information and common questions and errors can be found on the LIBRS FAQ f
    [C8](./librs-spec#end-of-segment-marker-c8)                        | End of Segment Marker                                     | 69-70       | 2       | A
    [C9](./librs-spec#padding-c9)                                      | Padding                                                   | 71-150      | \*\*    | G (Space)
 
-<br>
+<br/>
 
 ### Important Notes
 * [Data Element 31 - Aggrevated Assault/Homicide Circumstance](./librs-spec#nos.-1-and-2-31) is repeated twice. In the past this was repeated three times, however this has since been eliminated, which has resulted in a blank space on Characters 48 and 49.
 
-<br>
+<br/>
 
 ### Segment 50 Errors and Explanations
 
@@ -626,7 +626,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -658,7 +658,7 @@ More information and common questions and errors can be found on the LIBRS FAQ f
    [C8](./librs-spec#end-of-segment-marker-c8)    | End of Segment Marker         | 49-50         | 2        | A
    [C9](./librs-spec#padding-c9)                  | Padding                       | 51-150        | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Segment 51 Errors and Explanations
 
@@ -669,7 +669,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -699,7 +699,7 @@ More information and common questions and errors can be found on the LIBRS FAQ f
    [C8](./librs-spec#end-of-segment-marker-c8)                | End of Segment Marker                | 53-54         | 2        | A
    [C9](./librs-spec#padding-c9)                              | Padding                              | 55-150        | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Segment 52 Errors and Explanations
 
@@ -712,7 +712,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -753,13 +753,13 @@ You should include an Arrestee Segment for each Offender that has been arrested 
    [C8](./librs-spec#end-of-segment-marker-c8)                 | End of Segment Marker                                              | 119-120       | 2        | A
    [C9](./librs-spec#padding-c9)                               | Padding                                                            | 121-150       | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Important Notes
 * [Data Element 52 - Disposition of Arrestee Under 18](./librs-spec#disposition-of-arrestee-under-18-52) must be included for any arrestee that is ***17 or younger***. 
 * [Data Element 44 - Multiple Arrestee Indicator](./librs-spec#multiple-arrestee-segment-indicator-44) should be used when an Offender is Arrested and associated with more than one Incident. The arrest of the Individual will clear all Incidents that they are a part of, however it should not be counted that two arrests were made. The Multiple Arrestee Indicator allows you to specify that an individual was arrested for another Incident, which has cleared this Incident by arrest, but to not count this arrest for Crime Statistics.
 
-<br>
+<br/>
 
 ### Segment 60 Errors and Explanations
 
@@ -770,7 +770,7 @@ Error Number  | Error Message | Explaination of Error
 {% assign error = site.data.error["16060"] -%}
 {{error.err_no}} | {{ error.err_message }} | {{error.seq_desc["60"]}}
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -794,7 +794,7 @@ Segment 61, Arrestee Armed, denoted the details about whether or not an Arrestee
    [C8](./librs-spec#end-of-segment-marker-c8)                              | End of Segment Marker                   | 51-52         | 2        | A
    [C9](./librs-spec#padding-c9)                                            | Padding                                 | 53-150        | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Segment 61 Errors and Explanations
 
@@ -807,7 +807,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -834,7 +834,7 @@ Segmetn 62, Arrestee Statute, is what's used to say what Statute an Arrestee was
    [C8](./librs-spec#end-of-segment-marker-c8)            | End of Segment Marker                            | 75-76         | 2        | A
    [C9](./librs-spec#padding-c9)                          | Padding                                          | 77-150        | \*\*     | G (Space)
 
-<br>
+<br/>
 
 ### Segment 62 Errors and Explanations
 
@@ -847,7 +847,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -870,7 +870,7 @@ Segment 63, Arrestee Modification, is only used when making a Modification to an
    [C8](./librs-spec#end-of-segment-marker-c8)     | End of Segment Marker                          | 57-58         | 2        | A
    [C9](./librs-spec#padding-c9)                   | Padding                                        | 59-150        | \*\*     | A/N
 
-<br>
+<br/>
 
 ### Segment 63 Errors and Explanations
 
@@ -883,7 +883,7 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -902,7 +902,7 @@ Segment 99, Submission Trailer, should be the last line in your Flat File, and s
    [C8](./librs-spec#end-of-segment-marker-c8)            | End of Segment Marker            | 9-10          | 2        | A
    [C9](./librs-spec#padding-c9)                          | Padding                          | 11-150        | \*\*     | A/N
 
-<br>
+<br/>
 
 ### Important Notes
 * [Data Element C7 - Number of Segments Transferred](./librs-spec#number-of-segments-transferred-c7) should be a six-digit long number that is front-padded with 0's that contains the number of lines in the Flat File (Including the Header and Trailer Segments). For instance, if Segment 99 appears on line number 512 in your Flat File, DE C7 should be '000512', and the full line would read '99000512ZZ' (plus Padding to make 150 characters).
@@ -920,12 +920,12 @@ Error Number  | Error Message | Explaination of Error
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
-<br>
-<br>
+<br/>
+<br/>
 
 
 # LIBRS Data Element Definitions
@@ -933,7 +933,7 @@ ____
 
 This portion of the document contains information about the specific requirements that go into each of the LIBRS Data Elements. For the short list of available values for each Data Element, go [here](./data-element-values).
 
-<br>
+<br/>
 
 ## ORI Number (1)
 ____
@@ -961,7 +961,7 @@ ___
 ### Details: 
 * This is the 9-character NCIC Originating Agency Identifier (ORI) assigned to every law enforcement agency in Louisiana. For state or local agency submissions, the last two positions must be "00".
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1002,7 +1002,7 @@ Normally, the offenses must have occurred during an unbroken time duration and a
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1068,11 +1068,11 @@ Example Number | Description
 2 | If a kidnaping started at 11:30 p.m. on November 1, 2014, and ended at 6:00 p.m., on November 16, 2014, the entry should be '11012014G23' (where 'G' is a blank).
 3 | If the date and hour of the incident are unknown, but the date of the report was March 15, 2014, the entry should be '03152014RGG' (where 'G' is a blank).
 4 | If a burglary occurred sometime between 11:15 A.M. on June 24, 2014, and 4:30 P.M. on June 26, 2014, the entry should be 06242014G11 (where "G" is a blank).
-5 | If a rape occurred on November 15, 2013, but was not reported until January 15, 2014, this incident would reject if your agency's "Base Date" is December 1, 2013. This incident would not have been reported on your Return A (or whatever other forms would be applicable) for the month of November or for the month of December of 2013.<br><br>If your agency submits this incident to LIBRS with an incident date of 11/15/2013, it would REJECT. It would reject because the Incident Date is prior to the date your agency's data is being kept by the LIBRS and NIBRS databases.<br><br>Since this incident CANNOT be accepted into LIBRS and has not been reported to UCR summary, an adjustment would have to be made on UCR Summary forms that apply.
+5 | If a rape occurred on November 15, 2013, but was not reported until January 15, 2014, this incident would reject if your agency's "Base Date" is December 1, 2013. This incident would not have been reported on your Return A (or whatever other forms would be applicable) for the month of November or for the month of December of 2013.<br/><br/>If your agency submits this incident to LIBRS with an incident date of 11/15/2013, it would REJECT. It would reject because the Incident Date is prior to the date your agency's data is being kept by the LIBRS and NIBRS databases.<br/><br/>Since this incident CANNOT be accepted into LIBRS and has not been reported to UCR summary, an adjustment would have to be made on UCR Summary forms that apply.
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1137,7 +1137,7 @@ Enter one code per incident.
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -1155,7 +1155,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1189,7 +1189,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1213,7 +1213,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+<br/>
 
 ## Offense Sequence Number Reference (L6R)
 ___
@@ -1238,7 +1238,7 @@ ___
 ### Details:
 * There is no UNIQUE constraint for the Offense Sequence Number Reference (L6R). This allows for an Offense to relate to many properties if multiple Property/Offense segments are submitted within a single incident.
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1258,9 +1258,9 @@ LRS Codes also have Subparts and Qualifiers that can be associated with them. Th
 :--------------------------------:|-----------------------------------
 TT                                | Title                             
 SSSS.S                            | Section                           
-**PPP/I**                         | Subpart, **or**<br>Subpart with Qualifier, **or**<br>Qualifier, **or**<br>Juvenile Qualifier, **and** An Inchoate Modifier, if applicable, would be indicated<br>by a dash with a data value behind the LRS Code that defines the offense.**                        |
+**PPP/I**                         | Subpart, **or**<br/>Subpart with Qualifier, **or**<br/>Qualifier, **or**<br/>Juvenile Qualifier, **and** An Inchoate Modifier, if applicable, would be indicated<br/>by a dash with a data value behind the LRS Code that defines the offense.**                        |
 
-<br>
+<br/>
 
 ### Requirements:
 ___
@@ -1287,14 +1287,14 @@ ___
 
 Example Number | Description
 :-------------:|:-----------
-1 | When 14:42 is submitted as a Louisiana Revised Statute LRS (6), LIBRS will need Qualifiers to determine if the offense should be classified as a forcible rape or as a forcible sodomy. If the offense is submitted as a **14:42/V**, this would translate to a forcible rape offense, whereas if this offense is submitted as a **14:42/A** this would translate to a forcible sodomy offense.<br><br>Without any Qualifiers, LIBRS has no way to determine which offense this LRS should be reported as, and the entire incident would be rejected. The agency will receive the following error message: 'This LRS Code must be submitted with a Qualifier to define offense applicable.'
+1 | When 14:42 is submitted as a Louisiana Revised Statute LRS (6), LIBRS will need Qualifiers to determine if the offense should be classified as a forcible rape or as a forcible sodomy. If the offense is submitted as a **14:42/V**, this would translate to a forcible rape offense, whereas if this offense is submitted as a **14:42/A** this would translate to a forcible sodomy offense.<br/><br/>Without any Qualifiers, LIBRS has no way to determine which offense this LRS should be reported as, and the entire incident would be rejected. The agency will receive the following error message: 'This LRS Code must be submitted with a Qualifier to define offense applicable.'
 2 | If an incident involved a robbery (14:64) and a forcible rape (**14:42.1/V**), two LRS offenses should be submitted. The 14:64 does not require any Qualifier, but the 14:42.1 does require a Qualifier.
 3 | If two females were raped in an incident, two LRS offenses should be submitted for rape: One LRS should be reported for each victim -- in this case, both LRS codes should be submitted as 14:42.1/V for Victim 001 and **14:42.1/V** for Victim 002)
 4 | 14:90/G  --  "G" refers to a Qualifier (see Qualifier List) and would be reported to the FBI as the offense of Betting/Wagering (NIBRS 39A).
 5 | If the LRS offense is Aggravated Assault (14:87.2/F) and the Offender or the Arrestee was responsible for Accessory After the Fact then the agency would submit the following: 14:87.2/F-A. This will be reported to the FBI as an Aggravated Assault, Accessory After the Fact as the offense and for LIBRS reporting this will be considered as All Other Offenses (NIBRS 90Z).
 
 
-<br>
+<br/>
 
 **Refer to the Master LIBRS/LRS Code Table to determine:**
 - LRS Codes that are accepted
@@ -1381,7 +1381,7 @@ F | Actual Force Used Against a Victim or Threat of Force Displaying a Weapon - 
 FR | Fraud - False Pretense/Swindle/Confidence Game  Intentional misrepresentation of existing fact or condition, or the use of some other deceptive scheme or device, to obtain money, goods, or other things of value.  |False Pretense/Swindle/Confidence Game | 26A | Property
 G | Betting and Wagering - To unlawfully stake money or something else of value on the happening of an uncertain event or on the ascertainment of a fact in dispute. |Betting/Wagering | 39A | Society
 H | Inhabited Dwelling - Structure occupied as a place of settled residence or habitat lived in regularly or routinely. Arson reporting | Arson | 200 | Property
-I | Immovable Structures - Fixed permanent or immovable things; include house trailer or houseboat if used as permanent dwelling. <br><br>Burglary: Unlawful entry into a building or other structure with intent to commit a felony or a theft <br><br> Trespass of Real Property: To unlawfully enter land, a dwelling, or other real property | Burglary or Trespass of Real Property | 220 or 90J | Property or Society
+I | Immovable Structures - Fixed permanent or immovable things; include house trailer or houseboat if used as permanent dwelling. <br/><br/>Burglary: Unlawful entry into a building or other structure with intent to commit a felony or a theft <br/><br/> Trespass of Real Property: To unlawfully enter land, a dwelling, or other real property | Burglary or Trespass of Real Property | 220 or 90J | Property or Society
 J | Self Inflicted Serious Bodily Injuries  | All Other Offenses | 90Z | Person
 JU:CUR | Juvenile Curfew Violations - will be reported to the FBI as curfew/loitering/ vagrancy violations | Curfew/Loitering/Vagrancy Violations | 90B | Society 
 JU:RUN | Juvenile Runaways - will be reported to the FBI under Runaways offense | Runaway | 90I | Society - Not a Crime
@@ -1406,7 +1406,7 @@ Z | Theft from a Motor Vehicle - Theft of articles from motor vehicle whether lo
 
 ___
 
-<br>
+<br/>
 
 ## Agency Supplied NIBRS Code (N6)
 
@@ -1432,7 +1432,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+<br/>
 
 
 <div class="newpage"></div>
@@ -1493,7 +1493,7 @@ Enter one code per incident.
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -1502,18 +1502,18 @@ Enter one code per incident.
 </table>
 ____
 
-<br>
+<br/>
 
 ### Examples:
 ___
 
 Example Number | Description
 :-------------:|:-----------
-1 | During the same incident, Victim Number One (001) was raped and the Offender attempted to rape Victim Number Two (002), but had to leave the scene before the act was consummated due to the arrival of the police.<br><br>Offense 001 should be entered as Aggravated Rape (LRS 14:42/V) and have Completed ('C') entered in Offense Attempted/Completed (DE 7). Offense 002 should also be entered as Aggravated Rape (LRS 14:42/V), but will have Attempted ('A') entered in Offense Attempted/Completed (DE 7).
+1 | During the same incident, Victim Number One (001) was raped and the Offender attempted to rape Victim Number Two (002), but had to leave the scene before the act was consummated due to the arrival of the police.<br/><br/>Offense 001 should be entered as Aggravated Rape (LRS 14:42/V) and have Completed ('C') entered in Offense Attempted/Completed (DE 7). Offense 002 should also be entered as Aggravated Rape (LRS 14:42/V), but will have Attempted ('A') entered in Offense Attempted/Completed (DE 7).
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1568,7 +1568,7 @@ ___
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -1577,7 +1577,7 @@ ___
 </table>
 ___
 
-<br>
+<br/>
 
 ### Examples:
 ___
@@ -1590,7 +1590,7 @@ Example Number | Description
 
 _____
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1652,7 +1652,7 @@ Enter only one code for each Offender Segment (40):
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -1660,12 +1660,12 @@ Enter only one code for each Offender Segment (40):
 </tbody>
 </table>
 
-<br>
+<br/>
 
 
 ___
 
-<br>
+<br/>
 
 ## Location Type (9)
 ___
@@ -1721,7 +1721,7 @@ Enter only one (1) code per Offense Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -1739,7 +1739,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1780,7 +1780,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1837,7 +1837,7 @@ Enter only one (1) code per Offense Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -1855,7 +1855,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -1920,7 +1920,7 @@ Up to three (3) of the following **Type of Criminal Activity** Codes can be ente
 					{% endfor %}
                     {% endif %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -1929,7 +1929,7 @@ Up to three (3) of the following **Type of Criminal Activity** Codes can be ente
 </table>
 ____
 
-<br>
+<br/>
 
 ### Examples (Criminal Activity):
 ___
@@ -1940,7 +1940,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2002,7 +2002,7 @@ ___
                     {% endif %}
                     {% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
 
 		</td></tr>
 	{% endif %}
@@ -2021,7 +2021,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2101,7 +2101,7 @@ Can enter up to three (3) codes for each offense:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -2120,7 +2120,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2152,7 +2152,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ## Property Sequence Number Reference (P1R)
 
@@ -2177,7 +2177,7 @@ ___
 ### Details:
 * There is no UNIQUE constraint for the Property Sequence Number Reference. This allows for a Property to relate to many Offenses if multiple Property/Offense segments are submitted within a single incident.
 
-<br>
+<br/>
 
 ___
 
@@ -2240,7 +2240,7 @@ Enter only one (1) code for each Property Description Segment. However, as many 
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -2252,7 +2252,7 @@ ___
 ### Available Property Loss Types by NIBRS Code
 To see a list of which Property Loss Types are available for each NIBRS Code based on their Attempted/Completed Status, you can find it here: [List of Available DE 14 NIBRS Values](./data-element-values#allowable-property-loss-types-de-14-by-nibrs-and-attempedcompleted)
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2319,7 +2319,7 @@ ___
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -2327,7 +2327,7 @@ ___
 </tbody>
 </table>
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2379,7 +2379,7 @@ Example Number | Description
 :-------------:|:-----------
 1 | A man purchases a new power saw from the hardware store. Later that same day someone breaks into his truck and steals the saw. The saw was purchased for $95.73. The value of the property would be rounded to the nearest whole dollar and reported as '000000096'- $96.00.
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2450,7 +2450,7 @@ ___
 
 ____
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2488,7 +2488,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2552,7 +2552,7 @@ Enter one per Segment 31 that has a Property Description of '10 - Drugs/Narcotic
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -2561,7 +2561,7 @@ Enter one per Segment 31 that has a Property Description of '10 - Drugs/Narcotic
 </table>  
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2598,7 +2598,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2657,7 +2657,7 @@ ___
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -2668,7 +2668,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2701,7 +2701,7 @@ ____
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2805,7 +2805,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2872,7 +2872,7 @@ Enter only one (1) code per Type of Victim Segment (25):
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -2880,7 +2880,7 @@ Enter only one (1) code per Type of Victim Segment (25):
 </tbody>
 </table>  
 
-<br>
+<br/>
 
 ### Example: 
 
@@ -2888,11 +2888,11 @@ ___
 
 Example Number | Description
 :-------------:|:-----------
-1 | During a bank robbery *(Crime Against Property)*, the Offender pointed a gun at a teller and demanded and received money. The robber also pistol-whipped a customer who stood in his way as he made his getaway from the bank.<br><br>Assuming the facts above, there were **3** victims: {::nomarkdown}<ul><li>Victim 001 was the bank which would be coded as a Financial Institution ('F')</li><li>Victim 002 was the teller which would be coded as Individual ('I')</li><li>Victim 003 was the customer who was pistol whipped which would be coded as an Individual ('I')</li></ul>{:/}
+1 | During a bank robbery *(Crime Against Property)*, the Offender pointed a gun at a teller and demanded and received money. The robber also pistol-whipped a customer who stood in his way as he made his getaway from the bank.<br/><br/>Assuming the facts above, there were **3** victims: {::nomarkdown}<ul><li>Victim 001 was the bank which would be coded as a Financial Institution ('F')</li><li>Victim 002 was the teller which would be coded as Individual ('I')</li><li>Victim 003 was the customer who was pistol whipped which would be coded as an Individual ('I')</li></ul>{:/}
 
 ___
 
-<br>
+<br/>
 
 ## Type of Officer Activity/Circumstance (25A)
 
@@ -2917,7 +2917,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 
 
-<br>
+<br/>
 
 ### Allowed Entries:
 
@@ -2944,7 +2944,7 @@ Enter only one (1) code for each Victim Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -2955,7 +2955,7 @@ Enter only one (1) code for each Victim Segment:
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -2980,7 +2980,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+<br/>
 
 ### Allowed Entries:
 
@@ -3007,7 +3007,7 @@ Enter only one (1) code for each Victim Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -3016,7 +3016,7 @@ Enter only one (1) code for each Victim Segment:
 </table>  
 ___
 
-<br>
+<br/>
 
 ## Officer ORI, Other Jurisdiction (25C)
 
@@ -3051,7 +3051,7 @@ A thru Z (Uppercase letter only), or 0 thru 9
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -3117,7 +3117,7 @@ Enter only (1) code for each Victim Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -3136,7 +3136,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -3169,7 +3169,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ## Sex of Victim (27)
 
@@ -3201,7 +3201,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ### Allowed Entries:
 
@@ -3228,7 +3228,7 @@ Enter only (1) code for each Victim Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -3239,7 +3239,7 @@ Enter only (1) code for each Victim Segment:
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -3270,7 +3270,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ### Allowed Entries:
 
@@ -3297,7 +3297,7 @@ Enter only (1) code for each Victim Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -3308,7 +3308,7 @@ Enter only (1) code for each Victim Segment:
 
 ___
 
-<br>
+<br/>
 
 ## Ethnicity of Victim (29)
 
@@ -3332,7 +3332,7 @@ ___
 ### Details:
 * If Victim is a person (that is, Individual ('I') or Law Enforcement Officer ('L')) is entered into Type of Victim (25), then his/her ethnic origin is to be indicated in Ethnicity of Victim (29).
 
-<br>
+<br/>
 
 ### Allowed Entries:
 
@@ -3361,7 +3361,7 @@ Enter only (1) code for each Victim Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -3372,7 +3372,7 @@ Enter only (1) code for each Victim Segment:
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -3426,7 +3426,7 @@ Enter only (1) code for each Victim Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -3437,7 +3437,7 @@ Enter only (1) code for each Victim Segment:
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -3474,7 +3474,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+<br/>
 
 ***Aggravated Assault and Non-Negligent Manslaughter Circumstances***
 
@@ -3487,7 +3487,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+<br/>
 
 ***Negligent Manslaughter Circumstances***
 
@@ -3498,7 +3498,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+<br/>
 
 ***Justifiable Homicide Circumstances***
 
@@ -3509,7 +3509,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+<br/>
 
 ### Details:
 * DEFINITION: A Justifiable Homicide is the killing of a perpetrator of a serious criminal offense by a peace officer in the line of duty; or the killing, during the commission of a serious criminal offense, of the perpetrator by a private individual.
@@ -3547,7 +3547,7 @@ ___
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -3566,7 +3566,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -3620,7 +3620,7 @@ Enter only (1) code for Justifiable Homicide (NIBRS 09C):
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -3629,7 +3629,7 @@ Enter only (1) code for Justifiable Homicide (NIBRS 09C):
 </table>  
 ___
 
-<br>
+<br/>
 
 ### Examples: 
 
@@ -3637,11 +3637,11 @@ ___
 
 Example Number | Description
 :-------------:|:-----------
-1 | In resisting arrest, a fugitive pulled a gun and fired two times in the direction of two police officers who were attempting to take him into custody. Neither officer was hit, but both drew their weapons and returned fire, killing the fugitive. As this was a Justifiable Homicide (NIBRS 09C), Criminal Killed by Police Officer ('21') should be entered into *Data Element 31*.<br><br>Assuming the facts above, the possible entries for *Data Element 32* are: {::nomarkdown}<ul><li>A - Criminal Attacked Police Officer and That Officer Killed Criminal</li><li>B - Criminal Attacked Police Officer and Criminal Killed by Another Police Officer</li><li>F - Criminal Resisted Arrest</li></ul>{:/}As only one code can be entered into this Data Element (32), the most descriptive code (as determined by the reporting agency) should be used. In this case, the reporting agency entered *Criminal Attached Police Officer and That Officer Killed Criminal('A')*.
+1 | In resisting arrest, a fugitive pulled a gun and fired two times in the direction of two police officers who were attempting to take him into custody. Neither officer was hit, but both drew their weapons and returned fire, killing the fugitive. As this was a Justifiable Homicide (NIBRS 09C), Criminal Killed by Police Officer ('21') should be entered into *Data Element 31*.<br/><br/>Assuming the facts above, the possible entries for *Data Element 32* are: {::nomarkdown}<ul><li>A - Criminal Attacked Police Officer and That Officer Killed Criminal</li><li>B - Criminal Attacked Police Officer and Criminal Killed by Another Police Officer</li><li>F - Criminal Resisted Arrest</li></ul>{:/}As only one code can be entered into this Data Element (32), the most descriptive code (as determined by the reporting agency) should be used. In this case, the reporting agency entered *Criminal Attached Police Officer and That Officer Killed Criminal('A')*.
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -3712,7 +3712,7 @@ Enter only (1) code for each Victim Injury Segment; however, can submit as many 
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -3721,7 +3721,7 @@ Enter only (1) code for each Victim Injury Segment; however, can submit as many 
 </table>  
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -3768,7 +3768,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 
 <div class="newpage"></div>
@@ -3847,7 +3847,7 @@ MUST enter **ONE** code for each Victim Segment (50). MUST enter relationship of
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -3855,7 +3855,7 @@ MUST enter **ONE** code for each Victim Segment (50). MUST enter relationship of
 </tbody>
 </table>
 
-<br>
+<br/>
 
 
 ### Examples: 
@@ -3869,7 +3869,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 
 <div class="newpage"></div>
@@ -3931,7 +3931,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -3999,7 +3999,7 @@ Enter only one code per Offender Segment (40):
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -4017,7 +4017,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 
 <div class="newpage"></div>
@@ -4047,7 +4047,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -4107,7 +4107,7 @@ Enter only (1) code per Offender Segment (40):
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -4127,7 +4127,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 
 <div class="newpage"></div>
@@ -4186,7 +4186,7 @@ Enter only (1) code per Offender Segment (40):
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -4195,7 +4195,7 @@ Enter only (1) code per Offender Segment (40):
 </table>
 ___
 
-<br>
+<br/>
 
 ## Ethnicity of Offender (39A)
 
@@ -4249,7 +4249,7 @@ Enter only (1) code per Offense Segment (40):
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -4258,7 +4258,7 @@ Enter only (1) code per Offense Segment (40):
 </table>
 ___
 
-<br>
+<br/>
 
 ## Arrestee Sequence Number (40)
 
@@ -4292,7 +4292,7 @@ Example Number | Description
 
 _____
 
-<br>
+<br/>
 
 
 <div class="newpage"></div>
@@ -4322,7 +4322,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ## Arrest Number/Local Booking Number for Arrest (41)
 
@@ -4350,7 +4350,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 
 <div class="newpage"></div>
@@ -4386,7 +4386,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 
 ## Type of Arrest (43)
@@ -4440,7 +4440,7 @@ Enter only <span style="text-decoration: underline">one</span> code per Arrest S
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -4449,7 +4449,7 @@ Enter only <span style="text-decoration: underline">one</span> code per Arrest S
 </table>
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -4507,7 +4507,7 @@ Enter only one (1) code per Arrestee Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -4516,7 +4516,7 @@ Enter only one (1) code per Arrestee Segment:
 </table>
 ___
 
-<br>
+<br/>
 
 ### Examples: 
 
@@ -4528,7 +4528,7 @@ Example Number | Description
 1 | After a suspect's apprehension for robbery, it was learned that he was also responsible for five additional robberies within the jurisdiction.{::nomarkdown}<ul><li>One Arrestee Segment (60) was keyed into the local computer, along with the Incident Numbers of the six incidents</li><li>The local computer then generated six Arrestee Segments (60) which were duplicates except for their Incident Numbers</li><li>Five of the Arrestee Segments (60) had Multiple ("M") and one had Count Arrestee ("C") entered into Multiple Arrestee Segment Indicator (44)</li><li>Each of the six robberies is cleared.</li></ul>{:/}
 2 | If the suspect's arrest did not clear additional incidents, the entry should be Not Applicable ("N").
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -4546,9 +4546,9 @@ ___
 :--------------------------------:|-----------------------------------
 TT                                | Title                             
 SSSS.S                            | Section                           
-**PPP/I**                         | Subpart, **or**<br>Subpart with Qualifier, **or**<br>Qualifier, **or**<br>Juvenile Qualifier, **and** An Inchoate Modifier, if applicable, would be indicated<br>by a dash with a data value behind the LRS Code that defines the offense.**                        |
+**PPP/I**                         | Subpart, **or**<br/>Subpart with Qualifier, **or**<br/>Qualifier, **or**<br/>Juvenile Qualifier, **and** An Inchoate Modifier, if applicable, would be indicated<br/>by a dash with a data value behind the LRS Code that defines the offense.**                        |
 
-<br>
+<br/>
 
 ### Requirements:
 ___
@@ -4576,7 +4576,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ## Agency Supplied NIBRS Code For Arrest (N45)
 
@@ -4600,7 +4600,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -4640,7 +4640,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -4703,7 +4703,7 @@ Enter only one of the following codes:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -4712,7 +4712,7 @@ Enter only one of the following codes:
 </table>
 ___
 
-<br>
+<br/>
 
 ### Examples: 
 
@@ -4726,7 +4726,7 @@ Example Number | Description
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -4793,7 +4793,7 @@ Enter only <span style="text-decoration: underline">one</span> code per Arrest S
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -4810,7 +4810,7 @@ Example Number | Description
 :-------------:|:-----------
 1 | An Arrestee refused to give his Date of Birth, but he appeared to be 35 to 40 years old. Possible entries would be Unknown ('00') or an estimated 37 years old ('37E'). Use the latter when possible.
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -4843,7 +4843,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -4900,7 +4900,7 @@ Enter only (1) code per Arrest Segment:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -4909,7 +4909,7 @@ Enter only (1) code per Arrest Segment:
 </table>
 ___
 
-<br>
+<br/>
 
 ## Race of Arrestee (49)
 
@@ -4965,7 +4965,7 @@ Enter only (1) code per Arrest Segment (60):
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -4974,7 +4974,7 @@ Enter only (1) code per Arrest Segment (60):
 </table>
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -5029,7 +5029,7 @@ Enter only (1) code per Arrest Segment (60):
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -5038,7 +5038,7 @@ Enter only (1) code per Arrest Segment (60):
 </table>
 ___
 
-<br>
+<br/>
 
 ## Resident Status of Arrestee (51)
 
@@ -5093,7 +5093,7 @@ Enter only (1) code per Arrest Segment (60):
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -5102,7 +5102,7 @@ Enter only (1) code per Arrest Segment (60):
 </table>
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -5110,9 +5110,9 @@ ___
 
 ___
 
-**Description:** Disposition of Arrestee Under 18 denotes how Juvenile Arrestees are handled. It is a mandatory field for ANY Arrestee that is 17 AND Younger (Under 18, not including 18).
+**Description:** Disposition of Arrestee Under 18 is a mandatory field for ANY Arrestee that is 17 AND Younger (Under 18, not including 18).
 
-**Data Characteristics:** 1 Character Alpha. Required for Arrestees 17 and Younger. Should be left Blank for Arrestees that are not.
+**Data Characteristics:** 1 Character Alpha. Required for Arrestees 17 and Younger. Should be left Blank for Arrestees that are 18 and older.
 
 ### Requirements:
 
@@ -5130,16 +5130,24 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Details:
-* Disposition of Arrestee Under 18 (52) is to be used ONLY if the Arrestee was 17 years of age or younger at the time of arrest.
-* This will change to Arrestee under 18 on 01/01/2020
+**Disposition of Arrestee Under 18** is a mandatory field for ANY Arrestee that is 17 years of age and younger. The Federal UCR program considers juveniles as under 18 years of age regardless of state law. The LIBRS program will stay aligned with the FBI and collect this field for arrestees 17 and younger.  The Louisiana Juvenile Age definition has changed over the years to the following: 
+<ul>
+	<li>Prior to March 1, 2019, the Juvenile age is 16 and younger.</li>
+	<li>March 1, 2019 – April 18, 2024, the juvenile age is 17 and younger.</li>
+	<li>After April 19, 2024, the Juvenile age is 16 and younger.</li>
+</ul>
+<br/>
+<br/>
+After April 9, 2024 LIBRS will expect the 17 years old arrestees to have this data element and will reject the incident if this field is not provided.
 
-___
+
+---
 
 ### Allowed Entries
 
-___
+---
 
-Enter only (1) code per Arrest Segment (60) for Juveniles only:
+Enter only (1) code per Arrest Segment (60):
 
 <table>
 <thead>
@@ -5162,7 +5170,7 @@ Enter only (1) code per Arrest Segment (60) for Juveniles only:
             		</tr>
 					{% endfor %}
 				</table>
-			{% if forloop.last == false %}<br>{% endif %}
+			{% if forloop.last == false %}<br/>{% endif %}
         	{% endfor %}
 		</td></tr>
     {% endif %}
@@ -5181,7 +5189,7 @@ Example Number | Description
 1 | The Arrestee, age 13, was apprehended for vandalizing a school, then released to his parents with a warning. The entry should be Handled Within the Department and Released ('D').
 2 | The Arrestee, age 16, was arrested for rape, and turned over to the Adult Court to be tried as an adult. The entry would be Referred to Criminal or Adult Court ('A').
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -5234,7 +5242,7 @@ numeric.
 
 ___
 
-<br>
+<br/>
 
 ## Station/Division/Precinct Identifier (L54)
 
@@ -5254,7 +5262,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ## Arrest Transaction Number (ATN) for Louisiana (L55)
 
@@ -5285,7 +5293,7 @@ ___
    * Characters 13-15 indicates the number of charges being assigned to this Arrestee at the time these fingerprints are being scanned. For instance, if an Arrestee is being charged with five counts of Aggravated Battery for this arrest, the numbers generated would be "001" through "005."
    * The Arrest Transaction Number (L55) is used to facilitate crime analysis. Arrest Transaction Number (L55) is the number assigned when an Arrestee is fingerprinted on the Automatic Finger Print Information System (AFIS). This data element can be sent on every Arrestee, but is only mandated if the Louisiana Revised Statute is a felony arrest or charges required fingerprints.
 
- <br> 
+ <br/> 
 
 ___
 
@@ -5315,7 +5323,7 @@ ___
 # Control Data Elements
 ___
 
-<br>
+<br/>
 
 ## Segment Descriptor (C1)
 ___
@@ -5354,7 +5362,7 @@ ___
 |33     | Property/Offense             | 99       | Submission Trailer           |
 |40     | Offender                     |
 
-<br>
+<br/>
 
 ## Submitting Agency (C2)
 ___
@@ -5379,7 +5387,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -5409,7 +5417,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ## Reporting Period (C4)
 ___
@@ -5487,11 +5495,11 @@ ___
 
 | Action Type                       | Action Performed by LIBRS/NIBRS   
 |:---------------------------------:|----------------------------------
- I                                  |**Incident Report** <br>Incident Reports submitted with an Action Type of "I" are new incidents that are being reported to the LIBRS/NIBRS databases for the first time)     
- A                                  | **Add Arrest** <br>Action Type "A" submissions are used to add an arrest to an incident that has previously been reported with an Action Type of "I". Action Type "A" can only be used if incident has already been submitted and there are no changes in other segments of the incident, that is, the agency is simply adding an arrest segment to the already submitted incident      
- M                                  | **Modify** <br>Action Type "M" segments are used for Time-Window Submission correction for an Exceptional Clearance, Recovered Property or Arrests). It can alsobe used to modify exceptional clearance indicator and/or exceptional clearance date when incident has already been submitted.                        
- D                                  | **Delete Action** <br>Type "D" segments are used to delete previously submitted incidents. It is often used when updates or changes are reported to a previously submitted incident. An Action Type "D" segment will delete all existing incident data, allowing the reporting agency to re-submit the incident containing the updated information
- W                                  | **Time-Window Submission** <br>Action Type "W" is used only when reporting an incident that occurred prior to the reporting agency's "base date" as defined in the Guidelines. An agency's base date is usually the date when the agency first started reporting incident-based data to LIBRS/NIBRS. The Time-Window Submission can report one of the following:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Exceptional Clearance<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Exceptional Clearance Date<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Recovered Property<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - An Arrest                  
+ I                                  |**Incident Report** <br/>Incident Reports submitted with an Action Type of "I" are new incidents that are being reported to the LIBRS/NIBRS databases for the first time)     
+ A                                  | **Add Arrest** <br/>Action Type "A" submissions are used to add an arrest to an incident that has previously been reported with an Action Type of "I". Action Type "A" can only be used if incident has already been submitted and there are no changes in other segments of the incident, that is, the agency is simply adding an arrest segment to the already submitted incident      
+ M                                  | **Modify** <br/>Action Type "M" segments are used for Time-Window Submission correction for an Exceptional Clearance, Recovered Property or Arrests). It can alsobe used to modify exceptional clearance indicator and/or exceptional clearance date when incident has already been submitted.                        
+ D                                  | **Delete Action** <br/>Type "D" segments are used to delete previously submitted incidents. It is often used when updates or changes are reported to a previously submitted incident. An Action Type "D" segment will delete all existing incident data, allowing the reporting agency to re-submit the incident containing the updated information
+ W                                  | **Time-Window Submission** <br/>Action Type "W" is used only when reporting an incident that occurred prior to the reporting agency's "base date" as defined in the Guidelines. An agency's base date is usually the date when the agency first started reporting incident-based data to LIBRS/NIBRS. The Time-Window Submission can report one of the following:<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Exceptional Clearance<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Exceptional Clearance Date<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Recovered Property<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - An Arrest                  
 
 ___
 
@@ -5534,7 +5542,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ## Number of Segments Transferred (C7)
 ___
@@ -5563,7 +5571,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -5594,7 +5602,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ## Padding (C9)
 
@@ -5623,7 +5631,7 @@ ___
 
 ___
 
-<br>
+<br/>
 
 ## Software ID (C10)
 
@@ -5641,7 +5649,7 @@ Requirement  | Requirement Description |
 
 ___
 
-<br>
+<br/>
 
 ## Software Version (C11)
 ___
@@ -5658,7 +5666,7 @@ Requirement  | Requirement Description |
 
 ___
 
-<br>
+<br/>
 
 <div class="newpage"></div>
 
@@ -5690,7 +5698,7 @@ ____
 |               1st Character         |     2nd Character    |             3rd Character          |                    4th and 5th Characters                    |
 |:-----------------------------------:|:--------------------:|:----------------------------------:|:------------------------------------------------------------:|
 |8                                    |1                     |0                                   |00: Overall Data Element Edits all Sections (Except Section 4)|
-|**Denotes Mandatory Error Message**  |Section with Mandatory| Error Message Number within Section|   01 - 21<br>Data Elemeber Specific Edits Within Section 4   |
+|**Denotes Mandatory Error Message**  |Section with Mandatory| Error Message Number within Section|   01 - 21<br/>Data Elemeber Specific Edits Within Section 4   |
 
 ___
 
@@ -5716,7 +5724,7 @@ ___
 #### Details:
 
 **For Error Message 81000:** 
-* This edit should identify the missing data element, so the agency can determine which exact data element is missing.  This edit applies to the following Data Elements:<br>  
+* This edit should identify the missing data element, so the agency can determine which exact data element is missing.  This edit applies to the following Data Elements:<br/>  
     * ORI Number (1)
     * Incident Number (2)
     * Incident Date/Hour (3)
@@ -5734,7 +5742,7 @@ ___
     * *** New data element not in previous LIBRS Specifications.**
 
 **For Error Message 81200a:**
-* This edit should identify the missing data elements(s), in order for the agency to determine the exact data element that is missing.  Applies to the following Data Elements:<br>
+* This edit should identify the missing data elements(s), in order for the agency to determine the exact data element that is missing.  Applies to the following Data Elements:<br/>
     * Age of Victim [At Time Incident Occurred] (26)
     * Sex of Victim (27)
     * Race of Victim (28)
@@ -5743,13 +5751,13 @@ ___
     * Offender Sequence Number (36)
 
 **For Error Message 81200b:**
-* This edit should identify the missing data elements(s), in order for the agency to determine the exact data element that is missing.  Applies to Data Elements:<br> 
+* This edit should identify the missing data elements(s), in order for the agency to determine the exact data element that is missing.  Applies to Data Elements:<br/> 
     * Age of Offender [At Time Incident Occurred] (37)
     * Sex of Offender (38)
     * Race of Offender (39)
 
 
-<br>
+<br/>
 
 ## Section (2) Error Message for: Initial Incident Reports Containing Arrestee Segments
 
@@ -5784,7 +5792,7 @@ ___
     * Ethnicity of Arrestee (50)
     * Resident Status of Arrestee (51)
 
-<br>
+<br/>
 
 ## Section (3) Error Message for: Subsequent Updates (ADD ARRESTs, MODIFYs, and DELETEs) to Previously Submitted Incidents
 
@@ -5824,13 +5832,13 @@ ___
     * Ethnicity of Arrestee (50)
     * Resident Status of Arrestee (51)
 
-<br>
+<br/>
 
 ___
 
 <div class="newpage"></div>
 
-<br>
+<br/>
 
 # NIBRS Mandatories
 
@@ -5856,7 +5864,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 
 ___
 
-<br>
+<br/>
 
 ___
 
@@ -5885,7 +5893,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["84502"] -%}
 5 | {{error.mandatory["4s2"]}} | {{error.err_no}} | {{ error.err_message }}
 
-<br>
+<br/>
 
 ___
 
@@ -5915,7 +5923,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 4 | {{error.mandatory["4s3"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -5946,7 +5954,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 5 | {{error.mandatory["4s4"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -5973,7 +5981,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["84305"] -%}
 3 | {{error.mandatory["4s5"]}} | {{error.err_no}} | {{ error.err_message }}
 
-<br>
+<br/>
 
 ___
 
@@ -5995,7 +6003,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["84106"] -%}
 1 | {{error.mandatory["4s6"]}} | {{error.err_no}} | {{ error.err_message }} 
 
-<br>
+<br/>
 
 ___
 
@@ -6039,7 +6047,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["84707"] -%}
 3 | {{error.mandatory["4s7"]}} | {{error.err_no}} | {{ error.err_message }} 
 
-<br>
+<br/>
 
 ___
 
@@ -6069,7 +6077,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 4 | {{error.mandatory["4s8"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -6093,7 +6101,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.mandatory["4s9"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -6118,7 +6126,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["84210"] -%}
 2 | {{error.mandatory["4s10"]}} | {{error.err_no}} | {{ error.err_message }} 
 
-<br>
+<br/>
 
 ___
 
@@ -6147,7 +6155,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 4 | {{error.mandatory["4s11"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -6183,7 +6191,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 7 | {{error.mandatory["4s12"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -6208,7 +6216,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 2 | {{error.mandatory["4s13"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -6237,7 +6245,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["84414"] -%}
 4 | {{error.mandatory["4s14"]}} | {{error.err_no}} | {{ error.err_message }} 
 
-<br>
+<br/>
 
 ___
 
@@ -6257,7 +6265,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 0 | {{error.mandatory["4s15"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -6277,7 +6285,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 0 | {{error.mandatory["4s16"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -6308,7 +6316,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["84517"] -%}
 5 | {{error.mandatory["4s17"]}} | {{error.err_no}} | {{ error.err_message }} 
 
-<br>
+<br/>
 
 ___
 
@@ -6331,7 +6339,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.mandatory["4s18"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -6354,7 +6362,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 1 | {{error.mandatory["4s19"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 
@@ -6381,7 +6389,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["84320"] -%}
 3 | {{error.mandatory["4s20"]}} | {{error.err_no}} | {{ error.err_message }} 
 
-<br>
+<br/>
 
 ___
 
@@ -6400,7 +6408,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 0 | {{error.mandatory["4s21"]}} | {{error.err_no}} | {{ error.err_message }} 
 
 
-<br>
+<br/>
 
 ___
 

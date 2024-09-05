@@ -194,7 +194,7 @@
 		"err_no": 10072,
 		"err_message": "RECOVERED PROPERTY MUST ALSO BE SUBMITTED AS STOLEN",
 		"err_desc": {
-			"14": "For every Property Description Segment (Segment 31) having a Type of Property Loss (DE 14) of '5 - Recovered', there must also be a corresponding Segment 31 having the same Property Description (DE 15) code and a Type of Property Loss of 7 - Stolen/Etc'.<br><br>This rule does not apply to:{::nomarkdown}<ul><li>NIBRS Offense codes of <b>280 and 250</b>.</li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, so long as the individual parts within a vehicle were not reported as Stolen.</li></ul>{:/} "
+			"14": "For every Property Description Segment (Segment 31) having a Type of Property Loss (DE 14) of '5 - Recovered', there must also be a corresponding Segment 31 having the same Property Description (DE 15) code and a Type of Property Loss of 7 - Stolen/Etc'.<br/><br/>This rule does not apply to:{::nomarkdown}<ul><li>NIBRS Offense codes of <b>280 and 250</b>.</li><li>When a Property Description of Vehicle Parts/Accessories ('38') is subsequently reported as Recovered when a vehicle was stolen, so long as the individual parts within a vehicle were not reported as Stolen.</li></ul>{:/} "
 		}
 	},
 	"10073": {
@@ -499,7 +499,7 @@
 		"err_no": 11020,
 		"err_message": "EXCEPTIONAL CLEARANCE DATE CANNOT PREDATE BASE DATE",
 		"err_desc": {
-			"5": "Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the 'Time-Window' Base Date<br><br>This is also true for any 'M' (Modify) submissions subsequent to a previously submitted Time-Window Submission (Action Type of 'W')."
+			"5": "Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) CANNOT have an Exceptional Clearance Date (DE 5) earlier than the 'Time-Window' Base Date<br/><br/>This is also true for any 'M' (Modify) submissions subsequent to a previously submitted Time-Window Submission (Action Type of 'W')."
 		}
 	},
 	"11021": {
@@ -566,7 +566,7 @@
 		"err_no": 11057,
 		"err_message": "MUST BE PRESENT FOR TIME WINDOW SEGMENT",
 		"err_desc": {
-			"5": "Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) must contain Cleared Exceptionally (DE 4) and Exceptional Clearance Date (DE 5).<br><br>Both data elements must be present to be a valid submission."
+			"5": "Administrative Segments (10) submitted with an Action Type of 'W' (Time-Window Submission) must contain Cleared Exceptionally (DE 4) and Exceptional Clearance Date (DE 5).<br/><br/>Both data elements must be present to be a valid submission."
 		}
 	},
 	"11058": {
@@ -664,7 +664,7 @@
 		"err_no": 11072,
 		"err_message": "INCIDENT DATE/HOUR FOR 'I' RECORDS CANNOT PREDATE 01/01/1991",
 		"err_desc": {
-			"3": "The Incident Date CANNOT be earlier than 01/01/1991 for Incident Report ('I') submissions.<br>This edit will preclude dates that are obviously incorrect since the FBI began accepting data on this date."
+			"3": "The Incident Date CANNOT be earlier than 01/01/1991 for Incident Report ('I') submissions.<br/>This edit will preclude dates that are obviously incorrect since the FBI began accepting data on this date."
 		}
 	},
 	"11073": {
@@ -672,7 +672,7 @@
 		"err_no": 11073,
 		"err_message": "INCIDENT DATE CANNOT BE BEFORE DATE ORI WENT IBR",
 		"err_desc": {
-			"3": "No data regarding an incident previously submitted under the Summary UCR reporting system can be submitted with an incident date later than the date the agency commenced reporting.<br>It will be regarded as a duplicate submission and be rejected since the Summary UCR system already contains the aggregate data for the months before LIBRS conversion.<br><br>In other words, if an agency sends Incident Based Reporting (IBR) data for the first time on 20 July 2019, all 'Incident Date/Hour' (DE 3) entries for incidents, recovered property, and arrests must be within July, 2019<br><br>The exception is when Exceptional Clearances occur for a pre-IBR incident<br>In this case, 'Incident Date/Hour' (DE 3) may be earlier than July, 2019, but Exceptional Clearance Date (5) must be within July, 2019<br><br>LIBRS maintains a table of start dates (Agency Base Dates) for every law enforcement agency in the state<br>Except for the above example, LIBRS will reject data submitted with an 'Incident Date/Hour' prior to the agency's Base Date (start date)."
+			"3": "No data regarding an incident previously submitted under the Summary UCR reporting system can be submitted with an incident date later than the date the agency commenced reporting.<br/>It will be regarded as a duplicate submission and be rejected since the Summary UCR system already contains the aggregate data for the months before LIBRS conversion.<br/><br/>In other words, if an agency sends Incident Based Reporting (IBR) data for the first time on 20 July 2019, all 'Incident Date/Hour' (DE 3) entries for incidents, recovered property, and arrests must be within July, 2019<br/><br/>The exception is when Exceptional Clearances occur for a pre-IBR incident<br/>In this case, 'Incident Date/Hour' (DE 3) may be earlier than July, 2019, but Exceptional Clearance Date (5) must be within July, 2019<br/><br/>LIBRS maintains a table of start dates (Agency Base Dates) for every law enforcement agency in the state<br/>Except for the above example, LIBRS will reject data submitted with an 'Incident Date/Hour' prior to the agency's Base Date (start date)."
 		}
 	},
 	"11074": {
@@ -688,7 +688,7 @@
 		"err_no": 11075,
 		"err_message": "CANNOT CALCULATE BASE DATE FROM INCIDENT DATE[MMDDYYYY]",
 		"err_desc": {
-			"3": "The Submission Date (C3), in positions 23-30, and the Incident Date MUST be valid entries.<br><br>LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as 'Time Window' submissions."
+			"3": "The Submission Date (C3), in positions 23-30, and the Incident Date MUST be valid entries.<br/><br/>LIBRS uses these two dates to determine if the complete incident should have been reported, or if a subset of the segments should have been submitted as 'Time Window' submissions."
 		}
 	},
 	"11076": {
@@ -1004,7 +1004,7 @@
 		"err_no": 13042,
 		"err_message": "WARNING - PROPERTY DESCRIPTION (DATA ELEMENT 15) HAD A VALUE (DATA ELEMENT 16) THAT EXCEEDED THRESHOLD OF [$ VALUE]",
 		"err_desc": {
-			"16": "When Value of Property (DE 16) contains a value that exceeds a LIBRS assigned threshold amount, a 'Warning' message is created. The agency is asked to check if the value entered was a data entry error, or if it was an intended entry.<br><br>Also, a Warning message is always produced when the value is $1,000,000 or greater. For example, if the value of a property was $12,000.99 but was inadvertently entered as $1,200,099 in LIBRS submission file, a 'Warning' message will be generated. In this case, the cents were entered as whole dollars."
+			"16": "When Value of Property (DE 16) contains a value that exceeds a LIBRS assigned threshold amount, a 'Warning' message is created. The agency is asked to check if the value entered was a data entry error, or if it was an intended entry.<br/><br/>Also, a Warning message is always produced when the value is $1,000,000 or greater. For example, if the value of a property was $12,000.99 but was inadvertently entered as $1,200,099 in LIBRS submission file, a 'Warning' message will be generated. In this case, the cents were entered as whole dollars."
 		}
 	},
 	"13043": {
@@ -1037,7 +1037,7 @@
 		"err_no": 13052,
 		"err_message": "DATA ELEMENTS 15 - 22 MUST BE BLANK WHEN PROPERTY LOSS CODE = 1 OR 8",
 		"err_desc": {
-			"14": "When Type of Property Loss (DE 14) is None (1) or Unknown (8), then Data Elements 15 through 22 must be left blank for all Offenses <b>except for NIBRS 35A</b> . <br><br> When the associated NIBRS Offense Code is <b>35A</b>, and the Property Loss Type (DE 14) is '1 - None', then Suspected Drug Type (DE 20) must have a valid entry."
+			"14": "When Type of Property Loss (DE 14) is None (1) or Unknown (8), then Data Elements 15 through 22 must be left blank for all Offenses <b>except for NIBRS 35A</b> . <br/><br/> When the associated NIBRS Offense Code is <b>35A</b>, and the Property Loss Type (DE 14) is '1 - None', then Suspected Drug Type (DE 20) must have a valid entry."
 		}
 	},
 	"13053": {
@@ -1166,7 +1166,7 @@
 		"err_no": 13071,
 		"err_message": "DEPRECATED - GAMBLING, KIDNAPPING, AND CRIMES AGAINST PROPERTY ARE THE ONLY VALID OFFENSE",
 		"seq_desc": {
-			"32": "A Time-Window submission (Action Type of 'W') or Modify submission (Action Type = 'M') was submitted for 'Recovered Property' on a Property Modification Segment (32). <br> When submitted, all LRS codes must be Crimes Against Property, Kidnaping (100), or Gambling (39A thru 39D).  In this instance offense codes other than those mentioned were submitted."
+			"32": "A Time-Window submission (Action Type of 'W') or Modify submission (Action Type = 'M') was submitted for 'Recovered Property' on a Property Modification Segment (32). <br/> When submitted, all LRS codes must be Crimes Against Property, Kidnaping (100), or Gambling (39A thru 39D).  In this instance offense codes other than those mentioned were submitted."
 		}
 	},
 	"13072": {
@@ -1311,7 +1311,7 @@
 		"err_no": 14002,
 		"err_message": "CONTAINS NON NUMERIC ENTRY",
 		"err_desc": {
-			"36": "MUST be numeric entry with zero left-fill.<br><br>Offender Sequence Number (36) distinguishes one Offender from another and identifies a situation where nothing was known about the number of Offenders, or who they were. {::nomarkdown}<ul><li> EG: A corpse was found in a ditch and there were no eyewitnesses or other information that could provide data about possible Offenders. In this case, Unknown ('000') would be entered</li><li>However, if five Offenders were seen running from the scene, then five Offender records would be submitted, each with a difference Offender Sequence Number (36)</li></ul>{:/}"
+			"36": "MUST be numeric entry with zero left-fill.<br/><br/>Offender Sequence Number (36) distinguishes one Offender from another and identifies a situation where nothing was known about the number of Offenders, or who they were. {::nomarkdown}<ul><li> EG: A corpse was found in a ditch and there were no eyewitnesses or other information that could provide data about possible Offenders. In this case, Unknown ('000') would be entered</li><li>However, if five Offenders were seen running from the scene, then five Offender records would be submitted, each with a difference Offender Sequence Number (36)</li></ul>{:/}"
 		}
 	},
 	"14004": {
@@ -1425,7 +1425,7 @@
 		"err_no": 14057,
 		"err_message": "OFFENDER SEQUENCE NUMBER CANNOT BE UNKNOWN IF INCIDENT CLEARED EXCEPTIONALLY",
 		"err_desc": {
-			"36": "If an incident is Exceptionally Cleared (DE 4), then Offender Sequence Number (DE 36) cannot be Unknown '000'.<br><br>Unknown ('000') indicates that nothing is known about the Offender(s) regarding number and any identifying information. One of the criteria for Exceptionally Clearing (DE 4) an incident is that at least one of the Offenders be known."
+			"36": "If an incident is Exceptionally Cleared (DE 4), then Offender Sequence Number (DE 36) cannot be Unknown '000'.<br/><br/>Unknown ('000') indicates that nothing is known about the Offender(s) regarding number and any identifying information. One of the criteria for Exceptionally Clearing (DE 4) an incident is that at least one of the Offenders be known."
 		}
 	},
 	"14058": {
@@ -1735,7 +1735,7 @@
 		"err_no": 15070,
 		"err_message": "WHEN 'VO' RELATIONSHIP IS PRESENT, MUST HAVE TWO OR MORE VICTIMS AND OFFENDERS",
 		"err_desc": {
-			"35": "When Victim was Offender ('VO') is entered, a minimum of *two* Victims Segments (50) and *two* Offender Segments (40) must be submitted.<br><br>'VO' indicates situations such as brawls and domestic disputes where all of the participants in the incident were Victims and Offenders of the same Offense.{::nomarkdown}<ul><li>EG: Assaults or double murders where two people kill each other.</li></ul>{:/}In most cases, each Victim is also the Offender; therefore, every Victim Segment (50) will contain a 'VO' code. However, there may be some situations where only one of the Victims is also the Offender, but where the other Victim(s) are not also the Offender(s) {::nomarkdown}<ul><li>EG: A victim who is not an Offender could be an innocent bystander in a barroom brawl, or a child who is victimized as a result of the parents domestic dispute</li></ul>{:/}"
+			"35": "When Victim was Offender ('VO') is entered, a minimum of *two* Victims Segments (50) and *two* Offender Segments (40) must be submitted.<br/><br/>'VO' indicates situations such as brawls and domestic disputes where all of the participants in the incident were Victims and Offenders of the same Offense.{::nomarkdown}<ul><li>EG: Assaults or double murders where two people kill each other.</li></ul>{:/}In most cases, each Victim is also the Offender; therefore, every Victim Segment (50) will contain a 'VO' code. However, there may be some situations where only one of the Victims is also the Offender, but where the other Victim(s) are not also the Offender(s) {::nomarkdown}<ul><li>EG: A victim who is not an Offender could be an innocent bystander in a barroom brawl, or a child who is victimized as a result of the parents domestic dispute</li></ul>{:/}"
 		}
 	},
 	"15071": {
@@ -1909,7 +1909,7 @@
 		"err_no": 16020,
 		"err_message": "ARREST DATE CANNOT PREDATE BASE DATE",
 		"err_desc": {
-			"42": "Arrestee Segments (60) submitted as Time-Window Submission (Action Type of Time Window ('W')) CANNOT have Arrest Date (42) earlierthan the Agency's Base Date.<br><br>This also applies to any subsequent Modify Submission ('M') of a previously submitted Time-Window Submission ('W')."
+			"42": "Arrestee Segments (60) submitted as Time-Window Submission (Action Type of Time Window ('W')) CANNOT have Arrest Date (42) earlierthan the Agency's Base Date.<br/><br/>This also applies to any subsequent Modify Submission ('M') of a previously submitted Time-Window Submission ('W')."
 		}
 	},
 	"16021": {
@@ -1946,7 +1946,7 @@
 		"err_no": 16052,
 		"err_message": "DISPOSITION MUST BE ENTERED WHEN AGE IS 17 AND YOUNGER",
 		"err_desc": {
-			"52": "If Age of Arrestee (DE 47) is under 18 (17 and younger), then Disposition of Arrestee Under 18 (DE 52) must be entered.<br><br>Note: As of January 1st, 2020, all offenders under the age of 18 are considered juveniles."
+			"52": "If Age of Arrestee (DE 47) is under 18 (17 and younger), then Disposition of Arrestee Under 18 (DE 52) must be entered.<br/><br/>The Federal UCR program considers juveniles as under 18 years of age regardless of state law. The LIBRS program will stay aligned with the FBI even though the Juvenile Age definition has changed.<br/><br/>If the arrestee is 17 and considered an adult in Louisiana after April 19, 2024, please use A – Referred to Criminal or Adult Court."
 		}
 	},
 	"16053": {
@@ -2176,7 +2176,7 @@
 			"c5": "Action Type (DE C5) is a mandatory Data Element, and cannot be left blank. It should be included in every Segment of the Flat File aside from the Header Segment (Segment 00) and Footer Segment (Segment 99)",
 			"c6": "If Action Type (DE C5) is 'W' (Time-Window), then Clearance Indicator (DE C6) cannot be left blank.",
 			"c7": "Number of Segments Transferred (DE C7) is a mandatory Data Element, and cannot be left blank. It should appear one time in the Footer Segment (Segment 99)",
-			"c8": "End of Segment Marker (DE C8) is a mandatory Data Element, and cannot be left blank. It should be used in every segment of the LIBRS Flat File to denote the end of the line.<br><br>Note: All lines should still be 150 characters long. Any different in length between the position of the End of Segment Marker (DE C8) and 150 characters should be filled with Blank Spaces (G)."
+			"c8": "End of Segment Marker (DE C8) is a mandatory Data Element, and cannot be left blank. It should be used in every segment of the LIBRS Flat File to denote the end of the line.<br/><br/>Note: All lines should still be 150 characters long. Any different in length between the position of the End of Segment Marker (DE C8) and 150 characters should be filled with Blank Spaces (G)."
 		}
 	},
 	"20002": {
@@ -2218,7 +2218,7 @@
 		"err_no": 20025,
 		"err_message": "DATE ENTERED MUST BE A VALID CALENDAR DATE",
 		"seq_desc": {
-			"c3": "Each component of the date MUST be valid. <br>Months must be 01-12, days must be 01-31, and year must include the century (i.e., 19xx, 20xx). <br>In addition, days CANNOT exceed maximum for the month (EG: June CANNOT have 31 days)."
+			"c3": "Each component of the date MUST be valid. <br/>Months must be 01-12, days must be 01-31, and year must include the century (i.e., 19xx, 20xx). <br/>In addition, days CANNOT exceed maximum for the month (EG: June CANNOT have 31 days)."
 		}
 	},
 	"20026": {
@@ -3219,7 +3219,7 @@
 		"err_no": 84314,
 		"err_message": "WHEN LRS = 240 AND DE 14 = '5', IF DE 15 HAS A CODE OF '03, ' 05 ', ' 24 ', ' 28 ', OR ' 37 ', THEN DATA ELEMENT 19 MUST HAVE A VALID CODE.",
 		"mandatory": {
-			"4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (DE 14) is Recovered ('5'), then Property Description (15) MUST contain one of the following codes, {::nomarkdown}<ul><li><b>'03'  (Automobiles)</li><li>'05'  (Buses)</li><li>'24'  (Other Motor Vehicles)</li><li>'28'  (Recreational Vehicles)</li><li>'37'  (Trucks)</li></b></li></ul>{:/} <br> and Number of Recovered Vehicles (DE 19) MUST contain a valid value."
+			"4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (DE 14) is Recovered ('5'), then Property Description (15) MUST contain one of the following codes, {::nomarkdown}<ul><li><b>'03'  (Automobiles)</li><li>'05'  (Buses)</li><li>'24'  (Other Motor Vehicles)</li><li>'28'  (Recreational Vehicles)</li><li>'37'  (Trucks)</li></b></li></ul>{:/} <br/> and Number of Recovered Vehicles (DE 19) MUST contain a valid value."
 		}
 	},
 	"84317": {
@@ -3299,7 +3299,7 @@
 		"err_no": 84414,
 		"err_message": "WHEN LRS = 240 AND DE 14 = '7', THEN DE 15 MUST HAVE A CODE OF '03', '05', '24', '28', OR '37' AND DATA ELEMENT 18 MUST HAVE A VALID CODE.",
 		"mandatory": {
-			"4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (DE 14) is Stolen ('7'), then Property Description (DE 15) MUST contain one of the following codes, {::nomarkdown}<ul><li><b>'03'  (Automobiles)</li><li>'05'  (Buses)</li><li>'24'  (Other Motor Vehicles)</li><li>'28'  (Recreational Vehicles)</li><li>'37'  (Trucks)</li></b></li></ul>{:/} <br> and Number of Stolen Vehicles (DE 18) MUST contain a valid value."
+			"4s14": "When an Incident contains a MOTOR VEHICLE THEFT (NIBRS Code 240) offense, and Type of Property Loss (DE 14) is Stolen ('7'), then Property Description (DE 15) MUST contain one of the following codes, {::nomarkdown}<ul><li><b>'03'  (Automobiles)</li><li>'05'  (Buses)</li><li>'24'  (Other Motor Vehicles)</li><li>'28'  (Recreational Vehicles)</li><li>'37'  (Trucks)</li></b></li></ul>{:/} <br/> and Number of Stolen Vehicles (DE 18) MUST contain a valid value."
 		}
 	},
 	"84417": {
@@ -3508,7 +3508,7 @@
 		"err_no": 90017,
 		"err_message": "UNKNOWN LRS-TO-NIBRS - OFFENSE WILL BE VALIDATED ON NIBRS CODE ONLY",
 		"err_desc": {
-			"n45": "The LRS Code that you have submitted doesn't have a mapping to a NIBRS Code in our system. Please use a valid NIBRS Mapping for this LRS Code, and if you think the LRS Code you submitted should be valid let us know and we'll see if we can add it in.<br><br>This Error also triggers when Louisiana Revised Statute Number of Arrest (DE 45) is left blank."
+			"n45": "The LRS Code that you have submitted doesn't have a mapping to a NIBRS Code in our system. Please use a valid NIBRS Mapping for this LRS Code, and if you think the LRS Code you submitted should be valid let us know and we'll see if we can add it in.<br/><br/>This Error also triggers when Louisiana Revised Statute Number of Arrest (DE 45) is left blank."
 		}
 	},
 	"84713": {
@@ -3563,7 +3563,7 @@
 		"err_no": 90023,
 		"err_message": "DUPLICATE - A PRIOR PROPERTY OFFENSE SEGMENT ALREADY EXISTS WITH THE SAME SEQUENCE NUMBERS",
 		"seq_desc": {
-			"33": "Each Property/Offense segment submitted must have unique combinations of Property Sequence Number References (DE P1R) to Offense Sequence Number References (DE L6R). <br><br>Both Properties and Offenses can both be related to multiples of each other (EG One Property to Multiple Offenses), however, Property/Offense segments cannot relate a single Property to a Single Offense multiple times."
+			"33": "Each Property/Offense segment submitted must have unique combinations of Property Sequence Number References (DE P1R) to Offense Sequence Number References (DE L6R). <br/><br/>Both Properties and Offenses can both be related to multiples of each other (EG One Property to Multiple Offenses), however, Property/Offense segments cannot relate a single Property to a Single Offense multiple times."
 		}
 	},
 	"90024": {
