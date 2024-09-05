@@ -757,7 +757,6 @@ You should include an Arrestee Segment for each Offender that has been arrested 
 
 ### Important Notes
 * [Data Element 52 - Disposition of Arrestee Under 18](./librs-spec#disposition-of-arrestee-under-18-52) must be included for any arrestee that is ***17 or younger***. 
-  * Previously, Louisiana Law stated that 17 Year Olds were Adults rather than Juveniles, however this changed in 2020, which has led to a bit of confusion about this Data Element.
 * [Data Element 44 - Multiple Arrestee Indicator](./librs-spec#multiple-arrestee-segment-indicator-44) should be used when an Offender is Arrested and associated with more than one Incident. The arrest of the Individual will clear all Incidents that they are a part of, however it should not be counted that two arrests were made. The Multiple Arrestee Indicator allows you to specify that an individual was arrested for another Incident, which has cleared this Incident by arrest, but to not count this arrest for Crime Statistics.
 
 <br>
@@ -5131,7 +5130,7 @@ Requirement  | Requirement Description | Error Number | Error Message
 ___
 
 ### Details:
-* Disposition of Arrestee Under 18 (52) is to be used ONLY if the Arrestee was 16 years of age or younger at the time of arrest.
+* Disposition of Arrestee Under 18 (52) is to be used ONLY if the Arrestee was 17 years of age or younger at the time of arrest.
 * This will change to Arrestee under 18 on 01/01/2020
 
 ___
