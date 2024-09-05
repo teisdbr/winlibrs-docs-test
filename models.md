@@ -37,7 +37,7 @@ Currently the JSON Validator is hosted at [https://json.librs.org:5000](https://
 ### JSON Process
 
 * **Validation**:
-  * **The JSONValidate public endpoint is currently in "validation-only" mode, meaning it only checks the validity of the data without storing or tracking it. Agencies can use this endpoint as frequently as needed, independent of the actual submission process**
+  * The JSONValidate public endpoint is currently in "validation-only" mode, meaning it only checks the validity of the data without storing or tracking it. Agencies can use this endpoint as frequently as needed, independent of the actual submission process
 * **Submission:**
   * Agencies submit JSON files to their designated LIBRS FTP data folder.
   * Each JSON file should correspond to a specific report month. See the LIBRS Data model for the JSON format.
@@ -72,13 +72,13 @@ This is the primary object that is used in the JSON Validator. It contains the f
 | AgencyName                          | String                  | Descriptive Name of the Agency                                                                                    | No (Legacy DE - Not used in validation) |
 | SoftwareID                          | String                  | Name of the RMS Generating the Data                                                                               | Yes                                     |
 | SoftwareVersion                     | String                  | Version of the RMS Generating the Data                                                                            | Yes                                     |
-| ForSubmission                       | Boolean                 | Set this Booleen to False for validation mode. Agencies can use the API to validate data as needed. If the JSON file is submitted via the agency’s FTP, this booleen will automatically be set to true and picked up through the LIBRS JSON batch processor. | No (Assumed False if missing or NULL)   |
+| ForSubmission                       | Boolean                 | Set this Booleen to False for validation mode. Agencies can use the API to validate data as needed.<br/><br/> If the JSON file is submitted via the agency’s FTP, this booleen will automatically be set to true and picked up through the LIBRS JSON batch processor. | No (Assumed False if missing or NULL)   |
 | ZeroReport                          | Boolean                 | Boolean that tells us there's no data for this Agency for the specified Reporting Period and Year                 | No (Assumed False if missing or NULL)   |
 | [IncidentList](#librs-incident-object) | List of Librs Incidents | The actual Incident Data in the form of a List of the LibrsIncident object.                                       | Yes                                     |
 
 ---
 
-<br>
+<br/>
 
 ## Example JSON Incident
 
@@ -213,11 +213,11 @@ Basically, the only things that are required are what make it an Incident - Admi
 | [Errors](#errors-object)                    | List of Error Objects           | List of LIBRS Errors represented as a C# Object                                | No (Returned back in API Response) |
 | [Warnings](warnings-object)                 | List of Warning Objects         | List of LIBRS Warnings represented as a C# Object                              | No (Returned back in API Response) |
 
-<br>
+<br/>
 
 ---
 
-<br>
+<br/>
 
 ### [Admin Object](#admin-object)
 
@@ -247,7 +247,7 @@ This is a C# Object that represents the existing Administrative Segment (10) fro
 
 ---
 
-<br>
+<br/>
 
 ### [Offense Object](#offense-object)
 
@@ -317,7 +317,7 @@ This is a C# Object that represents the existing Offense Segment (20) from the F
 
 ---
 
-<br>
+<br/>
 
 ### [Property Object](#property-object)
 
@@ -341,7 +341,7 @@ This may go away in the future and be tallied based on the Property Descriptions
 
 ---
 
-<br>
+<br/>
 
 ### [Property Description Object](#property-description-object)
 
@@ -387,7 +387,7 @@ This is a C# Object that represents the existing Property Description Segment (3
 
 ---
 
-<br>
+<br/>
 
 ### [Property Offense Object](#property-offense-object)
 
@@ -415,7 +415,7 @@ This is a C# Object that represents the existing Property Offense Relationship S
 
 ---
 
-<br>
+<br/>
 
 ### [Offender Object](#offender-object)
 
@@ -457,7 +457,7 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 
 ---
 
-<br>
+<br/>
 
 ### [Victim Object](#victim-object)
 
@@ -520,7 +520,7 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 
 ---
 
-<br>
+<br/>
 
 ### [Arrestee Object](#arrestee-object)
 
@@ -590,7 +590,7 @@ This is a C# Object that represents the existing Arrestee Segment (60) from the 
 
 ---
 
-<br>
+<br/>
 
 ### [Errors Object](#errors-object)
 
@@ -609,7 +609,7 @@ This is a Read-Only object, you won't be sending this along with your data, only
 
 ---
 
-<br>
+<br/>
 
 ### [Warnings Object](#warnings-object)
 
@@ -626,7 +626,7 @@ This is a Read-Only object, you won't be sending this along with your data, only
 
 ---
 
-<br>
+<br/>
 
 ## Incident Child Objects
 
@@ -634,7 +634,7 @@ The following Objects are used within the other objects that make up an Incident
 
 ---
 
-<br>
+<br/>
 
 ### [Arrestee Statute Object](#arrestee-statute-object)
 
@@ -665,7 +665,7 @@ This is a C# Object that represents the existing Arrestee Statute Segment (62) f
 
 ---
 
-<br>
+<br/>
 
 ### [Weapon Object](#weapon-object)
 
@@ -692,7 +692,7 @@ This is an object that replaces the Type of Weapon/Force Data Element from the F
 
 ---
 
-<br>
+<br/>
 
 ## Legacy LIBRS Values
 
