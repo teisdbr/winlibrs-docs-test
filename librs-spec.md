@@ -3946,7 +3946,7 @@ ___
 
 ### Requirements:
 
-___
+---
 
 Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
@@ -3964,7 +3964,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 6 | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["22100"] -%}
 7 | {{error.err_desc["37"]}} | {{error.err_no}}| {{ error.err_message }}
-___
+
+---
 
 ### Details:
 * Age of the Offender (37) is entered either as an exact number of years, an estimated age or as unknown.
