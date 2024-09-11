@@ -426,7 +426,7 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 | Property Name  | Data Type       | Description                                                                                                                                                        | Required |
 | -------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------- |
 | OffenderSeqNum | String          | Number to uniquely identify the Offender that's being specified (Currently Left Padded with Zeros, but will probably become just an Integer in the future) (DE 36) | Yes      |
-| Age            | String          | String to represent the Offender's Age. 0-99 is allowed. Use 0 for Unknown victims. | Yes      |
+| Age            | String          | String to represent the Offender's Age. 0-99 is allowed. Use 0 for Unknown offenders. | Yes      |
 | EstimatedAge   | Boolean         | True/False value to tell us if the Age is an Estimate (replaces the "E" Modifier from the Flat File)                                                               | No       |
 | Dob            | DateTime        | **UTC** Datetime of the Offender's Birthdate                                                                                                                 | No       |
 | Sex            | String          | 1-Digit Character to represent the biological sex of the Offender M, F, or U                                                                                       | Yes      |
