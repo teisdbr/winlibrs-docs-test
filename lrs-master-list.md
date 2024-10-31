@@ -16,10 +16,10 @@ The list here is generated directly from LIBRS. If an LRS Code is missing from t
 <br>
 
 ## Current and Active Master LRS Code List
+{% assign lastUpdated = site.data.lrs-master-list-last-updated.lastUpdated %}
+#### Last Updated {{ lastUpdated }}
 
-#### Last Updated November 5th, 2024
-
----
+___
 
 As of October 2020, we've made some revisions to this page for how the data is displayed. In order to make things a little more clear, we've made it so that when you click on an LRS Code, it expands to show you the relevent NIBRS and reporting information about it. This way we can display the actual information that goes along with each Multiple Mapping for an LRS Code.
 
