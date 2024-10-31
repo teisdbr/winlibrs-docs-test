@@ -16,8 +16,8 @@ ____
 <br>
 
 ## Current and Active Master LRS Code List
-
-#### Last Updated June 6th, 2024
+{% assign lastUpdated = site.data.lrs-master-list-last-updated.lastUpdated %}
+#### Last Updated {{ lastUpdated }}
 
 ___
 
