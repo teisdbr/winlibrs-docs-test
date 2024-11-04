@@ -3,41 +3,43 @@ title: Master LRS List
 layout: default
 permalink: /lrs-master-list
 ---
-
 # LIBRS LRS Master List
-____
+
+---
 
 This page contains information about the current list of acceptable LRS Codes for LIBRS, as well as expired LRS Codes. You can use this list as a reference for the current LRS/NIBRS Mappings, or [click here](https://github.com/teisdbr/winlibrs-docs/blob/master/_data/lrs-codes.json) to download the full list in JSON Format for ingesting into your RMS
 
-The list here is generated directly from LIBRS. If an LRS Code is missing from this list, then it is not in LIBRS. Please let us know if there is an LRS Code that you would like to report that isn't present on this list. 
+The list here is generated directly from LIBRS. If an LRS Code is missing from this list, then it is not in LIBRS. Please let us know if there is an LRS Code that you would like to report that isn't present on this list.
 
-____
+---
 
 <br>
 
 ## Current and Active Master LRS Code List
 
-#### Last Updated June 6th, 2024
+#### Last Updated November 4th, 2024
 
-___
+---
 
 As of October 2020, we've made some revisions to this page for how the data is displayed. In order to make things a little more clear, we've made it so that when you click on an LRS Code, it expands to show you the relevent NIBRS and reporting information about it. This way we can display the actual information that goes along with each Multiple Mapping for an LRS Code.
 
 As a result the JSON File used to generate this portion of the documentation has changed slightly. However in an effort to help eliminate confusion for Vendors, we'll still be providing the file [here](https://github.com/teisdbr/winlibrs-docs/blob/master/_data/lrs-codes-old.json). Note that duplicates will be present due to the changes made to how NIBRS information is stored in our database. But the format is the same, so your Classes should all still work.
 
-
-___
-
+---
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(){
 $(".accordion-toggle").click(function () {
     $(this).children().children().toggleClass("down");
 });
 });</script>
+
 <script>var expanded = false</script>
+
 <script type="text/javascript">
 $(document).ready(function(){
 $(".showhide").click(function () {
@@ -60,8 +62,10 @@ $(".showhide").click(function () {
 });
 });</script>
 
-<button class="showhide">Show/Hide All</button>
+`<button class="showhide">`Show/Hide All `</button>`
+
 <!-- <button class="showhide" data-toggle="collapse" data-target="$selector">Show/Hide All</button> -->
+
 <div id="activecodes">
 <table>
 <thead style="font-size: 14px;">
@@ -90,7 +94,7 @@ $(".showhide").click(function () {
         <th style="text-align: center; white-space: nowrap">LIBRS Index</th>
 	<th style="text-align: center; white-space: nowrap">Effective Date</th></tr></thead><tbody style="font-size: 13px;">
         {% for values in lrs.Info %}
-        <tr>      
+        <tr>  
         <td style="text-align: center; min-width: 120px;"> {{ values.NIBRS_DESCRIPTION }}</td>
         <td style="text-align: center; min-width: 120px;"> {{ values.NIBRS }}</td>
         <td style="text-align: center;">{{ values.GP }}</td>
@@ -106,7 +110,6 @@ $(".showhide").click(function () {
     </td>
     </tr> 
     {% endif %}
-
 {% endfor %}
 </tbody>  
 </table>
