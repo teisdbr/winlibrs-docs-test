@@ -21,21 +21,21 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 ---
 
-- ### `<a href="./faq">`Frequently Asked Questions`</a>`
+- ### `<a href="./faq">`Frequently Asked Questions `</a>`
 
   - #### Questions we've gotten from Vendors and Users about LIBRS that might be helpful to others. A great place to get started learning about LIBRS!
-- ### `<a href="./librs-spec">`Technical Specification Documentation`</a>`
+- ### `<a href="./librs-spec">`Technical Specification Documentation `</a>`
 
   - #### Information about the specifications of each of the LIBRS Segments, how they're constructed, error messages associated with them, examples, and other requirements.
   - #### In depth information about each of the LIBRS Data Elements, as well as error messages, examples, and other requirements that are associated with them.
-- ### `<a href="./data-element-values">`Data Element Available Values`</a>`
+- ### `<a href="./data-element-values">`Data Element Available Values `</a>`
 
   - #### Table of all of the available values that can be entered for each LIBRS Data Element.
-- ### `<a href="./lrs-master-list">`Master LIBRS LRS List`</a>`
+- ### `<a href="./lrs-master-list">`Master LIBRS LRS List `</a>`
 
   - #### The master list of all Louisiana Revisec Statute (LRS) Codes that the LIBRS Program currently accepts, as well as information about expired LRS Codes.
   - #### Links are available for vendors and agencies to download a JSON list of the current Master LIBRS LRS List for ingestion into their RMS.
-- ### `<a href="./models">`JSON Data Models`</a>`
+- ### `<a href="./models">`JSON Data Models `</a>`
 
   - #### Contains information on the JSON Data Models and how to get them implemented.
 
@@ -43,9 +43,12 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 ### Change Log:
 
-#### 2024-10-18
+#### 2024-11-04
 
 * Adjusting batch process for filenames with missing extensions, extra symbols in filenames and removed case sensitivity. This issue was a result of accepting both JSON and Flat file in batch process.
+
+#### 2024-10-18
+
 * Added the following LRS codes to Master LRS List: 30:2531, 28:53, 28:53.2, 14:126.1.1, 14:40.8,
 * Expired the following LRS codes: 14:67.6, 14:67.7, 14:67.8, and 14:67.9
 * Changed LRS descriptions and validations to match LRS codes that were reused by the State and have a different meaning: 14:67.4, 14:67.5, 14:67.13
@@ -200,8 +203,7 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 #### 2021-02-12
 
-* Made the following changes to the Master LRS List:
-  |  Action  | Statute Number | Description                                                                                               | Available NIBRS Codes |
+* Made the following changes to the Master LRS List:|  Action  | Statute Number | Description                                                                                               | Available NIBRS Codes |
   | :-------: | :------------: | :-------------------------------------------------------------------------------------------------------- | :-------------------: |
   |   Added   |    14:95.10    | Possession of a Firearm or Carrying of a Concealed Weapon by a Person Convicted of Domestic Abuse Battery |          520          |
   |   Added   |     14:93     | Cruelty to Juveniles - Minor Injuries                                                                     |          13B          |
@@ -273,8 +275,7 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 * We noticed that we actually weren't validating if all Property Sequence Numbers (DE P1) were Unique. We had a requirement for it, but no code to back that up. Added Error 12006 as as error when that happens.
 * Made a number of LRS Code Updates. Here are the new Codes, Descriptions, and Mappings:
-  * Note that the 14:41-Series of Offenses had improper NIBRS Codes Associated with them. We were allowing 11A and 11B for all of them, but have reduced it to only those listed here.
-    | Action | Statute Number | Description                                                                                                                   | Available NIBRS Codes |
+  * Note that the 14:41-Series of Offenses had improper NIBRS Codes Associated with them. We were allowing 11A and 11B for all of them, but have reduced it to only those listed here.| Action | Statute Number | Description                                                                                                                   | Available NIBRS Codes |
     | :-----: | :------------: | :---------------------------------------------------------------------------------------------------------------------------- | :-------------------: |
     |  Added  |    14:102.2    | Seizure and Disposition of Animals Cruelly Treated                                                                            |          720          |
     |  Added  |     14:12     | Criminal Negligence                                                                                                           |          90Z          |
@@ -305,8 +306,7 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 #### 2020-10-23
 
-* A helpful DBA alerted us that that we had some LRS Codes that, while their Descriptions exist in the law, the LRS Code didn't actuall exist. We've expired those bad codes and added new ones to replace them (Thanks for the tip!). They've retained the same details like their Descriptions and NIBRS Mappings, just updated the LRS to be the correct one:
-  | Old Code | New Code |
+* A helpful DBA alerted us that that we had some LRS Codes that, while their Descriptions exist in the law, the LRS Code didn't actuall exist. We've expired those bad codes and added new ones to replace them (Thanks for the tip!). They've retained the same details like their Descriptions and NIBRS Mappings, just updated the LRS to be the correct one:| Old Code | New Code |
   | :------: | :------: |
   | 15:11.30 | 14:71.3 |
   | 15:13.80 | 14:73.8 |
@@ -362,11 +362,11 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 #### 2020-07-28
 
-* Added "How to Solve Errors in Flat Files" and "What's Wrong with my Flat File" to the `<a href="./faq">`FAQ`</a>`.
+* Added "How to Solve Errors in Flat Files" and "What's Wrong with my Flat File" to the `<a href="./faq">`FAQ `</a>`.
 
 #### 2020-07-21
 
-* Added an `<a href="./faq">`FAQ`</a>` to this site. We're going to start posting the questions and responses that we get from Vendors and users to start building that up for everyone's reference.
+* Added an `<a href="./faq">`FAQ `</a>` to this site. We're going to start posting the questions and responses that we get from Vendors and users to start building that up for everyone's reference.
 
 #### 2020-07-16
 
@@ -521,4 +521,4 @@ These bugs in the processing of the LIBRS Flat Files did not cause any LIBRS Val
 
 <br>
 
-#### More information about the LIBRS Program and its requirements can be found at `<a href="http://www.crimeinla.org">`http://www.crimeinla.org`</a>`
+#### More information about the LIBRS Program and its requirements can be found at `<a href="http://www.crimeinla.org">`http://www.crimeinla.org `</a>`
