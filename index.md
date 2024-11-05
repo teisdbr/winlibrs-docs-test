@@ -43,7 +43,7 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 ### Change Log:
 
-#### 2024-11-04
+#### 2024-11-05
 
 * Adjusting batch process for filenames with missing extensions, extra symbols in filenames and removed case sensitivity. This issue was a result of accepting both JSON and Flat file in batch process.
 
