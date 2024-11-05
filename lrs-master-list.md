@@ -17,7 +17,7 @@ The list here is generated directly from LIBRS. If an LRS Code is missing from t
 
 ## Current and Active Master LRS Code List
 
-#### Last Updated November 4th, 2024
+#### Last Updated November 5th, 2024
 
 ---
 
@@ -115,17 +115,17 @@ $(".showhide").click(function () {
 </table>
 </div>
 
-___
+---
 
 <br>
 
 ## Expired LIBRS LRS Codes
 
-The table below contains a list of LRS Codes that have been Expired. These LRS Codes could either no longer be valid Codes according to the Louisiana State Legislature, or may have had significant aspects about them changed (for instance, 14:XY might have been a Property Crime in 2018, but has since been redesignated as a Crime Against Person). 
+The table below contains a list of LRS Codes that have been Expired. These LRS Codes could either no longer be valid Codes according to the Louisiana State Legislature, or may have had significant aspects about them changed (for instance, 14:XY might have been a Property Crime in 2018, but has since been redesignated as a Crime Against Person).
 
 Be sure to check the list here and make sure that your RMS is up to date with the latest Master LRS List. Again, you can download the full list for ingestion into your system [here](https://github.com/teisdbr/winlibrs-docs/blob/master/_data/lrs-codes.json)
 
-____
+---
 
 <br>
 <div id="expiredcodes">
@@ -159,7 +159,7 @@ ____
         <th style="text-align: center; white-space: nowrap">UCR Index</th>
         <th style="text-align: center; white-space: nowrap">LIBRS Index</th></tr></thead><tbody style="font-size: 13px;">
         {% for values in lrs.Info %}
-        <tr>      
+        <tr>    
         <td style="text-align: center; min-width: 120px;"> {{ values.NIBRS_DESCRIPTION }}</td>
         <td style="text-align: center; min-width: 120px;"> {{ values.NIBRS }}</td>
         <td style="text-align: center;">{{ values.GP }}</td>
