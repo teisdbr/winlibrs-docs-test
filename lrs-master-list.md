@@ -62,7 +62,7 @@ $(".showhide").click(function () {
 });
 });</script>
 
-`<button class="showhide">`Show/Hide All `</button>`
+<button class="showhide">Show/Hide All </button>
 
 <!-- <button class="showhide" data-toggle="collapse" data-target="$selector">Show/Hide All</button> -->
 
