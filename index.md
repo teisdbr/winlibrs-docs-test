@@ -21,27 +21,32 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 ---
 
-- ### <a href="./faq">Frequently Asked Questions </a>
+- ### `<a href="./faq">`Frequently Asked Questions `</a>`
 
   - #### Questions we've gotten from Vendors and Users about LIBRS that might be helpful to others. A great place to get started learning about LIBRS!
-- ### <a href="./librs-spec">Technical Specification Documentation </a>
+- ### `<a href="./librs-spec">`Technical Specification Documentation `</a>`
 
   - #### Information about the specifications of each of the LIBRS Segments, how they're constructed, error messages associated with them, examples, and other requirements.
   - #### In depth information about each of the LIBRS Data Elements, as well as error messages, examples, and other requirements that are associated with them.
-- ### <a href="./data-element-values">Data Element Available Values </a>
+- ### `<a href="./data-element-values">`Data Element Available Values `</a>`
 
   - #### Table of all of the available values that can be entered for each LIBRS Data Element.
-- ### <a href="./lrs-master-list">Master LIBRS LRS List </a>
+- ### `<a href="./lrs-master-list">`Master LIBRS LRS List `</a>`
 
   - #### The master list of all Louisiana Revisec Statute (LRS) Codes that the LIBRS Program currently accepts, as well as information about expired LRS Codes.
   - #### Links are available for vendors and agencies to download a JSON list of the current Master LIBRS LRS List for ingestion into their RMS.
-- ### <a href="./models">JSON Data Models </a>
+- ### `<a href="./models">`JSON Data Models `</a>`
 
   - #### Contains information on the JSON Data Models and how to get them implemented.
 
 ---
 
 ### Change Log:
+
+#### 2025-04-02
+
+* Added Cargo Theft Indicator (2A) to Administrative (10) Segment Layout table and to Offense (20) Segment Layout table in librs-spec.md.
+* Added Cargo Theft Indicator (2A) to Data Element descriptions in librs-spec.md.
 
 #### 2024-11-05
 
@@ -245,7 +250,7 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 * Updated the requirements for DE 33 - Injury Type. Error 15003 was previously deprecated and rolled into Error 15020, however the Error Number was not updated properly, and thus it remained in the documentaiton.
   * Minor change in requirement numbers:
-    </br>| : Old Req. No.: | :New Req. No.: |
+    `</br>`| : Old Req. No.: | :New Req. No.: |
     | --------------- | -------------- |
     | 1               | 1              |
     | 3               | 2              |
@@ -362,11 +367,11 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 #### 2020-07-28
 
-* Added "How to Solve Errors in Flat Files" and "What's Wrong with my Flat File" to the <a href="./faq">FAQ </a>.
+* Added "How to Solve Errors in Flat Files" and "What's Wrong with my Flat File" to the `<a href="./faq">`FAQ `</a>`.
 
 #### 2020-07-21
 
-* Added an <a href="./faq">FAQ </a> to this site. We're going to start posting the questions and responses that we get from Vendors and users to start building that up for everyone's reference.
+* Added an `<a href="./faq">`FAQ `</a>` to this site. We're going to start posting the questions and responses that we get from Vendors and users to start building that up for everyone's reference.
 
 #### 2020-07-16
 
@@ -521,4 +526,4 @@ These bugs in the processing of the LIBRS Flat Files did not cause any LIBRS Val
 
 <br>
 
-#### More information about the LIBRS Program and its requirements can be found at <a href="http://www.crimeinla.org">http://www.crimeinla.org </a>
+#### More information about the LIBRS Program and its requirements can be found at `<a href="http://www.crimeinla.org">`http://www.crimeinla.org `</a>`

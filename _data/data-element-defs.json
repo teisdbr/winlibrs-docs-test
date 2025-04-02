@@ -69,6 +69,13 @@
 		"format": "MMDDYYYY"
 	},
 	{
+		"de_num": "2A",
+		"name": "CARGO THEFT INDICATOR",
+		"definition": "Cargo Theft Indicator is a Y/N value used to indicate whether or not the incident involved a cargo theft.",
+		"length": "1",
+		"format": "A"
+	},
+	{
 		"de_num": "L6",
 		"name": "OFFENSE SEQUENCE NUMBER",
 		"definition": "Each Offense within the incident MUST be assigned a sequence number.",
