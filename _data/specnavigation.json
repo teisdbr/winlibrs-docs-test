@@ -121,6 +121,11 @@
         "url": "./librs-spec#exceptional-cleared-date-5"
       },
       {
+        "de_num": "2A",
+        "subtitle": "Cargo Theft Indicator",
+        "url": "./librs-spec#cargo-theft-indicator-2a"
+      },
+      {
         "de_num": "L6",
         "subtitle": "Offense Sequence Number",
         "url": "./librs-spec#offense-sequence-number-l6"
