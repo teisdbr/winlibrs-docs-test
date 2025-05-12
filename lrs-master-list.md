@@ -16,8 +16,8 @@ The list here is generated directly from LIBRS. If an LRS Code is missing from t
 <br>
 
 ## Current and Active Master LRS Code List
-{%assign lastUpdated = site.data.lrs-master-list-last-updated%}
-#### Last Updated {%lastUpdated.lastUpdated%}
+{% assign lastUpdated = site.data.lrs-master-list-last-updated %}
+#### Last Updated {% lastUpdated.lastUpdated %}
 
 ---
 
