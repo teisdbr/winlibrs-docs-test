@@ -49,12 +49,7 @@ Please don't hesitate to let us know if you have any questions or problems using
 * Added an Unknown Bias Motivation Report in Agencies Reports generated with each submission.
 * Updated the Rejected Incident report in Agencies Reports to include the LIBRS Environment and updated the sorting by incident number.
 * Added 2A Cargo Theft Indicator to LIBRS flat file specifications. 2A Cargo Theft Indicator is in the administrative segment and offense segment before the Future Expansion Buffer. This was added to flat file specification in way that will not impact agencies current flat file submissions but will allow compliance by new vendors or vendors willing to adjust their flat file submission format. This was also updated in the Flat file to JSON converter API.
-* Added LRS master list and validation management in the LIBRS admin console. The LIBRS administrator will be able to maintain new LRS codes and multiple NIBRS validations in the console and generate a new master LRS list. This tool will automatically update the LIBRS validation engine, docs.librs.org, the stand-alone flat file validator and the Master LRS GIT repository for RMS vendors."
-
-#### 2025-04-02
-
-* Added Cargo Theft Indicator (2A) to Administrative (10) Segment Layout table and to Offense (20) Segment Layout table in librs-spec.md.
-* Added Cargo Theft Indicator (2A) to Data Element descriptions in librs-spec.md.
+* Added LRS master list and validation management in the LIBRS admin console. The LIBRS administrator will be able to maintain new LRS codes and multiple NIBRS validations in the console and generate a new master LRS list. This tool will automatically update the LIBRS validation engine, docs.librs.org, the stand-alone flat file validator and the Master LRS GIT repository for RMS vendors.
 
 #### 2024-11-05
 
