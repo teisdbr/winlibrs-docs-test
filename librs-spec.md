@@ -661,7 +661,7 @@ More information and common questions and errors can be found on the LIBRS FAQ f
 Segment 51, Victim Injury, includes information about the sustained Injuries of a Victim of an Offense.
 
 The main thing to note about it is that it required to be included when a Segment 50 (Victim Segment) is present with a Victim Type of 'I - Individual' or 'L - Law Enforcement', and the Offense is of one of the following NIBRS Codes:
-{::nomarkdown}`<script>`document.write(window.derequiresnibrs.de33)`</script>`{:/}
+{::nomarkdown}<script>document.write(window.derequiresnibrs.de33)</script>{:/}
 
 Otherwise, it should NOT be included. Additionally, you should not supply a Segment 51 without an Injury Type (DE 33).
 
@@ -857,7 +857,7 @@ Segmetn 62, Arrestee Statute, is what's used to say what Statute an Arrestee was
 |            [1](./librs-spec#ori-number-1)            | ORI Number                                 |    4-12    |   9   |     A     |
 |         [2](./librs-spec#incident-number-2)         | Incident Number                            |    13-24    |   12   |     A     |
 |    [40](./librs-spec#arrestee-sequence-number-40)    | Arrestee Sequence Number                   |    25-27    |   3   |     N     |
-|           [45](./librs-spec#of-arrest-45)           | Louisiana Revised Statute Number of Arrest |    28-39    |   12   |     A     |
+|           [45](./librs-spec#louisiana-revised-statute-number-of-arrest-45)           | Louisiana Revised Statute Number of Arrest |    28-39    |   12   |     A     |
 | [L45](./librs-spec#arrest-connection-to-offense-l45) | Arrest Connection to Offense               |    40-54    |   15   |     A     |
 |          [N45](./librs-spec#for-arrest-n45)          | Agency Supplied NIBRS Code                 |    55-57    |   3   |     A     |
 |           [70](./librs-spec#inchoates-70)           | Inchoates Modifier                         |    58-59    |   2   |     A     |
