@@ -21,27 +21,35 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 ---
 
-- ### <a href="./faq">Frequently Asked Questions </a>
+- ### `<a href="./faq">`Frequently Asked Questions `</a>`
 
   - #### Questions we've gotten from Vendors and Users about LIBRS that might be helpful to others. A great place to get started learning about LIBRS!
-- ### <a href="./librs-spec">Technical Specification Documentation </a>
+- ### `<a href="./librs-spec">`Technical Specification Documentation `</a>`
 
   - #### Information about the specifications of each of the LIBRS Segments, how they're constructed, error messages associated with them, examples, and other requirements.
   - #### In depth information about each of the LIBRS Data Elements, as well as error messages, examples, and other requirements that are associated with them.
-- ### <a href="./data-element-values">Data Element Available Values </a>
+- ### `<a href="./data-element-values">`Data Element Available Values `</a>`
 
   - #### Table of all of the available values that can be entered for each LIBRS Data Element.
-- ### <a href="./lrs-master-list">Master LIBRS LRS List </a>
+- ### `<a href="./lrs-master-list">`Master LIBRS LRS List `</a>`
 
   - #### The master list of all Louisiana Revisec Statute (LRS) Codes that the LIBRS Program currently accepts, as well as information about expired LRS Codes.
   - #### Links are available for vendors and agencies to download a JSON list of the current Master LIBRS LRS List for ingestion into their RMS.
-- ### <a href="./models">JSON Data Models </a>
+- ### `<a href="./models">`JSON Data Models `</a>`
 
   - #### Contains information on the JSON Data Models and how to get them implemented.
 
 ---
 
 ### Change Log:
+
+#### 2025-05-09
+
+* Added LIBRS warning if Bias Motivation is Unknown. Unknown should only be used when there is a question under investigation about a bias motivation / hate crime.
+* Added an Unknown Bias Motivation Report in Agencies Reports generated with each submission.
+* Updated the Rejected Incident report in Agencies Reports to include the LIBRS Environment and updated the sorting by incident number.
+* Added 2A Cargo Theft Indicator to LIBRS flat file specifications. 2A Cargo Theft Indicator is in the administrative segment and offense segment before the Future Expansion Buffer. This was added to flat file specification in way that will not impact agencies current flat file submissions but will allow compliance by new vendors or vendors willing to adjust their flat file submission format. This was also updated in the Flat file to JSON converter API.
+* Added LRS master list and validation management in the LIBRS admin console. The LIBRS administrator will be able to maintain new LRS codes and multiple NIBRS validations in the console and generate a new master LRS list. This tool will automatically update the LIBRS validation engine, docs.librs.org, the stand-alone flat file validator and the Master LRS GIT repository for RMS vendors.
 
 #### 2024-11-05
 
@@ -245,7 +253,7 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 * Updated the requirements for DE 33 - Injury Type. Error 15003 was previously deprecated and rolled into Error 15020, however the Error Number was not updated properly, and thus it remained in the documentaiton.
   * Minor change in requirement numbers:
-    </br>| : Old Req. No.: | :New Req. No.: |
+    `</br>`| : Old Req. No.: | :New Req. No.: |
     | --------------- | -------------- |
     | 1               | 1              |
     | 3               | 2              |
@@ -362,11 +370,11 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 #### 2020-07-28
 
-* Added "How to Solve Errors in Flat Files" and "What's Wrong with my Flat File" to the <a href="./faq">FAQ </a>.
+* Added "How to Solve Errors in Flat Files" and "What's Wrong with my Flat File" to the `<a href="./faq">`FAQ `</a>`.
 
 #### 2020-07-21
 
-* Added an <a href="./faq">FAQ </a> to this site. We're going to start posting the questions and responses that we get from Vendors and users to start building that up for everyone's reference.
+* Added an `<a href="./faq">`FAQ `</a>` to this site. We're going to start posting the questions and responses that we get from Vendors and users to start building that up for everyone's reference.
 
 #### 2020-07-16
 
@@ -521,4 +529,4 @@ These bugs in the processing of the LIBRS Flat Files did not cause any LIBRS Val
 
 <br>
 
-#### More information about the LIBRS Program and its requirements can be found at <a href="http://www.crimeinla.org">http://www.crimeinla.org </a>
+#### More information about the LIBRS Program and its requirements can be found at `<a href="http://www.crimeinla.org">`http://www.crimeinla.org `</a>`

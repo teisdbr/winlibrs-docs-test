@@ -51,6 +51,8 @@ ___
 ## Offense-Specific Questions and Answers
 * <a href="#allowable-assault-injury-types-and-weapons">What kinds of Injury Types can I use with the different kinds of Assaults?</a>
 
+## Victim-Specific Questions and Answers
+* <a href="#for-280-offenses-what-should-agencies-be-reporting-for-a-victim-would-the-agency-include-victim-info-withno-property-since-the-property-would-be-recovered-in-the-original-theft-offense">For 280 offenses, what should agencies be reporting for a victim? Would the agency include victim info with no property since the property would be recovered in the original theft offense?</a>
 
 ## Everything Flat File
 * <a href="#flat-files-and-troubleshooting">Flat Files and Troublshooting</a>
@@ -503,6 +505,26 @@ According to the FBI, Intimidation requires
 * No physical attack of the Victim
 
 This means Intimidation is all talk, no followthrough. If a Victim is touched/harmed in any way, or the assailant has any weapons on display then it cannot be Intimidation.
+
+___
+
+## Victim-Specific Questions and Answers
+
+### For 280 offenses, what should agencies be reporting for a victim? Would the agency include victim info with no property since the property would be recovered in the original theft offense?
+
+**Answer:**
+
+A victim segment is required, so we would advise to list the owner of the property as the victim if it is known.  A 280 offense with a property type loss of none and the victim would technically be the same in both incidents.
+
+**More Context and Scenarios:**
+
+*Only report property recovered on a 280 offense if the officer cannot determine where the property was stolen from or if some other agency originally reported the theft.* 
+
+*For example:  If you recover a gun  or a car that you can document was stolen in another jurisdiction because the serial number or vin is in NCIC, then you should report a property loss of none to LIBRS because the agency that originally reported it stolen should report the recovery once they are notified and the property is returned to its owner.* 
+ 
+*In the example incident with the stolen firearm, how do you know it was stolen? Was it originally stolen in Shreveport and reported by SPD, or in some other area? If it was stolen in Shreveport, it should be reported as recovered as an update to the original incident with the theft, and then the stolen property offense / incident should have a property loss of none submitted to us. If it was stolen in another jurisdiction you should submit the 280 to us with a property loss of none. We are not saying you cannot document the recovery of the gun, but rather that it should not be reported to us in both incidents.*
+ 
+*If you reported property for 280 offenses in your LEMIS IBR submissions when you knew they were reported stolen by another jurisdiction that is not in line with FBI guidance and will result in double reporting of the property. This cannot generate an error because no unique identifiers such as serial number, make, model, etc are collected at our level, but it does show twice the total amount of property than was actually recovered.*
 
 ___
 
