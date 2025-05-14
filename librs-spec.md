@@ -857,7 +857,7 @@ Segmetn 62, Arrestee Statute, is what's used to say what Statute an Arrestee was
 |            [1](./librs-spec#ori-number-1)            | ORI Number                                 |    4-12    |   9   |     A     |
 |         [2](./librs-spec#incident-number-2)         | Incident Number                            |    13-24    |   12   |     A     |
 |    [40](./librs-spec#arrestee-sequence-number-40)    | Arrestee Sequence Number                   |    25-27    |   3   |     N     |
-|           [45](./librs-spec#of-arrest-45)           | Louisiana Revised Statute Number of Arrest |    28-39    |   12   |     A     |
+|           [45](./librs-spec#louisiana-revised-statute-number-of-arrest-45)           | Louisiana Revised Statute Number of Arrest |    28-39    |   12   |     A     |
 | [L45](./librs-spec#arrest-connection-to-offense-l45) | Arrest Connection to Offense               |    40-54    |   15   |     A     |
 |          [N45](./librs-spec#for-arrest-n45)          | Agency Supplied NIBRS Code                 |    55-57    |   3   |     A     |
 |           [70](./librs-spec#inchoates-70)           | Inchoates Modifier                         |    58-59    |   2   |     A     |
