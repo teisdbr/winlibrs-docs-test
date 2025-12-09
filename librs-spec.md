@@ -3281,10 +3281,8 @@ Requirement  | Requirement Description | Error Number | Error Message
 :-----------:|-------------------------|:------------:|----------
 {% assign error = site.data.error["11004"] -%}
 1 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["14060"] -%}
-2 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
 {% assign error = site.data.error["15058"] -%}
-3 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
+2 | {{error.err_desc["27"]}} | {{error.err_no}}| {{ error.err_message }}
 
 
 ___
@@ -4163,8 +4161,6 @@ Requirement  | Requirement Description | Error Number | Error Message
 {% assign error = site.data.error["11004"] -%}
 2 | {{error.err_desc["38"]}} | {{error.err_no}}| {{ error.err_message }} 
 {% assign error = site.data.error["14052"] -%}
-3 | {{error.err_desc["38"]}} | {{error.err_no}}| {{ error.err_message }}
-{% assign error = site.data.error["14060"] -%}
 3 | {{error.err_desc["38"]}} | {{error.err_no}}| {{ error.err_message }}
 
 

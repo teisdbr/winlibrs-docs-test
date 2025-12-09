@@ -1444,15 +1444,6 @@
 			"36": "For NIBRS <b>09C</b> Offenses (Justifiable Homicide) at least one of the Offenders must have known information for Age, Sex, and Race. Unknown ('000') is not valid as an Offender Sequence Number (DE 36) for these Offenses."
 		}
 	},
-	"14060": {
-		"active": "true",
-		"err_no": 14060,
-		"err_message": "VICTIM'S SEX CANNOT BE SAME AS ALL OFFENDERS FOR OFFENSES OF '11A'",
-		"err_desc": {
-			"27": "When the Offense Code is 11A, at least one of the Offenders must be a different sex than the Victim(s). If all Victims and Offenders are the same sex, 11B, 11C, or 11D may be the offense code you actually want to use.",
-			"38": "When the Offense Code is 11A, at least one of the Offenders must be a different sex than the Victim(s). If all Victims and Offenders are the same sex, 11B, 11C, or 11D may be the offense code you actually want to use."
-		}
-	},
 	"14061": {
 		"active": "false",
 		"err_no": 14061,

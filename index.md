@@ -43,6 +43,11 @@ Please don't hesitate to let us know if you have any questions or problems using
 
 ### Change Log:
 
+#### 2025-12-09
+
+* Removed error code 14060 from Sex of Offender (38) and Sex of Victim (27) due to law changes.
+* Removed error code 14060 from error.json since it is no longer used.
+
 #### 2025-05-09
 
 * Added LIBRS warning if Bias Motivation is Unknown. Unknown should only be used when there is a question under investigation about a bias motivation / hate crime.
