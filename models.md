@@ -176,7 +176,7 @@ Before we get too far into things, here's a quick example of the entire RVO (Roo
                     "precipitatingOffense": "   ",
                     "officerAssignmentType": null,
                     "officerOri": null,
-                    "injuryType": " ",
+                    "injuryType": [],
                     "relatedOffenders": null
                 }
             ],
@@ -485,7 +485,7 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
 | OfficerActivityCircumstance | Integer                | Number to describe the actions/activities an Officer was performing when they became the Victim of an Offense.                                                                                                                                                                                       | If Victim is Type "L"                  |
 | OfficerAssignmentType       | String                 | 1-Digit Character to describe the role the Officer that was the Victim of an Offense was performing/a part of when the Offense occurred.                                                                                                                                                             | If Victim is Type "L"                  |
 | OfficerOri                  | String                 | 9-Digit String of the Victim Officer's ORI Number                                                                                                                                                                                                                                                    | If Victim is Type "L"                  |
-| InjuryType                  | String                 | 1-Digit Character to represent the Injury Type of the Victim                                                                                                                                                                                                                                         | For Crimes Against Person              |
+| InjuryType                  | List of Strings                 | 1-Digit Character to represent the Injury Type of the Victim<br>N - None<br>B - Apparent Broken Bones<br>I - Possible Internal Injury<br>L - Severe Laceration<br>A - Apparent Minor Injury<br>O - Other Major Injury<br>T - Loss of Teeth<br> U - Unconsciousness<br><br>For more data element details see [https://docs.librs.org/librs-spec#type-of-injury-33](https://docs.librs.org/librs-spec#type-of-injury-33)                                                                                                                                                                                                                                           | For Crimes Against Person              |
 | RelatedOffenders            | List of VicOff Objects | Object that contains the Victim Sequence Number, Offender Sequence Number, and their relationship. This will get revised to only be the Offender Number and Relationship.                                                                                                                            | For Crimes Against Person and Property |
 
 **Example**
@@ -511,7 +511,10 @@ This is a C# Object that represents the existing Offender Segment (40) from the 
                     "officerActivityCircumstance": "  ",
                     "officerAssignmentType": " ",
                     "officerOri": "         ",
-                    "injuryType": " ",
+                    "injuryType": [
+                         "O",
+                         "I"
+                    ],
                     "relatedOffenders": [
                         {
                             "victimSeqNum": 1,
