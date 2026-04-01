@@ -48,7 +48,6 @@ Please don't hesitate to let us know if you have any questions or problems using
 * Corrected Error validation for 90007 GROUP A ARREST MAY NOT BE SUBMITTED FOR AN INCIDENT CONTAINING ONLY A GROUP B OFFENSE. This error was sometimes triggering based on the LRS not the NIBRS code. This was corrected.
 * Removed Error code 14060 from specifications on Victims Sex and Offender Sex Validations requirements. This error was removed from validations in previous LIBRS update.
 * Updated LIBRS to allow reporting gaps in situations where a Agency was certified with a vendor and fell out of compliance for a few years and then recertified using a new vendor.
-* Updated the JSON model to allow for .NET 8 
 * Corrected the JSON model and documentation for Injury type in the victim object. It was listed as a string and was changed to be list of strings to allow a victim to have more than one injury.
 
 #### 2026-03-24
