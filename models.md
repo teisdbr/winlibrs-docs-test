@@ -105,7 +105,8 @@ Before we get too far into things, here's a quick example of the entire RVO (Roo
                 "incidentDate": "2021-07-01T16:00:00Z",
                 "isReportingDate": false,
                 "clearedExceptionally": "N",
-                "excpClearDate": null
+                "excpClearDate": null,
+                "cargoTheft": false,
             },
             "offense": [
                 {
