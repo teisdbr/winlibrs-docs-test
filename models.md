@@ -119,7 +119,7 @@ Before we get too far into things, here's a quick example of the entire RVO (Roo
                         "D"
                     ],
                     "weapons": [],
-                    "cargoTheft": null,
+                    "cargoTheft": false,
                     "agencyAssignedNibrs": "35A",
                     "propertyLossTypeFlags": null,
                     "lrsNumber": "40:1060.13"
