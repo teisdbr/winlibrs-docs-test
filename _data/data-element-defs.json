@@ -149,11 +149,11 @@
 				},
 				{
 					"code": "G",
-					"desc": "Gaming Activity Motive for Crime"
+					"desc": "Gaming Activity Motive for Crime (LIBRS only - mapped to FBI as N)"
 				},
 				{
 					"code": "N",
-					"desc": "Not Applicable (LIBRS Only)"
+					"desc": "Not Applicable"
 				},
 				{
 					"code": "R",
