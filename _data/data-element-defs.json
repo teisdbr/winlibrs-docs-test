@@ -152,12 +152,12 @@
 					"desc": "Gaming Activity Motive for Crime"
 				},
 				{
-					"code": "R",
-					"desc": "Drone/ Unmanned aircraft system"
-				},
-				{
 					"code": "N",
 					"desc": "Not Applicable (LIBRS Only)"
+				},
+				{
+					"code": "R",
+					"desc": "Drone/ Unmanned aircraft system"
 				}
 			]
 		}],
