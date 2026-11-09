@@ -9,7 +9,7 @@ This page contains the specifications on how to use the data models found on our
 
 * LIBRS Models - [https://github.com/teisdbr/LibrsDataModels](https://github.com/teisdbr/LibrsDataModels)
   * Contains the models used for our JSON Validator, as well as the NIBRS-Based model, which includes a NIBRS Report plus the other things that LIBRS cares about (vendors need to create the constructors between the two).
-* NIBRS Models - [https://github.com/teisdbr/NibrsDataModels](https://github.com/teisdbr/LibrsDataModels)
+* NIBRS Models - [https://github.com/teisdbr/NibrsDataModels](https://github.com/teisdbr/NibrsDataModels)
   * Contains the NIBRS IEPD Report as C# Objects.
 
 # LIBRS Data Models
