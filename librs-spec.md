@@ -847,7 +847,7 @@ Segment 61, Arrestee Armed, denoted the details about whether or not an Arrestee
 
 ### Description
 
-Segmetn 62, Arrestee Statute, is what's used to say what Statute an Arrestee was Arrested for. At this time, Data Element [L45 - Arrest Connection to Offense](./librs-spec#arrest-connection-to-offense-l45) is optional, however if it is to be included there are particular requirements for it. Please review the definition of the Data Element to ensure that it's being correctly applied.
+Segment 62, Arrestee Statute, is what's used to say what Statute an Arrestee was Arrested for. At this time, Data Element [L45 - Arrest Connection to Offense](./librs-spec#arrest-connection-to-offense-l45) is optional, however if it is to be included there are particular requirements for it. Please review the definition of the Data Element to ensure that it's being correctly applied.
 
 ### Segment Layout
 
@@ -2803,7 +2803,7 @@ ___
 
 ___
 
-**Description:** Offense Connected to Victim Sequence Number is only used in Offense Segments Segmetn 20). Each Offense can only be related to a single Victim, so if there are multiple Victims of the same Offense, or Multiple Offenses for the same Victim, you'll need multiple Segment 20's to reference that. This Data Element is important because it's what's used to link the Offenders to their Offenses. 
+**Description:** Offense Connected to Victim Sequence Number is only used in Offense Segments Segment 20). Each Offense can only be related to a single Victim, so if there are multiple Victims of the same Offense, or Multiple Offenses for the same Victim, you'll need multiple Segment 20's to reference that. This Data Element is important because it's what's used to link the Offenders to their Offenses. 
 
 **Data Characteristics:** 3 Character Numeric. Should be front-padded with Zero's (0) to make a three digit number. (EG: 1 would be 001). Needs to match a Victim Sequence Number (DE 23) that's present in a Segment 50 of the Incident.
 
